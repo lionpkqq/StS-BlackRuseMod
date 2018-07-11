@@ -47,7 +47,7 @@
     "NAME": "Killer Instinct",
     "DESCRIPTIONS": ["At the end of your turn, if you have any debuffs on you, gain ", " Dexterity."]
   },
-  "KillerInstinctPower": {
+  "MoonPhase": {
     "NAME": "Moon Phase",
     "DESCRIPTIONS": ["At the start of your turn, lose ", " Dexterity, gain ", " Strength."]
   },
@@ -80,7 +80,7 @@
     "DESCRIPTIONS": ["For each Knife you Throw, gain ", " Block."]
   },
   "TheWorldPower": {
-    "NAME": " ¿ΩÁ",
+    "NAME": "The World",
     "DESCRIPTIONS": ["This turn, the next card you play cost 0."]
   },
   "UnparalleledPower": {

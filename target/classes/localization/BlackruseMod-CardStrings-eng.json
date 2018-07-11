@@ -165,7 +165,7 @@
 		"DESCRIPTION": "If this is the only card that costs 2 in your deck, gain !M! Strength and Dexterity."
 	},
 	"Potential": {
-		"NAME": "Potential,
+		"NAME": "Potential",
 		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, its damage increases for !M! for this combat."
 	},
 	"PullOut": {
