@@ -82,11 +82,11 @@ public class TheServant extends CustomPlayer {
 	public static CharSelectInfo getLoadout() {
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
 			return new CharSelectInfo("致命侍从", "随身携带着一千零一把刀刃。 NL 擅长杀戮与家务。",
-				75, 75, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
+				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 		else {
 			return new CharSelectInfo("The Servant", "Holds a thousand and one blades. NL Perfected at killing and housekeeping.",
-				75, 75, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
+				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 	}
 	

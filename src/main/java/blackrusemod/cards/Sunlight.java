@@ -30,24 +30,28 @@ public class Sunlight extends CustomCard {
 	private static final int COST = 3;
 	private static final int ATTACK_DMG = 21;
 	private static final int UPGRADE_PLUS_DMG = 9;
+	private boolean depleted = false;
 	public Sunlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SUNLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
 		this.isMultiDamage = true;
 		this.baseDamage = ATTACK_DMG;
 		this.isEthereal = true;
+		this.depleted = false;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (p.hasPower("KnivesPower")) {
-			for (int i = 0; i < Math.min(1, p.getPower("KnivesPower").amount); i++) {
-				AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-				AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
-				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, -1), -1));
-				if (p.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, p.getPower("SurpressingFirePower").amount));
+			if (p.getPower("KnivesPower").amount >= 1) {
+			AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+			AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
+			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, -1), -1));
+			if (p.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, p.getPower("SurpressingFirePower").amount));
 			}
-			if (p.getPower("KnivesPower").amount == 0) {
+			
+			if (p.getPower("KnivesPower").amount == 0) this.depleted = true;
+			if (this.depleted) {
 				if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
 					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "∑…µ∂”√π‚¡À£°", 1.0F, 2.0F));
 				}
