@@ -37,7 +37,7 @@ The Wiki is still under construction. Thanks for your patience!
 
 ## List of known bugs ##
 
-* None
+* Haven't found any yet.
 
 ## Special Thanks ##
 

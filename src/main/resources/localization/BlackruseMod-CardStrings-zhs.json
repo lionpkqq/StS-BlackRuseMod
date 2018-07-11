@@ -99,7 +99,7 @@
 	},
 	"GarbageDisposal": {
 		"NAME": "废物处理",
-		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 获得那个数量的 敏捷 。 NL 消耗 。",
+		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 获得那个数量的 敏捷 。 NL 消耗 。"
 	},
 	"Gouge": {
 		"NAME": "凿击",

@@ -99,7 +99,7 @@
 	},
 	"GarbageDisposal": {
 		"NAME": "Garbage Disposal",
-		"DESCRIPTION": "Exhaust up to !M! cards. NL Gain Dexterity equals to the number of cards you just exhausted. NL Exhaust.",
+		"DESCRIPTION": "Exhaust up to !M! cards. NL Gain Dexterity equals to the number of cards you just exhausted. NL Exhaust."
 	},
 	"Gouge": {
 		"NAME": "Gouge",
