@@ -616,7 +616,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are Unplayable and Ethereal and trigger unique effects when drawn.");
         BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include Weak, Vulnerable and Frail.");
-        BaseMod.addKeyword(new String[] {"Amplify", "amplify", "Amplified", "amplified"}, "Damage Amplified enemies will take extra damage when attacked.");
+        BaseMod.addKeyword(new String[] {"Amplified", "amplified"}, "Amplified enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Static", "static"}, "Static damage is not affected by Strength, Vulnerable or Amplify Damage.");
         logger.info("done setting up custom keywords");
 	}
