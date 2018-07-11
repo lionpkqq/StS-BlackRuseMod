@@ -1,0 +1,303 @@
+{
+	"Strike_S": {
+		"NAME": "Strike",
+		"DESCRIPTION": "Deal !D! damage."
+	},
+	"Defend_S": {
+		"NAME": "Defend",
+		"DESCRIPTION": "Gain !B! Block."
+	},
+	"Advance": {
+		"NAME": "Advance",
+		"DESCRIPTION": "Ethereal. The first time each enemy attacks you this turn, apply !M! Vulnerable and !M! Weak to it."
+	},
+	"Barrier": {
+		"NAME": "Barrier",
+		"DESCRIPTION": "Deal !D! damage twice to one enemy and once to ALL other enemies."
+	},
+	"BorrowedTime": {
+		"NAME": "Borrowed Time",
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak and !M! Vulnerable to ALL enemies."
+	},
+	"BruteForce": {
+		"NAME": "Brute Force",
+		"DESCRIPTION": "Can only be played if you have an Ethereal card in your hand. NL Deal !D! damage."
+	},
+	"Comet": {
+		"NAME": "Comet",
+		"DESCRIPTION": "Recycle a Dazed. Deal !D! damage to ALL enemies."
+	},
+	"CosmicInflation": {
+		"NAME": "Cosmic Inflation",
+		"DESCRIPTION": "Recycle a Dazed. Deal !D! damage."
+	},
+	"DWeaponry": {
+		"NAME": "D. Weaponry",
+		"DESCRIPTION": "Deal !M! damage for each other card in your hand."
+	},
+	"Deny": {
+		"NAME": "Deny",
+		"DESCRIPTION": "Deal !D! damage. At the end of the turn, Recycle a copy of this card."
+	},
+	"DoubleEdge": {
+		"NAME": "Double Edge",
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. Exhaust."
+	},
+	"DualDimension": {
+		"NAME": "Dual Dimension",
+		"DESCRIPTION": "Deal !D! damage. NL If you are Weak, Frail, or Vulnerable, deal !D! damage again."
+	},
+	"Duplication": {
+		"NAME": "Duplication",
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "对你附加 1 层 虚弱 ， 1 层 脆弱 。本回合你打出的下两张卡会打出两次。"
+	},
+	"Enbodiment": {
+		"NAME": "Enbodiment",
+		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Deal !D! damage."
+	},
+	"Exchange": {
+		"NAME": "Exchange",
+		"DESCRIPTION": "Gain !B! Block. Every time you draw this card, increase its Block by !M! for this combat."
+	},
+	"FanOfKnives": {
+		"NAME": "Fan Of Knives",
+		"DESCRIPTION": "Reverse the effects of Frail, Weak, and Vulnerable on you for !M! turn."
+	},
+	"Farseeing": {
+		"NAME": "Farseeing",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Frail."
+	},
+	"FastForward": {
+		"NAME": "Fast Forward",
+		"DESCRIPTION": "Gain !M! Block for each other card in your hand."
+	},
+	"FirstStrike": {
+		"NAME": "First Strike",
+		"DESCRIPTION": "Gain !B! Block. NL Recycle a Dazed."
+	},
+	"FlawlessForm": {
+		"NAME": "Flawless Form",
+		"DESCRIPTION": "Draw a card. If it is Ethereal, add a Dazed to your hand and draw another card."
+	},
+	"FloweringNight": {
+		"NAME": "Flowering Night",
+		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Deal !D! damage. NL Next turn gain [R]."
+	},
+	"FollowUp": {
+		"NAME": "Follow Up",
+		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw !M! cards."
+	},
+	"FullDefense": {
+		"NAME": "Full Defense",
+		"DESCRIPTION": "Deal !M! damage for each Exhausted Ethereal card this combat."
+	},
+	"FullOffense": {
+		"NAME": "Full Offense",
+		"DESCRIPTION": "Ethereal. Enemy loses !M! Strength this turn, increasing by 1 each time you draw this card this combat."
+	},
+	"GarbageDisposal": {
+		"NAME": "Garbage Disposal",
+		"DESCRIPTION": "Deal !D! damage. Every time you draw this card, increase its damage by !M! for this combat."
+	},
+	"Gouge": {
+		"NAME": "Gouge",
+		"DESCRIPTION": "Spend all [R]. Deal !D! damage to ALL enemies X times. Vulnerable enemies take double damage."
+	},
+	"Haste": {
+		"NAME": "Haste",
+		"DESCRIPTION": "Ethereal. Deal !D! damage, plus !M! damage for ALL of your Ethereal cards."
+	},
+	"HouseCleaning": {
+		"NAME": "House Cleaning",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+	},
+	"Indiscriminate": {
+		"NAME": "Indiscriminate",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak."
+	},
+	"KidneyShot": {
+		"NAME": "Kidney Shot",
+		"DESCRIPTION": "Deal !D! damage X times. Gain X Weak, X Frail, and X Vulnerable."
+	},
+	"KillerInstinct": {
+		"NAME": "Killer Instinct",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Gain 1 Strength."
+	},
+	"KillingDoll": {
+		"NAME": "Killing Doll",
+		"DESCRIPTION": "Ethereal. Deal !D! damage to a random enemy !M! times. Recycle a Dazed. Exhaust."
+	},
+	"Laundry": {
+		"NAME": "Laundry",
+		"DESCRIPTION": "Exhaust all Ethereal cards in your draw pile. Deal !D! damage for each card that is Exhausted."
+	},
+	"Misdirection": {
+		"NAME": "Misdirection",
+		"DESCRIPTION": "If you are Frail or Vulnerable, gain !B! Block. If you are Weak, deal !D! damage to ALL enemies."
+	},
+	"MoonPhase": {
+		"NAME": "Moon Phase",
+		"DESCRIPTION": "If the enemy is Weak, it loses !M! Strength. Exhaust."
+	},
+	"Moonlight": {
+		"NAME": "Moonlight",
+		"DESCRIPTION": "Whenever you draw a non-Ethereal Attack or Skill, Recycle an Ethereal copy of it."
+	},
+	"MorningCall": {
+		"NAME": "Morning Call",
+		"DESCRIPTION": "Whenever an Ethereal card is Exhausted, gain !M! Dexterity."
+	},
+	"MurderousAura": {
+		"NAME": "Murderous Aura",
+		"DESCRIPTION": "Whenever an Ethereal card is Exhausted, gain !M! Strength."
+	},
+	"NoEscape": {
+		"NAME": "No Escape",
+		"DESCRIPTION": "Gain !M! Strength. NL Whenever you play an attack, Recycle a Dazed."
+	},
+	"Unparalleled": {
+		"NAME": "Unparalleled",
+		"DESCRIPTION": "Whenever you apply Vulnerable or Weak to an enemy, apply !M! additional stack."
+	},
+	"Potential": {
+		"NAME": "Potential",
+		"DESCRIPTION": "Draw until your hand is full. NL Top-Cycle 4 Dazed. NL Exhaust."
+	},
+	"PullOut": {
+		"NAME": "Pull Out",
+		"DESCRIPTION": "Gain [R] for every !M! cards in your draw pile."
+	},
+	"Read": {
+		"NAME": "Read",
+		"DESCRIPTION": "Recycle this card, your discard pile and a Dazed. Next turn, draw !M! more card."
+	},
+	"RealityMarble": {
+		"NAME": "Reality Marble",
+		"DESCRIPTION": "Recycle 3 Dazed. NL Whenever you draw a Dazed, draw !M! card."
+	},
+	"Rearm": {
+		"NAME": "Rearm",
+		"DESCRIPTION": "Next turn, draw !M! card. Whenever you draw this card, increase that amount by 1 this combat."
+	},
+	"Replace": {
+		"NAME": "Replace",
+		"DESCRIPTION": "Can only be played if your discard pile is empty or your draw pile is empty. Deal !D! damage."
+	},
+	"Reset": {
+		"NAME": "Reset",
+		"DESCRIPTION": "If an enemy intends to Debuff you, gain !M! Strength and !M! Dexterity."
+	},
+	"ReturningBlades": {
+		"NAME": "Returning Blades",
+		"DESCRIPTION": "Ethereal. NL Retain all excess Energy at the end of turn. Draw 1 extra card next turn."
+	},
+	"Revamp": {
+		"NAME": "Revamp",
+		"DESCRIPTION": "Create !M! copy of an Ethereal card in your hand. Top-Cycle that copy."
+	},
+	"Rewind": {
+		"NAME": "Rewind",
+		"DESCRIPTION": "Remove all Frail, Weak, and Vulnerable. Gain 5 Block, plus !M! Block for each stack removed."
+	},
+	"Sabotage": {
+		"NAME": "Sabotage",
+		"DESCRIPTION": "Gain 1 Vulnerable. Gain !M! Energy, decaying by 1 each time this card is played this combat."
+	},
+	"ShiftingGears": {
+		"NAME": "Shifting Gears",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact."
+	},
+	"ShiftingReality": {
+		"NAME": "Shifting Reality",
+		"DESCRIPTION": "Gain !B! Block. NL All cards in hand become Ethereal. NL Exhaust."
+	},
+	"ShiftingThoughts": {
+		"NAME": "Shifting Thoughts",
+		"DESCRIPTION": "Unplayable. When you draw this card, upgrade a card in your hand."
+	},
+	"SilverBlades": {
+		"NAME": "Silver Blades",
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Gain 1 Dexterity."
+	},
+	"Snipe": {
+		"NAME": "Snipe",
+		"DESCRIPTION": "Choose to add a random Attack, Skill or Power to your hand. NL It costs 0 this turn. NL Exhaust."
+	},
+	"SoulSculpture": {
+		"NAME": "Soul Sculpture",
+		"DESCRIPTION": "Transfer all of your Weak and Vulnerable to an enemy. Draw a card."
+	},
+	"SpecialFormula": {
+		"NAME": "Special Formula",
+		"DESCRIPTION": "Deal !D! damage. NL Top-Cycle a card. NL If it is Ethereal, deal !D! more damage."
+	},
+	"Spin": {
+		"NAME": "Spin",
+		"DESCRIPTION": "Remove all Weak and Vulnerable from an Enemy. It loses !M! HP per stack removed."
+	},
+	"StarChef": {
+		"NAME": "Star Chef",
+		"DESCRIPTION": "Deal !D! damage. Top-Cycle !M! card from your hand."
+	},
+	"Starlight": {
+		"NAME": "Starlight",
+		"DESCRIPTION": "Deal 1 damage to ALL enemies for each card in your draw pile. Exhaust."
+	},
+	"StressReliever": {
+		"NAME": "Stress Reliever",
+		"DESCRIPTION": "Remove all of your Weak, Frail, and Vulnerable. Deal !M! damage per stack removed."
+	},
+	"Sunlight": {
+		"NAME": "Sunlight",
+		"DESCRIPTION": "At the start of your turn, Recycle a random Ethereal card."
+	},
+	"SurpressingFire": {
+		"NAME": "Surpressing Fire",
+		"DESCRIPTION": "At the start of your turn, Recycle a Dazed, then draw a card."
+	},
+	"Taunt": {
+		"NAME": "Taunt",
+		"DESCRIPTION": "Dazed can now be played to gain !M! Block and deal !M! damage to ALL enemies."
+	},
+	"TemporalArms": {
+		"NAME": "Temporal Arms",
+		"DESCRIPTION": "Each enemy loses HP equal to the amount of Weak and Vulnerable it has at the start of its turn."
+	},
+	"TemporalEssence": {
+		"NAME": "Temporal Essence",
+		"DESCRIPTION": "Whenever you draw an Ethereal card, deal !M! damage to a random enemy."
+	},
+	"TemporalMisd": {
+		"NAME": "Temporal Misd.",
+		"DESCRIPTION": "Ethereal cards cost !M! less [R]."
+	},
+	"TemporalSlicing": {
+		"NAME": "Temporal Slicing",
+		"DESCRIPTION": "Ethereal. NL Gain !M! Intangible. NL Exhaust."
+	},
+	"TheWorld": {
+		"NAME": "The World",
+		"DESCRIPTION": "This turn, your next Ethereal card is played twice."
+	},
+	"TimeEmbedded": {
+		"NAME": "Time Embedded",
+		"DESCRIPTION": "Top-Cycle an Exhausted Ethereal card. NL Exhaust."
+	},
+	"TimeWarp": {
+		"NAME": "Time Warp",
+		"DESCRIPTION": "Recycle 2 Dazed. Draw !M! cards. Gain [R] [R]. NL Exhaust."
+	},
+	"TrashToTreasure": {
+		"NAME": "Trash To Treasure",
+		"DESCRIPTION": "Gain 5 Block and 3 Reflect per !M! cards in your draw pile."
+	},
+	"Unruled": {
+		"NAME": "Unruled",
+		"DESCRIPTION": "After paying this card's cost, double your remaining [R]. Exhaust."
+	},
+	"Unsheathe": {
+		"NAME": "Unsheathe",
+		"DESCRIPTION": "At the end of turn, gain !M! Block for each stack of Frail, Weak, or Vulnerable you have."
+	}
+}

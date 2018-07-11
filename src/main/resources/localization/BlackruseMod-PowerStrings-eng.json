@@ -1,0 +1,90 @@
+{
+  "DrawManipulationPower": {
+    "NAME": "Draw Manipulation",
+    "DESCRIPTIONS": ["You will #yDraw #b", " card(s) next turn."]
+  },
+  "BarrierPower": {
+    "NAME": "Barrier",
+    "DESCRIPTIONS": ["You will gain ", " Intangible next turn."]
+  },
+  "EnergyManipulationPower": {
+    "NAME": "Energy Manipulation",
+    "DESCRIPTIONS": ["You will get ", " [S] next turn."]
+  },
+  "DWeaponryPower": {
+    "NAME": "Dimensional Weaponry",
+    "DESCRIPTIONS": ["At the start of your turn, obtain ", " Knives."]
+  },
+  "KnivesPower": {
+    "NAME": "Knives",
+    "DESCRIPTIONS": ["You are currently holding ", " Knives."]
+  },
+  "EnbodimentPower": {
+    "NAME": "EnbodimentPower",
+    "DESCRIPTIONS": ["At the end of your turn, add ", " Temporal card(s) to your draw pile."]
+  },
+  "FlawlessFormPower": {
+    "NAME": "Flawless Form",
+    "DESCRIPTIONS": ["Draw ", " less card(s) every turn until the end of the combat."]
+  },
+  "FloweringNightPower": {
+    "NAME": "Flowering Night",
+    "DESCRIPTIONS": ["This turn, each time you play a card, draw ", " card(s)."]
+  },
+  "DuplicationPower": {
+    "NAME": "Duplication",
+    "DESCRIPTIONS": ["Next  ", " card(s) will play one more time."]
+  },
+  "AmplifyDamagePower": {
+    "NAME": "Amplify Damage",
+    "DESCRIPTIONS": ["Will take ", " extra damage when attacked."]
+  },
+  "HastePower": {
+    "NAME": "Haste",
+    "DESCRIPTIONS": ["Each time you play a Skill card, draw ", " more card next turn."]
+  },
+  "KillerInstinctPower": {
+    "NAME": "Killer Instinct",
+    "DESCRIPTIONS": ["At the end of your turn, if you have any debuffs on you, gain ", " Dexterity."]
+  },
+  "KillerInstinctPower": {
+    "NAME": "Moon Phase",
+    "DESCRIPTIONS": ["At the start of your turn, lose ", " Dexterity, gain ", " Strength."]
+  },
+  "MurderousAuraPower": {
+    "NAME": "Murderous Aura",
+    "DESCRIPTIONS": ["At the start of your turn£¨ apply ", " Amplify Damage to ALL enemies."]
+  },
+  "ReadPower": {
+    "NAME": "Read",
+    "DESCRIPTIONS": ["Next turn, if the target enemy does not intend to attack, apply 2 Amplify Damage."]
+  },
+  "RealityMarblePower": {
+    "NAME": "Reality Marble",
+    "DESCRIPTIONS": ["All cards lose Ethereal property for this combat."]
+  },
+  "SilverBladesPower": {
+    "NAME": "Silver Blades",
+    "DESCRIPTIONS": ["All Knives-Throwing cards are upgraded for this combat."]
+  },
+  "StarChefPower": {
+    "NAME": "Star Chef",
+    "DESCRIPTIONS": ["At the start of your turn, you may consume up to ", " card(s) and gain the same amount of energy."]
+  },
+  "StressRelieverPower": {
+    "NAME": "Stress Reliever",
+    "DESCRIPTIONS": ["At the start of your turn, look at the top ", " cards of your draw pile. You may discard any of them."]
+  },
+  "SurpressingFirePower": {
+    "NAME": "Surpressing Fire",
+    "DESCRIPTIONS": ["For each Knife you Throw, gain ", " Block."]
+  },
+  "TheWorldPower": {
+    "NAME": " ¿ΩÁ",
+    "DESCRIPTIONS": ["This turn, the next card you play cost 0."]
+  },
+  "UnparalleledPower": {
+    "NAME": "Unparalleled",
+    "DESCRIPTIONS": ["If there is no other card that costs 2 in your deck, gain ", " Strength and Dexterity."]
+  }
+}

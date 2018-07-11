@@ -1,0 +1,90 @@
+{
+  "DrawManipulationPower": {
+    "NAME": "抽卡操纵",
+ 	"DESCRIPTIONS": ["下回合抽卡数量 ", " 。"]
+  },
+  "BarrierPower": {
+  	"NAME": "Barrier",
+  	"DESCRIPTIONS": ["下回合获得 ", " 层无实体。"]
+  },
+  "EnergyManipulationPower": {
+    "NAME": "能量操纵",
+    "DESCRIPTIONS": ["下回合获得 ", " [B] 。"]
+  },
+  "DWeaponryPower": {
+    "NAME": "次元武库",
+    "DESCRIPTIONS": ["你的回合开始时获得 ", " 把 飞刀 。"]
+  },
+  "KnivesPower": {
+    "NAME": "飞刀",
+    "DESCRIPTIONS": ["你持有 ", " 把 飞刀 。"]
+  },
+  "EnbodimentPower": {
+    "NAME": "具现化",
+    "DESCRIPTIONS": ["回合结束时将 ", " 张幻时卡加入抽牌堆。"]
+  },
+  "FlawlessFormPower": {
+    "NAME": "完美形态",
+    "DESCRIPTIONS": ["本次战斗内，每回合少抽 ", " 张卡。"]
+  },
+  "FloweringNightPower": {
+    "NAME": "花开之夜",
+    "DESCRIPTIONS": ["本回合每打出一张卡，抽 ", " 张卡。"]
+  },
+  "DuplicationPower": {
+    "NAME": "复制体",
+    "DESCRIPTIONS": ["下 ", " 张卡会多打出一次。"]
+  },
+  "AmplifyDamagePower": {
+    "NAME": "伤害加深",
+    "DESCRIPTIONS": ["受到攻击时会额外承受 ", " 点伤害。"]
+  },
+  "HastePower": {
+    "NAME": "疾速",
+    "DESCRIPTIONS": ["每打出1张 技能 牌，下回合多抽 ", " 张卡。"]
+  },
+  "KillerInstinctPower": {
+    "NAME": "杀手本能",
+    "DESCRIPTIONS": ["你的回合结束时，如果你的身上有负面状态，获得 ", " 点 敏捷 。"]
+  },
+  "MoonPhasePower": {
+    "NAME": "月相",
+    "DESCRIPTIONS": ["你的回合开始时，损失 ", " 点敏捷，获得 ", " 点力量。"]
+  },
+  "MurderousAuraPower": {
+    "NAME": "杀气",
+    "DESCRIPTIONS": ["你的回合开始时，所有敌人获得 ", " 层 伤害加深 。"]
+  },
+  "ReadPower": {
+    "NAME": "先读",
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图不是攻击，附加 2 层 伤害加深 。"]
+  },
+  "RealityMarblePower": {
+    "NAME": "固有结界",
+    "DESCRIPTIONS": ["本次战斗内，所有卡失去 虚无 属性 。"]
+  },
+  "SilverBladesPower": {
+    "NAME": "银刃",
+    "DESCRIPTIONS": ["本次战斗内，升级所有 投掷 飞刀 的卡。"]
+  },
+  "StarChefPower": {
+    "NAME": "星级厨师",
+    "DESCRIPTIONS": ["你的回合开始时，你可以 消耗 最多 ", " 张卡并获得相同数量的能量。"]
+  },
+  "StressRelieverPower": {
+    "NAME": "解愁人",
+    "DESCRIPTIONS": ["你的回合开始时，检视抽牌堆顶上 ", " 张卡，你可以选择丢弃其中的任意张。"]
+  },
+  "SurpressingFirePower": {
+    "NAME": "火力压制",
+    "DESCRIPTIONS": ["每投掷1把飞刀，获得 ", " 点 格挡 。"]
+  },
+  "TheWorldPower": {
+    "NAME": "世界",
+    "DESCRIPTIONS": ["本回合你打出的下一张卡不消耗能量。"]
+  },
+  "UnparalleledPower": {
+    "NAME": "无双",
+    "DESCRIPTIONS": ["如果你的牌组里没有其他消耗2的卡，获得 ", " 力量和敏捷。"]
+  }
+}

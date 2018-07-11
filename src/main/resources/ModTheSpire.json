@@ -1,0 +1,9 @@
+{
+  "modid": "blackrusemod",
+  "name": "StS-BlackRuse",
+  "author_list": ["BlackRuse"],
+  "description": "Adds The Servant as a new playable character",
+  "dependencies": ["basemod"],
+  "version": "0.2.0",
+  "sts_version": "07-05-2018"
+}
