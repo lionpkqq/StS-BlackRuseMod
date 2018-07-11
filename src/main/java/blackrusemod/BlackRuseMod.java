@@ -588,13 +588,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷 飞刀的卡会消耗飞刀的数量。");
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 不能被打出 且具有 虚无 ，在抽到的时候会产生特定作用。");
         BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 虚弱 、 易伤 以及 脆弱 。");
-        BaseMod.addKeyword(new String[] {"伤害加深"}, "受到攻击时会额外承受伤害。额外伤害不受 易伤 影响。");
+        BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 易伤 影响。");
         BaseMod.addKeyword(new String[] {"固定伤害"}, "固定伤害不受 力量 、 易伤 或者 伤害加深 影响。");
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your Knives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are Unplayable and Ethereal and trigger unique effects when drawn.");
         BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include Weak, Vulnerable and Frail.");
-        BaseMod.addKeyword(new String[] {"Amplified", "amplified"}, "Amplified enemies will take extra damage when attacked.");
+        BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Static", "static"}, "Static damage is not affected by Strength, Vulnerable or Amplify Damage.");
         logger.info("done setting up custom keywords");
 	}

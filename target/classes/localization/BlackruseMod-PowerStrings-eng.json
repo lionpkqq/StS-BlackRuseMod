@@ -1,83 +1,83 @@
 {
   "DrawManipulationPower": {
     "NAME": "Draw Manipulation",
-    "DESCRIPTIONS": ["You will #yDraw #b", " card(s) next turn."]
+    "DESCRIPTIONS": ["You will draw #b", " card(s) next turn."]
   },
   "BarrierPower": {
     "NAME": "Barrier",
-    "DESCRIPTIONS": ["You will gain ", " Intangible next turn."]
+    "DESCRIPTIONS": ["You will gain #b", " #yIntangible next turn."]
   },
   "EnergyManipulationPower": {
     "NAME": "Energy Manipulation",
-    "DESCRIPTIONS": ["You will get ", " [S] next turn."]
+    "DESCRIPTIONS": ["You will get #b", " energy next turn."]
   },
   "DWeaponryPower": {
     "NAME": "Dimensional Weaponry",
-    "DESCRIPTIONS": ["At the start of your turn, obtain ", " Knives."]
+    "DESCRIPTIONS": ["At the start of your turn, obtain #b", " #yKnives."]
   },
   "KnivesPower": {
     "NAME": "Knives",
-    "DESCRIPTIONS": ["You are currently holding ", " Knives."]
+    "DESCRIPTIONS": ["You are currently holding #b", " #yKnives."]
   },
   "EnbodimentPower": {
     "NAME": "EnbodimentPower",
-    "DESCRIPTIONS": ["At the end of your turn, add ", " Temporal card(s) to your draw pile."]
+    "DESCRIPTIONS": ["At the end of your turn, add #b", " #yTemporal card(s) to your draw pile."]
   },
   "FlawlessFormPower": {
     "NAME": "Flawless Form",
-    "DESCRIPTIONS": ["Draw ", " less card(s) every turn until the end of the combat."]
+    "DESCRIPTIONS": ["Draw #b", " less card(s) every turn until the end of the combat."]
   },
   "FloweringNightPower": {
     "NAME": "Flowering Night",
-    "DESCRIPTIONS": ["This turn, each time you play a card, draw ", " card(s)."]
+    "DESCRIPTIONS": ["This turn, each time you play a card, draw #b", " card(s)."]
   },
   "DuplicationPower": {
     "NAME": "Duplication",
-    "DESCRIPTIONS": ["Next  ", " card(s) will play one more time."]
+    "DESCRIPTIONS": ["Next  #b", " card(s) will play one more time."]
   },
   "AmplifyDamagePower": {
-    "NAME": "Amplify Damage",
-    "DESCRIPTIONS": ["Will take ", " extra damage when attacked."]
+    "NAME": "Blighted",
+    "DESCRIPTIONS": ["This enemy will take #b", " extra damage when attacked."]
   },
   "HastePower": {
     "NAME": "Haste",
-    "DESCRIPTIONS": ["Each time you play a Skill card, draw ", " more card next turn."]
+    "DESCRIPTIONS": ["Each time you play a #ySkill card, draw #b", " more card next turn."]
   },
   "KillerInstinctPower": {
     "NAME": "Killer Instinct",
-    "DESCRIPTIONS": ["At the end of your turn, if you have any debuffs on you, gain ", " Dexterity."]
+    "DESCRIPTIONS": ["At the end of your turn, if you have any #yDebuffs on you, gain #b", " #yDexterity."]
   },
   "MoonPhase": {
     "NAME": "Moon Phase",
-    "DESCRIPTIONS": ["At the start of your turn, lose ", " Dexterity, gain ", " Strength."]
+    "DESCRIPTIONS": ["At the start of your turn, lose #b", " #yDexterity, gain #b", " #yStrength."]
   },
   "MurderousAuraPower": {
     "NAME": "Murderous Aura",
-    "DESCRIPTIONS": ["At the start of your turn£¬ apply ", " Amplify Damage to ALL enemies."]
+    "DESCRIPTIONS": ["At the start of your turn£¬ apply #b", " #yBlight to ALL enemies."]
   },
   "ReadPower": {
     "NAME": "Read",
-    "DESCRIPTIONS": ["Next turn, if the target enemy does not intend to attack, apply 2 Amplify Damage."]
+    "DESCRIPTIONS": ["Next turn, if the target enemy does not intend to attack, apply #b2 #yBlight."]
   },
   "RealityMarblePower": {
     "NAME": "Reality Marble",
-    "DESCRIPTIONS": ["All cards lose Ethereal property for this combat."]
+    "DESCRIPTIONS": ["All cards lose #yEthereal property for this combat."]
   },
   "SilverBladesPower": {
     "NAME": "Silver Blades",
-    "DESCRIPTIONS": ["All Knives-Throwing cards are upgraded for this combat."]
+    "DESCRIPTIONS": ["All #yKnives-Throwing cards are upgraded for this combat."]
   },
   "StarChefPower": {
     "NAME": "Star Chef",
-    "DESCRIPTIONS": ["At the start of your turn, you may consume up to ", " card(s) and gain the same amount of energy."]
+    "DESCRIPTIONS": ["At the start of your turn, you may exhaust up to #b", " card(s) and gain the same amount of energy."]
   },
   "StressRelieverPower": {
     "NAME": "Stress Reliever",
-    "DESCRIPTIONS": ["At the start of your turn, look at the top ", " cards of your draw pile. You may discard any of them."]
+    "DESCRIPTIONS": ["At the start of your turn, look at the top #b", " cards of your draw pile. You may discard any of them."]
   },
   "SurpressingFirePower": {
     "NAME": "Surpressing Fire",
-    "DESCRIPTIONS": ["For each Knife you Throw, gain ", " Block."]
+    "DESCRIPTIONS": ["For each #yKnife you #yThrow, gain #b", " #yBlock."]
   },
   "TheWorldPower": {
     "NAME": "The World",
@@ -85,6 +85,6 @@
   },
   "UnparalleledPower": {
     "NAME": "Unparalleled",
-    "DESCRIPTIONS": ["If there is no other card that costs 2 in your deck, gain ", " Strength and Dexterity."]
+    "DESCRIPTIONS": ["If there is no other card that costs #b2 in your deck, gain ", " #yStrength and #yDexterity."]
   }
 }

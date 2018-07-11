@@ -86,7 +86,7 @@
 	},
 	"FollowUp": {
 		"NAME": "追击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 伤害加深 ，获得 [B] 并抽一张卡。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 枯萎 ，获得 [B] 并抽一张卡。"
 	},
 	"FullDefense": {
 		"NAME": "全力防守",
@@ -103,7 +103,7 @@
 	},
 	"Gouge": {
 		"NAME": "凿击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 虚弱 ，给予 1 层 伤害加深 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 虚弱 ，给予 1 层 枯萎 。"
 	},
 	"Haste": {
 		"NAME": "疾速",
@@ -137,7 +137,7 @@
 	},
 	"Misdirection": {
 		"NAME": "误导",
-		"DESCRIPTION": "给予所有敌人 1 层 伤害加深 。"
+		"DESCRIPTION": "给予所有敌人 1 层 枯萎 。"
 	},
 	"MoonPhase": {
 		"NAME": "月相",
@@ -145,7 +145,7 @@
 	},
 	"Moonlight": {
 		"NAME": "月光",
-		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 伤害加深 。 虚无 。"
+		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 枯萎 。 虚无 。"
 	},
 	"MorningCall": {
 		"NAME": "早安",
@@ -153,8 +153,8 @@
 	},
 	"MurderousAura": {
 		"NAME": "杀气",
-		"DESCRIPTION": "你的回合开始时，所有敌人获得 1 层 伤害加深 。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，所有敌人获得 1 层 伤害加深 。"
+		"DESCRIPTION": "你的回合开始时，所有敌人获得 1 层 枯萎 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，所有敌人获得 1 层 枯萎 。"
 	},
 	"NoEscape": {
 		"NAME": "无处可逃",
@@ -174,7 +174,7 @@
 	},
 	"Read": {
 		"NAME": "先读",
-		"DESCRIPTION": "下回合，如果敌人意图不是攻击，附加 2 层 伤害加深 。 NL 不能同时先读两个敌人。"
+		"DESCRIPTION": "下回合，如果敌人意图不是攻击，附加 2 层 枯萎 。 NL 不能同时先读两个敌人。"
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
@@ -283,8 +283,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 伤害加深 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 伤害加深 。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {

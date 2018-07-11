@@ -86,7 +86,7 @@
 	},
 	"FollowUp": {
 		"NAME": "FollowUp",
-		"DESCRIPTION": "Deal !D! damage. NL If the enemy has Amplified, gain [B] and draw a card."
+		"DESCRIPTION": "Deal !D! damage. NL If the enemy has Blight, gain [B] and draw a card."
 	},
 	"FullDefense": {
 		"NAME": "Full Defense",
@@ -103,7 +103,7 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage. NL If the enemy is Weakened, apply 1 Amplified."
+		"DESCRIPTION": "Deal !D! damage. NL If the enemy is Weakened, apply 1 Blight."
 	},
 	"Haste": {
 		"NAME": "Haste",
@@ -137,7 +137,7 @@
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
-		"DESCRIPTION": "Apply 1 Amplified to ALL enemies."
+		"DESCRIPTION": "Apply 1 Blight to ALL enemies."
 	},
 	"MoonPhase": {
 		"NAME": "Moon Phase",
@@ -145,7 +145,7 @@
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Amplified. NL Ethereal."
+		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Blight. NL Ethereal."
 	},
 	"MorningCall": {
 		"NAME": "Morning Call",
@@ -153,8 +153,8 @@
 	},
 	"MurderousAura": {
 		"NAME": "Murderous Aura",
-		"DESCRIPTION": "At the start of your turn, apply 1 Amplified to ALL enemies.",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply 1 Amplified to ALL enemies."
+		"DESCRIPTION": "At the start of your turn, apply 1 Blight to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply 1 Blight to ALL enemies."
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
@@ -174,7 +174,7 @@
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply 2 Amplified. NL Can only read one enemy at a time."
+		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply 2 Blight. NL Can only read one enemy at a time."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
@@ -283,8 +283,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Amplified to ALL enemies. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Amplified to ALL enemies.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {
