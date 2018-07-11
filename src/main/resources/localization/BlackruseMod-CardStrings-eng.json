@@ -200,8 +200,8 @@
 	},
 	"Revamp": {
 		"NAME": "Revamp",
-		"DESCRIPTION": "Shuffle all of your cards into your draw pile. NL Next turn, draw 2 more cards. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Shuffle all of your cards into your draw pile. NL Next turn, draw 2 more cards."
+		"DESCRIPTION": "Shuffle all of NL your cards into NL your draw pile. NL Next turn, draw 2 more cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Shuffle all of NL your cards into NL your draw pile. NL Next turn, draw 2 more cards."
 	},
 	"Rewind": {
 		"NAME": "Rewind",
