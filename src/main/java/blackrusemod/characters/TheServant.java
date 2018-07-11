@@ -65,15 +65,15 @@ public class TheServant extends CustomPlayer {
 	public static ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add("Strike_S");
+		retVal.add("Strike_S");
+		retVal.add("Strike_S");
+		retVal.add("Strike_S");
 		retVal.add("Defend_S");
-		retVal.add("TimeWarp");
-		retVal.add("DoubleEdge");
-		retVal.add("Misdirection");
-		retVal.add("ShiftingReality");
-		retVal.add("Misdirection");
-		retVal.add("TemporalMisd");
-		retVal.add("TemporalSlicing");
-		retVal.add("Deny");
+		retVal.add("Defend_S");
+		retVal.add("Defend_S");
+		retVal.add("Defend_S");
+		retVal.add("KidneyShot");
+		retVal.add("PullOut");
 		return retVal;
 	}
 	
