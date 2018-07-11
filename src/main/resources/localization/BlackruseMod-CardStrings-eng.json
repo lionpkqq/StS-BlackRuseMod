@@ -9,7 +9,7 @@
 	},
 	"Advance": {
 		"NAME": "Advance",
-		"DESCRIPTION": "Draw !M! cards. NL Next turn, draw 2 less cards."
+		"DESCRIPTION": "Draw !M! cards. NL Next turn, NL draw 2 less cards."
 	},
 	"Barrier": {
 		"NAME": "Barrier",
@@ -66,11 +66,11 @@
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
-		"DESCRIPTION": "Next turn, draw !M! more cards and gain [B]."
+		"DESCRIPTION": "Next turn, NL draw !M! more cards NL and gain [B]."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
-		"DESCRIPTION": "Gain !B! Block. NL Reduce the duration of Debuffs on you for 1 turn."
+		"DESCRIPTION": "Gain !B! Block. NL Reduce the duration of Debuffs on you NL for 1 turn."
 	},
 	"FirstStrike": {
 		"NAME": "First Strike",
@@ -230,7 +230,7 @@
 	},
 	"Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Throw a Knife. Deal !D! damage."
+		"DESCRIPTION": "Throw a Knife. NL Deal !D! damage."
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
