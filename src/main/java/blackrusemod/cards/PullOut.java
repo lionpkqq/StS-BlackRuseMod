@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.AmplifyDamagePower;
 import blackrusemod.powers.KnivesPower;
 
 public class PullOut extends CustomCard {
@@ -20,24 +21,23 @@ public class PullOut extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 6;
-	private static final int KNIVES = 2;
+	private static final int COST = 2;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 8;
 
 	public PullOut() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.PULL_OUT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.BASIC,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = KNIVES;
+		this.exhaust = true;
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, this.magicNumber), this.magicNumber));
+				AbstractGameAction.AttackEffect.SLASH_HEAVY));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new AmplifyDamagePower(m, m.getPower("AmplifyDamagePower").amount), m.getPower("AmplifyDamagePower").amount));
 	}
 
 	public AbstractCard makeCopy() {
@@ -48,7 +48,6 @@ public class PullOut extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(1);
 		}
 	}
 }

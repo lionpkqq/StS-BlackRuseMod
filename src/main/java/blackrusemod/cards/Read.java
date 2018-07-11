@@ -19,7 +19,6 @@ public class Read extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
 	private static final int AD = 2;
 
 	public Read() {
@@ -31,7 +30,7 @@ public class Read extends CustomCard {
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
 		if (p.hasPower("ReadPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "ReadPower"));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReadPower(p, m, -1), -1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReadPower(p, m, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -41,7 +40,7 @@ public class Read extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }

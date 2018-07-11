@@ -9,7 +9,7 @@
 	},
 	"Advance": {
 		"NAME": "预支",
-		"DESCRIPTION": "抽 !M! 张卡。 NL 下回合少抽 2 张卡。"
+		"DESCRIPTION": "抽 !M! 张卡。 NL 下回合少抽 1 张卡。"
 	},
 	"Barrier": {
 		"NAME": "屏障",
@@ -58,7 +58,8 @@
 	},
 	"Exchange": {
 		"NAME": "交换",
-		"DESCRIPTION": "丢弃所有手牌，每丢弃 1 张牌获得 1 把 飞刀 。 NL 消耗 。"
+		"DESCRIPTION": "你身上每有一层 负面状态 ，获得 !M! 点 格挡 。",
+		"EXTENDED_DESCRIPTION": ["NL （获得 !B! 点 格挡 。）"]
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
@@ -137,7 +138,7 @@
 	},
 	"Misdirection": {
 		"NAME": "误导",
-		"DESCRIPTION": "给予所有敌人 1 层 枯萎 。"
+		"DESCRIPTION": "获得 !B! 点 格挡 。NL 给予所有敌人 !M! 层 枯萎 。"
 	},
 	"MoonPhase": {
 		"NAME": "月相",
@@ -169,12 +170,12 @@
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 每次这张卡被丢弃，在本次战斗内伤害上升 !M! 。"
 	},
 	"PullOut": {
-		"NAME": "拔出",
-		"DESCRIPTION": "造成 !D! 点伤害，获得 !M! 把 飞刀 。"
+		"NAME": "黯灭",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。"
 	},
 	"Read": {
 		"NAME": "先读",
-		"DESCRIPTION": "下回合，如果敌人意图不是攻击，附加 2 层 枯萎 。 NL 不能同时先读两个敌人。"
+		"DESCRIPTION": "下回合，如果敌人意图不是攻击，附加 !M! 层 枯萎 。 NL 不能同时先读两个敌人。"
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
@@ -271,8 +272,8 @@
 	},
 	"TemporalArms": {
 		"NAME": "幻时武装",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 3 把 飞刀 和 8 点 格挡 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 3 把 飞刀 和 8 点 格挡 。 ",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 4 把 飞刀 和 10 点 格挡 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 4 把 飞刀 和 10 点 格挡 。 ",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalEssence": {
@@ -283,8 +284,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人2层 枯萎 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人2层 枯萎 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {

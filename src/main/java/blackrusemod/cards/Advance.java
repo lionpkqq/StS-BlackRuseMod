@@ -21,7 +21,7 @@ public class Advance extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
 	private static final int DRAW = 2;
-	private static final int DRAW_LESS = 2;
+	private static final int DRAW_LESS = 1;
 	
 	public Advance() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.ADVANCE), COST, DESCRIPTION,

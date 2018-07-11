@@ -22,6 +22,7 @@ public class ReadPower extends AbstractPower {
 	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
+		this.amount = amount;
 		this.owner = owner;
 		this.source = source;
 		this.target = (AbstractMonster)this.source;
@@ -34,7 +35,7 @@ public class ReadPower extends AbstractPower {
 	public void atStartOfTurnPostDraw() {
 		//flash();
 		if (!(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 2), 2));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
 			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ReadPower"));
 	}
 

@@ -68,7 +68,7 @@ public class TheServant extends CustomPlayer {
 		retVal.add("Defend_S");
 		retVal.add("Defend_S");
 		retVal.add("KidneyShot");
-		retVal.add("PullOut");
+		retVal.add("HouseCleaning");
 		return retVal;
 	}
 	

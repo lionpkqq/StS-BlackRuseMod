@@ -22,7 +22,8 @@ public class FanOfKnives extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -1;
-	private static final int ATTACK_DMG = 3;
+	private static final int ATTACK_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 2;
 	private static final int KNIVES = 2;
 
 	public FanOfKnives() {
@@ -49,7 +50,7 @@ public class FanOfKnives extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}
 }

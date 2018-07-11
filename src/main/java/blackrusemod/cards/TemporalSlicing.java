@@ -33,7 +33,7 @@ public class TemporalSlicing extends CustomCard {
 	
 	public void triggerWhenDrawn() {
 		AbstractDungeon.actionManager.addToBottom(new SwordBoomerangAction(
-				AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(AbstractDungeon.player, 5), 2));
+				AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(AbstractDungeon.player, 6), 2));
 	}
 	
 	public boolean canUse(AbstractPlayer p, AbstractMonster m)

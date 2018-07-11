@@ -28,7 +28,7 @@ public class HouseCleaning extends CustomCard {
 	public HouseCleaning() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HOUSE_CLEANING), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 	}
 	
 	@Override
