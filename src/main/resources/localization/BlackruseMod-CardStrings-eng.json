@@ -284,8 +284,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 2 Blight to ALL enemies. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 2 Blight to ALL enemies.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {

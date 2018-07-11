@@ -284,8 +284,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人2层 枯萎 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人2层 枯萎 。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {

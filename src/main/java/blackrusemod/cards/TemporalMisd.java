@@ -39,7 +39,7 @@ public class TemporalMisd extends CustomCard {
 	
 	public void triggerWhenDrawn() {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 2), 2));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
 		}
 	}
 

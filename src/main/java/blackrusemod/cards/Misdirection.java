@@ -22,6 +22,7 @@ public class Misdirection extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 6;
+	private static final int UPGRADE_PLUS_BLOCK = 3;
 	private static final int BLIGHT = 1;
 
 	public Misdirection() {
@@ -34,7 +35,7 @@ public class Misdirection extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new AmplifyDamagePower(mo, 1), 1));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
 		}
 	}
 
@@ -45,7 +46,7 @@ public class Misdirection extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
 	}
 }

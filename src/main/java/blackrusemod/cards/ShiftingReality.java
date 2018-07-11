@@ -22,11 +22,12 @@ public class ShiftingReality extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int ALL = 15;
-	private static final int[] doubleDamage = {15,15,15,15,15,15,15};
-	private static final int[] doubleDamagePlus = {24,24,24,24,24,24,24};
+	private static final int ATTACK_DMG = 4;
+	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int ALL = 12;
+	private static final int UPGRADE_PLUS_ALL = 6;
+	private static final int[] doubleDamage = {12,12,12,12,12,12,12};
+	private static final int[] doubleDamagePlus = {18,18,18,18,18,18,18};
 	private static final DamageType d = DamageInfo.DamageType.NORMAL;
 
 	public ShiftingReality() {
@@ -62,7 +63,7 @@ public class ShiftingReality extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(9);
+			upgradeMagicNumber(UPGRADE_PLUS_ALL);
 			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}

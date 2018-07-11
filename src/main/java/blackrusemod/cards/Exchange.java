@@ -40,8 +40,8 @@ public class Exchange extends CustomCard {
 	{
 		this.baseBlock = 0;
 		if (AbstractDungeon.player.hasPower("Weakened")) this.baseBlock += AbstractDungeon.player.getPower("Weakened").amount*this.magicNumber;
-		if (AbstractDungeon.player.hasPower("Vulnerable")) this.baseBlock += AbstractDungeon.player.getPower("Weakened").amount*this.magicNumber;
-		if (AbstractDungeon.player.hasPower("Frail")) this.baseBlock += AbstractDungeon.player.getPower("Weakened").amount*this.magicNumber;
+		if (AbstractDungeon.player.hasPower("Vulnerable")) this.baseBlock += AbstractDungeon.player.getPower("Vulnerable").amount*this.magicNumber;
+		if (AbstractDungeon.player.hasPower("Frail")) this.baseBlock += AbstractDungeon.player.getPower("Frail").amount*this.magicNumber;
 		super.applyPowers();
 		this.rawDescription = DESCRIPTION;
 		this.rawDescription += EXTENDED_DESCRIPTION[0];
