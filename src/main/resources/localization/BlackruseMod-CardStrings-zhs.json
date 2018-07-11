@@ -50,7 +50,7 @@
 	},
 	"Duplication": {
 		"NAME": "复制体",
-		"DESCRIPTION": "对你附加 1 层 虚弱 ， 1 层 脆弱 。本回合你打出的下 !M! 张卡会打出两次。"
+		"DESCRIPTION": "对你附加 !M! 层 虚弱 和 脆弱 。本回合你打出的下 !M! 张卡会打出两次。"
 	},
 	"Enbodiment": {
 		"NAME": "具现化",

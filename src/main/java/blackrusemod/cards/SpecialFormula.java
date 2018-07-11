@@ -27,6 +27,7 @@ public class SpecialFormula extends CustomCard {
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
 		this.magicNumber = this.baseMagicNumber = WEAK;
+		this.exhaust = true;
 	}
 	
 	@Override

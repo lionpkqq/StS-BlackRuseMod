@@ -37,7 +37,9 @@ public class PullOut extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_HEAVY));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new AmplifyDamagePower(m, m.getPower("AmplifyDamagePower").amount), m.getPower("AmplifyDamagePower").amount));
+		if (m.hasPower("AmplifyDamagePower"))
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+					m, p, new AmplifyDamagePower(m, m.getPower("AmplifyDamagePower").amount), m.getPower("AmplifyDamagePower").amount));
 	}
 
 	public AbstractCard makeCopy() {

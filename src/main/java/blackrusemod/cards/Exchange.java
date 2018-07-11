@@ -19,7 +19,7 @@ public class Exchange extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int STACK = 4;
+	private static final int STACK = 3;
 
 	public Exchange() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.EXCHANGE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -51,7 +51,7 @@ public class Exchange extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 }
