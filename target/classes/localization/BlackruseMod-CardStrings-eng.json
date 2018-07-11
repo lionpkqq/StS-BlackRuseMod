@@ -13,11 +13,11 @@
 	},
 	"Barrier": {
 		"NAME": "Barrier",
-		"DESCRIPTION": "Next turn, gain 1 Intangible. NL Exhaust."
+		"DESCRIPTION": "Next turn, NL gain 1 Intangible. NL Exhaust."
 	},
 	"BorrowedTime": {
 		"NAME": "Borrowed Time",
-		"DESCRIPTION": "Draw !M! cards. NL Gain [B][B][B]. NL Next turn, draw 5 less cards and lose [B][B][B]. NL Exhasut."
+		"DESCRIPTION": "Draw !M! cards. NL Gain [B] [B] [B]. NL Next turn, draw 5 less cards and lose [B] [B] [B]. NL Exhaust."
 	},
 	"BruteForce": {
 		"NAME": "Brute Force",
@@ -33,11 +33,11 @@
 	},
 	"DWeaponry": {
 		"NAME": "D. Weaponry",
-		"DESCRIPTION": "At the beginning of your turn, obtain !M! Knives."
+		"DESCRIPTION": "At the start NL of your turn, NL obtain !M! Knives."
 	},
 	"Deny": {
 		"NAME": "Deny",
-		"DESCRIPTION": "Look at your draw pile. NL You may discard up to 4 cards. NL Exhaust.",
+		"DESCRIPTION": "Look at your NL draw pile. NL You may discard NL up to 4 cards. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Look at your draw pile. NL You may discard up to 4 cards."
 	},
 	"DoubleEdge": {
@@ -62,7 +62,7 @@
 	},
 	"FanOfKnives": {
 		"NAME": "Fan Of Knives",
-		"DESCRIPTION": "Spend all [B]. NL Throw X multiply by !M! Knives. NL Each deals !D! damage to a random enemy."
+		"DESCRIPTION": "Spend all [B]. NL Throw X multiply NL by !M! Knives. NL Each deals !D! damage to a random enemy."
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
@@ -90,7 +90,7 @@
 	},
 	"FullDefense": {
 		"NAME": "Full Defense",
-		"DESCRIPTION": "Spend all [B]. NL Gain !B! Block X time(s). NL Apply X Weak to you."
+		"DESCRIPTION": "Spend all [B]. NL Gain !B! Block NL X time(s). NL Apply X Weak to you."
 	},
 	"FullOffense": {
 		"NAME": "Full Offense",
@@ -112,11 +112,11 @@
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
-		"DESCRIPTION": "Discard 2 cards. NL. Obtain 3 Knives."
+		"DESCRIPTION": "Discard 2 cards. NL Obtain 3 Knives."
 	},
 	"Indiscriminate": {
 		"NAME": "Indiscriminate",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL They lose !M! Strength for one turn."
+		"DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL They lose !M! Strength for one turn."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
@@ -158,7 +158,7 @@
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
-		"DESCRIPTION": "Deal !D! damage. If the enemy does not intend to attack, apply !M! Vulnerable."
+		"DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply !M! Vulnerable."
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
@@ -174,7 +174,7 @@
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply 2 Amplify Damage. NL Cannot Read 2 enemies at the same time."
+		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply 2 Amplify Damage. NL Can only read one enemy at a time."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
@@ -186,7 +186,7 @@
 	},
 	"Replace": {
 		"NAME": "Replace",
-		"DESCRIPTION": "Discard a card from your draw pile. NL. Place a card from your discard pile on top of your draw pile."
+		"DESCRIPTION": "Discard a card from your draw pile. NL Place a card from your discard pile on top of your draw pile."
 	},
 	"Reset": {
 		"NAME": "Reset",
@@ -195,7 +195,7 @@
 	},
 	"ReturningBlades": {
 		"NAME": "Returning Blades",
-		"DESCRIPTION": "Deal !D! damage for each Attack in your discard pile.",
+		"DESCRIPTION": "Deal !D! damage for each Attack card in your discard pile.",
 		"EXTENDED_DESCRIPTION": [" NL (There are ? Attack cards in your discard pile.)"]
 	},
 	"Revamp": {
@@ -209,7 +209,7 @@
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Deal !D! damage. NL Target enemy loses !M! Strength for one turn. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength for one turn. NL Exhaust."
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
@@ -217,11 +217,11 @@
 	},
 	"ShiftingReality": {
 		"NAME": "Shifting Reality",
-		"DESCRIPTION": "Deal !D! damage. NL. If this card is discarded, deal !M! static damage to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, deal !M! Static Damage NL to ALL enemies."
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Discard the top card of your draw pile. If this card is discarded, draw !M! cards."
+		"DESCRIPTION": "Discard the top card of your draw pile. NL If this card is discarded, draw !M! cards."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
@@ -234,7 +234,7 @@
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
-		"DESCRIPTION": "Deal !D! damage 6 times. NL Target enemy loses !M! Strength. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage NL six times. NL Enemy loses NL !M! Strength. NL Exhaust."
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
@@ -242,7 +242,7 @@
 	},
 	"Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block."
+		"DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Gain !B! Block."
 	},
 	"StarChef": {
 		"NAME": "Star Chef",
@@ -255,11 +255,11 @@
 	},
 	"StressReliever": {
 		"NAME": "Stress Reliever",
-		"DESCRIPTION": "At the start of your turn, look at the top !M! cards of your draw pile. NL You may discard any of them."
+		"DESCRIPTION": "At the start of your turn, look at the NL top !M! cards of NL your draw pile. NL You may discard any of them."
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw a Knife. Deals !D! damage to ALL enemies. NL Ethereal."
+		"DESCRIPTION": "Throw a Knife. NL Deals !D! damage NL to ALL enemies. NL Ethereal."
 	},
 	"SurpressingFire": {
 		"NAME": "Surpressing Fire",
@@ -267,7 +267,7 @@
 	},
 	"Taunt": {
 		"NAME": "Taunt",
-		"DESCRIPTION": "Target enemy gain !M! Strength. NL You gain !M! [B] next turn."
+		"DESCRIPTION": "Enemy gain !M! Strength. NL You gain !M! [B] next turn."
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",
@@ -289,7 +289,7 @@
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage to a random enemy twice. NL Ethereal.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage twice randomly. NL Ethereal.",
 		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage to a random enemy twice.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
@@ -315,6 +315,6 @@
 	},
 	"Unsheathe": {
 		"NAME": "Unsheathe",
-		"DESCRIPTION": "Deal !D! damage 3 times. NL Apply 2 Weak and Frail to yourself."
+		"DESCRIPTION": "Deal !D! damage NL three times. NL Apply 2 Weak and Frail to yourself."
 	}
 }
