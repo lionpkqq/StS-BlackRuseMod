@@ -95,7 +95,7 @@
 	"FullOffense": {
 		"NAME": "Full Offense",
 		"DESCRIPTION": "Deal damage that equals to the number of cards in your hand. NL Discard your hand.",
-		"EXTENDED_DESCRIPTION": ["NL Deal !D! damage."]
+		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
 	"GarbageDisposal": {
 		"NAME": "Garbage Disposal",
@@ -190,13 +190,13 @@
 	},
 	"Reset": {
 		"NAME": "Reset",
-		"DESCRIPTION": "Clear ALL Debuffs on you. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Clear ALL Debuffs on you. "
+		"DESCRIPTION": "Clear ALL NL Debuffs on you. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Clear ALL NL Debuffs on you. "
 	},
 	"ReturningBlades": {
 		"NAME": "Returning Blades",
-		"DESCRIPTION": "Deal !D! damage for each Attack card in your discard pile.",
-		"EXTENDED_DESCRIPTION": [" NL (There are ? Attack cards in your discard pile.)"]
+		"DESCRIPTION": "Deal !M! damage for each Attack card in your discard pile.",
+		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
 	"Revamp": {
 		"NAME": "Revamp",
@@ -255,7 +255,7 @@
 	},
 	"StressReliever": {
 		"NAME": "Stress Reliever",
-		"DESCRIPTION": "At the start of your turn, look at the NL top !M! cards of NL your draw pile. NL You may discard any of them."
+		"DESCRIPTION": "At the start of your turn, look at the NL top !M! cards of NL your draw pile. NL You may discard NL any of them."
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",

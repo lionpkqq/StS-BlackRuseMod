@@ -195,8 +195,8 @@
 	},
 	"ReturningBlades": {
 		"NAME": "返刃",
-		"DESCRIPTION": "弃牌堆里每有一张攻击牌，造成 !D! 点伤害。",
-		"EXTENDED_DESCRIPTION": [" NL （弃牌堆里有 ? 张攻击牌。）"]
+		"DESCRIPTION": "弃牌堆里每有一张攻击牌，造成 !M! 点伤害。",
+		"EXTENDED_DESCRIPTION": ["NL (造成 !D! 点伤害。)"]
 	},
 	"Revamp": {
 		"NAME": "翻新",

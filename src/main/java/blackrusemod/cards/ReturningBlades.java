@@ -1,6 +1,7 @@
 package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,33 +22,50 @@ public class ReturningBlades extends CustomCard {
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 3;
-	private static final int UPGRADE_PLUS_DMG = 1;
 
 	public ReturningBlades() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.RETURNING_BLADES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
-		this.baseDamage = ATTACK_DMG;
+		this.baseDamage = 0;
+		this.magicNumber = this.baseMagicNumber = ATTACK_DMG;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		for (AbstractCard c : p.discardPile.group) {
-			if (c.type == AbstractCard.CardType.ATTACK) {
-				AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-						new DamageInfo(p, this.damage, this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-			}
-		}
+			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+					AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 	}
 
 	public AbstractCard makeCopy() {
 		return new ReturningBlades();
 	}
+	
+	public void applyPowers()
+	{
+		this.baseDamage = 0;
+		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+			if (c.type == AbstractCard.CardType.ATTACK) {
+				this.baseDamage += this.magicNumber;
+			}
+		}
+		super.applyPowers();
+		this.rawDescription = DESCRIPTION;
+		this.rawDescription += EXTENDED_DESCRIPTION[0];
+		initializeDescription();
+	}
+
+	public void calculateCardDamage(AbstractMonster mo)
+	{
+		super.calculateCardDamage(mo);
+		this.rawDescription = DESCRIPTION;
+		this.rawDescription += EXTENDED_DESCRIPTION[0];
+		initializeDescription();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

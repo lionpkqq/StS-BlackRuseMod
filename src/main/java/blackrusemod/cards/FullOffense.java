@@ -21,6 +21,7 @@ public class FullOffense extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int COST_UPGRADED = 0;
 
@@ -28,16 +29,34 @@ public class FullOffense extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FULL_OFFENSE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
+		this.baseDamage = 0;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
-				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+				AbstractGameAction.AttackEffect.SLASH_HEAVY));
 		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 10, true));
 	}
 
 	public AbstractCard makeCopy() {
 		return new FullOffense();
+	}
+	
+	public void applyPowers()
+	{
+		this.baseDamage = AbstractDungeon.player.hand.size();
+		super.applyPowers();
+		this.rawDescription = DESCRIPTION;
+		this.rawDescription += EXTENDED_DESCRIPTION[0];
+		initializeDescription();
+	}
+
+	public void calculateCardDamage(AbstractMonster mo)
+	{
+		super.calculateCardDamage(mo);
+		this.rawDescription = DESCRIPTION;
+		this.rawDescription += EXTENDED_DESCRIPTION[0];
+		initializeDescription();
 	}
 
 	public void upgrade() {
