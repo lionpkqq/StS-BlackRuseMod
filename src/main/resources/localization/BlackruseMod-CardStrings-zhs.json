@@ -78,7 +78,7 @@
 	},
 	"FlawlessForm": {
 		"NAME": "完美形态",
-		"DESCRIPTION": "获得 !M! 层 人工制品 。 NL 每回合少抽 1 张卡。"
+		"DESCRIPTION": "获得 !M! 层 人工制品 。 NL 本场战斗内每回合少抽 1 张卡。"
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
@@ -90,7 +90,7 @@
 	},
 	"FullDefense": {
 		"NAME": "全力防守",
-		"DESCRIPTION": "消费所有 [B]。 NL 获得 !D! 点格挡 X 次。 NL 获得 虚弱 X 层。"
+		"DESCRIPTION": "消费所有 [B] 。 NL 获得 !B! 点格挡 X 次。 NL 获得 虚弱 X 层。"
 	},
 	"FullOffense": {
 		"NAME": "全力进攻",
@@ -99,8 +99,7 @@
 	},
 	"GarbageDisposal": {
 		"NAME": "废物处理",
-		"DESCRIPTION": " 消耗 最多 2 张手牌。 NL 获得那个数量的 敏捷 。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": " 消耗 最多 2 张手牌。 NL 获得那个数量的 敏捷 。"
+		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 获得那个数量的 敏捷 。 NL 消耗 。",
 	},
 	"Gouge": {
 		"NAME": "凿击",
@@ -134,7 +133,7 @@
 	"Laundry": {
 		"NAME": "清洗衣物",
 		"DESCRIPTION": " 消耗 卡组和弃牌堆里所有的 诅咒 和 状态 。",
-		"UPGRADE_DESCRIPTION": " 消耗 卡组和弃牌堆里所有的 诅咒 和 状态 。 NL 固有 。"
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 卡组和弃牌堆里所有的 诅咒 和 状态 。"
 	},
 	"Misdirection": {
 		"NAME": "误导",
@@ -155,7 +154,7 @@
 	"MurderousAura": {
 		"NAME": "杀气",
 		"DESCRIPTION": "你的回合开始时，所有敌人获得 1 层 伤害加深 。",
-		"UPGRADE_DESCRIPTION": "你的回合开始时，所有敌人获得 1 层 伤害加深 。 NL 固有 。"
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，所有敌人获得 1 层 伤害加深 。"
 	},
 	"NoEscape": {
 		"NAME": "无处可逃",
@@ -163,7 +162,7 @@
 	},
 	"Unparalleled": {
 		"NAME": "无双",
-		"DESCRIPTION": "如果你的牌组里没有其他消耗 2 的卡，获得 !M! 力量 和 敏捷 。"
+		"DESCRIPTION": "如果这是你卡组里唯一消耗2的卡，获得 !M! 力量 和 敏捷 。"
 	},
 	"Potential": {
 		"NAME": "潜能",
@@ -179,7 +178,7 @@
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
-		"DESCRIPTION": "本次战斗内，所有卡失去 虚无 属性。 NL 固有 。"
+		"DESCRIPTION": " 固有 。 NL 本次战斗内，所有卡失去 虚无 属性。"
 	},
 	"Rearm": {
 		"NAME": "再装填",
@@ -227,7 +226,7 @@
 	"SilverBlades": {
 		"NAME": "银刃",
 		"DESCRIPTION": "本次战斗内， 升级 所有 投掷 飞刀 的卡。",
-		"UPGRADE_DESCRIPTION": "本次战斗内， 升级 所有 投掷 飞刀 的卡。 NL 固有 。 "
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 本次战斗内， 升级 所有 投掷 飞刀 的卡。"
 	},
 	"Snipe": {
 		"NAME": "狙击",
@@ -247,12 +246,12 @@
 	},
 	"StarChef": {
 		"NAME": "星级厨师",
-		"DESCRIPTION": "你的回合开始时可以 消耗 一张牌并获得 [B] 。",
-		"UPGRADE_DESCRIPTION": "你的回合开始时可以 消耗 一张牌并获得 [B] 。 NL 固有 。 "
+		"DESCRIPTION": "你的回合开始时可以 消耗 一张牌并由此获得 [B] 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时可以 消耗 一张牌并由此获得 [B] 。"
 	},
 	"Starlight": {
-		"NAME": "月光",
-		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 伤害加深 。 NL 虚无 。"
+		"NAME": "星光",
+		"DESCRIPTION": " 投掷 4 把 飞刀 ，每把随机造成 !D! 点伤害 。 NL 虚无 。"
 	},
 	"StressReliever": {
 		"NAME": "解愁人",
@@ -264,7 +263,7 @@
 	},
 	"SurpressingFire": {
 		"NAME": "火力压制",
-		"DESCRIPTION": "每投掷 !M! 把飞刀，获得 1 点 格挡 。"
+		"DESCRIPTION": "每投掷 1 把 飞刀 ，获得 !M! 点 格挡 。"
 	},
 	"Taunt": {
 		"NAME": "嘲讽",

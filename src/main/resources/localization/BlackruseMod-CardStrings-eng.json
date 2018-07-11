@@ -9,295 +9,312 @@
 	},
 	"Advance": {
 		"NAME": "Advance",
-		"DESCRIPTION": "Ethereal. The first time each enemy attacks you this turn, apply !M! Vulnerable and !M! Weak to it."
+		"DESCRIPTION": "Draw !M! cards. NL Next turn, draw 2 less cards."
 	},
 	"Barrier": {
 		"NAME": "Barrier",
-		"DESCRIPTION": "Deal !D! damage twice to one enemy and once to ALL other enemies."
+		"DESCRIPTION": "Next turn, gain 1 Intangible. NL Exhaust."
 	},
 	"BorrowedTime": {
 		"NAME": "Borrowed Time",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Weak and !M! Vulnerable to ALL enemies."
+		"DESCRIPTION": "Draw !M! cards. NL Gain [B][B][B]. NL Next turn, draw 5 less cards and lose [B][B][B]. NL Exhasut."
 	},
 	"BruteForce": {
 		"NAME": "Brute Force",
-		"DESCRIPTION": "Can only be played if you have an Ethereal card in your hand. NL Deal !D! damage."
+		"DESCRIPTION": "Discard 3 cards. NL Deal !D! damage."
 	},
-	"Comet": {
+	"Comet": {	
 		"NAME": "Comet",
-		"DESCRIPTION": "Recycle a Dazed. Deal !D! damage to ALL enemies."
+		"DESCRIPTION": "Innate. NL Deal !D! damage. NL Next turn, draw !M! more cards."
 	},
 	"CosmicInflation": {
 		"NAME": "Cosmic Inflation",
-		"DESCRIPTION": "Recycle a Dazed. Deal !D! damage."
+		"DESCRIPTION": "Gain !B! Block. NL Place a copy of this card on top of your draw pile. NL Exhaust."
 	},
 	"DWeaponry": {
 		"NAME": "D. Weaponry",
-		"DESCRIPTION": "Deal !M! damage for each other card in your hand."
+		"DESCRIPTION": "At the beginning of your turn, obtain !M! Knives."
 	},
 	"Deny": {
 		"NAME": "Deny",
-		"DESCRIPTION": "Deal !D! damage. At the end of the turn, Recycle a copy of this card."
+		"DESCRIPTION": "Look at your draw pile. NL You may discard up to 4 cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Look at your draw pile. NL You may discard up to 4 cards."
 	},
 	"DoubleEdge": {
 		"NAME": "Double Edge",
-		"DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable to both the enemy and yourself."
 	},
 	"DualDimension": {
 		"NAME": "Dual Dimension",
-		"DESCRIPTION": "Deal !D! damage. NL If you are Weak, Frail, or Vulnerable, deal !D! damage again."
+		"DESCRIPTION": "Double your Knives. NL Exhaust."
 	},
 	"Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "对你附加 1 层 虚弱 ， 1 层 脆弱 。本回合你打出的下两张卡会打出两次。"
+		"DESCRIPTION": "Apply 1 Weak and Frail to you. NL This turn, your next !M! card(s) is played twice."
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
-		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Deal !D! damage."
+		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile."
 	},
 	"Exchange": {
 		"NAME": "Exchange",
-		"DESCRIPTION": "Gain !B! Block. Every time you draw this card, increase its Block by !M! for this combat."
+		"DESCRIPTION": "Discard your hand. NL Obtain 1 Knife for each card you discard. NL Exhaust."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan Of Knives",
-		"DESCRIPTION": "Reverse the effects of Frail, Weak, and Vulnerable on you for !M! turn."
+		"DESCRIPTION": "Spend all [B]. NL Throw X multiply by !M! Knives. NL Each deals !D! damage to a random enemy."
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
-		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Frail."
+		"DESCRIPTION": "Next turn, draw !M! more cards and gain [B]."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
-		"DESCRIPTION": "Gain !M! Block for each other card in your hand."
+		"DESCRIPTION": "Gain !B! Block. NL Reduce the duration of Debuffs on you for 1 turn."
 	},
 	"FirstStrike": {
 		"NAME": "First Strike",
-		"DESCRIPTION": "Gain !B! Block. NL Recycle a Dazed."
+		"DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Next turn, lose [B]."
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "Draw a card. If it is Ethereal, add a Dazed to your hand and draw another card."
+		"DESCRIPTION": "Gain !M! Artifacts. NL Draw one less card each turn for this combat."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Deal !D! damage. NL Next turn gain [R]."
+		"DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn. NL Exhaust."
 	},
 	"FollowUp": {
-		"NAME": "Follow Up",
-		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw !M! cards."
+		"NAME": "FollowUp",
+		"DESCRIPTION": "Deal !D! damage. NL If the enemy has Amplify Damage, gain [B] and draw a card."
 	},
 	"FullDefense": {
 		"NAME": "Full Defense",
-		"DESCRIPTION": "Deal !M! damage for each Exhausted Ethereal card this combat."
+		"DESCRIPTION": "Spend all [B]. NL Gain !B! Block X time(s). NL Apply X Weak to you."
 	},
 	"FullOffense": {
 		"NAME": "Full Offense",
-		"DESCRIPTION": "Ethereal. Enemy loses !M! Strength this turn, increasing by 1 each time you draw this card this combat."
+		"DESCRIPTION": "Deal damage that equals to the number of cards in your hand. NL Discard your hand.",
+		"EXTENDED_DESCRIPTION": ["NL Deal !D! damage."]
 	},
 	"GarbageDisposal": {
 		"NAME": "Garbage Disposal",
-		"DESCRIPTION": "Deal !D! damage. Every time you draw this card, increase its damage by !M! for this combat."
+		"DESCRIPTION": "Exhaust up to !M! cards. NL Gain Dexterity equals to the number of cards you just exhausted. NL Exhaust.",
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Spend all [R]. Deal !D! damage to ALL enemies X times. Vulnerable enemies take double damage."
+		"DESCRIPTION": "Deal !D! damage. NL If the enemy is Weakened, apply 1 Amplify Damage."
 	},
 	"Haste": {
 		"NAME": "Haste",
-		"DESCRIPTION": "Ethereal. Deal !D! damage, plus !M! damage for ALL of your Ethereal cards."
+		"DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn."
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+		"DESCRIPTION": "Discard 2 cards. NL. Obtain 3 Knives."
 	},
 	"Indiscriminate": {
 		"NAME": "Indiscriminate",
-		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Weak."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL They lose !M! Strength for one turn."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
-		"DESCRIPTION": "Deal !D! damage X times. Gain X Weak, X Frail, and X Vulnerable."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Weak."
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Gain 1 Strength."
+		"DESCRIPTION": "At the end of your turn, gain 1 Dexterity if there are any Debuffs on you."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
-		"DESCRIPTION": "Ethereal. Deal !D! damage to a random enemy !M! times. Recycle a Dazed. Exhaust."
+		"DESCRIPTION": "Throw ALL Knives. NL Each deals !D! damage to a random enemy. NL Exhaust. "
 	},
 	"Laundry": {
 		"NAME": "Laundry",
-		"DESCRIPTION": "Exhaust all Ethereal cards in your draw pile. Deal !D! damage for each card that is Exhausted."
+		"DESCRIPTION": "Exhasut all Curse and Status in your draw pile and discard pile.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Exhasut all Curse and Status in your draw pile and discard pile."
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
-		"DESCRIPTION": "If you are Frail or Vulnerable, gain !B! Block. If you are Weak, deal !D! damage to ALL enemies."
+		"DESCRIPTION": "Apply 1 Amplify Damage to ALL enemies."
 	},
 	"MoonPhase": {
 		"NAME": "Moon Phase",
-		"DESCRIPTION": "If the enemy is Weak, it loses !M! Strength. Exhaust."
+		"DESCRIPTION": "At the start of your turn, lose 1 Dexterity and gain 1 Strength."
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Whenever you draw a non-Ethereal Attack or Skill, Recycle an Ethereal copy of it."
+		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Amplify Damage. NL Ethereal."
 	},
 	"MorningCall": {
 		"NAME": "Morning Call",
-		"DESCRIPTION": "Whenever an Ethereal card is Exhausted, gain !M! Dexterity."
+		"DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust. NL Ethereal."
 	},
 	"MurderousAura": {
 		"NAME": "Murderous Aura",
-		"DESCRIPTION": "Whenever an Ethereal card is Exhausted, gain !M! Strength."
+		"DESCRIPTION": "At the start of your turn, apply 1 Amplify Damage to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply 1 Amplify Damage to ALL enemies."
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
-		"DESCRIPTION": "Gain !M! Strength. NL Whenever you play an attack, Recycle a Dazed."
+		"DESCRIPTION": "Deal !D! damage. If the enemy does not intend to attack, apply !M! Vulnerable."
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
-		"DESCRIPTION": "Whenever you apply Vulnerable or Weak to an enemy, apply !M! additional stack."
+		"DESCRIPTION": "If this is the only card that costs 2 in your deck, gain !M! Strength and Dexterity."
 	},
 	"Potential": {
-		"NAME": "Potential",
-		"DESCRIPTION": "Draw until your hand is full. NL Top-Cycle 4 Dazed. NL Exhaust."
+		"NAME": "Potential,
+		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, its damage increases for !M! for this combat."
 	},
 	"PullOut": {
-		"NAME": "Pull Out",
-		"DESCRIPTION": "Gain [R] for every !M! cards in your draw pile."
+		"NAME": "PullOut",
+		"DESCRIPTION": "Deal !D! damage. NL Obtain !M! Knives."
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Recycle this card, your discard pile and a Dazed. Next turn, draw !M! more card."
+		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply 2 Amplify Damage. NL Cannot Read 2 enemies at the same time."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
-		"DESCRIPTION": "Recycle 3 Dazed. NL Whenever you draw a Dazed, draw !M! card."
+		"DESCRIPTION": "Innate. NL All cards lose Ethereal property for this combat."
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Next turn, draw !M! card. Whenever you draw this card, increase that amount by 1 this combat."
+		"DESCRIPTION": "Obtain 6 Knives. NL Gain !M! Strength for this turn."
 	},
 	"Replace": {
 		"NAME": "Replace",
-		"DESCRIPTION": "Can only be played if your discard pile is empty or your draw pile is empty. Deal !D! damage."
+		"DESCRIPTION": "Discard a card from your draw pile. NL. Place a card from your discard pile on top of your draw pile."
 	},
 	"Reset": {
 		"NAME": "Reset",
-		"DESCRIPTION": "If an enemy intends to Debuff you, gain !M! Strength and !M! Dexterity."
+		"DESCRIPTION": "Clear ALL Debuffs on you. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Clear ALL Debuffs on you. "
 	},
 	"ReturningBlades": {
 		"NAME": "Returning Blades",
-		"DESCRIPTION": "Ethereal. NL Retain all excess Energy at the end of turn. Draw 1 extra card next turn."
+		"DESCRIPTION": "Deal !D! damage for each Attack in your discard pile.",
+		"EXTENDED_DESCRIPTION": [" NL (There are ? Attack cards in your discard pile.)"]
 	},
 	"Revamp": {
 		"NAME": "Revamp",
-		"DESCRIPTION": "Create !M! copy of an Ethereal card in your hand. Top-Cycle that copy."
+		"DESCRIPTION": "Shuffle all of your cards into your draw pile. NL Next turn, draw 2 more cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Shuffle all of your cards into your draw pile. NL Next turn, draw 2 more cards."
 	},
 	"Rewind": {
 		"NAME": "Rewind",
-		"DESCRIPTION": "Remove all Frail, Weak, and Vulnerable. Gain 5 Block, plus !M! Block for each stack removed."
+		"DESCRIPTION": "Gain !B! Block. NL Place a card from your hand on top of your draw pile."
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Gain 1 Vulnerable. Gain !M! Energy, decaying by 1 each time this card is played this combat."
+		"DESCRIPTION": "Deal !D! damage. NL Target enemy loses !M! Strength for one turn. NL Exhaust."
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact."
+		"DESCRIPTION": "Draw !M! cards. NL If this card is discarded, gain !M! Dexterity."
 	},
 	"ShiftingReality": {
 		"NAME": "Shifting Reality",
-		"DESCRIPTION": "Gain !B! Block. NL All cards in hand become Ethereal. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL. If this card is discarded, deal !M! static damage to ALL enemies."
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Unplayable. When you draw this card, upgrade a card in your hand."
+		"DESCRIPTION": "Discard the top card of your draw pile. If this card is discarded, draw !M! cards."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
-		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Gain 1 Dexterity."
+		"DESCRIPTION": "Upgrade ALL cards that Throw Knives for the rest of this combat.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Upgrade ALL cards that Throw Knives for the rest of this combat."
 	},
 	"Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Choose to add a random Attack, Skill or Power to your hand. NL It costs 0 this turn. NL Exhaust."
+		"DESCRIPTION": "Throw a Knife. Deal !D! damage."
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
-		"DESCRIPTION": "Transfer all of your Weak and Vulnerable to an enemy. Draw a card."
+		"DESCRIPTION": "Deal !D! damage 6 times. NL Target enemy loses !M! Strength. NL Exhaust."
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Deal !D! damage. NL Top-Cycle a card. NL If it is Ethereal, deal !D! more damage."
+		"DESCRIPTION": "Apply 99 Weak. NL Exhaust."
 	},
 	"Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Remove all Weak and Vulnerable from an Enemy. It loses !M! HP per stack removed."
+		"DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain !B! Block."
 	},
 	"StarChef": {
 		"NAME": "Star Chef",
-		"DESCRIPTION": "Deal !D! damage. Top-Cycle !M! card from your hand."
+		"DESCRIPTION": "At the start of your turn, you may exhaust and card and thereby gain [B].",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may exhaust and card and thereby gain [B]."
 	},
 	"Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Deal 1 damage to ALL enemies for each card in your draw pile. Exhaust."
+		"DESCRIPTION": "Throw 4 Knives. NL Each deals !D! damage to a random enemy. NL Ethereal."
 	},
 	"StressReliever": {
 		"NAME": "Stress Reliever",
-		"DESCRIPTION": "Remove all of your Weak, Frail, and Vulnerable. Deal !M! damage per stack removed."
+		"DESCRIPTION": "At the start of your turn, look at the top !M! cards of your draw pile. NL You may discard any of them."
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "At the start of your turn, Recycle a random Ethereal card."
+		"DESCRIPTION": "Throw a Knife. Deals !D! damage to ALL enemies. NL Ethereal."
 	},
 	"SurpressingFire": {
 		"NAME": "Surpressing Fire",
-		"DESCRIPTION": "At the start of your turn, Recycle a Dazed, then draw a card."
+		"DESCRIPTION": "Gain !M! Block for each Knife you Throw."
 	},
 	"Taunt": {
 		"NAME": "Taunt",
-		"DESCRIPTION": "Dazed can now be played to gain !M! Block and deal !M! damage to ALL enemies."
+		"DESCRIPTION": "Target enemy gain !M! Strength. NL You gain !M! [B] next turn."
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",
-		"DESCRIPTION": "Each enemy loses HP equal to the amount of Weak and Vulnerable it has at the start of its turn."
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, obtain 3 Knives and gain 8 Block. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, obtain 3 Knives and gain 8 Block.",
+		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalEssence": {
 		"NAME": "Temporal Essence",
-		"DESCRIPTION": "Whenever you draw an Ethereal card, deal !M! damage to a random enemy."
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, gain [B] and draw 2 cards. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, gain [B] and draw 2 cards.",
+		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalMisd": {
-		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Ethereal cards cost !M! less [R]."
+		"NAME": "Temporal Misd",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Amplify Damage to ALL enemies. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Amplify Damage to ALL enemies.",
+		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Ethereal. NL Gain !M! Intangible. NL Exhaust."
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage to a random enemy twice. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage to a random enemy twice.",
+		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TheWorld": {
 		"NAME": "The World",
-		"DESCRIPTION": "This turn, your next Ethereal card is played twice."
+		"DESCRIPTION": "This turn, your next card costs 0."
 	},
 	"TimeEmbedded": {
 		"NAME": "Time Embedded",
-		"DESCRIPTION": "Top-Cycle an Exhausted Ethereal card. NL Exhaust."
+		"DESCRIPTION": "Gain !B! Block. NL Lose [B] next turn."
 	},
 	"TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Recycle 2 Dazed. Draw !M! cards. Gain [R] [R]. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL If this kills an emeny, place a copy of this card into your hand. NL Exhaust."
 	},
 	"TrashToTreasure": {
 		"NAME": "Trash To Treasure",
-		"DESCRIPTION": "Gain 5 Block and 3 Reflect per !M! cards in your draw pile."
+		"DESCRIPTION": "Return !M! card(s) from your discard pile to your hand and upgrade them. NL Exhaust."
 	},
 	"Unruled": {
 		"NAME": "Unruled",
-		"DESCRIPTION": "After paying this card's cost, double your remaining [R]. Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL If there are any Debuffs on you, deal double damage."
 	},
 	"Unsheathe": {
 		"NAME": "Unsheathe",
-		"DESCRIPTION": "At the end of turn, gain !M! Block for each stack of Frail, Weak, or Vulnerable you have."
+		"DESCRIPTION": "Deal !D! damage 3 times. NL Apply 2 Weak and Frail to yourself."
 	}
 }

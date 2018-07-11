@@ -19,7 +19,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.TheServantEnum;
 
 public class TheServant extends CustomPlayer {
-	public static final int ENERGY_PER_TURN = 4;
+	public static final int ENERGY_PER_TURN = 3;
 	
 	public static final String[] orbTextures = {
 			"img/char/servant/orb/layer1.png",

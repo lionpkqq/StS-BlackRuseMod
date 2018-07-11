@@ -51,7 +51,7 @@ public class BorrowedTime extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(3);
 		}
 	}
 }

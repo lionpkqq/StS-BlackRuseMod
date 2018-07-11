@@ -28,6 +28,7 @@ public class MorningCall extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
 		this.isEthereal = true;
+		this.isInnate = true;
 	}
 	
 	@Override
