@@ -22,7 +22,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 	private DamageInfo info;
 	private boolean isRandom;
 	private String debuff;
-	public ThrowKnivesAction(AbstractPlayer p, AbstractCreature target, DamageInfo info, boolean isRandom, String debuff)
+	private boolean depleted = false;
+	public ThrowKnivesAction(AbstractPlayer p, AbstractCreature target, int amount, DamageInfo info, boolean isRandom, String debuff)
 	{
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
@@ -31,20 +32,18 @@ public class ThrowKnivesAction extends AbstractGameAction {
 		this.info = info;
 		this.isRandom = isRandom;
 		this.debuff = debuff;
+		this.amount = amount;
 	}
 
 	public void update()
 	{
+		this.depleted = false;
 		if (this.source.hasPower("KnivesPower")) {
-			if (this.source.getPower("KnivesPower").amount <= 0) {
-				if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "我的飞刀用光了！", 1.0F, 2.0F));
-				}
-				else {
-				AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "I have depleted my Knives!", 1.0F, 2.0F));
-				}
+			if (this.source.getPower("KnivesPower").amount <= this.amount) {
+				this.amount = this.source.getPower("KnivesPower").amount;
+				this.depleted = true;
 			}
-			else {
+			for (int i = 0; i < this.amount; i++) {
 				if (this.isRandom) this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
 				if (!(this.target.isDying) && !(this.target.halfDead)) {
 					AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
@@ -55,6 +54,14 @@ public class ThrowKnivesAction extends AbstractGameAction {
 					if (this.source.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower("SurpressingFirePower").amount));
 					if (this.debuff != null && this.debuff == "Weakened")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
 					if (this.debuff != null && this.debuff == "Amplify Damage")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
+				}
+			}
+			if (this.depleted) {
+				if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "我的飞刀用光了！", 1.0F, 2.0F));
+				}
+				else {
+					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "I have depleted my Knives!", 1.0F, 2.0F));
 				}
 			}
 		}

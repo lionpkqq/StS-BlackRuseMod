@@ -39,8 +39,7 @@ public class FanOfKnives extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		for (int i = 0; i < this.energyOnUse*this.magicNumber; i++)
-			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, null));
+		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, this.energyOnUse*this.magicNumber, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, null));
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
 	}
 

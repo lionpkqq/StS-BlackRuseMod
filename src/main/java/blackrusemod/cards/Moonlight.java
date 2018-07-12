@@ -30,8 +30,7 @@ public class Moonlight extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Amplify Damage"));
-		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Amplify Damage"));
+		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, 2, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Amplify Damage"));
 	}
 
 	public AbstractCard makeCopy() {

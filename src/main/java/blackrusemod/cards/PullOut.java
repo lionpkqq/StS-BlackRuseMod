@@ -14,7 +14,6 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
-import blackrusemod.powers.KnivesPower;
 
 public class PullOut extends CustomCard {
 	public static final String ID = "PullOut";
