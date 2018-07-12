@@ -290,8 +290,8 @@
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 6 damage twice randomly. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 6 damage to a random enemy twice.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 4 damage 3 times randomly. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 4 damage 3 times randomly.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TheWorld": {

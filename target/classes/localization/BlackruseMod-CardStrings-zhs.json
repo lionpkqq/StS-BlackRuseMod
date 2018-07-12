@@ -290,8 +290,8 @@
 	},
 	"TemporalSlicing": {
 		"NAME": "幻时切割",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 5 点伤害 2 次。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 5 点伤害 2 次。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 4 点伤害 3 次。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 4 点伤害 3 次。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TheWorld": {
