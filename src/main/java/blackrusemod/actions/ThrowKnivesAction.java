@@ -45,7 +45,9 @@ public class ThrowKnivesAction extends AbstractGameAction {
 			}
 			for (int i = 0; i < this.amount; i++) {
 				if (this.isRandom) this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
-				AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, true));
+				if ((this.target != null) && (this.target.hb != null)) {
+					AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, true));
+				}
 				if ((this.target != null) && (this.target.hb != null)) {
 					AbstractDungeon.actionManager.addToTop(new VFXAction(new ThrowDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 				}
