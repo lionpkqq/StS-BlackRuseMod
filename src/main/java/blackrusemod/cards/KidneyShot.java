@@ -31,7 +31,8 @@ public class KidneyShot extends CustomCard {
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, this.magicNumber, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Weakened"));
+		for (int i = 0; i < this.magicNumber; i++)
+			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Weakened"));
 	}
 
 	public AbstractCard makeCopy() {

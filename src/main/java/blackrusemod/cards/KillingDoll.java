@@ -22,6 +22,7 @@ public class KillingDoll extends CustomCard {
 	private static final int COST = 3;
 	private static final int COST_UPGRADED = 2;
 	private static final int ATTACK_DMG = 1;
+	private int KNIVES = 0;
 
 	public KillingDoll() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.KILLING_DOLL), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -31,7 +32,11 @@ public class KillingDoll extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, 99999999, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, null));
+		if (p.hasPower("KnivesPower")) {
+			this.KNIVES = p.getPower("KnivesPower").amount;
+			for (int i = 0; i < KNIVES; i++)
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, null));
+		}
 	}
 
 	public AbstractCard makeCopy() {
