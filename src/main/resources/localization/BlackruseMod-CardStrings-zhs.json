@@ -163,7 +163,7 @@
 	},
 	"Unparalleled": {
 		"NAME": "无双",
-		"DESCRIPTION": "如果这是你卡组里唯一消耗2的卡，获得 !M! 力量 和 敏捷 。"
+		"DESCRIPTION": "如果你的卡组里没有其他消耗2的卡，获得 !M! 力量 和 敏捷 。"
 	},
 	"Potential": {
 		"NAME": "潜能",

@@ -3,6 +3,7 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -57,8 +58,7 @@ public class Potential extends CustomCard {
 	public void triggerOnManualDiscard() {
 		this.baseDamage += this.magicNumber;
 		this.applyPowers();
-		AbstractDungeon.player.hand.addToHand(this);
-		AbstractDungeon.player.discardPile.removeCard(this);
+		AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
 	}
 
 	public AbstractCard makeCopy() {

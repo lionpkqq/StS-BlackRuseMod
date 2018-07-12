@@ -31,6 +31,36 @@ public class UnparalleledPower extends AbstractPower {
 		this.img = BlackRuseMod.getUnparalleledPowerTexture();
 	}
 	
+	public void stackPower(int stackAmount)
+	{
+		this.fontScale = 8.0F;
+		this.amount += stackAmount;
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			 if (c.cost == 2) paralleled = true;
+		}
+		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+			 if (c.cost == 2) paralleled = true;
+		}
+		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+			 if (c.cost == 2) paralleled = true;
+		}
+		for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+			 if (c.cost == 2) paralleled = true;
+		}
+		if (!paralleled) {
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, stackAmount), stackAmount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, stackAmount), stackAmount));
+		}
+		else {
+			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+				AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "怎么……我的卡组里有消耗2的卡！", 1.0F, 2.0F));
+			}
+			else {
+			AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "Oops, I have card(s) that cost 2!", 1.0F, 2.0F));
+			}
+		}
+	}
+	
 	public void onInitialApplication() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			 if (c.cost == 2) paralleled = true;

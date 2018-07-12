@@ -163,7 +163,7 @@
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
-		"DESCRIPTION": "If this is the only card that costs 2 in your deck, gain !M! Strength and Dexterity."
+		"DESCRIPTION": "If there is no other card that costs 2 in your deck, gain !M! Strength and Dexterity."
 	},
 	"Potential": {
 		"NAME": "Potential",
