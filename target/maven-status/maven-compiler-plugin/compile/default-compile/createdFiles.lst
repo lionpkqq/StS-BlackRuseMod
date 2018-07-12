@@ -43,6 +43,7 @@ blackrusemod\cards\FullDefense.class
 blackrusemod\actions\ThrowKnivesAction.class
 blackrusemod\cards\TimeEmbedded.class
 blackrusemod\cards\SilverBlades.class
+blackrusemod\actions\StressRelieverAction.class
 blackrusemod\cards\Reset.class
 blackrusemod\powers\MurderousAuraPower.class
 blackrusemod\powers\SilverBladesPower.class

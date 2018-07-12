@@ -25,16 +25,15 @@ public class ShiftingReality extends CustomCard {
 	private static final int ATTACK_DMG = 4;
 	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int ALL = 12;
-	private static final int UPGRADE_PLUS_ALL = 9;
+	private static final int UPGRADE_PLUS_ALL = 6;
 	private static final int[] doubleDamage = {12,12,12,12,12,12,12};
-	private static final int[] doubleDamagePlus = {21,21,21,21,21,21,21};
+	private static final int[] doubleDamagePlus = {18,18,18,18,18,18,18};
 	private static final DamageType d = DamageInfo.DamageType.NORMAL;
 
 	public ShiftingReality() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_REALITY), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
-		this.isMultiDamage = true;
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = ALL;
 	}

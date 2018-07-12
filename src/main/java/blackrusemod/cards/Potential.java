@@ -28,7 +28,7 @@ public class Potential extends CustomCard {
 
 	public Potential() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.POTENTIAL), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = ATTACK_DMG_GROW;

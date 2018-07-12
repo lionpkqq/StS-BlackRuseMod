@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.Barrier;
-import blackrusemod.cards.BruteForce;
-import blackrusemod.cards.Comet;
-import blackrusemod.cards.Deny;
+import blackrusemod.cards.TemporalArms;
+import blackrusemod.cards.TemporalEssence;
+import blackrusemod.cards.TemporalMisd;
+import blackrusemod.cards.TemporalSlicing;
 
 public class EnbodimentPower extends AbstractPower {
 	public static final String POWER_ID = "EnbodimentPower";
@@ -45,10 +45,10 @@ public class EnbodimentPower extends AbstractPower {
 		for (int i = 0; i < this.amount; i++) {
 			Random random = new Random();
 			int randomNum = random.nextInt(4) + 1;
-			if (randomNum == 1) c = new Deny().makeCopy();
-			else if (randomNum == 2) c = new Comet().makeCopy();
-			else if (randomNum == 3) c = new BruteForce().makeCopy();
-			else c = new Barrier().makeCopy();
+			if (randomNum == 1) c = new TemporalSlicing().makeCopy();
+			else if (randomNum == 2) c = new TemporalMisd().makeCopy();
+			else if (randomNum == 3) c = new TemporalArms().makeCopy();
+			else c = new TemporalEssence().makeCopy();
 		
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}

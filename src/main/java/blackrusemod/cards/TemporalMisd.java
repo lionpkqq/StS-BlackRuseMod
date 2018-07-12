@@ -21,11 +21,13 @@ public class TemporalMisd extends CustomCard {
     public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = -2;
+	private static final int MISD = 2;
 
 	public TemporalMisd() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_MISD), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
 		this.isEthereal = true;
+		this.magicNumber = this.baseMagicNumber = MISD;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +41,7 @@ public class TemporalMisd extends CustomCard {
 	
 	public void triggerWhenDrawn() {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
 		}
 	}
 

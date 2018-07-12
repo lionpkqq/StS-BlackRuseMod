@@ -67,7 +67,7 @@
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
-		"DESCRIPTION": "Next turn, NL draw !M! more cards NL and gain [B]."
+		"DESCRIPTION": "Next turn, NL gain !M! Block NL and [B]."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
@@ -125,7 +125,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the end of your turn, gain 1 Dexterity if there are any Debuffs on you."
+		"DESCRIPTION": "At the start of your turn, gain !M! Strength for each stack of Debuffs on you for one turn."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -142,7 +142,7 @@
 	},
 	"MoonPhase": {
 		"NAME": "Moon Phase",
-		"DESCRIPTION": "At the start of your turn, lose 1 Dexterity and gain 1 Strength."
+		"DESCRIPTION": "At the end of your turn, gain !M! Block for each stack of Debuffs on you."
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
@@ -284,8 +284,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply 1 Blight to ALL enemies.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply !M! Blight to ALL enemies. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply !M! Blight to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {

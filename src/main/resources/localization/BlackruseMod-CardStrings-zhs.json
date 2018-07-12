@@ -67,7 +67,7 @@
 	},
 	"Farseeing": {
 		"NAME": "深谋远虑",
-		"DESCRIPTION": "下回合多抽 !M! 张卡。 NL 下回合获得 [B] 。"
+		"DESCRIPTION": "下回合获得 !M! 点 格挡 。 NL 下回合获得 [B] 。"
 	},
 	"FastForward": {
 		"NAME": "快进",
@@ -125,7 +125,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "杀手本能",
-		"DESCRIPTION": "你的回合结束时，如果你的身上有 负面状态 ，获得 1 点 敏捷 。"
+		"DESCRIPTION": "你的回合开始时，获得你身上 负面状态 层数乘以1的 力量 一回合。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -142,7 +142,7 @@
 	},
 	"MoonPhase": {
 		"NAME": "月相",
-		"DESCRIPTION": "每回合开始时，损失 1 点 敏捷 ，获得 1 点 力量 。"
+		"DESCRIPTION": "你的回合结束时，获得你身上 负面状态 层数乘以 !M! 的 格挡 。"
 	},
 	"Moonlight": {
 		"NAME": "月光",
@@ -284,8 +284,8 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人1层 枯萎 。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人 !M! 层 枯萎 。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人 !M! 层 枯萎 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {

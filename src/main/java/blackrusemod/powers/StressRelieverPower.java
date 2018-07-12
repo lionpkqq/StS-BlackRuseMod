@@ -1,6 +1,5 @@
 package blackrusemod.powers;
 
-import com.megacrit.cardcrawl.actions.unique.ReprogramAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,6 +7,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.StressRelieverAction;
 
 public class StressRelieverPower extends AbstractPower {
 	public static final String POWER_ID = "StressRelieverPower";
@@ -37,6 +37,6 @@ public class StressRelieverPower extends AbstractPower {
 	
 	public void atStartOfTurn() {
 		//flash();
-		AbstractDungeon.actionManager.addToBottom(new ReprogramAction(this.amount));
+		AbstractDungeon.actionManager.addToBottom(new StressRelieverAction(this.amount));
 	}
 }

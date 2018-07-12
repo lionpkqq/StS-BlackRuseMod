@@ -45,11 +45,11 @@
   },
   "KillerInstinctPower": {
     "NAME": "杀手本能",
-    "DESCRIPTIONS": ["你的回合结束时，如果你的身上有 #y负面状态 ，获得 ", " 点 #y敏捷 。"]
+    "DESCRIPTIONS": ["你的回合开始时，获得你身上 #y负面状态 层数乘以 #b", " 的 #y力量 一回合。"]
   },
   "MoonPhasePower": {
     "NAME": "月相",
-    "DESCRIPTIONS": ["你的回合开始时，损失 #b", " 点 #y敏捷 ，获得 #b", " 点 #y力量 。"]
+    "DESCRIPTIONS": ["你的回合结束时，获得你身上 #y负面状态 层数乘以 #b", " 的 #y格挡 。"]
   },
   "MurderousAuraPower": {
     "NAME": "杀气",

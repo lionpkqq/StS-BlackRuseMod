@@ -24,7 +24,7 @@ public class FirstStrike extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int UPGRADE_PLUS_DMG = 4;
 
 	public FirstStrike() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FIRST_STRIKE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,

@@ -45,11 +45,11 @@
   },
   "KillerInstinctPower": {
     "NAME": "Killer Instinct",
-    "DESCRIPTIONS": ["At the end of your turn, if you have any #yDebuffs on you, gain #b", " #yDexterity."]
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yStrength for each stack of #yDebuffs on you for one turn."]
   },
   "MoonPhase": {
     "NAME": "Moon Phase",
-    "DESCRIPTIONS": ["At the start of your turn, lose #b", " #yDexterity, gain #b", " #yStrength."]
+    "DESCRIPTIONS": ["At the end of your turn, gain #b", " #yBlock for each stack of #yDebuffs on you."]
   },
   "MurderousAuraPower": {
     "NAME": "Murderous Aura",

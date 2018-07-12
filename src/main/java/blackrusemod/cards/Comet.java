@@ -20,9 +20,9 @@ public class Comet extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
+	private static final int ATTACK_DMG = 5;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int DRAW_MORE = 1;
+	private static final int DRAW_MORE = 2;
 
 	public Comet() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.COMET), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,

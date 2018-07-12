@@ -20,15 +20,16 @@ public class MoonPhase extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
+	private static final int BLOCK_PER_STACK = 2;
 
 	public MoonPhase() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOON_PHASE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = BLOCK_PER_STACK;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MoonPhasePower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MoonPhasePower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -38,7 +39,7 @@ public class MoonPhase extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }
