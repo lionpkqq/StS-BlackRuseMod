@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.DrawManipulationPower;
 import blackrusemod.powers.EnergyManipulationPower;
 
 public class Farseeing extends CustomCard {

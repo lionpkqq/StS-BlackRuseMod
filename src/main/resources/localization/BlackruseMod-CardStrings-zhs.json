@@ -167,7 +167,7 @@
 	},
 	"Potential": {
 		"NAME": "潜能",
-		"DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 每次这张卡被丢弃，攻击次数上升 1 次 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 每次这张卡被丢弃，本次战斗内伤害上升 !M! 并放入手牌。"
 	},
 	"PullOut": {
 		"NAME": "黯灭",

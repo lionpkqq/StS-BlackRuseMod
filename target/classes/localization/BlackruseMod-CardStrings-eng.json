@@ -167,7 +167,7 @@
 	},
 	"Potential": {
 		"NAME": "Potential",
-		"DESCRIPTION": "Deal !D! damage !M! times. NL When discarded, attack one more time this combat."
+		"DESCRIPTION": "Deal !D! damage. NL If discarded, deals !M! additional damage this combat and put it in your hand."
 	},
 	"PullOut": {
 		"NAME": "Desolation",
