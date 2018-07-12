@@ -50,7 +50,7 @@
 	},
 	"Duplication": {
 		"NAME": "复制体",
-		"DESCRIPTION": "对你附加 1 层 虚弱 ， 1 层 脆弱 。本回合你打出的下 !M! 张卡会打出两次。"
+		"DESCRIPTION": "对你附加 !M! 层 虚弱 和 脆弱 。本回合你打出的下 !M! 张卡会打出两次。"
 	},
 	"Enbodiment": {
 		"NAME": "具现化",
@@ -133,8 +133,8 @@
 	},
 	"Laundry": {
 		"NAME": "清洗衣物",
-		"DESCRIPTION": " 消耗 卡组和弃牌堆里所有的 诅咒 和 状态 。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 卡组和弃牌堆里所有的 诅咒 和 状态 。"
+		"DESCRIPTION": " 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。"
 	},
 	"Misdirection": {
 		"NAME": "误导",
@@ -171,7 +171,7 @@
 	},
 	"PullOut": {
 		"NAME": "黯灭",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。 消耗 。"
 	},
 	"Read": {
 		"NAME": "先读",

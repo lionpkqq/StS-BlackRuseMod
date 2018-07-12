@@ -27,7 +27,7 @@ public class Rearm extends CustomCard {
 	public Rearm() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REARM), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = STRENGTH;
 	}
 	

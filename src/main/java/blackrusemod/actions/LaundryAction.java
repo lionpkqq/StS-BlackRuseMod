@@ -22,13 +22,23 @@ public class LaundryAction extends AbstractGameAction
 	public void update()
 	{
 		if (this.duration == Settings.ACTION_DUR_XFAST) {
+			this.exh = new ArrayList();
 			for (AbstractCard c : this.p.drawPile.group) 
 				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
 					exh.add(c);
+			for (AbstractCard c : exh) this.p.drawPile.moveToExhaustPile(c);
+			
+			this.exh = new ArrayList();
 			for (AbstractCard c : this.p.discardPile.group) 
 				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
 					exh.add(c);
-			for (AbstractCard c : exh) this.p.drawPile.moveToExhaustPile(c);
+			for (AbstractCard c : exh) this.p.discardPile.moveToExhaustPile(c);
+			
+			this.exh = new ArrayList();
+			for (AbstractCard c : this.p.hand.group) 
+				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
+					exh.add(c);
+			for (AbstractCard c : exh) this.p.hand.moveToExhaustPile(c);
 		}
 		tickDuration();
 	}
