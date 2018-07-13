@@ -39,7 +39,8 @@ public class FullDefense extends CustomCard {
 		}
 		for (int i = 0; i < this.energyOnUse; i++)
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.energyOnUse, false), this.energyOnUse));
+		if (this.energyOnUse != 0)
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.energyOnUse, false), this.energyOnUse));
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
 	}
 

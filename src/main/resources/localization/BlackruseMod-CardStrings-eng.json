@@ -54,7 +54,8 @@
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
-		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile."
+		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile."
 	},
 	"Exchange": {
 		"NAME": "Exchange",
@@ -218,7 +219,7 @@
 	},
 	"ShiftingReality": {
 		"NAME": "Shifting Reality",
-		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, deal !M! Static Damage NL to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, deal !M! damage NL to ALL enemies."
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
@@ -290,13 +291,13 @@
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 4 damage 3 times randomly. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 4 damage 3 times randomly.",
+		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage twice to ALL enemies. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage twice to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TheWorld": {
 		"NAME": "The World",
-		"DESCRIPTION": "This turn, your next card costs 0."
+		"DESCRIPTION": "Draw 2 cards. NL This turn, your next NL card costs 0."
 	},
 	"TimeEmbedded": {
 		"NAME": "Time Embedded",

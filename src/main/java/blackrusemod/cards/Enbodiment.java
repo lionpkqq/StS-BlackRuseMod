@@ -18,12 +18,13 @@ public class Enbodiment extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	private static final int COST = 2;
 
 	public Enbodiment() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.ENBODIMENT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.isEthereal = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +38,9 @@ public class Enbodiment extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			this.isEthereal = false;
 		}
 	}
 }

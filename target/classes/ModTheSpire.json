@@ -5,5 +5,6 @@
   "description": "Adds The Servant as a new playable character",
   "dependencies": ["basemod"],
   "version": "0.3.0",
-  "sts_version": "07-05-2018"
+  "sts_version": "07-05-2018",
+  "update_json": "https://api.github.com/repos/lionpkqq/StS-BlackRuseMod/releases/latest"
 }

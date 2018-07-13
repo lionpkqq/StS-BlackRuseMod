@@ -54,7 +54,8 @@
 	},
 	"Enbodiment": {
 		"NAME": "具现化",
-		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。"
+		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。"
 	},
 	"Exchange": {
 		"NAME": "交换",
@@ -218,7 +219,7 @@
 	},
 	"ShiftingReality": {
 		"NAME": "现世变换",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡被丢弃，对所有敌人造成 !M! 点 固定伤害 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡被丢弃，对所有敌人造成 !M! 点 伤害 。"
 	},
 	"ShiftingThoughts": {
 		"NAME": "思想变换",
@@ -290,13 +291,13 @@
 	},
 	"TemporalSlicing": {
 		"NAME": "幻时切割",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 4 点伤害 3 次。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，随机造成 4 点伤害 3 次。",
+		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，对所有敌人造成 5 点伤害两次。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，对所有敌人造成 5 点伤害两次。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TheWorld": {
 		"NAME": "世界",
-		"DESCRIPTION": "本回合下一张打出的卡消耗为 0 。"
+		"DESCRIPTION": "抽2张卡。 NL 本回合下一张打出的卡消耗为 0 。"
 	},
 	"TimeEmbedded": {
 		"NAME": "嵌时护甲",

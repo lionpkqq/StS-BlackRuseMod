@@ -2,15 +2,16 @@ package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -26,9 +27,7 @@ public class ShiftingReality extends CustomCard {
 	private static final int UPGRADE_PLUS_DMG = 2;
 	private static final int ALL = 12;
 	private static final int UPGRADE_PLUS_ALL = 6;
-	private static final int[] doubleDamage = {12,12,12,12,12,12,12};
-	private static final int[] doubleDamagePlus = {18,18,18,18,18,18,18};
-	private static final DamageType d = DamageInfo.DamageType.NORMAL;
+	private DamageInfo info;
 
 	public ShiftingReality() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_REALITY), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -45,14 +44,16 @@ public class ShiftingReality extends CustomCard {
 	}
 	
 	public void triggerOnManualDiscard() {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.utility.SFXAction("THUNDERCLAP", 0.05F));
+		this.info = new DamageInfo (AbstractDungeon.player, this.magicNumber, this.damageTypeForTurn);
+		
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP", 0.05F));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			if (!mo.isDeadOrEscaped()) {
-				AbstractDungeon.actionManager.addToBottom(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.LightningEffect(mo.drawX, mo.drawY), 0.05F));
+				AbstractDungeon.actionManager.addToBottom(new VFXAction(new LightningEffect(mo.drawX, mo.drawY), 0.05F));
+				this.info.applyPowers(AbstractDungeon.player, mo);
+				AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, this.info, AbstractGameAction.AttackEffect.NONE));
 			}
 		}
-		if (this.canUpgrade()) AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, doubleDamage, d, AbstractGameAction.AttackEffect.NONE));
-		else AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, doubleDamagePlus, d, AbstractGameAction.AttackEffect.NONE));
 	}
 
 	public AbstractCard makeCopy() {
