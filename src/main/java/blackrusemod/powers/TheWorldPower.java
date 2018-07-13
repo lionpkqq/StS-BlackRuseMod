@@ -35,7 +35,8 @@ public class TheWorldPower extends AbstractPower {
 	public void onRemove()
 	{
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			 c.setCostForTurn(c.cost);
+			 c.costForTurn = c.cost;
+			 c.isCostModifiedForTurn = false;
 		}
 	}
 	

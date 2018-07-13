@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import basemod.abstracts.CustomCard;
@@ -26,7 +28,7 @@ public class Indiscriminate extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 8;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int STRENGTH_LOSS = 2;
+	private static final int STRENGTH_LOSS = 3;
 
 	public Indiscriminate() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.INDISCRIMINATE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -34,6 +36,7 @@ public class Indiscriminate extends CustomCard {
 				AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = STRENGTH_LOSS;
+		this.isMultiDamage = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,9 +44,9 @@ public class Indiscriminate extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.0F));
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, true));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new com.megacrit.cardcrawl.powers.StrengthPower(mo, -this.magicNumber), -this.magicNumber));
-			if ((m != null) && (!m.hasPower("Artifact"))) {
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new com.megacrit.cardcrawl.powers.GainStrengthPower(mo, this.magicNumber), this.magicNumber));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber));
+			if ((mo != null) && (!mo.hasPower("Artifact"))) {
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, this.magicNumber), this.magicNumber));
 			}
 		}
 	}
