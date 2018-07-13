@@ -46,7 +46,7 @@ public class ThrowKnivesAction extends AbstractGameAction {
 			}
 			else {
 				if (this.isRandom) this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
-				if (!(this.target.isDying) && !(this.target.halfDead)) {
+				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead)) {
 					AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 					if ((this.target != null) && (this.target.hb != null)) {
 						AbstractDungeon.actionManager.addToTop(new VFXAction(new ThrowDaggerEffect(this.target.hb.cX, this.target.hb.cY)));

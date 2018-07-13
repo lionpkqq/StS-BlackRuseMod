@@ -54,8 +54,8 @@
 	},
 	"Enbodiment": {
 		"NAME": "具现化",
-		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。"
+		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。",
+		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张升级过的 幻时 卡加入抽牌堆。"
 	},
 	"Exchange": {
 		"NAME": "交换",
@@ -215,15 +215,15 @@
 	},
 	"ShiftingGears": {
 		"NAME": "换档",
-		"DESCRIPTION": "抽 !M! 张卡。 NL 如果这张卡被丢弃，获得 !M! 点 敏捷 。"
+		"DESCRIPTION": "抽 !M! 张卡。 NL 转变 ：获得 !M! 点 敏捷 。"
 	},
 	"ShiftingReality": {
 		"NAME": "现世变换",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡被丢弃，对所有敌人造成 !M! 点 伤害 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：对所有敌人造成 !M! 点 伤害 。"
 	},
 	"ShiftingThoughts": {
 		"NAME": "思想变换",
-		"DESCRIPTION": "丢弃抽牌堆顶的 1 张卡。 NL 如果这张卡被丢弃，抽 !M! 张卡。"
+		"DESCRIPTION": "丢弃抽牌堆顶的 1 张卡。 NL 转变 ：抽 !M! 张卡。"
 	},
 	"SilverBlades": {
 		"NAME": "银刃",
@@ -273,26 +273,23 @@
 	},
 	"TemporalArms": {
 		"NAME": "幻时武装",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 4 把 飞刀 和 10 点 格挡 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 4 把 飞刀 和 10 点 格挡 。 ",
+		"DESCRIPTION": " 幻时 。 NL 抽到这张卡时，获得 !M! 把 飞刀 和 !B! 点 格挡 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalEssence": {
 		"NAME": "幻时精华",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 [B] 并抽 2 张卡。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，获得 [B] 并抽 2 张卡。",
+		"DESCRIPTION": " 幻时 。 NL 抽到这张卡时，获得 [B] 并抽 !M! 张卡。",
+		"UPGRADE_DESCRIPTION": " 幻时 。 NL 抽到这张卡时，获得 [B] [B] 并抽 !M! 张卡。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人 !M! 层 枯萎 。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，给所有敌人 !M! 层 枯萎 。",
+		"DESCRIPTION": " 幻时 。 NL 抽到这张卡时，给所有敌人 !M! 层 枯萎 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {
 		"NAME": "幻时切割",
-		"DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，对所有敌人造成 5 点伤害两次。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": " 不能被打出 。 NL 抽到这张卡时，对所有敌人造成 5 点伤害两次。",
+		"DESCRIPTION": " 幻时 。 NL 抽到这张卡时，对所有敌人造成 !D! 点伤害两次。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TheWorld": {

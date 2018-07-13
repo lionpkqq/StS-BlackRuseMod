@@ -29,6 +29,7 @@ blackrusemod\cards\Revamp.class
 blackrusemod\cards\HouseCleaning.class
 blackrusemod\cards\Replace.class
 blackrusemod\powers\DrawManipulationPower.class
+blackrusemod\powers\UpgradedEnbodimentPower.class
 blackrusemod\actions\DoubleKnivesAction.class
 blackrusemod\actions\ReduceDebuffsAction.class
 blackrusemod\cards\Laundry.class

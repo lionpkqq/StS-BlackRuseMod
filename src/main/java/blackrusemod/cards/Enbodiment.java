@@ -12,6 +12,7 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.EnbodimentPower;
+import blackrusemod.powers.UpgradedEnbodimentPower;
 
 public class Enbodiment extends CustomCard {
 	public static final String ID = "Enbodiment";
@@ -24,11 +25,11 @@ public class Enbodiment extends CustomCard {
 	public Enbodiment() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.ENBODIMENT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.isEthereal = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnbodimentPower(p, 1), 1));
+		if (!this.upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnbodimentPower(p, 1), 1));
+		else AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UpgradedEnbodimentPower(p, 1), 1));
 	}
 
 	public AbstractCard makeCopy() {
@@ -40,7 +41,6 @@ public class Enbodiment extends CustomCard {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
-			this.isEthereal = false;
 		}
 	}
 }

@@ -23,6 +23,10 @@
     "NAME": "具现化",
     "DESCRIPTIONS": ["回合结束时将 #b", " 张 #y幻时 卡加入抽牌堆。"]
   },
+  "UpgradedEnbodimentPower": {
+    "NAME": "极·具现化",
+    "DESCRIPTIONS": ["回合结束时将 #b", " 张升级过的 #y幻时 卡加入抽牌堆。"]
+  },
   "FlawlessFormPower": {
     "NAME": "完美形态",
     "DESCRIPTIONS": ["本次战斗内，每回合少抽 #b", " 张卡。"]

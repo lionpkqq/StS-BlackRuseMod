@@ -140,6 +140,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String D_WEAPONRY_POWER = "powers/d_weaponry.png";
     public static final String DUPLICATION_POWER = "powers/duplication.png";
     public static final String ENBODIMENT_POWER = "powers/enbodiment.png";
+    public static final String UPGRADED_ENBODIMENT_POWER = "powers/upgraded_enbodiment.png";
     public static final String FLAWLESS_FORM_POWER = "powers/flawless_form.png";
     public static final String HASTE_POWER = "powers/haste.png";
     public static final String KILLER_INSTINCT_POWER = "powers/killer_instinct.png";
@@ -187,6 +188,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     public static Texture getEnbodimentPowerTexture() {
     	return new Texture(makePath(ENBODIMENT_POWER));
+    }
+    
+    public static Texture getUpgradedEnbodimentPowerTexture() {
+    	return new Texture(makePath(UPGRADED_ENBODIMENT_POWER));
     }
     
     public static Texture getFlawlessFormPowerTexture() {
@@ -584,16 +589,18 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
-        BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
-        BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷 飞刀的卡会消耗飞刀的数量。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 不能被打出 且具有 虚无 ，在抽到的时候会产生特定作用。");
-        BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 虚弱 、 易伤 以及 脆弱 。");
+        BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 #y飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
+        BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会消耗飞刀的数量。");
+        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。");
+        BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 #y虚弱 、 #y易伤 以及 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 易伤 影响。");
-        BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your Knives, the card will stop working.");
-        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.");
-        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are Unplayable and Ethereal and trigger unique effects when drawn.");
-        BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include Weak, Vulnerable and Frail.");
+        BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
+        BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
+        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
+        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal.");
+        BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include #yWeak, #yVulnerable and #yFrail.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
+        BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");
         logger.info("done setting up custom keywords");
 	}
 }

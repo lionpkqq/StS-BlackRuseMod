@@ -2,6 +2,6 @@
   "Uniform": {
     "NAME": "Uniform",
     "FLAVOR": "It can be used not only to keep dirty stuff away, but also to carry weapons.",
-    "DESCRIPTIONS": ["Start each combat with 4 Knives."]
+    "DESCRIPTIONS": ["Start each combat with #b4 #yKnives."]
   }
 }

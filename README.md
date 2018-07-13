@@ -14,7 +14,15 @@ Currently supported versions:
 
 This mod makes no changes to the base game other than adding **The Servant**. Happy Slaying the Spire!
 
+## New Mechanics ##
+* **Knives**: Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.
+* **Throw**: Throw will spend your Knives. If you have depleted your Knives, the card will stop working.
+* **Blight**: Blighted enemies will take extra damage when attacked.
+* **Temporal**: Temporal cards are Unplayable and Ethereal. (Their unique effects will be triggered when drawn.)
+* **Shift**: Shift effects can only be triggered by discarding the cards.
+
 ## Current State ##
+Looking for an artist.
 Needs more testing.
 Needs more relics for The Servant.
 
@@ -37,12 +45,12 @@ Needs more relics for The Servant.
 2. Select `BaseMod` and `StS-BlackRuse`.
 3. Press 'Play'.
 
-# Wiki
+## Wiki ##
 The Wiki is still under construction. Thanks for your patience!
 
-## List of known bugs ##
+## List of known issues ##
 
-* Haven't found any yet.
+* Temporal Arms is not affected by Dexterity.
 
 ## Credits / Acknowledgements ##
 * BlackRuse (https://github.com/lionpkqq): designer and programmer.

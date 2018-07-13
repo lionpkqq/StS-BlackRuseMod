@@ -54,8 +54,8 @@
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
-		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile."
+		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
+		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
 	},
 	"Exchange": {
 		"NAME": "Exchange",
@@ -215,15 +215,15 @@
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Draw !M! cards. NL If this card is discarded, gain !M! Dexterity."
+		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain !M! Dexterity."
 	},
 	"ShiftingReality": {
 		"NAME": "Shifting Reality",
-		"DESCRIPTION": "Deal !D! damage. NL If this card is discarded, deal !M! damage NL to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. NL Shift: Deal !M! damage NL to ALL enemies."
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Discard the top card of your draw pile. NL If this card is discarded, draw !M! cards."
+		"DESCRIPTION": "Discard the top card of your draw pile. NL Shift: Draw !M! cards."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
@@ -273,26 +273,23 @@
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, obtain 4 Knives and gain 10 Block. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, obtain 4 Knives and gain 10 Block.",
+		"DESCRIPTION": "Temporal. NL When this card is drawn, obtain !M! Knives and gain !B! Block.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalEssence": {
 		"NAME": "Temporal Essence",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, gain [B] and draw 2 cards. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, gain [B] and draw 2 cards.",
+		"DESCRIPTION": "Temporal. NL When this card is drawn, gain [B] and draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "Temporal. NL When this card is drawn, gain [B] [B] and draw !M! cards.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, apply !M! Blight to ALL enemies. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, apply !M! Blight to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL When this card is drawn, apply !M! Blight to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage twice to ALL enemies. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, deal 5 damage twice to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL When this card is drawn, deal !D! damage twice to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TheWorld": {

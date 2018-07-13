@@ -19,14 +19,18 @@ public class TemporalArms extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = -2;
+	private static final int BLOCK_AMT = 8;
+	private static final int UPGRADE_PLUS_BLOCK = 4;
+	private static final int KNIVES = 4;
 
 	public TemporalArms() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_ARMS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
 		this.isEthereal = true;
+		this.baseBlock = BLOCK_AMT;
+		this.magicNumber = this.baseMagicNumber = KNIVES;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,8 +43,9 @@ public class TemporalArms extends CustomCard {
 	}
 	
 	public void triggerWhenDrawn() {
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, 4), 4));
+		this.applyPowers();
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -50,9 +55,8 @@ public class TemporalArms extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
-			this.isEthereal = false;
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			upgradeMagicNumber(2);
 		}
 	}
 }
