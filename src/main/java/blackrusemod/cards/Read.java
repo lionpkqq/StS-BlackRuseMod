@@ -1,8 +1,7 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -10,8 +9,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.ReadPower;
 
 public class Read extends CustomCard {
 	public static final String ID = "Read";
@@ -28,9 +27,8 @@ public class Read extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = AD;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		if (p.hasPower("ReadPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "ReadPower"));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ReadPower(p, m, this.magicNumber), this.magicNumber));
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, "Read"));
 	}
 
 	public AbstractCard makeCopy() {

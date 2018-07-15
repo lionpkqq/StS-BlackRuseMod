@@ -23,7 +23,7 @@ public class TemporalArms extends CustomCard {
 	private static final int COST = -2;
 	private static final int BLOCK_AMT = 8;
 	private static final int UPGRADE_PLUS_BLOCK = 4;
-	private static final int KNIVES = 4;
+	private static final int KNIVES = 3;
 
 	public TemporalArms() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_ARMS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

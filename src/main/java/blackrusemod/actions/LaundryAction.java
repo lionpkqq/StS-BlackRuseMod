@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 public class LaundryAction extends AbstractGameAction
 {
 	private AbstractPlayer p;
-	private ArrayList<AbstractCard> exh = new ArrayList();
+	private ArrayList<AbstractCard> exh = new ArrayList<AbstractCard>();
 	
 	public LaundryAction(AbstractPlayer p)
 	{
@@ -22,19 +22,19 @@ public class LaundryAction extends AbstractGameAction
 	public void update()
 	{
 		if (this.duration == Settings.ACTION_DUR_XFAST) {
-			this.exh = new ArrayList();
+			this.exh = new ArrayList<AbstractCard>();
 			for (AbstractCard c : this.p.drawPile.group) 
 				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
 					exh.add(c);
 			for (AbstractCard c : exh) this.p.drawPile.moveToExhaustPile(c);
 			
-			this.exh = new ArrayList();
+			this.exh = new ArrayList<AbstractCard>();
 			for (AbstractCard c : this.p.discardPile.group) 
 				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
 					exh.add(c);
 			for (AbstractCard c : exh) this.p.discardPile.moveToExhaustPile(c);
 			
-			this.exh = new ArrayList();
+			this.exh = new ArrayList<AbstractCard>();
 			for (AbstractCard c : this.p.hand.group) 
 				if (c.type == AbstractCard.CardType.STATUS || c.type == AbstractCard.CardType.CURSE) 
 					exh.add(c);

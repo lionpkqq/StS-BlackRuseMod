@@ -49,7 +49,7 @@
   },
   "KillerInstinctPower": {
     "NAME": "杀手本能",
-    "DESCRIPTIONS": ["你的回合开始时，获得你身上 #y负面状态 层数乘以 #b", " 的 #y力量 一回合。"]
+    "DESCRIPTIONS": ["你的回合开始时，获得你身上 #y负面状态 层数乘以 #b", " 的 #y敏捷 一回合。"]
   },
   "MoonPhasePower": {
     "NAME": "月相",
@@ -61,7 +61,7 @@
   },
   "ReadPower": {
     "NAME": "先读",
-    "DESCRIPTIONS": ["下回合，如果目标敌人意图不是攻击，附加 #b2 层 #y枯萎 。"]
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，附加 #b", " 层 #y枯萎 。", "下回合，如果目标敌人意图 #y不是攻击 ，附加 #b", " 层 #y枯萎 。"]
   },
   "RealityMarblePower": {
     "NAME": "固有结界",
@@ -69,7 +69,7 @@
   },
   "SilverBladesPower": {
     "NAME": "银刃",
-    "DESCRIPTIONS": ["本次战斗内，升级所有 #y投掷 #y飞刀 的卡。"]
+    "DESCRIPTIONS": ["增加每把 #y飞刀 的伤害 #b", " 点。"]
   },
   "StarChefPower": {
     "NAME": "星级厨师",
@@ -87,8 +87,24 @@
     "NAME": "世界",
     "DESCRIPTIONS": ["本回合你打出的下一张卡不消耗能量。"]
   },
+    "TrueSightPower": {
+    "NAME": "真视",
+    "DESCRIPTIONS": [" #y视界 效果会多触发 #b", " 次。"]
+  },
   "UnparalleledPower": {
     "NAME": "无双",
     "DESCRIPTIONS": ["如果你的牌组里没有其他消耗 #b2 的卡，获得 ", " #y力量 和 #y敏捷 。"]
+  },
+  "SnipePower": {
+    "NAME": "狙击",
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， #y投掷 1把 #y飞刀 ，造成 #b", " 点伤害。", "下回合，如果目标敌人意图 #y不是攻击 ， #y投掷 1把 #y飞刀 ，造成 #b", " 点伤害。"]
+  },
+  "TauntPower": {
+    "NAME": "嘲讽",
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，获得 #b", " 能量。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 能量。"]
+  },
+  "NoEscapePower": {
+    "NAME": "无处可逃",
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害并附加 #b", " 层 #y易伤。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害并附加 #b", " 层 #y易伤。"]
   }
 }

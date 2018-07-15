@@ -33,16 +33,18 @@ import blackrusemod.characters.TheServant;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.patches.TheServantEnum;
 import blackrusemod.relics.Uniform;
+import blackrusemod.screens.VisionScreen;
 
 @SpireInitializer
 public class BlackRuseMod implements PostInitializeSubscriber,
 	EditCardsSubscriber, EditRelicsSubscriber, EditCharactersSubscriber,
 	EditStringsSubscriber, SetUnlocksSubscriber, EditKeywordsSubscriber {
 	public static final Logger logger = LogManager.getLogger(BlackRuseMod.class.getName());
+	public static VisionScreen vs;
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.0.1\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.5.0\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -59,7 +61,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     private static final String ENERGY_ORB_SILVER_PORTRAIT = "1024/card_silver_orb.png";
     
     // card images
-    //public static final String ANOMALY = "cards/anomaly.png";
+    public static final String _DUMMYATTACK = "cards/_dummy_attack.png";
+    public static final String _DUMMYNOTATTACK = "cards/_dummy_not_attack.png";
     public static final String ADVANCE = "cards/advance.png";
     public static final String BARRIER = "cards/barrier.png";
     public static final String BORROWED_TIME = "cards/borrowed_time.png";
@@ -73,7 +76,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String DUAL_DIMENSION = "cards/dual_dimension.png";
     public static final String DUPLICATION = "cards/duplication.png";
     public static final String ENBODIMENT = "cards/enbodiment.png";
-    public static final String EXCHANGE = "cards/exchange.png";
     public static final String FAN_OF_KNIVES = "cards/fan_of_knives.png";
     public static final String FARSEEING = "cards/farseeing.png";
     public static final String FAST_FORWARD = "cards/fast_forward.png";
@@ -132,6 +134,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String TIME_EMBEDDED = "cards/time_embedded.png";
     public static final String TIME_WARP = "cards/time_warp.png";
     public static final String TRASH_TO_TREASURE = "cards/trash_to_treasure.png";
+    public static final String TRUE_SIGHT = "cards/true_sight.png";
     public static final String UNPARALLELED = "cards/unparalleled.png";
     public static final String UNRULED = "cards/unruled.png";
     public static final String UNSHEATHE = "cards/unsheathe.png";
@@ -146,7 +149,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String KILLER_INSTINCT_POWER = "powers/killer_instinct.png";
     public static final String MOON_PHASE_POWER = "powers/moon_phase.png";
     public static final String MURDEROUS_AURA_POWER = "powers/murderous_aura.png";
-    public static final String OPPORTUNIST_POWER = "powers/opportunist.png";
     public static final String REALITY_MARBLE_POWER = "powers/reality_marble.png";
     public static final String SILVER_BLADES_POWER = "powers/silver_blades.png";
     public static final String STAR_CHEF_POWER = "powers/star_chef.png";
@@ -160,7 +162,11 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String AMPLIFY_DAMAGE_POWER = "powers/amplify_damage.png";
     public static final String READ_POWER = "powers/read.png";
     public static final String THE_WORLD_POWER = "powers/the_world.png";
+    public static final String TRUE_SIGHT_POWER = "powers/true_sight.png";
     public static final String UNPARALLELED_POWER = "powers/unparalleled.png";
+    public static final String SNIPE_POWER = "powers/snipe.png";
+    public static final String TAUNT_POWER = "powers/taunt.png";
+    public static final String NO_ESCAPE_POWER = "powers/no_escape.png";
     
     // relic images
     public static final String UNIFORM_RELIC = "relics/uniform.png";
@@ -212,10 +218,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     public static Texture getMurderousAuraPowerTexture() {
     	return new Texture(makePath(MURDEROUS_AURA_POWER));
-    }
-    
-    public static Texture getOpportunistPowerTexture() {
-    	return new Texture(makePath(OPPORTUNIST_POWER));
     }
     
     public static Texture getRealityMarblePowerTexture() {
@@ -272,6 +274,22 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     public static Texture getUnparalleledPowerTexture() {
     	return new Texture(makePath(UNPARALLELED_POWER));
+    }
+    
+    public static Texture getSnipePowerTexture() {
+    	return new Texture(makePath(SNIPE_POWER));
+    }
+    
+    public static Texture getTauntPowerTexture() {
+    	return new Texture(makePath(TAUNT_POWER));
+    }
+    
+    public static Texture getNoEscapePowerTexture() {
+    	return new Texture(makePath(NO_ESCAPE_POWER));
+    }
+    
+    public static Texture getTrueSightPowerTexture() {
+    	return new Texture(makePath(TRUE_SIGHT_POWER));
     }
     
     public static Texture getUniformTexture() {
@@ -348,12 +366,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         
         // Add relics
 		BaseMod.addRelicToCustomPool(new Uniform(), AbstractCardEnum.SILVER.toString());
-//		BaseMod.addRelicToCustomPool(new Blueberries(), AbstractCardEnum.SEEKER_PURPLE.toString());
-//		BaseMod.addRelicToCustomPool(new PaperPengwin(), AbstractCardEnum.SEEKER_PURPLE.toString());
-//		BaseMod.addRelicToCustomPool(new CosmicSieve(), AbstractCardEnum.SEEKER_PURPLE.toString());
-//		BaseMod.addRelicToCustomPool(new SolarEgg(), AbstractCardEnum.SEEKER_PURPLE.toString());
-//		BaseMod.addRelicToCustomPool(new RodOfNegation(), AbstractCardEnum.SEEKER_PURPLE.toString());
-//		BaseMod.addRelicToCustomPool(new Telescope(), AbstractCardEnum.SEEKER_PURPLE.toString());
         
         logger.info("done editting relics");
 	}
@@ -379,7 +391,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new DualDimension());
 		BaseMod.addCard(new Duplication());
 		BaseMod.addCard(new Enbodiment());
-		BaseMod.addCard(new Exchange());
 		BaseMod.addCard(new FanOfKnives());		
 		BaseMod.addCard(new Farseeing());
 		BaseMod.addCard(new FastForward());
@@ -437,6 +448,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new TimeEmbedded());
 		BaseMod.addCard(new TimeWarp());
 		BaseMod.addCard(new TrashToTreasure());
+		BaseMod.addCard(new TrueSight());
 		BaseMod.addCard(new Unparalleled());
 		BaseMod.addCard(new Unruled());
 		BaseMod.addCard(new Unsheathe());
@@ -457,7 +469,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("DualDimension");		
 		UnlockTracker.unlockCard("Duplication");
 		UnlockTracker.unlockCard("Enbodiment");
-		UnlockTracker.unlockCard("Exchange");
 		UnlockTracker.unlockCard("FanOfKnives");		
 		UnlockTracker.unlockCard("Farseeing");
 		UnlockTracker.unlockCard("FastForward");
@@ -515,6 +526,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("TimeEmbedded");
 		UnlockTracker.unlockCard("TimeWarp");
 		UnlockTracker.unlockCard("TrashToTreasure");
+		UnlockTracker.unlockCard("TrueSight");
 		UnlockTracker.unlockCard("Unparalleled");
 		UnlockTracker.unlockCard("Unruled");
 		UnlockTracker.unlockCard("Unsheathe");
@@ -560,13 +572,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 
 	@Override
 	public void receiveSetUnlocks() {
-//		UnlockTracker.addCard("Flicker");
-//		UnlockTracker.addCard("Transference");
-//		UnlockTracker.addCard("ForceRipple");
 //		// seeker unlock 1
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Flicker", "Transference", "ForceRipple"
 //				), TheSeekerEnum.THE_SEEKER, 1);
+//		UnlockTracker.addCard("Flicker");
+//		UnlockTracker.addCard("Transference");
+//		UnlockTracker.addCard("ForceRipple");
 //		
 //		// seeker unlock 2
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
@@ -593,14 +605,16 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会消耗飞刀的数量。");
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。");
         BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 #y虚弱 、 #y易伤 以及 #y脆弱 。");
-        BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 易伤 影响。");
+        BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
+        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。同名卡效果不能同时作用于多个目标。");	
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal.");
         BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include #yWeak, #yVulnerable and #yFrail.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");
+        BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s). Same effects may not apply to multiple targets.");
         logger.info("done setting up custom keywords");
 	}
 }

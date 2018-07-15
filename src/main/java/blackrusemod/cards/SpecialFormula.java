@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
@@ -19,20 +22,22 @@ public class SpecialFormula extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
-	private static final int WEAK = 99;
+	private static final int BUFF = 1;
+	private static final int DEBUFF = 2;
 	
 	public SpecialFormula() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SPECIAL_FORMULA), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
-		this.magicNumber = this.baseMagicNumber = WEAK;
-		this.exhaust = true;
+				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = BUFF;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, DEBUFF, false), DEBUFF));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, DEBUFF, false), DEBUFF));
 	}
 	
 	@Override
@@ -44,7 +49,7 @@ public class SpecialFormula extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }

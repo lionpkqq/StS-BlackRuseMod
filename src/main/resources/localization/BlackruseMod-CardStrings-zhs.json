@@ -1,4 +1,12 @@
 {
+	"_DummyAttack": {
+		"NAME": "攻击",
+		"DESCRIPTION": "下回合，敌人的意图是攻击。"
+	},
+	"_DummyNotAttack": {
+		"NAME": "非攻击",
+		"DESCRIPTION": "下回合，敌人的意图不是攻击。"
+	},
 	"Strike_S": {
 		"NAME": "打击",
 		"DESCRIPTION": "造成 !D! 点伤害。"
@@ -109,8 +117,7 @@
 	},
 	"Haste": {
 		"NAME": "疾速",
-		"DESCRIPTION": "每打出 1 张技能牌，下回合多抽 1 张卡。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": "每打出 1 张技能牌，下回合多抽 1 张卡。"
+		"DESCRIPTION": "每打出 1 张技能牌，下回合多抽 1 张卡。 NL 虚无 。"
 	},
 	"HouseCleaning": {
 		"NAME": "大扫除",
@@ -126,7 +133,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "杀手本能",
-		"DESCRIPTION": "你的回合开始时，获得你身上 负面状态 层数乘以1的 力量 一回合。"
+		"DESCRIPTION": "你的回合开始时，获得你身上 负面状态 层数乘以1的 敏捷 一回合。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -160,7 +167,7 @@
 	},
 	"NoEscape": {
 		"NAME": "无处可逃",
-		"DESCRIPTION": "造成 !D! 点伤害。如果敌人的意图不是攻击，附加 !M! 层 易伤 。"
+		"DESCRIPTION": " 视界 ：造成 !D! 点伤害并附加 !M! 层 易伤 。"
 	},
 	"Unparalleled": {
 		"NAME": "无双",
@@ -176,7 +183,7 @@
 	},
 	"Read": {
 		"NAME": "先读",
-		"DESCRIPTION": "下回合，如果敌人意图不是攻击，附加 !M! 层 枯萎 。 NL 不能同时先读两个敌人。"
+		"DESCRIPTION": " 视界 ：附加 !M! 层 枯萎 。"
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
@@ -227,12 +234,11 @@
 	},
 	"SilverBlades": {
 		"NAME": "银刃",
-		"DESCRIPTION": "本次战斗内， 升级 所有 投掷 飞刀 的卡。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 本次战斗内， 升级 所有 投掷 飞刀 的卡。"
+		"DESCRIPTION": "增加每把 飞刀 的伤害 !M! 点。"
 	},
 	"Snipe": {
 		"NAME": "狙击",
-		"DESCRIPTION": " 投掷 1 把 飞刀 ，造成 !D! 点伤害。"
+		"DESCRIPTION": " 视界 ： 投掷 1 把 飞刀 ，造成 !D! 点伤害。"
 	},
 	"SoulSculpture": {
 		"NAME": "灵魂雕塑",
@@ -240,7 +246,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "特制配方",
-		"DESCRIPTION": "给予 99 层 虚弱 。 NL 消耗 。"
+		"DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 获得2层 虚弱 。 NL 获得2层 脆弱 。"
 	},
 	"Spin": {
 		"NAME": "回旋",
@@ -269,7 +275,8 @@
 	},
 	"Taunt": {
 		"NAME": "嘲讽",
-		"DESCRIPTION": "目标敌人获得 !M! 点 力量 。 NL 下回合获得 !M! 点 [B] 。"
+		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 消耗 。",
+		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 消耗 。"
 	},
 	"TemporalArms": {
 		"NAME": "幻时武装",
@@ -294,7 +301,7 @@
 	},
 	"TheWorld": {
 		"NAME": "世界",
-		"DESCRIPTION": "抽2张卡。 NL 本回合下一张打出的卡消耗为 0 。"
+		"DESCRIPTION": "抽2张卡。 NL 本回合内，你下一张打出的卡消耗为 0 。"
 	},
 	"TimeEmbedded": {
 		"NAME": "嵌时护甲",
@@ -308,9 +315,14 @@
 		"NAME": "变废为宝",
 		"DESCRIPTION": "将弃牌堆里 !M! 张卡放入手中并 升级 。 NL 消耗 。"
 	},
+	"TrueSight": {
+		"NAME": "真视",
+		"DESCRIPTION": "每次你触发 视界 效果，再次触发该效果。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 每次你触发 视界 效果，再次触发该效果。"
+	},
 	"Unruled": {
 		"NAME": "不羁",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果你身上有 负面状态 ，造成双倍伤害 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 你身上每有一层 负面状态 ，伤害提升 !M! 。"
 	},
 	"Unsheathe": {
 		"NAME": "出鞘",

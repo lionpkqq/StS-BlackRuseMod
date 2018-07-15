@@ -1,4 +1,12 @@
 {
+	"_DummyAttack": {
+		"NAME": "Attack",
+		"DESCRIPTION": "Next turn, the enemy intends to attack."
+	},
+	"_DummyNotAttack": {
+		"NAME": "Not Attack",
+		"DESCRIPTION": "Next turn, the enemy does not intend to attack."
+	},
 	"Strike_S": {
 		"NAME": "Strike",
 		"DESCRIPTION": "Deal !D! damage."
@@ -109,8 +117,7 @@
 	},
 	"Haste": {
 		"NAME": "Haste",
-		"DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn."
+		"DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn. NL Ethereal."
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
@@ -126,7 +133,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the start of your turn, gain !M! Strength for each stack of Debuffs on you for one turn."
+		"DESCRIPTION": "At the start of your turn, gain !M! Dexterity for each stack of Debuffs on you for one turn."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -160,7 +167,7 @@
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
-		"DESCRIPTION": "Deal !D! damage. NL If the enemy does not intend to attack, apply !M! Vulnerable."
+		"DESCRIPTION": "Vision: Deal !D! damage and apply !M! Vulnerable."
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
@@ -176,7 +183,7 @@
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Next turn, if the enemy not intend to attack, apply !M! Blight. NL Can only read one enemy at a time."
+		"DESCRIPTION": "Vision: Apply !M! Blight."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
@@ -227,12 +234,11 @@
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
-		"DESCRIPTION": "Upgrade ALL cards that Throw Knives for the rest of this combat.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Upgrade ALL cards that Throw Knives for the rest of this combat."
+		"DESCRIPTION": "Each Knife deals !M! additional damage."
 	},
 	"Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Throw a Knife. NL Deal !D! damage."
+		"DESCRIPTION": "Vision: Throw a Knife. NL Deal !D! damage."
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
@@ -240,7 +246,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Apply 99 Weak. NL Exhaust."
+		"DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Gain 2 Weak. NL Gain 2 Frail."
 	},
 	"Spin": {
 		"NAME": "Spin",
@@ -269,7 +275,8 @@
 	},
 	"Taunt": {
 		"NAME": "Taunt",
-		"DESCRIPTION": "Enemy gain !M! Strength. NL You gain !M! [B] next turn."
+		"DESCRIPTION": "Vision: Gain [B] [B] . NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . NL Exhaust."
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",
@@ -294,7 +301,7 @@
 	},
 	"TheWorld": {
 		"NAME": "The World",
-		"DESCRIPTION": "Draw 2 cards. NL This turn, your next NL card costs 0."
+		"DESCRIPTION": "Draw 2 cards. NL This turn, the next NL card you play costs 0."
 	},
 	"TimeEmbedded": {
 		"NAME": "Time Embedded",
@@ -308,9 +315,14 @@
 		"NAME": "Trash To Treasure",
 		"DESCRIPTION": "Return !M! card(s) from your discard pile to your hand and upgrade them. NL Exhaust."
 	},
+	"TrueSight": {
+		"NAME": "True Sight",
+		"DESCRIPTION": "Each time you trigger a Vision effect, trigger it 1 more time.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Each time you trigger a Vision effect, trigger it 1 more time."
+	},
 	"Unruled": {
 		"NAME": "Unruled",
-		"DESCRIPTION": "Deal !D! damage. NL If there are any Debuffs on you, deal double damage."
+		"DESCRIPTION": "Deal !D! damage. NL For each stack of Debuffs on you, deal !M! additional damage."
 	},
 	"Unsheathe": {
 		"NAME": "Unsheathe",

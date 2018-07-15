@@ -49,9 +49,9 @@
   },
   "KillerInstinctPower": {
     "NAME": "Killer Instinct",
-    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yStrength for each stack of #yDebuffs on you for one turn."]
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yDexterity for each stack of #yDebuffs on you for one turn."]
   },
-  "MoonPhase": {
+  "MoonPhasePower": {
     "NAME": "Moon Phase",
     "DESCRIPTIONS": ["At the end of your turn, gain #b", " #yBlock for each stack of #yDebuffs on you."]
   },
@@ -61,7 +61,7 @@
   },
   "ReadPower": {
     "NAME": "Read",
-    "DESCRIPTIONS": ["Next turn, if the target enemy does not intend to attack, apply #b2 #yBlight."]
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, apply #b", " #yBlight.", "Next turn, if the target enemy does #yNOT intend to attack, apply #b", " #yBlight."]
   },
   "RealityMarblePower": {
     "NAME": "Reality Marble",
@@ -69,7 +69,7 @@
   },
   "SilverBladesPower": {
     "NAME": "Silver Blades",
-    "DESCRIPTIONS": ["All #yKnives-Throwing cards are upgraded for this combat."]
+    "DESCRIPTIONS": ["Each #yKnife deals #b", " additional damage."]
   },
   "StarChefPower": {
     "NAME": "Star Chef",
@@ -85,10 +85,26 @@
   },
   "TheWorldPower": {
     "NAME": "The World",
-    "DESCRIPTIONS": ["This turn, the next card you play cost 0."]
+    "DESCRIPTIONS": ["This turn, the next card you play cost #b0."]
+  },
+  "TrueSightPower": {
+    "NAME": "True Sight",
+    "DESCRIPTIONS": ["#yVision effects will trigger #b", " more time(s)."]
   },
   "UnparalleledPower": {
     "NAME": "Unparalleled",
     "DESCRIPTIONS": ["If there is no other card that costs #b2 in your deck, gain ", " #yStrength and #yDexterity."]
+  },
+  "SnipePower": {
+    "NAME": "Snipe",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, #yThrow a #yKnife. Deal #b", " damage.", "Next turn, if the target enemy does #yNOT intend to attack, #yThrow a #yKnife. Deal #b", " damage."]
+  },
+  "TauntPower": {
+    "NAME": "Taunt",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " energy.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " energy."]
+  },
+  "NoEscapePower": {
+    "NAME": "No Escape",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and apply #b", " #yVulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and apply #b", " #yVulnerable."]
   }
 }

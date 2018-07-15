@@ -26,48 +26,64 @@ public class SilverBladesPower extends AbstractPower {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
+		this.amount = amount;
 		updateDescription();
 		this.img = BlackRuseMod.getSilverBladesPowerTexture();
 	}
-
-	public void onInitialApplication()
+	
+	public void stackPower(int stackAmount)
 	{
+		this.fontScale = 8.0F;
+		this.amount += stackAmount;
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			if (isKnivesThrowing(c))
-				if (c.canUpgrade()) {
-					c.upgrade();
-					c.superFlash();
-				}
-		}
-		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-			if (isKnivesThrowing(c))
-				if (c.canUpgrade()) {
-					c.upgrade();
-					c.superFlash();
-				}
+			if (isKnives(c)) {
+				c.baseDamage += stackAmount;
+			}
 		}
 		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-			if (isKnivesThrowing(c))
-				if (c.canUpgrade()) {
-					c.upgrade();
-					c.superFlash();
-				}
+			if (isKnives(c)) {
+				c.baseDamage += stackAmount;
+			}
+		}
+		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+			if (isKnives(c)) {
+				c.baseDamage += stackAmount;
+			}
+		}
+	}
+	
+	public void onInitialApplication() {
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			if (isKnives(c)) {
+				c.baseDamage += this.amount;
+			}
+		}
+		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+			if (isKnives(c)) {
+				c.baseDamage += this.amount;
+			}
+		}
+		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+			if (isKnives(c)) {
+				c.baseDamage += this.amount;
+			}
 		}
 	}
 
 	public void updateDescription()
 	{
-		this.description = DESCRIPTIONS[0];
+		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
-	public boolean isKnivesThrowing (AbstractCard c) {
-		if ((c instanceof KidneyShot)) return true;
+	public boolean isKnives(AbstractCard c)
+	{
 		if ((c instanceof Snipe)) return true;
+		if ((c instanceof KidneyShot)) return true;
 		if ((c instanceof Starlight)) return true;
 		if ((c instanceof Moonlight)) return true;
 		if ((c instanceof Sunlight)) return true;
-		if ((c instanceof KillingDoll)) return true;
 		if ((c instanceof FanOfKnives)) return true;
+		if ((c instanceof KillingDoll)) return true;
 		return false;
 	}
 }

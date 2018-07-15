@@ -19,7 +19,7 @@ public class Rewind extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 7;
+	private static final int BLOCK_AMT = 8;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
 	
 	public Rewind() {

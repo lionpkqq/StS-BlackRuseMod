@@ -36,13 +36,13 @@ public class Potential extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if ((this.damage >= 0) && (this.damage < 10))
+		if ((this.damage >= 0) && (this.damage < 14))
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.SMASH));
-		else if ((this.damage >= 10) && (this.damage < 20))
+		else if ((this.damage >= 14) && (this.damage < 28))
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-		else if ((this.damage >= 20) && (this.damage < 30))
+		else if ((this.damage >= 28) && (this.damage < 42))
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		else {

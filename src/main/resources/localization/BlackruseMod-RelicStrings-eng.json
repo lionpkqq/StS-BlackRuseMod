@@ -3,5 +3,10 @@
     "NAME": "Uniform",
     "FLAVOR": "It can be used not only to keep dirty stuff away, but also to carry weapons.",
     "DESCRIPTIONS": ["Start each combat with #b4 #yKnives."]
+  },
+  "StoneMask": {
+    "NAME": "Stone Mask",
+    "FLAVOR": "You feel a sudden impulse to reject humanity.",
+    "DESCRIPTIONS": ["Start each combat with #b4 #yKnives."]
   }
 }

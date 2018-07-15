@@ -19,8 +19,8 @@ public class AmplifyDamagePower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
-		this.type = AbstractPower.PowerType.DEBUFF;
 		this.priority = 10;
+		this.type = AbstractPower.PowerType.DEBUFF;
 		updateDescription();
 		this.img = BlackRuseMod.getAmplifyDamagePowerTexture();
 	}
@@ -33,8 +33,8 @@ public class AmplifyDamagePower extends AbstractPower {
 
 	public void updateDescription()
 	{
-		this.type = AbstractPower.PowerType.DEBUFF;
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		this.type = AbstractPower.PowerType.DEBUFF;
 	}
 	
 	public float atDamageReceive(float damage, DamageInfo.DamageType type)

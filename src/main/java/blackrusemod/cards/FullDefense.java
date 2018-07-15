@@ -24,7 +24,7 @@ public class FullDefense extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -1;
 	private static final int BLOCK_AMT = 13;
-	private static final int UPGRADE_PLUS_BLOCK = 4;
+	private static final int UPGRADE_PLUS_BLOCK = 5;
 
 	public FullDefense() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FULL_DEFENSE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

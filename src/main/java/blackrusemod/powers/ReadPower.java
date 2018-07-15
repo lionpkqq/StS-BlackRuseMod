@@ -18,8 +18,9 @@ public class ReadPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private AbstractCreature source;
 	private AbstractMonster target;
+	private boolean prediction;
 	
-	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount) {
+	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.amount = amount;
@@ -27,6 +28,7 @@ public class ReadPower extends AbstractPower {
 		this.source = source;
 		this.target = (AbstractMonster)this.source;
 		this.amount = amount;
+		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
 		this.img = BlackRuseMod.getReadPowerTexture();
@@ -34,13 +36,26 @@ public class ReadPower extends AbstractPower {
 	
 	public void atStartOfTurnPostDraw() {
 		//flash();
-		if (!(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
+		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
+		{
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ReadPower"));
+			if (this.owner.hasPower("TrueSightPower")) 
+				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
+		}
+		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
+		{
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
+			if (this.owner.hasPower("TrueSightPower")) 
+				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
+		}
+		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ReadPower"));
 	}
 
 	public void updateDescription()
 	{
-		this.description = DESCRIPTIONS[0];
+		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		else this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
 	}
 }

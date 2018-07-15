@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -16,7 +18,7 @@ public class KillerInstinctPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-	private int STRENGTH = 0;
+	private int DEXTERITY = 0;
 
 	public KillerInstinctPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -34,12 +36,12 @@ public class KillerInstinctPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurn() {
-		this.STRENGTH = 0;
-		if (this.owner.hasPower("Weakened")) this.STRENGTH += AbstractDungeon.player.getPower("Weakened").amount*this.amount;
-		if (this.owner.hasPower("Vulnerable")) this.STRENGTH += AbstractDungeon.player.getPower("Vulnerable").amount*this.amount;
-		if (this.owner.hasPower("Frail")) this.STRENGTH += AbstractDungeon.player.getPower("Frail").amount*this.amount;
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.STRENGTH), this.STRENGTH));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new LoseStrengthPower(this.owner, this.STRENGTH), this.STRENGTH));
+		this.DEXTERITY = 0;
+		if (this.owner.hasPower("Weakened")) this.DEXTERITY += AbstractDungeon.player.getPower("Weakened").amount*this.amount;
+		if (this.owner.hasPower("Vulnerable")) this.DEXTERITY += AbstractDungeon.player.getPower("Vulnerable").amount*this.amount;
+		if (this.owner.hasPower("Frail")) this.DEXTERITY += AbstractDungeon.player.getPower("Frail").amount*this.amount;
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.DEXTERITY), this.DEXTERITY));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new LoseDexterityPower(this.owner, this.DEXTERITY), this.DEXTERITY));
 	}
 
 	public void updateDescription()

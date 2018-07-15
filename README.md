@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.4.0
+# StS-BlackRuseMod 0.5.0
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
@@ -12,19 +12,36 @@ Currently supported versions:
 
 **The Servant** is inspired by Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
 
-This mod makes no changes to the base game other than adding **The Servant**. Happy Slaying the Spire!
+### Compatibility ###
+This mod makes no changes to the base game other than adding **The Servant**. In other words, it should be compatible with other mods.
 
 ## New Mechanics ##
 * **Knives**: Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.
 * **Throw**: Throw will spend your Knives. If you have depleted your Knives, the card will stop working.
 * **Blight**: Blighted enemies will take extra damage when attacked.
-* **Temporal**: Temporal cards are Unplayable and Ethereal. (Their unique effects will be triggered when drawn.)
+* **Temporal**: Temporal cards are Unplayable and Ethereal. (They have unique effects that will be triggered when drawn.)
 * **Shift**: Shift effects can only be triggered by discarding the cards.
+* **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
 
-## Current State ##
+## Current State/Updates ##
 Looking for an artist.
-Needs more testing.
+Needs more play-testing.
 Needs more relics for The Servant.
+
+* Added a new mechanic: Vision.
+* Added a new card: [True Sight].
+* Deleted a card: [Exchange]
+* Reworked [No Escape].
+* Reworked [Read].
+* Reworked [Silver Blades].
+* Reworked [Snipe].
+* Reworked [Special Formula].
+* Reworked [Taunt].
+* Reworked [Unruled].
+* Fixed a bug which breaks the game when the player use [Moon Phase].
+* Fixed a bug that the second [The World] would not work if played right after the first [The World]
+* Fixed many typos that makes some cards have overpowered effects ([Temporal Slicing], ect).
+* [Reality Marble] is now actually innate, as described.
 
 ## Usage ##
 ### Required Downloads ###
@@ -49,8 +66,6 @@ Needs more relics for The Servant.
 The Wiki is still under construction. Thanks for your patience!
 
 ## List of known issues ##
-
-* Temporal Arms is not affected by Dexterity.
 
 ## Credits / Acknowledgements ##
 * BlackRuse (https://github.com/lionpkqq): designer and programmer.

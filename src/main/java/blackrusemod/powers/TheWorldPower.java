@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.cards.TheWorld;
 
 public class TheWorldPower extends AbstractPower {
 	public static final String POWER_ID = "TheWorldPower";
@@ -27,9 +29,8 @@ public class TheWorldPower extends AbstractPower {
 	}
 	
 	public void onInitialApplication() {
-		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+		for (AbstractCard c : AbstractDungeon.player.hand.group) 
 			 c.setCostForTurn(-9);
-		}
 	}
 	
 	public void onRemove()
@@ -43,6 +44,8 @@ public class TheWorldPower extends AbstractPower {
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		//flash();
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
+		if (card instanceof TheWorld) 
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TheWorldPower(AbstractDungeon.player, -1), -1));
 	}
 	
 	public void atEndOfTurn (boolean isPlayer) {

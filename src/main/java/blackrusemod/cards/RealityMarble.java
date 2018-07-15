@@ -24,6 +24,7 @@ public class RealityMarble extends CustomCard {
 	public RealityMarble() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REALITY_MARBLE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.isInnate = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

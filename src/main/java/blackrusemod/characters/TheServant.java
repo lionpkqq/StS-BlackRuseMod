@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.abstracts.CustomPlayer;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.TheServantEnum;
+import blackrusemod.screens.VisionScreen;
 
 public class TheServant extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
@@ -48,6 +49,7 @@ public class TheServant extends CustomPlayer {
 		if (Settings.dailyModsEnabled() && DailyMods.cardMods.get("Diverse")) {
 			this.masterMaxOrbs = 1;
 		}
+		BlackRuseMod.vs = new VisionScreen();
 	}
 	
 	@Override
@@ -82,11 +84,11 @@ public class TheServant extends CustomPlayer {
 	public static CharSelectInfo getLoadout() {
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
 			return new CharSelectInfo("致命侍从", "恶魔们的侍从。擅长杀戮与家务。 NL 随身携带着一千零一把刀刃。",
-				75, 75, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
+				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 		else {
 			return new CharSelectInfo("The Servant", "A servant of demons. Perfected at killing and housekeeping. NL Holds a thousand and one blades.",
-				75, 75, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
+				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 	}
 	

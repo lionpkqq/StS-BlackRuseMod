@@ -1,20 +1,15 @@
 package blackrusemod.cards;
 
-
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class NoEscape extends CustomCard {
@@ -37,10 +32,7 @@ public class NoEscape extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-			AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		if (!(m.intent == AbstractMonster.Intent.ATTACK) && !(m.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(m.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(m.intent == AbstractMonster.Intent.ATTACK_DEFEND))    
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, this.magicNumber, "NoEscape"));
 	}
 
 	public AbstractCard makeCopy() {

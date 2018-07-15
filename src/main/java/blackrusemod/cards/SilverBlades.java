@@ -19,15 +19,16 @@ public class SilverBlades extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
+	private static final int DAMAGE_UPGRADE = 2;
 
 	public SilverBlades() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SILVER_BLADES), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = DAMAGE_UPGRADE;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilverBladesPower(p, -1), -1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilverBladesPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -37,7 +38,7 @@ public class SilverBlades extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }
