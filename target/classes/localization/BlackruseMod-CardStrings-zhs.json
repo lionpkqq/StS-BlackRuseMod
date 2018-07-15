@@ -191,7 +191,7 @@
 	},
 	"Rearm": {
 		"NAME": "再装填",
-		"DESCRIPTION": "获得 6 把 飞刀 。 NL 本回合获得 !M! 点 力量 。"
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 把 飞刀 。"
 	},
 	"Replace": {
 		"NAME": "替代",
@@ -313,7 +313,8 @@
 	},
 	"TrashToTreasure": {
 		"NAME": "变废为宝",
-		"DESCRIPTION": "将弃牌堆里 !M! 张卡放入手中并 升级 。 NL 消耗 。"
+		"DESCRIPTION": "将弃牌堆里 !M! 张卡放入手中并 升级 。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "将弃牌堆里 !M! 张卡放入手中并 升级 。"
 	},
 	"TrueSight": {
 		"NAME": "真视",

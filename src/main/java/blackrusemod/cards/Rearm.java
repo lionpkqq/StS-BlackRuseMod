@@ -29,6 +29,7 @@ public class Rearm extends CustomCard {
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = KNIVES;
+		this.baseBlock = BLOCK_AMT;
 	}
 	
 	@Override
