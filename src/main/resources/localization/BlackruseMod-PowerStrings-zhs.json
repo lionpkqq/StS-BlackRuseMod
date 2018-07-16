@@ -29,7 +29,7 @@
   },
   "FlawlessFormPower": {
     "NAME": "完美形态",
-    "DESCRIPTIONS": ["本次战斗内，每回合少抽 #b", " 张卡。"]
+    "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响。"]
   },
   "FloweringNightPower": {
     "NAME": "花开之夜",
@@ -106,5 +106,13 @@
   "NoEscapePower": {
     "NAME": "无处可逃",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害并附加 #b", " 层 #y易伤。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害并附加 #b", " 层 #y易伤。"]
+  },
+  "ManipulatePower": {
+    "NAME": "操控",
+    "DESCRIPTIONS": ["随机将三张 #y幻时 卡加入抽卡堆。"]
+  },
+  "UpgradedManipulatePower": {
+    "NAME": "操控",
+    "DESCRIPTIONS": ["随机将三张 #y升级 过的 #y幻时 卡加入抽卡堆。"]
   }
 }

@@ -20,7 +20,6 @@ import blackrusemod.powers.SnipePower;
 import blackrusemod.powers.TauntPower;
 
 public class VisionAction extends AbstractGameAction {
-	private boolean retrieveCard = false;
 	private String effects;
 	private boolean prediction;
 	private ArrayList<AbstractCard> list = new ArrayList<AbstractCard>();
@@ -50,16 +49,6 @@ public class VisionAction extends AbstractGameAction {
 			return;
 		}
 
-		if (!this.retrieveCard) {
-			if (AbstractDungeon.cardRewardScreen.codexCard != null) {
-			AbstractCard codexCard = AbstractDungeon.cardRewardScreen.codexCard.makeStatEquivalentCopy();
-			codexCard.current_x = (-1000.0F * Settings.scale);
-			AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect(codexCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, true));
-
-			AbstractDungeon.cardRewardScreen.codexCard = null;
-			}
-		}
-		
 		if (BlackRuseMod.vs.prediction.cardID == "_DummyAttack") this.prediction = true;
 		else if (BlackRuseMod.vs.prediction.cardID == "_DummyNotAttack") this.prediction = false;
 		

@@ -23,9 +23,9 @@ public class ShiftingReality extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int ALL = 12;
+	private static final int ATTACK_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int ALL = 10;
 	private static final int UPGRADE_PLUS_ALL = 6;
 	private DamageInfo info;
 

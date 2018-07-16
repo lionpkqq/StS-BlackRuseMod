@@ -18,9 +18,9 @@ public class Rewind extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int BLOCK_AMT = 8;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int COST = 0;
+	private static final int BLOCK_AMT = 3;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
 	
 	public Rewind() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REWIND), COST, DESCRIPTION,

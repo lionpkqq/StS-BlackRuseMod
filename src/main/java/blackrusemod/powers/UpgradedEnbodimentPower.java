@@ -41,16 +41,18 @@ public class UpgradedEnbodimentPower extends AbstractPower {
 	{
 		//flash();
 		AbstractCard c;
-		
+		Random random = new Random();
 		for (int i = 0; i < this.amount; i++) {
-			Random random = new Random();
-			int randomNum = random.nextInt(7) + 1;
+			int randomNum = random.nextInt(10) + 1;
 			if (randomNum == 1) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 2) c = new TemporalMisd().makeCopy();
 			else if (randomNum == 3) c = new TemporalArms().makeCopy();
 			else if (randomNum == 4) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 5) c = new TemporalMisd().makeCopy();
 			else if (randomNum == 6) c = new TemporalArms().makeCopy();
+			else if (randomNum == 7) c = new TemporalSlicing().makeCopy();
+			else if (randomNum == 8) c = new TemporalMisd().makeCopy();
+			else if (randomNum == 9) c = new TemporalArms().makeCopy();
 			else c = new TemporalEssence().makeCopy();
 			c.upgrade();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));

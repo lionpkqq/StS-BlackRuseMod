@@ -29,7 +29,7 @@
   },
   "FlawlessFormPower": {
     "NAME": "Flawless Form",
-    "DESCRIPTIONS": ["Draw #b", " less card(s) every turn until the end of the combat."]
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail."]
   },
   "FloweringNightPower": {
     "NAME": "Flowering Night",
@@ -106,5 +106,13 @@
   "NoEscapePower": {
     "NAME": "No Escape",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and apply #b", " #yVulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and apply #b", " #yVulnerable."]
+  },
+  "ManipulatePower": {
+    "NAME": "Manipulate",
+    "DESCRIPTIONS": ["Adds #b3 random #yTemporal cards to your draw pile."]
+  },
+  "UpgradedManipulatePower": {
+    "NAME": "Manipulate",
+    "DESCRIPTIONS": ["Adds #b3 random #yUpgraded #yTemporal cards to your draw pile."]
   }
 }

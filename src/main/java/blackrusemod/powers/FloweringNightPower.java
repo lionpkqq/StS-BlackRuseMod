@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.TrashToTreasure;
 
 public class FloweringNightPower extends AbstractPower {
 	public static final String POWER_ID = "FloweringNightPower";

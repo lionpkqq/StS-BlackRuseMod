@@ -44,7 +44,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.5.0\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.5.1\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -64,6 +64,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String _DUMMYATTACK = "cards/_dummy_attack.png";
     public static final String _DUMMYNOTATTACK = "cards/_dummy_not_attack.png";
     public static final String ADVANCE = "cards/advance.png";
+    public static final String ALLEVIATE = "cards/alleviate.png";
     public static final String BARRIER = "cards/barrier.png";
     public static final String BORROWED_TIME = "cards/borrowed_time.png";
     public static final String BRUTE_FORCE = "cards/brute_force.png";
@@ -76,6 +77,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String DUAL_DIMENSION = "cards/dual_dimension.png";
     public static final String DUPLICATION = "cards/duplication.png";
     public static final String ENBODIMENT = "cards/enbodiment.png";
+    public static final String ENTANGLE = "cards/entangle.png";
     public static final String FAN_OF_KNIVES = "cards/fan_of_knives.png";
     public static final String FARSEEING = "cards/farseeing.png";
     public static final String FAST_FORWARD = "cards/fast_forward.png";
@@ -94,6 +96,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String KILLER_INSTINCT = "cards/killer_instinct.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
     public static final String LAUNDRY = "cards/laundry.png";
+    public static final String MANIPULATE = "cards/manipulate.png";
     public static final String MISDIRECTION = "cards/misdirection.png";
     public static final String MOON_PHASE = "cards/moon_phase.png";
     public static final String MOONLIGHT = "cards/moonlight.png";
@@ -116,6 +119,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String SHIFTING_THOUGHTS = "cards/shifting_thoughts.png";
     public static final String SILVER_BLADES = "cards/silver_blades.png";
     public static final String SNIPE = "cards/snipe.png";
+    public static final String SOLIDIFY = "cards/solidify.png";
     public static final String SOUL_SCULPTURE = "cards/soul_sculpture.png";
     public static final String SPECIAL_FORMULA = "cards/special_formula.png";
     public static final String SPIN = "cards/spin.png";
@@ -380,6 +384,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Defend_Silver());
 		
 		BaseMod.addCard(new Advance());
+		BaseMod.addCard(new Alleviate());
 		BaseMod.addCard(new Barrier());
 		BaseMod.addCard(new BorrowedTime());
 		BaseMod.addCard(new BruteForce());
@@ -391,6 +396,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new DualDimension());
 		BaseMod.addCard(new Duplication());
 		BaseMod.addCard(new Enbodiment());
+		BaseMod.addCard(new Entangle());
 		BaseMod.addCard(new FanOfKnives());		
 		BaseMod.addCard(new Farseeing());
 		BaseMod.addCard(new FastForward());
@@ -409,6 +415,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new KillerInstinct());
 		BaseMod.addCard(new KillingDoll());
 		BaseMod.addCard(new Laundry());
+		BaseMod.addCard(new Manipulate());
 		BaseMod.addCard(new Misdirection());
 		BaseMod.addCard(new MoonPhase());
 		BaseMod.addCard(new Moonlight());
@@ -431,6 +438,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new ShiftingThoughts());
 		BaseMod.addCard(new SilverBlades());
 		BaseMod.addCard(new Snipe());
+		BaseMod.addCard(new Solidify());
 		BaseMod.addCard(new SoulSculpture());
 		BaseMod.addCard(new SpecialFormula());
 		BaseMod.addCard(new Spin());
@@ -440,10 +448,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Sunlight());
 		BaseMod.addCard(new SurpressingFire());
 		BaseMod.addCard(new Taunt());
-		BaseMod.addCard(new TemporalArms());
-		BaseMod.addCard(new TemporalEssence());
-		BaseMod.addCard(new TemporalMisd());
-		BaseMod.addCard(new TemporalSlicing());
 		BaseMod.addCard(new TheWorld());
 		BaseMod.addCard(new TimeEmbedded());
 		BaseMod.addCard(new TimeWarp());
@@ -518,10 +522,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Sunlight");
 		UnlockTracker.unlockCard("SurpressingFire");
 		UnlockTracker.unlockCard("Taunt");
-		UnlockTracker.unlockCard("TemporalArms");
-		UnlockTracker.unlockCard("TemporalEssence");
-		UnlockTracker.unlockCard("TemporalMisd");
-		UnlockTracker.unlockCard("TemporalSlicing");
 		UnlockTracker.unlockCard("TheWorld");
 		UnlockTracker.unlockCard("TimeEmbedded");
 		UnlockTracker.unlockCard("TimeWarp");
@@ -603,14 +603,14 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 #y飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会消耗飞刀的数量。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。");
+        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。抽到时会触发特殊效果。");
         BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 #y虚弱 、 #y易伤 以及 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。同名卡效果不能同时作用于多个目标。");	
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
-        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal.");
+        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their special effects will be triggered when drawn.");
         BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include #yWeak, #yVulnerable and #yFrail.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");

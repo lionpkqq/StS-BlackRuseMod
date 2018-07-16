@@ -1,6 +1,6 @@
 package blackrusemod.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,24 +19,39 @@ public class FlawlessFormPower extends AbstractPower {
 			this.name = NAME;
 			this.ID = POWER_ID;
 			this.owner = owner;
-			this.amount = -amount;
 			updateDescription();
-			this.canGoNegative = true;
 			this.img = BlackRuseMod.getFlawlessFormPowerTexture();
 	}
 	
-	public void stackPower(int stackAmount) {
-		this.fontScale = 8.0F;
-		this.amount -= stackAmount;
-	}
-	
 	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-		this.type = AbstractPower.PowerType.DEBUFF;
+		this.description = DESCRIPTIONS[0];
 	}
 	
-	public void atEndOfTurn(boolean isPlayer) {
-		//flash();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DrawManipulationPower(this.owner, this.amount), this.amount));
+	public float atDamageGive(float damage, DamageInfo.DamageType type)
+	{
+		if (type == DamageInfo.DamageType.NORMAL) {
+			if (this.owner.hasPower("Weakened")) return damage / 0.75F;
+		}
+		return damage;
+	}
+	
+	public float modifyBlock(float blockAmount)
+	{
+		if (this.owner.hasPower("Frail")) return blockAmount / 0.75F;
+		return blockAmount;
+	}
+	
+	public float atDamageReceive(float damage, DamageInfo.DamageType type)
+	{
+		if (type == DamageInfo.DamageType.NORMAL)
+		{
+			if (this.owner.hasPower("Vulnerable")) {
+				if (AbstractDungeon.player.hasRelic("Odd Mushroom")) {
+					return damage / 1.25F;
+				}
+				return damage / 1.5F;
+			}
+		}
+		return damage;
 	}
 }

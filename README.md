@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.5.1
+# StS-BlackRuseMod 0.5.5
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
@@ -19,7 +19,7 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 * **Knives**: Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.
 * **Throw**: Throw will spend your Knives. If you have depleted your Knives, the card will stop working.
 * **Blight**: Blighted enemies will take extra damage when attacked.
-* **Temporal**: Temporal cards are Unplayable and Ethereal. (They have unique effects that will be triggered when drawn.)
+* **Temporal**: Temporal cards are Unplayable and Ethereal. Their unique effects will be triggered when drawn.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
 
@@ -49,7 +49,7 @@ The Wiki is still under construction. Thanks for your patience!
 * If you choose Elegance in the Ancient Writing event, both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest). 
 
 ## Credits / Acknowledgements ##
-* BlackRuse (https://github.com/lionpkqq): designer and programmer.
+* BlackRuse (https://github.com/lionpkqq): designer， programmer and project manager.
 
 ## Special Thanks ##
 
@@ -90,6 +90,13 @@ Contributors of **FruityMod**
 Looking for an artist.
 Needs more play-testing.
 Needs more relics for The Servant.
+
+0.5.5
+* Updated the character select sound.
+* Minor balance updates.
+* Added new cards: [Manipulate], [Solidify], [Entangle] and [Alleviate].
+* Reworked [Flawless Form].
+* Reworked all the [Temporal] cards. Now they can only be acquired by using [Enbodiment], [Manipulate] and [Solidify].
 
 0.5.1
 * Fixed: If the player uses [Trash To Treasure+] when they have a full hand, the game would break.

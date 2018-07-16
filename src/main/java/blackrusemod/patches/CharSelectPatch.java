@@ -23,7 +23,7 @@ public class CharSelectPatch {
             AbstractPlayer.PlayerClass chosenClass = CardCrawlGame.chosenCharacter;
             if (chosenClass.toString() == "THE_SERVANT") {
                 pref = SaveHelper.getPrefs("THE_SERVANT");
-                CardCrawlGame.sound.playV("THUNDERCLAP", 1.75f);
+                CardCrawlGame.sound.playV("ATTACK_DAGGER_6", 1.75f);
                 CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
 
                 CharacterOption obj = (CharacterOption) __obj_instance;

@@ -23,17 +23,17 @@ public class ShiftingThoughts extends CustomCard {
 
 	public ShiftingThoughts() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_THOUGHTS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(1));
+		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(this.magicNumber));
 	}
 	
 	public void triggerOnManualDiscard() {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {

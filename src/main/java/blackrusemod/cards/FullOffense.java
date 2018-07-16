@@ -44,7 +44,7 @@ public class FullOffense extends CustomCard {
 	
 	public void applyPowers()
 	{
-		this.baseDamage = AbstractDungeon.player.hand.size();
+		this.baseDamage = AbstractDungeon.player.hand.size()*2;
 		super.applyPowers();
 		this.rawDescription = DESCRIPTION;
 		this.rawDescription += EXTENDED_DESCRIPTION[0];

@@ -19,6 +19,10 @@
 		"NAME": "Advance",
 		"DESCRIPTION": "Draw !M! cards. NL Next turn, NL draw 1 less cards."
 	},
+	"Alleviate": {
+		"NAME": "Alleviate",
+		"DESCRIPTION": "Discard up to 3 cards. NL Gain !B! Block for each card you discard."
+	},
 	"Barrier": {
 		"NAME": "Barrier",
 		"DESCRIPTION": "Next turn, NL gain 1 Intangible. NL Exhaust."
@@ -65,10 +69,9 @@
 		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
 		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
 	},
-	"Exchange": {
-		"NAME": "Exchange",
-		"DESCRIPTION": "Gain !M! Block for each stack of Debuffs on you.",
-		"EXTENDED_DESCRIPTION": ["NL (Gain !B! Block.)"]
+	"Entangle": {
+		"NAME": "Entangle",
+		"DESCRIPTION": "Apply the Debuffs on you to the enemy."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan Of Knives",
@@ -88,11 +91,13 @@
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "Gain !M! Artifacts. NL Draw one less card each turn for this combat."
+		"DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn. NL Exhaust."
+		"DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn."
 	},
 	"FollowUp": {
 		"NAME": "FollowUp",
@@ -104,7 +109,7 @@
 	},
 	"FullOffense": {
 		"NAME": "Full Offense",
-		"DESCRIPTION": "Deal damage that equals to the number of cards in your hand. NL Discard your hand.",
+		"DESCRIPTION": "Deal damage equals to two times the number of cards in your hand. NL Discard your hand.",
 		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
 	"GarbageDisposal": {
@@ -143,6 +148,11 @@
 		"NAME": "Laundry",
 		"DESCRIPTION": "Exhasut all Curse and Status in your deck for this combat.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Exhasut all Curse and Status in your deck for this combat."
+	},
+	"Manipulate": {
+		"NAME": "Manipulate",
+		"DESCRIPTION": "Adds 3 random Temporal cards to your draw pile.",
+		"UPGRADE_DESCRIPTION": "Adds 3 random Upgraded Temporal cards to your draw pile."
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
@@ -191,7 +201,7 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Gain 6 Block. NL Obtain !M! Knives."
+		"DESCRIPTION": "Gain !B! Block. NL Obtain !M! Knives."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -239,6 +249,11 @@
 	"Snipe": {
 		"NAME": "Snipe",
 		"DESCRIPTION": "Vision: Throw a Knife. NL Deal !D! damage."
+	},
+	"Solidify": {
+		"NAME": "Solidify",
+		"DESCRIPTION": "Choose a Temporal card and place it on top of your draw pile.",
+		"UPGRADE_DESCRIPTION": "Choose a Upgraded Temporal card and place it on top of your draw pile."
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",

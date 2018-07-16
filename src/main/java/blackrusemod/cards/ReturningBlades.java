@@ -21,7 +21,7 @@ public class ReturningBlades extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 3;
+	private static final int ATTACK_DMG = 4;
 
 	public ReturningBlades() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.RETURNING_BLADES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -65,7 +65,7 @@ public class ReturningBlades extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(2);
 		}
 	}
 }

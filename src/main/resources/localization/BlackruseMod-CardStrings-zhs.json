@@ -19,6 +19,10 @@
 		"NAME": "预支",
 		"DESCRIPTION": "抽 !M! 张卡。 NL 下回合少抽 1 张卡。"
 	},
+	"Alleviate": {
+		"NAME": "减负",
+		"DESCRIPTION": "丢弃最多3张手牌。每丢弃一张卡，获得 !B! 点 格挡 。"
+	},
 	"Barrier": {
 		"NAME": "屏障",
 		"DESCRIPTION": "下回合获得1层 无实体 。 NL 消耗 。"
@@ -65,10 +69,9 @@
 		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 卡加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张升级过的 幻时 卡加入抽牌堆。"
 	},
-	"Exchange": {
-		"NAME": "交换",
-		"DESCRIPTION": "你身上每有一层 负面状态 ，获得 !M! 点 格挡 。",
-		"EXTENDED_DESCRIPTION": ["NL （获得 !B! 点 格挡 。）"]
+	"Entangle": {
+		"NAME": "纠缠",
+		"DESCRIPTION": "把你身上的 负面状态 附加到敌人身上。"
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
@@ -88,11 +91,13 @@
 	},
 	"FlawlessForm": {
 		"NAME": "完美形态",
-		"DESCRIPTION": "获得 !M! 层 人工制品 。 NL 本场战斗内每回合少抽 1 张卡。"
+		"DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。 虚无 。",
+		"UPGRADE_DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。"
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
-		"DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。 NL 消耗。"
+		"DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。 NL 消耗。",
+		"UPGRADE_DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。"
 	},
 	"FollowUp": {
 		"NAME": "追击",
@@ -104,7 +109,7 @@
 	},
 	"FullOffense": {
 		"NAME": "全力进攻",
-		"DESCRIPTION": "造成等于你手中卡的数量的伤害，然后丢弃所有手牌。",
+		"DESCRIPTION": "造成等于你手中卡的数量两倍的伤害，然后丢弃所有手牌。",
 		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
 	"GarbageDisposal": {
@@ -143,6 +148,11 @@
 		"NAME": "清洗衣物",
 		"DESCRIPTION": " 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。"
+	},
+	"Manipulate": {
+		"NAME": "操控",
+		"DESCRIPTION": "随机将三张 幻时 卡加入抽卡堆。",
+		"UPGRADE_DESCRIPTION": "随机将三张 升级 过的 幻时 卡加入抽卡堆。"
 	},
 	"Misdirection": {
 		"NAME": "误导",
@@ -239,6 +249,11 @@
 	"Snipe": {
 		"NAME": "狙击",
 		"DESCRIPTION": " 视界 ： 投掷 1 把 飞刀 ，造成 !D! 点伤害。"
+	},
+	"Solidify": {
+		"NAME": "凝固",
+		"DESCRIPTION": "选择一张 幻时 卡放在抽卡堆顶部。",
+		"UPGRADE_DESCRIPTION": "选择一张升级过的 幻时 卡放在抽卡堆顶部。"
 	},
 	"SoulSculpture": {
 		"NAME": "灵魂雕塑",
