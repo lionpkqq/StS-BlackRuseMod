@@ -462,6 +462,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Defend_S");
 		
 		UnlockTracker.unlockCard("Advance");
+		UnlockTracker.unlockCard("Alleviate");
 		UnlockTracker.unlockCard("Barrier");
 		UnlockTracker.unlockCard("BorrowedTime");
 		UnlockTracker.unlockCard("BruteForce");
@@ -473,6 +474,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("DualDimension");		
 		UnlockTracker.unlockCard("Duplication");
 		UnlockTracker.unlockCard("Enbodiment");
+		UnlockTracker.unlockCard("Entangle");
 		UnlockTracker.unlockCard("FanOfKnives");		
 		UnlockTracker.unlockCard("Farseeing");
 		UnlockTracker.unlockCard("FastForward");
@@ -491,6 +493,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("KillerInstinct");
 		UnlockTracker.unlockCard("KillingDoll");
 		UnlockTracker.unlockCard("Laundry");
+		UnlockTracker.unlockCard("Manipulate");
 		UnlockTracker.unlockCard("Misdirection");
 		UnlockTracker.unlockCard("MoonPhase");
 		UnlockTracker.unlockCard("Moonlight");
@@ -513,6 +516,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("ShiftingThoughts");
 		UnlockTracker.unlockCard("SilverBlades");
 		UnlockTracker.unlockCard("Snipe");
+		UnlockTracker.unlockCard("Solidify");
 		UnlockTracker.unlockCard("SoulSculpture");
 		UnlockTracker.unlockCard("SpecialFormula");
 		UnlockTracker.unlockCard("Spin");
