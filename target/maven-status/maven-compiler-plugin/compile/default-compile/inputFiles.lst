@@ -26,6 +26,7 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\UpgradedManipulatePower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Farseeing.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\UnparalleledPower.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\OldScarf.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\ReturningBlades.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\Uniform.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Potential.java
@@ -33,7 +34,6 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\SpecialFormula.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\SurpressingFirePower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\patches\GremlinMatchPatch.java
-C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\PullOut.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Starlight.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Revamp.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\TrueSight.java
@@ -45,6 +45,7 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\CosmicInflation.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\DuplicationPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\StressRelieverAction.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\PaperSwan.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\LaundryAction.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\patches\PandorasBoxPatch.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\SnipePower.java
@@ -57,10 +58,15 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Entangle.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\SolidifyAction.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\BruteForce.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\TimeTheftPower.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\SplendidAttire.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\ReduceDebuffsAction.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\TemporalMisd.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\TimeWarpAction.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\MysterySword.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\StoneMask.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Replace.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\Broom.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\TemporalSlicing.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\FullDefense.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\characters\TheServant.java
@@ -72,7 +78,6 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\FloweringNight.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\ReadPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Deny.java
-C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Taunt.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\HouseCleaning.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\NoEscape.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\MurderousAura.java
@@ -92,9 +97,11 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\ShiftingGears.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\StarChefPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Sunlight.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\MysterySwordPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Laundry.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Comet.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\patches\CharSelectPatch.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\PocketWatch.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Spin.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Reset.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\NoEscapePower.java
@@ -105,13 +112,15 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Misdirection.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Unsheathe.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Sabotage.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\relics\KneeBrace.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Rewind.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\patches\TheServantEnum.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Enbodiment.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\DualDimension.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Snipe.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\TemporalArms.java
-C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\TauntPower.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\TimeTheft.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\ConsumedKnivesPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\VisionAction.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\actions\AlleviateAction.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\FanOfKnives.java
@@ -122,6 +131,7 @@ C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\FollowUp.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\StressRelieverPower.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Advance.java
+C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Desolation.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\Rearm.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\cards\FastForward.java
 C:\SYNC - GOOGLE DRIVE\workspace\StS-BlackRuse-master\src\main\java\blackrusemod\powers\EnergyManipulationPower.java

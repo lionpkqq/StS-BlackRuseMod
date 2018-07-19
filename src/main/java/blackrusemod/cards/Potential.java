@@ -3,6 +3,7 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -59,6 +60,8 @@ public class Potential extends CustomCard {
 		this.baseDamage += this.magicNumber;
 		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
+		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 
 	public AbstractCard makeCopy() {

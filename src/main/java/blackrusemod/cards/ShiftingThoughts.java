@@ -1,6 +1,7 @@
 package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,6 +35,8 @@ public class ShiftingThoughts extends CustomCard {
 	
 	public void triggerOnManualDiscard() {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 
 	public AbstractCard makeCopy() {

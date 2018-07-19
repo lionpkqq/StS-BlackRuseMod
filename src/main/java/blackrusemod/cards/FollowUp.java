@@ -2,8 +2,10 @@ package blackrusemod.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -21,20 +23,20 @@ public class FollowUp extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int DRAW = 1;
 
 	public FollowUp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FOLLOW_UP), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new FollowUpAction(m));
+		AbstractDungeon.actionManager.addToBottom(new FollowUpAction(m, this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -44,7 +46,7 @@ public class FollowUp extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

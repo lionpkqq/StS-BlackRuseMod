@@ -19,12 +19,14 @@ public class Laundry extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 1;
+    private static final int COST = 1;
+	private static final int COST_UPGRADED = 0;
 	
 	public Laundry() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.LAUNDRY), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.exhaust = true;
 	}
 	
 	@Override
@@ -41,9 +43,7 @@ public class Laundry extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
-			this.isInnate = true;
+			upgradeBaseCost(COST_UPGRADED);
 		}
 	}
 }

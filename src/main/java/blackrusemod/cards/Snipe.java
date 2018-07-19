@@ -37,6 +37,14 @@ public class Snipe extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new Snipe();
 	}
+	
+	public void applyPowers() {
+		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
+		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		super.applyPowers();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

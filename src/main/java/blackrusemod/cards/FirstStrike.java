@@ -23,21 +23,22 @@ public class FirstStrike extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int ATTACK_DMG = 9;
+	private static final int DRAW = 1;
 
 	public FirstStrike() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FIRST_STRIKE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, -1), -1));
 	}
 
@@ -48,7 +49,7 @@ public class FirstStrike extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

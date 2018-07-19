@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -35,7 +36,7 @@ public class UpgradedManipulatePower extends AbstractPower {
 		//flash();
 		AbstractCard c;
 		Random random = new Random();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 2; i++) {
 			int randomNum = random.nextInt(10) + 1;
 			if (randomNum == 1) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 2) c = new TemporalMisd().makeCopy();

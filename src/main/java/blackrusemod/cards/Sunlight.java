@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ConsumedKnivesPower;
 import blackrusemod.powers.KnivesPower;
 
 public class Sunlight extends CustomCard {
@@ -31,6 +32,7 @@ public class Sunlight extends CustomCard {
 	private static final int ATTACK_DMG = 21;
 	private static final int UPGRADE_PLUS_DMG = 9;
 	private boolean depleted = false;
+	
 	public Sunlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SUNLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
@@ -47,6 +49,7 @@ public class Sunlight extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, -1), -1));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConsumedKnivesPower(p, -1), -1));
 			if (p.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, p.getPower("SurpressingFirePower").amount));
 			}
 			
@@ -72,6 +75,14 @@ public class Sunlight extends CustomCard {
 
 	public AbstractCard makeCopy() {
 		return new Sunlight();
+	}
+	
+	public void applyPowers() {
+		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
+		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		super.applyPowers();
 	}
 
 	public void upgrade() {

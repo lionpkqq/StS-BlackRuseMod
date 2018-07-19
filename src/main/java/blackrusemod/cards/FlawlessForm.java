@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -26,7 +25,6 @@ public class FlawlessForm extends CustomCard {
 	public FlawlessForm() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLAWLESS_FORM), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.isEthereal = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -42,7 +40,7 @@ public class FlawlessForm extends CustomCard {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
-			this.isEthereal = false;
+			this.isInnate = true;
 		}
 	}
 }

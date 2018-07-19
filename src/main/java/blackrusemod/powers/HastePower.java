@@ -33,7 +33,7 @@ public class HastePower extends AbstractPower {
 	}
 
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if (card.type == AbstractCard.CardType.SKILL) {
+		if (card.type == AbstractCard.CardType.ATTACK) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DrawManipulationPower(this.owner, this.amount), this.amount));
 			//flash();
 		}

@@ -45,7 +45,7 @@
 	},
 	"DWeaponry": {
 		"NAME": "D. Weaponry",
-		"DESCRIPTION": "At the start NL of your turn, NL obtain !M! Knives."
+		"DESCRIPTION": "At the start NL of your turn, NL obtain !M! Knives. NL (D stands for Dimensional.)"
 	},
 	"Deny": {
 		"NAME": "Deny",
@@ -62,7 +62,7 @@
 	},
 	"Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Apply !M! Weak and Frail to you. NL This turn, your next !M! card(s) is played twice."
+		"DESCRIPTION": "Apply !M! Weak and Frail to you. NL This turn, your next !M! card(s) is played twice. NL Exhaust."
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
@@ -87,17 +87,16 @@
 	},
 	"FirstStrike": {
 		"NAME": "First Strike",
-		"DESCRIPTION": "Deal !D! damage. NL Draw a card. NL Next turn, lose [B]."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card(s). NL Next turn, lose [B]."
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail."
+		"DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail.",
+		"UPGRADE_DESCRIPTION": "Innate. NL You are not affected by Weak, Vulnerable and Frail."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn."
+		"DESCRIPTION": "Draw !M! card(s) whenever you play a card this turn. NL Exhaust."
 	},
 	"FollowUp": {
 		"NAME": "FollowUp",
@@ -118,11 +117,12 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage. NL If the enemy is Weakened, apply 1 Blight."
+		"DESCRIPTION": "Deal !D! damage. NL Apply 1 Blight."
 	},
 	"Haste": {
 		"NAME": "Haste",
-		"DESCRIPTION": "Draw one more card next turn for each Skill card you played this turn. NL Ethereal."
+		"DESCRIPTION": "Draw one more card next turn for each Attack card you played this turn. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Draw one more card next turn for each Attack card you played this turn."
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
@@ -146,13 +146,11 @@
 	},
 	"Laundry": {
 		"NAME": "Laundry",
-		"DESCRIPTION": "Exhasut all Curse and Status in your deck for this combat.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Exhasut all Curse and Status in your deck for this combat."
+		"DESCRIPTION": "Exhaust all Curse and Status in your deck. Exhaust."
 	},
 	"Manipulate": {
 		"NAME": "Manipulate",
-		"DESCRIPTION": "Adds 3 random Temporal cards to your draw pile.",
-		"UPGRADE_DESCRIPTION": "Adds 3 random Upgraded Temporal cards to your draw pile."
+		"DESCRIPTION": "Adds !M! random Temporal cards to your draw pile."
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
@@ -185,9 +183,9 @@
 	},
 	"Potential": {
 		"NAME": "Potential",
-		"DESCRIPTION": "Deal !D! damage. NL If discarded, deals !M! additional damage this combat and put it in your hand."
+		"DESCRIPTION": "Deal !D! damage. NL Shift: Deals !M! additional damage this combat and put it in your hand."
 	},
-	"PullOut": {
+	"Desolation": {
 		"NAME": "Desolation",
 		"DESCRIPTION": "Deal !D! damage. NL Double the enemy's Blight. NL Exhaust."
 	},
@@ -201,7 +199,7 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Gain !B! Block. NL Obtain !M! Knives."
+		"DESCRIPTION": "Obtain 4 Knives. NL Gain !M! Strength for one turn."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -214,8 +212,7 @@
 	},
 	"ReturningBlades": {
 		"NAME": "Returning Blades",
-		"DESCRIPTION": "Deal !M! damage for each Attack card in your discard pile.",
-		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
+		"DESCRIPTION": "Deal !D! damage once for each Knives you have spent this turn."
 	},
 	"Revamp": {
 		"NAME": "Revamp",
@@ -224,7 +221,7 @@
 	},
 	"Rewind": {
 		"NAME": "Rewind",
-		"DESCRIPTION": "Gain !B! Block. NL Place a card from your hand on top of your draw pile."
+		"DESCRIPTION": "Gain !B! Block. NL Re-obtain all the Knives you have spent this turn."
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
@@ -261,7 +258,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Gain 2 Weak. NL Gain 2 Frail."
+		"DESCRIPTION": "Gain 1 Strength. NL Gain 1 Dexterity. NL Apply !M! Weak and Frail to you. NL Exhaust."
 	},
 	"Spin": {
 		"NAME": "Spin",
@@ -288,10 +285,10 @@
 		"NAME": "Surpressing Fire",
 		"DESCRIPTION": "Gain !M! Block for each Knife you Throw."
 	},
-	"Taunt": {
-		"NAME": "Taunt",
-		"DESCRIPTION": "Vision: Gain [B] [B] . NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . NL Exhaust."
+	"TimeTheft": {
+		"NAME": "Time Theft",
+		"DESCRIPTION": "Vision: Gain [B] [B] . Draw !M! card. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . Draw !M! cards. NL Exhaust."
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",

@@ -17,7 +17,7 @@ import blackrusemod.cards._DummyNotAttack;
 import blackrusemod.powers.NoEscapePower;
 import blackrusemod.powers.ReadPower;
 import blackrusemod.powers.SnipePower;
-import blackrusemod.powers.TauntPower;
+import blackrusemod.powers.TimeTheftPower;
 
 public class VisionAction extends AbstractGameAction {
 	private String effects;
@@ -64,9 +64,9 @@ public class VisionAction extends AbstractGameAction {
 			this.isDone = true;
 		}
 		
-		if (this.effects == "Taunt") {
-			if (this.source.hasPower("TauntPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "TauntPower"));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new TauntPower(this.source, this.target, this.amount, this.prediction), this.amount));
+		if (this.effects == "TimeTheft") {
+			if (this.source.hasPower("TimeTheftPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "TimeTheftPower"));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new TimeTheftPower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		

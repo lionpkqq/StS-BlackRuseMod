@@ -2,11 +2,46 @@
   "Uniform": {
     "NAME": "Uniform",
     "FLAVOR": "It can be used not only to keep dirty stuff away, but also to carry weapons.",
-    "DESCRIPTIONS": ["Start each combat with #b4 #yKnives."]
+    "DESCRIPTIONS": ["At the start of each combat, obtain #b4 #yKnives."]
+  },
+  "Broom": {
+    "NAME": "Broom",
+    "FLAVOR": "A must-have for a maid.",
+    "DESCRIPTIONS": ["Every #b10 cards you discard, gain [B] ."]
+  },
+  "KneeBrace": {
+    "NAME": "Knee Brace",
+    "FLAVOR": "Quite useful for avoiding bursitis.",
+    "DESCRIPTIONS": ["Gain #b", " #yBlock for each #yShift effect you trigger."]
+  },
+  "PocketWatch": {
+    "NAME": "Pocket Watch",
+    "FLAVOR": "Sixty years, an instant.",
+    "DESCRIPTIONS": ["Whenever you exhaust a card, draw one more card next turn."]
   },
   "StoneMask": {
     "NAME": "Stone Mask",
-    "FLAVOR": "You feel a sudden impulse to reject humanity.",
-    "DESCRIPTIONS": ["Start each combat with #b4 #yKnives."]
+    "FLAVOR": "You feel a sudden impulse to reject your humanity.",
+    "DESCRIPTIONS": ["Whenever you play an #yAttack, heal #b1 HP."]
+  },
+  "MysterySword": {
+    "NAME": "Mystery Sword",
+    "FLAVOR": "Found in the depth. Users must sacrifice themselves to wield this sword.",
+    "DESCRIPTIONS": ["The first #yAttack you play each turn does double damage, then apply #b2 #yWeak and #yFrail to you."]
+  },
+  "PaperSwan": {
+    "NAME": "Paper Swan",
+    "FLAVOR": "Perfect and Elegant.",
+    "DESCRIPTIONS": ["Whenever you apply #yBlight, you have #b50% chance to apply an additional #b1 #yBlight."]
+  },
+  "SplendidAttire": {
+    "NAME": "Splendid Attire",
+    "FLAVOR": "Danger hides in beauty.",
+    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength and lose #b1 #yDexterity."]
+  },
+  "OldScarf": {
+    "NAME": "Old Scarf",
+    "FLAVOR": "It is said that this is a family heirloom.",
+    "DESCRIPTIONS": ["Whenever you trigger a #yVision effect, draw a card."]
   }
 }

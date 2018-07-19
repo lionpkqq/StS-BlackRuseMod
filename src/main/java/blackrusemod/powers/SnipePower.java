@@ -1,6 +1,7 @@
 package blackrusemod.powers;
 
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -45,16 +46,22 @@ public class SnipePower extends AbstractPower {
 			if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 			{	
 				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), false, null));
+				if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				if (this.owner.hasPower("TrueSightPower")) 
-					for (int i = 0; i < Math.min(this.owner.getPower("TrueSightPower").amount, this.owner.getPower("KnivesPower").amount); i++)
+					for (int i = 0; i < Math.min(this.owner.getPower("TrueSightPower").amount, this.owner.getPower("KnivesPower").amount); i++) {
 						AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), false, null));
+						if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+					}
 			}
 			else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 			{
 				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), false, null));
+				if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				if (this.owner.hasPower("TrueSightPower")) 
-					for (int i = 0; i < Math.min(this.owner.getPower("TrueSightPower").amount, this.owner.getPower("KnivesPower").amount); i++)
+					for (int i = 0; i < Math.min(this.owner.getPower("TrueSightPower").amount, this.owner.getPower("KnivesPower").amount); i++) {
 						AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), false, null));
+						if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+					}
 			}
 		}
 		else {

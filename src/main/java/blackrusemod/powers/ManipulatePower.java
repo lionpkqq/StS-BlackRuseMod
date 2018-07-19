@@ -23,10 +23,11 @@ public class ManipulatePower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-	public ManipulatePower(AbstractCreature owner) {
+	public ManipulatePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
+		this.amount = amount;
 		updateDescription();
 		this.img = BlackRuseMod.getEnbodimentPowerTexture();
 	}
@@ -35,7 +36,7 @@ public class ManipulatePower extends AbstractPower {
 		//flash();
 		AbstractCard c;
 		Random random = new Random();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < this.amount; i++) {
 			int randomNum = random.nextInt(10) + 1;
 			if (randomNum == 1) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 2) c = new TemporalMisd().makeCopy();

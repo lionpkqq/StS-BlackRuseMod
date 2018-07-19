@@ -36,6 +36,9 @@ public class Misdirection extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
+			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
+				if (AbstractDungeon.cardRandomRng.randomBoolean())
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
 		}
 	}
 

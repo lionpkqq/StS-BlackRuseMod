@@ -24,8 +24,9 @@ public class Moonlight extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private int amount;
+	
 	public Moonlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOONLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
@@ -51,6 +52,14 @@ public class Moonlight extends CustomCard {
 
 	public AbstractCard makeCopy() {
 		return new Moonlight();
+	}
+	
+	public void applyPowers() {
+		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
+		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		super.applyPowers();
 	}
 
 	public void upgrade() {

@@ -45,7 +45,7 @@
   },
   "HastePower": {
     "NAME": "Haste",
-    "DESCRIPTIONS": ["Each time you play a #ySkill card, draw #b", " more card next turn."]
+    "DESCRIPTIONS": ["Each time you play an #yAttack card, draw #b", " more card next turn."]
   },
   "KillerInstinctPower": {
     "NAME": "Killer Instinct",
@@ -99,9 +99,9 @@
     "NAME": "Snipe",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, #yThrow a #yKnife. Deal #b", " damage.", "Next turn, if the target enemy does #yNOT intend to attack, #yThrow a #yKnife. Deal #b", " damage."]
   },
-  "TauntPower": {
-    "NAME": "Taunt",
-    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " energy.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " energy."]
+  "TimeTheftPower": {
+    "NAME": "Time Theft",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " energy. Draw #b", " card(s).", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " energy. Draw #b", " card(s)."]
   },
   "NoEscapePower": {
     "NAME": "No Escape",
@@ -109,10 +109,18 @@
   },
   "ManipulatePower": {
     "NAME": "Manipulate",
-    "DESCRIPTIONS": ["Adds #b3 random #yTemporal cards to your draw pile."]
+    "DESCRIPTIONS": ["Adds #b2 random #yTemporal cards to your draw pile."]
   },
   "UpgradedManipulatePower": {
     "NAME": "Manipulate",
-    "DESCRIPTIONS": ["Adds #b3 random #yUpgraded #yTemporal cards to your draw pile."]
+    "DESCRIPTIONS": ["Adds #b2 random #yUpgraded #yTemporal cards to your draw pile."]
+  },
+  "ConsumedKnivesPower": {
+    "NAME": "Spent Knives",
+    "DESCRIPTIONS": ["You have spent #b", " #yKnives this turn."]
+  },
+  "MysterySwordPower": {
+    "NAME": "Mystery Sword",
+    "DESCRIPTIONS": ["The next #yAttack you play does double damage. Apply #b2 #yWeak and #yFrail to you afterwards."]
   }
 }

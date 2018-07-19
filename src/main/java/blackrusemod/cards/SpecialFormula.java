@@ -30,6 +30,7 @@ public class SpecialFormula extends CustomCard {
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = BUFF;
+		this.exhaust = true;
 	}
 	
 	@Override

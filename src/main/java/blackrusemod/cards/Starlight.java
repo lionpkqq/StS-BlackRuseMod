@@ -23,9 +23,10 @@ public class Starlight extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 4;
+	private static final int ATTACK_DMG = 5;
 	private static final int UPGRADE_PLUS_DMG = 2;
 	private int amount;
+	
 	public Starlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STARLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
@@ -51,6 +52,14 @@ public class Starlight extends CustomCard {
 
 	public AbstractCard makeCopy() {
 		return new Starlight();
+	}
+	
+	public void applyPowers() {
+		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
+		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		super.applyPowers();
 	}
 
 	public void upgrade() {

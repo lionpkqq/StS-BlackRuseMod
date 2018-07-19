@@ -62,7 +62,7 @@
 	},
 	"Duplication": {
 		"NAME": "复制体",
-		"DESCRIPTION": "对你附加 !M! 层 虚弱 和 脆弱 。本回合你打出的下 !M! 张卡会打出两次。"
+		"DESCRIPTION": "对你附加 !M! 层 虚弱 和 脆弱 。 NL 本回合你打出的下 !M! 张卡会打出两次。 NL 消耗 。"
 	},
 	"Enbodiment": {
 		"NAME": "具现化",
@@ -87,17 +87,16 @@
 	},
 	"FirstStrike": {
 		"NAME": "先攻",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽一张卡。 NL 下回合损失 [B] 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张卡。 NL 下回合损失 [B] 。"
 	},
 	"FlawlessForm": {
 		"NAME": "完美形态",
-		"DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。 虚无 。",
-		"UPGRADE_DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。"
+		"DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。",
+		"UPGRADE_DESCRIPTION": " 固有 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。"
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
-		"DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。 NL 消耗。",
-		"UPGRADE_DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。"
+		"DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。 NL 消耗 。"
 	},
 	"FollowUp": {
 		"NAME": "追击",
@@ -118,14 +117,15 @@
 	},
 	"Gouge": {
 		"NAME": "凿击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 虚弱 ，给予 1 层 枯萎 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 层 枯萎 。"
 	},
 	"Haste": {
 		"NAME": "疾速",
-		"DESCRIPTION": "每打出 1 张技能牌，下回合多抽 1 张卡。 NL 虚无 。"
+		"DESCRIPTION": "每打出 1 张 攻击 牌，下回合多抽 1 张卡。 NL 虚无 。",
+		"UPGRADE_DESCRIPTION": "每打出 1 张 攻击牌 ，下回合多抽 1 张卡。"
 	},
 	"HouseCleaning": {
-		"NAME": "大扫除",
+		"NAME": "打扫",
 		"DESCRIPTION": "丢弃 2 张手牌。 NL 获得 3 把 飞刀 。"
 	},
 	"Indiscriminate": {
@@ -146,13 +146,11 @@
 	},
 	"Laundry": {
 		"NAME": "清洗衣物",
-		"DESCRIPTION": " 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 消耗 卡组里所有的 诅咒 和 状态 直到战斗结束。"
+		"DESCRIPTION": " 消耗 卡组里所有的 诅咒 和 状态 。 消耗 。"
 	},
 	"Manipulate": {
 		"NAME": "操控",
-		"DESCRIPTION": "随机将三张 幻时 卡加入抽卡堆。",
-		"UPGRADE_DESCRIPTION": "随机将三张 升级 过的 幻时 卡加入抽卡堆。"
+		"DESCRIPTION": "随机将 !M! 张 幻时 卡加入抽卡堆。"
 	},
 	"Misdirection": {
 		"NAME": "误导",
@@ -185,9 +183,9 @@
 	},
 	"Potential": {
 		"NAME": "潜能",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 每次这张卡被丢弃，本次战斗内伤害上升 !M! 并放入手牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：本次战斗内伤害上升 !M! 并放入手牌。"
 	},
-	"PullOut": {
+	"Desolation": {
 		"NAME": "黯灭",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。 消耗 。"
 	},
@@ -201,7 +199,7 @@
 	},
 	"Rearm": {
 		"NAME": "再装填",
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 把 飞刀 。"
+		"DESCRIPTION": "获得 4 把 飞刀 。 NL 本回合获得 !M! 点 力量 。"
 	},
 	"Replace": {
 		"NAME": "替代",
@@ -214,8 +212,7 @@
 	},
 	"ReturningBlades": {
 		"NAME": "返刃",
-		"DESCRIPTION": "弃牌堆里每有一张攻击牌，造成 !M! 点伤害。",
-		"EXTENDED_DESCRIPTION": ["NL (造成 !D! 点伤害。)"]
+		"DESCRIPTION": "本回合你每使用过一把 飞刀 ，造成 !D! 点伤害一次。"
 	},
 	"Revamp": {
 		"NAME": "翻新",
@@ -223,8 +220,8 @@
 		"UPGRADE_DESCRIPTION": "将你所有的牌洗入抽牌堆。 NL 下回合多抽 2 张卡。 "
 	},
 	"Rewind": {
-		"NAME": "倒回",
-		"DESCRIPTION": "获得 !B! 点格挡。 NL 将 1 张手牌放回抽牌堆顶部。"
+		"NAME": "回溯",
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 重新获得本回合消耗的所有 飞刀 。"
 	},
 	"Sabotage": {
 		"NAME": "破坏",
@@ -261,7 +258,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "特制配方",
-		"DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 获得2层 虚弱 。 NL 获得2层 脆弱 。"
+		"DESCRIPTION": "获得 1 点 力量 。 NL 获得 1 点 敏捷 。 NL 对你附加 !M! 层 虚弱 和 脆弱 。 NL 消耗 。"
 	},
 	"Spin": {
 		"NAME": "回旋",
@@ -288,10 +285,10 @@
 		"NAME": "火力压制",
 		"DESCRIPTION": "每投掷 1 把 飞刀 ，获得 !M! 点 格挡 。"
 	},
-	"Taunt": {
-		"NAME": "嘲讽",
-		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 消耗 。",
-		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 消耗 。"
+	"TimeTheft": {
+		"NAME": "盗窃时间",
+		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 抽 !M! 张卡。 消耗 。",
+		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。抽 !M! 张卡。 消耗 。"
 	},
 	"TemporalArms": {
 		"NAME": "幻时武装",

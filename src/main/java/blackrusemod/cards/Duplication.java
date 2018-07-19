@@ -27,6 +27,7 @@ public class Duplication extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUPLICATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = TWICE;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

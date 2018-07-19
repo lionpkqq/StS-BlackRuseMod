@@ -30,7 +30,12 @@ public class TheWorldPower extends AbstractPower {
 	
 	public void onInitialApplication() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) 
-			 c.setCostForTurn(-9);
+			c.setCostForTurn(-9);
+	}
+	
+	public void onDrawOrDiscard() {
+		for (AbstractCard c : AbstractDungeon.player.hand.group) 
+			c.setCostForTurn(-9);
 	}
 	
 	public void onRemove()

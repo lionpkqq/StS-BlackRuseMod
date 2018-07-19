@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.5.5
+# StS-BlackRuseMod 0.6.0
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
@@ -10,7 +10,7 @@ Currently supported versions:
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, and a new set of 75 cards for her to use. 
 
-**The Servant** is inspired by Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
+**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
 
 ### Compatibility ###
 This Mod makes no changes to the base game other than adding **The Servant**. In other words, it should be compatible with other Mods.
@@ -49,13 +49,17 @@ The Wiki is still under construction. Thanks for your patience!
 * If you choose Elegance in the Ancient Writing event, both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest). 
 
 ## Credits / Acknowledgements ##
-* BlackRuse (https://github.com/lionpkqq): designer， programmer and project manager.
+* BlackRuse (https://github.com/lionpkqq): design, programming and project management.
+
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, and more!
 
 ## Special Thanks ##
 
 I couldn't have created anything without:
 
-The [devs](https://www.megacrit.com/) of **SlayTheSpire**
+===========================================================
+|The [devs](https://www.megacrit.com/) of **SlayTheSpire**|
+===========================================================
 
 Contributors of **ModTheSpire**
 * kiooeht - Original author
@@ -87,9 +91,20 @@ Contributors of **FruityMod**
 * LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
 
 ## Current State/Updates ##
-Looking for an artist.
 Needs more play-testing.
-Needs more relics for The Servant.
+
+0.6.1
+* Added three new exclusive relics: [Splendid Attire], [Paper Swan] and [Old Scarf].
+
+0.6.0
+* New card frameworks.
+* Added five new exclusive relics: [Mystery Sword], [Stone Mask], [Pocket Watch], [Knee Brace] and [Broom].
+* Minor balance updates.
+* Renamed [Taunt] to [Time Theft].
+* Reworked [Rewind], [Rearm] and [Returning Blades].
+* Fixed: [Alleviate] does not trigger Shift effects.
+* Fixed: [Silver Blades] does not apply to cards acquired from Nilrys Codex.
+* Fixed: [The World] does not reduce the cost of the card drawn by [Flowering Night].
 
 0.5.5
 * Updated the character select sound.

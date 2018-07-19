@@ -1,5 +1,6 @@
 package blackrusemod.actions;
  
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,6 +37,7 @@ public class DenyAction extends com.megacrit.cardcrawl.actions.AbstractGameActio
 			for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
 				AbstractDungeon.player.drawPile.moveToDiscardPile(c);
 				c.triggerOnManualDiscard();
+				GameActionManager.incrementDiscard(false);
 			}
 			AbstractDungeon.gridSelectScreen.selectedCards.clear();
 		}

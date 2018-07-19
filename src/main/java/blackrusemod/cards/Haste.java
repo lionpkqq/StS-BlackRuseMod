@@ -19,8 +19,8 @@ public class Haste extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 3;
-	private static final int COST_UPGRADED = 2;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	private static final int COST = 2;
 
 	public Haste() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HASTE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
@@ -39,7 +39,9 @@ public class Haste extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			this.isEthereal = false;
 		}
 	}
 }

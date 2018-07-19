@@ -83,7 +83,7 @@ public class TheServant extends CustomPlayer {
 	
 	public static CharSelectInfo getLoadout() {
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-			return new CharSelectInfo("致命侍从", "恶魔们的侍从。擅长杀戮与家务。 NL 随身携带着一千零一把刀刃。",
+			return new CharSelectInfo("凛光侍从", "恶魔们的侍从。擅长杀戮与家务。 NL 随身携带着一千零一把刀刃。",
 				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 		else {

@@ -13,13 +13,13 @@ public class Uniform extends CustomRelic {
 	private static final int KNIVES = 4;
 	
 	public Uniform() {
-		super(ID, BlackRuseMod.getUniformTexture(),
-				RelicTier.STARTER, LandingSound.MAGICAL);
+		super(ID, BlackRuseMod.getUniformTexture(), RelicTier.STARTER, LandingSound.MAGICAL);
 	}
 
 	@Override
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
+				new KnivesPower(AbstractDungeon.player, KNIVES)));
 	}
 	
 	@Override

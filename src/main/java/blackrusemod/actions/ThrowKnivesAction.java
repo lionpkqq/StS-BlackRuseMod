@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
 import blackrusemod.powers.AmplifyDamagePower;
+import blackrusemod.powers.ConsumedKnivesPower;
 import blackrusemod.powers.KnivesPower;
 
 public class ThrowKnivesAction extends AbstractGameAction {
@@ -52,9 +53,16 @@ public class ThrowKnivesAction extends AbstractGameAction {
 						AbstractDungeon.actionManager.addToTop(new VFXAction(new ThrowDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new KnivesPower(this.source, -1), -1));
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new ConsumedKnivesPower(this.source, -1), -1));
 					if (this.source.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower("SurpressingFirePower").amount));
 					if (this.debuff != null && this.debuff == "Weakened")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
-					if (this.debuff != null && this.debuff == "Amplify Damage")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
+					if (this.debuff != null && this.debuff == "Amplify Damage")  {
+						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
+						if (AbstractDungeon.player.hasRelic("PaperSwan")) 
+							if (AbstractDungeon.cardRandomRng.randomBoolean())
+								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
+					}
+					
 				}
 			}
 		}

@@ -20,9 +20,11 @@ public class GougeAction extends AbstractGameAction
 
 	public void update()
 	{
-		if ((this.duration == Settings.ACTION_DUR_XFAST) && 
-				(this.target != null) && (this.target.hasPower("Weakened"))) {
+		if (this.duration == Settings.ACTION_DUR_XFAST) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
+			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
+				if (AbstractDungeon.cardRandomRng.randomBoolean())
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
 		}
 
 		tickDuration();
