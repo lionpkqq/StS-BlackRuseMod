@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.6.0
+# StS-BlackRuseMod 0.6.2
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
@@ -8,7 +8,7 @@ Currently supported versions:
 * BaseMod 2.16.0
 
 ## Content/Gameplay ##
-**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, and a new set of 75 cards for her to use. 
+**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, a new set of 75 cards and 11 relics for her to use. 
 
 **The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
 
@@ -57,9 +57,9 @@ The Wiki is still under construction. Thanks for your patience!
 
 I couldn't have created anything without:
 
-===========================================================
-|The [devs](https://www.megacrit.com/) of **SlayTheSpire**|
-===========================================================
+
+The [devs](https://www.megacrit.com/) of **SlayTheSpire**
+
 
 Contributors of **ModTheSpire**
 * kiooeht - Original author
