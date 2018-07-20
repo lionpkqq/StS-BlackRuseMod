@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.6.1
+# StS-BlackRuseMod 0.6.2
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
 Currently supported versions: 
-* Slay The Spire (07-12-2018)
-* ModTheSpire 2.8.0
-* BaseMod 2.16.0
+* Slay The Spire (07-19-2018)
+* ModTheSpire 2.9.0
+* BaseMod 2.17.0 (Week 34 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, a new set of 75 cards and 11 relics for her to use. 
@@ -57,9 +57,7 @@ The Wiki is still under construction. Thanks for your patience!
 
 I couldn't have created anything without:
 
-
-The [devs](https://www.megacrit.com/) of **SlayTheSpire**
-
+###The [devs](https://www.megacrit.com/) of **SlayTheSpire**###
 
 Contributors of **ModTheSpire**
 * kiooeht - Original author
@@ -92,6 +90,12 @@ Contributors of **FruityMod**
 
 ## Current State/Updates ##
 Needs more play-testing.
+
+0.6.2
+* Added two new exclusive relics: [Pan] and [Roman Bracelet].
+* Reworked [Indiscriminate] and [Gouge].
+* Fixed: Sometimes [Potential] does not go back to hand after being discarded.
+* Fixed: Picking up relic [Splendid Attire] will break the game.
 
 0.6.1
 * Added three new exclusive relics: [Splendid Attire], [Paper Swan] and [Old Scarf].

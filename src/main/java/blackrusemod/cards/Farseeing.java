@@ -21,7 +21,7 @@ public class Farseeing extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK = 10;
+	private static final int BLOCK = 8;
 	
 	public Farseeing() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FARSEEING), COST, DESCRIPTION,

@@ -10,12 +10,14 @@ public class DenyAction extends com.megacrit.cardcrawl.actions.AbstractGameActio
 	private static final UIStrings uiStrings = com.megacrit.cardcrawl.core.CardCrawlGame.languagePack.getUIString("ReprogramAction");
 	public static final String[] TEXT = uiStrings.TEXT;
 	private float startingDuration;
+	private boolean anyNumber;
 
-	public DenyAction(int numCards) {
+	public DenyAction(int numCards, boolean anyNumber) {
 		this.amount = numCards;
 		this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.DISCARD;
 		this.startingDuration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST;
 		this.duration = this.startingDuration;
+		this.anyNumber = anyNumber;
 	}
 
 	public void update() {
@@ -31,7 +33,7 @@ public class DenyAction extends com.megacrit.cardcrawl.actions.AbstractGameActio
 						(AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
 			}
 
-			AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, true, TEXT[0]);
+			AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, this.anyNumber, TEXT[0]);
 		}
 		else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 			for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {

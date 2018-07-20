@@ -43,5 +43,15 @@
     "NAME": "Old Scarf",
     "FLAVOR": "It is said that this is a family heirloom.",
     "DESCRIPTIONS": ["Whenever you trigger a #yVision effect, draw a card."]
+  },
+  "Pan": {
+    "NAME": "Pan",
+    "FLAVOR": "Where are they selling this?",
+    "DESCRIPTIONS": ["At the start of each combat, apply #b2 #yBlight to ALL enemies."]
+  },
+  "RomanBracelet": {
+    "NAME": "Roman Bracelet",
+    "FLAVOR": "Only a few people may release its true potential.",
+    "DESCRIPTIONS": ["At the start of each combat, put #b2 #yTemporal #yEssence in your draw pile."]
   }
 }

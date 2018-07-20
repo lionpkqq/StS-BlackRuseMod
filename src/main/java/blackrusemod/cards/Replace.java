@@ -28,7 +28,7 @@ public class Replace extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DenyAction(1));
+		AbstractDungeon.actionManager.addToBottom(new DenyAction(1, false));
 		AbstractDungeon.actionManager.addToBottom(new DiscardPileToTopOfDeckAction(p));
 	}
 

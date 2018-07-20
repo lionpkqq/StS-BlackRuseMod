@@ -12,7 +12,7 @@ public class MysterySword extends CustomRelic {
 	private static final String ID = "MysterySword";
 	
 	public MysterySword() {
-		super(ID, BlackRuseMod.getMysterySwordTexture(), RelicTier.RARE, LandingSound.CLINK);
+		super(ID, BlackRuseMod.getMysterySwordTexture(), RelicTier.BOSS, LandingSound.CLINK);
 	}
 	
 	public void atTurnStart()

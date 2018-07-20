@@ -37,11 +37,21 @@
   "SplendidAttire": {
     "NAME": "华服",
     "FLAVOR": "多一分美丽，多一分危险。",
-    "DESCRIPTIONS": ["替换 #y制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量 ，失去 #b1 点 #y敏捷 。"]
+    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量 ，失去 #b1 点 #y敏捷 。"]
   },
   "OldScarf": {
     "NAME": "旧围巾",
     "FLAVOR": "据说是祖上传下来的。",
     "DESCRIPTIONS": ["每次触发 #y视界 效果，抽 #b1 张牌。"]
+  },
+  "Pan": {
+    "NAME": "平底锅",
+    "FLAVOR": "高塔内怎么会有这种东西？",
+    "DESCRIPTIONS": ["战斗开始时给所有敌人附加 #b2 层 #y枯萎 。"]
+  },
+  "RomanBracelet": {
+    "NAME": "罗马腕轮",
+    "FLAVOR": "只有一小部分人能激发腕轮的真正力量。",
+    "DESCRIPTIONS": ["战斗开始时在卡组里加入 #b2 张 #y幻时精华 。"]
   }
 }

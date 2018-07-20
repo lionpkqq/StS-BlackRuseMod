@@ -20,8 +20,8 @@ public class TimeEmbedded extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 24;
-	private static final int UPGRADE_PLUS_BLOCK = 8;
+	private static final int BLOCK_AMT = 18;
+	private static final int UPGRADE_PLUS_BLOCK = 6;
 
 	public TimeEmbedded() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_EMBEDDED), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

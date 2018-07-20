@@ -97,6 +97,7 @@ blackrusemod\cards\Snipe.class
 blackrusemod\cards\HouseCleaning.class
 blackrusemod\powers\UpgradedManipulatePower.class
 blackrusemod\powers\DrawManipulationPower.class
+blackrusemod\relics\Pan.class
 blackrusemod\cards\Laundry.class
 blackrusemod\cards\SoulSculpture.class
 blackrusemod\powers\MoonPhasePower.class
@@ -105,10 +106,10 @@ blackrusemod\actions\SolidifyAction.class
 blackrusemod\cards\FullDefense.class
 blackrusemod\actions\StressRelieverAction.class
 blackrusemod\cards\Entangle.class
+blackrusemod\relics\RomanBracelet.class
 blackrusemod\powers\SilverBladesPower.class
 blackrusemod\powers\ReadPower.class
 blackrusemod\cards\Enbodiment.class
-blackrusemod\actions\GougeAction.class
 blackrusemod\cards\Manipulate.class
 blackrusemod\cards\TrashToTreasure.class
 blackrusemod\cards\KidneyShot.class

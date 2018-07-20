@@ -22,7 +22,7 @@ public class Spin extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
 	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int BLOCK_AMT = 4;
+	private static final int BLOCK_AMT = 3;
 	private static final int UPGRADE_PLUS_BLOCK = 2;
 
 	public Spin() {

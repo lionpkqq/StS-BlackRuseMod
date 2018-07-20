@@ -21,7 +21,7 @@
 	},
 	"Alleviate": {
 		"NAME": "减负",
-		"DESCRIPTION": "丢弃最多3张手牌。每丢弃一张卡，获得 !B! 点 格挡 。"
+		"DESCRIPTION": "丢弃最多3张手牌。每丢弃1张卡，获得 !B! 点 格挡 。"
 	},
 	"Barrier": {
 		"NAME": "屏障",
@@ -49,8 +49,8 @@
 	},
 	"Deny": {
 		"NAME": "否决",
-		"DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 4 张卡。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 4 张卡。"
+		"DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张卡。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张卡。"
 	},
 	"DoubleEdge": {
 		"NAME": "双刃剑",
@@ -75,7 +75,7 @@
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
-		"DESCRIPTION": "消耗所有 [B] 。 投掷 X乘以 !M! 把 飞刀 ，每把随机对一个敌人造成 !D! 点伤害。"
+		"DESCRIPTION": "消耗所有 [B] 。 投掷 X乘以 !M! 把 飞刀 ，每把随机对1个敌人造成 !D! 点伤害。"
 	},
 	"Farseeing": {
 		"NAME": "深谋远虑",
@@ -96,11 +96,11 @@
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
-		"DESCRIPTION": "本回合每打出一张牌，抽 !M! 张牌。 NL 消耗 。"
+		"DESCRIPTION": "本回合每打出1张牌，抽 !M! 张牌。 NL 消耗 。"
 	},
 	"FollowUp": {
 		"NAME": "追击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 枯萎 ，获得 [B] 并抽一张卡。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 枯萎 ，获得 [B] 并抽1张卡。"
 	},
 	"FullDefense": {
 		"NAME": "全力防守",
@@ -117,7 +117,7 @@
 	},
 	"Gouge": {
 		"NAME": "凿击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 1 层 枯萎 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 枯萎 在凿击上发挥 !M! 倍效果。"
 	},
 	"Haste": {
 		"NAME": "疾速",
@@ -130,7 +130,7 @@
 	},
 	"Indiscriminate": {
 		"NAME": "无差别",
-		"DESCRIPTION": "对所有敌人造成 !D! 点伤害，所有敌人损失 !M! 点 力量 一回合。"
+		"DESCRIPTION": "对所有敌人造成 !D! 点伤害。 转变 ：所有敌人损失 !M! 点 力量 1回合。"
 	},
 	"KidneyShot": {
 		"NAME": "肾击",
@@ -138,7 +138,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "杀手本能",
-		"DESCRIPTION": "你的回合开始时，获得你身上 负面状态 层数乘以1的 敏捷 一回合。"
+		"DESCRIPTION": "你的回合开始时，获得你身上 负面状态 层数乘以1的 敏捷 1回合。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -212,7 +212,7 @@
 	},
 	"ReturningBlades": {
 		"NAME": "返刃",
-		"DESCRIPTION": "本回合你每使用过一把 飞刀 ，造成 !D! 点伤害一次。"
+		"DESCRIPTION": "本回合你每使用过1把 飞刀 ，造成 !D! 点伤害1次。"
 	},
 	"Revamp": {
 		"NAME": "翻新",
@@ -225,7 +225,7 @@
 	},
 	"Sabotage": {
 		"NAME": "破坏",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人损失 !M! 点 力量 一回合。 NL 消耗 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人损失 !M! 点 力量 1回合。 NL 消耗 。"
 	},
 	"ShiftingGears": {
 		"NAME": "换档",
@@ -249,8 +249,8 @@
 	},
 	"Solidify": {
 		"NAME": "凝固",
-		"DESCRIPTION": "选择一张 幻时 卡放在抽卡堆顶部。",
-		"UPGRADE_DESCRIPTION": "选择一张升级过的 幻时 卡放在抽卡堆顶部。"
+		"DESCRIPTION": "选择1张 幻时 卡放在抽卡堆顶部。",
+		"UPGRADE_DESCRIPTION": "选择1张升级过的 幻时 卡放在抽卡堆顶部。"
 	},
 	"SoulSculpture": {
 		"NAME": "灵魂雕塑",
@@ -266,8 +266,8 @@
 	},
 	"StarChef": {
 		"NAME": "星级厨师",
-		"DESCRIPTION": "你的回合开始时可以 消耗 一张牌并由此获得 [B] 。",
-		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时可以 消耗 一张牌并由此获得 [B] 。"
+		"DESCRIPTION": "你的回合开始时可以 消耗 1张牌并由此获得 [B] 。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时可以 消耗 1张牌并由此获得 [B] 。"
 	},
 	"Starlight": {
 		"NAME": "星光",
@@ -313,7 +313,7 @@
 	},
 	"TheWorld": {
 		"NAME": "世界",
-		"DESCRIPTION": "抽2张卡。 NL 本回合内，你下一张打出的卡消耗为 0 。"
+		"DESCRIPTION": "抽2张卡。 NL 本回合内，你下1张打出的卡消耗为 0 。"
 	},
 	"TimeEmbedded": {
 		"NAME": "嵌时护甲",
@@ -335,7 +335,7 @@
 	},
 	"Unruled": {
 		"NAME": "不羁",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 你身上每有一层 负面状态 ，伤害提升 !M! 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 你身上每有1层 负面状态 ，伤害提升 !M! 。"
 	},
 	"Unsheathe": {
 		"NAME": "出鞘",

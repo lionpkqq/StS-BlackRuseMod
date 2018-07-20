@@ -19,15 +19,17 @@ public class Deny extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
+	private static final int DENIED = 3;
 
 	public Deny() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DENY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = DENIED;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DenyAction(4));
+		AbstractDungeon.actionManager.addToBottom(new DenyAction(this.magicNumber, true));
 	}
 
 	public AbstractCard makeCopy() {

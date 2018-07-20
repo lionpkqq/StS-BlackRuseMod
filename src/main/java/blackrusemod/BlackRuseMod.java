@@ -36,8 +36,10 @@ import blackrusemod.relics.Broom;
 import blackrusemod.relics.KneeBrace;
 import blackrusemod.relics.MysterySword;
 import blackrusemod.relics.OldScarf;
+import blackrusemod.relics.Pan;
 import blackrusemod.relics.PaperSwan;
 import blackrusemod.relics.PocketWatch;
+import blackrusemod.relics.RomanBracelet;
 import blackrusemod.relics.SplendidAttire;
 import blackrusemod.relics.StoneMask;
 import blackrusemod.relics.Uniform;
@@ -192,6 +194,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String PAPER_SWAN_RELIC = "relics/paper_swan.png";
     public static final String SPLENDID_ATTIRE_RELIC = "relics/splendid_attire.png";
     public static final String OLD_SCARF_RELIC = "relics/old_scarf.png";
+    public static final String PAN_RELIC = "relics/pan.png";
+    public static final String ROMAN_BRACELET_RELIC = "relics/roman_bracelet.png";
     
     // servant assets
     private static final String SERVANT_BUTTON = "charSelect/ServantButton.png";
@@ -359,6 +363,14 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     	return new Texture(makePath(OLD_SCARF_RELIC));
     }
     
+    public static Texture getPanTexture() {
+    	return new Texture(makePath(PAN_RELIC));
+    }
+    
+    public static Texture getRomanBraceletTexture() {
+    	return new Texture(makePath(ROMAN_BRACELET_RELIC));
+    }
+    
     /**
      * Makes a full path for a resource path
      * @param resource the resource, must *NOT* have a leading "/"
@@ -437,6 +449,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addRelicToCustomPool(new SplendidAttire(), AbstractCardEnum.SILVER.toString());
 		BaseMod.addRelicToCustomPool(new PaperSwan(), AbstractCardEnum.SILVER.toString());
 		BaseMod.addRelicToCustomPool(new OldScarf(), AbstractCardEnum.SILVER.toString());
+		BaseMod.addRelicToCustomPool(new Pan(), AbstractCardEnum.SILVER.toString());
+		BaseMod.addRelicToCustomPool(new RomanBracelet(), AbstractCardEnum.SILVER.toString());
         logger.info("done editting relics");
 	}
     

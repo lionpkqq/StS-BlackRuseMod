@@ -19,6 +19,12 @@ public class SplendidAttire extends CustomRelic {
 	}
 
 	@Override
+	public void obtain() {
+		if (AbstractDungeon.player.hasRelic("Uniform")) this.instantObtain(AbstractDungeon.player, 0, false);
+		else super.obtain();
+	}
+	
+	@Override
 	public void atBattleStart() {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new KnivesPower(AbstractDungeon.player, KNIVES)));
@@ -26,10 +32,6 @@ public class SplendidAttire extends CustomRelic {
 				new StrengthPower(AbstractDungeon.player, 1), 1));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 				new DexterityPower(AbstractDungeon.player, -1), -1));
-	}
-	
-	public void onEquip() {
-		AbstractDungeon.player.loseRelic("Uniform");
 	}
 	
 	@Override

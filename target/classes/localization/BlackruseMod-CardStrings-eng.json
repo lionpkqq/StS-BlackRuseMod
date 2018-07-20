@@ -117,12 +117,12 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage. NL Apply 1 Blight."
+		"DESCRIPTION": "Deal !D! damage. NL Blight affects Gouge !M! times."
 	},
 	"Haste": {
 		"NAME": "Haste",
-		"DESCRIPTION": "Draw one more card next turn for each Attack card you played this turn. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Draw one more card next turn for each Attack card you played this turn."
+		"DESCRIPTION": "Draw 1 more card next turn for each Attack card you played this turn. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Draw 1 more card next turn for each Attack card you played this turn."
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
@@ -130,7 +130,7 @@
 	},
 	"Indiscriminate": {
 		"NAME": "Indiscriminate",
-		"DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL They lose !M! Strength for one turn."
+		"DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Shift: ALL enemies lose !M! Strength for 1 turn."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
@@ -138,7 +138,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the start of your turn, gain !M! Dexterity for each stack of Debuffs on you for one turn."
+		"DESCRIPTION": "At the start of your turn, gain !M! Dexterity for each stack of Debuffs on you for 1 turn."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -199,7 +199,7 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Obtain 4 Knives. NL Gain !M! Strength for one turn."
+		"DESCRIPTION": "Obtain 4 Knives. NL Gain !M! Strength for 1 turn."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -225,7 +225,7 @@
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength for one turn. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength for 1 turn. NL Exhaust."
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
