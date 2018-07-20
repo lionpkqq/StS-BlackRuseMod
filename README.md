@@ -1,6 +1,6 @@
 # StS-BlackRuseMod 0.6.3
 
-**BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
+**BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
 * Slay The Spire (07-19-2018)
@@ -57,7 +57,7 @@ The Wiki is still under construction. Thanks for your patience!
 
 I couldn't have created anything without:
 
-###The [devs](https://www.megacrit.com/) of **SlayTheSpire**###
+###The [devs](https://www.megacrit.com/) of SlayTheSpire###
 
 Contributors of **ModTheSpire**
 * kiooeht - Original author
