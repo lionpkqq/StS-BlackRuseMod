@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.6.2
+# StS-BlackRuseMod 0.6.3
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**
 
@@ -51,7 +51,7 @@ The Wiki is still under construction. Thanks for your patience!
 ## Credits / Acknowledgements ##
 * BlackRuse (https://github.com/lionpkqq): design, programming and project management.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, and more!
 
 ## Special Thanks ##
 
@@ -90,6 +90,13 @@ Contributors of **FruityMod**
 
 ## Current State/Updates ##
 Needs more play-testing.
+
+0.6.3
+* Reworked [Spin] and [Killer Instinct].
+* Greatly enhanced The Servant's survivability.
+* Deleted [Brute Force] and added [Parthian Shot].
+* Renamed [Full Offense] as [Feint].
+* Renamed [Full Defense] as [Hightail].
 
 0.6.2
 * Added two new exclusive relics: [Pan] and [Roman Bracelet].

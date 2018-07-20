@@ -21,12 +21,12 @@ public class KillerInstinct extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int COST_UPGRADED = 1;
-	private static final int STRENGTH_PER_STACK = 1;
+	private static final int COUNTER_PER_STACK = 1;
 
 	public KillerInstinct() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.KILLER_INSTINCT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = STRENGTH_PER_STACK;
+		this.magicNumber = this.baseMagicNumber = COUNTER_PER_STACK;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

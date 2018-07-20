@@ -36,7 +36,7 @@ public class ShiftingGears extends CustomCard {
 	
 	public void triggerOnManualDiscard() {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new DexterityPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+				new DexterityPower(AbstractDungeon.player, 1), 1));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}

@@ -31,9 +31,9 @@
 		"NAME": "Borrowed Time",
 		"DESCRIPTION": "Draw !M! cards. NL Gain [B] [B] [B]. NL Next turn, draw NL 5 less cards and NL lose [B] [B] [B]. NL Exhaust."
 	},
-	"BruteForce": {
-		"NAME": "Brute Force",
-		"DESCRIPTION": "Discard 3 cards. NL Deal !D! damage."
+	"ParthianShot": {
+		"NAME": "Parthian Shot",
+		"DESCRIPTION": "Throw 1 Knife that deals !D! damage. NL Gain !B! Block."
 	},
 	"Comet": {	
 		"NAME": "Comet",
@@ -62,7 +62,7 @@
 	},
 	"Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Apply !M! Weak and Frail to you. NL This turn, your next !M! card(s) is played twice. NL Exhaust."
+		"DESCRIPTION": "Apply 2 Weak and Frail to you. NL This turn, your next !M! card(s) is played twice. NL Exhaust."
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
@@ -102,12 +102,12 @@
 		"NAME": "FollowUp",
 		"DESCRIPTION": "Deal !D! damage. NL If the enemy has Blight, gain [B] and draw a card."
 	},
-	"FullDefense": {
-		"NAME": "Full Defense",
+	"Hightail": {
+		"NAME": "Hightail",
 		"DESCRIPTION": "Spend all [B]. NL Gain !B! Block NL X time(s). NL Apply X Weak to you."
 	},
-	"FullOffense": {
-		"NAME": "Full Offense",
+	"Feint": {
+		"NAME": "Feint",
 		"DESCRIPTION": "Deal damage equals to two times the number of cards in your hand. NL Discard your hand.",
 		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
@@ -138,7 +138,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the start of your turn, gain !M! Dexterity for each stack of Debuffs on you for 1 turn."
+		"DESCRIPTION": "When attacked, throw 1 Knife that deals 4 damage and apply 1 Weak to the attacker."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -154,7 +154,7 @@
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
-		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Blight to ALL enemies."
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Blight and Weak to ALL enemies."
 	},
 	"MoonPhase": {
 		"NAME": "Moon Phase",
@@ -175,7 +175,7 @@
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
-		"DESCRIPTION": "Vision: Deal !D! damage and apply !M! Vulnerable."
+		"DESCRIPTION": "Vision: Deal !D! damage and apply !M! Weak."
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
@@ -191,7 +191,7 @@
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Vision: Apply !M! Blight."
+		"DESCRIPTION": "Vision: Apply !M! Blight and Vulnerable."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
@@ -199,7 +199,7 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Obtain 4 Knives. NL Gain !M! Strength for 1 turn."
+		"DESCRIPTION": "Obtain 3 Knives. NL Gain !M! Strength for 1 turn."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -229,7 +229,7 @@
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain !M! Dexterity."
+		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain 1 Dexterity."
 	},
 	"ShiftingReality": {
 		"NAME": "Shifting Reality",
@@ -262,7 +262,7 @@
 	},
 	"Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Deal !D! damage NL to ALL enemies. NL Gain !B! Block."
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies."
 	},
 	"StarChef": {
 		"NAME": "Star Chef",
@@ -303,7 +303,7 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Temporal. NL When this card is drawn, apply !M! Blight to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL When this card is drawn, apply !M! Blight and Weak to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {

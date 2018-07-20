@@ -22,6 +22,7 @@ public class Duplication extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int TWICE = 1;
+	private static final int DEBUFF = 2;
 
 	public Duplication() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUPLICATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -32,8 +33,8 @@ public class Duplication extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicationPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.magicNumber, false), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, DEBUFF, false), DEBUFF));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, DEBUFF, false), DEBUFF));
 	}
 
 	public AbstractCard makeCopy() {

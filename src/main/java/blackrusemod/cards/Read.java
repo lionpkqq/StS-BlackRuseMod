@@ -18,7 +18,7 @@ public class Read extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int AD = 2;
+	private static final int AD = 1;
 
 	public Read() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.READ), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

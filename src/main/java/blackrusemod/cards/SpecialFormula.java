@@ -29,16 +29,16 @@ public class SpecialFormula extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SPECIAL_FORMULA), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = BUFF;
+		this.magicNumber = this.baseMagicNumber = DEBUFF;
 		this.exhaust = true;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, DEBUFF, false), DEBUFF));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, DEBUFF, false), DEBUFF));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, BUFF), BUFF));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, BUFF), BUFF));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.magicNumber, false), this.magicNumber));
 	}
 	
 	@Override
@@ -50,7 +50,7 @@ public class SpecialFormula extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(-1);
 		}
 	}
 }

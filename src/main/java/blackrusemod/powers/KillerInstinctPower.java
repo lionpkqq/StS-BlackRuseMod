@@ -1,22 +1,26 @@
 package blackrusemod.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.ThrowKnivesAction;
 
 public class KillerInstinctPower extends AbstractPower {
 	public static final String POWER_ID = "KillerInstinctPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-	private int DEXTERITY = 0;
+	private int COUNTER_ATTACK;
+	private int COUNTER_ATTACK_DAMAGE = 4;
+	private DamageInfo p_info;
 
 	public KillerInstinctPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -33,13 +37,28 @@ public class KillerInstinctPower extends AbstractPower {
 		this.amount += stackAmount;
 	}
 	
-	public void atStartOfTurn() {
-		this.DEXTERITY = 0;
-		if (this.owner.hasPower("Weakened")) this.DEXTERITY += AbstractDungeon.player.getPower("Weakened").amount*this.amount;
-		if (this.owner.hasPower("Vulnerable")) this.DEXTERITY += AbstractDungeon.player.getPower("Vulnerable").amount*this.amount;
-		if (this.owner.hasPower("Frail")) this.DEXTERITY += AbstractDungeon.player.getPower("Frail").amount*this.amount;
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.DEXTERITY), this.DEXTERITY));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new LoseDexterityPower(this.owner, this.DEXTERITY), this.DEXTERITY));
+	public int onAttacked(DamageInfo info, int damageAmount) {
+		this.p_info = new DamageInfo(AbstractDungeon.player, COUNTER_ATTACK_DAMAGE, DamageInfo.DamageType.NORMAL);
+		if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != this.owner))
+		{
+			if ((this.owner.hasPower("KnivesPower") && (this.owner.getPower("KnivesPower").amount > 0))) {
+				COUNTER_ATTACK = Math.min(this.owner.getPower("KnivesPower").amount, this.amount);
+				for (int i = 0; i < COUNTER_ATTACK; i++) {
+					flash();
+					p_info.applyPowers(AbstractDungeon.player, info.owner);
+					AbstractDungeon.actionManager.addToTop(new ThrowKnivesAction(AbstractDungeon.player, info.owner, p_info, false, "Weakened"));
+				}
+			}
+			else {
+				if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+					AbstractDungeon.actionManager.addToTop(new TalkAction(true, "身上没有飞刀！", 1.0F, 2.0F));
+				}
+				else {
+				AbstractDungeon.actionManager.addToTop(new TalkAction(true, "I don't have any Knives!", 1.0F, 2.0F));
+				}
+			}
+		}
+		return damageAmount;
 	}
 
 	public void updateDescription()

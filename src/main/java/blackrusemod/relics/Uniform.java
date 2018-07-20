@@ -10,7 +10,7 @@ import blackrusemod.powers.KnivesPower;
 
 public class Uniform extends CustomRelic {
 	private static final String ID = "Uniform";
-	private static final int KNIVES = 4;
+	private static final int KNIVES = 6;
 	
 	public Uniform() {
 		super(ID, BlackRuseMod.getUniformTexture(), RelicTier.STARTER, LandingSound.MAGICAL);

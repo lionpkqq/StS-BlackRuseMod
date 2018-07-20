@@ -77,7 +77,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String ALLEVIATE = "cards/alleviate.png";
     public static final String BARRIER = "cards/barrier.png";
     public static final String BORROWED_TIME = "cards/borrowed_time.png";
-    public static final String BRUTE_FORCE = "cards/brute_force.png";
+    public static final String PARTHIAN_SHOT = "cards/parthian_shot.png";
     public static final String COMET = "cards/comet.png";
     public static final String COSMIC_INFLATION = "cards/cosmic_inflation.png";
     public static final String D_WEAPONRY = "cards/d_weaponry.png";
@@ -95,8 +95,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FLAWLESS_FORM = "cards/flawless_form.png";
     public static final String FLOWERING_NIGHT = "cards/flowering_night.png";
     public static final String FOLLOW_UP = "cards/follow_up.png";
-    public static final String FULL_DEFENSE = "cards/full_defense.png";
-    public static final String FULL_OFFENSE = "cards/full_offense.png";
+    public static final String HIGHTAIL = "cards/hightail.png";
+    public static final String FEINT = "cards/feint.png";
     public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String HASTE = "cards/haste.png";
@@ -467,7 +467,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Alleviate());
 		BaseMod.addCard(new Barrier());
 		BaseMod.addCard(new BorrowedTime());
-		BaseMod.addCard(new BruteForce());
+		BaseMod.addCard(new ParthianShot());
 		BaseMod.addCard(new Comet());
 		BaseMod.addCard(new CosmicInflation());
 		BaseMod.addCard(new DWeaponry());
@@ -484,8 +484,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new FlawlessForm());
 		BaseMod.addCard(new FloweringNight());
 		BaseMod.addCard(new FollowUp());
-		BaseMod.addCard(new FullDefense());
-		BaseMod.addCard(new FullOffense());
+		BaseMod.addCard(new Hightail());
+		BaseMod.addCard(new Feint());
 		BaseMod.addCard(new GarbageDisposal());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new Haste());
@@ -545,7 +545,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Alleviate");
 		UnlockTracker.unlockCard("Barrier");
 		UnlockTracker.unlockCard("BorrowedTime");
-		UnlockTracker.unlockCard("BruteForce");
+		UnlockTracker.unlockCard("ParthianShot");
 		UnlockTracker.unlockCard("Comet");
 		UnlockTracker.unlockCard("CosmicInflation");
 		UnlockTracker.unlockCard("DWeaponry");

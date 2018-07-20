@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -45,6 +46,7 @@ public class TemporalMisd extends CustomCard {
 			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
 		}
 	}
 

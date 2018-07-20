@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -21,15 +22,15 @@ public class Misdirection extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 8;
+	private static final int BLOCK_AMT = 6;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
-	private static final int BLIGHT = 1;
+	private static final int DEBUFF = 1;
 
 	public Misdirection() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MISDIRECTION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseBlock = BLOCK_AMT;
-		this.magicNumber = this.baseMagicNumber = BLIGHT;
+		this.magicNumber = this.baseMagicNumber = DEBUFF;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,6 +40,7 @@ public class Misdirection extends CustomCard {
 			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
 		}
 	}
 

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.BlackRuseMod;
 
@@ -25,7 +26,7 @@ public class NoEscapePower extends AbstractPower {
 	private AbstractCreature source;
 	private AbstractMonster target;
 	private boolean prediction;
-	private int vul;
+	private int w;
 	
 	public NoEscapePower(AbstractCreature owner, AbstractCreature source, int amount, int amount2, boolean prediction) {
 		this.name = NAME;
@@ -35,7 +36,7 @@ public class NoEscapePower extends AbstractPower {
 		this.source = source;
 		this.target = (AbstractMonster)this.source;
 		this.amount = amount;
-		this.vul = amount2;
+		this.w = amount2;
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
@@ -48,14 +49,14 @@ public class NoEscapePower extends AbstractPower {
 		{
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 					AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.vul, false), this.vul));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
 				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
 				{
 					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 							AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.vul, false), this.vul));
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
@@ -63,14 +64,14 @@ public class NoEscapePower extends AbstractPower {
 		{
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 					AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.vul, false), this.vul));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
 				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
 				{
 					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 							AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.vul, false), this.vul));
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
@@ -79,7 +80,7 @@ public class NoEscapePower extends AbstractPower {
 
 	public void updateDescription()
 	{
-		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.vul + DESCRIPTIONS[2]);
-		else this.description = (DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4] + this.vul + DESCRIPTIONS[5]);
+		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.w + DESCRIPTIONS[2]);
+		else this.description = (DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4] + this.w + DESCRIPTIONS[5]);
 	}
 }

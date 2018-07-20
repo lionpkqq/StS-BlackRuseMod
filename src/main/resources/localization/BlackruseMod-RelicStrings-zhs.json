@@ -2,7 +2,7 @@
   "Uniform": {
     "NAME": "制服",
     "FLAVOR": "制服不仅可以用来抵挡秽物，还能用来携带兵器。",
-    "DESCRIPTIONS": ["每场战斗开始时获得 #b4 把 #y飞刀 。"]
+    "DESCRIPTIONS": ["每场战斗开始时获得 #b6 把 #y飞刀 。"]
   },
   "Broom": {
     "NAME": "扫帚",
