@@ -57,7 +57,7 @@ The Wiki is still under construction. Thanks for your patience!
 
 I couldn't have created anything without:
 
-###The [devs](https://www.megacrit.com/) of SlayTheSpire###
+### The [devs](https://www.megacrit.com/) of SlayTheSpire ###
 
 Contributors of **ModTheSpire**
 * kiooeht - Original author
