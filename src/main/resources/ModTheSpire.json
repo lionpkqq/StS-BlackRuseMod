@@ -1,8 +1,8 @@
 {
   "modid": "BlackRuseMod",
-  "name": "TS02-凛光侍从",
-  "author_list": ["墨千, Kuzomari, 昏暗"],
-  "description": "基于东方角色十六夜咲夜的人物MOD，拥有75张卡的全新卡组，7种全新机制，11个专属遗物。",
+  "name": "StS-BlackRuse",
+  "author_list": ["BlackRuse, Kuzomari, Dimlight"],
+  "description": "Adds The Servant as a new playable character. She has a full set of 75 cards, 7 new mechanics and 11 exclusive relics.",
   "dependencies": ["basemod"],
   "version": "0.8.0",
   "sts_version": "07-26-2018",
