@@ -17,22 +17,18 @@ public class NoEscape extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 16;
-	private static final int UPGRADE_PLUS_DMG = 4;
-	private static final int VUL = 2;
+	private static final int COST = 1;
+	private static final int AD = 2;
 
 	public NoEscape() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.NO_ESCAPE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.NO_ESCAPE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
-
-		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = VUL;
+		this.magicNumber = this.baseMagicNumber = AD;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, this.magicNumber, "NoEscape"));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, this));
 	}
 
 	public AbstractCard makeCopy() {
@@ -42,7 +38,6 @@ public class NoEscape extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
 			upgradeMagicNumber(1);
 		}
 	}

@@ -24,7 +24,7 @@ public class MorningCall extends CustomCard {
 	public MorningCall() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MORNING_CALL), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
 		this.isEthereal = true;

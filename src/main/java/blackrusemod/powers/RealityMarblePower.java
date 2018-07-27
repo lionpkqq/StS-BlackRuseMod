@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +15,7 @@ public class RealityMarblePower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 
 	public RealityMarblePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -29,7 +31,7 @@ public class RealityMarblePower extends AbstractPower {
 		for (AbstractCard c : AbstractDungeon.player.discardPile.group) c.isEthereal = false;
 	}
 	
-	public void atStartOfTurn() {
+	public void atEndOfTurn(boolean isPlayer) {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) c.isEthereal = false;
 		for (AbstractCard c : AbstractDungeon.player.drawPile.group) c.isEthereal = false;
 		for (AbstractCard c : AbstractDungeon.player.discardPile.group) c.isEthereal = false;

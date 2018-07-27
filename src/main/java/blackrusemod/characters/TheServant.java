@@ -2,8 +2,6 @@ package blackrusemod.characters;
 
 import java.util.ArrayList;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
@@ -34,17 +32,19 @@ public class TheServant extends CustomPlayer {
 			"img/char/servant/orb/layer5d.png",
 	};
 	
+	public static final float[] layerSpeeds = {
+			80.0F, 40.0F, -40.0F, 20.0F, 0.0F,
+			16.0F, 8.0F, -8.0F, 5.0F, 0.0F,
+	};
+	
 	public TheServant(String name, PlayerClass setClass) {
-		super(name, setClass, orbTextures, "img/char/servant/orb/vfx.png", null, "img/char/servant/skeleton.json");
+		super(name, setClass, orbTextures, "img/char/servant/orb/vfx.png", layerSpeeds, null, null);
 		
-		initializeClass(null, BlackRuseMod.makePath(BlackRuseMod.SERVANT_SHOULDER_2),
+		initializeClass(BlackRuseMod.makePath(BlackRuseMod.SERVANT_MAIN), 
+				BlackRuseMod.makePath(BlackRuseMod.SERVANT_SHOULDER_2),
 				BlackRuseMod.makePath(BlackRuseMod.SERVANT_SHOULDER_1),
 				BlackRuseMod.makePath(BlackRuseMod.SERVANT_CORPSE), 
 				getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
-		
-		loadAnimation("img/char/servant/skeleton.atlas", "img/char/servant/skeleton.json", 1.0F);
-		AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
-		e.setTime(e.getEndTime() * MathUtils.random());
 
 		if (Settings.dailyModsEnabled() && DailyMods.cardMods.get("Diverse")) {
 			this.masterMaxOrbs = 1;
@@ -91,5 +91,4 @@ public class TheServant extends CustomPlayer {
 				70, 70, 0, 99, 5, TheServantEnum.THE_SERVANT, getStartingRelics(), getStartingDeck(), false);
 		}
 	}
-	
 }

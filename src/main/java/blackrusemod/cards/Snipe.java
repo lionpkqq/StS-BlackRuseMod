@@ -18,8 +18,8 @@ public class Snipe extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 16;
-	private static final int UPGRADE_PLUS_DMG = 8;
+	private static final int ATTACK_DMG = 15;
+	private static final int UPGRADE_PLUS_DMG = 7;
 	private static final int THROW = 1;
 
 	public Snipe() {
@@ -31,7 +31,7 @@ public class Snipe extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, 0, "Snipe"));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, 0, this));
 	}
 
 	public AbstractCard makeCopy() {

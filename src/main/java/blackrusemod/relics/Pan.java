@@ -2,6 +2,7 @@ package blackrusemod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -14,7 +15,7 @@ public class Pan extends CustomRelic {
 	private static final int BLIGHT = 2;
 	
 	public Pan() {
-		super(ID, BlackRuseMod.getPanTexture(), RelicTier.SHOP, LandingSound.SOLID);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.PAN_RELIC), ImageMaster.loadImage(BlackRuseMod.PAN_RELIC_OUTLINE), RelicTier.SHOP, LandingSound.SOLID);
 	}
 
 	@Override

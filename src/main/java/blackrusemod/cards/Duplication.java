@@ -1,19 +1,17 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.BacklashAction;
+import blackrusemod.actions.DuplicationAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.DuplicationPower;
 
 public class Duplication extends CustomCard {
 	public static final String ID = "Duplication";
@@ -21,20 +19,19 @@ public class Duplication extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int TWICE = 1;
-	private static final int DEBUFF = 2;
+	private static final int DUP = 1;
+	private static final int BACKLASH = 3;
 
 	public Duplication() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUPLICATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = TWICE;
+		this.magicNumber = this.baseMagicNumber = DUP;
 		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DuplicationPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, DEBUFF, false), DEBUFF));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, DEBUFF, false), DEBUFF));
+		AbstractDungeon.actionManager.addToBottom(new DuplicationAction(p, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(BACKLASH));
 	}
 
 	public AbstractCard makeCopy() {

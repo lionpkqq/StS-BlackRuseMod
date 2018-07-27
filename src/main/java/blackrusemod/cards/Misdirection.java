@@ -22,26 +22,23 @@ public class Misdirection extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 6;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int BLOCK_AMT = 5;
 	private static final int DEBUFF = 1;
 
 	public Misdirection() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MISDIRECTION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ALL_ENEMY);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseBlock = BLOCK_AMT;
 		this.magicNumber = this.baseMagicNumber = DEBUFF;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
-		}
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new AmplifyDamagePower(m, this.magicNumber), this.magicNumber));
+		if (AbstractDungeon.player.hasRelic("PaperSwan")) 
+			if (AbstractDungeon.cardRandomRng.randomBoolean())
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new AmplifyDamagePower(m, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -51,7 +48,7 @@ public class Misdirection extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			upgradeMagicNumber(1);
 		}
 	}
 }

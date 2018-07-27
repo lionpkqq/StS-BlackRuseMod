@@ -21,14 +21,17 @@ public class TheWorld extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int COST_UPGRADED = 0;
+	private static final int DRAW = 3;
 
 	public TheWorld() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.THE_WORLD), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = DRAW;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TheWorldPower(p, -1), -1));
 	}
 

@@ -1,15 +1,21 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.BlackRuseMod;
 
@@ -18,11 +24,13 @@ public class ReadPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	private AbstractCreature source;
 	private AbstractMonster target;
 	private boolean prediction;
+	private int w;
 	
-	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
+	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount, int amount2, boolean prediction) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.amount = amount;
@@ -30,6 +38,7 @@ public class ReadPower extends AbstractPower {
 		this.source = source;
 		this.target = (AbstractMonster)this.source;
 		this.amount = amount;
+		this.w = amount2;
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
@@ -37,40 +46,32 @@ public class ReadPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		//flash();
+		flash();
 		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
-				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++) {
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-					if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-						if (AbstractDungeon.cardRandomRng.randomBoolean())
-							AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
+				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
+				{
+					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
+							AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
 		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
-				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++) {
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-					if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-						if (AbstractDungeon.cardRandomRng.randomBoolean())
-							AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
+				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
+				{
+					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
+							AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
@@ -79,7 +80,7 @@ public class ReadPower extends AbstractPower {
 
 	public void updateDescription()
 	{
-		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-		else this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
+		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.w + DESCRIPTIONS[2]);
+		else this.description = (DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4] + this.w + DESCRIPTIONS[5]);
 	}
 }

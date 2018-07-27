@@ -30,7 +30,7 @@ public class TimeTheft extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, "TimeTheft"));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, this));
 	}
 
 	public AbstractCard makeCopy() {

@@ -6,7 +6,7 @@
   },
   "Broom": {
     "NAME": "Broom",
-    "FLAVOR": "A must-have for a maid.",
+    "FLAVOR": "A must-have for every maid.",
     "DESCRIPTIONS": ["Every #b10 cards you discard, gain [B] ."]
   },
   "KneeBrace": {
@@ -22,12 +22,12 @@
   "StoneMask": {
     "NAME": "Stone Mask",
     "FLAVOR": "You feel a sudden impulse to reject your humanity.",
-    "DESCRIPTIONS": ["Whenever you play an #yAttack, heal #b1 HP."]
+    "DESCRIPTIONS": ["Each time you kill a non-minion enemy, heal for #b2 HP and gain #b1 permanent Max HP."]
   },
   "MysterySword": {
     "NAME": "Mystery Sword",
     "FLAVOR": "Found in the depth. Users must sacrifice themselves to wield this sword.",
-    "DESCRIPTIONS": ["The first #yAttack you play each turn does double damage, then apply #b2 #yWeak and #yFrail to you."]
+    "DESCRIPTIONS": ["The first card you play each turn deals double damage and has #yBacklash #b3."]
   },
   "PaperSwan": {
     "NAME": "Paper Swan",
@@ -37,7 +37,7 @@
   "SplendidAttire": {
     "NAME": "Splendid Attire",
     "FLAVOR": "Danger hides in beauty.",
-    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength and lose #b1 #yDexterity."]
+    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength."]
   },
   "OldScarf": {
     "NAME": "Old Scarf",

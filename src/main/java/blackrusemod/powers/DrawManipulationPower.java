@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +15,7 @@ public class DrawManipulationPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
 	public DrawManipulationPower(AbstractCreature owner, int amount) {
 			this.name = NAME;
@@ -22,7 +24,8 @@ public class DrawManipulationPower extends AbstractPower {
 			this.amount = amount;
 			updateDescription();
 			this.canGoNegative = true;
-			this.img = BlackRuseMod.getDrawManipulationPowerTexture();
+			this.region48 = powerAltas.findRegion("draw_manipulation48");
+			this.region128 = powerAltas.findRegion("draw_manipulation128");
 	}
 	
 	public void stackPower(int stackAmount) {
@@ -62,6 +65,6 @@ public class DrawManipulationPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "DrawManipulationPower"));
+		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "DrawManipulationPower"));
 	}
 }

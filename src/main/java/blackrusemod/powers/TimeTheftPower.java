@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -17,6 +18,7 @@ public class TimeTheftPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	private AbstractCreature source;
 	private AbstractMonster target;
 	private boolean prediction;
@@ -36,7 +38,7 @@ public class TimeTheftPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		//flash();
+		flash();
 		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{	
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));

@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
@@ -78,6 +79,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String BARRIER = "cards/barrier.png";
     public static final String BORROWED_TIME = "cards/borrowed_time.png";
     public static final String PARTHIAN_SHOT = "cards/parthian_shot.png";
+    public static final String CAPTURE = "cards/capture.png";
     public static final String COMET = "cards/comet.png";
     public static final String COSMIC_INFLATION = "cards/cosmic_inflation.png";
     public static final String D_WEAPONRY = "cards/d_weaponry.png";
@@ -94,14 +96,16 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FIRST_STRIKE = "cards/first_strike.png";
     public static final String FLAWLESS_FORM = "cards/flawless_form.png";
     public static final String FLOWERING_NIGHT = "cards/flowering_night.png";
+    public static final String INITIATOR = "cards/initiator.png";
     public static final String FOLLOW_UP = "cards/follow_up.png";
+    public static final String FOLLOW_UP_2 = "cards/follow_up_2.png";
+    public static final String FINISHING_TOUCH = "cards/finishing_touch.png";
     public static final String HIGHTAIL = "cards/hightail.png";
     public static final String FEINT = "cards/feint.png";
     public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String HASTE = "cards/haste.png";
     public static final String HOUSE_CLEANING = "cards/house_cleaning.png";
-    public static final String INDISCRIMINATE = "cards/indiscriminate.png";
     public static final String KIDNEY_SHOT = "cards/kidney_shot.png";
     public static final String KILLER_INSTINCT = "cards/killer_instinct.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
@@ -120,12 +124,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String REARM = "cards/rearm.png";
     public static final String REPLACE = "cards/replace.png";
     public static final String RESET = "cards/reset.png";
-    public static final String RETURNING_BLADES = "cards/returning_blades.png";
+    public static final String RETURNING_BLADE = "cards/returning_blade.png";
     public static final String REVAMP = "cards/revamp.png";
     public static final String REWIND = "cards/rewind.png";
     public static final String SABOTAGE = "cards/sabotage.png";
     public static final String SHIFTING_GEARS = "cards/shifting_gears.png";
-    public static final String SHIFTING_REALITY = "cards/shifting_reality.png";
+    public static final String SHATTERED_REALITY = "cards/shattered_reality.png";
     public static final String SHIFTING_THOUGHTS = "cards/shifting_thoughts.png";
     public static final String SILVER_BLADES = "cards/silver_blades.png";
     public static final String SNIPE = "cards/snipe.png";
@@ -155,9 +159,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     // power images
     public static final String D_WEAPONRY_POWER = "powers/d_weaponry.png";
-    public static final String DUPLICATION_POWER = "powers/duplication.png";
-    public static final String ENBODIMENT_POWER = "powers/enbodiment.png";
-    public static final String UPGRADED_ENBODIMENT_POWER = "powers/upgraded_enbodiment.png";
     public static final String FLAWLESS_FORM_POWER = "powers/flawless_form.png";
     public static final String HASTE_POWER = "powers/haste.png";
     public static final String KILLER_INSTINCT_POWER = "powers/killer_instinct.png";
@@ -168,43 +169,51 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String STAR_CHEF_POWER = "powers/star_chef.png";
     public static final String STRESS_RELIEVER_POWER = "powers/stress_reliever.png";
     public static final String SURPRESSING_FIRE_POWER = "powers/surpressing_fire.png";
-    public static final String DRAW_MANIPULATION_POWER = "powers/draw_manipulation.png";
     public static final String BARRIER_POWER = "powers/barrier.png";
-    public static final String ENERGY_MANIPULATION_POWER = "powers/energy_manipulation.png";
-    public static final String KNIVES_POWER = "powers/knives.png";
-    public static final String CONSUMED_KNIVES_POWER = "powers/consumed_knives.png";
     public static final String FLOWERING_NIGHT_POWER = "powers/flowering_night.png";
-    public static final String AMPLIFY_DAMAGE_POWER = "powers/amplify_damage.png";
     public static final String READ_POWER = "powers/read.png";
     public static final String THE_WORLD_POWER = "powers/the_world.png";
     public static final String TRUE_SIGHT_POWER = "powers/true_sight.png";
-    public static final String UNPARALLELED_POWER = "powers/unparalleled.png";
     public static final String SNIPE_POWER = "powers/snipe.png";
     public static final String TIME_THEFT_POWER = "powers/time_theft.png";
     public static final String NO_ESCAPE_POWER = "powers/no_escape.png";
     public static final String MYSTERY_SWORD_POWER = "powers/mystery_sword.png";
+    public static final String RETURNING_BLADE_POWER = "powers/returning_blade.png";
+    public static final String CUSTOM_POWERS = "powers/custom_powers.atlas";
     
     // relic images
-    public static final String UNIFORM_RELIC = "relics/uniform.png";
-    public static final String BROOM_RELIC = "relics/broom.png";
-    public static final String KNEE_BRACE_RELIC = "relics/knee_brace.png";
-    public static final String POCKET_WATCH_RELIC = "relics/pocket_watch.png";
-    public static final String STONE_MASK_RELIC = "relics/stone_mask.png";
-    public static final String MYSTERY_SWORD_RELIC = "relics/mystery_sword.png";
-    public static final String PAPER_SWAN_RELIC = "relics/paper_swan.png";
-    public static final String SPLENDID_ATTIRE_RELIC = "relics/splendid_attire.png";
-    public static final String OLD_SCARF_RELIC = "relics/old_scarf.png";
-    public static final String PAN_RELIC = "relics/pan.png";
-    public static final String ROMAN_BRACELET_RELIC = "relics/roman_bracelet.png";
+    public static final String UNIFORM_RELIC = "img/relics/uniform.png";
+    public static final String BROOM_RELIC = "img/relics/broom.png";
+    public static final String KNEE_BRACE_RELIC = "img/relics/knee_brace.png";
+    public static final String POCKET_WATCH_RELIC = "img/relics/pocket_watch.png";
+    public static final String STONE_MASK_RELIC = "img/relics/stone_mask.png";
+    public static final String MYSTERY_SWORD_RELIC = "img/relics/mystery_sword.png";
+    public static final String PAPER_SWAN_RELIC = "img/relics/paper_swan.png";
+    public static final String SPLENDID_ATTIRE_RELIC = "img/relics/splendid_attire.png";
+    public static final String OLD_SCARF_RELIC = "img/relics/old_scarf.png";
+    public static final String PAN_RELIC = "img/relics/pan.png";
+    public static final String ROMAN_BRACELET_RELIC = "img/relics/roman_bracelet.png";
+    
+    // relic outlines
+    public static final String UNIFORM_RELIC_OUTLINE = "img/relics/outline/uniform.png";
+    public static final String BROOM_RELIC_OUTLINE = "img/relics/outline/broom.png";
+    public static final String KNEE_BRACE_RELIC_OUTLINE = "img/relics/outline/knee_brace.png";
+    public static final String POCKET_WATCH_RELIC_OUTLINE = "img/relics/outline/pocket_watch.png";
+    public static final String STONE_MASK_RELIC_OUTLINE = "img/relics/outline/stone_mask.png";
+    public static final String MYSTERY_SWORD_RELIC_OUTLINE = "img/relics/outline/mystery_sword.png";
+    public static final String PAPER_SWAN_RELIC_OUTLINE = "img/relics/outline/paper_swan.png";
+    public static final String SPLENDID_ATTIRE_RELIC_OUTLINE = "img/relics/outline/splendid_attire.png";
+    public static final String OLD_SCARF_RELIC_OUTLINE = "img/relics/outline/old_scarf.png";
+    public static final String PAN_RELIC_OUTLINE = "img/relics/outline/pan.png";
+    public static final String ROMAN_BRACELET_RELIC_OUTLINE = "img/relics/outline/roman_bracelet.png";
     
     // servant assets
     private static final String SERVANT_BUTTON = "charSelect/ServantButton.png";
+    public static final String SERVANT_MAIN = "char/servant/main.png";
     private static final String SERVANT_PORTRAIT = "charSelect/ServantPortraitBG.jpg";
     public static final String SERVANT_SHOULDER_1 = "char/servant/shoulder.png";
     public static final String SERVANT_SHOULDER_2 = "char/servant/shoulder2.png";
     public static final String SERVANT_CORPSE = "char/servant/corpse.png";
-    public static final String SERVANT_SKELETON_ATLAS = "char/servant/skeleton.atlas";
-    public static final String SERVANT_SKELETON_JSON = "char/servant/skeleton.json";
     
     // badge
     public static final String BADGE_IMG = "BRBadge.png";
@@ -213,19 +222,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static Texture getDWeaponryPowerTexture() {
     	return new Texture(makePath(D_WEAPONRY_POWER));
     }
-    
-    public static Texture getDuplicationPowerTexture() {
-    	return new Texture(makePath(DUPLICATION_POWER));
-    }
-    
-    public static Texture getEnbodimentPowerTexture() {
-    	return new Texture(makePath(ENBODIMENT_POWER));
-    }
-    
-    public static Texture getUpgradedEnbodimentPowerTexture() {
-    	return new Texture(makePath(UPGRADED_ENBODIMENT_POWER));
-    }
-    
+
     public static Texture getFlawlessFormPowerTexture() {
     	return new Texture(makePath(FLAWLESS_FORM_POWER));
     }
@@ -265,33 +262,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static Texture getSurpressingFirePowerTexture() {
     	return new Texture(makePath(SURPRESSING_FIRE_POWER));
     }
-    
-    public static Texture getDrawManipulationPowerTexture() {
-    	return new Texture(makePath(DRAW_MANIPULATION_POWER));
-    }
-    
+
     public static Texture getBarrierPowerTexture() {
     	return new Texture(makePath(BARRIER_POWER));
     }
-    
-    public static Texture getEnergyManipulationPowerTexture() {
-    	return new Texture(makePath(ENERGY_MANIPULATION_POWER));
-    }
-    
-    public static Texture getKnivesPowerTexture() {
-    	return new Texture(makePath(KNIVES_POWER));
-    }
-    
-    public static Texture getConsumedKnivesPowerTexture() {
-    	return new Texture(makePath(CONSUMED_KNIVES_POWER));
-    }
-    
+
     public static Texture getFloweringNightPowerTexture() {
     	return new Texture(makePath(FLOWERING_NIGHT_POWER));
-    }
-    
-    public static Texture getAmplifyDamagePowerTexture() {
-    	return new Texture(makePath(AMPLIFY_DAMAGE_POWER));
     }
     
     public static Texture getReadPowerTexture() {
@@ -300,10 +277,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     public static Texture getTheWorldPowerTexture() {
     	return new Texture(makePath(THE_WORLD_POWER));
-    }
-    
-    public static Texture getUnparalleledPowerTexture() {
-    	return new Texture(makePath(UNPARALLELED_POWER));
     }
     
     public static Texture getSnipePowerTexture() {
@@ -326,49 +299,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     	return new Texture(makePath(MYSTERY_SWORD_POWER));
     }
     
-    // Relic textures
-    public static Texture getUniformTexture() {
-    	return new Texture(makePath(UNIFORM_RELIC));
+    public static Texture getReturningBladePowerTexture() {
+    	return new Texture(makePath(RETURNING_BLADE_POWER));
     }
     
-    public static Texture getBroomTexture() {
-    	return new Texture(makePath(BROOM_RELIC));
-    }
-    
-    public static Texture getKneeBraceTexture() {
-    	return new Texture(makePath(KNEE_BRACE_RELIC));
-    }
-    
-    public static Texture getPocketWatchTexture() {
-    	return new Texture(makePath(POCKET_WATCH_RELIC));
-    }
-    
-    public static Texture getStoneMaskTexture() {
-    	return new Texture(makePath(STONE_MASK_RELIC));
-    }
-    
-    public static Texture getMysterySwordTexture() {
-    	return new Texture(makePath(MYSTERY_SWORD_RELIC));
-    }
-    
-    public static Texture getPaperSwanTexture() {
-    	return new Texture(makePath(PAPER_SWAN_RELIC));
-    }
-    
-    public static Texture getSplendidAttireTexture() {
-    	return new Texture(makePath(SPLENDID_ATTIRE_RELIC));
-    }
-    
-    public static Texture getOldScarfTexture() {
-    	return new Texture(makePath(OLD_SCARF_RELIC));
-    }
-    
-    public static Texture getPanTexture() {
-    	return new Texture(makePath(PAN_RELIC));
-    }
-    
-    public static Texture getRomanBraceletTexture() {
-    	return new Texture(makePath(ROMAN_BRACELET_RELIC));
+    public static TextureAtlas getPowerTextureAtlas() {
+    	return new TextureAtlas(makePath(CUSTOM_POWERS));
     }
     
     /**
@@ -483,14 +419,14 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new FirstStrike());
 		BaseMod.addCard(new FlawlessForm());
 		BaseMod.addCard(new FloweringNight());
-		BaseMod.addCard(new FollowUp());
+		BaseMod.addCard(new Initiator());
 		BaseMod.addCard(new Hightail());
 		BaseMod.addCard(new Feint());
 		BaseMod.addCard(new GarbageDisposal());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new Haste());
 		BaseMod.addCard(new HouseCleaning());
-		BaseMod.addCard(new Indiscriminate());
+		BaseMod.addCard(new Capture());
 		BaseMod.addCard(new KidneyShot());
 		BaseMod.addCard(new KillerInstinct());
 		BaseMod.addCard(new KillingDoll());
@@ -509,12 +445,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Rearm());
 		BaseMod.addCard(new Replace());
 		BaseMod.addCard(new Reset());
-		BaseMod.addCard(new ReturningBlades());
+		BaseMod.addCard(new ReturningBlade());
 		BaseMod.addCard(new Revamp());
 		BaseMod.addCard(new Rewind());
 		BaseMod.addCard(new Sabotage());
 		BaseMod.addCard(new ShiftingGears());
-		BaseMod.addCard(new ShiftingReality());
+		BaseMod.addCard(new ShatteredReality());
 		BaseMod.addCard(new ShiftingThoughts());
 		BaseMod.addCard(new SilverBlades());
 		BaseMod.addCard(new Snipe());
@@ -562,13 +498,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("FlawlessForm");
 		UnlockTracker.unlockCard("FloweringNight");
 		UnlockTracker.unlockCard("FollowUp");
-		UnlockTracker.unlockCard("FullDefense");
-		UnlockTracker.unlockCard("FullOffense");
+		UnlockTracker.unlockCard("Hightail");
+		UnlockTracker.unlockCard("Feint");
 		UnlockTracker.unlockCard("GarbageDisposal");
 		UnlockTracker.unlockCard("Gouge");
 		UnlockTracker.unlockCard("Haste");
 		UnlockTracker.unlockCard("HouseCleaning");
-		UnlockTracker.unlockCard("Indiscriminate");
+		UnlockTracker.unlockCard("Capture");
 		UnlockTracker.unlockCard("KidneyShot");
 		UnlockTracker.unlockCard("KillerInstinct");
 		UnlockTracker.unlockCard("KillingDoll");
@@ -587,12 +523,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Rearm");
 		UnlockTracker.unlockCard("Replace");
 		UnlockTracker.unlockCard("Reset");
-		UnlockTracker.unlockCard("ReturningBlades");
+		UnlockTracker.unlockCard("ReturningBlade");
 		UnlockTracker.unlockCard("Revamp");
 		UnlockTracker.unlockCard("Rewind");
 		UnlockTracker.unlockCard("Sabotage");
 		UnlockTracker.unlockCard("ShiftingGears");
-		UnlockTracker.unlockCard("ShiftingReality");
+		UnlockTracker.unlockCard("ShatteredReality");
 		UnlockTracker.unlockCard("ShiftingThoughts");
 		UnlockTracker.unlockCard("SilverBlades");
 		UnlockTracker.unlockCard("Snipe");
@@ -688,17 +624,21 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 #y飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会减少飞刀的数量。");
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。抽到时会触发特殊效果。");
-        BaseMod.addKeyword(new String[] {"负面状态"}, "负面状态包括 #y虚弱 、 #y易伤 以及 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
-        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。来自同名卡的效果不叠加。");	
+        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。来自同名卡的效果不叠加。");
+        BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
+        BaseMod.addKeyword(new String[] {"再装填"}, "消耗 [B] 。获得 #b3 把 #y飞刀 。抽 #b1 张卡。 #y消耗 。");
+        BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。");
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their special effects will be triggered when drawn.");
-        BaseMod.addKeyword(new String[] {"Debuffs", "debuffs", "debuff", "Debuff"}, "Debuffs include #yWeak, #yVulnerable and #yFrail.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s). Same effects do not stack.");
+        BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply 1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
+        BaseMod.addKeyword(new String[] {"Rearm", "rearm"}, "Costs [B] . Obtain #b3 #yKnives. Draw #b1 card. #yExhaust.");
+        BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Unblocked damage will consume #yProtection instead of your HP.");
         logger.info("done setting up custom keywords");
 	}
 }

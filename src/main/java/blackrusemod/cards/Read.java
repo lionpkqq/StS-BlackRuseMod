@@ -17,18 +17,21 @@ public class Read extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int AD = 1;
+	private static final int COST = 2;
+	private static final int BLOCK = 15;
+	private static final int UPGRADE_PLUS_BLOCK = 5;
+	private static final int WEAK = 2;
 
 	public Read() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.READ), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
-		this.magicNumber = this.baseMagicNumber = AD;
+		this.baseBlock = BLOCK;
+		this.magicNumber = this.baseMagicNumber = WEAK;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, "Read"));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.block, this.magicNumber, this));
 	}
 
 	public AbstractCard makeCopy() {
@@ -38,6 +41,7 @@ public class Read extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
 			upgradeMagicNumber(1);
 		}
 	}

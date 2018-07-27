@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
@@ -16,6 +17,7 @@ public class EnergyManipulationPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
 	public EnergyManipulationPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -24,7 +26,8 @@ public class EnergyManipulationPower extends AbstractPower {
 		this.amount = amount;
 		updateDescription();
 		this.canGoNegative = true;
-		this.img = BlackRuseMod.getEnergyManipulationPowerTexture();
+		this.region48 = powerAltas.findRegion("energy_manipulation48");
+		this.region128 = powerAltas.findRegion("energy_manipulation128");
 	}
 	
 	public void stackPower(int stackAmount) {

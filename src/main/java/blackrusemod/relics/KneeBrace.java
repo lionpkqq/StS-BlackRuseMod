@@ -1,5 +1,6 @@
 package blackrusemod.relics;
 
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -10,7 +11,7 @@ public class KneeBrace extends CustomRelic {
 	private static final int BLOCK = 3;
 	
 	public KneeBrace() {
-		super(ID, BlackRuseMod.getKneeBraceTexture(), RelicTier.UNCOMMON, LandingSound.FLAT);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC), ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC_OUTLINE), RelicTier.UNCOMMON, LandingSound.FLAT);
 	}
 	
 	public String getUpdatedDescription() {

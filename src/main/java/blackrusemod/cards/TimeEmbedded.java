@@ -8,11 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BlurPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.EnergyManipulationPower;
+import blackrusemod.powers.ProtectionPower;
 
 public class TimeEmbedded extends CustomCard {
 	public static final String ID = "TimeEmbedded";
@@ -20,18 +22,17 @@ public class TimeEmbedded extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 18;
-	private static final int UPGRADE_PLUS_BLOCK = 6;
+	private static final int ARMOR_AMT = 9;
+	private static final int UPGRADE_PLUS_ARMOR = 3;
 
 	public TimeEmbedded() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_EMBEDDED), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.baseBlock = BLOCK_AMT;
+		this.magicNumber = this.baseMagicNumber = ARMOR_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, -1), -1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -41,7 +42,7 @@ public class TimeEmbedded extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			upgradeMagicNumber(UPGRADE_PLUS_ARMOR);
 		}
 	}
 }

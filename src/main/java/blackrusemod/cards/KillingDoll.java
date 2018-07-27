@@ -1,6 +1,5 @@
 package blackrusemod.cards;
 
-
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,7 +20,7 @@ public class KillingDoll extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 3;
 	private static final int COST_UPGRADED = 2;
-	private static final int ATTACK_DMG = 1;
+	private static final int ATTACK_DMG = 2;
 	private int KNIVES = 0;
 
 	public KillingDoll() {

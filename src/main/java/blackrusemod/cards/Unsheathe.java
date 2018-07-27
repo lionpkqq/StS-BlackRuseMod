@@ -1,7 +1,6 @@
 package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,11 +9,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.BacklashAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Unsheathe extends CustomCard {
@@ -25,23 +23,21 @@ public class Unsheathe extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
 	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int DEBUFFS = 2;
+	private static final int BACKLASH = 3;
 
 	public Unsheathe() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.UNSHEATHE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
-		this.magicNumber = this.baseMagicNumber = DEBUFFS;
+		this.magicNumber = this.baseMagicNumber = BACKLASH;
 		this.baseDamage = ATTACK_DMG;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		for (int i = 0; i < 3; i ++)
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
+		for (int i = 0; i < this.magicNumber; i ++)
+			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_HEAVY));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, this.magicNumber, false), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {

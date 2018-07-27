@@ -41,6 +41,14 @@ public class ParthianShot extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new ParthianShot();
 	}
+	
+	public void applyPowers() {
+		this.baseDamage = ATTACK_DMG;
+		if (!canUpgrade())  this.baseDamage += UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		super.applyPowers();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

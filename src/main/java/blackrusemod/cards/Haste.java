@@ -24,7 +24,7 @@ public class Haste extends CustomCard {
 
 	public Haste() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HASTE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.isEthereal = true;
 	}
 

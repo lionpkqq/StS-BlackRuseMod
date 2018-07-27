@@ -19,8 +19,8 @@ public class Advance extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
-	private static final int DRAW = 2;
+	private static final int COST = 1;
+	private static final int DRAW = 3;
 	private static final int DRAW_LESS = 1;
 	
 	public Advance() {
@@ -30,18 +30,15 @@ public class Advance extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 	
-	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawManipulationPower(p, -DRAW_LESS), -DRAW_LESS));
 	}
 	
-	@Override
 	public AbstractCard makeCopy() {
 		return new Advance();
 	}
 	
-	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

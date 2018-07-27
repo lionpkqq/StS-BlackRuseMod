@@ -1,12 +1,10 @@
 package blackrusemod.powers;
 
-import java.util.Random;
-
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -22,6 +20,7 @@ public class UpgradedEnbodimentPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 
 	public UpgradedEnbodimentPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -29,7 +28,8 @@ public class UpgradedEnbodimentPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getUpgradedEnbodimentPowerTexture();
+		this.region48 = powerAltas.findRegion("upgraded_enbodiment48");
+		this.region128 = powerAltas.findRegion("upgraded_enbodiment128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -40,20 +40,19 @@ public class UpgradedEnbodimentPower extends AbstractPower {
 
 	public void atEndOfTurn(boolean isPlayer)
 	{
-		//flash();
+		flash();
 		AbstractCard c;
-		Random random = new Random();
 		for (int i = 0; i < this.amount; i++) {
-			int randomNum = random.nextInt(10) + 1;
-			if (randomNum == 1) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 2) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 3) c = new TemporalArms().makeCopy();
-			else if (randomNum == 4) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 5) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 6) c = new TemporalArms().makeCopy();
-			else if (randomNum == 7) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 8) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 9) c = new TemporalArms().makeCopy();
+			int randomNum = AbstractDungeon.miscRng.random(9);
+			if (randomNum == 0) c = new TemporalSlicing().makeCopy();
+			else if (randomNum == 1) c = new TemporalMisd().makeCopy();
+			else if (randomNum == 2) c = new TemporalArms().makeCopy();
+			else if (randomNum == 3) c = new TemporalSlicing().makeCopy();
+			else if (randomNum == 4) c = new TemporalMisd().makeCopy();
+			else if (randomNum == 5) c = new TemporalArms().makeCopy();
+			else if (randomNum == 6) c = new TemporalSlicing().makeCopy();
+			else if (randomNum == 7) c = new TemporalMisd().makeCopy();
+			else if (randomNum == 8) c = new TemporalArms().makeCopy();
 			else c = new TemporalEssence().makeCopy();
 			c.upgrade();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));

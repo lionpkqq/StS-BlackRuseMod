@@ -1,5 +1,6 @@
 package blackrusemod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -48,7 +50,7 @@ public class Potential extends CustomCard {
 					AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		else {
 			if (m != null) {
-				AbstractDungeon.actionManager.addToBottom(new VFXAction(new com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect(m.hb.cX, m.hb.cY)));
+				AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.0F, 1.0F, 1.0F, 1.0F))));
 			}
 			AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
@@ -57,9 +59,9 @@ public class Potential extends CustomCard {
 	}
 	
 	public void triggerOnManualDiscard() {
-		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
 		this.baseDamage += this.magicNumber;
-		AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
+		AbstractDungeon.actionManager.addToTop(new DiscardToHandAction(this));
+		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
 		this.superFlash();
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));

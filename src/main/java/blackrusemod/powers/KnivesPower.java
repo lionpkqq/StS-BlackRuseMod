@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -12,6 +13,7 @@ public class KnivesPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
 	public KnivesPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -20,12 +22,12 @@ public class KnivesPower extends AbstractPower {
 		this.amount = amount;
 		this.priority = 0;
 		updateDescription();
-		this.img = BlackRuseMod.getKnivesPowerTexture();
+		this.region48 = powerAltas.findRegion("knives48");
+		this.region128 = powerAltas.findRegion("knives128");
 	}
 	
 	public void stackPower(int stackAmount)
 	{
-		//flash();
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 	}

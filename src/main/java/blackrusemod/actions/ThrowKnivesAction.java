@@ -13,11 +13,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.combat.ThrowDaggerEffect;
 
 import blackrusemod.powers.AmplifyDamagePower;
-import blackrusemod.powers.ConsumedKnivesPower;
-import blackrusemod.powers.KnivesPower;
+import blackrusemod.vfx.ServantDaggerEffect;
 
 public class ThrowKnivesAction extends AbstractGameAction {
 	private DamageInfo info;
@@ -50,10 +48,12 @@ public class ThrowKnivesAction extends AbstractGameAction {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead)) {
 					AbstractDungeon.actionManager.addToTop(new DamageAction(this.target, this.info, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 					if ((this.target != null) && (this.target.hb != null)) {
-						AbstractDungeon.actionManager.addToTop(new VFXAction(new ThrowDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
+						AbstractDungeon.actionManager.addToTop(new VFXAction(new ServantDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new KnivesPower(this.source, -1), -1));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new ConsumedKnivesPower(this.source, -1), -1));
+					
+					this.source.getPower("KnivesPower").reducePower(1);
+					this.source.getPower("KnivesPower").updateDescription();
+					
 					if (this.source.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower("SurpressingFirePower").amount));
 					if (this.debuff != null && this.debuff == "Weakened")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
 					if (this.debuff != null && this.debuff == "Amplify Damage")  {
@@ -62,7 +62,6 @@ public class ThrowKnivesAction extends AbstractGameAction {
 							if (AbstractDungeon.cardRandomRng.randomBoolean())
 								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
 					}
-					
 				}
 			}
 		}

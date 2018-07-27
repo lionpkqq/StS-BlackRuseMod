@@ -19,7 +19,7 @@ public class Gouge extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 8;
+	private static final int ATTACK_DMG = 9;
 	private static final int EXTRA = 2;
 
 	public Gouge() {

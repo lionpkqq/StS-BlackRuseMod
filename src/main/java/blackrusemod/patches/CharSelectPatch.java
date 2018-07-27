@@ -24,7 +24,7 @@ public class CharSelectPatch {
             if (chosenClass.toString() == "THE_SERVANT") {
                 pref = SaveHelper.getPrefs("THE_SERVANT");
                 CardCrawlGame.sound.playV("ATTACK_DAGGER_6", 1.75f);
-                CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
+                CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
 
                 CharacterOption obj = (CharacterOption) __obj_instance;
                 maxAscensionLevel = obj.getClass().getDeclaredField("maxAscensionLevel");

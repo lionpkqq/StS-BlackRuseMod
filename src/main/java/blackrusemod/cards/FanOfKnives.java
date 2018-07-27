@@ -1,14 +1,10 @@
 package blackrusemod.cards;
 
-
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -25,10 +21,8 @@ public class FanOfKnives extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = -1;
-	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int KNIVES = 2;
-	private int amount;
+	private static final int ATTACK_DMG = 8;
+	private static final int UPGRADE_PLUS_DMG = 4;
 
 	public FanOfKnives() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FAN_OF_KNIVES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -36,27 +30,17 @@ public class FanOfKnives extends CustomCard {
 				AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.isMultiDamage = true;
-		this.magicNumber = this.baseMagicNumber = KNIVES;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if ((p.hasPower("KnivesPower") && (p.getPower("KnivesPower").amount > 0))) {
-			this.amount = Math.min(p.getPower("KnivesPower").amount, this.energyOnUse*this.magicNumber);
-			for (int i = 0; i < this.amount; i++)
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, null));
-			AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
-		}
-		else {
-			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-				AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "身上没有飞刀！", 1.0F, 2.0F));
-			}
-			else {
-			AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "I don't have any Knives!", 1.0F, 2.0F));
-			}
-		}
+		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
+		for (int i = 0; i < this.energyOnUse; i++)
+			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, null));
+		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
 	}
 
 	public AbstractCard makeCopy() {
@@ -64,8 +48,9 @@ public class FanOfKnives extends CustomCard {
 	}
 	
 	public void applyPowers() {
-		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
-		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		this.baseDamage = ATTACK_DMG;
+		if (!canUpgrade())  this.baseDamage += UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasRelic("Chemical X")) this.baseDamage += 2;
 		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
 			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
 		super.applyPowers();

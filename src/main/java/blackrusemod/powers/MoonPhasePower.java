@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +15,7 @@ public class MoonPhasePower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	private int BLOCK = 0;
 	
 	public MoonPhasePower(AbstractCreature owner, int amount) {
@@ -27,7 +29,7 @@ public class MoonPhasePower extends AbstractPower {
 	
 	public void stackPower(int stackAmount)
 	{
-		//flash();
+		flash();
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
 	}

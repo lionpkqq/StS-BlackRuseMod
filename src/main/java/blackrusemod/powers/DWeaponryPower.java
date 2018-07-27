@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +15,7 @@ public class DWeaponryPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
 	public DWeaponryPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -36,7 +38,7 @@ public class DWeaponryPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurn() {
-		//flash();
+		flash();
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new KnivesPower(this.owner, this.amount), this.amount));
 	}
 }

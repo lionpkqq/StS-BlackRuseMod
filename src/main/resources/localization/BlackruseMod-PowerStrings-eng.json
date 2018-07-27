@@ -33,11 +33,7 @@
   },
   "FloweringNightPower": {
     "NAME": "Flowering Night",
-    "DESCRIPTIONS": ["This turn, each time you play a card, draw #b", " card(s)."]
-  },
-  "DuplicationPower": {
-    "NAME": "Duplication",
-    "DESCRIPTIONS": ["Next  #b", " card(s) will play one more time."]
+    "DESCRIPTIONS": ["Whenever you play a card, draw #b", " card(s). You may draw #b", " more card(s)."]
   },
   "AmplifyDamagePower": {
     "NAME": "Blighted",
@@ -53,14 +49,14 @@
   },
   "MoonPhasePower": {
     "NAME": "Moon Phase",
-    "DESCRIPTIONS": ["At the end of your turn, gain #b", " #yBlock for each stack of #yDebuffs on you."]
+    "DESCRIPTIONS": ["At the end of your turn, gain #b", " #yBlock for each stack of Weak, Vulnerable and Frail on you."]
   },
   "MurderousAuraPower": {
     "NAME": "Murderous Aura",
     "DESCRIPTIONS": ["At the start of your turn£¬ apply #b", " #yBlight to ALL enemies."]
   },
-  "ReadPower": {
-    "NAME": "Read",
+  "NoEscapePower": {
+    "NAME": "No Escape",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, apply #b", " #yBlight and #yVulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, apply #b", " #yBlight and #yVulnerable."]
   },
   "RealityMarblePower": {
@@ -89,7 +85,7 @@
   },
   "TrueSightPower": {
     "NAME": "True Sight",
-    "DESCRIPTIONS": ["#yVision effects will trigger #b", " more time(s)."]
+    "DESCRIPTIONS": ["#yVision effects will trigger #b", " additional time(s)."]
   },
   "UnparalleledPower": {
     "NAME": "Unparalleled",
@@ -103,9 +99,9 @@
     "NAME": "Time Theft",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " energy. Draw #b", " card(s).", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " energy. Draw #b", " card(s)."]
   },
-  "NoEscapePower": {
-    "NAME": "No Escape",
-    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and apply #b", " #yWeak.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and apply #b", " #yWeak."]
+  "ReadPower": {
+    "NAME": "Read",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " #yBlock and apply #b", " #yWeak.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " #yBlock and apply #b", " #yWeak."]
   },
   "ManipulatePower": {
     "NAME": "Manipulate",
@@ -115,12 +111,16 @@
     "NAME": "Manipulate",
     "DESCRIPTIONS": ["Adds #b2 random #yUpgraded #yTemporal cards to your draw pile."]
   },
-  "ConsumedKnivesPower": {
-    "NAME": "Spent Knives",
-    "DESCRIPTIONS": ["You have spent #b", " #yKnives this turn."]
-  },
   "MysterySwordPower": {
     "NAME": "Mystery Sword",
     "DESCRIPTIONS": ["The next #yAttack you play does double damage. Apply #b2 #yWeak and #yFrail to you afterwards."]
+  },
+  "ReturningBladePower": {
+    "NAME": "Returning Blade",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and put a copy of this card in your hand.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and put a copy of this card in your hand."]
+  },
+  "ProtectionPower": {
+    "NAME": "Protection",
+    "DESCRIPTIONS": ["The protection can sustain #b", " damage."]
   }
 }

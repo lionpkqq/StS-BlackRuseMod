@@ -1,5 +1,6 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +21,7 @@ public class UnparalleledPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	private boolean paralleled = false;
 	
 	public UnparalleledPower(AbstractCreature owner, int amount) {
@@ -28,7 +30,8 @@ public class UnparalleledPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getUnparalleledPowerTexture();
+		this.region48 = powerAltas.findRegion("unparalleled48");
+		this.region128 = powerAltas.findRegion("unparalleled128");
 	}
 	
 	public void stackPower(int stackAmount)

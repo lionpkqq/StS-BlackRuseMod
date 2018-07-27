@@ -3,6 +3,7 @@ package blackrusemod.relics;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -13,7 +14,7 @@ public class Broom extends CustomRelic {
 	private static final int COUNT = 10;
 	
 	public Broom() {
-		super(ID, BlackRuseMod.getBroomTexture(), RelicTier.COMMON, LandingSound.FLAT);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.BROOM_RELIC), ImageMaster.loadImage(BlackRuseMod.BROOM_RELIC_OUTLINE), RelicTier.COMMON, LandingSound.FLAT);
 		this.counter = 0;
 	}
 	

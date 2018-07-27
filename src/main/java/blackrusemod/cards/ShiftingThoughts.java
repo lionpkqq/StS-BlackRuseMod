@@ -2,6 +2,7 @@ package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,13 +25,14 @@ public class ShiftingThoughts extends CustomCard {
 
 	public ShiftingThoughts() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_THOUGHTS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 	}
 	
 	public void triggerOnManualDiscard() {

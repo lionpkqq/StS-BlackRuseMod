@@ -1,5 +1,6 @@
 package blackrusemod.relics;
 
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -9,7 +10,7 @@ public class OldScarf extends CustomRelic {
 	private static final String ID = "OldScarf";
 	
 	public OldScarf() {
-		super(ID, BlackRuseMod.getOldScarfTexture(), RelicTier.RARE, LandingSound.FLAT);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC), ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC_OUTLINE), RelicTier.RARE, LandingSound.FLAT);
 	}
 	
 	public String getUpdatedDescription() {

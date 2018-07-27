@@ -20,7 +20,7 @@ public class MoonPhase extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_PER_STACK = 3;
+	private static final int BLOCK_PER_STACK = 2;
 
 	public MoonPhase() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOON_PHASE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
@@ -39,7 +39,7 @@ public class MoonPhase extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 }

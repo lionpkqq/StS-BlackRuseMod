@@ -1,5 +1,8 @@
 package blackrusemod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,10 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.TimeWarpAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class TimeWarp extends CustomCard {
@@ -18,9 +21,9 @@ public class TimeWarp extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 11;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int COST = 1;
+	private static final int COST_UPGRADED = 0;
+	private static final int ATTACK_DMG = 12;
 
 	public TimeWarp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_WARP), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -31,7 +34,13 @@ public class TimeWarp extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new TimeWarpAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.makeStatEquivalentCopy()));
+		if (m.hasPower("Minion")) {
+			if ((p != null) && (m != null)) AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
+			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, 99, this.damageTypeForTurn), 
+					AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+		}
+		else AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 	}
 
 	public AbstractCard makeCopy() {
@@ -41,7 +50,7 @@ public class TimeWarp extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeBaseCost(COST_UPGRADED);
 		}
 	}
 }

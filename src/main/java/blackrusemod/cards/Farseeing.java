@@ -21,19 +21,19 @@ public class Farseeing extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK = 10;
-	private static final int UPGRADE_BLOCK_AMT = 4;
+	private static final int BLOCK = 9;
+	private static final int UPGRADE_BLOCK_AMT = 3;
 	
 	public Farseeing() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FARSEEING), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = BLOCK;
+		this.baseBlock = BLOCK;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.baseBlock), this.baseBlock));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, 1), 1));
 	}
 	
@@ -46,7 +46,7 @@ public class Farseeing extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_BLOCK_AMT);
+			upgradeBlock(UPGRADE_BLOCK_AMT);
 		}
 	}
 }

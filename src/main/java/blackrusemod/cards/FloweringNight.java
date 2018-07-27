@@ -1,6 +1,5 @@
 package blackrusemod.cards;
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,19 +21,19 @@ public class FloweringNight extends CustomCard {
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int COST_UPGRADED = 0;
-	private static final int DRAW = 1;
+	private static final int LIMIT = 16;
 	
 	public FloweringNight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLOWERING_NIGHT), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = LIMIT;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloweringNightPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloweringNightPower(p, 1), 1));
 	}
 	
 	@Override

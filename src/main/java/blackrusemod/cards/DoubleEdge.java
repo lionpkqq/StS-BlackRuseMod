@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.BacklashAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class DoubleEdge extends CustomCard {
@@ -22,8 +23,8 @@ public class DoubleEdge extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 13;
-	private static final int UPGRADE_PLUS_DMG = 5;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int VULNERABLE = 1;
 
 	public DoubleEdge() {
@@ -39,7 +40,7 @@ public class DoubleEdge extends CustomCard {
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(2));
 	}
 
 	public AbstractCard makeCopy() {

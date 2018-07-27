@@ -3,6 +3,7 @@ package blackrusemod.relics;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -13,7 +14,7 @@ public class RomanBracelet extends CustomRelic {
 	private static final String ID = "RomanBracelet";
 	
 	public RomanBracelet() {
-		super(ID, BlackRuseMod.getRomanBraceletTexture(), RelicTier.RARE, LandingSound.MAGICAL);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.ROMAN_BRACELET_RELIC), ImageMaster.loadImage(BlackRuseMod.ROMAN_BRACELET_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);
 	}
 
 	@Override

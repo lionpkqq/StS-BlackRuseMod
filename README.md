@@ -1,9 +1,9 @@
-# StS-BlackRuseMod 0.6.3
+# StS-BlackRuseMod 0.8.0
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (07-19-2018)
+* Slay The Spire (07-26-2018)
 * ModTheSpire 2.9.0
 * BaseMod 2.17.0 (Week 34 Patch)
 
@@ -11,6 +11,8 @@ Currently supported versions:
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, a new set of 75 cards and 11 relics for her to use. 
 
 **The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
+
+You can check the updates at the bottom of this page.
 
 ### Compatibility ###
 This Mod makes no changes to the base game other than adding **The Servant**. In other words, it should be compatible with other Mods.
@@ -22,11 +24,13 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 * **Temporal**: Temporal cards are Unplayable and Ethereal. Their unique effects will be triggered when drawn.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
+* **Backlash X**: Apply 1 random Weak, Vulnerable or Frail to you X times.
+* **Protection**: Unblocked damage will consume Protection instead of your HP.
 
 ## Usage ##
 ### Required Downloads ###
-* ModTheSpire v2.7.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod 2.15.0+ (https://github.com/daviscook477/BaseMod/releases)
+* ModTheSpire v2.9.0+ (https://github.com/kiooeht/ModTheSpire/releases)
+* BaseMod 2.17.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -46,12 +50,19 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 The Wiki is still under construction. Thanks for your patience!
 
 ## List of known issues ##
-* If you choose Elegance in the Ancient Writing event, both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest). 
+* In rare cases, if you choose Elegance during the Ancient Writing event, the effects of both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest).
+* Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
+* Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues) so far.
 
 ## Credits / Acknowledgements ##
-* BlackRuse (https://github.com/lionpkqq): design, programming and project management.
+* BlackRuse (https://github.com/lionpkqq) - design, programming and project management.
+* Kuzomari (https://www.deviantart.com/kuzomari) - character concept arts and models.
+* Dimlight (~~咕咕~~昏暗) - UI and card illustrations.
+* OPM (一下午) (Tencent QQ: 1315659893) - texture filter patch and programming consultation.
+* Gogo (https://github.com/gogo81745) - programming consultation.
+* HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, and more!
 
 ## Special Thanks ##
 
@@ -89,7 +100,33 @@ Contributors of **FruityMod**
 * LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
 
 ## Current State/Updates ##
-Needs more play-testing.
+* Needs more play-testing.
+* Please let me know if you can rephrase any sentences and make them sound more natural.
+
+0.8.0
+* Thanks to **Kuzomari**, we now have new character arts!
+* Thanks to **Dimlight**, we now have new energy, relic and power icons and original illustrations for some cards! More illustrations are coming!
+* Optimized the knife-throwing system to fix some issues and create smoother gameplay.
+* Updated the texture filter patch - contributed by **OPM**.
+* Major balance updates.
+* Added a new mechanic: **Backlash**.
+* Reworked [Duplication].
+* Reworked [Fan of Knives].
+* Reworked [Fast Forward].
+* Reworked [First Strike].
+* Reworked [Follow Up], now it is called [Initiator].
+* Reworked [Indiscriminate], now it is called [Capture].
+* Reworked [Rearm].
+* Reworked [Returning Blades].
+* Reworked [Revamp].
+* Reworked [Rewind].
+* Reworked [Time Embedded].
+* Reworked [Time Warp].
+* Reworked BOSS relic [Stone Mask].
+* Reworked BOSS relic [Mystery Sword].
+* Switched the effects between [Read] and [No Escape].
+* Deleted the [Debuffs] keyword and uses Weak, Vulnerable and Frail in card descriptions instead.
+* Renamed [Shifting Reality] to [Shattered Reality].
 
 0.6.3
 * Reworked [Spin] and [Killer Instinct].

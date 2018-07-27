@@ -18,9 +18,7 @@ public class DoubleKnivesAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if ((this.duration == 0.5F) && 
-				(this.target != null) && (this.target.hasPower("KnivesPower"))) {
-			
+		if ((this.duration == 0.5F) && (this.target != null) && (this.target.hasPower("KnivesPower"))) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.source, new KnivesPower(this.source, 
 					this.target.getPower("KnivesPower").amount), this.target.getPower("KnivesPower").amount));
 		}

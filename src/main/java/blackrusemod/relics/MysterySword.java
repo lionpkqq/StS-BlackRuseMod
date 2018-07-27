@@ -2,6 +2,7 @@ package blackrusemod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -12,7 +13,7 @@ public class MysterySword extends CustomRelic {
 	private static final String ID = "MysterySword";
 	
 	public MysterySword() {
-		super(ID, BlackRuseMod.getMysterySwordTexture(), RelicTier.BOSS, LandingSound.CLINK);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC), ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.CLINK);
 	}
 	
 	public void atTurnStart()

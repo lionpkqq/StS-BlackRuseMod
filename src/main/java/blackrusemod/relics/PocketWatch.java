@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -14,7 +15,7 @@ public class PocketWatch extends CustomRelic {
 	private static final String ID = "PocketWatch";
 	
 	public PocketWatch() {
-		super(ID, BlackRuseMod.getPocketWatchTexture(), RelicTier.RARE, LandingSound.MAGICAL);
+		super(ID, ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC), ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);
 	}
 	
 	public void onExhaust(AbstractCard card)

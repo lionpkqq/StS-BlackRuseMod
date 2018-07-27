@@ -17,14 +17,12 @@ public class Deny extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DENIED = 3;
+	private static final int DENIED = 2;
 
 	public Deny() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DENY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber = DENIED;
 	}
 
@@ -39,9 +37,7 @@ public class Deny extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
-			this.exhaust = false;
+			upgradeMagicNumber(2);
 		}
 	}
 }

@@ -1,5 +1,7 @@
 package blackrusemod.powers;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.NoDrawPower;
 
 import blackrusemod.BlackRuseMod;
 
@@ -17,12 +20,16 @@ public class FloweringNightPower extends AbstractPower {
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
+	public int amount2 = 0;
+	public static final int LIMIT = 16;
 	
 	public FloweringNightPower(AbstractCreature owner, int amount) {
 			this.name = NAME;
 			this.ID = POWER_ID;
 			this.owner = owner;
 			this.amount = amount;
+			this.amount2 = 0;
 			updateDescription();
 			this.img = BlackRuseMod.getFloweringNightPowerTexture();
 	}
@@ -33,12 +40,20 @@ public class FloweringNightPower extends AbstractPower {
 	}
 	
 	public void updateDescription() {
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (LIMIT-this.amount2) + DESCRIPTIONS[2]);
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		//flash();
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
+		for (int i = 0; i < this.amount; i++) {
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, 1));
+			this.amount2++;
+			this.updateDescription();
+			if (this.amount2 >= LIMIT) {
+				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "FloweringNightPower"));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new NoDrawPower(this.owner), 1));
+				break;
+			}
+		}
 	}
 	
 	public void atEndOfTurn (boolean isPlayer) {

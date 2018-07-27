@@ -1,9 +1,8 @@
 package blackrusemod.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,24 +21,23 @@ public class FirstStrike extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 9;
-	private static final int DRAW = 1;
+	private static final int COST = 1;
+	private static final int ATTACK_DMG = 8;
+	private static final int UPGRADE_ATTACK_DMG = 3;
 
 	public FirstStrike() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FIRST_STRIKE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
 				new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, -1), -1));
+		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, 1), 1));
 	}
 
 	public AbstractCard makeCopy() {
@@ -49,7 +47,7 @@ public class FirstStrike extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeDamage(UPGRADE_ATTACK_DMG);
 		}
 	}
 }

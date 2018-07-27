@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.ConsumedKnivesPower;
 import blackrusemod.powers.KnivesPower;
 
 public class Sunlight extends CustomCard {
@@ -49,7 +48,6 @@ public class Sunlight extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, -1), -1));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConsumedKnivesPower(p, -1), -1));
 			if (p.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, p.getPower("SurpressingFirePower").amount));
 			}
 			
