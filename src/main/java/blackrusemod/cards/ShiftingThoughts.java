@@ -22,16 +22,20 @@ public class ShiftingThoughts extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
 	private static final int DRAW = 2;
+	private static final int BLOCK_AMT = 3;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
 
 	public ShiftingThoughts() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_THOUGHTS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
+		this.baseBlock = BLOCK_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(2));
 		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 	}
 	
@@ -49,6 +53,7 @@ public class ShiftingThoughts extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(1);
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
 	}
 }

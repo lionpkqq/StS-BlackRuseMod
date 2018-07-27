@@ -628,7 +628,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。来自同名卡的效果不叠加。");
         BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
-        BaseMod.addKeyword(new String[] {"再装填"}, "消耗 [B] 。获得 #b3 把 #y飞刀 。抽 #b1 张卡。 #y消耗 。");
+        BaseMod.addKeyword(new String[] {"再装填"}, "获得 #b3 把 #y飞刀 。抽 #b1 张卡。 #y消耗 。");
         BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。");
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
@@ -637,7 +637,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s). Same effects do not stack.");
         BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply 1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
-        BaseMod.addKeyword(new String[] {"Rearm", "rearm"}, "Costs [B] . Obtain #b3 #yKnives. Draw #b1 card. #yExhaust.");
+        BaseMod.addKeyword(new String[] {"Rearm", "rearm"}, "Obtain #b3 #yKnives. Draw #b1 card. #yExhaust.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Unblocked damage will consume #yProtection instead of your HP.");
         logger.info("done setting up custom keywords");
 	}

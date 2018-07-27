@@ -250,7 +250,7 @@
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Discard the top card of your draw pile. NL Shift: Draw !M! cards."
+		"DESCRIPTION": "Gain !B! Block. NL Discard the top 2 cards of your draw pile. NL Shift: Draw !M! cards."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
@@ -306,23 +306,23 @@
 	},
 	"TemporalArms": {
 		"NAME": "Temporal Arms",
-		"DESCRIPTION": "Temporal. NL When this card is drawn, obtain !M! Knives and gain !B! Block.",
+		"DESCRIPTION": "Temporal. NL Obtain !M! Knives and gain !B! Block.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalEssence": {
 		"NAME": "Temporal Essence",
-		"DESCRIPTION": "Temporal. NL When this card is drawn, gain [B] and draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "Temporal. NL When this card is drawn, gain [B] [B] and draw !M! cards.",
+		"DESCRIPTION": "Temporal. NL Gain [B] and draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] and draw !M! cards.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Temporal. NL When this card is drawn, apply !M! Blight and Weak to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Weak to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Temporal. NL When this card is drawn, deal !D! damage twice to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL Deal !D! damage twice to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TheWorld": {
