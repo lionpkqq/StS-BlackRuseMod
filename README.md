@@ -8,9 +8,9 @@ Currently supported versions:
 * BaseMod 2.17.0 (Week 34 Patch)
 
 ## Content/Gameplay ##
-**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, a new set of 75 cards and 11 relics for her to use. 
+**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, with a new set of 75 cards and 11 exclusive relics. 
 
-**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. Her most iconic move is to use her time-control power to set up hundreds of knives and release them altogether on her enemies. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
+**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
 
 You can check the updates at the bottom of this page.
 
