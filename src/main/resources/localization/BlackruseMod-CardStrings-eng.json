@@ -17,7 +17,7 @@
 	},
 	"Advance": {
 		"NAME": "Advance",
-		"DESCRIPTION": "Draw !M! cards. NL Next turn, NL draw 1 less cards."
+		"DESCRIPTION": "Gain [B] [B] . NL Backlash !M!. NL Exhaust."
 	},
 	"Alleviate": {
 		"NAME": "Alleviate",
@@ -38,7 +38,7 @@
 	},
 	"Comet": {	
 		"NAME": "Comet",
-		"DESCRIPTION": "Innate. NL Deal !D! damage. NL Next turn, draw !M! more cards."
+		"DESCRIPTION": "Deal !D! damage. NL If you have not played any card this turn, draw !M! cards."
 	},
 	"CosmicInflation": {
 		"NAME": "Cosmic Inflation",
@@ -71,7 +71,7 @@
 	},
 	"Entangle": {
 		"NAME": "Entangle",
-		"DESCRIPTION": "Apply ALL Weak, Vulnerable and Frail on you to the enemy."
+		"DESCRIPTION": "You are not influenced by Weak, Vulnerable and Frail for 1 turn. NL Gain !B! Block."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan Of Knives",
@@ -83,11 +83,11 @@
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
-		"DESCRIPTION": "Next turn, draw !M! more cards. NL Backlash 2."
+		"DESCRIPTION": "Gain !B! Block. NL If there is no Attack in your hand, draw !M! cards."
 	},
 	"FirstStrike": {
 		"NAME": "First Strike",
-		"DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Gain [B] next turn."
+		"DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Shift: Gain !B! Block."
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
@@ -212,8 +212,8 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Obtain 3 Knives. NL Draw !M! card. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Obtain 3 Knives. NL Draw !M! card."
+		"DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -229,8 +229,7 @@
 	},
 	"Revamp": {
 		"NAME": "Revamp",
-		"DESCRIPTION": "Exhaust 1 card. NL If you do, add 1 Rearm to your hand.",
-		"UPGRADE_DESCRIPTION": "Exhaust 1 card. NL If you do, add 1 upgraded Rearm to your hand."
+		"DESCRIPTION": "Exhaust up to !M! cards. NL Draw the same amount of cards."
 	},
 	"Rewind": {
 		"NAME": "Rewind",
@@ -238,7 +237,7 @@
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Deal !D! damage. NL Enemy loses !M! Strength for 1 turn. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Enemy loses Strength equals to the damage for 1 turn. NL Exhaust."
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
@@ -271,12 +270,11 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!."
+		"DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!. NL Exhaust."
 	},
 	"Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. Exhaust."
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL Backlash 2."
 	},
 	"StarChef": {
 		"NAME": "Star Chef",

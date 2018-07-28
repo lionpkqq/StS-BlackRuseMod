@@ -21,7 +21,8 @@ public class TrueSightPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getTrueSightPowerTexture();
+		this.region48 = powerAltas.findRegion("true_sight48");
+		this.region128 = powerAltas.findRegion("true_sight128");
 	}
 	
 	public void stackPower(int stackAmount)

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.BacklashAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Spin extends CustomCard {
@@ -24,8 +25,8 @@ public class Spin extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 11;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 4;
 	private static final int WEAK = 1;
 
 	public Spin() {
@@ -35,7 +36,6 @@ public class Spin extends CustomCard {
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = WEAK;
 		this.isMultiDamage = true;
-		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,6 +44,7 @@ public class Spin extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, true));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(2));
 	}
 
 	public AbstractCard makeCopy() {

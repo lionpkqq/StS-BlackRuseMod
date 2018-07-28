@@ -29,6 +29,7 @@ public class UnparalleledPower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
+		this.paralleled = false;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("unparalleled48");
 		this.region128 = powerAltas.findRegion("unparalleled128");
@@ -62,6 +63,7 @@ public class UnparalleledPower extends AbstractPower {
 			AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "Oops, I have card(s) that cost 2!", 1.0F, 2.0F));
 			}
 		}
+		this.paralleled = false;
 	}
 	
 	public void onInitialApplication() {
@@ -89,6 +91,7 @@ public class UnparalleledPower extends AbstractPower {
 			AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "Oops, I have card(s) that cost 2!", 1.0F, 2.0F));
 			}
 		}
+		this.paralleled = false;
 	}
 
 	public void updateDescription()

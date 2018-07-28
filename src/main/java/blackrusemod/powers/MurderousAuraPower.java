@@ -24,7 +24,8 @@ public class MurderousAuraPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getMurderousAuraPowerTexture();
+		this.region48 = powerAltas.findRegion("murderous_aura48");
+		this.region128 = powerAltas.findRegion("murderous_aura128");
 	}
 	
 	public void stackPower(int stackAmount)

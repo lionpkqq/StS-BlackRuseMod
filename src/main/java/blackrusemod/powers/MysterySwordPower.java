@@ -27,13 +27,16 @@ public class MysterySwordPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getMysterySwordPowerTexture();
+		this.region48 = powerAltas.findRegion("mystery_sword48");
+		this.region128 = powerAltas.findRegion("mystery_sword128");
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		flash();
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(3));
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "MysterySwordPower"));
+		if (card.type == AbstractCard.CardType.ATTACK) {
+			flash();
+			AbstractDungeon.actionManager.addToBottom(new BacklashAction(3));
+			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "MysterySwordPower"));
+		}
 	}
 	
 	public void atEndOfTurn (boolean isPlayer) {

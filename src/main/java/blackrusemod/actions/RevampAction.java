@@ -1,25 +1,22 @@
 package blackrusemod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import blackrusemod.cards.Rearm;
-
 public class RevampAction extends AbstractGameAction {
+	private static final com.megacrit.cardcrawl.localization.UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+	public static final String[] TEXT = uiStrings.TEXT;
 	private float startingDuration;
 	private AbstractPlayer p;
 	public static int numExhausted;
-	private boolean canUpgrade;
 
-	public RevampAction(AbstractPlayer p, int numCards, boolean canUpgrade) {
+	public RevampAction(AbstractPlayer p, int numCards) {
 		this.amount = numCards;
 		this.p = p;
-		this.canUpgrade = canUpgrade;
 		this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.EXHAUST;
 		this.startingDuration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST;
 		this.duration = this.startingDuration;
@@ -33,10 +30,7 @@ public class RevampAction extends AbstractGameAction {
 			}
 
 			numExhausted = this.amount;
-			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				AbstractDungeon.handCardSelectScreen.open("·­ÐÂ", this.amount, true, true);
-			else
-				AbstractDungeon.handCardSelectScreen.open("revamp", this.amount, true, true);
+			AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, true, true);
 			tickDuration();
 			return;
 		}
@@ -44,9 +38,7 @@ public class RevampAction extends AbstractGameAction {
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 				this.p.hand.moveToExhaustPile(c);
-				AbstractCard d = new Rearm();
-				if (!this.canUpgrade) d.upgrade();
-				AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, false));
+				AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 			}
 			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
 		}

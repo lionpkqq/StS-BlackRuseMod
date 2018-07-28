@@ -28,14 +28,14 @@ public class Rearm extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REARM), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = DRAW;
+		this.magicNumber = this.baseMagicNumber = KNIVES;
 		this.exhaust = true;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, KNIVES), KNIVES));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 	}
 	
 	@Override

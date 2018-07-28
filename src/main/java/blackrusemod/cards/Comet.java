@@ -1,9 +1,11 @@
 package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -12,7 +14,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.DrawManipulationPower;
 
 public class Comet extends CustomCard {
 	public static final String ID = "Comet";
@@ -20,24 +21,23 @@ public class Comet extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 4;
-	private static final int UPGRADE_PLUS_DMG = 2;
-	private static final int DRAW_MORE = 1;
+	private static final int ATTACK_DMG = 5;
+	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int DRAW = 2;
 
 	public Comet() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.COMET), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
-		this.isInnate = true;
 		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = DRAW_MORE;
+		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m,
-				new DamageInfo(p, this.damage, this.damageTypeForTurn),
+	public void use(AbstractPlayer p, AbstractMonster m) {
+		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawManipulationPower(p, this.magicNumber), this.magicNumber));
+		if ((AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1) == 0)
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
 	}
 
 	public AbstractCard makeCopy() {

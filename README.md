@@ -104,8 +104,21 @@ Contributors of **FruityMod**
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences and make them sound more natural.
 
+0.8.2
+* Uploaded even more custom power icons.
+* Reworked [Advance].
+* Reworked [Comet].
+* Reworked [Entangle].
+* Reworked [Fast Forward].
+* Reworked [First Strike].
+* Reworked [Revamp].
+* Reworked [Sabotage].
+* Now [Mystery Sword] only triggers backlash when the player uses Attack.
+* Fixed: The second [Unparalleled] would certainly fail if the first one failed.
+* Fixed: [Rearm]'s description has been corrected.
+
 0.8.1
-* Buffed most Knives-related cards. Now The Servant has more viable ways to apply vulnerable.
+* Buffed most Knives-related cards. Now the Servant has more viable ways to apply vulnerable.
 * Reworked [Gouge].
 * Uploaded more custom power icons.
 * Fixed: [Stone Mask] may gain Max HP repeatedly from revived Darklings.

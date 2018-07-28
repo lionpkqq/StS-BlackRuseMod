@@ -113,7 +113,7 @@
   },
   "MysterySwordPower": {
     "NAME": "神秘之剑",
-    "DESCRIPTIONS": ["下一张打出的牌将造成双倍伤害并具有 #y反冲 #b3 。"]
+    "DESCRIPTIONS": ["下一张打出的攻击卡将造成双倍伤害并具有 #y反冲 #b3 。"]
   },
   "ReturningBladePower": {
     "NAME": "返刃",
@@ -122,5 +122,9 @@
   "ProtectionPower": {
     "NAME": "护盾",
     "DESCRIPTIONS": ["护盾可以承受 #b", " 点伤害。"]
+  },
+  "FalseFlawlessFormPower": {
+    "NAME": "伪·完美形态",
+    "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响 #b", " 回合。"]
   }
 }

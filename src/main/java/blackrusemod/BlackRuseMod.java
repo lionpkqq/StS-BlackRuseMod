@@ -160,22 +160,17 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     // power images
     public static final String D_WEAPONRY_POWER = "powers/d_weaponry.png";
     public static final String FLAWLESS_FORM_POWER = "powers/flawless_form.png";
-    public static final String HASTE_POWER = "powers/haste.png";
     public static final String KILLER_INSTINCT_POWER = "powers/killer_instinct.png";
     public static final String MOON_PHASE_POWER = "powers/moon_phase.png";
-    public static final String MURDEROUS_AURA_POWER = "powers/murderous_aura.png";
     public static final String REALITY_MARBLE_POWER = "powers/reality_marble.png";
-    public static final String STAR_CHEF_POWER = "powers/star_chef.png";
     public static final String STRESS_RELIEVER_POWER = "powers/stress_reliever.png";
     public static final String SURPRESSING_FIRE_POWER = "powers/surpressing_fire.png";
     public static final String FLOWERING_NIGHT_POWER = "powers/flowering_night.png";
     public static final String READ_POWER = "powers/read.png";
     public static final String THE_WORLD_POWER = "powers/the_world.png";
-    public static final String TRUE_SIGHT_POWER = "powers/true_sight.png";
     public static final String SNIPE_POWER = "powers/snipe.png";
     public static final String TIME_THEFT_POWER = "powers/time_theft.png";
     public static final String NO_ESCAPE_POWER = "powers/no_escape.png";
-    public static final String MYSTERY_SWORD_POWER = "powers/mystery_sword.png";
     public static final String RETURNING_BLADE_POWER = "powers/returning_blade.png";
     public static final String CUSTOM_POWERS = "powers/custom_powers.atlas";
     
@@ -225,10 +220,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     	return new Texture(makePath(FLAWLESS_FORM_POWER));
     }
     
-    public static Texture getHastePowerTexture() {
-    	return new Texture(makePath(HASTE_POWER));
-    }
-    
     public static Texture getKillerInstinctPowerTexture() {
     	return new Texture(makePath(KILLER_INSTINCT_POWER));
     }
@@ -237,16 +228,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     	return new Texture(makePath(MOON_PHASE_POWER));
     }
     
-    public static Texture getMurderousAuraPowerTexture() {
-    	return new Texture(makePath(MURDEROUS_AURA_POWER));
-    }
-    
     public static Texture getRealityMarblePowerTexture() {
     	return new Texture(makePath(REALITY_MARBLE_POWER));
-    }
-    
-    public static Texture getStarChefPowerTexture() {
-    	return new Texture(makePath(STAR_CHEF_POWER));
     }
     
     public static Texture getStressRelieverPowerTexture() {
@@ -279,14 +262,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     
     public static Texture getNoEscapePowerTexture() {
     	return new Texture(makePath(NO_ESCAPE_POWER));
-    }
-    
-    public static Texture getTrueSightPowerTexture() {
-    	return new Texture(makePath(TRUE_SIGHT_POWER));
-    }
-    
-    public static Texture getMysterySwordPowerTexture() {
-    	return new Texture(makePath(MYSTERY_SWORD_POWER));
     }
     
     public static Texture getReturningBladePowerTexture() {
@@ -615,7 +590,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会减少飞刀的数量。");
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。抽到时会触发特殊效果。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
-        BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被丢弃后触发。");
+        BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被手动丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。来自同名卡的效果不叠加。");
         BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
         BaseMod.addKeyword(new String[] {"再装填"}, "获得 #b5 把 #y飞刀 。抽 #b1 张卡。 #y消耗 。");
@@ -624,7 +599,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their special effects will be triggered when drawn.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
-        BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by discarding the card.");
+        BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s). Same effects do not stack.");
         BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply 1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
         BaseMod.addKeyword(new String[] {"Rearm", "rearm"}, "Obtain #b5 #yKnives. Draw #b1 card. #yExhaust.");

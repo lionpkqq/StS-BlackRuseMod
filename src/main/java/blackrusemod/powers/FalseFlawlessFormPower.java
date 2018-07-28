@@ -10,28 +10,31 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
 
-public class FlawlessFormPower extends AbstractPower {
-	public static final String POWER_ID = "FlawlessFormPower";
+public class FalseFlawlessFormPower extends AbstractPower {
+	public static final String POWER_ID = "FalseFlawlessFormPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
-	public FlawlessFormPower(AbstractCreature owner, int amount) {
+	public FalseFlawlessFormPower(AbstractCreature owner, int amount) {
 			this.name = NAME;
 			this.ID = POWER_ID;
 			this.owner = owner;
+			this.amount = amount;
+			this.isTurnBased = true;
 			updateDescription();
-			this.region48 = powerAltas.findRegion("flawless_form48");
-			this.region128 = powerAltas.findRegion("flawless_form128");
+			this.region48 = powerAltas.findRegion("false_flawless_form48");
+			this.region128 = powerAltas.findRegion("false_flawless_form128");
 	}
 	
 	public void updateDescription() {
-		this.description = DESCRIPTIONS[0];
+		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 	}
 	
 	public float atDamageGive(float damage, DamageInfo.DamageType type)
 	{
+		if (this.owner.hasPower("FlawlessFormPower")) return damage;
 		if (type == DamageInfo.DamageType.NORMAL) {
 			if (this.owner.hasPower("Weakened")) return damage / 0.75F;
 		}
@@ -40,12 +43,14 @@ public class FlawlessFormPower extends AbstractPower {
 	
 	public float modifyBlock(float blockAmount)
 	{
+		if (this.owner.hasPower("FlawlessFormPower")) return blockAmount;
 		if (this.owner.hasPower("Frail")) return blockAmount / 0.75F;
 		return blockAmount;
 	}
 	
 	public float atDamageReceive(float damage, DamageInfo.DamageType type)
 	{
+		if (this.owner.hasPower("FlawlessFormPower")) return damage;
 		if (type == DamageInfo.DamageType.NORMAL)
 		{
 			if (this.owner.hasPower("Vulnerable")) {
@@ -56,5 +61,14 @@ public class FlawlessFormPower extends AbstractPower {
 			}
 		}
 		return damage;
+	}
+	
+	public void atEndOfRound()
+	{
+		if (this.amount == 0) {
+			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "FalseFlawlessFormPower"));
+		} else {
+			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "FalseFlawlessFormPower", 1));
+		}
 	}
 }

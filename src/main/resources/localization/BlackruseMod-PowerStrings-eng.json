@@ -113,7 +113,7 @@
   },
   "MysterySwordPower": {
     "NAME": "Mystery Sword",
-    "DESCRIPTIONS": ["The next #yAttack you play does double damage. Apply #b2 #yWeak and #yFrail to you afterwards."]
+    "DESCRIPTIONS": ["The next #yAttack you play does double damage and has #yBacklash #b3."]
   },
   "ReturningBladePower": {
     "NAME": "Returning Blade",
@@ -122,5 +122,9 @@
   "ProtectionPower": {
     "NAME": "Protection",
     "DESCRIPTIONS": ["The protection can sustain #b", " damage."]
+  },
+  "FalseFlawlessFormPower": {
+    "NAME": "False Flawless Form",
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail for #b", " turn."]
   }
 }

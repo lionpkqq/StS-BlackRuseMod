@@ -22,8 +22,10 @@ public class StarChefPower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
+		this.priority = 6;
 		updateDescription();
-		this.img = BlackRuseMod.getStarChefPowerTexture();
+		this.region48 = powerAltas.findRegion("star_chef48");
+		this.region128 = powerAltas.findRegion("star_chef128");
 	}
 	
 	public void stackPower(int stackAmount)
