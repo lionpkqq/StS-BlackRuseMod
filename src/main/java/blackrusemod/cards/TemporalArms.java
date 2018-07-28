@@ -21,8 +21,8 @@ public class TemporalArms extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = -2;
-	private static final int BLOCK_AMT = 9;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int BLOCK_AMT = 8;
+	private static final int UPGRADE_PLUS_BLOCK = 4;
 	private static final int KNIVES = 3;
 
 	public TemporalArms() {

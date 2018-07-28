@@ -35,17 +35,12 @@ public class Hightail extends CustomCard {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
 		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
+		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
 		for (int i = 0; i < this.energyOnUse; i++) 
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
 		if (this.energyOnUse != 0) AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.energyOnUse));
+		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
-	}
-	
-	public void applyPowers() {
-		this.magicNumber = this.baseMagicNumber = PROTECTION;
-		if (!this.canUpgrade()) {this.magicNumber += 2; this.baseMagicNumber += 2;}
-		if (AbstractDungeon.player.hasRelic("Chemical X")) {this.magicNumber += 2; this.baseMagicNumber += 2;}
-		super.applyPowers();
 	}
 
 	public AbstractCard makeCopy() {

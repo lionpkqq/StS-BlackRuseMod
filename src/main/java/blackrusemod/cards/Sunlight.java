@@ -48,7 +48,7 @@ public class Sunlight extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
 			AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, -1), -1));
-			if (p.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, p.getPower("SurpressingFirePower").amount));
+			if (p.hasPower("SurpressingFirePower")) p.addBlock(p.getPower("SurpressingFirePower").amount);
 			}
 			
 			if (p.getPower("KnivesPower").amount == 0) this.depleted = true;

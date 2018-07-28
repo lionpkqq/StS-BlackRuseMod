@@ -2,6 +2,7 @@ package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,7 +25,8 @@ public class BarrierPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getBarrierPowerTexture();
+		this.region48 = powerAltas.findRegion("barrier48");
+		this.region128 = powerAltas.findRegion("barrier128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -41,6 +43,6 @@ public class BarrierPower extends AbstractPower {
 	public void atStartOfTurn() {
 		flash();
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new IntangiblePlayerPower(this.owner, this.amount), this.amount));
-		AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "BarrierPower"));
+		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "BarrierPower"));
 	}
 }

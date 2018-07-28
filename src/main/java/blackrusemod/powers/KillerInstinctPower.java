@@ -27,7 +27,7 @@ public class KillerInstinctPower extends AbstractPower {
 		this.amount = amount;
 		updateDescription();
 		this.img = BlackRuseMod.getKillerInstinctPowerTexture();
-		this.COUNTER_ATTACK_DAMAGE = 4;
+		this.COUNTER_ATTACK_DAMAGE = 5;
 	}
 	
 	public void stackPower(int stackAmount)

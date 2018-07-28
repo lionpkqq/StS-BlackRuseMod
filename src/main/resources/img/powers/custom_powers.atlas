@@ -1,9 +1,23 @@
 
 custom_powers.png
-size: 512,512
+size: 1024,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+barrier128
+  rotate: false
+  xy: 132, 232
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+barrier48
+  rotate: false
+  xy: 442, 312
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
 blight128
   rotate: false
   xy: 2, 362
@@ -13,56 +27,56 @@ blight128
   index: -1
 blight48
   rotate: false
-  xy: 442, 442
+  xy: 572, 442
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 draw_manipulation128
   rotate: false
-  xy: 262, 232
+  xy: 262, 102
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 draw_manipulation48
   rotate: false
-  xy: 262, 132
+  xy: 52, 2
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 enbodiment128
   rotate: false
-  xy: 262, 362
+  xy: 262, 232
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 enbodiment48
   rotate: false
-  xy: 262, 182
+  xy: 2, 2
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 energy_manipulation128
   rotate: false
-  xy: 2, 102
+  xy: 262, 362
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 energy_manipulation48
   rotate: false
-  xy: 52, 52
+  xy: 392, 262
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
 knives128
   rotate: false
-  xy: 132, 232
+  xy: 132, 102
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
@@ -76,28 +90,42 @@ knives48
   index: -1
 protection128
   rotate: false
-  xy: 132, 102
+  xy: 392, 362
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
 protection48
   rotate: false
-  xy: 2, 2
+  xy: 52, 52
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
   index: -1
-unparalleled128
+silver_blades128
   rotate: false
   xy: 132, 362
   size: 128, 128
   orig: 128, 128
   offset: 0, 0
   index: -1
+silver_blades48
+  rotate: false
+  xy: 522, 442
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+unparalleled128
+  rotate: false
+  xy: 2, 102
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
 unparalleled48
   rotate: false
-  xy: 392, 442
+  xy: 392, 312
   size: 48, 48
   orig: 48, 48
   offset: 0, 0
@@ -111,7 +139,7 @@ upgraded_enbodiment128
   index: -1
 upgraded_enbodiment48
   rotate: false
-  xy: 392, 392
+  xy: 522, 392
   size: 48, 48
   orig: 48, 48
   offset: 0, 0

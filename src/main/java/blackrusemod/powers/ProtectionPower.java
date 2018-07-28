@@ -22,6 +22,7 @@ public class ProtectionPower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
+		this.priority = 2;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("protection48");
 		this.region128 = powerAltas.findRegion("protection128");

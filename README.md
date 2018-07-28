@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.8.0
+# StS-BlackRuseMod 0.8.1
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
@@ -50,6 +50,7 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 The Wiki is still under construction. Thanks for your patience!
 
 ## List of known issues ##
+* [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
 * In rare cases, if you choose Elegance during the Ancient Writing event, the effects of both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest).
 * Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
 * Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues) so far.
@@ -102,6 +103,13 @@ Contributors of **FruityMod**
 ## Current State/Updates ##
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences and make them sound more natural.
+
+0.8.1
+* Buffed most Knives-related cards. Now The Servant has more viable ways to apply vulnerable.
+* Reworked [Gouge].
+* Uploaded more custom power icons.
+* Fixed: [Stone Mask] may gain Max HP repeatedly from revived Darklings.
+* Fixed: [Chemical X] does not increase the number of effects of X-cost cards.
 
 0.8.0
 * Thanks to **Kuzomari**, we now have new character arts!

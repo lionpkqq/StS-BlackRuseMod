@@ -22,7 +22,7 @@ public class Misdirection extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 5;
+	private static final int BLOCK_AMT = 6;
 	private static final int DEBUFF = 1;
 
 	public Misdirection() {

@@ -129,7 +129,7 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage. NL Blight affects Gouge !M! times."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
 	},
 	"Haste": {
 		"NAME": "Haste",
@@ -150,7 +150,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "When attacked, throw 1 Knife that deals 4 damage and apply 1 Weak at the attacker."
+		"DESCRIPTION": "When attacked, throw 1 Knife that deals 5 damage and apply 1 Weak at the attacker."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -175,7 +175,7 @@
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Blight. NL Ethereal."
+		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Vulnerable. NL Ethereal."
 	},
 	"MorningCall": {
 		"NAME": "Morning Call",
@@ -258,7 +258,7 @@
 	},
 	"Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Vision: Throw a Knife. NL Deal !D! damage."
+		"DESCRIPTION": "Vision: Throw a Knife. NL Deal !D! damage. Apply !M! Vulnerable."
 	},
 	"Solidify": {
 		"NAME": "Solidify",
@@ -271,8 +271,8 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain 1 Strength. NL Gain 1 Dexterity. NL Backlash !M!. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Gain 1 Strength. NL Gain 1 Dexterity. NL Backlash !M!."
+		"DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!."
 	},
 	"Spin": {
 		"NAME": "Spin",
@@ -285,7 +285,7 @@
 	},
 	"Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Throw !M! Knives at random enemies. NL Each deals !D! damage. NL Ethereal."
+		"DESCRIPTION": "Throw !M! Knives at random enemies. NL Each deals !D! damage and apply 1 Blight. NL Ethereal."
 	},
 	"StressReliever": {
 		"NAME": "Stress Reliever",
@@ -331,7 +331,7 @@
 	},
 	"TimeEmbedded": {
 		"NAME": "Time Embedded",
-		"DESCRIPTION": "Gain !M! Protection."
+		"DESCRIPTION": "Gain !M! Protection. Shift: Apply 1 Weak and Vulnerable to ALL enemies."
 	},
 	"TimeWarp": {
 		"NAME": "Time Warp",

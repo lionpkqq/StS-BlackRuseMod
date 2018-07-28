@@ -18,20 +18,20 @@ public class Snipe extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 15;
-	private static final int UPGRADE_PLUS_DMG = 7;
-	private static final int THROW = 1;
+	private static final int ATTACK_DMG = 12;
+	private static final int UPGRADE_PLUS_DMG = 8;
+	private static final int VUL = 1;
 
 	public Snipe() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SNIPE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = THROW;
+		this.magicNumber = this.baseMagicNumber = VUL;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, 0, this));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, this.magicNumber, this));
 	}
 
 	public AbstractCard makeCopy() {

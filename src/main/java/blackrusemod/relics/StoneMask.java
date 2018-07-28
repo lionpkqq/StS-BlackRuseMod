@@ -19,7 +19,7 @@ public class StoneMask extends CustomRelic {
 	}
 	
 	public void onMonsterDeath(AbstractMonster m) {
-		if (!m.hasPower("Minion")) {
+		if ((!m.halfDead) && (!m.hasPower("Minion"))) {
 			AbstractDungeon.player.heal(HEAL_AMT);
 			AbstractDungeon.player.increaseMaxHp(MAX_HP_AMT, false);
 			flash();

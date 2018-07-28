@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.powers.AmplifyDamagePower;
@@ -54,8 +55,11 @@ public class ThrowKnivesAction extends AbstractGameAction {
 					this.source.getPower("KnivesPower").reducePower(1);
 					this.source.getPower("KnivesPower").updateDescription();
 					
-					if (this.source.hasPower("SurpressingFirePower")) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower("SurpressingFirePower").amount));
-					if (this.debuff != null && this.debuff == "Weakened")  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
+					if (this.source.hasPower("SurpressingFirePower")) this.source.addBlock(this.source.getPower("SurpressingFirePower").amount);
+					if (this.debuff != null && this.debuff == "Weakened")  
+						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
+					if (this.debuff != null && this.debuff == "Vulnerable")  
+						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new VulnerablePower(this.target, 1, false), 1));
 					if (this.debuff != null && this.debuff == "Amplify Damage")  {
 						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
 						if (AbstractDungeon.player.hasRelic("PaperSwan")) 

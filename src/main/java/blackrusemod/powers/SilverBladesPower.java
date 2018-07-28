@@ -21,7 +21,8 @@ public class SilverBladesPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getSilverBladesPowerTexture();
+		this.region48 = powerAltas.findRegion("silver_blades48");
+		this.region128 = powerAltas.findRegion("silver_blades128");
 	}
 	
 	public void stackPower(int stackAmount)

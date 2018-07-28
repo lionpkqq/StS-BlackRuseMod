@@ -24,8 +24,8 @@ public class DoubleEdge extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 12;
-	private static final int UPGRADE_PLUS_DMG = 3;
-	private static final int VULNERABLE = 1;
+	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int VULNERABLE = 2;
 
 	public DoubleEdge() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DOUBLE_EDGE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,

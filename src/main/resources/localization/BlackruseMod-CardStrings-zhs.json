@@ -129,7 +129,7 @@
 	},
 	"Gouge": {
 		"NAME": "凿击",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 枯萎 在凿击上发挥 !M! 倍效果。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
 	},
 	"Haste": {
 		"NAME": "疾速",
@@ -150,7 +150,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "杀手本能",
-		"DESCRIPTION": "受到攻击时，对攻击者 投掷 1把 飞刀 ，造成4点伤害并给予1层 虚弱 。"
+		"DESCRIPTION": "受到攻击时，对攻击者 投掷 1把 飞刀 ，造成5点伤害并给予1层 虚弱 。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -175,7 +175,7 @@
 	},
 	"Moonlight": {
 		"NAME": "月光",
-		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 枯萎 。 虚无 。"
+		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。 虚无 。"
 	},
 	"MorningCall": {
 		"NAME": "早安",
@@ -258,7 +258,7 @@
 	},
 	"Snipe": {
 		"NAME": "狙击",
-		"DESCRIPTION": " 视界 ： 投掷 1 把 飞刀 ，造成 !D! 点伤害。"
+		"DESCRIPTION": " 视界 ： 投掷 1 把 飞刀 ，造成 !D! 点伤害。给予 !M! 层 易伤。"
 	},
 	"Solidify": {
 		"NAME": "凝固",
@@ -271,8 +271,8 @@
 	},
 	"SpecialFormula": {
 		"NAME": "特制配方",
-		"DESCRIPTION": "获得 1 点 力量 。 NL 获得 1 点 敏捷 。 NL 反冲 !M! 。 NL 消耗 。",
-		"UPGRADE_DESCRIPTION": "获得 1 点 力量 。 NL 获得 1 点 敏捷 。 NL 反冲 !M! 。"
+		"DESCRIPTION": "获得 2 点 力量 。 NL 获得 2 点 敏捷 。 NL 反冲 !M! 。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "获得 2 点 力量 。 NL 获得 2 点 敏捷 。 NL 反冲 !M! 。"
 	},
 	"Spin": {
 		"NAME": "回旋",
@@ -285,7 +285,7 @@
 	},
 	"Starlight": {
 		"NAME": "星光",
-		"DESCRIPTION": "向一个随机敌人 投掷1把 飞刀 !M! 次，每次造成 !D! 点伤害 。 NL 虚无 。"
+		"DESCRIPTION": "向一个随机敌人 投掷1把 飞刀 !M! 次，每次造成 !D! 点伤害 并给予 1 层 枯萎 。 NL 虚无 。"
 	},
 	"StressReliever": {
 		"NAME": "解愁人",
@@ -330,8 +330,8 @@
 		"DESCRIPTION": "抽 !M! 张卡。 NL 本回合下1张打出的卡消耗为 0 。 消耗 。"
 	},
 	"TimeEmbedded": {
-		"NAME": "嵌时护甲",
-		"DESCRIPTION": "获得 !M! 点 护盾 。"
+		"NAME": "嵌时武装",
+		"DESCRIPTION": "获得 !M! 点 护盾 。 转变 ：对所有敌人附加 1 层 易伤 和 虚弱 。"
 	},
 	"TimeWarp": {
 		"NAME": "时间迁跃",

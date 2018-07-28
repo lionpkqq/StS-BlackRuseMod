@@ -18,8 +18,8 @@ public class ReturningBlade extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int ATTACK_DMG = 9;
+	private static final int UPGRADE_PLUS_DMG = 3;
 
 	public ReturningBlade() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.RETURNING_BLADE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -35,14 +35,6 @@ public class ReturningBlade extends CustomCard {
 
 	public AbstractCard makeCopy() {
 		return new ReturningBlade();
-	}
-	
-	public void applyPowers() {
-		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
-		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
-		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
-			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
-		super.applyPowers();
 	}
 
 	public void upgrade() {
