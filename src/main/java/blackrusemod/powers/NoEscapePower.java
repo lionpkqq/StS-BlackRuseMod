@@ -3,7 +3,7 @@ package blackrusemod.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,10 +23,12 @@ public class NoEscapePower extends AbstractPower {
 	private AbstractCreature source;
 	private AbstractMonster target;
 	private boolean prediction;
+	private static int idOffset;
 	
 	public NoEscapePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
-		this.ID = POWER_ID;
+		this.ID = ("NoEscapePower" + idOffset);
+		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
 		this.source = source;
@@ -39,9 +41,9 @@ public class NoEscapePower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		flash();
 		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
+			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
 			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
@@ -60,6 +62,7 @@ public class NoEscapePower extends AbstractPower {
 		}
 		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
+			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
 			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
@@ -76,7 +79,7 @@ public class NoEscapePower extends AbstractPower {
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "NoEscapePower"));
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 99));
 	}
 
 	public void updateDescription()

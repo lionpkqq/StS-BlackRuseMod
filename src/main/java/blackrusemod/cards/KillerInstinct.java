@@ -1,6 +1,5 @@
 package blackrusemod.cards;
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,13 +19,12 @@ public class KillerInstinct extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int COST_UPGRADED = 1;
-	private static final int COUNTER_PER_STACK = 1;
+	private static final int BLOCK = 3;
 
 	public KillerInstinct() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.KILLER_INSTINCT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = COUNTER_PER_STACK;
+		this.magicNumber = this.baseMagicNumber = BLOCK;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -40,7 +38,7 @@ public class KillerInstinct extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(2);
 		}
 	}
 }

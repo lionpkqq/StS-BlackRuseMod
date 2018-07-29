@@ -20,7 +20,6 @@ public class Starlight extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG = 7;
 	private static final int THROW = 4;
 	
 	public Starlight() {
@@ -41,8 +40,7 @@ public class Starlight extends CustomCard {
 	}
 	
 	public void applyPowers() {
-		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
-		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
+		this.baseDamage = ATTACK_DMG;
 		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
 			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
 		super.applyPowers();
@@ -51,7 +49,7 @@ public class Starlight extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

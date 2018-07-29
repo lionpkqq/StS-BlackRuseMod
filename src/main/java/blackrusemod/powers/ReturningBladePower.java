@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -28,10 +28,12 @@ public class ReturningBladePower extends AbstractPower {
 	private AbstractMonster target;
 	private boolean prediction;
 	private AbstractCard itself;
+	private static int idOffset;
 	
 	public ReturningBladePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction, AbstractCard c) {
 		this.name = NAME;
-		this.ID = POWER_ID;
+		this.ID = ("ReturningBladePower" + idOffset);
+		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
 		this.source = source;
@@ -45,9 +47,9 @@ public class ReturningBladePower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		flash();
 		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
+			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
@@ -63,6 +65,7 @@ public class ReturningBladePower extends AbstractPower {
 		}
 		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
+			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
 					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
@@ -76,7 +79,7 @@ public class ReturningBladePower extends AbstractPower {
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ReturningBladePower"));
+		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 99));
 	}
 
 	public void updateDescription()

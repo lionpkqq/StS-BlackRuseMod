@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,8 +27,8 @@ public class Sunlight extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 21;
-	private static final int UPGRADE_PLUS_DMG = 9;
+	private static final int ATTACK_DMG = 24;
+	private static final int UPGRADE_PLUS_DMG = 12;
 	private boolean depleted = false;
 	
 	public Sunlight() {

@@ -45,7 +45,7 @@
   },
   "KillerInstinctPower": {
     "NAME": "Killer Instinct",
-    "DESCRIPTIONS": ["When attacked, #ythrow #b", " #yKnife that deals #b5 damage and apply #b1 #yWeak to the attacker."]
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yBlock and draw 1 card for each enemy intends to attack."]
   },
   "MoonPhasePower": {
     "NAME": "Moon Phase",

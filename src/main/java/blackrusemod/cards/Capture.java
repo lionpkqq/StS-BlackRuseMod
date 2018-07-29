@@ -59,7 +59,7 @@ public class Capture extends CustomCard {
 		if (c instanceof TemporalSlicing) return true;
 		else if (c instanceof TemporalMisd) return true;
 		else if (c instanceof TemporalEssence) return true;
-		else if (c instanceof TemporalArms) return true;
+		else if (c instanceof TemporalDefense) return true;
 		else return false;
 	}
 }

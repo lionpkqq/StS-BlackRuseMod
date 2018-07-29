@@ -45,7 +45,7 @@
   },
   "KillerInstinctPower": {
     "NAME": "杀手本能",
-    "DESCRIPTIONS": ["受到攻击时，对攻击者 #y投掷 #b", " 把 #y飞刀 ，造成 #b5 点伤害并给予 #b1 层 #y虚弱 。"]
+    "DESCRIPTIONS": ["你的回合开始时，每有一个意图攻击的敌人，获得 #b", " 点 #y格挡 ，抽1张卡。"]
   },
   "MoonPhasePower": {
     "NAME": "月相",

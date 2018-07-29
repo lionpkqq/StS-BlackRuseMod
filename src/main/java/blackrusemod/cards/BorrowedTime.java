@@ -38,7 +38,7 @@ public class BorrowedTime extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
 		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(3));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawManipulationPower(p, -DRAW_LESS), -DRAW_LESS));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawManipulationPower(p, -this.magicNumber), -this.magicNumber));
 		if (this.canUpgrade()) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, -3), -3));
 		else AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergyManipulationPower(p, -2), -2));
 	}

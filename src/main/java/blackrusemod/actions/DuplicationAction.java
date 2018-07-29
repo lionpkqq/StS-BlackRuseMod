@@ -1,12 +1,16 @@
 package blackrusemod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import blackrusemod.cards.Duplication;
 
 public class DuplicationAction extends AbstractGameAction {
 	private float startingDuration;
@@ -41,6 +45,15 @@ public class DuplicationAction extends AbstractGameAction {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 				AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, false));
 				AbstractCard d = c.makeStatEquivalentCopy();
+				if (d instanceof Duplication) {
+					if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+						AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "触发了时间悖论……", 1.0F, 2.0F));
+					}
+					else {
+					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "The time paradox is triggered...", 1.0F, 2.0F));
+					}
+					d = new Madness().makeCopy();
+				}
 				AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, false));
 				d.setCostForTurn(-9);
 			}

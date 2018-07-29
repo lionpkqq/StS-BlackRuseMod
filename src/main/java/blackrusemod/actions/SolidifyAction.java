@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.TemporalArms;
+import blackrusemod.cards.TemporalDefense;
 import blackrusemod.cards.TemporalEssence;
 import blackrusemod.cards.TemporalMisd;
 import blackrusemod.cards.TemporalSlicing;
@@ -31,7 +31,7 @@ public class SolidifyAction extends AbstractGameAction {
 			this.list.add(c);
 			c = new TemporalMisd().makeCopy();
 			this.list.add(c);
-			c = new TemporalArms().makeCopy();
+			c = new TemporalDefense().makeCopy();
 			this.list.add(c);
 			c = new TemporalEssence().makeCopy();
 			this.list.add(c);
@@ -43,7 +43,7 @@ public class SolidifyAction extends AbstractGameAction {
 			c = new TemporalMisd().makeCopy();
 			c.upgrade();
 			this.list.add(c);
-			c = new TemporalArms().makeCopy();
+			c = new TemporalDefense().makeCopy();
 			c.upgrade();
 			this.list.add(c);
 			c = new TemporalEssence().makeCopy();

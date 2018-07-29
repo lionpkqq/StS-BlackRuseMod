@@ -1,10 +1,10 @@
-# StS-BlackRuseMod 0.8.2
+# StS-BlackRuseMod 0.8.3
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
 * Slay The Spire (07-26-2018)
-* ModTheSpire 2.9.0
+* ModTheSpire 2.9.1
 * BaseMod 2.17.0 (Week 34 Patch)
 
 ## Content/Gameplay ##
@@ -50,6 +50,7 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 The Wiki is still under construction. Thanks for your patience!
 
 ## List of known issues ##
+* Vision cards will crash the game if you are not playing the Servant.
 * [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
 * In rare cases, if you choose Elegance during the Ancient Writing event, the effects of both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest).
 * Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
@@ -103,6 +104,19 @@ Contributors of **FruityMod**
 ## Current State/Updates ##
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences and make them sound more natural.
+
+0.8.3
+* The Servant has become much more intelligent: now she is able stack Vision effects!
+* Fixed: Upgraded [Borrowed Time] reduce next turn draw by 5 instead of 3.
+* Fixed: [Read] would deal damage instead of gaining Block while interacting with [True Sight].
+* [Read] now gives Protection instead of Block.
+* Renamed [Temporal Arms] to [Temporal Defense]. It now applies Weak to ALL enemies.
+* [Temporal Misd] now apply Vulnearble to ALL enemies instead of Weak.
+* Slightly decreased [Initiator]'s damage.
+* Reworked the upgraded version of [Moonlight] and [Starlight].
+* Reworked the upgraded version of [Fan of Knives] and [Hightail].
+* Reworked [Feint].
+* Reworked [Killer Instinct].
 
 0.8.2
 * Uploaded even more custom power icons.

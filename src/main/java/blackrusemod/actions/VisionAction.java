@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -59,31 +58,22 @@ public class VisionAction extends AbstractGameAction {
 		else if (BlackRuseMod.vs.prediction.cardID == "_DummyNotAttack") this.prediction = false;
 		
 		if (this.card instanceof Read) {
-			if (this.source.hasPower("ReadPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "ReadPower"));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new ReadPower(this.source, this.target, this.amount, this.amount2, this.prediction), this.amount));
 			this.isDone = true;
 		}
-		
 		if (this.card instanceof Snipe) {
-			if (this.source.hasPower("SnipePower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "SnipePower"));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new SnipePower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
-		
 		if (this.card instanceof TimeTheft) {
-			if (this.source.hasPower("TimeTheftPower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "TimeTheftPower"));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new TimeTheftPower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
-		
 		if (this.card instanceof NoEscape) {
-			if (this.source.hasPower("NoEscapePower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "NoEscapePower"));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new NoEscapePower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
-		
 		if (this.card instanceof ReturningBlade) {
-			if (this.source.hasPower("ReturningBladePower")) AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "ReturningBladePower"));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new ReturningBladePower(this.source, this.target, this.amount, this.prediction, this.card), this.amount));
 			this.isDone = true;
 		}

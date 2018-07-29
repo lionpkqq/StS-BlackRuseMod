@@ -74,8 +74,9 @@
 		"DESCRIPTION": "You are not influenced by Weak, Vulnerable and Frail for 1 turn. NL Gain !B! Block."
 	},
 	"FanOfKnives": {
-		"NAME": "Fan Of Knives",
-		"DESCRIPTION": "Spend all [B]. NL Throw X Knives at EACH enemy. NL Each knife deals !D! damage."
+		"NAME": "Fan of Knives",
+		"DESCRIPTION": "Spend all [B]. NL Throw X Knives at EACH enemy. NL Each knife deals !D! damage.",
+		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Throw X+1 Knives at EACH enemy. NL Each knife deals !D! damage."
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
@@ -116,11 +117,13 @@
 	},
 	"Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X time(s). NL Backlash X."
+		"DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X time(s). NL Backlash X.",
+		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X+1 time(s). NL Backlash X+1."
 	},
 	"Feint": {
 		"NAME": "Feint",
-		"DESCRIPTION": "Deal damage equals to two times the number of cards in your hand. NL Discard your hand.",
+		"DESCRIPTION": "Spend all [B]. NL Deal damage equals to X times the number of cards in your hand. NL Discard your hand.",
+		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Deal damage equals to X+1 times the number of cards in your hand. NL Discard your hand.",
 		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
 	"GarbageDisposal": {
@@ -150,7 +153,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "When attacked, throw 1 Knife that deals 5 damage and apply 1 Weak at the attacker."
+		"DESCRIPTION": "At the start of your turn, gain !M! Block and draw 1 card for each enemy intends to attack."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -175,7 +178,7 @@
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw 2 Knives. NL Each deals !D! damage and apply 1 Vulnerable. NL Ethereal."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable. NL Ethereal."
 	},
 	"MorningCall": {
 		"NAME": "Morning Call",
@@ -188,7 +191,7 @@
 	},
 	"Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Vision: Gain !B! Block and apply !M! Weak."
+		"DESCRIPTION": "Vision: Gain !B! Protection and apply !M! Weak."
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
@@ -302,9 +305,9 @@
 		"DESCRIPTION": "Vision: Gain [B] [B] . Draw !M! card. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . Draw !M! cards. NL Exhaust."
 	},
-	"TemporalArms": {
-		"NAME": "Temporal Arms",
-		"DESCRIPTION": "Temporal. NL Obtain !M! Knives and gain !B! Block.",
+	"TemporalDefense": {
+		"NAME": "Temporal Defense",
+		"DESCRIPTION": "Temporal. NL Gain !B! Block. NL Apply !M! Weak to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalEssence": {
@@ -315,7 +318,7 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Weak to ALL enemies.",
+		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Vulnerable to ALL enemies.",
 		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
 	},
 	"TemporalSlicing": {

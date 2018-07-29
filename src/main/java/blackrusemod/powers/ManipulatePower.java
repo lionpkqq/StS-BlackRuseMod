@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.TemporalArms;
+import blackrusemod.cards.TemporalDefense;
 import blackrusemod.cards.TemporalEssence;
 import blackrusemod.cards.TemporalMisd;
 import blackrusemod.cards.TemporalSlicing;
@@ -40,13 +40,13 @@ public class ManipulatePower extends AbstractPower {
 			int randomNum = AbstractDungeon.miscRng.random(9);
 			if (randomNum == 0) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 1) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 2) c = new TemporalArms().makeCopy();
+			else if (randomNum == 2) c = new TemporalDefense().makeCopy();
 			else if (randomNum == 3) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 4) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 5) c = new TemporalArms().makeCopy();
+			else if (randomNum == 5) c = new TemporalDefense().makeCopy();
 			else if (randomNum == 6) c = new TemporalSlicing().makeCopy();
 			else if (randomNum == 7) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 8) c = new TemporalArms().makeCopy();
+			else if (randomNum == 8) c = new TemporalDefense().makeCopy();
 			else c = new TemporalEssence().makeCopy();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}

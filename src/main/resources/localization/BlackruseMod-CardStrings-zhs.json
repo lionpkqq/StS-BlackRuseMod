@@ -75,7 +75,8 @@
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
-		"DESCRIPTION": "消耗所有 [B] 。对每个敌人 投掷 X把 飞刀 ，每把造成 !D! 点伤害。"
+		"DESCRIPTION": "消耗所有 [B] 。对每个敌人 投掷 X把 飞刀 ，每把造成 !D! 点伤害。",
+		"UPGRADE_DESCRIPTION": "消耗所有 [B] 。对每个敌人 投掷 X+1把 飞刀 ，每把造成 !D! 点伤害。"
 	},
 	"Farseeing": {
 		"NAME": "远见",
@@ -116,11 +117,13 @@
 	},
 	"Hightail": {
 		"NAME": "遁走",
-		"DESCRIPTION": "消费所有 [B] 。 NL 获得 !M! 点 护盾 X 次。 NL 反冲 X 。"
+		"DESCRIPTION": "消费所有 [B] 。 NL 获得 !M! 点 护盾 X 次。 NL 反冲 X 。",
+		"UPGRADE_DESCRIPTION": "消费所有 [B] 。 NL 获得 !M! 点 护盾 X+1 次。 NL 反冲 X+1 。"
 	},
 	"Feint": {
 		"NAME": "佯攻",
-		"DESCRIPTION": "造成等于你手中卡的数量两倍的伤害，然后丢弃所有手牌。",
+		"DESCRIPTION": "消费所有 [B] 。造成等于你手中卡的数量X倍的伤害，然后丢弃所有手牌。",
+		"UPGRADE_DESCRIPTION": "消费所有 [B] 。造成等于你手中卡的数量X+1倍的伤害，然后丢弃所有手牌。",
 		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
 	"GarbageDisposal": {
@@ -150,7 +153,7 @@
 	},
 	"KillerInstinct": {
 		"NAME": "杀手本能",
-		"DESCRIPTION": "受到攻击时，对攻击者 投掷 1把 飞刀 ，造成5点伤害并给予1层 虚弱 。"
+		"DESCRIPTION": "你的回合开始时，每有一个意图攻击的敌人，你获得 !M! 点 格挡 ，抽1张卡。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -175,7 +178,7 @@
 	},
 	"Moonlight": {
 		"NAME": "月光",
-		"DESCRIPTION": " 投掷 2 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。 虚无 。"
+		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。 虚无 。"
 	},
 	"MorningCall": {
 		"NAME": "早安",
@@ -188,7 +191,7 @@
 	},
 	"Read": {
 		"NAME": "先读",
-		"DESCRIPTION": " 视界 ：获得 !B! 点 格挡 并给予 !M! 层 虚弱 。"
+		"DESCRIPTION": " 视界 ：获得 !B! 点 护盾 并给予 !M! 层 虚弱 。"
 	},
 	"Unparalleled": {
 		"NAME": "无双",
@@ -283,7 +286,7 @@
 	},
 	"Starlight": {
 		"NAME": "星光",
-		"DESCRIPTION": "向随机敌人 投掷1把 飞刀 !M! 次，每次造成 !D! 点伤害 并给予 1 层 枯萎 。 NL 虚无 。"
+		"DESCRIPTION": "向随机敌人 投掷 1把 飞刀 !M! 次，每次造成 !D! 点伤害 并给予 1 层 枯萎 。 NL 虚无 。"
 	},
 	"StressReliever": {
 		"NAME": "解愁人",
@@ -302,9 +305,9 @@
 		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 抽 !M! 张卡。 消耗 。",
 		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。抽 !M! 张卡。 消耗 。"
 	},
-	"TemporalArms": {
-		"NAME": "幻时武装",
-		"DESCRIPTION": " 幻时 。 NL 获得 !M! 把 飞刀 和 !B! 点 格挡 。",
+	"TemporalDefense": {
+		"NAME": "幻时防护",
+		"DESCRIPTION": " 幻时 。 NL 获得 !B! 点 格挡 。给予所有敌人 !M! 层 虚弱 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalEssence": {
@@ -315,7 +318,7 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 和 虚弱 。",
+		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 和 易伤。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {

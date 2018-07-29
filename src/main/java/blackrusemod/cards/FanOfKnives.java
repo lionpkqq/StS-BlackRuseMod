@@ -20,9 +20,9 @@ public class FanOfKnives extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
-	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int ATTACK_DMG = 10;
 
 	public FanOfKnives() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FAN_OF_KNIVES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -36,11 +36,13 @@ public class FanOfKnives extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
+		if (!this.canUpgrade()) this.energyOnUse += 1;
 		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
 		for (int i = 0; i < this.energyOnUse; i++)
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
 				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, null));
+		if (!this.canUpgrade()) this.energyOnUse -= 1;
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
 	}
@@ -51,7 +53,6 @@ public class FanOfKnives extends CustomCard {
 	
 	public void applyPowers() {
 		this.baseDamage = ATTACK_DMG;
-		if (!canUpgrade())  this.baseDamage += UPGRADE_PLUS_DMG;
 		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
 			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
 		super.applyPowers();
@@ -60,7 +61,8 @@ public class FanOfKnives extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
 		}
 	}
 }

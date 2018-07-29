@@ -144,7 +144,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String SUNLIGHT = "cards/sunlight.png";
     public static final String SURPRESSING_FIRE = "cards/surpressing_fire.png";
     public static final String TIME_THEFT = "cards/time_theft.png";
-    public static final String TEMPORAL_ARMS = "cards/temporal_arms.png";
+    public static final String TEMPORAL_DEFENSE = "cards/temporal_defense.png";
     public static final String TEMPORAL_ESSENCE = "cards/temporal_essence.png";
     public static final String TEMPORAL_MISD = "cards/temporal_misd.png";
     public static final String TEMPORAL_SLICING = "cards/temporal_slicing.png";
@@ -591,7 +591,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。抽到时会触发特殊效果。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被手动丢弃后触发。");
-        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。来自同名卡的效果不叠加。");
+        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
         BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
         BaseMod.addKeyword(new String[] {"再装填"}, "获得 #b5 把 #y飞刀 。抽 #b1 张卡。 #y消耗 。");
         BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。");
@@ -600,7 +600,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their special effects will be triggered when drawn.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
-        BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s). Same effects do not stack.");
+        BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s).");
         BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply 1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
         BaseMod.addKeyword(new String[] {"Rearm", "rearm"}, "Obtain #b5 #yKnives. Draw #b1 card. #yExhaust.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Unblocked damage will consume #yProtection instead of your HP.");
