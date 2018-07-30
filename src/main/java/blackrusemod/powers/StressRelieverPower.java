@@ -23,7 +23,8 @@ public class StressRelieverPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getStressRelieverPowerTexture();
+		this.region48 = powerAltas.findRegion("stress_reliever48");
+		this.region128 = powerAltas.findRegion("stress_reliever128");
 	}
 	
 	public void stackPower(int stackAmount)

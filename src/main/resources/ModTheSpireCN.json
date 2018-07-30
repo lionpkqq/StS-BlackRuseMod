@@ -4,7 +4,7 @@
   "author_list": ["墨千, Kuzomari, 昏暗"],
   "description": "基于东方角色十六夜咲夜的人物MOD，拥有75张卡的全新卡组，7种全新机制，11个专属遗物。",
   "dependencies": ["basemod"],
-  "version": "0.8.3",
+  "version": "0.8.4",
   "sts_version": "07-26-2018",
   "update_json": "https://api.github.com/repos/lionpkqq/StS-BlackRuseMod/releases/latest"
 }

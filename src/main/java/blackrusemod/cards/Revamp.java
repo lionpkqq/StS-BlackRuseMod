@@ -18,7 +18,7 @@ public class Revamp extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int REVAMP = 2;
+	private static final int REVAMP = 1;
 	
 	public Revamp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REVAMP), COST, DESCRIPTION,

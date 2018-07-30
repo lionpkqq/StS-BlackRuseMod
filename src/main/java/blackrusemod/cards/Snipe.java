@@ -31,7 +31,7 @@ public class Snipe extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, this.magicNumber, this));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.baseDamage, this.magicNumber, this));
 	}
 
 	public AbstractCard makeCopy() {

@@ -36,7 +36,8 @@ public class TimeTheftPower extends AbstractPower {
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.img = BlackRuseMod.getTimeTheftPowerTexture();
+		this.region48 = powerAltas.findRegion("time_theft48");
+		this.region128 = powerAltas.findRegion("time_theft128");
 	}
 	
 	public void atStartOfTurnPostDraw() {

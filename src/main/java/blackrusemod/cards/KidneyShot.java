@@ -20,7 +20,7 @@ public class KidneyShot extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 5;
+	private static final int ATTACK_DMG = 4;
 	private static final int THROW = 2;
 
 	public KidneyShot() {
@@ -33,7 +33,7 @@ public class KidneyShot extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (int i = 0; i < this.magicNumber; i++)
-			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Weakened"));
+			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Weakened"));
 	}
 
 	public AbstractCard makeCopy() {

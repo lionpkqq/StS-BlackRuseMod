@@ -43,7 +43,8 @@ public class ReturningBladePower extends AbstractPower {
 		this.itself = c;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.img = BlackRuseMod.getReturningBladePowerTexture();
+		this.region48 = powerAltas.findRegion("returning_blade48");
+		this.region128 = powerAltas.findRegion("returning_blade128");
 	}
 	
 	public void atStartOfTurnPostDraw() {

@@ -25,6 +25,7 @@ public class NoEscape extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.magicNumber = this.baseMagicNumber = AD;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

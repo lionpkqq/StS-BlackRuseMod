@@ -89,7 +89,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String DUAL_DIMENSION = "cards/dual_dimension.png";
     public static final String DUPLICATION = "cards/duplication.png";
     public static final String ENBODIMENT = "cards/enbodiment.png";
-    public static final String ENTANGLE = "cards/entangle.png";
+    public static final String DEFY = "cards/defy.png";
     public static final String FAN_OF_KNIVES = "cards/fan_of_knives.png";
     public static final String FARSEEING = "cards/farseeing.png";
     public static final String FAST_FORWARD = "cards/fast_forward.png";
@@ -101,7 +101,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FOLLOW_UP_2 = "cards/follow_up_2.png";
     public static final String FINISHING_TOUCH = "cards/finishing_touch.png";
     public static final String HIGHTAIL = "cards/hightail.png";
-    public static final String FEINT = "cards/feint.png";
+    public static final String DECISIVE_ATTACK = "cards/decisive_attack.png";
     public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String HASTE = "cards/haste.png";
@@ -158,20 +158,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String UNSHEATHE = "cards/unsheathe.png";
     
     // power images
-    public static final String D_WEAPONRY_POWER = "powers/d_weaponry.png";
-    public static final String FLAWLESS_FORM_POWER = "powers/flawless_form.png";
-    public static final String KILLER_INSTINCT_POWER = "powers/killer_instinct.png";
-    public static final String MOON_PHASE_POWER = "powers/moon_phase.png";
-    public static final String REALITY_MARBLE_POWER = "powers/reality_marble.png";
-    public static final String STRESS_RELIEVER_POWER = "powers/stress_reliever.png";
-    public static final String SURPRESSING_FIRE_POWER = "powers/surpressing_fire.png";
-    public static final String FLOWERING_NIGHT_POWER = "powers/flowering_night.png";
-    public static final String READ_POWER = "powers/read.png";
-    public static final String THE_WORLD_POWER = "powers/the_world.png";
-    public static final String SNIPE_POWER = "powers/snipe.png";
-    public static final String TIME_THEFT_POWER = "powers/time_theft.png";
-    public static final String NO_ESCAPE_POWER = "powers/no_escape.png";
-    public static final String RETURNING_BLADE_POWER = "powers/returning_blade.png";
     public static final String CUSTOM_POWERS = "powers/custom_powers.atlas";
     
     // relic images
@@ -212,62 +198,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String BADGE_IMG = "BRBadge.png";
     
     // texture loaders
-    public static Texture getDWeaponryPowerTexture() {
-    	return new Texture(makePath(D_WEAPONRY_POWER));
-    }
-
-    public static Texture getFlawlessFormPowerTexture() {
-    	return new Texture(makePath(FLAWLESS_FORM_POWER));
-    }
-    
-    public static Texture getKillerInstinctPowerTexture() {
-    	return new Texture(makePath(KILLER_INSTINCT_POWER));
-    }
-    
-    public static Texture getMoonPhasePowerTexture() {
-    	return new Texture(makePath(MOON_PHASE_POWER));
-    }
-    
-    public static Texture getRealityMarblePowerTexture() {
-    	return new Texture(makePath(REALITY_MARBLE_POWER));
-    }
-    
-    public static Texture getStressRelieverPowerTexture() {
-    	return new Texture(makePath(STRESS_RELIEVER_POWER));
-    }
-    
-    public static Texture getSurpressingFirePowerTexture() {
-    	return new Texture(makePath(SURPRESSING_FIRE_POWER));
-    }
-
-    public static Texture getFloweringNightPowerTexture() {
-    	return new Texture(makePath(FLOWERING_NIGHT_POWER));
-    }
-    
-    public static Texture getReadPowerTexture() {
-    	return new Texture(makePath(READ_POWER));
-    }
-    
-    public static Texture getTheWorldPowerTexture() {
-    	return new Texture(makePath(THE_WORLD_POWER));
-    }
-    
-    public static Texture getSnipePowerTexture() {
-    	return new Texture(makePath(SNIPE_POWER));
-    }
-    
-    public static Texture getTimeTheftPowerTexture() {
-    	return new Texture(makePath(TIME_THEFT_POWER));
-    }
-    
-    public static Texture getNoEscapePowerTexture() {
-    	return new Texture(makePath(NO_ESCAPE_POWER));
-    }
-    
-    public static Texture getReturningBladePowerTexture() {
-    	return new Texture(makePath(RETURNING_BLADE_POWER));
-    }
-    
     public static TextureAtlas getPowerTextureAtlas() {
     	return new TextureAtlas(makePath(CUSTOM_POWERS));
     }
@@ -377,7 +307,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new DualDimension());
 		BaseMod.addCard(new Duplication());
 		BaseMod.addCard(new Enbodiment());
-		BaseMod.addCard(new Entangle());
+		BaseMod.addCard(new Defy());
 		BaseMod.addCard(new FanOfKnives());		
 		BaseMod.addCard(new Farseeing());
 		BaseMod.addCard(new FastForward());
@@ -386,7 +316,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new FloweringNight());
 		BaseMod.addCard(new Initiator());
 		BaseMod.addCard(new Hightail());
-		BaseMod.addCard(new Feint());
+		BaseMod.addCard(new DecisiveAttack());
 		BaseMod.addCard(new GarbageDisposal());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new Haste());
@@ -455,7 +385,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("DualDimension");		
 		UnlockTracker.unlockCard("Duplication");
 		UnlockTracker.unlockCard("Enbodiment");
-		UnlockTracker.unlockCard("Entangle");
+		UnlockTracker.unlockCard("Defy");
 		UnlockTracker.unlockCard("FanOfKnives");		
 		UnlockTracker.unlockCard("Farseeing");
 		UnlockTracker.unlockCard("FastForward");
@@ -464,7 +394,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("FloweringNight");
 		UnlockTracker.unlockCard("FollowUp");
 		UnlockTracker.unlockCard("Hightail");
-		UnlockTracker.unlockCard("Feint");
+		UnlockTracker.unlockCard("Decisive Attack");
 		UnlockTracker.unlockCard("GarbageDisposal");
 		UnlockTracker.unlockCard("Gouge");
 		UnlockTracker.unlockCard("Haste");
@@ -557,26 +487,26 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 
 	@Override
 	public void receiveSetUnlocks() {
-//		// seeker unlock 1
+//		// servant unlock 1
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Flicker", "Transference", "ForceRipple"
-//				), TheSeekerEnum.THE_SEEKER, 1);
+//				), TheServantEnum.THE_SERVANT, 1);
 //		UnlockTracker.addCard("Flicker");
 //		UnlockTracker.addCard("Transference");
 //		UnlockTracker.addCard("ForceRipple");
 //		
-//		// seeker unlock 2
+//		// servant unlock 2
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Channel", "Shimmer", "ThoughtRaze"
-//				), TheSeekerEnum.THE_SEEKER, 2);
+//				), TheServantEnum.THE_SERVANT, 2);
 //		UnlockTracker.addCard("Channel");
 //		UnlockTracker.addCard("Shimmer");
 //		UnlockTracker.addCard("ThoughtRaze");
 //		
-//		// seeker unlock 3 (Vacuum tmp in place of Feedback)
+//		// servant unlock 3
 //		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 //				"Convergence", "Hypothesis", "Nexus"
-//				), TheSeekerEnum.THE_SEEKER, 3);
+//				), TheServantEnum.THE_SERVANT, 3);
 //		UnlockTracker.addCard("Convergence");
 //		UnlockTracker.addCard("Hypothesis");
 //		UnlockTracker.addCard("Nexus");
@@ -588,7 +518,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 #y飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是致命侍从的专属武器。 投掷飞刀的卡会减少飞刀的数量。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。抽到时会触发特殊效果。");
+        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。效果会在抽到时触发。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被手动丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
@@ -597,7 +527,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。");
         BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
-        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their special effects will be triggered when drawn.");
+        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their effects will be triggered when drawn.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s).");

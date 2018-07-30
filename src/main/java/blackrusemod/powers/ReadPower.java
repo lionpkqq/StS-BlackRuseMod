@@ -39,7 +39,8 @@ public class ReadPower extends AbstractPower {
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.img = BlackRuseMod.getReadPowerTexture();
+		this.region48 = powerAltas.findRegion("read48");
+		this.region128 = powerAltas.findRegion("read128");
 	}
 	
 	public void atStartOfTurnPostDraw() {

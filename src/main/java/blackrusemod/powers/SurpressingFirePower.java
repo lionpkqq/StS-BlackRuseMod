@@ -21,7 +21,8 @@ public class SurpressingFirePower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getSurpressingFirePowerTexture();
+		this.region48 = powerAltas.findRegion("surpressing_fire48");
+		this.region128 = powerAltas.findRegion("surpressing_fire128");
 	}
 	
 	public void stackPower(int stackAmount)

@@ -21,7 +21,7 @@ public class Rearm extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
-	private static final int KNIVES = 5;
+	private static final int KNIVES = 3;
 	private static final int DRAW = 1;
 	
 	public Rearm() {
@@ -29,13 +29,12 @@ public class Rearm extends CustomCard {
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = KNIVES;
-		this.exhaust = true;
 	}
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
 	}
 	
 	@Override
@@ -47,9 +46,7 @@ public class Rearm extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
-			this.exhaust = false;
+			upgradeMagicNumber(2);
 		}
 	}
 }

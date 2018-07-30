@@ -24,7 +24,8 @@ public class MoonPhasePower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getMoonPhasePowerTexture();
+		this.region48 = powerAltas.findRegion("moon_phase48");
+		this.region128 = powerAltas.findRegion("moon_phase128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -39,7 +40,7 @@ public class MoonPhasePower extends AbstractPower {
 		if (this.owner.hasPower("Weakened")) this.BLOCK += AbstractDungeon.player.getPower("Weakened").amount*this.amount;
 		if (this.owner.hasPower("Vulnerable")) this.BLOCK += AbstractDungeon.player.getPower("Vulnerable").amount*this.amount;
 		if (this.owner.hasPower("Frail")) this.BLOCK += AbstractDungeon.player.getPower("Frail").amount*this.amount;
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.BLOCK));
+		if (!(this.BLOCK == 0)) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.BLOCK));
 	}
 
 	public void updateDescription()

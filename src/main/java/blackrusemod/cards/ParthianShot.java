@@ -34,7 +34,7 @@ public class ParthianShot extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, null));
+		AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 	}
 

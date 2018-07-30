@@ -31,7 +31,8 @@ public class FloweringNightPower extends AbstractPower {
 			this.amount = amount;
 			this.amount2 = 0;
 			updateDescription();
-			this.img = BlackRuseMod.getFloweringNightPowerTexture();
+			this.region48 = powerAltas.findRegion("flowering_night48");
+			this.region128 = powerAltas.findRegion("flowering_night128");
 	}
 	
 	public void stackPower(int stackAmount) {

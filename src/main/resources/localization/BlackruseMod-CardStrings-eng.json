@@ -69,9 +69,9 @@
 		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
 		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
 	},
-	"Entangle": {
-		"NAME": "Entangle",
-		"DESCRIPTION": "You are not influenced by Weak, Vulnerable and Frail for 1 turn. NL Gain !B! Block."
+	"Defy": {
+		"NAME": "Defy",
+		"DESCRIPTION": "Gain !B! Block. NL You are not influenced by Weak, Vulnerable and Frail for 1 turn."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
@@ -120,8 +120,8 @@
 		"DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X time(s). NL Backlash X.",
 		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X+1 time(s). NL Backlash X+1."
 	},
-	"Feint": {
-		"NAME": "Feint",
+	"DecisiveAttack": {
+		"NAME": "Decisive Attack",
 		"DESCRIPTION": "Spend all [B]. NL Deal damage equals to X times the number of cards in your hand. NL Discard your hand.",
 		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Deal damage equals to X+1 times the number of cards in your hand. NL Discard your hand.",
 		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
@@ -195,7 +195,7 @@
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
-		"DESCRIPTION": "If there is no other card that costs 2 in your deck, gain !M! Strength and Dexterity."
+		"DESCRIPTION": "Gain !M! Strength and Dexterity. The first card you play each turn has Backlash 2."
 	},
 	"Potential": {
 		"NAME": "Potential",
@@ -207,7 +207,7 @@
 	},
 	"NoEscape": {
 		"NAME": "No Escape",
-		"DESCRIPTION": "Vision: Apply !M! Blight and Vulnerable."
+		"DESCRIPTION": "Vision: Apply !M! Blight and Vulnerable. NL Exhaust."
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
@@ -215,8 +215,7 @@
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card."
+		"DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -248,7 +247,7 @@
 	},
 	"ShatteredReality": {
 		"NAME": "Shattered Reality",
-		"DESCRIPTION": "Deal !D! damage. NL Shift: Deal !M! damage NL to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. NL Shift: Deal DOUBLE damage NL to ALL enemies."
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
@@ -336,7 +335,7 @@
 	},
 	"TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Deal !D! damage. NL If the enemy is a minion, deal 99 damage instead. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Shift: Draw !M! card(s) and discard !M! card(s)."
 	},
 	"TrashToTreasure": {
 		"NAME": "Trash To Treasure",

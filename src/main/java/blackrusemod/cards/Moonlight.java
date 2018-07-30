@@ -20,7 +20,7 @@ public class Moonlight extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 8;
+	private static final int ATTACK_DMG = 7;
 	private static final int THROW = 2;
 	
 	public Moonlight() {
@@ -33,7 +33,7 @@ public class Moonlight extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (int i = 0; i < this.magicNumber; i++)
-			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, "Vulnerable"));
+			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Vulnerable"));
 	}
 
 	public AbstractCard makeCopy() {

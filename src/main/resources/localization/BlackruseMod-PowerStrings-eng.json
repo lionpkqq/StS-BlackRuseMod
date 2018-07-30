@@ -89,7 +89,7 @@
   },
   "UnparalleledPower": {
     "NAME": "Unparalleled",
-    "DESCRIPTIONS": ["If there is no other card that costs #b2 in your deck, gain ", " #yStrength and #yDexterity."]
+    "DESCRIPTIONS": ["The first card you play each turn has #yBacklash #b", " ."]
   },
   "SnipePower": {
     "NAME": "Snipe",
@@ -101,15 +101,11 @@
   },
   "ReadPower": {
     "NAME": "Read",
-    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " #yBlock and apply #b", " #yWeak.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " #yBlock and apply #b", " #yWeak."]
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " #yProtection and apply #b", " #yWeak.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " #yProtection and apply #b", " #yWeak."]
   },
   "ManipulatePower": {
     "NAME": "Manipulate",
     "DESCRIPTIONS": ["Adds #b2 random #yTemporal cards to your draw pile."]
-  },
-  "UpgradedManipulatePower": {
-    "NAME": "Manipulate",
-    "DESCRIPTIONS": ["Adds #b2 random #yUpgraded #yTemporal cards to your draw pile."]
   },
   "MysterySwordPower": {
     "NAME": "Mystery Sword",

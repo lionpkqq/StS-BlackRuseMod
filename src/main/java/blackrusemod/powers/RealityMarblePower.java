@@ -22,7 +22,8 @@ public class RealityMarblePower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		updateDescription();
-		this.img = BlackRuseMod.getRealityMarblePowerTexture();
+		this.region48 = powerAltas.findRegion("reality_marble48");
+		this.region128 = powerAltas.findRegion("reality_marble128");
 	}
 	
 	public void onInitialApplication() {

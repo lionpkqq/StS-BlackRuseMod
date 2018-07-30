@@ -37,7 +37,8 @@ public class NoEscapePower extends AbstractPower {
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.img = BlackRuseMod.getNoEscapePowerTexture();
+		this.region48 = powerAltas.findRegion("no_escape48");
+		this.region128 = powerAltas.findRegion("no_escape128");
 	}
 	
 	public void atStartOfTurnPostDraw() {

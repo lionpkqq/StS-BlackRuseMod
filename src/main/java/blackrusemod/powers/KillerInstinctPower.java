@@ -25,7 +25,8 @@ public class KillerInstinctPower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.img = BlackRuseMod.getKillerInstinctPowerTexture();
+		this.region48 = powerAltas.findRegion("killer_instinct48");
+		this.region128 = powerAltas.findRegion("killer_instinct128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -36,7 +37,8 @@ public class KillerInstinctPower extends AbstractPower {
 	public void atStartOfTurnPostDraw() {
 		flash();
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			if ((mo != null) && ((mo.intent == AbstractMonster.Intent.ATTACK) || 
+			if ((mo != null) && (!mo.isDeadOrEscaped()) &&
+					((mo.intent == AbstractMonster.Intent.ATTACK) || 
 					(mo.intent == AbstractMonster.Intent.ATTACK_BUFF) || 
 					(mo.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || 
 					(mo.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {

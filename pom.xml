@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BlackRuseMods</groupId>
   <artifactId>StS-BlackRuse</artifactId>
-  <version>0.8.2</version>
+  <version>0.8.4</version>
 
   <name>StS-BlackRuse</name>
   
@@ -24,7 +24,7 @@
 		<dependency>
 			<groupId>modthespire</groupId>
 			<artifactId>modthespire</artifactId>
-			<version>2.9.0</version>
+			<version>2.9.1</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
 		</dependency>

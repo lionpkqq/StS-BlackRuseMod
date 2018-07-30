@@ -19,7 +19,7 @@ public class SurpressingFire extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK = 3;
+	private static final int BLOCK = 2;
 	
 
 	public SurpressingFire() {
@@ -39,7 +39,7 @@ public class SurpressingFire extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 }

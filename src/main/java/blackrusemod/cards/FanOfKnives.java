@@ -22,7 +22,7 @@ public class FanOfKnives extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
-	private static final int ATTACK_DMG = 10;
+	private static final int ATTACK_DMG = 9;
 
 	public FanOfKnives() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FAN_OF_KNIVES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -41,7 +41,7 @@ public class FanOfKnives extends CustomCard {
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
 		for (int i = 0; i < this.energyOnUse; i++)
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), false, null));
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
 		if (!this.canUpgrade()) this.energyOnUse -= 1;
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));

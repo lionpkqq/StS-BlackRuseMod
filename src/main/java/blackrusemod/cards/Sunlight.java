@@ -27,8 +27,8 @@ public class Sunlight extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 24;
-	private static final int UPGRADE_PLUS_DMG = 12;
+	private static final int ATTACK_DMG = 21;
+	private static final int UPGRADE_PLUS_DMG = 9;
 	private boolean depleted = false;
 	
 	public Sunlight() {

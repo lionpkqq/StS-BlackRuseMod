@@ -18,8 +18,8 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class Feint extends CustomCard {
-	public static final String ID = "Feint";
+public class DecisiveAttack extends CustomCard {
+	public static final String ID = "DecisiveAttack";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -27,8 +27,8 @@ public class Feint extends CustomCard {
 	public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = -1;
 
-	public Feint() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FEINT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+	public DecisiveAttack() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DECISIVE_ATTACK), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = 0;
@@ -42,7 +42,7 @@ public class Feint extends CustomCard {
 		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
-				AbstractGameAction.AttackEffect.SLASH_HEAVY));
+				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 10, true));
 		if (!this.canUpgrade()) this.energyOnUse -= 1;
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
@@ -50,7 +50,7 @@ public class Feint extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new Feint();
+		return new DecisiveAttack();
 	}
 	
 	public void applyPowers()
@@ -60,7 +60,8 @@ public class Feint extends CustomCard {
 		if (AbstractDungeon.player.hasRelic("Chemical X")) TIMES += 2;
 		this.baseDamage = AbstractDungeon.player.hand.size() * TIMES;
 		super.applyPowers();
-		this.rawDescription = DESCRIPTION;
+		if (!this.canUpgrade()) this.rawDescription = UPGRADED_DESCRIPTION;
+		else this.rawDescription = DESCRIPTION;
 		this.rawDescription += EXTENDED_DESCRIPTION[0];
 		initializeDescription();
 	}
@@ -68,7 +69,8 @@ public class Feint extends CustomCard {
 	public void calculateCardDamage(AbstractMonster mo)
 	{
 		super.calculateCardDamage(mo);
-		this.rawDescription = DESCRIPTION;
+		if (!this.canUpgrade()) this.rawDescription = UPGRADED_DESCRIPTION;
+		else this.rawDescription = DESCRIPTION;
 		this.rawDescription += EXTENDED_DESCRIPTION[0];
 		initializeDescription();
 	}

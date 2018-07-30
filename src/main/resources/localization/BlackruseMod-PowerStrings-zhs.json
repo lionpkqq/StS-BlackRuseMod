@@ -1,7 +1,7 @@
 {
   "DrawManipulationPower": {
-    "NAME": "抽卡操纵",
- 	"DESCRIPTIONS": ["下回合抽卡 #b", " 。"]
+    "NAME": "抽牌操纵",
+ 	"DESCRIPTIONS": ["下回合抽牌 #b", " 。"]
   },
   "BarrierPower": {
   	"NAME": "屏障",
@@ -21,11 +21,11 @@
   },
   "EnbodimentPower": {
     "NAME": "具现化",
-    "DESCRIPTIONS": ["回合结束时将 #b", " 张 #y幻时 卡加入抽牌堆。"]
+    "DESCRIPTIONS": ["回合结束时将 #b", " 张 #y幻时 牌加入抽牌堆。"]
   },
   "UpgradedEnbodimentPower": {
     "NAME": "极·具现化",
-    "DESCRIPTIONS": ["回合结束时将 #b", " 张升级过的 #y幻时 卡加入抽牌堆。"]
+    "DESCRIPTIONS": ["回合结束时将 #b", " 张升级过的 #y幻时 牌加入抽牌堆。"]
   },
   "FlawlessFormPower": {
     "NAME": "完美形态",
@@ -33,7 +33,7 @@
   },
   "FloweringNightPower": {
     "NAME": "花开之夜",
-    "DESCRIPTIONS": ["本回合每打出一张卡，抽 #b", " 张卡。你还能抽 #b", " 张卡。"]
+    "DESCRIPTIONS": ["本回合每打出一张牌，抽 #b", " 张牌。你还能抽 #b", " 张牌。"]
   },
   "AmplifyDamagePower": {
     "NAME": "枯萎",
@@ -41,11 +41,11 @@
   },
   "HastePower": {
     "NAME": "疾速",
-    "DESCRIPTIONS": ["每打出1张 #y攻击牌 ，下回合多抽 #b", " 张卡。"]
+    "DESCRIPTIONS": ["每打出1张 #y攻击牌 ，下回合多抽 #b", " 张牌。"]
   },
   "KillerInstinctPower": {
     "NAME": "杀手本能",
-    "DESCRIPTIONS": ["你的回合开始时，每有一个意图攻击的敌人，获得 #b", " 点 #y格挡 ，抽1张卡。"]
+    "DESCRIPTIONS": ["你的回合开始时，每有一个意图攻击的敌人，获得 #b", " 点 #y格挡 ，抽1张牌。"]
   },
   "MoonPhasePower": {
     "NAME": "月相",
@@ -61,7 +61,7 @@
   },
   "RealityMarblePower": {
     "NAME": "固有结界",
-    "DESCRIPTIONS": ["本次战斗内，所有卡失去 #y虚无 属性 。"]
+    "DESCRIPTIONS": ["本次战斗内，所有牌失去 #y虚无 属性 。"]
   },
   "SilverBladesPower": {
     "NAME": "银刃",
@@ -69,11 +69,11 @@
   },
   "StarChefPower": {
     "NAME": "星级厨师",
-    "DESCRIPTIONS": ["你的回合开始时，你可以消耗最多 #b", " 张卡并获得相同数量的能量。"]
+    "DESCRIPTIONS": ["你的回合开始时，你可以消耗最多 #b", " 张牌并获得相同数量的能量。"]
   },
   "StressRelieverPower": {
     "NAME": "解愁人",
-    "DESCRIPTIONS": ["你的回合开始时，检视抽牌堆顶上 #b", " 张卡，你可以选择丢弃其中的任意张。"]
+    "DESCRIPTIONS": ["你的回合开始时，检视抽牌堆顶上 #b", " 张牌，你可以选择丢弃其中的任意张。"]
   },
   "SurpressingFirePower": {
     "NAME": "火力压制",
@@ -81,7 +81,7 @@
   },
   "TheWorldPower": {
     "NAME": "世界",
-    "DESCRIPTIONS": ["本回合你打出的下一张卡不消耗能量。"]
+    "DESCRIPTIONS": ["本回合你打出的下一张牌不消耗能量。"]
   },
   "TrueSightPower": {
     "NAME": "真视",
@@ -89,7 +89,7 @@
   },
   "UnparalleledPower": {
     "NAME": "无双",
-    "DESCRIPTIONS": ["如果你的牌组里没有其他消耗 #b2 的卡，获得 ", " #y力量 和 #y敏捷 。"]
+    "DESCRIPTIONS": ["每回合打出的第一张牌具有 #y反冲 #b", " 。"]
   },
   "SnipePower": {
     "NAME": "狙击",
@@ -97,27 +97,23 @@
   },
   "TimeTheftPower": {
     "NAME": "时间盗窃",
-    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，获得 #b", " 能量。抽 #b", " 张卡。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 能量。抽 #b ", " 张卡。"]
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，获得 #b", " 能量。抽 #b", " 张牌。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 能量。抽 #b ", " 张牌。"]
   },
   "ReadPower": {
     "NAME": "先读",
-    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 获得 #b", " 点 #y格挡 并给予 #b", " 层 #y虚弱 。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 点 #y格挡 并给予 #b", " 层 #y虚弱 。"]
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 获得 #b", " 点 #y护盾 并给予 #b", " 层 #y虚弱 。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 点 #y护盾 并给予 #b", " 层 #y虚弱 。"]
   },
   "ManipulatePower": {
     "NAME": "操控",
-    "DESCRIPTIONS": ["随机将两张 #y幻时 卡加入抽卡堆。"]
-  },
-  "UpgradedManipulatePower": {
-    "NAME": "操控",
-    "DESCRIPTIONS": ["随机将两张 #y升级 过的 #y幻时 卡加入抽卡堆。"]
+    "DESCRIPTIONS": ["随机将两张 #y幻时 牌加入抽牌堆。"]
   },
   "MysterySwordPower": {
     "NAME": "神秘之剑",
-    "DESCRIPTIONS": ["下一张打出的攻击卡将造成双倍伤害并具有 #y反冲 #b3 。"]
+    "DESCRIPTIONS": ["下一张打出的攻击牌将造成双倍伤害并具有 #y反冲 #b3 。"]
   },
   "ReturningBladePower": {
     "NAME": "返刃",
-    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害，将这张卡加入手牌。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害，将这张卡加入手牌。"]
+    "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害，将这张牌加入手牌。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害，将这张牌加入手牌。"]
   },
   "ProtectionPower": {
     "NAME": "护盾",

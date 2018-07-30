@@ -17,7 +17,7 @@
   "PocketWatch": {
     "NAME": "怀表",
     "FLAVOR": "六十年如一瞬。",
-    "DESCRIPTIONS": ["每当你消耗一张卡，下回合多抽一张卡。"]
+    "DESCRIPTIONS": ["每当你消耗一张牌，下回合多抽一张牌。"]
   },
   "StoneMask": {
     "NAME": "石制面具",
@@ -27,7 +27,7 @@
   "MysterySword": {
     "NAME": "神秘之剑",
     "FLAVOR": "高塔深处找到的武器，会给使用者带来极大的负担。",
-    "DESCRIPTIONS": ["每回合打出的第一张 攻击卡 造成的伤害翻倍并具有 #y反冲 #b3 。"]
+    "DESCRIPTIONS": ["每回合打出的第一张 攻击牌 造成的伤害翻倍并具有 #y反冲 #b3 。"]
   },
   "PaperSwan": {
     "NAME": "纸天鹅",

@@ -22,7 +22,7 @@ public class Unsheathe extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int UPGRADE_PLUS_DMG = 4;
 	private static final int BACKLASH = 3;
 
 	public Unsheathe() {

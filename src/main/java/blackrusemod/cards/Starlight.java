@@ -20,7 +20,7 @@ public class Starlight extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 5;
-	private static final int THROW = 4;
+	private static final int THROW = 3;
 	
 	public Starlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STARLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
@@ -32,7 +32,9 @@ public class Starlight extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 			for (int i = 0; i < this.magicNumber; i++)
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn), true, "Amplify Damage"));
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, 
+						AbstractDungeon.getMonsters().getRandomMonster(true), 
+						new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Amplify Damage"));
 	}
 
 	public AbstractCard makeCopy() {

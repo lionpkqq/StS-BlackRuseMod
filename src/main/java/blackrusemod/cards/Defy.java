@@ -14,29 +14,29 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.FalseFlawlessFormPower;
 
-public class Entangle extends CustomCard {
-	public static final String ID = "Entangle";
+public class Defy extends CustomCard {
+	public static final String ID = "Defy";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 7;
+	private static final int BLOCK_AMT = 8;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
 
-	public Entangle() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.ENTANGLE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+	public Defy() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DEFY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.SELF);
 		this.baseBlock = BLOCK_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FalseFlawlessFormPower(p, 1), 1));
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FalseFlawlessFormPower(p, 1), 1));
 	}
 
 	public AbstractCard makeCopy() {
-		return new Entangle();
+		return new Defy();
 	}
 
 	public void upgrade() {

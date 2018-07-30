@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.8.3
+# StS-BlackRuseMod 0.8.4
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
@@ -21,7 +21,7 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 * **Knives**: Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.
 * **Throw**: Throw will spend your Knives. If you have depleted your Knives, the card will stop working.
 * **Blight**: Blighted enemies will take extra damage when attacked.
-* **Temporal**: Temporal cards are Unplayable and Ethereal. Their unique effects will be triggered when drawn.
+* **Temporal**: Temporal cards are Unplayable and Ethereal. Their effects will be triggered when drawn.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
 * **Backlash X**: Apply 1 random Weak, Vulnerable or Frail to you X times.
@@ -50,11 +50,11 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 The Wiki is still under construction. Thanks for your patience!
 
 ## List of known issues ##
-* Vision cards will crash the game if you are not playing the Servant.
+* Vision cards will crash the game if you are not playing as the Servant.
 * [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
 * In rare cases, if you choose Elegance during the Ancient Writing event, the effects of both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest).
 * Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
-* Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues) so far.
+* Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues).
 
 ## Credits / Acknowledgements ##
 * BlackRuse (https://github.com/lionpkqq) - design, programming and project management.
@@ -64,7 +64,7 @@ The Wiki is still under construction. Thanks for your patience!
 * Gogo (https://github.com/gogo81745) - programming consultation.
 * HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬 and more!
 
 ## Special Thanks ##
 
@@ -104,6 +104,17 @@ Contributors of **FruityMod**
 ## Current State/Updates ##
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences and make them sound more natural.
+
+0.8.4
+* All custom powers have custom icons now.
+* Reworked [Time Warp].
+* Reworked [Unparalleled].
+* Renamed [Entangle] to [Defy] and changed its illustration.
+* Renamed [Feint] to [Decisive Attack].
+* Fixed: [Decisive Attack]'s upgraded description is not showing in combat.
+* Fixed: [Killer Instinct] is triggered more frequently than it should be in the Gremlin Leader fight.
+* Fixed: [FanOfKnives], [Starlight], [KillingDoll], [Shattered Reality] and [Temporal Slicing] deal the same damage to all enemies, ignoring their individual powers.
+* Now [Shattered Reality] does DOUBLE damage to ALL enemies when discarded.
 
 0.8.3
 * The Servant has become much more intelligent: now she is able stack Vision effects!

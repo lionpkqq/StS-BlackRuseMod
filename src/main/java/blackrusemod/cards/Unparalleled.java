@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -22,7 +24,6 @@ public class Unparalleled extends CustomCard {
 	private static final int COST_UPGRADED = 1;
 	private static final int UP = 2;
 	
-
 	public Unparalleled() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.UNPARALLELED), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
@@ -31,6 +32,8 @@ public class Unparalleled extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UnparalleledPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
