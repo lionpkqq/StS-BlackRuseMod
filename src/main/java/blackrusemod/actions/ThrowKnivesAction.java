@@ -73,7 +73,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
 					}
 				}
-				else AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, 
+				else if (this.target.halfDead)
+					AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, 
 						AbstractDungeon.getMonsters().getRandomMonster(true), this.info, null));
 			}
 		}
