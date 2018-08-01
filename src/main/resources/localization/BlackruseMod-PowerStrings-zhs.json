@@ -55,8 +55,8 @@
     "NAME": "杀气",
     "DESCRIPTIONS": ["你的回合开始时，所有敌人获得 #b", " 层 #y枯萎 。"]
   },
-  "NoEscapePower": {
-    "NAME": "无处可逃",
+  "DeadlinePower": {
+    "NAME": "死亡期限",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。", "下回合，如果目标敌人意图 #y不是攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。"]
   },
   "RealityMarblePower": {

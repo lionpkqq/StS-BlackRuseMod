@@ -12,16 +12,16 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class NoEscape extends CustomCard {
-	public static final String ID = "NoEscape";
+public class Deadline extends CustomCard {
+	public static final String ID = "Deadline";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int AD = 3;
 
-	public NoEscape() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.NO_ESCAPE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+	public Deadline() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DEADLINE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.magicNumber = this.baseMagicNumber = AD;
@@ -33,7 +33,7 @@ public class NoEscape extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new NoEscape();
+		return new Deadline();
 	}
 
 	public void upgrade() {

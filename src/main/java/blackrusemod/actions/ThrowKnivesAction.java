@@ -1,16 +1,12 @@
 package blackrusemod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -35,15 +31,7 @@ public class ThrowKnivesAction extends AbstractGameAction {
 	public void update()
 	{
 		if (this.source.hasPower("KnivesPower")) {
-			if (this.source.getPower("KnivesPower").amount <= 0) {
-				if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "我的飞刀用光了！", 1.0F, 2.0F));
-				}
-				else {
-				AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "I have depleted my Knives!", 1.0F, 2.0F));
-				}
-			}
-			else {
+			if (this.source.getPower("KnivesPower").amount > 0) {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
 					this.target.damageFlash = true;
 					this.target.damageFlashFrames = 4;
@@ -59,7 +47,7 @@ public class ThrowKnivesAction extends AbstractGameAction {
 					this.source.getPower("KnivesPower").updateDescription();
 					
 					if (this.source.hasPower("SurpressingFirePower")) {
-						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
 						this.source.addBlock(this.source.getPower("SurpressingFirePower").amount);
 					}
 					if (this.debuff != null && this.debuff == "Weakened")  
@@ -73,20 +61,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
 					}
 				}
-				else if (this.target.halfDead)
-					AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, 
-						AbstractDungeon.getMonsters().getRandomMonster(true), this.info, null));
 			}
 		}
-		else {
-			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-				AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "身上没有飞刀！", 1.0F, 2.0F));
-			}
-			else {
-			AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "I don't have any Knives!", 1.0F, 2.0F));
-			}
-		}
-
 		this.isDone = true;
 	}
 }

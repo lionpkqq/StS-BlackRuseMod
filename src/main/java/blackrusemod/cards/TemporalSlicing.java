@@ -4,10 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,10 +13,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.TemporalDamageAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class TemporalSlicing extends CustomCard {
@@ -44,25 +41,9 @@ public class TemporalSlicing extends CustomCard {
 	}
 	
 	public void triggerWhenDrawn() {
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.0F));
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			if ((mo != null) && (!mo.isDeadOrEscaped())) {
-				AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(AbstractDungeon.player,
-						damageCalculation(AbstractDungeon.player, mo, this.baseDamage), this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.NONE));
-			}
-		}
-
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.0F));
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			if ((mo != null) && (!mo.isDeadOrEscaped())) {
-				AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(AbstractDungeon.player,
-						damageCalculation(AbstractDungeon.player, mo, this.baseDamage), this.damageTypeForTurn),
-						AbstractGameAction.AttackEffect.NONE));
-			}
-		}
+		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
+		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
+		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
 	}
 	
 	public boolean canUse(AbstractPlayer p, AbstractMonster m)

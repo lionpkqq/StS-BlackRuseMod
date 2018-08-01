@@ -1,14 +1,9 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.ReturningBladeAction;
 
 public class ReturningBladePower extends AbstractPower {
 	public static final String POWER_ID = "ReturningBladePower";
@@ -51,32 +47,24 @@ public class ReturningBladePower extends AbstractPower {
 		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
 			this.flash();
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
+			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
 				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
 				{
-					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
-							AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-					AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
+					AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}
 		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
 			this.flash();
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
-					AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
+			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 			if (this.owner.hasPower("TrueSightPower")) 
 				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
 				{
-					AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL),
-							AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-					AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.itself.makeStatEquivalentCopy(), false));
+					AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
 					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 				}
 		}

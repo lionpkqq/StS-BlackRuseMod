@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import blackrusemod.BlackRuseMod;
 
-public class NoEscapePower extends AbstractPower {
-	public static final String POWER_ID = "NoEscapePower";
+public class DeadlinePower extends AbstractPower {
+	public static final String POWER_ID = "DeadlinePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,7 +25,7 @@ public class NoEscapePower extends AbstractPower {
 	private boolean prediction;
 	private static int idOffset;
 	
-	public NoEscapePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
+	public DeadlinePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
 		this.ID = ("NoEscapePower" + idOffset);
 		idOffset += 1;

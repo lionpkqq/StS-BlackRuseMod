@@ -17,30 +17,41 @@ public class ReturningBlade extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
-	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int COST = 1;
+	private static final int ATTACK_DMG = 6;
+	
+	public ReturningBlade()
+	{
+		this(0);
+	}
 
-	public ReturningBlade() {
+	public ReturningBlade(int upgrades) {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.RETURNING_BLADE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.exhaust = true;
+		this.timesUpgraded = upgrades;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.damage, 0, this));
+		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.baseDamage, 0, this));
 	}
 
 	public AbstractCard makeCopy() {
-		return new ReturningBlade();
+		return new ReturningBlade(this.timesUpgraded);
+	}
+	
+	public void upgrade()
+	{
+		upgradeDamage(2);
+		this.timesUpgraded += 1;
+		this.upgraded = true;
+		this.name = (NAME + "+" + this.timesUpgraded);
+		initializeTitle();
 	}
 
-	public void upgrade() {
-		if (!this.upgraded) {
-			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-		}
+	public boolean canUpgrade()
+	{
+		return true;
 	}
 }

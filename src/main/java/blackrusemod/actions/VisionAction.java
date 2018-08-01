@@ -11,14 +11,14 @@ import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.NoEscape;
+import blackrusemod.cards.Deadline;
 import blackrusemod.cards.Read;
 import blackrusemod.cards.ReturningBlade;
 import blackrusemod.cards.Snipe;
 import blackrusemod.cards.TimeTheft;
 import blackrusemod.cards._DummyAttack;
 import blackrusemod.cards._DummyNotAttack;
-import blackrusemod.powers.NoEscapePower;
+import blackrusemod.powers.DeadlinePower;
 import blackrusemod.powers.ReadPower;
 import blackrusemod.powers.ReturningBladePower;
 import blackrusemod.powers.SnipePower;
@@ -48,7 +48,7 @@ public class VisionAction extends AbstractGameAction {
 	{
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				BlackRuseMod.vs.open(this.list, null, "敌人的意图会是？");
+				BlackRuseMod.vs.open(this.list, null, "敌人的意图是？");
 			else BlackRuseMod.vs.open(this.list, null, "The enemy's intent will be?");
 			tickDuration();
 			return;
@@ -69,8 +69,8 @@ public class VisionAction extends AbstractGameAction {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new TimeTheftPower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
-		if (this.card instanceof NoEscape) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new NoEscapePower(this.source, this.target, this.amount, this.prediction), this.amount));
+		if (this.card instanceof Deadline) {
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new DeadlinePower(this.source, this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof ReturningBlade) {

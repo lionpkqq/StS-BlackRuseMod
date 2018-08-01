@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.8.5
+# StS-BlackRuseMod 0.8.6
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
@@ -8,9 +8,9 @@ Currently supported versions:
 * BaseMod 2.17.0 (Week 34 Patch)
 
 ## Content/Gameplay ##
-**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics. 
+**BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
 
-**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways. 
+**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways.
 
 You can check the updates at the bottom of this page.
 
@@ -104,6 +104,19 @@ Contributors of **FruityMod**
 ## Current State/Updates ##
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences and make them sound more natural.
+
+0.8.6
+* Fixed: Using Knives to finish the Awakened One crashes the game.
+* Removed dialogues: Now the Servant will NOT remind the player when the Knives run out. 
+* Fixed: [Returning Blade] can only deal 1 damage to Nemesis.
+* Fixed: Using a power after using [The World] nullifies the effect of [Mummified Hand].
+* Fixed: [Surpressing Fire]'s visual effects appear on top of the enemy instead of the Servant.
+* Fixed: Sometimes, [Temporal Slicing] only deals base damage.
+* Reworked [Returning Blade].
+* Renamed [No Escape] to [Deadline].
+* [Moon Phase] cost 1 -> 2
+* [Unruled] damage bonus 3(5) -> 2(3)
+* [Read] Protection 12(16) -> 14(20)
 
 0.8.5
 * Fixed: Knives transfer to other targets when the main target is dead.

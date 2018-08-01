@@ -205,8 +205,8 @@
 		"NAME": "黯灭",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。 消耗 。"
 	},
-	"NoEscape": {
-		"NAME": "无处可逃",
+	"Deadline": {
+		"NAME": "死亡期限",
 		"DESCRIPTION": " 视界 ：给予 !M! 层 枯萎 和 易伤 。 NL 消耗 。"
 	},
 	"RealityMarble": {
@@ -227,7 +227,7 @@
 	},
 	"ReturningBlade": {
 		"NAME": "返刃",
-		"DESCRIPTION": " 视界 ：造成 !D! 点伤害，将这张牌的复制品放入手牌。 NL 消耗 。"
+		"DESCRIPTION": " 视界 ：造成 !D! 点伤害，将这张牌放入手牌并升级。 NL 能被多次升级。"
 	},
 	"Revamp": {
 		"NAME": "翻新",

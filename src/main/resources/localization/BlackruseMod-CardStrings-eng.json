@@ -205,8 +205,8 @@
 		"NAME": "Desolation",
 		"DESCRIPTION": "Deal !D! damage. NL Double the enemy's Blight. NL Exhaust."
 	},
-	"NoEscape": {
-		"NAME": "No Escape",
+	"Deadline": {
+		"NAME": "Deadline",
 		"DESCRIPTION": "Vision: Apply !M! Blight and Vulnerable. NL Exhaust."
 	},
 	"RealityMarble": {
@@ -227,7 +227,7 @@
 	},
 	"ReturningBlade": {
 		"NAME": "Returning Blade",
-		"DESCRIPTION": "Vision: Deal !D! damage and put a copy of this card in your hand. NL Exhaust."
+		"DESCRIPTION": "Vision: Deal !D! damage, put this card in your hand and upgrade it. NL Can be upgraded any number of times."
 	},
 	"Revamp": {
 		"NAME": "Revamp",
@@ -281,7 +281,7 @@
 	"StarChef": {
 		"NAME": "Star Chef",
 		"DESCRIPTION": "At the start of your turn, you may exhaust 1 card and thereby gain [B].",
-		"UPGRADE_DESCRIPTION": "Innate. At the start of your turn, you may exhaust 1 card and thereby gain [B]."
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may exhaust 1 card and thereby gain [B]."
 	},
 	"Starlight": {
 		"NAME": "Starlight",

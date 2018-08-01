@@ -41,16 +41,12 @@ public class TheWorldPower extends AbstractPower {
 			c.setCostForTurn(-9);
 	}
 	
-	public void onRemove()
-	{
+	public void onUseCard(AbstractCard card, UseCardAction action) {
+		flash();
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			 c.costForTurn = c.cost;
 			 c.isCostModifiedForTurn = false;
 		}
-	}
-	
-	public void onUseCard(AbstractCard card, UseCardAction action) {
-		flash();
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
 		if (card instanceof TheWorld) 
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
@@ -58,6 +54,10 @@ public class TheWorldPower extends AbstractPower {
 	}
 	
 	public void atEndOfTurn (boolean isPlayer) {
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			 c.costForTurn = c.cost;
+			 c.isCostModifiedForTurn = false;
+		}
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
 	}
 

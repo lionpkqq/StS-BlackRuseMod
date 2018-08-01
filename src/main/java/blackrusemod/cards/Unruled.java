@@ -21,7 +21,7 @@ public class Unruled extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int UPGRADE_PLUS_DMG = 2;
 	private boolean debuffed;
 
 	public Unruled() {
@@ -60,7 +60,7 @@ public class Unruled extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 }

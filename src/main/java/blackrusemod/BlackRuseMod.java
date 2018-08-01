@@ -116,7 +116,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String MOONLIGHT = "cards/moonlight.png";
     public static final String MORNING_CALL = "cards/morning_call.png";
     public static final String MURDEROUS_AURA = "cards/murderous_aura.png";
-    public static final String NO_ESCAPE = "cards/no_escape.png";
+    public static final String DEADLINE = "cards/deadline.png";
     public static final String POTENTIAL = "cards/potential.png";
     public static final String DESOLATION = "cards/desolation.png";
     public static final String READ = "cards/read.png";
@@ -332,7 +332,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Moonlight());
 		BaseMod.addCard(new MorningCall());
 		BaseMod.addCard(new MurderousAura());
-		BaseMod.addCard(new NoEscape());
+		BaseMod.addCard(new Deadline());
 		BaseMod.addCard(new Potential());
 		BaseMod.addCard(new Desolation());
 		BaseMod.addCard(new Read());
@@ -410,7 +410,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Moonlight");
 		UnlockTracker.unlockCard("MorningCall");
 		UnlockTracker.unlockCard("MurderousAura");
-		UnlockTracker.unlockCard("NoEscape");
+		UnlockTracker.unlockCard("Deadline");
 		UnlockTracker.unlockCard("Potential");
 		UnlockTracker.unlockCard("Desolation");
 		UnlockTracker.unlockCard("Read");

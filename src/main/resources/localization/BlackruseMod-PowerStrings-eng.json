@@ -55,8 +55,8 @@
     "NAME": "Murderous Aura",
     "DESCRIPTIONS": ["At the start of your turn£¬ apply #b", " #yBlight to ALL enemies."]
   },
-  "NoEscapePower": {
-    "NAME": "No Escape",
+  "DeadlinePower": {
+    "NAME": "Deadline",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, apply #b", " #yBlight and #yVulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, apply #b", " #yBlight and #yVulnerable."]
   },
   "RealityMarblePower": {
