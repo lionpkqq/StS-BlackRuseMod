@@ -7,12 +7,12 @@
   "Broom": {
     "NAME": "扫帚",
     "FLAVOR": "女仆的必备工具。",
-    "DESCRIPTIONS": ["每丢弃 #b10 张牌，获得 [B] 。"]
+    "DESCRIPTIONS": ["每手动丢弃 #b10 张牌，获得 [B] 。"]
   },
   "KneeBrace": {
     "NAME": "护膝",
     "FLAVOR": "能有效预防滑囊炎。",
-    "DESCRIPTIONS": ["每当你触发 #y转变 效果，获得 #b", " 点 #y格挡 。"]
+    "DESCRIPTIONS": ["每当你触发 #y转变 效果，获得 #b3 点 #y格挡 。"]
   },
   "PocketWatch": {
     "NAME": "怀表",

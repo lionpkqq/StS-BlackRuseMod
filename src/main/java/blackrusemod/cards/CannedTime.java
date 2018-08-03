@@ -13,22 +13,22 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class MorningCall extends CustomCard {
-	public static final String ID = "MorningCall";
+public class CannedTime extends CustomCard {
+	public static final String ID = "CannedTime";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int DRAW = 2;
 	
-	public MorningCall() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MORNING_CALL), COST, DESCRIPTION,
+	public CannedTime() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CANNED_TIME), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
 		this.isEthereal = true;
-		this.isInnate = true;
 	}
 	
 	@Override
@@ -38,14 +38,16 @@ public class MorningCall extends CustomCard {
 	
 	@Override
 	public AbstractCard makeCopy() {
-		return new MorningCall();
+		return new CannedTime();
 	}
 	
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			this.isInnate = true;
 		}
 	}
 }

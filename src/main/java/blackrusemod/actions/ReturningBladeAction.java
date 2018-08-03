@@ -1,33 +1,31 @@
 package blackrusemod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 public class ReturningBladeAction extends AbstractGameAction {
-	private DamageInfo info;
 	private AbstractCard itself;
 	private int where;
+	private int damage;
 	public ReturningBladeAction(AbstractCreature target, int damage, AbstractCard itself)
 	{
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.target = target;
-		this.info = new DamageInfo(AbstractDungeon.player, damage, DamageType.NORMAL);
+		this.damage = damage;
 		this.itself = itself;
 	}
 
 	public void update()
 	{
-		AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-		this.info.applyPowers(this.info.owner, this.target);
-		this.target.damage(this.info);
-		itself.upgrade();
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
+		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.damage));
 		for (AbstractCard c: AbstractDungeon.player.discardPile.group) if (c == this.itself) this.where = 0;
 		for (AbstractCard c: AbstractDungeon.player.drawPile.group) if (c == this.itself) this.where = 1;
 		for (AbstractCard c: AbstractDungeon.player.exhaustPile.group) if (c == this.itself) this.where = 2;
@@ -58,10 +56,9 @@ public class ReturningBladeAction extends AbstractGameAction {
 				AbstractDungeon.player.hand.addToTop(this.itself);
 			}
 		}
-		AbstractDungeon.actionManager.addToTop(new WaitAction(0.2F));
-		itself.superFlash();
 		AbstractDungeon.player.hand.refreshHandLayout();
 		AbstractDungeon.player.hand.applyPowers();
+		AbstractDungeon.player.hand.glowCheck();
 		this.isDone = true;
 	}
 }

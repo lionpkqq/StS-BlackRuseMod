@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
+import com.megacrit.cardcrawl.actions.utility.UpdateCardDescriptionAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -60,9 +61,10 @@ public class Potential extends CustomCard {
 	
 	public void triggerOnManualDiscard() {
 		this.baseDamage += this.magicNumber;
-		AbstractDungeon.actionManager.addToTop(new DiscardToHandAction(this));
-		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
 		this.superFlash();
+		AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
+		AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
+		AbstractDungeon.actionManager.addToBottom(new UpdateCardDescriptionAction(this));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}

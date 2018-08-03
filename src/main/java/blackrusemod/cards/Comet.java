@@ -48,7 +48,6 @@ public class Comet extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(1);
 		}
 	}
 }

@@ -43,7 +43,7 @@ public class ReturningBlade extends CustomCard {
 	
 	public void upgrade()
 	{
-		upgradeDamage(2);
+		upgradeDamage(2 + this.timesUpgraded);
 		this.timesUpgraded += 1;
 		this.upgraded = true;
 		this.name = (NAME + "+" + this.timesUpgraded);

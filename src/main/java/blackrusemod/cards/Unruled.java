@@ -59,7 +59,7 @@ public class Unruled extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeDamage(2);
 			upgradeMagicNumber(1);
 		}
 	}

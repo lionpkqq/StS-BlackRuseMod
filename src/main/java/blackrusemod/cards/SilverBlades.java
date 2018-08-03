@@ -19,7 +19,7 @@ public class SilverBlades extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DAMAGE_UPGRADE = 2;
+	private static final int DAMAGE_UPGRADE = 3;
 
 	public SilverBlades() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SILVER_BLADES), COST, DESCRIPTION, AbstractCard.CardType.POWER,
@@ -38,7 +38,7 @@ public class SilverBlades extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(2);
 		}
 	}
 }

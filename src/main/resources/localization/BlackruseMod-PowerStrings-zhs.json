@@ -85,11 +85,11 @@
   },
   "TrueSightPower": {
     "NAME": "真视",
-    "DESCRIPTIONS": [" #y视界 效果会多触发 #b", " 次。"]
+    "DESCRIPTIONS": [" #y视界 效果一定会触发。"]
   },
   "UnparalleledPower": {
     "NAME": "无双",
-    "DESCRIPTIONS": ["每回合打出的第一张牌具有 #y反冲 #b", " 。"]
+    "DESCRIPTIONS": ["当你受到攻击时，减少承受的伤害 #b", " 点并对攻击者造成 #b", " 点伤害。"]
   },
   "SnipePower": {
     "NAME": "狙击",

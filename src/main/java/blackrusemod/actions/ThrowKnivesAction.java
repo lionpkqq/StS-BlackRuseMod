@@ -35,7 +35,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
 					this.target.damageFlash = true;
 					this.target.damageFlashFrames = 4;
-					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
+							AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 					this.info.applyPowers(this.info.owner, this.target);
 					this.target.damage(this.info);
 					AbstractDungeon.actionManager.addToTop(new WaitAction(0.06F));

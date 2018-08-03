@@ -19,21 +19,14 @@ public class TrueSightPower extends AbstractPower {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
-		this.amount = amount;
 		this.priority = 4;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("true_sight48");
 		this.region128 = powerAltas.findRegion("true_sight128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
 	public void updateDescription()
 	{
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		this.description = DESCRIPTIONS[0];
 	}
 }

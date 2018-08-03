@@ -4,7 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
@@ -41,8 +43,11 @@ public class TemporalSlicing extends CustomCard {
 	}
 	
 	public void triggerWhenDrawn() {
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
 		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
-		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
+		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
 		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
 	}
 	

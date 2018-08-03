@@ -1,8 +1,9 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +11,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.BacklashAction;
 
 public class UnparalleledPower extends AbstractPower {
 	public static final String POWER_ID = "UnparalleledPower";
@@ -18,40 +18,42 @@ public class UnparalleledPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
-	private boolean backlashed = true;
+	private DamageInfo thornsInfo;
+	private int actual_damage;
 	
 	public UnparalleledPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
-		this.type = AbstractPower.PowerType.DEBUFF;
-		this.backlashed = true;
+		this.thornsInfo = new DamageInfo(owner, this.amount, DamageInfo.DamageType.THORNS);
 		updateDescription();
 		this.region48 = powerAltas.findRegion("unparalleled48");
 		this.region128 = powerAltas.findRegion("unparalleled128");
-	}
-	
-	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if (this.backlashed == false) {
-			flash();
-			AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.amount));
-			this.backlashed = true;
-		}
-	}
-	
-	public void atEndOfTurn(boolean isPlayer) {
-		this.backlashed = false;
 	}
 	
 	public void stackPower(int stackAmount)
 	{
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+		this.thornsInfo = new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS);
+		updateDescription();
+	}
+	
+	public int onAttacked(DamageInfo info, int damageAmount)
+	{
+		if ((info.owner != null) && (info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != this.owner))
+		{
+			flash();
+			AbstractDungeon.actionManager.addToTop(new DamageAction(info.owner, this.thornsInfo, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+		}
+		actual_damage = damageAmount - this.amount;
+		if (actual_damage < 0) actual_damage = 0;
+		return actual_damage;
 	}
 
 	public void updateDescription()
 	{
-		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
 	}
 }

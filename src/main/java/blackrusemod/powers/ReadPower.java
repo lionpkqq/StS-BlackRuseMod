@@ -44,19 +44,19 @@ public class ReadPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
+		if (this.owner.hasPower("TrueSightPower"))  
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-			if (this.owner.hasPower("TrueSightPower")) 
-				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
-				{
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
-					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-				}
+		}
+		else if (!this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
+		{
+			this.flash();
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 		}
 		else if (this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
@@ -64,13 +64,6 @@ public class ReadPower extends AbstractPower {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
 			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-			if (this.owner.hasPower("TrueSightPower")) 
-				for (int i = 0; i < this.owner.getPower("TrueSightPower").amount; i++)
-				{
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
-					if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-				}
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 99));
 	}

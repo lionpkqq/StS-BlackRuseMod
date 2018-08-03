@@ -21,7 +21,7 @@ public class ShiftingGears extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int DRAW = 2;
+	private static final int DRAW = 3;
 
 	public ShiftingGears() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_GEARS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

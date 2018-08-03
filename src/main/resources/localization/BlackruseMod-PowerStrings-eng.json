@@ -85,11 +85,11 @@
   },
   "TrueSightPower": {
     "NAME": "True Sight",
-    "DESCRIPTIONS": ["#yVision effects will trigger #b", " additional time(s)."]
+    "DESCRIPTIONS": ["#yVision effects will always be triggered."]
   },
   "UnparalleledPower": {
     "NAME": "Unparalleled",
-    "DESCRIPTIONS": ["The first card you play each turn has #yBacklash #b", " ."]
+    "DESCRIPTIONS": ["Whenever you are attacked, take #b", " less damage and deal #b", " damage to the attacker."]
   },
   "SnipePower": {
     "NAME": "Snipe",

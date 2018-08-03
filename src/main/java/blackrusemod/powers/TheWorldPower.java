@@ -1,5 +1,7 @@
 package blackrusemod.powers;
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.MummifiedAction;
 import blackrusemod.cards.TheWorld;
 
 public class TheWorldPower extends AbstractPower {
@@ -20,6 +23,8 @@ public class TheWorldPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
+	public ArrayList<AbstractCard> zero_cost = new ArrayList<AbstractCard>();
+	private boolean doNothing;
 	
 	public TheWorldPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -29,35 +34,45 @@ public class TheWorldPower extends AbstractPower {
 		updateDescription();
 		this.region48 = powerAltas.findRegion("the_world48");
 		this.region128 = powerAltas.findRegion("the_world128");
+		this.doNothing = false;
 	}
 	
 	public void onInitialApplication() {
-		for (AbstractCard c : AbstractDungeon.player.hand.group) 
-			c.setCostForTurn(-9);
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			if (c.costForTurn == 0) zero_cost.add(c);
+			else c.setCostForTurn(-9);
+		}
 	}
 	
 	public void onDrawOrDiscard() {
-		for (AbstractCard c : AbstractDungeon.player.hand.group) 
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			c.setCostForTurn(-9);
+		}
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		flash();
-		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			 c.costForTurn = c.cost;
-			 c.isCostModifiedForTurn = false;
-		}
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
+		AbstractDungeon.actionManager.addToBottom(new MummifiedAction(card, this));
 		if (card instanceof TheWorld) 
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 					new TheWorldPower(AbstractDungeon.player, -1), -1));
 	}
 	
-	public void atEndOfTurn (boolean isPlayer) {
+	public void onRemove() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			 c.costForTurn = c.cost;
-			 c.isCostModifiedForTurn = false;
+			 for (AbstractCard c2 : zero_cost)
+				 if (c == c2)
+					 this.doNothing =  true;
+			 if (!this.doNothing) {
+				 c.costForTurn = c.cost;
+				 c.isCostModifiedForTurn = false;
+			 }
+			 this.doNothing =  false;
 		}
+	}
+	
+	public void atEndOfTurn (boolean isPlayer) {
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
 	}
 

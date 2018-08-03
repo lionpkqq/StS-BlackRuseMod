@@ -1,9 +1,9 @@
-# StS-BlackRuseMod 0.8.6
+# StS-BlackRuseMod 0.8.7
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (07-26-2018)
+* Slay The Spire (08-02-2018)
 * ModTheSpire 2.9.1
 * BaseMod 2.17.0 (Week 34 Patch)
 
@@ -60,11 +60,11 @@ The Wiki is still under construction. Thanks for your patience!
 * BlackRuse (https://github.com/lionpkqq) - design, programming and project management.
 * Kuzomari (https://www.deviantart.com/kuzomari) - character concept arts and models.
 * Dimlight (~~咕咕~~昏暗) - UI and card illustrations.
-* OPM (一下午) (Tencent QQ: 1315659893) - texture filter patch and programming consultation.
+* OPM (一下午) (Tencent QQ: 1315659893) - texture filter patch, ascension patch and programming consultation.
 * Gogo (https://github.com/gogo81745) - programming consultation.
 * HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬 and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk and more!
 
 ## Special Thanks ##
 
@@ -103,7 +103,49 @@ Contributors of **FruityMod**
 
 ## Current State/Updates ##
 * Needs more play-testing.
-* Please let me know if you can rephrase any sentences and make them sound more natural.
+* Please let me know if you can rephrase any sentences to make them sound more natural.
+
+0.8.7
+Balance:
+* [Comet] draw 2(3) cards -> draw 2(2) cards
+* [Deny] discard 2(4) -> 2(3)
+* [Desolation] cost 2 -> 1
+* [Desolation] damage 16(24) -> 12(18)
+* [Double Edge] damage 14(18) -> 13(17)
+* [Duplication] cost 1 -> 2
+* [Farseeing] gain 9 Block next turn -> draw 2 more cards next turn
+* [Killer Instinct] cost 2 -> 1
+* [Killer Instinct] gain 3(5) Block -> gain 2(3) Block
+* [Moon Phase] cost 2 -> 1
+* [Moon Phase] gain 2(3) Block -> gain 1(2) Block
+* [Shifting Gears] draw 2 cards -> draw 3 cards
+* [Silver Blades] 2(3) bonus damage -> 3(5) bonus damage
+* [Snipe] damage 12(20) -> 12(18)
+* [Spin] damage 12(16) -> 11(15)
+* [Sunlight] deal 21(30) damage -> deal 24(32) damage
+* [Read] gain Protection 14(20) -> 16(24)
+* [Rearm] cost 0 -> 1
+* [Rearm] obtain 3 Knives -> obtain 6 Knives
+* [Rearm] draw 1 card -> draw 2(3) cards
+
+Changes and reworks:
+* Renamed [Morning Call] to [Canned Time] and it's no longer Innate.
+* [Fan of Knives] is now an uncommon card.
+* [Initiator] is now a rare card.
+* Reworked [Gouge].
+* Reworked [Returning Blade].
+* Reworked [Shifting Thoughts].
+* Reworked [Time Theft].
+* Reworked [True Sight].
+* Reworked [Unparalleled].
+* Deleted [First Strike] and added [Ricochet].
+* Deleted [Laundry] and added [D. Passage].
+* New illustrations for [Defy] and [Flawless Form].
+
+Bug fixes:
+* Fixed: [The World] does not actually reduce the cost of the next card you play.
+* Now [The World] will not reset the cost of the card affected by [Mummified Hand].
+* Fixed: [Temporal Slicing] has weird animation.
 
 0.8.6
 * Fixed: Using Knives to finish the Awakened One crashes the game.

@@ -26,7 +26,7 @@ public class Initiator extends CustomCard {
 
 	public Initiator() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.INITIATOR), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 	}

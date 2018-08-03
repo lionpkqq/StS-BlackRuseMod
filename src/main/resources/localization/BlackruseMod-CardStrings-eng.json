@@ -80,15 +80,15 @@
 	},
 	"Farseeing": {
 		"NAME": "Farseeing",
-		"DESCRIPTION": "Next turn, NL gain !B! Block NL and [B]."
+		"DESCRIPTION": "Next turn, NL gain [B] and NL draw !M! more cards."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
 		"DESCRIPTION": "Gain !B! Block. NL If there is no Attack in your hand, draw !M! cards."
 	},
-	"FirstStrike": {
-		"NAME": "First Strike",
-		"DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Shift: Gain !B! Block."
+	"Ricochet": {
+		"NAME": "Ricochet",
+		"DESCRIPTION": "Throw a Knife that deals !D! damage and bounces between enemies !M! times."
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
@@ -132,7 +132,8 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+		"DESCRIPTION": "Spend all [B] . NL Deal !D! damage and apply 1 Blight X times.",
+		"UPGRADE_DESCRIPTION": "Spend all [B] . NL Deal !D! damage and apply 1 Blight X+1 times."
 	},
 	"Haste": {
 		"NAME": "Haste",
@@ -153,16 +154,15 @@
 	},
 	"KillerInstinct": {
 		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the start of your turn, gain !M! Block and draw 1 card for each enemy intends to attack."
+		"DESCRIPTION": "At the start of your turn, gain !M! Block and draw 1 card for each attacking enemy."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
 		"DESCRIPTION": "Throw ALL Knives at random enemies. NL Each deals !D! damage. NL Exhaust. "
 	},
-	"Laundry": {
-		"NAME": "Laundry",
-		"DESCRIPTION": "Exhaust all Curse and Status in your deck. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Exhaust all Curse and Status in your deck. NL Exhaust."
+	"DPassage": {
+		"NAME": "D. Passage",
+		"DESCRIPTION": "Put all cards in your exhaust pile to your draw pile and shuffle. NL Exhaust."
 	},
 	"Manipulate": {
 		"NAME": "Manipulate",
@@ -180,9 +180,10 @@
 		"NAME": "Moonlight",
 		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable. NL Ethereal."
 	},
-	"MorningCall": {
-		"NAME": "Morning Call",
-		"DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust. NL Ethereal."
+	"CannedTime": {
+		"NAME": "Canned Time",
+		"DESCRIPTION": "Draw !M! cards. NL Exhaust. NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust. NL Ethereal."
 	},
 	"MurderousAura": {
 		"NAME": "Murderous Aura",
@@ -195,7 +196,7 @@
 	},
 	"Unparalleled": {
 		"NAME": "Unparalleled",
-		"DESCRIPTION": "Gain !M! Strength and Dexterity. The first card you play each turn has Backlash 2."
+		"DESCRIPTION": "Whenever you are attacked, take !M! less damage and deal !M! damage to the attacker."
 	},
 	"Potential": {
 		"NAME": "Potential",
@@ -227,7 +228,7 @@
 	},
 	"ReturningBlade": {
 		"NAME": "Returning Blade",
-		"DESCRIPTION": "Vision: Deal !D! damage, put this card in your hand and upgrade it. NL Can be upgraded any number of times."
+		"DESCRIPTION": "Vision: Deal !D! damage to ALL enemies, put this card in your hand. NL Can be upgraded any number of times."
 	},
 	"Revamp": {
 		"NAME": "Revamp",
@@ -251,7 +252,7 @@
 	},
 	"ShiftingThoughts": {
 		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Gain !B! Block. NL Discard the top 2 cards of your draw pile. NL Shift: Draw !M! cards."
+		"DESCRIPTION": "Discard the top !M! cards of your draw pile. NL Draw !M! cards. NL Shift: gain [B] ."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
@@ -301,8 +302,7 @@
 	},
 	"TimeTheft": {
 		"NAME": "Time Theft",
-		"DESCRIPTION": "Vision: Gain [B] [B] . Draw !M! card. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "Vision: Gain [B] [B] [B] . Draw !M! cards. NL Exhaust."
 	},
 	"TemporalDefense": {
 		"NAME": "Temporal Defense",
@@ -344,8 +344,8 @@
 	},
 	"TrueSight": {
 		"NAME": "True Sight",
-		"DESCRIPTION": "Each time you trigger a Vision effect, trigger it 1 additional time.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Each time you trigger a Vision effect, trigger it 1 additional time."
+		"DESCRIPTION": "Vision effects will always be triggered.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Vision effects will always be triggered."
 	},
 	"Unruled": {
 		"NAME": "Unruled",

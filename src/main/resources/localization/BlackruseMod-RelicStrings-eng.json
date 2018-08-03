@@ -7,12 +7,12 @@
   "Broom": {
     "NAME": "Broom",
     "FLAVOR": "A must-have for every maid.",
-    "DESCRIPTIONS": ["Every #b10 cards you discard, gain [B] ."]
+    "DESCRIPTIONS": ["Every #b10 cards you manually discard, gain [B] ."]
   },
   "KneeBrace": {
     "NAME": "Knee Brace",
     "FLAVOR": "Quite useful for avoiding bursitis.",
-    "DESCRIPTIONS": ["Gain #b", " #yBlock for each #yShift effect you trigger."]
+    "DESCRIPTIONS": ["Gain #b3 #yBlock for each #yShift effect you trigger."]
   },
   "PocketWatch": {
     "NAME": "Pocket Watch",

@@ -27,7 +27,7 @@ public class TrueSight extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TrueSightPower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TrueSightPower(p, -1), -1));
 	}
 
 	public AbstractCard makeCopy() {
