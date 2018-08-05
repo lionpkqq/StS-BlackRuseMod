@@ -2,7 +2,6 @@ package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +16,6 @@ public class SilverSoulPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
-	private int stack;
 	
 	public SilverSoulPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -41,11 +39,8 @@ public class SilverSoulPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurn() {
-		if (this.owner.hasPower("KnivesPower")) {
-			flash();
-			this.stack = Math.min(this.amount, this.owner.getPower("KnivesPower").amount);
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "KnivesPower", this.stack));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SatellitePower(this.owner, this.stack), this.stack));
-		}
+		flash();
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, 
+				new SatellitePower(this.owner, this.amount), this.amount));
 	}
 }

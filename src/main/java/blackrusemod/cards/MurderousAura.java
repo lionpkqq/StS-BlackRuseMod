@@ -19,7 +19,7 @@ public class MurderousAura extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 1;
+	private static final int COST = 2;
 
 	public MurderousAura() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MURDEROUS_AURA), COST, DESCRIPTION, AbstractCard.CardType.POWER,

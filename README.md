@@ -105,6 +105,14 @@ Contributors of **FruityMod**
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
 
+0.8.8 HOTFIX
+Balance:
+* [Gear Up] no longer draw a card
+* [Murderous Aura] cost 1 -> 2
+
+Bug fixes:
+* Fixed: [Silver Soul] cost Knives to gain Satellites.
+
 0.8.8
 Added a new mechanic: Satellite.
 
@@ -162,11 +170,11 @@ Changes and reworks:
 * Deleted [Shifting Thoughts] and added [Dancing Silver].
 
 Bug fixes:
-* Fixed: Choosing Elegance during the Ancient Writing event results in incorrect outcome.
+* Fixed: Choosing Elegance during the Ancient Writing event results in an incorrect outcome.
 * Fixed: [Gouge] scales inversely with Blight.
 * Fixed: The Knives power icon remains even when its amount is 0.
 * Fixed: Sometimes, Vision effects are triggered even though the target is dead or missing.
-* Fixed: [The World] works as if the player has relic [Mummified Hand] even when the player does not.
+* Fixed: [The World] works as if the player has the relic [Mummified Hand] even when the player does not.
 
 0.8.7
 Balance:

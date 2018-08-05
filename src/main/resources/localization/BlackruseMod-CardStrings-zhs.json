@@ -78,7 +78,7 @@
 	},
 	"GearUp": {
 		"NAME": "蓄势待发",
-		"DESCRIPTION": "抽1张牌。获得 !M! 点 护盾 。获得 !M! 把 飞刀 。获得1层 卫星 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。获得 !M! 把 飞刀 。获得1层 卫星 。"
 	},
 	"FastForward": {
 		"NAME": "快进",

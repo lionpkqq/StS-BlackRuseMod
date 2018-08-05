@@ -78,7 +78,7 @@
 	},
 	"GearUp": {
 		"NAME": "Gear Up",
-		"DESCRIPTION": "Draw 1 card. NL Gain !M! Protection. NL Obtain !M! Knives. NL Gain 1 Satellite."
+		"DESCRIPTION": "Gain !M! Protection. NL Obtain !M! Knives. NL Gain 1 Satellite."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
