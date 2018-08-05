@@ -17,7 +17,7 @@
 	},
 	"Advance": {
 		"NAME": "预支",
-		"DESCRIPTION": "获得 [B] [B] 。 NL 反冲 !M! 。 NL 消耗 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 获得 [B] [B] 。 NL 消耗 。 NL 虚无 。"
 	},
 	"Alleviate": {
 		"NAME": "减负",
@@ -25,12 +25,11 @@
 	},
 	"Barrier": {
 		"NAME": "屏障",
-		"DESCRIPTION": "下回合获得1层 无实体 。 NL 消耗 。"
+		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 护盾 。"
 	},
-	"BorrowedTime": {
-		"NAME": "回光返照",
-		"DESCRIPTION": "抽5张牌。  NL  获得 [B] [B] [B] 。  NL  下回合少抽 !M! 张牌并损失 [B] [B] [B] 。  NL  消耗 。",
-		"UPGRADE_DESCRIPTION": "抽5张牌。  NL  获得 [B] [B] [B] 。  NL  下回合少抽 !M! 张牌并损失  [B] [B] 。  NL  消耗 。"
+	"PendulumOfEternity": {
+		"NAME": "永恒钟摆",
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 转变 ：耗能减少 [B] 。"
 	},
 	"ParthianShot": {
 		"NAME": "一击脱离",
@@ -42,7 +41,7 @@
 	},
 	"CosmicInflation": {
 		"NAME": "宇宙膨胀",
-		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌的复制品放在抽牌堆顶部。 消耗 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 将这张牌的复制品放在抽牌堆顶部。 消耗 。"
 	},
 	"DWeaponry": {
 		"NAME": "次元武库",
@@ -58,7 +57,7 @@
 	},
 	"DualDimension": {
 		"NAME": "二重次元",
-		"DESCRIPTION": " 飞刀 的数量翻倍。 NL 消耗 。 NL 转变 ：获得 !M! 点 护盾 。"
+		"DESCRIPTION": " 护盾 翻倍。 NL 消耗 。 NL 转变 ：获得 !M! 点 护盾 。"
 	},
 	"Duplication": {
 		"NAME": "复制体",
@@ -75,12 +74,11 @@
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
-		"DESCRIPTION": "消耗所有 [B] 。对每个敌人 投掷 X把 飞刀 ，每把造成 !D! 点伤害。",
-		"UPGRADE_DESCRIPTION": "消耗所有 [B] 。对每个敌人 投掷 X+1把 飞刀 ，每把造成 !D! 点伤害。"
+		"DESCRIPTION": "对每个敌人 投掷 X把 飞刀 ，每把造成 !D! 点伤害。"
 	},
-	"Farseeing": {
-		"NAME": "远见",
-		"DESCRIPTION": "下回合多抽 !M! 张卡 。 NL 下回合获得 [B] 。"
+	"GearUp": {
+		"NAME": "蓄势待发",
+		"DESCRIPTION": "抽1张牌。获得 !M! 点 护盾 。获得 !M! 把 飞刀 。获得1层 卫星 。"
 	},
 	"FastForward": {
 		"NAME": "快进",
@@ -92,8 +90,8 @@
 	},
 	"FlawlessForm": {
 		"NAME": "完美形态",
-		"DESCRIPTION": "你不会受到 虚弱 、 易伤 和 脆弱 的影响。",
-		"UPGRADE_DESCRIPTION": " 固有 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 点 护盾 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。"
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
@@ -117,13 +115,13 @@
 	},
 	"Hightail": {
 		"NAME": "遁走",
-		"DESCRIPTION": "消费所有 [B] 。 NL 获得 !M! 点 护盾 X 次。 NL 反冲 X 。",
-		"UPGRADE_DESCRIPTION": "消费所有 [B] 。 NL 获得 !M! 点 护盾 X+1 次。 NL 反冲 X+1 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 X 。",
+		"UPGRADE_DESCRIPTION": "获得 !M! 点 护盾 X+1 次。 NL 反冲 X+1 。"
 	},
 	"DecisiveAttack": {
 		"NAME": "一击制胜",
-		"DESCRIPTION": "消费所有 [B] 。造成等于你手中牌的数量X倍的伤害，然后丢弃所有手牌。",
-		"UPGRADE_DESCRIPTION": "消费所有 [B] 。造成等于你手中牌的数量 X+1 倍的伤害，然后丢弃所有手牌。",
+		"DESCRIPTION": "造成等于你手中牌的数量X倍的伤害，然后丢弃所有手牌。",
+		"UPGRADE_DESCRIPTION": "造成等于你手中牌的数量 X+1 倍的伤害，然后丢弃所有手牌。",
 		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
 	"GarbageDisposal": {
@@ -132,8 +130,8 @@
 	},
 	"Gouge": {
 		"NAME": "凿击",
-		"DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X次。",
-		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X+1次。"
+		"DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X次。 消耗 。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X+1次。 消耗 。"
 	},
 	"Haste": {
 		"NAME": "疾速",
@@ -142,19 +140,19 @@
 	},
 	"HouseCleaning": {
 		"NAME": "打扫",
-		"DESCRIPTION": "丢弃 2 张手牌。 NL 获得 3 把 飞刀 。"
+		"DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 !M! 张手牌。 NL 获得 3 把 飞刀 。"
 	},
 	"Capture": {
 		"NAME": "捕获",
-		"DESCRIPTION": "造成 !D! 点伤害。 如果你的抽牌堆有至少 !M! 张 幻时 牌，抽2张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 如果你的抽牌堆有至少 !M! 张 虚无 牌，抽2张牌。"
 	},
 	"KidneyShot": {
 		"NAME": "肾击",
 		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 虚弱 。"
 	},
-	"KillerInstinct": {
-		"NAME": "杀手本能",
-		"DESCRIPTION": "你的回合开始时，每有一个意图攻击的敌人，你获得 !M! 点 格挡 ，抽1张牌。"
+	"WasteNot": {
+		"NAME": "物尽其用",
+		"DESCRIPTION": "你的回合结束时，消费所有 [B] 。每消费1点 [B] ，下回合多抽1张牌。"
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
@@ -162,7 +160,7 @@
 	},
 	"DPassage": {
 		"NAME": "次元通道",
-		"DESCRIPTION": "将消耗牌堆里所有的卡放入抽牌堆并洗牌。 消耗 。"
+		"DESCRIPTION": "将消耗牌堆里所有的牌放入抽牌堆并洗牌。 消耗 。"
 	},
 	"Manipulate": {
 		"NAME": "操控",
@@ -178,7 +176,7 @@
 	},
 	"Moonlight": {
 		"NAME": "月光",
-		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。 虚无 。"
+		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。"
 	},
 	"CannedTime": {
 		"NAME": "罐装时间",
@@ -194,9 +192,9 @@
 		"NAME": "先读",
 		"DESCRIPTION": " 视界 ：获得 !B! 点 护盾 并给予 !M! 层 虚弱 。"
 	},
-	"Unparalleled": {
-		"NAME": "无双",
-		"DESCRIPTION": "当你受到攻击时，减少承受的伤害 !M! 点并对攻击者造成 !M! 点伤害。"
+	"DancingSilver": {
+		"NAME": "舞银",
+		"DESCRIPTION": "获得 !M! 把 飞刀 。 NL 获得 !M! 层 卫星 。"
 	},
 	"Potential": {
 		"NAME": "潜能",
@@ -207,16 +205,16 @@
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。 消耗 。"
 	},
 	"Deadline": {
-		"NAME": "死亡期限",
+		"NAME": "死限",
 		"DESCRIPTION": " 视界 ：给予 !M! 层 枯萎 和 易伤 。 NL 消耗 。"
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
-		"DESCRIPTION": " 固有 。 NL 本次战斗内，所有牌失去 虚无 属性。"
+		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌失去 虚无 属性。"
 	},
 	"Rearm": {
 		"NAME": "再装填",
-		"DESCRIPTION": "获得 !M! 把 飞刀 。 NL 抽 1 张牌 。"
+		"DESCRIPTION": "抽 !M! 张牌 。 NL 获得 6 把 飞刀 。"
 	},
 	"Replace": {
 		"NAME": "替代",
@@ -244,15 +242,15 @@
 	},
 	"ShiftingGears": {
 		"NAME": "换档",
-		"DESCRIPTION": "抽 !M! 张牌。 NL 转变 ：获得 1 点 敏捷 。"
+		"DESCRIPTION": "丢弃抽牌堆顶的 !M! 张牌。抽 !M! 张牌。 NL 转变 ：获得 1 点 敏捷 。"
 	},
 	"ShatteredReality": {
 		"NAME": "破碎现实",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：对所有敌人造成双倍伤害 。"
 	},
-	"ShiftingThoughts": {
-		"NAME": "思想变换",
-		"DESCRIPTION": "丢弃抽牌堆顶的 !M! 张牌。抽 !M! 张牌。 NL 转变 ：获得 [B] 。"
+	"SilverSoul": {
+		"NAME": "银魂",
+		"DESCRIPTION": "你的回合开始时，获得1层 卫星 。"
 	},
 	"SilverBlades": {
 		"NAME": "银刃",
@@ -286,7 +284,7 @@
 	},
 	"Starlight": {
 		"NAME": "星光",
-		"DESCRIPTION": "向随机敌人 投掷 1把 飞刀 !M! 次，每次造成 !D! 点伤害 并给予 1 层 枯萎 。 NL 虚无 。"
+		"DESCRIPTION": "向随机敌人 投掷 1把 飞刀 !M! 次，每次造成 !D! 点伤害。"
 	},
 	"StressReliever": {
 		"NAME": "解愁人",
@@ -294,7 +292,7 @@
 	},
 	"Sunlight": {
 		"NAME": "日光",
-		"DESCRIPTION": " 投掷  1 把 飞刀 ，对所有敌人造成 !D! 点伤害。 NL 虚无 。"
+		"DESCRIPTION": " 投掷  1 把 飞刀 ，对所有敌人造成 !D! 点伤害并给予1层 枯萎 。"
 	},
 	"SurpressingFire": {
 		"NAME": "火力压制",
@@ -330,12 +328,12 @@
 		"DESCRIPTION": "抽 !M! 张牌。 NL 本回合下1张打出的牌消耗为 0 。 消耗 。"
 	},
 	"TimeEmbedded": {
-		"NAME": "嵌时武装",
-		"DESCRIPTION": "获得 !M! 点 护盾 。 转变 ：对所有敌人附加 1 层 易伤 和 虚弱 。"
+		"NAME": "嵌时护甲",
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 把所有的 格挡 转化为 护盾 。"
 	},
 	"TimeWarp": {
 		"NAME": "时间迁跃",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：抽 !M! 张牌，丢弃 !M! 张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。丢弃1张牌。 NL 转变 ：抽 !M! 张牌。"
 	},
 	"TrashToTreasure": {
 		"NAME": "变废为宝",

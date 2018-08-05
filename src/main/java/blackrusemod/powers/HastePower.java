@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 
 import blackrusemod.BlackRuseMod;
 
@@ -37,7 +38,8 @@ public class HastePower extends AbstractPower {
 
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		if (card.type == AbstractCard.CardType.ATTACK) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DrawManipulationPower(this.owner, this.amount), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, 
+					new DrawCardNextTurnPower(this.owner, this.amount), this.amount));
 			flash();
 		}
 	}

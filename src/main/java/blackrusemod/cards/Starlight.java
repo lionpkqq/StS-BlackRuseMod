@@ -18,23 +18,21 @@ public class Starlight extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 5;
-	private static final int THROW = 3;
+	private static final int COST = 2;
+	private static final int ATTACK_DMG = 4;
+	private static final int THROW = 6;
 	
 	public Starlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STARLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = THROW;
-		this.isEthereal = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 			for (int i = 0; i < this.magicNumber; i++)
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, 
-						AbstractDungeon.getMonsters().getRandomMonster(true), 
-						new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Amplify Damage"));
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), 
+						new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
 	}
 
 	public AbstractCard makeCopy() {
@@ -51,7 +49,7 @@ public class Starlight extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(2);
 		}
 	}
 }

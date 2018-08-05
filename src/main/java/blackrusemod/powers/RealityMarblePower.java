@@ -1,7 +1,6 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +8,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.RealityMarbleAction;
 
 public class RealityMarblePower extends AbstractPower {
 	public static final String POWER_ID = "RealityMarblePower";
@@ -21,25 +21,26 @@ public class RealityMarblePower extends AbstractPower {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
+		this.amount = amount;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("reality_marble48");
 		this.region128 = powerAltas.findRegion("reality_marble128");
 	}
 	
-	public void onInitialApplication() {
-		for (AbstractCard c : AbstractDungeon.player.hand.group) c.isEthereal = false;
-		for (AbstractCard c : AbstractDungeon.player.drawPile.group) c.isEthereal = false;
-		for (AbstractCard c : AbstractDungeon.player.discardPile.group) c.isEthereal = false;
+	public void stackPower(int stackAmount)
+	{
+		this.fontScale = 8.0F;
+		this.amount += stackAmount;
 	}
 	
 	public void atEndOfTurn(boolean isPlayer) {
-		for (AbstractCard c : AbstractDungeon.player.hand.group) c.isEthereal = false;
-		for (AbstractCard c : AbstractDungeon.player.drawPile.group) c.isEthereal = false;
-		for (AbstractCard c : AbstractDungeon.player.discardPile.group) c.isEthereal = false;
+		if ((isPlayer) && (!AbstractDungeon.player.hand.isEmpty())) {
+			AbstractDungeon.actionManager.addToBottom(new RealityMarbleAction(this.owner, this.amount));
+		}
 	}
 
 	public void updateDescription()
 	{
-		this.description = DESCRIPTIONS[0];
+		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 	}
 }

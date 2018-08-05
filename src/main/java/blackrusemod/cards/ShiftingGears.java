@@ -3,6 +3,7 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.ShiftingThoughtsAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class ShiftingGears extends CustomCard {
@@ -31,7 +33,9 @@ public class ShiftingGears extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ShiftingThoughtsAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 	}
 	
 	public void triggerOnManualDiscard() {

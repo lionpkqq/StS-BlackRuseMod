@@ -24,7 +24,7 @@ public class TrashToTreasure extends CustomCard {
 	public TrashToTreasure() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TRASH_TO_TREASURE), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
 	}

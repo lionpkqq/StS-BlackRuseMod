@@ -31,7 +31,7 @@ public class TimeWarp extends CustomCard {
 
 	public TimeWarp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_WARP), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = DISCARD_AND_DRAW;
@@ -42,11 +42,11 @@ public class TimeWarp extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
 	}
 	
 	public void triggerOnManualDiscard() {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new DiscardAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber, false));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}

@@ -1,16 +1,4 @@
 {
-  "DrawManipulationPower": {
-    "NAME": "Draw Manipulation",
-    "DESCRIPTIONS": ["You will draw #b", " card(s) next turn."]
-  },
-  "BarrierPower": {
-    "NAME": "Barrier",
-    "DESCRIPTIONS": ["You will gain #b", " #yIntangible next turn."]
-  },
-  "EnergyManipulationPower": {
-    "NAME": "Energy Manipulation",
-    "DESCRIPTIONS": ["You will get #b", " energy next turn."]
-  },
   "DWeaponryPower": {
     "NAME": "Dimensional Weaponry",
     "DESCRIPTIONS": ["At the start of your turn, obtain #b", " #yKnives."]
@@ -43,9 +31,9 @@
     "NAME": "Haste",
     "DESCRIPTIONS": ["Each time you play an #yAttack card, draw #b", " more card next turn."]
   },
-  "KillerInstinctPower": {
-    "NAME": "Killer Instinct",
-    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yBlock and draw 1 card for each enemy intends to attack."]
+  "WasteNotPower": {
+    "NAME": "Waste Not",
+    "DESCRIPTIONS": ["At the end of your turn, spend all [B] . Draw #b", " more card next turn for each [B] you spend."]
   },
   "MoonPhasePower": {
     "NAME": "Moon Phase",
@@ -61,7 +49,7 @@
   },
   "RealityMarblePower": {
     "NAME": "Reality Marble",
-    "DESCRIPTIONS": ["All cards lose #yEthereal property for this combat."]
+    "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " card. The cards you retain lose #yEthereal."]
   },
   "SilverBladesPower": {
     "NAME": "Silver Blades",
@@ -87,9 +75,9 @@
     "NAME": "True Sight",
     "DESCRIPTIONS": ["#yVision effects will always be triggered."]
   },
-  "UnparalleledPower": {
-    "NAME": "Unparalleled",
-    "DESCRIPTIONS": ["Whenever you are attacked, take #b", " less damage and deal #b", " damage to the attacker."]
+  "SatellitePower": {
+    "NAME": "Satellite",
+    "DESCRIPTIONS": ["Whenever you are attacked, lose #b1 #ySatellite and reduce the damage by #b5. Whenever you use an Attack, lose #b1 #ySatellite and attack an extra time for #b", " base damage."]
   },
   "SnipePower": {
     "NAME": "Snipe",
@@ -107,10 +95,6 @@
     "NAME": "Manipulate",
     "DESCRIPTIONS": ["Adds #b2 random #yTemporal cards to your draw pile."]
   },
-  "MysterySwordPower": {
-    "NAME": "Mystery Sword",
-    "DESCRIPTIONS": ["The next #yAttack you play does double damage and has #yBacklash #b3."]
-  },
   "ReturningBladePower": {
     "NAME": "Returning Blade",
     "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and put a copy of this card in your hand.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and put a copy of this card in your hand."]
@@ -122,5 +106,9 @@
   "FalseFlawlessFormPower": {
     "NAME": "False Flawless Form",
     "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail for #b", " turn."]
+  },
+  "SilverSoulPower": {
+    "NAME": "Silver Soul",
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #ySatellite."]
   }
 }

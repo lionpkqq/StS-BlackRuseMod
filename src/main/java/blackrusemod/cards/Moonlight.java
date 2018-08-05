@@ -19,15 +19,14 @@ public class Moonlight extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
-	private static final int ATTACK_DMG = 7;
+	private static final int COST = 1;
+	private static final int ATTACK_DMG = 5;
 	private static final int THROW = 2;
 	
 	public Moonlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOONLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.isEthereal = true;
 		this.magicNumber = this.baseMagicNumber = THROW;
 	}
 

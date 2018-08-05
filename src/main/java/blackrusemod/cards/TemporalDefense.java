@@ -8,11 +8,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ProtectionPower;
 
 public class TemporalDefense extends CustomCard {
 	public static final String ID = "TemporalDefense";
@@ -21,16 +21,17 @@ public class TemporalDefense extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int COST = -2;
-	private static final int BLOCK_AMT = 8;
-	private static final int UPGRADE_PLUS_BLOCK = 4;
-	private static final int WEAK = 1;
+	private static final int BLOCK_AMT = 4;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
+	private static final int PROTECTION_AMT = 4;
+	private static final int UPGRADE_PROTECTION_BLOCK = 2;
 
 	public TemporalDefense() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_DEFENSE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
 		this.isEthereal = true;
 		this.baseBlock = BLOCK_AMT;
-		this.magicNumber = this.baseMagicNumber = WEAK;
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,10 +46,8 @@ public class TemporalDefense extends CustomCard {
 	public void triggerWhenDrawn() {
 		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
-					new WeakPower(mo, this.magicNumber, false), this.magicNumber));
-		}
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
+				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 	}
 	public AbstractCard makeCopy() {
 		return new TemporalDefense();
@@ -58,7 +57,7 @@ public class TemporalDefense extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeBlock(UPGRADE_PLUS_BLOCK);
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
 		}
 	}
 }

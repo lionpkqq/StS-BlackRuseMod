@@ -23,7 +23,7 @@ public class Hightail extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
-	private static final int PROTECTION = 8;
+	private static final int PROTECTION = 7;
 
 	public Hightail() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HIGHTAIL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

@@ -1,426 +1,398 @@
 
 custom_powers.png
-size: 2048,512
+size: 1024,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-barrier128
-  rotate: false
-  xy: 912, 232
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-barrier48
-  rotate: false
-  xy: 1632, 392
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
-  index: -1
 blight128
   rotate: false
-  xy: 522, 362
-  size: 128, 128
+  xy: 779, 415
+  size: 91, 93
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 19
   index: -1
 blight48
   rotate: false
-  xy: 1632, 442
-  size: 48, 48
+  xy: 909, 389
+  size: 34, 34
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 8
   index: -1
 d_weaponry128
   rotate: false
-  xy: 132, 102
-  size: 128, 128
+  xy: 2, 209
+  size: 93, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 16
   index: -1
 d_weaponry48
   rotate: false
-  xy: 102, 52
-  size: 48, 48
+  xy: 547, 377
+  size: 35, 36
   orig: 48, 48
-  offset: 0, 0
-  index: -1
-draw_manipulation128
-  rotate: false
-  xy: 1302, 362
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-draw_manipulation48
-  rotate: false
-  xy: 1482, 392
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
+  offset: 6, 6
   index: -1
 enbodiment128
   rotate: false
-  xy: 1172, 232
-  size: 128, 128
+  xy: 82, 110
+  size: 79, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 24, 14
   index: -1
 enbodiment48
   rotate: false
-  xy: 202, 52
-  size: 48, 48
+  xy: 291, 46
+  size: 30, 35
   orig: 48, 48
-  offset: 0, 0
-  index: -1
-energy_manipulation128
-  rotate: false
-  xy: 1042, 232
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-energy_manipulation48
-  rotate: false
-  xy: 252, 52
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
+  offset: 9, 6
   index: -1
 false_flawless_form128
   rotate: false
-  xy: 912, 362
-  size: 128, 128
+  xy: 178, 162
+  size: 91, 80
   orig: 128, 128
-  offset: 0, 0
+  offset: 18, 26
   index: -1
 false_flawless_form48
   rotate: false
-  xy: 1222, 182
-  size: 48, 48
+  xy: 323, 46
+  size: 34, 30
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 10
   index: -1
 flawless_form128
   rotate: false
-  xy: 652, 362
-  size: 128, 128
+  xy: 182, 244
+  size: 91, 79
   orig: 128, 128
-  offset: 0, 0
+  offset: 18, 26
   index: -1
 flawless_form48
   rotate: false
-  xy: 1352, 262
-  size: 48, 48
+  xy: 285, 14
+  size: 34, 30
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 10
   index: -1
 flowering_night128
   rotate: false
-  xy: 262, 102
-  size: 128, 128
+  xy: 682, 419
+  size: 95, 89
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 15
   index: -1
 flowering_night48
   rotate: false
-  xy: 1432, 442
-  size: 48, 48
+  xy: 397, 380
+  size: 36, 33
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 6
   index: -1
 haste128
   rotate: false
-  xy: 652, 232
-  size: 128, 128
+  xy: 255, 83
+  size: 68, 71
   orig: 128, 128
-  offset: 0, 0
+  offset: 30, 33
   index: -1
 haste48
   rotate: false
-  xy: 152, 52
-  size: 48, 48
+  xy: 402, 351
+  size: 26, 27
   orig: 48, 48
-  offset: 0, 0
+  offset: 11, 12
   index: -1
 killer_instinct128
   rotate: false
-  xy: 782, 102
-  size: 128, 128
+  xy: 271, 156
+  size: 87, 80
   orig: 128, 128
-  offset: 0, 0
+  offset: 21, 22
   index: -1
 killer_instinct48
   rotate: false
-  xy: 1582, 442
-  size: 48, 48
+  xy: 502, 346
+  size: 33, 30
   orig: 48, 48
-  offset: 0, 0
+  offset: 8, 8
   index: -1
 knives128
   rotate: false
-  xy: 1042, 102
-  size: 128, 128
+  xy: 968, 411
+  size: 38, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 44, 16
   index: -1
 knives48
   rotate: false
-  xy: 1172, 182
-  size: 48, 48
+  xy: 1008, 472
+  size: 14, 36
   orig: 48, 48
-  offset: 0, 0
+  offset: 16, 6
   index: -1
 moon_phase128
   rotate: false
-  xy: 782, 362
-  size: 128, 128
+  xy: 493, 415
+  size: 92, 93
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 18
   index: -1
 moon_phase48
   rotate: false
-  xy: 2, 52
-  size: 48, 48
+  xy: 325, 78
+  size: 35, 35
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 7
   index: -1
 murderous_aura128
   rotate: false
-  xy: 262, 232
-  size: 128, 128
+  xy: 2, 308
+  size: 94, 103
   orig: 128, 128
-  offset: 0, 0
+  offset: 19, 14
   index: -1
 murderous_aura48
   rotate: false
-  xy: 1432, 392
-  size: 48, 48
+  xy: 325, 115
+  size: 32, 39
   orig: 48, 48
-  offset: 0, 0
-  index: -1
-mystery_sword128
-  rotate: false
-  xy: 2, 362
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-mystery_sword48
-  rotate: false
-  xy: 1532, 442
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
+  offset: 7, 5
   index: -1
 no_escape128
   rotate: false
-  xy: 262, 362
-  size: 128, 128
+  xy: 163, 77
+  size: 90, 83
   orig: 128, 128
-  offset: 0, 0
+  offset: 20, 29
   index: -1
 no_escape48
   rotate: false
-  xy: 1302, 312
-  size: 48, 48
+  xy: 255, 50
+  size: 34, 31
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 11
   index: -1
 protection128
   rotate: false
-  xy: 392, 232
-  size: 128, 128
+  xy: 182, 325
+  size: 92, 84
   orig: 128, 128
-  offset: 0, 0
+  offset: 18, 19
   index: -1
 protection48
   rotate: false
-  xy: 1352, 312
-  size: 48, 48
+  xy: 872, 391
+  size: 35, 32
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 7
   index: -1
 read128
   rotate: false
-  xy: 782, 232
-  size: 128, 128
+  xy: 300, 416
+  size: 96, 92
   orig: 128, 128
-  offset: 0, 0
+  offset: 16, 18
   index: -1
 read48
   rotate: false
-  xy: 1302, 262
-  size: 48, 48
+  xy: 435, 379
+  size: 36, 34
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 7
   index: -1
 reality_marble128
   rotate: false
-  xy: 392, 362
-  size: 128, 128
+  xy: 587, 417
+  size: 93, 91
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 20
   index: -1
 reality_marble48
   rotate: false
-  xy: 52, 52
-  size: 48, 48
+  xy: 473, 379
+  size: 35, 34
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 8
   index: -1
 returning_blade128
   rotate: false
-  xy: 132, 232
-  size: 128, 128
+  xy: 207, 411
+  size: 91, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 19, 17
   index: -1
 returning_blade48
   rotate: false
-  xy: 2, 2
-  size: 48, 48
+  xy: 359, 117
+  size: 34, 36
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 7
+  index: -1
+satellite128
+  rotate: false
+  xy: 872, 425
+  size: 94, 83
+  orig: 128, 128
+  offset: 18, 19
+  index: -1
+satellite48
+  rotate: false
+  xy: 321, 14
+  size: 34, 30
+  orig: 48, 48
+  offset: 7, 8
   index: -1
 silver_blades128
   rotate: false
-  xy: 522, 102
-  size: 128, 128
+  xy: 2, 413
+  size: 104, 95
   orig: 128, 128
-  offset: 0, 0
+  offset: 15, 17
   index: -1
 silver_blades48
   rotate: false
-  xy: 1172, 132
-  size: 48, 48
+  xy: 333, 378
+  size: 39, 36
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 6
+  index: -1
+silver_soul128
+  rotate: false
+  xy: 98, 308
+  size: 82, 101
+  orig: 128, 128
+  offset: 22, 14
+  index: -1
+silver_soul48
+  rotate: false
+  xy: 360, 155
+  size: 31, 38
+  orig: 48, 48
+  offset: 8, 5
   index: -1
 snipe128
   rotate: false
-  xy: 912, 102
-  size: 128, 128
+  xy: 398, 415
+  size: 93, 93
   orig: 128, 128
-  offset: 0, 0
+  offset: 17, 18
   index: -1
 snipe48
   rotate: false
-  xy: 52, 2
-  size: 48, 48
+  xy: 510, 378
+  size: 35, 35
   orig: 48, 48
-  offset: 0, 0
+  offset: 6, 7
   index: -1
 star_chef128
   rotate: false
-  xy: 392, 102
-  size: 128, 128
+  xy: 275, 238
+  size: 90, 78
   orig: 128, 128
-  offset: 0, 0
+  offset: 19, 21
   index: -1
 star_chef48
   rotate: false
-  xy: 152, 2
-  size: 48, 48
+  xy: 466, 348
+  size: 34, 29
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 9
   index: -1
 stress_reliever128
   rotate: false
-  xy: 652, 102
-  size: 128, 128
+  xy: 276, 318
+  size: 55, 91
   orig: 128, 128
-  offset: 0, 0
+  offset: 38, 20
   index: -1
 stress_reliever48
   rotate: false
-  xy: 1682, 442
-  size: 48, 48
+  xy: 374, 380
+  size: 21, 34
   orig: 48, 48
-  offset: 0, 0
+  offset: 14, 8
   index: -1
 surpressing_fire128
   rotate: false
-  xy: 2, 232
-  size: 128, 128
+  xy: 83, 18
+  size: 76, 90
   orig: 128, 128
-  offset: 0, 0
+  offset: 26, 19
   index: -1
 surpressing_fire48
   rotate: false
-  xy: 202, 2
-  size: 48, 48
+  xy: 371, 342
+  size: 29, 34
   orig: 48, 48
-  offset: 0, 0
+  offset: 10, 7
   index: -1
 the_world128
   rotate: false
-  xy: 1042, 362
-  size: 128, 128
+  xy: 2, 2
+  size: 79, 94
   orig: 128, 128
-  offset: 0, 0
+  offset: 19, 22
   index: -1
 the_world48
   rotate: false
-  xy: 102, 2
-  size: 48, 48
+  xy: 253, 13
+  size: 30, 35
   orig: 48, 48
-  offset: 0, 0
+  offset: 7, 8
   index: -1
 time_theft128
   rotate: false
-  xy: 132, 362
-  size: 128, 128
+  xy: 108, 411
+  size: 97, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 15, 16
   index: -1
 time_theft48
   rotate: false
-  xy: 1532, 392
-  size: 48, 48
+  xy: 333, 340
+  size: 36, 36
   orig: 48, 48
-  offset: 0, 0
+  offset: 5, 7
   index: -1
 true_sight128
   rotate: false
-  xy: 2, 102
-  size: 128, 128
+  xy: 161, 3
+  size: 90, 72
   orig: 128, 128
-  offset: 0, 0
+  offset: 20, 34
   index: -1
 true_sight48
   rotate: false
-  xy: 1222, 132
-  size: 48, 48
+  xy: 430, 350
+  size: 34, 27
   orig: 48, 48
-  offset: 0, 0
-  index: -1
-unparalleled128
-  rotate: false
-  xy: 1172, 362
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-unparalleled48
-  rotate: false
-  xy: 1582, 392
-  size: 48, 48
-  orig: 48, 48
-  offset: 0, 0
+  offset: 7, 13
   index: -1
 upgraded_enbodiment128
   rotate: false
-  xy: 522, 232
-  size: 128, 128
+  xy: 97, 209
+  size: 79, 97
   orig: 128, 128
-  offset: 0, 0
+  offset: 24, 14
   index: -1
 upgraded_enbodiment48
   rotate: false
-  xy: 1482, 442
-  size: 48, 48
+  xy: 362, 80
+  size: 30, 35
   orig: 48, 48
-  offset: 0, 0
+  offset: 9, 6
+  index: -1
+waste_not128
+  rotate: false
+  xy: 2, 98
+  size: 78, 109
+  orig: 128, 128
+  offset: 27, 15
+  index: -1
+waste_not48
+  rotate: false
+  xy: 360, 195
+  size: 29, 41
+  orig: 48, 48
+  offset: 10, 6
   index: -1

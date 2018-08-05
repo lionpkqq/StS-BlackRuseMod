@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.8.7
+# StS-BlackRuseMod 0.8.8
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
 * Slay The Spire (08-02-2018)
 * ModTheSpire 2.9.1
-* BaseMod 2.17.0 (Week 34 Patch)
+* BaseMod 2.18.0 (Week 36 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -26,11 +26,12 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
 * **Backlash X**: Apply 1 random Weak, Vulnerable or Frail to you X times.
 * **Protection**: Unblocked damage will consume Protection instead of your HP.
+* **Satellite**: Reduce the damage you take by 5. Whenever you are attacked, lose 1 Satellite. Whenever you use an Attack, lose 1 Satellite and attack an extra time for 5 base damage.
 
 ## Usage ##
 ### Required Downloads ###
 * ModTheSpire v2.9.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod 2.17.0+ (https://github.com/daviscook477/BaseMod/releases)
+* BaseMod 2.18.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -52,7 +53,6 @@ The Wiki is still under construction. Thanks for your patience!
 ## List of known issues ##
 * Vision cards will crash the game if you are not playing as the Servant.
 * [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
-* In rare cases, if you choose Elegance during the Ancient Writing event, the effects of both Elegance and Simplicity will be triggered (which is not a bad thing, to be honest).
 * Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
 * Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues).
 
@@ -105,6 +105,69 @@ Contributors of **FruityMod**
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
 
+0.8.8
+Added a new mechanic: Satellite.
+
+Balance:
+* [Advance] Backlash 2 -> Ethereal
+* [Advance] now gives 6 Protection.
+* [Cosmic Inflation] gain 9(12) Block -> gain 8(10) Protection
+* [Dual Dimension] double your Knives -> double your Protection
+* [Dual Dimension] cost 1(0) -> 2(1)
+* [Dual Dimension] Shift: gain 6 Protection -> gain 5 Protection
+* [D. Weaponry] obtain 2(3) Knives per turn -> obtain 3(4) Knives per turn
+* [Fan of Knives] deal 9 damage -> deal 8(11) damage
+* [Flawless Form] now has an extra effect: gain 16 Protection
+* [Gouge] deal 5 damage -> deal 6 damage
+* [Gouge] now has exhaust.
+* [Hightail] gain 8 Protection -> gain 7 Protection
+* [Killing Doll] cost 3(2) -> cost 2
+* [Killing Doll] deal 2 damage -> deal 2(3) damage
+* [Moonlight] cost 2 -> 1
+* [Moonlight] deal 7 damage -> deal 4 damage
+* [Moonlight] is no longer Ethereal
+* [Read] gain Protection 16(24) -> 15(21)
+* [Rearm] cost 0 -> 1
+* [Rearm] obtain 3 Knives -> obtain 6 Knives
+* [Rearm] draw 1 card -> draw 2(3) cards
+* [Sabotage] deal 6(9) damage -> deal 5(8) damage
+* [Silver Blades] 3(5) bonus damage -> 2(3) bonus damage
+* [Starlight] cost 1 -> 2
+* [Starlight] throw 3(4) knives -> throw 6(8) knives
+* [Starlight] deal 5 damage -> deal 4 damage
+* [Starlight] is no longer Ethereal
+* [Sunlight] deal 24(32) damage -> deal 16(24) damage
+* [Sunlight] now apply 1 Blight to ALL enemies
+* [Sunlight] is no longer Ethereal
+* [Temporal Defense] now gives 4(6) Block and 4(6) Protection instead of 8(12) Block and 1(2) Weak.
+* [Temporal Misd.] now has an extra effect: apply 1(2) Weak
+* [Temporal Slicing] deal 5(8) damage 2 times -> deal 5 damage 2(3) times
+* [Time Warp] has an extra effect: discard 1 card
+* [Time Warp]'s Shift effect no longer discards cards.
+* [Time Warp] is now a common card.
+* [Trash to Treasure] is now a common card.
+
+Changes and reworks:
+* Reworked [Mystery Sword].
+* Reworked [Barrier].
+* Reworked [Capture].
+* Reworked [House Cleaning].
+* Reworked [Reality Marble].
+* Reworked [Shifting Gears], now it resembles the effect of [Shifting Thoughts].
+* Reworked [Time Embedded].
+* Deleted [Unparalleled] and added [Silver Soul].
+* Deleted [Killer Instinct] and added [Waste Not].
+* Deleted [Farseeing] and added [Gear Up].
+* Deleted [Borrowed Time] and added [Pendulum of Eternity].
+* Deleted [Shifting Thoughts] and added [Dancing Silver].
+
+Bug fixes:
+* Fixed: Choosing Elegance during the Ancient Writing event results in incorrect outcome.
+* Fixed: [Gouge] scales inversely with Blight.
+* Fixed: The Knives power icon remains even when its amount is 0.
+* Fixed: Sometimes, Vision effects are triggered even though the target is dead or missing.
+* Fixed: [The World] works as if the player has relic [Mummified Hand] even when the player does not.
+
 0.8.7
 Balance:
 * [Comet] draw 2(3) cards -> draw 2(2) cards
@@ -124,9 +187,6 @@ Balance:
 * [Spin] damage 12(16) -> 11(15)
 * [Sunlight] deal 21(30) damage -> deal 24(32) damage
 * [Read] gain Protection 14(20) -> 16(24)
-* [Rearm] cost 0 -> 1
-* [Rearm] obtain 3 Knives -> obtain 6 Knives
-* [Rearm] draw 1 card -> draw 2(3) cards
 
 Changes and reworks:
 * Renamed [Morning Call] to [Canned Time] and it's no longer Innate.

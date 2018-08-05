@@ -27,7 +27,7 @@
   "MysterySword": {
     "NAME": "Mystery Sword",
     "FLAVOR": "Found in the depth. Users must sacrifice themselves to wield this sword.",
-    "DESCRIPTIONS": ["The first Attack you play each turn does double damage and has #yBacklash #b3."]
+    "DESCRIPTIONS": ["The first Attack you play each turn will be played twice and has #yBacklash #b3."]
   },
   "PaperSwan": {
     "NAME": "Paper Swan",

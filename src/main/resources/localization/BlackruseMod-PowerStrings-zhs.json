@@ -1,16 +1,4 @@
 {
-  "DrawManipulationPower": {
-    "NAME": "抽牌操纵",
- 	"DESCRIPTIONS": ["下回合抽牌 #b", " 。"]
-  },
-  "BarrierPower": {
-  	"NAME": "屏障",
-  	"DESCRIPTIONS": ["下回合获得 #b", " 层 #y无实体 。"]
-  },
-  "EnergyManipulationPower": {
-    "NAME": "能量操纵",
-    "DESCRIPTIONS": ["下回合获得 #b", " 点能量 。"]
-  },
   "DWeaponryPower": {
     "NAME": "次元武库",
     "DESCRIPTIONS": ["你的回合开始时获得 #b", " 把 #y飞刀 。"]
@@ -43,9 +31,9 @@
     "NAME": "疾速",
     "DESCRIPTIONS": ["每打出1张 #y攻击牌 ，下回合多抽 #b", " 张牌。"]
   },
-  "KillerInstinctPower": {
-    "NAME": "杀手本能",
-    "DESCRIPTIONS": ["你的回合开始时，每有一个意图攻击的敌人，获得 #b", " 点 #y格挡 ，抽1张牌。"]
+  "WasteNotPower": {
+    "NAME": "物尽其用",
+    "DESCRIPTIONS": ["你的回合结束时，消费所有 [B] 。每消费1点 [B] ，下回合多抽 #b", " 张卡。"]
   },
   "MoonPhasePower": {
     "NAME": "月相",
@@ -61,7 +49,7 @@
   },
   "RealityMarblePower": {
     "NAME": "固有结界",
-    "DESCRIPTIONS": ["本次战斗内，所有牌失去 #y虚无 属性 。"]
+    "DESCRIPTIONS": ["在你的回合结束时， #y保留 最多 #b", " 张牌。 保留的牌失去 #y虚无 属性。"]
   },
   "SilverBladesPower": {
     "NAME": "银刃",
@@ -87,9 +75,9 @@
     "NAME": "真视",
     "DESCRIPTIONS": [" #y视界 效果一定会触发。"]
   },
-  "UnparalleledPower": {
-    "NAME": "无双",
-    "DESCRIPTIONS": ["当你受到攻击时，减少承受的伤害 #b", " 点并对攻击者造成 #b", " 点伤害。"]
+  "SatellitePower": {
+    "NAME": "卫星",
+    "DESCRIPTIONS": ["受到攻击时，消耗 #b1 层 #y卫星 并减少受到的伤害 #b5 点。使用攻击牌时，消耗 #b1 层 #y卫星 并额外攻击一次，造成 #b", " 点伤害。"]
   },
   "SnipePower": {
     "NAME": "狙击",
@@ -107,10 +95,6 @@
     "NAME": "操控",
     "DESCRIPTIONS": ["随机将两张 #y幻时 牌加入抽牌堆。"]
   },
-  "MysterySwordPower": {
-    "NAME": "神秘之剑",
-    "DESCRIPTIONS": ["下一张打出的攻击牌将造成双倍伤害并具有 #y反冲 #b3 。"]
-  },
   "ReturningBladePower": {
     "NAME": "返刃",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害，将这张牌加入手牌。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害，将这张牌加入手牌。"]
@@ -122,5 +106,9 @@
   "FalseFlawlessFormPower": {
     "NAME": "伪·完美形态",
     "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响 #b", " 回合。"]
+  },
+  "SilverSoulPower": {
+    "NAME": "银魂",
+    "DESCRIPTIONS": ["你的回合开始时获得 #b", " 层 #y卫星 。"]
   }
 }

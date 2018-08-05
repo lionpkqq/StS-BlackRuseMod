@@ -1,8 +1,5 @@
 package blackrusemod.cards;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -28,27 +25,26 @@ public class TemporalSlicing extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 	private static final int ATTACK_DMG = 5;
-	private static final int UPGRADE_PLUS_DMG = 3;
+	private static final int ATTACK_TIMES = 2;
 	private static final int COST = -2;
-	public static final Logger logger = LogManager.getLogger(BlackRuseMod.class.getName());
 
 	public TemporalSlicing() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_SLICING), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
 		this.baseDamage = ATTACK_DMG;
 		this.isEthereal = true;
+		this.magicNumber = this.baseMagicNumber = ATTACK_TIMES;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 	}
 	
 	public void triggerWhenDrawn() {
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
-		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
-		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
+		for (int i = 0; i < this.magicNumber; i++) {
+			AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
+			AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
+			AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
+		}
 	}
 	
 	public boolean canUse(AbstractPlayer p, AbstractMonster m)
@@ -64,7 +60,7 @@ public class TemporalSlicing extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 	

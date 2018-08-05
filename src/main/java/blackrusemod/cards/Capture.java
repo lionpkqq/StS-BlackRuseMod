@@ -23,7 +23,7 @@ public class Capture extends CustomCard {
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 10;
 	private static final int UPGRADE_PLUS_DMG = 4;
-	private static final int LIMIT = 5;
+	private static final int LIMIT = 3;
 	private int COUNTER = 0;
 
 	public Capture() {
@@ -38,7 +38,7 @@ public class Capture extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.FIRE));
-		for (AbstractCard c: p.drawPile.group) if (isTemporal(c)) this.COUNTER++;
+		for (AbstractCard c: p.drawPile.group) if (c.isEthereal == true) this.COUNTER++;
 		if (this.COUNTER >= this.magicNumber) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
 		this.COUNTER = 0;
 	}
@@ -53,13 +53,5 @@ public class Capture extends CustomCard {
 			upgradeDamage(UPGRADE_PLUS_DMG);
 			upgradeMagicNumber(-1);
 		}
-	}
-	
-	public boolean isTemporal(AbstractCard c) {
-		if (c instanceof TemporalSlicing) return true;
-		else if (c instanceof TemporalMisd) return true;
-		else if (c instanceof TemporalEssence) return true;
-		else if (c instanceof TemporalDefense) return true;
-		else return false;
 	}
 }

@@ -1,35 +1,27 @@
 package blackrusemod.patches;
 
-import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import com.megacrit.cardcrawl.dungeons.*;
+import com.megacrit.cardcrawl.cards.*;
+import com.badlogic.gdx.math.*;
+import com.megacrit.cardcrawl.core.*;
+import com.megacrit.cardcrawl.vfx.cardManip.*;
 
-import blackrusemod.cards.Strike_Silver;
 import blackrusemod.cards.Defend_Silver;
+import blackrusemod.cards.Strike_Silver;
 
-@SpirePatch(cls = "com.megacrit.cardcrawl.events.thecity.BackToBasics", method = "buttonEffect")
-public class BackToBasicsPatch {
+import com.evacipated.cardcrawl.modthespire.lib.*;
 
-	@SpireInsertPatch(rloc = 30)
-	public static void Insert(Object __obj_instance, int buttonPressed) {
-		AbstractPlayer.PlayerClass selection = AbstractDungeon.player.chosenClass;
-		if (!selection.toString().equals("IRONCLAD") && !selection.toString().equals("THE_SILENT")
-				&& !selection.toString().equals("CROWBOT")) {
-			for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-				if ((c instanceof Strike_Silver || c instanceof Defend_Silver) && c.canUpgrade()) {
-					c.upgrade();
-					AbstractDungeon.player.bottledCardUpgradeCheck(c);
-					AbstractDungeon.effectList.add(
-							new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * Settings.WIDTH,
-							MathUtils.random(0.2F, 0.8F) * Settings.HEIGHT));
-				}
-			}
-		}
-	}
-
+@SpirePatch(cls = "com.megacrit.cardcrawl.events.thecity.BackToBasics", method = "upgradeStrikeAndDefends")
+public class BackToBasicsPatch
+{
+    @SpireInsertPatch(rloc = 0)
+    public static void Insert(final Object __obj_instance) {
+        for (final AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if ((c instanceof Strike_Silver || c instanceof Defend_Silver) && c.canUpgrade()) {
+                c.upgrade();
+                AbstractDungeon.player.bottledCardUpgradeCheck(c);
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1f, 0.9f) * Settings.WIDTH, MathUtils.random(0.2f, 0.8f) * Settings.HEIGHT));
+            }
+        }
+    }
 }

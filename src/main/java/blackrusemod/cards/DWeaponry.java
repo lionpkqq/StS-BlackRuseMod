@@ -20,7 +20,7 @@ public class DWeaponry extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int GAIN_KNIVES = 2;
+	private static final int GAIN_KNIVES = 3;
 
 	public DWeaponry() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.D_WEAPONRY), COST, DESCRIPTION, AbstractCard.CardType.POWER,

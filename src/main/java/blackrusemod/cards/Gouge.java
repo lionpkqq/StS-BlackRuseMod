@@ -25,13 +25,14 @@ public class Gouge extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
-	private static final int ATTACK_DMG = 5;
+	private static final int ATTACK_DMG = 6;
 
 	public Gouge() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.GOUGE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,18 +50,6 @@ public class Gouge extends CustomCard {
 		if (!this.canUpgrade()) this.energyOnUse -= 1;
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
-	}
-	
-	public void applyPowers()
-	{
-		this.baseDamage = ATTACK_DMG;
-		super.applyPowers();
-	}
-	
-	public void calculateCardDamage(AbstractMonster mo)
-	{
-		if (mo.hasPower("AmplifyDamagePower")) this.baseDamage += mo.getPower("AmplifyDamagePower").amount*(this.magicNumber-1);
-		super.calculateCardDamage(mo);
 	}
 
 	public AbstractCard makeCopy() {

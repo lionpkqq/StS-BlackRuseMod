@@ -18,9 +18,9 @@ public class KillingDoll extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 3;
-	private static final int COST_UPGRADED = 2;
+	private static final int COST = 2;
 	private static final int ATTACK_DMG = 2;
+	private static final int UPGRADE_PLUS_DMG = 1;
 	private int KNIVES = 0;
 
 	public KillingDoll() {
@@ -55,7 +55,7 @@ public class KillingDoll extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
 	}
 }

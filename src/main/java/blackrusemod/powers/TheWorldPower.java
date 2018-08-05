@@ -53,7 +53,8 @@ public class TheWorldPower extends AbstractPower {
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		flash();
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "TheWorldPower"));
-		AbstractDungeon.actionManager.addToBottom(new MummifiedAction(card, this));
+		if (AbstractDungeon.player.hasRelic("Mummified Hand"))
+			AbstractDungeon.actionManager.addToBottom(new MummifiedAction(card, this));
 		if (card instanceof TheWorld) 
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 					new TheWorldPower(AbstractDungeon.player, -1), -1));

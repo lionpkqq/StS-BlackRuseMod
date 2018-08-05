@@ -19,16 +19,17 @@ public class RealityMarble extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
+	private static final int RETAIN = 1;
 
 	public RealityMarble() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REALITY_MARBLE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.isInnate = true;
+		this.magicNumber = this.baseMagicNumber = RETAIN;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RealityMarblePower(p, -1), -1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RealityMarblePower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
@@ -38,7 +39,7 @@ public class RealityMarble extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }

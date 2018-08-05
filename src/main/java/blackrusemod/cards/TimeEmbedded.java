@@ -7,11 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.TimeEmbeddedAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ProtectionPower;
 
@@ -21,24 +20,18 @@ public class TimeEmbedded extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ARMOR_AMT = 9;
-	private static final int UPGRADE_PLUS_ARMOR = 3;
+	private static final int PROTECTION_AMT = 5;
+	private static final int UPGRADE_PROTECTION_BLOCK = 3;
 
 	public TimeEmbedded() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_EMBEDDED), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = ARMOR_AMT;
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-	}
-	
-	public void triggerOnManualDiscard() {
-		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, 1, false), 1));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, 1, false), 1));
-		}
+		AbstractDungeon.actionManager.addToBottom(new TimeEmbeddedAction(p));
 	}
 
 	public AbstractCard makeCopy() {
@@ -48,7 +41,7 @@ public class TimeEmbedded extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_PLUS_ARMOR);
+			upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
 		}
 	}
 }

@@ -17,7 +17,7 @@
 	},
 	"Advance": {
 		"NAME": "Advance",
-		"DESCRIPTION": "Gain [B] [B] . NL Backlash !M!. NL Exhaust."
+		"DESCRIPTION": "Gain !M! Protection. NL Gain [B] [B] . NL Exhaust. NL Ethereal."
 	},
 	"Alleviate": {
 		"NAME": "Alleviate",
@@ -25,12 +25,11 @@
 	},
 	"Barrier": {
 		"NAME": "Barrier",
-		"DESCRIPTION": "Next turn, NL gain 1 Intangible. NL Exhaust."
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Protection."
 	},
-	"BorrowedTime": {
-		"NAME": "Borrowed Time",
-		"DESCRIPTION": "Draw 5 cards. NL Gain [B] [B] [B]. NL Next turn, draw NL !M! less cards and NL lose [B] [B] [B]. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Draw 5 cards. NL Gain [B] [B] [B]. NL Next turn, draw NL !M! less cards and NL lose [B] [B]. NL Exhaust."
+	"PendulumOfEternity": {
+		"NAME": "Pendulum of Eternity",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Shift: Costs 1 less [B] ."
 	},
 	"ParthianShot": {
 		"NAME": "Parthian Shot",
@@ -42,7 +41,7 @@
 	},
 	"CosmicInflation": {
 		"NAME": "Cosmic Inflation",
-		"DESCRIPTION": "Gain !B! Block. NL Place a copy of this card on top of your draw pile. NL Exhaust."
+		"DESCRIPTION": "Gain !M! Protection. NL Place a copy of this card on top of your draw pile. NL Exhaust."
 	},
 	"DWeaponry": {
 		"NAME": "D. Weaponry",
@@ -58,11 +57,11 @@
 	},
 	"DualDimension": {
 		"NAME": "Dual Dimension",
-		"DESCRIPTION": "Double your Knives. NL Exhaust. NL Shift: Gain !M! Protection."
+		"DESCRIPTION": "Double your Protection. NL Exhaust. NL Shift: Gain !M! Protection."
 	},
 	"Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicate(s) NL cost 0 this turn. NL Backlash 3. NL Exhaust."
+		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash 3. NL Exhaust."
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
@@ -75,12 +74,11 @@
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
-		"DESCRIPTION": "Spend all [B]. NL Throw X Knives at EACH enemy. NL Each knife deals !D! damage.",
-		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Throw X+1 Knives at EACH enemy. NL Each knife deals !D! damage."
+		"DESCRIPTION": "Throw X Knives at EACH enemy. NL Each knife deals !D! damage."
 	},
-	"Farseeing": {
-		"NAME": "Farseeing",
-		"DESCRIPTION": "Next turn, NL gain [B] and NL draw !M! more cards."
+	"GearUp": {
+		"NAME": "Gear Up",
+		"DESCRIPTION": "Draw 1 card. NL Gain !M! Protection. NL Obtain !M! Knives. NL Gain 1 Satellite."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
@@ -92,8 +90,8 @@
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "You are not affected by Weak, Vulnerable and Frail.",
-		"UPGRADE_DESCRIPTION": "Innate. NL You are not affected by Weak, Vulnerable and Frail."
+		"DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
@@ -117,13 +115,13 @@
 	},
 	"Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X time(s). NL Backlash X.",
-		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Gain !M! Protection NL X+1 time(s). NL Backlash X+1."
+		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash X.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Protection NL X+1 time(s). NL Backlash X+1."
 	},
 	"DecisiveAttack": {
 		"NAME": "Decisive Attack",
-		"DESCRIPTION": "Spend all [B]. NL Deal damage equals to X times the number of cards in your hand. NL Discard your hand.",
-		"UPGRADE_DESCRIPTION": "Spend all [B]. NL Deal damage equals to X+1 times the number of cards in your hand. NL Discard your hand.",
+		"DESCRIPTION": "Deal damage equals to X times the number of cards in your hand. NL Discard your hand.",
+		"UPGRADE_DESCRIPTION": "Deal damage equals to X+1 times the number of cards in your hand. NL Discard your hand.",
 		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
 	},
 	"GarbageDisposal": {
@@ -132,8 +130,8 @@
 	},
 	"Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Spend all [B] . NL Deal !D! damage and apply 1 Blight X times.",
-		"UPGRADE_DESCRIPTION": "Spend all [B] . NL Deal !D! damage and apply 1 Blight X+1 times."
+		"DESCRIPTION": "Deal !D! damage and apply 1 Blight X times. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 Blight X+1 times. NL Exhaust."
 	},
 	"Haste": {
 		"NAME": "Haste",
@@ -142,19 +140,19 @@
 	},
 	"HouseCleaning": {
 		"NAME": "House Cleaning",
-		"DESCRIPTION": "Discard 2 cards. NL Obtain 3 Knives."
+		"DESCRIPTION": "Draw !M! cards. NL Discard !M! cards. NL Obtain 3 Knives."
 	},
 	"Capture": {
 		"NAME": "Capture",
-		"DESCRIPTION": "Deal !D! damage. NL If you have at least !M! Temporal cards in your draw pile, draw 2 cards."
+		"DESCRIPTION": "Deal !D! damage. NL If you have at least !M! Ethereal cards in your draw pile, draw 2 cards."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
 		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Weak."
 	},
-	"KillerInstinct": {
-		"NAME": "Killer Instinct",
-		"DESCRIPTION": "At the start of your turn, gain !M! Block and draw 1 card for each attacking enemy."
+	"WasteNot": {
+		"NAME": "Waste Not",
+		"DESCRIPTION": "At the end of your turn, spend all [B] . NL Draw 1 more card next turn for each [B] you spend."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -178,7 +176,7 @@
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable. NL Ethereal."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable."
 	},
 	"CannedTime": {
 		"NAME": "Canned Time",
@@ -194,9 +192,9 @@
 		"NAME": "Read",
 		"DESCRIPTION": "Vision: Gain !B! Protection and apply !M! Weak."
 	},
-	"Unparalleled": {
-		"NAME": "Unparalleled",
-		"DESCRIPTION": "Whenever you are attacked, take !M! less damage and deal !M! damage to the attacker."
+	"DancingSilver": {
+		"NAME": "Dancing Silver",
+		"DESCRIPTION": "Obtain !M! Knives. NL Gain !M! Satellites."
 	},
 	"Potential": {
 		"NAME": "Potential",
@@ -212,11 +210,11 @@
 	},
 	"RealityMarble": {
 		"NAME": "Reality Marble",
-		"DESCRIPTION": "Innate. NL All cards lose Ethereal property for this combat."
+		"DESCRIPTION": "Innate. NL At the end of your turn, Retain up to !M! card. NL The cards you retain lose Ethereal."
 	},
 	"Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Obtain !M! Knives. NL Draw 1 card."
+		"DESCRIPTION": "Draw !M! card. NL Obtain 6 Knives."
 	},
 	"Replace": {
 		"NAME": "Replace",
@@ -244,15 +242,15 @@
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain 1 Dexterity."
+		"DESCRIPTION": "Discard the top !M! cards of your draw pile. NL Draw !M! cards. NL Shift: Gain 1 Dexterity."
 	},
 	"ShatteredReality": {
 		"NAME": "Shattered Reality",
 		"DESCRIPTION": "Deal !D! damage. NL Shift: Deal DOUBLE damage NL to ALL enemies."
 	},
-	"ShiftingThoughts": {
-		"NAME": "Shifting Thoughts",
-		"DESCRIPTION": "Discard the top !M! cards of your draw pile. NL Draw !M! cards. NL Shift: gain [B] ."
+	"SilverSoul": {
+		"NAME": "Silver Soul",
+		"DESCRIPTION": "At the start of your turn, gain 1 Satellite."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
@@ -286,7 +284,7 @@
 	},
 	"Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Throw !M! Knives at random enemies. NL Each deals !D! damage and apply 1 Blight. NL Ethereal."
+		"DESCRIPTION": "Throw !M! Knives at random enemies. NL Each deals !D! damage."
 	},
 	"StressReliever": {
 		"NAME": "Stress Reliever",
@@ -294,7 +292,7 @@
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw a Knife. NL Deals !D! damage NL to ALL enemies. NL Ethereal."
+		"DESCRIPTION": "Throw a Knife. NL Deals !D! damage NL and apply 1 Blight NL to ALL enemies."
 	},
 	"SurpressingFire": {
 		"NAME": "Surpressing Fire",
@@ -331,14 +329,14 @@
 	},
 	"TimeEmbedded": {
 		"NAME": "Time Embedded",
-		"DESCRIPTION": "Gain !M! Protection. Shift: Apply 1 Weak and Vulnerable to ALL enemies."
+		"DESCRIPTION": "Gain !M! Protection. NL Lose all Block and gain the same amount of Protection."
 	},
 	"TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Deal !D! damage. NL Shift: Draw !M! card(s) and discard !M! card(s)."
+		"DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Shift: Draw !M! card(s)."
 	},
 	"TrashToTreasure": {
-		"NAME": "Trash To Treasure",
+		"NAME": "Trash to Treasure",
 		"DESCRIPTION": "Return !M! card from your discard pile to your hand and upgrade it. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Return !M! card from your discard pile to your hand and upgrade it."
 	},
