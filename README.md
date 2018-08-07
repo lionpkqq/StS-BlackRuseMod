@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.8.8
+# StS-BlackRuseMod 0.8.9
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
@@ -18,15 +18,14 @@ You can check the updates at the bottom of this page.
 This Mod makes no changes to the base game other than adding **The Servant**. In other words, it should be compatible with other Mods.
 
 ## New Mechanics ##
-* **Knives**: Knives are The Servent's most dedicated weapons. They are spent by cards that Throw knives.
-* **Throw**: Throw will spend your Knives. If you have depleted your Knives, the card will stop working.
+* **Knives**: Knives are the Servent's most dedicated weapons.
 * **Blight**: Blighted enemies will take extra damage when attacked.
 * **Temporal**: Temporal cards are Unplayable and Ethereal. Their effects will be triggered when drawn.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
 * **Backlash X**: Apply 1 random Weak, Vulnerable or Frail to you X times.
 * **Protection**: Unblocked damage will consume Protection instead of your HP.
-* **Satellite**: Reduce the damage you take by 5. Whenever you are attacked, lose 1 Satellite. Whenever you use an Attack, lose 1 Satellite and attack an extra time for 5 base damage.
+* **Satellite**: Whenever you use an Attack, lose 1 Satellite and attack an extra time for 4 damage. Whenever you are attacked, lose 1 Satellite and deal 4 damage to the attacker.
 
 ## Usage ##
 ### Required Downloads ###
@@ -64,7 +63,7 @@ The Wiki is still under construction. Thanks for your patience!
 * Gogo (https://github.com/gogo81745) - programming consultation.
 * HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk, 哓吉, sin-genjitsu xxx, 不悲不喜, and more!
 
 ## Special Thanks ##
 
@@ -102,10 +101,45 @@ Contributors of **FruityMod**
 * LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
 
 ## Current State/Updates ##
+* Looking for an (presumably spine) animator.
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
 
+0.8.9
+
+Balance:
+* [Deadline] apply 3(5) Blight and Vulnerable -> apply 2(3) Blight and Vulnerable
+* [Desolation] deal 12(18) damage -> deal 12(16) damage
+* [D. Weaponry] obtain 3(4) Knives per turn -> obtain 2(3) Knives per turn
+* [House Cleaning] obtain 3 Knives -> obtain 2(3) Knives
+* [Misdirection] gain 5 Block and apply 1(2) Weak and Blight -> gain 5(8) Block and apply 1 Weak and Blight
+* [Murderous Aura] is now a Rare card.
+* [Read] gain 15(21) Protection -> gain 16(24) Protection
+* [Rearm] obtain 6 Knives -> obtain 5 Knives
+
+Changes and reworks:
+* New card illustration and visual effect for [Killing Doll].
+* Reworked the Satellite mechanic.
+* Rephrased descriptions for all Knives-related cards.
+* Changed [Gear Up] slightly to accommodate to the new Satellite mechanic.
+* Reworked [Garbage Disposal].
+* Reworked [Dancing Silver].
+* Reworked [Silver Soul] and renamed it as [Silver Matrix].
+* Deleted [Parthian Shot] and added [Multi-Shot].
+* Deleted [Haste] and added [Proper Practice].
+* Deleted [D. Passage] and added [Collapse].
+* Deleted [Revamp] and added [Orbit].
+
+Bug fixes:
+* Fixed: Cards retained by [Reality Marble] only lose their Ethereal for 1 turn.
+* Fixed: [Pendulum of Eternity]'s upgraded version deals excessive damage.
+* Fixed: [Ricochet] does not spend a Knife.
+* Fixed: [Temporal Defense], [Temporal Slicing] and [Temporal Misd.] have incorrect descriptions.
+* Fixed: [Returning Blade] becomes unrecognizable after returning from the exhaust pile.
+* Fixed: If you discard [Potential] with [Stress Reliever] and shuffle the deck by drawing cards, it will not return to your hand.
+
 0.8.8 HOTFIX
+
 Balance:
 * [Gear Up] no longer draw a card
 * [Murderous Aura] cost 1 -> 2
@@ -114,6 +148,7 @@ Bug fixes:
 * Fixed: [Silver Soul] cost Knives to gain Satellites.
 
 0.8.8
+
 Added a new mechanic: Satellite.
 
 Balance:

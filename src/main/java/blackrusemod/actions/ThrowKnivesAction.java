@@ -1,19 +1,24 @@
 package blackrusemod.actions;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.AmplifyDamagePower;
+import blackrusemod.vfx.KDEffect;
 import blackrusemod.vfx.ServantDaggerEffect;
 
 public class ThrowKnivesAction extends AbstractGameAction {
@@ -36,13 +41,20 @@ public class ThrowKnivesAction extends AbstractGameAction {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
 					this.target.damageFlash = true;
 					this.target.damageFlashFrames = 4;
-					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
-							AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+					if (this.debuff == null || this.debuff != "Golden") 
+						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
+								AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+					else CardCrawlGame.sound.play("ATTACK_FAST");
 					this.info.applyPowers(this.info.owner, this.target);
 					this.target.damage(this.info);
 					AbstractDungeon.actionManager.addToTop(new WaitAction(0.06F));
 					if ((this.target != null) && (this.target.hb != null)) {
-						AbstractDungeon.actionManager.addToTop(new VFXAction(new ServantDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
+						if (this.debuff != null && this.debuff == "Golden") 
+							AbstractDungeon.actionManager.addToTop(new VFXAction(new KDEffect(
+									MathUtils.random(1200.0F, 2000.0F) * Settings.scale, com.megacrit.cardcrawl.dungeons.AbstractDungeon.floorY + 
+									MathUtils.random(-100.0F, 500.0F) * Settings.scale)));
+						else
+							AbstractDungeon.actionManager.addToTop(new VFXAction(new ServantDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
 					
 					this.source.getPower("KnivesPower").reducePower(1);
@@ -52,6 +64,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
 						this.source.addBlock(this.source.getPower("SurpressingFirePower").amount);
 					}
+					if (this.debuff != null && this.debuff == "Draw") 
+						AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.source, 1));
 					if (this.debuff != null && this.debuff == "Weakened")  
 						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new WeakPower(this.target, 1, false), 1));
 					if (this.debuff != null && this.debuff == "Vulnerable")  

@@ -42,7 +42,7 @@
   "OldScarf": {
     "NAME": "旧围巾",
     "FLAVOR": "据说是祖上传下来的。",
-    "DESCRIPTIONS": ["每次触发 #y视界 效果，抽 #b1 张牌。"]
+    "DESCRIPTIONS": ["每次触发 #y视界 效果，获得 #b6 点 护盾。"]
   },
   "Pan": {
     "NAME": "平底锅",

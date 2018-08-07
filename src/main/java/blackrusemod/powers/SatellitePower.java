@@ -1,7 +1,6 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,8 +21,8 @@ public class SatellitePower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
-	private float actual_damage;
 	private int damage;
+	private final int ATTACK = 4;
 	
 	public SatellitePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -42,33 +41,20 @@ public class SatellitePower extends AbstractPower {
 		updateDescription();
 	}
 	
-	public float atDamageFinalReceive(float damage, DamageInfo.DamageType type)
-	{
-		return calculateDamageTakenAmount(damage, type);
-	}
-
-	private float calculateDamageTakenAmount(float damage, DamageInfo.DamageType type) {
-		if ((type != DamageInfo.DamageType.HP_LOSS) && (type != DamageInfo.DamageType.THORNS)) {
-			actual_damage = damage - 5.0F;
-			if (actual_damage < 0) actual_damage = 0;
-			return actual_damage;
-		}
-		return damage;
-	}
-	
-	public int onAttacked(DamageInfo info, int damageAmount)
-	{
-		Boolean willLive = Boolean.valueOf(calculateDamageTakenAmount(damageAmount, info.type) < this.owner.currentHealth);
-		if ((info.owner != null) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.type != DamageInfo.DamageType.THORNS) && 
-				(willLive.booleanValue())) {
+	public int onAttacked(DamageInfo info, int damageAmount) {
+		this.damage = this.ATTACK;
+		if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner))
+		{
 			flash();
-			AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+			if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
+			AbstractDungeon.actionManager.addToBottom(new SatelliteAction(AbstractDungeon.player, info.owner, 
+					new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
 		}
 		return damageAmount;
 	}
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		this.damage = 5;
+		this.damage = this.ATTACK;
 		if (card.type == AbstractCard.CardType.ATTACK) {
 			flash();
 			if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
@@ -90,7 +76,7 @@ public class SatellitePower extends AbstractPower {
 
 	public void updateDescription()
 	{
-		this.damage = 5;
+		this.damage = this.ATTACK;
 		if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
 		this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1];
 	}

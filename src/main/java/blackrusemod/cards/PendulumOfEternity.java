@@ -29,7 +29,7 @@ public class PendulumOfEternity extends CustomCard {
 	private static final int COST = 5;
 	private static final int DEBUFFS = 3;
 	private static final int ATTACK_DMG = 36;
-	private static final int UPGRADE_PLUS_DMG = 48;
+	private static final int UPGRADE_PLUS_DMG = 12;
 	
 	public PendulumOfEternity() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.PENDULUM), COST, DESCRIPTION,

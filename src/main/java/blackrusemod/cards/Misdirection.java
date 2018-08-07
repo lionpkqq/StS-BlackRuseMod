@@ -23,6 +23,7 @@ public class Misdirection extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 5;
+	private static final int UPGRADE_PLUS_BLOCK = 3;
 	private static final int DEBUFF = 1;
 
 	public Misdirection() {
@@ -48,7 +49,7 @@ public class Misdirection extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
 	}
 }

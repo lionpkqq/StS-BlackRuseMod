@@ -53,6 +53,7 @@ public class ReturningBladeAction extends AbstractGameAction {
 				AbstractDungeon.player.createHandIsFullDialog();
 			} else {
 				AbstractDungeon.player.exhaustPile.removeCard(this.itself);
+				this.itself.unfadeOut();
 				AbstractDungeon.player.hand.addToTop(this.itself);
 			}
 		}

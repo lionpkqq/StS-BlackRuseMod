@@ -34,10 +34,10 @@ public class KillingDoll extends CustomCard {
 		if (p.hasPower("KnivesPower")) {
 			this.KNIVES = p.getPower("KnivesPower").amount;
 			for (int i = 0; i < KNIVES; i++)
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Golden"));
 			this.KNIVES = p.getPower("KnivesPower").amount;
 			for (int i = 0; i < KNIVES; i++)
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
+				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Golden"));
 		}
 	}
 

@@ -42,7 +42,7 @@
   "OldScarf": {
     "NAME": "Old Scarf",
     "FLAVOR": "It is said that this is a family heirloom.",
-    "DESCRIPTIONS": ["Whenever you trigger a #yVision effect, draw a card."]
+    "DESCRIPTIONS": ["Whenever you trigger a #yVision effect, gain #b6 Protection."]
   },
   "Pan": {
     "NAME": "Pan",

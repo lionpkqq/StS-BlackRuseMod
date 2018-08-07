@@ -22,7 +22,6 @@ public class HouseCleaning extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int DISCARD = 2;
-	private static final int KNIVES = 3;
 	
 	public HouseCleaning() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HOUSE_CLEANING), COST, DESCRIPTION,
@@ -35,7 +34,7 @@ public class HouseCleaning extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, this.magicNumber, false));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, KNIVES), KNIVES));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, this.magicNumber), this.magicNumber));
 	}
 	
 	@Override

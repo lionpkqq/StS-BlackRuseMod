@@ -21,7 +21,7 @@ public class Rearm extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int KNIVES = 6;
+	private static final int KNIVES = 5;
 	private static final int DRAW = 2;
 	
 	public Rearm() {

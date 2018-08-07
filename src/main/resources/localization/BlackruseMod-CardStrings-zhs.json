@@ -29,11 +29,11 @@
 	},
 	"PendulumOfEternity": {
 		"NAME": "永恒钟摆",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 转变 ：耗能减少 [B] 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 变换 ：耗能减少 [B] 。"
 	},
-	"ParthianShot": {
-		"NAME": "一击脱离",
-		"DESCRIPTION": " 投掷 1把 飞刀 ，造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
+	"Orbit": {
+		"NAME": "入轨",
+		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 你每有1层 卫星 ，对所有敌人造成 !D! 点伤害。"
 	},
 	"Comet": {	
 		"NAME": "彗星",
@@ -57,7 +57,7 @@
 	},
 	"DualDimension": {
 		"NAME": "二重次元",
-		"DESCRIPTION": " 护盾 翻倍。 NL 消耗 。 NL 转变 ：获得 !M! 点 护盾 。"
+		"DESCRIPTION": " 护盾 翻倍。 NL 消耗 。 NL 变换 ：获得 !M! 点 护盾 。"
 	},
 	"Duplication": {
 		"NAME": "复制体",
@@ -74,11 +74,11 @@
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
-		"DESCRIPTION": "对每个敌人 投掷 X把 飞刀 ，每把造成 !D! 点伤害。"
+		"DESCRIPTION": "对每个敌人投掷1把 飞刀 。每把造成 !D! 点伤害。重复X次。"
 	},
 	"GearUp": {
-		"NAME": "蓄势待发",
-		"DESCRIPTION": "获得 !M! 点 护盾 。获得 !M! 把 飞刀 。获得1层 卫星 。"
+		"NAME": "整装待发",
+		"DESCRIPTION": "获得 6 点 护盾 。获得 4 把 飞刀 。转化 !M! 把 飞刀 为 卫星 。"
 	},
 	"FastForward": {
 		"NAME": "快进",
@@ -86,7 +86,7 @@
 	},
 	"Ricochet": {
 		"NAME": "弹跳",
-		"DESCRIPTION": " 投掷 1把 飞刀 ，造成 !D! 点伤害并在敌人之间弹跳 !M! 次。"
+		"DESCRIPTION": "投掷1把 飞刀 。每把造成 !D! 点伤害并在敌人之间弹跳 !M! 次。"
 	},
 	"FlawlessForm": {
 		"NAME": "完美形态",
@@ -99,15 +99,18 @@
 	},
 	"Initiator": {
 		"NAME": "起手式",
-		"DESCRIPTION": "造成 !D! 点伤害。将 追击 放入手中。"
+		"DESCRIPTION": "造成 !D! 点伤害。将 追击 放入手中。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 追击+ 放入手中。"
 	},
 	"FollowUp": {
 		"NAME": "追击",
-		"DESCRIPTION": "造成 !D! 点伤害。将 追击2 放入手中。 消耗 。 虚无 。"
+		"DESCRIPTION": "造成 !D! 点伤害。将 追击2 放入手中。 消耗 。 虚无 。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 追击2+ 放入手中。 消耗 。 虚无 。"
 	},
 	"FollowUp2": {
 		"NAME": "追击2",
-		"DESCRIPTION": "造成 !D! 点伤害。将 画龙点睛 放入手中。 消耗 。 虚无 。"
+		"DESCRIPTION": "造成 !D! 点伤害。将 画龙点睛 放入手中。 消耗 。 虚无 。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 画龙点睛+ 放入手中。 消耗 。 虚无 。"
 	},
 	"FinishingTouch": {
 		"NAME": "画龙点睛",
@@ -126,21 +129,20 @@
 	},
 	"GarbageDisposal": {
 		"NAME": "废物处理",
-		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 获得那个数量的 敏捷 。 NL 消耗 。"
+		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 每消耗1张牌，获得1 敏捷 ，抽1张牌。 NL 消耗 。"
 	},
 	"Gouge": {
 		"NAME": "凿击",
 		"DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X次。 消耗 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X+1次。 消耗 。"
 	},
-	"Haste": {
-		"NAME": "疾速",
-		"DESCRIPTION": "每打出 1 张 攻击 牌，下回合多抽 1 张牌。 NL 虚无 。",
-		"UPGRADE_DESCRIPTION": "每打出 1 张 攻击牌 ，下回合多抽 1 张牌。"
+	"ProperPractice": {
+		"NAME": "适当练习",
+		"DESCRIPTION": "每回合开始时，你可以在本场战斗中 升级 手牌中的1张牌。"
 	},
 	"HouseCleaning": {
 		"NAME": "打扫",
-		"DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 !M! 张手牌。 NL 获得 3 把 飞刀 。"
+		"DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。"
 	},
 	"Capture": {
 		"NAME": "捕获",
@@ -148,7 +150,7 @@
 	},
 	"KidneyShot": {
 		"NAME": "肾击",
-		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 虚弱 。"
+		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把造成 !D! 点伤害并给予 1 层 虚弱 。"
 	},
 	"WasteNot": {
 		"NAME": "物尽其用",
@@ -156,11 +158,12 @@
 	},
 	"KillingDoll": {
 		"NAME": "杀人玩偶",
-		"DESCRIPTION": "向随机敌人 投掷 所有 飞刀 ，每把造成 !D! 点伤害。 NL 消耗 。"
+		"DESCRIPTION": "投掷所有 飞刀 。每把对随机敌人造成 !D! 点伤害。 NL 消耗 。"
 	},
-	"DPassage": {
-		"NAME": "次元通道",
-		"DESCRIPTION": "将消耗牌堆里所有的牌放入抽牌堆并洗牌。 消耗 。"
+	"Collapse": {
+		"NAME": "坍缩",
+		"DESCRIPTION": "对所有敌人造成等于你当前 护盾 层数的伤害。",
+		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
 	"Manipulate": {
 		"NAME": "操控",
@@ -176,7 +179,7 @@
 	},
 	"Moonlight": {
 		"NAME": "月光",
-		"DESCRIPTION": " 投掷 !M! 把 飞刀 ，每把造成 !D! 点伤害并给予 1 层 易伤 。"
+		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把造成 !D! 点伤害并给予 1 层 易伤 。"
 	},
 	"CannedTime": {
 		"NAME": "罐装时间",
@@ -194,11 +197,11 @@
 	},
 	"DancingSilver": {
 		"NAME": "舞银",
-		"DESCRIPTION": "获得 !M! 把 飞刀 。 NL 获得 !M! 层 卫星 。"
+		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。获得 卫星 数量乘以2的 格挡 。"
 	},
 	"Potential": {
 		"NAME": "潜能",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：本次战斗内伤害上升 !M! 并放入手牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 变换 ：本次战斗内伤害上升 !M! 并放入手牌。"
 	},
 	"Desolation": {
 		"NAME": "黯灭",
@@ -210,11 +213,11 @@
 	},
 	"RealityMarble": {
 		"NAME": "固有结界",
-		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌失去 虚无 属性。"
+		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌在本次战斗内失去 虚无 属性。"
 	},
 	"Rearm": {
 		"NAME": "再装填",
-		"DESCRIPTION": "抽 !M! 张牌 。 NL 获得 6 把 飞刀 。"
+		"DESCRIPTION": "抽 !M! 张牌 。 NL 获得 5 把 飞刀 。"
 	},
 	"Replace": {
 		"NAME": "替代",
@@ -228,9 +231,9 @@
 		"NAME": "返刃",
 		"DESCRIPTION": " 视界 ：对所有敌人造成 !D! 点伤害，将这张牌放入手牌。 NL 能被多次升级。"
 	},
-	"Revamp": {
-		"NAME": "翻新",
-		"DESCRIPTION": "消耗最多 !M! 张手牌。抽同样数量的牌。"
+	"MultiShot": {
+		"NAME": "多重射击",
+		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把对随机敌人造成 !D! 点伤害并抽1张牌。"
 	},
 	"Rewind": {
 		"NAME": "回溯",
@@ -242,23 +245,23 @@
 	},
 	"ShiftingGears": {
 		"NAME": "换档",
-		"DESCRIPTION": "丢弃抽牌堆顶的 !M! 张牌。抽 !M! 张牌。 NL 转变 ：获得 1 点 敏捷 。"
+		"DESCRIPTION": "丢弃抽牌堆顶的 !M! 张牌。抽 !M! 张牌。 NL 变换 ：获得 1 点 敏捷 。"
 	},
 	"ShatteredReality": {
 		"NAME": "破碎现实",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 转变 ：对所有敌人造成双倍伤害 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 变换 ：对所有敌人造成双倍伤害 。"
 	},
-	"SilverSoul": {
-		"NAME": "银魂",
-		"DESCRIPTION": "你的回合开始时，获得1层 卫星 。"
+	"SilverMatrix": {
+		"NAME": "银色矩阵",
+		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 每当你失去1层 卫星 ，获得 !M! 点 护盾 。"
 	},
 	"SilverBlades": {
 		"NAME": "银刃",
-		"DESCRIPTION": "增加每把 飞刀 的伤害 !M! 点。"
+		"DESCRIPTION": "增加 飞刀 的伤害 !M! 点。"
 	},
 	"Snipe": {
 		"NAME": "狙击",
-		"DESCRIPTION": " 视界 ： 投掷 1 把 飞刀 ，造成 !D! 点伤害。给予 !M! 层 易伤。"
+		"DESCRIPTION": " 视界 ：投掷1把 飞刀 。每把造成 !D! 点伤害并给予 !M! 层 易伤 。"
 	},
 	"Solidify": {
 		"NAME": "凝固",
@@ -284,7 +287,7 @@
 	},
 	"Starlight": {
 		"NAME": "星光",
-		"DESCRIPTION": "向随机敌人 投掷 1把 飞刀 !M! 次，每次造成 !D! 点伤害。"
+		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把对随机敌人造成 !D! 点伤害。"
 	},
 	"StressReliever": {
 		"NAME": "解愁人",
@@ -292,11 +295,11 @@
 	},
 	"Sunlight": {
 		"NAME": "日光",
-		"DESCRIPTION": " 投掷  1 把 飞刀 ，对所有敌人造成 !D! 点伤害并给予1层 枯萎 。"
+		"DESCRIPTION": "投掷1把 飞刀 。对所有敌人造成 !D! 点伤害并给予1层 枯萎 。"
 	},
 	"SurpressingFire": {
 		"NAME": "火力压制",
-		"DESCRIPTION": "每投掷 1 把 飞刀 ，获得 !M! 点 格挡 。"
+		"DESCRIPTION": "每当你投掷或转化1把 飞刀 ，获得 !M! 点 格挡 。"
 	},
 	"TimeTheft": {
 		"NAME": "盗窃时间",
@@ -304,7 +307,7 @@
 	},
 	"TemporalDefense": {
 		"NAME": "幻时防护",
-		"DESCRIPTION": " 幻时 。 NL 获得 !B! 点 格挡 。给予所有敌人 !M! 层 虚弱 。",
+		"DESCRIPTION": " 幻时 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 护盾 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalEssence": {
@@ -315,12 +318,12 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 和 易伤。",
+		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 ， 易伤 和 虚弱 。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TemporalSlicing": {
 		"NAME": "幻时切割",
-		"DESCRIPTION": " 幻时 。 NL 对所有敌人造成 !D! 点伤害两次。",
+		"DESCRIPTION": " 幻时 。 NL 对所有敌人造成 !D! 点伤害 !M! 次。",
 		"EXTENDED_DESCRIPTION": ["这张牌不能被打出。"]
 	},
 	"TheWorld": {
@@ -333,7 +336,7 @@
 	},
 	"TimeWarp": {
 		"NAME": "时间迁跃",
-		"DESCRIPTION": "造成 !D! 点伤害。丢弃1张牌。 NL 转变 ：抽 !M! 张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。丢弃1张牌。 NL 变换 ：抽 !M! 张牌。"
 	},
 	"TrashToTreasure": {
 		"NAME": "变废为宝",

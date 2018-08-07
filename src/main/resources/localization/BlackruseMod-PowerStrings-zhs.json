@@ -27,9 +27,9 @@
     "NAME": "枯萎",
     "DESCRIPTIONS": ["受到攻击时会额外承受 #b", " 点伤害。"]
   },
-  "HastePower": {
-    "NAME": "疾速",
-    "DESCRIPTIONS": ["每打出1张 #y攻击牌 ，下回合多抽 #b", " 张牌。"]
+  "ProperPracticePower": {
+    "NAME": "适当练习",
+    "DESCRIPTIONS": ["每回合开始时，你可以选择 #b", " 张手牌升级。"]
   },
   "WasteNotPower": {
     "NAME": "物尽其用",
@@ -49,7 +49,7 @@
   },
   "RealityMarblePower": {
     "NAME": "固有结界",
-    "DESCRIPTIONS": ["在你的回合结束时， #y保留 最多 #b", " 张牌。 保留的牌失去 #y虚无 属性。"]
+    "DESCRIPTIONS": ["在你的回合结束时， #y保留 最多 #b", " 张牌。 保留的牌在本次战斗内失去 #y虚无 属性。"]
   },
   "SilverBladesPower": {
     "NAME": "银刃",
@@ -65,7 +65,7 @@
   },
   "SurpressingFirePower": {
     "NAME": "火力压制",
-    "DESCRIPTIONS": ["每投掷 #b1 把 #y飞刀 ，获得 #b", " 点 #y格挡 。"]
+    "DESCRIPTIONS": ["每当你通过卡牌使用 #b1 把 #y飞刀 ，获得 #b", " 点 #y格挡 。"]
   },
   "TheWorldPower": {
     "NAME": "世界",
@@ -77,7 +77,7 @@
   },
   "SatellitePower": {
     "NAME": "卫星",
-    "DESCRIPTIONS": ["受到攻击时，消耗 #b1 层 #y卫星 并减少受到的伤害 #b5 点。使用攻击牌时，消耗 #b1 层 #y卫星 并额外攻击一次，造成 #b", " 点伤害。"]
+    "DESCRIPTIONS": ["使用攻击牌时，失去 #b1 层 #y卫星 并额外攻击一次，造成 #b", " 点伤害。你每受到一次攻击，失去 #b1 层 #y卫星 并对攻击者造成 #b4 点伤害。"]
   },
   "SnipePower": {
     "NAME": "狙击",
@@ -107,8 +107,8 @@
     "NAME": "伪·完美形态",
     "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响 #b", " 回合。"]
   },
-  "SilverSoulPower": {
-    "NAME": "银魂",
-    "DESCRIPTIONS": ["你的回合开始时获得 #b", " 层 #y卫星 。"]
+  "SilverMatrixPower": {
+    "NAME": "银色矩阵",
+    "DESCRIPTIONS": ["每当你失去1层 #y卫星 ，获得 #b", " 点 #y护盾 。"]
   }
 }

@@ -18,12 +18,12 @@ public class MurderousAura extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
 
 	public MurderousAura() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MURDEROUS_AURA), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

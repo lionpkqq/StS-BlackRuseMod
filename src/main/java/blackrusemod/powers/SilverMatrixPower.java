@@ -1,30 +1,28 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
 
-public class SilverSoulPower extends AbstractPower {
-	public static final String POWER_ID = "SilverSoulPower";
+public class SilverMatrixPower extends AbstractPower {
+	public static final String POWER_ID = "SilverMatrixPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
-	public SilverSoulPower(AbstractCreature owner, int amount) {
+	public SilverMatrixPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region48 = powerAltas.findRegion("silver_soul48");
-		this.region128 = powerAltas.findRegion("silver_soul128");
+		this.region48 = powerAltas.findRegion("silver_matrix48");
+		this.region128 = powerAltas.findRegion("silver_matrix128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -36,11 +34,5 @@ public class SilverSoulPower extends AbstractPower {
 	public void updateDescription()
 	{
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-	}
-	
-	public void atStartOfTurn() {
-		flash();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, 
-				new SatellitePower(this.owner, this.amount), this.amount));
 	}
 }

@@ -18,7 +18,7 @@ public class Deadline extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int AD = 3;
+	private static final int AD = 2;
 
 	public Deadline() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DEADLINE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -39,7 +39,7 @@ public class Deadline extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(2);
+			upgradeMagicNumber(1);
 		}
 	}
 }

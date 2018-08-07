@@ -32,6 +32,7 @@
 /*    */     {
 /* 34 */       for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 /* 36 */         c.retain = true;
+				 c.isEthereal = false;
 /* 38 */         AbstractDungeon.player.hand.addToTop(c);
 /*    */       }
 /* 40 */       AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;

@@ -1,6 +1,7 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -47,19 +48,22 @@ public class SnipePower extends AbstractPower {
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), "Vulnerable"));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && (!this.prediction) && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{	
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), "Vulnerable"));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), "Vulnerable"));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 999));
 	}

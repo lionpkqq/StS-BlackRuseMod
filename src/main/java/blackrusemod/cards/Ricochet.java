@@ -2,6 +2,7 @@ package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,12 +35,16 @@ public class Ricochet extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(new ServantDaggerEffect(m.hb.cX, m.hb.cY)));
-		AbstractDungeon.actionManager.addToBottom(new BounceAction(p, m, this.baseDamage, this.magicNumber+1));
-		if (p.hasPower("SurpressingFirePower")) {
-			AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-			p.addBlock(p.getPower("SurpressingFirePower").amount);
-		}
+		if (p.hasPower("KnivesPower")) 
+			if (p.getPower("KnivesPower").amount > 0) {
+				AbstractDungeon.actionManager.addToBottom(new VFXAction(new ServantDaggerEffect(m.hb.cX, m.hb.cY)));
+				AbstractDungeon.actionManager.addToBottom(new BounceAction(p, m, this.baseDamage, this.magicNumber+1));
+				if (p.hasPower("SurpressingFirePower")) {
+					AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+					p.addBlock(p.getPower("SurpressingFirePower").amount);
+				}
+				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "KnivesPower", 1));
+			}
 	}
 
 	public AbstractCard makeCopy() {

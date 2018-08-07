@@ -27,9 +27,9 @@
     "NAME": "Blighted",
     "DESCRIPTIONS": ["This enemy will take #b", " extra damage when attacked."]
   },
-  "HastePower": {
-    "NAME": "Haste",
-    "DESCRIPTIONS": ["Each time you play an #yAttack card, draw #b", " more card next turn."]
+  "ProperPracticePower": {
+    "NAME": "Proper Practice",
+    "DESCRIPTIONS": ["At the start of your turn, you may choose #b", " card(s) to upgrade."]
   },
   "WasteNotPower": {
     "NAME": "Waste Not",
@@ -49,7 +49,7 @@
   },
   "RealityMarblePower": {
     "NAME": "Reality Marble",
-    "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " card. The cards you retain lose #yEthereal."]
+    "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " card. The cards you retain lose #yEthereal for this combat."]
   },
   "SilverBladesPower": {
     "NAME": "Silver Blades",
@@ -65,7 +65,7 @@
   },
   "SurpressingFirePower": {
     "NAME": "Surpressing Fire",
-    "DESCRIPTIONS": ["For each #yKnife you #yThrow, gain #b", " #yBlock."]
+    "DESCRIPTIONS": ["Whenever you spend a #yKnife with a card, gain #b", " #yBlock."]
   },
   "TheWorldPower": {
     "NAME": "The World",
@@ -77,7 +77,7 @@
   },
   "SatellitePower": {
     "NAME": "Satellite",
-    "DESCRIPTIONS": ["Whenever you are attacked, lose #b1 #ySatellite and reduce the damage by #b5. Whenever you use an Attack, lose #b1 #ySatellite and attack an extra time for #b", " base damage."]
+    "DESCRIPTIONS": ["Whenever you use an Attack, lose #b1 #ySatellite and attack an extra time for #b", " damage. Whenever you are attacked, lose #b1 #ySatellite and deal #b4 damage to the attacker."]
   },
   "SnipePower": {
     "NAME": "Snipe",
@@ -107,8 +107,8 @@
     "NAME": "False Flawless Form",
     "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail for #b", " turn."]
   },
-  "SilverSoulPower": {
-    "NAME": "Silver Soul",
-    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #ySatellite."]
+  "SilverMatrixPower": {
+    "NAME": "Silver Matrix",
+    "DESCRIPTIONS": ["Whenever you lose a #ySatellite, gain #b", " #yProtection."]
   }
 }

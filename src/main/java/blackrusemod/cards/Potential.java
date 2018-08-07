@@ -62,7 +62,7 @@ public class Potential extends CustomCard {
 	public void triggerOnManualDiscard() {
 		this.baseDamage += this.magicNumber;
 		this.superFlash();
-		AbstractDungeon.actionManager.addToBottom(new DiscardToHandAction(this));
+		AbstractDungeon.actionManager.addToTop(new DiscardToHandAction(this));
 		AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
 		AbstractDungeon.actionManager.addToBottom(new UpdateCardDescriptionAction(this));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 

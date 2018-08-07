@@ -50,7 +50,8 @@ public class DeadlinePower extends AbstractPower {
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && !this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
@@ -60,7 +61,8 @@ public class DeadlinePower extends AbstractPower {
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
@@ -70,7 +72,8 @@ public class DeadlinePower extends AbstractPower {
 				if (AbstractDungeon.cardRandomRng.randomBoolean())
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+			if (AbstractDungeon.player.hasRelic("OldScarf")) 
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 999));
 	}

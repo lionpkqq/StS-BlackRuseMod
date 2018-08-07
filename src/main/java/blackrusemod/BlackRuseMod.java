@@ -55,7 +55,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.5.1\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.8.9\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -78,7 +78,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String ALLEVIATE = "cards/alleviate.png";
     public static final String BARRIER = "cards/barrier.png";
     public static final String PENDULUM = "cards/pendulum.png";
-    public static final String PARTHIAN_SHOT = "cards/parthian_shot.png";
+    public static final String ORBIT = "cards/orbit.png";
     public static final String CAPTURE = "cards/capture.png";
     public static final String COMET = "cards/comet.png";
     public static final String COSMIC_INFLATION = "cards/cosmic_inflation.png";
@@ -104,12 +104,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String DECISIVE_ATTACK = "cards/decisive_attack.png";
     public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
     public static final String GOUGE = "cards/gouge.png";
-    public static final String HASTE = "cards/haste.png";
+    public static final String PROPER_PRACTICE = "cards/proper_practice.png";
     public static final String HOUSE_CLEANING = "cards/house_cleaning.png";
     public static final String KIDNEY_SHOT = "cards/kidney_shot.png";
     public static final String WASTE_NOT = "cards/waste_not.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
-    public static final String D_PASSAGE = "cards/d_passage.png";
+    public static final String COLLAPSE = "cards/collapse.png";
     public static final String MANIPULATE = "cards/manipulate.png";
     public static final String MISDIRECTION = "cards/misdirection.png";
     public static final String MOON_PHASE = "cards/moon_phase.png";
@@ -125,12 +125,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String REPLACE = "cards/replace.png";
     public static final String RESET = "cards/reset.png";
     public static final String RETURNING_BLADE = "cards/returning_blade.png";
-    public static final String REVAMP = "cards/revamp.png";
+    public static final String MULTI_SHOT = "cards/multi_shot.png";
     public static final String REWIND = "cards/rewind.png";
     public static final String SABOTAGE = "cards/sabotage.png";
     public static final String SHIFTING_GEARS = "cards/shifting_gears.png";
     public static final String SHATTERED_REALITY = "cards/shattered_reality.png";
-    public static final String SILVER_SOUL = "cards/silver_soul.png";
+    public static final String SILVER_MATRIX = "cards/silver_matrix.png";
     public static final String SILVER_BLADES = "cards/silver_blades.png";
     public static final String SNIPE = "cards/snipe.png";
     public static final String SOLIDIFY = "cards/solidify.png";
@@ -298,7 +298,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Alleviate());
 		BaseMod.addCard(new Barrier());
 		BaseMod.addCard(new PendulumOfEternity());
-		BaseMod.addCard(new ParthianShot());
+		BaseMod.addCard(new Orbit());
 		BaseMod.addCard(new Comet());
 		BaseMod.addCard(new CosmicInflation());
 		BaseMod.addCard(new DWeaponry());
@@ -319,13 +319,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new DecisiveAttack());
 		BaseMod.addCard(new GarbageDisposal());
 		BaseMod.addCard(new Gouge());
-		BaseMod.addCard(new Haste());
+		BaseMod.addCard(new ProperPractice());
 		BaseMod.addCard(new HouseCleaning());
 		BaseMod.addCard(new Capture());
 		BaseMod.addCard(new KidneyShot());
 		BaseMod.addCard(new WasteNot());
 		BaseMod.addCard(new KillingDoll());
-		BaseMod.addCard(new DPassage());
+		BaseMod.addCard(new Collapse());
 		BaseMod.addCard(new Manipulate());
 		BaseMod.addCard(new Misdirection());
 		BaseMod.addCard(new MoonPhase());
@@ -341,12 +341,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Replace());
 		BaseMod.addCard(new Reset());
 		BaseMod.addCard(new ReturningBlade());
-		BaseMod.addCard(new Revamp());
+		BaseMod.addCard(new MultiShot());
 		BaseMod.addCard(new Rewind());
 		BaseMod.addCard(new Sabotage());
 		BaseMod.addCard(new ShiftingGears());
 		BaseMod.addCard(new ShatteredReality());
-		BaseMod.addCard(new SilverSoul());
+		BaseMod.addCard(new SilverMatrix());
 		BaseMod.addCard(new SilverBlades());
 		BaseMod.addCard(new Snipe());
 		BaseMod.addCard(new Solidify());
@@ -376,7 +376,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Alleviate");
 		UnlockTracker.unlockCard("Barrier");
 		UnlockTracker.unlockCard("PendulumOfEternity");
-		UnlockTracker.unlockCard("ParthianShot");
+		UnlockTracker.unlockCard("Orbit");
 		UnlockTracker.unlockCard("Comet");
 		UnlockTracker.unlockCard("CosmicInflation");
 		UnlockTracker.unlockCard("DWeaponry");
@@ -397,13 +397,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Decisive Attack");
 		UnlockTracker.unlockCard("GarbageDisposal");
 		UnlockTracker.unlockCard("Gouge");
-		UnlockTracker.unlockCard("Haste");
+		UnlockTracker.unlockCard("LiveAndLearn");
 		UnlockTracker.unlockCard("HouseCleaning");
 		UnlockTracker.unlockCard("Capture");
 		UnlockTracker.unlockCard("KidneyShot");
 		UnlockTracker.unlockCard("WasteNot");
 		UnlockTracker.unlockCard("KillingDoll");
-		UnlockTracker.unlockCard("DPassage");
+		UnlockTracker.unlockCard("Collapse");
 		UnlockTracker.unlockCard("Manipulate");
 		UnlockTracker.unlockCard("Misdirection");
 		UnlockTracker.unlockCard("MoonPhase");
@@ -419,12 +419,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Replace");
 		UnlockTracker.unlockCard("Reset");
 		UnlockTracker.unlockCard("ReturningBlade");
-		UnlockTracker.unlockCard("Revamp");
+		UnlockTracker.unlockCard("MultiShot");
 		UnlockTracker.unlockCard("Rewind");
 		UnlockTracker.unlockCard("Sabotage");
 		UnlockTracker.unlockCard("ShiftingGears");
 		UnlockTracker.unlockCard("ShatteredReality");
-		UnlockTracker.unlockCard("SilverSoul");
+		UnlockTracker.unlockCard("SilverMatrix");
 		UnlockTracker.unlockCard("SilverBlades");
 		UnlockTracker.unlockCard("Snipe");
 		UnlockTracker.unlockCard("Solidify");
@@ -516,17 +516,15 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
-        BaseMod.addKeyword(new String[] {"投掷"}, "投掷会使用你的 #y飞刀 。如果飞刀耗尽， 投掷将会失去效果。");
-        BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是凛光侍从的专属武器。 投掷飞刀的卡会减少飞刀的数量。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时卡 #y不能被打出 且具有 #y虚无 。效果会在抽到时触发。");
+        BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是凛光侍从的专属武器。可以被投掷或转化。");
+        BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y不能被打出 且具有 #y虚无 。效果会在抽到时触发。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
-        BaseMod.addKeyword(new String[] {"转变"}, "转变 效果会在牌被手动丢弃后触发。");
+        BaseMod.addKeyword(new String[] {"变换"}, "变换 效果会在牌被手动丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
         BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
         BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。护盾不受其他能力影响。在你的下一回合开始时不会消失。");
-        BaseMod.addKeyword(new String[] {"卫星"}, "减少受到的伤害 #b5 点。受到攻击时，消耗 #b1 层卫星。使用攻击牌时，消耗 #b1 层卫星并额外攻击一次，造成 #b5 点伤害。 额外攻击伤害受银刃加成。");
-        BaseMod.addKeyword(new String[] {"Throw", "throw"}, "Throw will spend your Knives. If you have depleted your #yKnives, the card will stop working.");
-        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are The Servent's most dedicated weapons. They are spent by cards that #yThrow knives.");
+        BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
+        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servent's most dedicated weapons. Can be threw or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their effects will be triggered when drawn.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
@@ -534,9 +532,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply #b1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Unblocked damage will consume #yProtection instead of your HP. Protection is not affected by other powers. "
         		+ "It will not be removed at the start of your next turn.");
-        BaseMod.addKeyword(new String[] {"Satellite", "satellite", "Satellites", "satellites"}, "Reduce the damage you take by #b5. Whenever you are attacked, "
-        		+ "lose #b1 Satellite. Whenever you use an Attack, lose #b1 Satellite and attack an extra time for #b5 base damage. "
-        		+ "The extra attack receives bonus from #ySilver #yBlades.");
+        BaseMod.addKeyword(new String[] {"Satellite", "satellite", "Satellites", "satellites"}, "Whenever you use an Attack, lose #b1 Satellite and attack an extra time for #b4 damage. "
+        		+ "Whenever you are attacked, lose #b1 Satellite and deal #b4 damage to the attacker. Satellites count as Knives.");
         logger.info("done setting up custom keywords");
 	}
 }
