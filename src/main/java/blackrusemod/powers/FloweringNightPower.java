@@ -21,7 +21,7 @@ public class FloweringNightPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	public int amount2 = 0;
-	public static final int LIMIT = 8;
+	public static final int LIMIT = 6;
 	
 	public FloweringNightPower(AbstractCreature owner, int amount) {
 			this.name = NAME;
@@ -45,13 +45,15 @@ public class FloweringNightPower extends AbstractPower {
 	
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		for (int i = 0; i < this.amount; i++) {
+			if (this.amount2 >= LIMIT) break;
 			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, 1));
 			this.amount2++;
 			this.updateDescription();
-			if (this.amount2 >= LIMIT) {
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new NoDrawPower(this.owner), 1));
-				break;
-			}
 		}
+	}
+	
+	public void atEndOfTurn(boolean isPlayer) {
+		this.amount2 = 0;
+		this.updateDescription();
 	}
 }

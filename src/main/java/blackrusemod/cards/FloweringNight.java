@@ -21,7 +21,7 @@ public class FloweringNight extends CustomCard {
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 3;
 	private static final int COST_UPGRADED = 2;
-	private static final int LIMIT = 8;
+	private static final int LIMIT = 6;
 	
 	public FloweringNight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLOWERING_NIGHT), COST, DESCRIPTION,

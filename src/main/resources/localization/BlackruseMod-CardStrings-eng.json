@@ -95,7 +95,7 @@
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Whenever you play a card, draw a card. NL You may only draw !M! cards each turn."
+		"DESCRIPTION": "Whenever you play a card, draw a card. NL You may only draw !M! cards each turn by this power."
 	},
 	"Initiator": {
 		"NAME": "Initiator",
@@ -309,8 +309,8 @@
 	},
 	"TemporalEssence": {
 		"NAME": "Temporal Essence",
-		"DESCRIPTION": "Temporal. NL Gain [B] and draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] and draw !M! cards."
+		"DESCRIPTION": "Temporal. NL Gain [B] . NL Draw !M! cards.",
+		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] . NL Draw !M! cards."
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",

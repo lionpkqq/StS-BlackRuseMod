@@ -95,7 +95,7 @@
 	},
 	"FloweringNight": {
 		"NAME": "花开之夜",
-		"DESCRIPTION": "每当你打出1张牌，抽1张牌。 NL 一回合最多抽 !M! 张牌。"
+		"DESCRIPTION": "每当你打出1张牌，抽1张牌。 NL 一回合最多通过本能力抽 !M! 张牌。"
 	},
 	"Initiator": {
 		"NAME": "起手式",
@@ -309,8 +309,8 @@
 	},
 	"TemporalEssence": {
 		"NAME": "幻时精华",
-		"DESCRIPTION": " 幻时 。 NL 获得 [B] 并抽 !M! 张牌。",
-		"UPGRADE_DESCRIPTION": " 幻时 。 NL 获得 [B] [B] 并抽 !M! 张牌。"
+		"DESCRIPTION": " 幻时 。 NL 获得 [B] 。 NL 抽 !M! 张牌。",
+		"UPGRADE_DESCRIPTION": " 幻时 。 NL 获得 [B] [B] 。 NL 抽 !M! 张牌。"
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
