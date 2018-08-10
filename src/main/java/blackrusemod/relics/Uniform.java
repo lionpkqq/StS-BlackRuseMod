@@ -17,18 +17,15 @@ public class Uniform extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.UNIFORM_RELIC), ImageMaster.loadImage(BlackRuseMod.UNIFORM_RELIC_OUTLINE), RelicTier.STARTER, LandingSound.MAGICAL);
 	}
 
-	@Override
 	public void atBattleStart() {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new KnivesPower(AbstractDungeon.player, KNIVES)));
 	}
 	
-	@Override
 	public String getUpdatedDescription() {
 		return DESCRIPTIONS[0];
 	}
 	
-	@Override
 	public AbstractRelic makeCopy() {
 		return new Uniform();
 	}	

@@ -3,7 +3,6 @@ package blackrusemod.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -22,7 +21,7 @@ public class FloweringNightPower extends AbstractPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	public int amount2 = 0;
-	public static final int LIMIT = 16;
+	public static final int LIMIT = 8;
 	
 	public FloweringNightPower(AbstractCreature owner, int amount) {
 			this.name = NAME;
@@ -50,14 +49,9 @@ public class FloweringNightPower extends AbstractPower {
 			this.amount2++;
 			this.updateDescription();
 			if (this.amount2 >= LIMIT) {
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "FloweringNightPower"));
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new NoDrawPower(this.owner), 1));
 				break;
 			}
 		}
-	}
-	
-	public void atEndOfTurn (boolean isPlayer) {
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "FloweringNightPower"));
 	}
 }

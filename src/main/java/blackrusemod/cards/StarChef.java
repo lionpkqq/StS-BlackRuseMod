@@ -18,12 +18,13 @@ public class StarChef extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
 
 	public StarChef() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STAR_CHEF), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.isEthereal = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,7 +40,7 @@ public class StarChef extends CustomCard {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
-			this.isInnate = true;
+			this.isEthereal = false;
 		}
 	}
 }

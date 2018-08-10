@@ -28,11 +28,16 @@ public class Defy extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.SELF);
 		this.baseBlock = BLOCK_AMT;
+		this.retain = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FalseFlawlessFormPower(p, 1), 1));
+	}
+	
+	public void triggerOnEndOfTurnForPlayingCard() {
+			this.retain = true;
 	}
 
 	public AbstractCard makeCopy() {

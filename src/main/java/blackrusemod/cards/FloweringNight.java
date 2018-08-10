@@ -19,15 +19,14 @@ public class FloweringNight extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
-	private static final int LIMIT = 16;
+	private static final int COST = 3;
+	private static final int COST_UPGRADED = 2;
+	private static final int LIMIT = 8;
 	
 	public FloweringNight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLOWERING_NIGHT), COST, DESCRIPTION,
-				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
+				AbstractCard.CardType.POWER, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber = LIMIT;
 	}
 	

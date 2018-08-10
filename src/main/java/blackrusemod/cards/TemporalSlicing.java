@@ -1,16 +1,13 @@
 package blackrusemod.cards;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import basemod.abstracts.CustomCard;
@@ -23,34 +20,25 @@ public class TemporalSlicing extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+	private static final int COST = 0;
 	private static final int ATTACK_DMG = 5;
 	private static final int ATTACK_TIMES = 2;
-	private static final int COST = -2;
 
 	public TemporalSlicing() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_SLICING), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
-		this.baseDamage = ATTACK_DMG;
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_SLICING), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
 		this.isEthereal = true;
+		this.exhaust = true;
+		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = ATTACK_TIMES;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-	}
-	
-	public void triggerWhenDrawn() {
 		for (int i = 0; i < this.magicNumber; i++) {
 			AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
 			AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
 		}
-	}
-	
-	public boolean canUse(AbstractPlayer p, AbstractMonster m)
-	{
-		this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-		return false;
 	}
 
 	public AbstractCard makeCopy() {
@@ -62,16 +50,5 @@ public class TemporalSlicing extends CustomCard {
 			upgradeName();
 			upgradeMagicNumber(1);
 		}
-	}
-	
-	public int damageCalculation(AbstractPlayer player, AbstractMonster monster, int damage) {
-		float tmp = damage;
-		for (AbstractPower p : player.powers) tmp = p.atDamageGive(tmp, DamageInfo.DamageType.NORMAL);
-		for (AbstractPower p : monster.powers) tmp = p.atDamageReceive(tmp, DamageInfo.DamageType.NORMAL);
-		for (AbstractPower p : player.powers) tmp = p.atDamageFinalGive(tmp, DamageInfo.DamageType.NORMAL);
-		for (AbstractPower p : monster.powers) tmp = p.atDamageFinalReceive(tmp, DamageInfo.DamageType.NORMAL);
-		int output = MathUtils.floor(tmp);
-		if (output < 0) output = 0;
-		return output;
 	}
 }

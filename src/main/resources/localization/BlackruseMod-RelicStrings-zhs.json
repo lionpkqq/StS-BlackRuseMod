@@ -2,7 +2,7 @@
   "Uniform": {
     "NAME": "制服",
     "FLAVOR": "制服不仅可以用来抵挡秽物，还能用来携带兵器。",
-    "DESCRIPTIONS": ["每场战斗开始时获得 #b6 把 #y飞刀 。"]
+    "DESCRIPTIONS": ["每场战斗开始时，获得 #b6 把 #y飞刀 。"]
   },
   "Broom": {
     "NAME": "扫帚",
@@ -17,7 +17,7 @@
   "PocketWatch": {
     "NAME": "怀表",
     "FLAVOR": "六十年如一瞬。",
-    "DESCRIPTIONS": ["每当你消耗一张牌，下回合多抽一张牌。"]
+    "DESCRIPTIONS": ["每当你 #y消耗一张牌 ，抽一张牌。"]
   },
   "StoneMask": {
     "NAME": "石制面具",
@@ -37,12 +37,12 @@
   "SplendidAttire": {
     "NAME": "华服",
     "FLAVOR": "多一分美丽，多一分危险。",
-    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量  。"]
+    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量  和 #b2 层 #y卫星 。"]
   },
   "OldScarf": {
     "NAME": "旧围巾",
     "FLAVOR": "据说是祖上传下来的。",
-    "DESCRIPTIONS": ["每次触发 #y视界 效果，获得 #b6 点 护盾。"]
+    "DESCRIPTIONS": ["每场战斗开始时，在本场战斗中升级卡组里所有的 #y视界 卡。"]
   },
   "Pan": {
     "NAME": "平底锅",
@@ -52,6 +52,6 @@
   "RomanBracelet": {
     "NAME": "罗马腕轮",
     "FLAVOR": "只有一小部分人能激发腕轮的真正力量。",
-    "DESCRIPTIONS": ["战斗开始时在卡组里加入 #b2 张 #y幻时精华 。"]
+    "DESCRIPTIONS": ["每场战斗开始时，在卡组里加入 #b2 张 #y幻时精华 。"]
   }
 }

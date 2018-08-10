@@ -55,7 +55,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.8.9\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.9.0\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -74,7 +74,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     // card images
     public static final String _DUMMYATTACK = "cards/_dummy_attack.png";
     public static final String _DUMMYNOTATTACK = "cards/_dummy_not_attack.png";
-    public static final String ADVANCE = "cards/advance.png";
+    public static final String INSTANT_ARMOR = "cards/instant_armor.png";
     public static final String ALLEVIATE = "cards/alleviate.png";
     public static final String BARRIER = "cards/barrier.png";
     public static final String PENDULUM = "cards/pendulum.png";
@@ -101,7 +101,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FOLLOW_UP_2 = "cards/follow_up_2.png";
     public static final String FINISHING_TOUCH = "cards/finishing_touch.png";
     public static final String HIGHTAIL = "cards/hightail.png";
-    public static final String DECISIVE_ATTACK = "cards/decisive_attack.png";
+    public static final String ADVANCE = "cards/advance.png";
     public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String PROPER_PRACTICE = "cards/proper_practice.png";
@@ -155,7 +155,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String TRUE_SIGHT = "cards/true_sight.png";
     public static final String DANCING_SILVER = "cards/dancing_silver.png";
     public static final String UNRULED = "cards/unruled.png";
-    public static final String UNSHEATHE = "cards/unsheathe.png";
+    public static final String LIGHT_FLOW = "cards/light_flow.png";
     
     // power images
     public static final String CUSTOM_POWERS = "powers/custom_powers.atlas";
@@ -288,13 +288,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     @Override
 	public void receiveEditCards() {
 		logger.info("begin editting cards");
-		
 		logger.info("add cards for " + TheServantEnum.THE_SERVANT.toString());
 		
 		BaseMod.addCard(new Strike_Silver());
 		BaseMod.addCard(new Defend_Silver());
 		
-		BaseMod.addCard(new Advance());
+		BaseMod.addCard(new InstantArmor());
 		BaseMod.addCard(new Alleviate());
 		BaseMod.addCard(new Barrier());
 		BaseMod.addCard(new PendulumOfEternity());
@@ -316,7 +315,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new FloweringNight());
 		BaseMod.addCard(new Initiator());
 		BaseMod.addCard(new Hightail());
-		BaseMod.addCard(new DecisiveAttack());
+		BaseMod.addCard(new Advance());
 		BaseMod.addCard(new GarbageDisposal());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new ProperPractice());
@@ -366,13 +365,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new TrueSight());
 		BaseMod.addCard(new DancingSilver());
 		BaseMod.addCard(new Unruled());
-		BaseMod.addCard(new Unsheathe());
+		BaseMod.addCard(new LightFlow());
 		
 		// make sure everything is always unlocked		
 		UnlockTracker.unlockCard("Strike_S");
 		UnlockTracker.unlockCard("Defend_S");
 		
-		UnlockTracker.unlockCard("Advance");
+		UnlockTracker.unlockCard("InstantArmor");
 		UnlockTracker.unlockCard("Alleviate");
 		UnlockTracker.unlockCard("Barrier");
 		UnlockTracker.unlockCard("PendulumOfEternity");
@@ -380,13 +379,13 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Comet");
 		UnlockTracker.unlockCard("CosmicInflation");
 		UnlockTracker.unlockCard("DWeaponry");
-		UnlockTracker.unlockCard("Deny");		
+		UnlockTracker.unlockCard("Deny");
 		UnlockTracker.unlockCard("DoubleEdge");
-		UnlockTracker.unlockCard("DualDimension");		
+		UnlockTracker.unlockCard("DualDimension");
 		UnlockTracker.unlockCard("Duplication");
 		UnlockTracker.unlockCard("Enbodiment");
 		UnlockTracker.unlockCard("Defy");
-		UnlockTracker.unlockCard("FanOfKnives");		
+		UnlockTracker.unlockCard("FanOfKnives");
 		UnlockTracker.unlockCard("GearUp");
 		UnlockTracker.unlockCard("FastForward");
 		UnlockTracker.unlockCard("Ricochet");
@@ -394,7 +393,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("FloweringNight");
 		UnlockTracker.unlockCard("FollowUp");
 		UnlockTracker.unlockCard("Hightail");
-		UnlockTracker.unlockCard("Decisive Attack");
+		UnlockTracker.unlockCard("Advance");
 		UnlockTracker.unlockCard("GarbageDisposal");
 		UnlockTracker.unlockCard("Gouge");
 		UnlockTracker.unlockCard("LiveAndLearn");
@@ -444,7 +443,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("TrueSight");
 		UnlockTracker.unlockCard("DancingSilver");
 		UnlockTracker.unlockCard("Unruled");
-		UnlockTracker.unlockCard("Unsheathe");
+		UnlockTracker.unlockCard("LightFlow");
 		
 		logger.info("done editting cards");
 	}
@@ -517,21 +516,20 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
         BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是凛光侍从的专属武器。可以被投掷或转化。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y不能被打出 且具有 #y虚无 。效果会在抽到时触发。");
+        BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y费用为0且具有 #y虚无 和 #y消耗 。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"变换"}, "变换 效果会在牌被手动丢弃后触发。");
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
-        BaseMod.addKeyword(new String[] {"反冲X", "反冲"}, "对你随机附加 #b1 层 #y虚弱 ， #y易伤 或 #y脆弱 #bX 次。");
-        BaseMod.addKeyword(new String[] {"护盾"}, "未被格挡的伤害会消耗 #y护盾 而不是你的生命。护盾不受其他能力影响。在你的下一回合开始时不会消失。");
+        BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
+        BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
         BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servent's most dedicated weapons. Can be threw or converted.");
-        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards are #yUnplayable and #yEthereal. Their effects will be triggered when drawn.");
+        BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s).");
-        BaseMod.addKeyword(new String[] {"Backlash X", "Backlash", "backlash", "backlash X"}, "Apply #b1 random #yWeak, #yVulnerable or #yFrail to you #bX times.");
-        BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Unblocked damage will consume #yProtection instead of your HP. Protection is not affected by other powers. "
-        		+ "It will not be removed at the start of your next turn.");
+        BaseMod.addKeyword(new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable AND #yFrail to you.");
+        BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Whenever you lose HP, lose #yProtection instead. Protection will not be removed at the start of your next turn.");
         BaseMod.addKeyword(new String[] {"Satellite", "satellite", "Satellites", "satellites"}, "Whenever you use an Attack, lose #b1 Satellite and attack an extra time for #b4 damage. "
         		+ "Whenever you are attacked, lose #b1 Satellite and deal #b4 damage to the attacker. Satellites count as Knives.");
         logger.info("done setting up custom keywords");

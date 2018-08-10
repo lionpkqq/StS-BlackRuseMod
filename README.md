@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.8.9
+# StS-BlackRuseMod 0.9.0
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (08-02-2018)
+* Slay The Spire (08-09-2018)
 * ModTheSpire 2.9.1
-* BaseMod 2.18.0 (Week 36 Patch)
+* BaseMod 2.19.0 (Week 37 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -23,14 +23,14 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 * **Temporal**: Temporal cards are Unplayable and Ethereal. Their effects will be triggered when drawn.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
-* **Backlash X**: Apply 1 random Weak, Vulnerable or Frail to you X times.
+* **Backlash X**: Apply 1 random Weak or Frail to you X times.
 * **Protection**: Unblocked damage will consume Protection instead of your HP.
 * **Satellite**: Whenever you use an Attack, lose 1 Satellite and attack an extra time for 4 damage. Whenever you are attacked, lose 1 Satellite and deal 4 damage to the attacker.
 
 ## Usage ##
 ### Required Downloads ###
 * ModTheSpire v2.9.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod 2.18.0+ (https://github.com/daviscook477/BaseMod/releases)
+* BaseMod 2.19.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -104,6 +104,55 @@ Contributors of **FruityMod**
 * Looking for an (presumably spine) animator.
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
+
+0.9.0
+
+Balance:
+* [Barrier] gain 8(11) Block and Protection -> gain 7(10) Block and Protection
+* [Canned Time] is no longer Ethereal
+* [Comet] cost 0 -> cost 1
+* [Comet] deal 5(8) damage -> deal 10(14) damage
+* [Cosmic Inflation] gain 8(10) Protection -> gain 7(9) Protection
+* [Defy] now has Retain
+* [Double Edge] deal 13(17) damage -> deal 15(21) damage
+* [Double Edge] Backlash 2 -> Backlash
+* [Dual Dimension] Shift: gain 5 Protection -> gain 6 Protection
+* [Duplication] Backlash 3 -> Backlash
+* [Finishing Touch] Backlash 3 -> Backlash
+* [Flawless Form] gain 16 Protection -> gain 12 Protection
+* [Flawless Form] upgrade to Innate -> upgrade to Retain
+* [Hightail] gain 7 Protection -> gain 6(8) Protection
+* [Hightail] Backlash X(X+1) -> Backlash
+* [Orbit] deal 2 damage -> deal 4 damage
+* [Pocket Watch] (rare relic) draw one more card next turn -> draw a card
+* [Read] gain 16(24) Protection -> gain 15(20) Protection
+* [Sabotage] deal 5(8) damage -> deal 7(10) damage
+* [Solidify] choose 1 (upgraded) Temporal card -> choose 1 Temporal card twice
+* [Special Formula] Backlash 3 -> Backlash
+* [Special Formula] gain 2 Strength and Dexterity -> gain 1(2) Strength and Dexterity
+* [Spin] deal 11(15) damage -> deal 13(18) damage
+* [Spin] Backlash 2 -> Backlash
+* [Star Chef] now has Ethereal
+* [Star Chef] upgrade to Innate -> upgrade to lose Ethereal
+* [Sunlight] apply 1 Blight -> apply 1(2) Blight
+* [Temporal Defense] gain 4(6) Block and Protection -> gain 5(8) Block and Protection
+* [Time Warp] cost 1 -> cost 0
+* [Time Warp] deal 10(14) damage -> deal 6(8) damage
+* [True Sight] upgrade to Innate -> upgrade to Retain
+* [Unsheathe] Backlash 3 -> Backlash
+
+Changes and reworks:
+* Reworked Backlash: now it always applies 1 Weak, Vulnerable AND Frail to you.
+* Reworked Temporal: now it means Ethereal and Exhaust.
+* Changed all Temporal cards to accommodate the change above.
+* Reworked [Advance] and renamed it to [Instant Armor].
+* Deleted [Decisive Attack] and added a new [Advance].
+* Renamed [Unsheathe] to [Light Flow].
+* [Proper Practice] now has lower priority, which means its effect will be triggered after most powers.
+* Reworked rare relic [Old Scarf].
+* Reworked [Capture].
+* Reworked [Flowering Night].
+* Changed [Collapse] illustration to avoid confusion.
 
 0.8.9
 

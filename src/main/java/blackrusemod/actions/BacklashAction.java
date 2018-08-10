@@ -18,16 +18,11 @@ public class BacklashAction extends AbstractGameAction {
 	public void update() {
 		if ((this.duration == 0.3F) && (this.target != null)) {
 			for (int i = 0; i < this.amount; i++) {
-				int randomNum = AbstractDungeon.miscRng.random(2);
-				if (randomNum == 0)
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new WeakPower(this.target, 1, false), 1));
-				else if (randomNum == 1)
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new VulnerablePower(this.target, 1, false), 1));
-				else 
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new FrailPower(this.target, 1, false), 1));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new WeakPower(this.target, 1, false), 1));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new VulnerablePower(this.target, 1, false), 1));
+				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, new FrailPower(this.target, 1, false), 1));
 			}
 		}
-
 		tickDuration();
 	}
 }

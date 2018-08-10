@@ -28,7 +28,8 @@ public class Solidify extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new SolidifyAction(p, this.canUpgrade()));
+		AbstractDungeon.actionManager.addToBottom(new SolidifyAction(p));
+		if (!this.canUpgrade()) AbstractDungeon.actionManager.addToBottom(new SolidifyAction(p));
 	}
 
 	public AbstractCard makeCopy() {

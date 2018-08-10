@@ -42,4 +42,8 @@ public class Defend_Silver extends CustomCard {
 			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
 	}
+	
+	public boolean isDefend() {
+		return true;
+	}
 }

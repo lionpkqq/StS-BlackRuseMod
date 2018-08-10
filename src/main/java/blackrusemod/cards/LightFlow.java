@@ -15,33 +15,31 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.BacklashAction;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class Unsheathe extends CustomCard {
-	public static final String ID = "Unsheathe";
+public class LightFlow extends CustomCard {
+	public static final String ID = "LightFlow";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 8;
 	private static final int UPGRADE_PLUS_DMG = 4;
-	private static final int BACKLASH = 3;
 
-	public Unsheathe() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.UNSHEATHE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
+	public LightFlow() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.LIGHT_FLOW), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
-		this.magicNumber = this.baseMagicNumber = BACKLASH;
 		this.baseDamage = ATTACK_DMG;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		for (int i = 0; i < this.magicNumber; i ++)
+		for (int i = 0; i < 3; i ++)
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_HEAVY));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 	}
 
 	public AbstractCard makeCopy() {
-		return new Unsheathe();
+		return new LightFlow();
 	}
 
 	public void upgrade() {

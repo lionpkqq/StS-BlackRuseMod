@@ -20,7 +20,7 @@ public class CosmicInflation extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int PROTECTION_AMT = 8;
+	private static final int PROTECTION_AMT = 7;
 	private static final int UPGRADE_PROTECTION_BLOCK = 2;
 
 	public CosmicInflation() {

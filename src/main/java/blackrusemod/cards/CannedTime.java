@@ -28,7 +28,6 @@ public class CannedTime extends CustomCard {
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
-		this.isEthereal = true;
 	}
 	
 	@Override

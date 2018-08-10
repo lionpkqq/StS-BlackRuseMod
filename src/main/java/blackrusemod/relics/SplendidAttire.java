@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.powers.KnivesPower;
+import blackrusemod.powers.SatellitePower;
 
 public class SplendidAttire extends CustomRelic {
 	private static final String ID = "SplendidAttire";
@@ -30,6 +31,8 @@ public class SplendidAttire extends CustomRelic {
 				new KnivesPower(AbstractDungeon.player, KNIVES)));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 				new StrengthPower(AbstractDungeon.player, 1), 1));
+		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
+				new SatellitePower(AbstractDungeon.player, 2), 2));
 	}
 	
 	@Override

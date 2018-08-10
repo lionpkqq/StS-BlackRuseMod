@@ -15,9 +15,9 @@
 		"NAME": "Defend",
 		"DESCRIPTION": "Gain !B! Block."
 	},
-	"Advance": {
-		"NAME": "Advance",
-		"DESCRIPTION": "Gain !M! Protection. NL Gain [B] [B] . NL Exhaust. NL Ethereal."
+	"InstantArmor": {
+		"NAME": "Instant Armor",
+		"DESCRIPTION": "Innate. NL Gain !M! Protection."
 	},
 	"Alleviate": {
 		"NAME": "Alleviate",
@@ -53,7 +53,7 @@
 	},
 	"DoubleEdge": {
 		"NAME": "Double Edge",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Backlash 2."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Backlash."
 	},
 	"DualDimension": {
 		"NAME": "Dual Dimension",
@@ -61,7 +61,7 @@
 	},
 	"Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash 3. NL Exhaust."
+		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
 	},
 	"Enbodiment": {
 		"NAME": "Enbodiment",
@@ -70,7 +70,7 @@
 	},
 	"Defy": {
 		"NAME": "Defy",
-		"DESCRIPTION": "Gain !B! Block. NL You are not influenced by Weak, Vulnerable and Frail for 1 turn."
+		"DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn. NL Retain."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
@@ -91,11 +91,11 @@
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
 		"DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail."
+		"UPGRADE_DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail. NL Retain."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Draw a card whenever you play a card this turn. NL You may only draw !M! extra cards this turn. NL Exhaust."
+		"DESCRIPTION": "Whenever you play a card, draw a card. NL You may only draw !M! cards each turn."
 	},
 	"Initiator": {
 		"NAME": "Initiator",
@@ -114,18 +114,16 @@
 	},
 	"FinishingTouch": {
 		"NAME": "Finishing Touch",
-		"DESCRIPTION": "Deal !D! damage. NL Backlash 3. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Deal !D! damage. NL Backlash. NL Exhaust. NL Ethereal."
 	},
 	"Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash X.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Protection NL X+1 time(s). NL Backlash X+1."
+		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash."
 	},
-	"DecisiveAttack": {
-		"NAME": "Decisive Attack",
-		"DESCRIPTION": "Deal damage equals to X times the number of cards in your hand. NL Discard your hand.",
-		"UPGRADE_DESCRIPTION": "Deal damage equals to X+1 times the number of cards in your hand. NL Discard your hand.",
-		"EXTENDED_DESCRIPTION": ["NL (Deal !D! damage.)"]
+	"Advance": {
+		"NAME": "Advance",
+		"DESCRIPTION": "Discard your hand. NL Put X Cost 0 card(s) from your draw pile into your hand.",
+		"UPGRADE_DESCRIPTION": "Discard your hand. NL Put X+1 Cost 0 card(s) from your draw pile into your hand."
 	},
 	"GarbageDisposal": {
 		"NAME": "Garbage Disposal",
@@ -146,7 +144,7 @@
 	},
 	"Capture": {
 		"NAME": "Capture",
-		"DESCRIPTION": "Deal !D! damage. NL If you have at least !M! Ethereal cards in your draw pile, draw 2 cards."
+		"DESCRIPTION": "Deal !D! damage. NL Choose an exhausted card and put it on top of your draw pile. NL Exhaust."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
@@ -183,8 +181,8 @@
 	},
 	"CannedTime": {
 		"NAME": "Canned Time",
-		"DESCRIPTION": "Draw !M! cards. NL Exhaust. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Draw !M! cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust."
 	},
 	"MurderousAura": {
 		"NAME": "Murderous Aura",
@@ -265,8 +263,8 @@
 	},
 	"Solidify": {
 		"NAME": "Solidify",
-		"DESCRIPTION": "Choose a Temporal card and place it on top of your draw pile. Exhaust.",
-		"UPGRADE_DESCRIPTION": "Choose a Upgraded Temporal card and place it on top of your draw pile. Exhaust."
+		"DESCRIPTION": "Choose 1 Temporal card and place it on top of your draw pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Choose 1 Temporal card twice and place it on top of your draw pile. NL Exhaust."
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
@@ -274,16 +272,16 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain 2 Strength. NL Gain 2 Dexterity. NL Backlash !M!. NL Exhaust."
+		"DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Backlash. NL Exhaust."
 	},
 	"Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL Backlash 2."
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL Backlash."
 	},
 	"StarChef": {
 		"NAME": "Star Chef",
-		"DESCRIPTION": "At the start of your turn, you may exhaust 1 card and thereby gain [B].",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may exhaust 1 card and thereby gain [B]."
+		"DESCRIPTION": "At the start of your turn, you may exhaust 1 card and gain [B] . NL Ethereal.",
+		"UPGRADE_DESCRIPTION": "At the start of your turn, you may exhaust 1 card and gain [B] ."
 	},
 	"Starlight": {
 		"NAME": "Starlight",
@@ -295,7 +293,7 @@
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and apply 1 Blight NL to ALL enemies."
+		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and apply !M! Blight NL to ALL enemies."
 	},
 	"SurpressingFire": {
 		"NAME": "Surpressing Fire",
@@ -307,24 +305,20 @@
 	},
 	"TemporalDefense": {
 		"NAME": "Temporal Defense",
-		"DESCRIPTION": "Temporal. NL Gain !B! Block. NL Gain !M! Protection.",
-		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
+		"DESCRIPTION": "Temporal. NL Gain !B! Block. NL Gain !M! Protection."
 	},
 	"TemporalEssence": {
 		"NAME": "Temporal Essence",
 		"DESCRIPTION": "Temporal. NL Gain [B] and draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] and draw !M! cards.",
-		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
+		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] and draw !M! cards."
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Temporal. NL Apply !M! Blight, Vulnerable and Weak to ALL enemies.",
-		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
+		"DESCRIPTION": "Temporal. NL Apply !M! Blight, Vulnerable and Weak to ALL enemies."
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
-		"DESCRIPTION": "Temporal. NL Deal !D! damage !M! times to ALL enemies.",
-		"EXTENDED_DESCRIPTION": ["This card is unplayable."]
+		"DESCRIPTION": "Temporal. NL Deal !D! damage !M! times to ALL enemies."
 	},
 	"TheWorld": {
 		"NAME": "The World",
@@ -346,14 +340,14 @@
 	"TrueSight": {
 		"NAME": "True Sight",
 		"DESCRIPTION": "Vision effects will always be triggered.",
-		"UPGRADE_DESCRIPTION": "Innate. NL Vision effects will always be triggered."
+		"UPGRADE_DESCRIPTION": "Vision effects will always be triggered. NL Retain."
 	},
 	"Unruled": {
 		"NAME": "Unruled",
 		"DESCRIPTION": "Deal !D! damage. NL For each stack of Weak, Vulnerable and Frail on you, deal !M! additional damage."
 	},
-	"Unsheathe": {
-		"NAME": "Unsheathe",
-		"DESCRIPTION": "Deal !D! damage NL !M! times. NL Backlash !M!."
+	"LightFlow": {
+		"NAME": "Light Flow",
+		"DESCRIPTION": "Deal !D! damage NL 3 times. NL Backlash."
 	}
 }

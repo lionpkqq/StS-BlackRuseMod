@@ -21,9 +21,8 @@ public class Hightail extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = -1;
-	private static final int PROTECTION = 7;
+	private static final int PROTECTION = 6;
 
 	public Hightail() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.HIGHTAIL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -35,13 +34,11 @@ public class Hightail extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (!this.canUpgrade()) this.energyOnUse += 1;
 		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
-		for (int i = 0; i < this.energyOnUse; i++) 
+		for (int i = 0; i < this.energyOnUse; i++)
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-		if (this.energyOnUse != 0) AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.energyOnUse));
-		if (!this.canUpgrade()) this.energyOnUse -= 1;
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
 		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
 	}
@@ -53,8 +50,7 @@ public class Hightail extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			upgradeMagicNumber(2);
 		}
 	}
 }

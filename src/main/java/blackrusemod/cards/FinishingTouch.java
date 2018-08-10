@@ -25,14 +25,12 @@ public class FinishingTouch extends CustomCard {
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 36;
 	private static final int UPGRADE_PLUS_DMG = 18;
-	private static final int BACKLASH = 3;
 
 	public FinishingTouch() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FINISHING_TOUCH), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		this.magicNumber = this.baseMagicNumber = BACKLASH;
 		this.exhaust = true;
 		this.isEthereal = true;
 	}
@@ -43,7 +41,7 @@ public class FinishingTouch extends CustomCard {
 		}
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 	}
 
 	public AbstractCard makeCopy() {

@@ -26,7 +26,6 @@ public class Strike_Silver extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STRIKE_SILVER), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.BASIC,
 				AbstractCard.CardTarget.ENEMY);
-
 		this.baseDamage = ATTACK_DMG;
 	}
 
@@ -44,5 +43,9 @@ public class Strike_Silver extends CustomCard {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
+	}
+	
+	public boolean isStrike() {
+		return true;
 	}
 }

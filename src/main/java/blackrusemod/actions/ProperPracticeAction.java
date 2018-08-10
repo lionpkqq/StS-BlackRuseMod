@@ -17,7 +17,7 @@ public class ProperPracticeAction extends AbstractGameAction {
 	public ProperPracticeAction(AbstractPlayer p, int numCards) {
 		this.amount = numCards;
 		this.p = p;
-		this.actionType = AbstractGameAction.ActionType.EXHAUST;
+		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.startingDuration = Settings.ACTION_DUR_FAST;
 		this.duration = this.startingDuration;
 	}
@@ -38,6 +38,7 @@ public class ProperPracticeAction extends AbstractGameAction {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 				if (c.canUpgrade()) {
 					c.upgrade();
+					c.initializeDescription();
 					c.superFlash();
 				}
 				this.p.hand.addToTop(c);

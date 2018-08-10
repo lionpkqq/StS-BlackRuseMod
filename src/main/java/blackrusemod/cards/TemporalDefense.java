@@ -19,36 +19,27 @@ public class TemporalDefense extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-	private static final int COST = -2;
-	private static final int BLOCK_AMT = 4;
-	private static final int UPGRADE_PLUS_BLOCK = 2;
-	private static final int PROTECTION_AMT = 4;
-	private static final int UPGRADE_PROTECTION_BLOCK = 2;
+	private static final int COST = 0;
+	private static final int BLOCK_AMT = 5;
+	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int PROTECTION_AMT = 5;
+	private static final int UPGRADE_PROTECTION_BLOCK = 3;
 
 	public TemporalDefense() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_DEFENSE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.NONE);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.isEthereal = true;
+		this.exhaust = true;
 		this.baseBlock = BLOCK_AMT;
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-	}
-	
-	public boolean canUse(AbstractPlayer p, AbstractMonster m)
-	{
-		this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-		return false;
-	}
-	
-	public void triggerWhenDrawn() {
-		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 	}
+	
 	public AbstractCard makeCopy() {
 		return new TemporalDefense();
 	}

@@ -20,7 +20,6 @@ public class Duplication extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int DUP = 1;
-	private static final int BACKLASH = 3;
 
 	public Duplication() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUPLICATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -31,7 +30,7 @@ public class Duplication extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DuplicationAction(p, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(BACKLASH));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 	}
 
 	public AbstractCard makeCopy() {

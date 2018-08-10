@@ -25,7 +25,7 @@ public class DualDimension extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int COST_UPGRADED = 1;
-	private static final int PROTECTION = 5;
+	private static final int PROTECTION = 6;
 
 	public DualDimension() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUAL_DIMENSION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,

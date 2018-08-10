@@ -28,12 +28,14 @@ public class Sunlight extends CustomCard {
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 16;
 	private static final int UPGRADE_PLUS_DMG = 8;
+	private static final int BLIGHT = 1;
 	
 	public Sunlight() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SUNLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
 		this.isMultiDamage = true;
 		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = BLIGHT;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -47,9 +49,13 @@ public class Sunlight extends CustomCard {
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
 					p.addBlock(p.getPower("SurpressingFirePower").amount);
 				}
-				for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
+				for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
-							new AmplifyDamagePower(mo, 1), 1));
+							new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
+					if (AbstractDungeon.player.hasRelic("PaperSwan")) 
+						if (AbstractDungeon.cardRandomRng.randomBoolean())
+							AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
+				}
 			}
 		}
 	}
@@ -70,6 +76,7 @@ public class Sunlight extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

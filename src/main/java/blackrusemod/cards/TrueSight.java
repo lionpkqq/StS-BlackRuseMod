@@ -29,6 +29,11 @@ public class TrueSight extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TrueSightPower(p, -1), -1));
 	}
+	
+	public void triggerOnEndOfTurnForPlayingCard() {
+		if (!this.canUpgrade()) 
+			this.retain = true;
+	}
 
 	public AbstractCard makeCopy() {
 		return new TrueSight();
@@ -39,7 +44,7 @@ public class TrueSight extends CustomCard {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
-			this.isInnate = true;
+			this.retain = true;
 		}
 	}
 }

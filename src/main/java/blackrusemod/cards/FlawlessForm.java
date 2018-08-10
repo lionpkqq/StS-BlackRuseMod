@@ -21,7 +21,7 @@ public class FlawlessForm extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 3;
-	private static final int PROTECTION_AMT = 16;
+	private static final int PROTECTION_AMT = 12;
 
 	public FlawlessForm() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLAWLESS_FORM), COST, DESCRIPTION, AbstractCard.CardType.POWER,
@@ -33,6 +33,11 @@ public class FlawlessForm extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FlawlessFormPower(p, -1), -1));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
 	}
+	
+	public void triggerOnEndOfTurnForPlayingCard() {
+		if (!this.canUpgrade()) 
+			this.retain = true;
+	}
 
 	public AbstractCard makeCopy() {
 		return new FlawlessForm();
@@ -43,7 +48,7 @@ public class FlawlessForm extends CustomCard {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
-			this.isInnate = true;
+			this.retain = true;
 		}
 	}
 }

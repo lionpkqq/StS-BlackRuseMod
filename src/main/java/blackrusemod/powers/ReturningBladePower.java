@@ -1,8 +1,6 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -49,22 +47,16 @@ public class ReturningBladePower extends AbstractPower {
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) 
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && !this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) 
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));
-			if (AbstractDungeon.player.hasRelic("OldScarf")) 
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, 6), 6));
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 999));
 	}

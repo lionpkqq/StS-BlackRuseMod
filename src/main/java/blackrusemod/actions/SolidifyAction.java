@@ -18,38 +18,20 @@ import blackrusemod.cards.TemporalSlicing;
 
 public class SolidifyAction extends AbstractGameAction {
 	private ArrayList<AbstractCard> list = new ArrayList<AbstractCard>();
-	private boolean canUpgrade;
 
-	public SolidifyAction(AbstractCreature p, boolean canUpgrade) {
+	public SolidifyAction(AbstractCreature p) {
 		this.actionType = AbstractGameAction.ActionType.SPECIAL;
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.source = p;
-		this.canUpgrade = canUpgrade;
 		AbstractCard c;
-		if (this.canUpgrade) {
-			c = new TemporalSlicing().makeCopy();
-			this.list.add(c);
-			c = new TemporalMisd().makeCopy();
-			this.list.add(c);
-			c = new TemporalDefense().makeCopy();
-			this.list.add(c);
-			c = new TemporalEssence().makeCopy();
-			this.list.add(c);
-		}
-		else {
-			c = new TemporalSlicing().makeCopy();
-			c.upgrade();
-			this.list.add(c);
-			c = new TemporalMisd().makeCopy();
-			c.upgrade();
-			this.list.add(c);
-			c = new TemporalDefense().makeCopy();
-			c.upgrade();
-			this.list.add(c);
-			c = new TemporalEssence().makeCopy();
-			c.upgrade();
-			this.list.add(c);
-		}
+		c = new TemporalSlicing().makeCopy();
+		this.list.add(c);
+		c = new TemporalMisd().makeCopy();
+		this.list.add(c);
+		c = new TemporalDefense().makeCopy();
+		this.list.add(c);
+		c = new TemporalEssence().makeCopy();
+		this.list.add(c);
 	}
 
 	public void update()
