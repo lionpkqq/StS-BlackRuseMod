@@ -20,10 +20,10 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 ## New Mechanics ##
 * **Knives**: Knives are the Servent's most dedicated weapons.
 * **Blight**: Blighted enemies will take extra damage when attacked.
-* **Temporal**: Temporal cards are Unplayable and Ethereal. Their effects will be triggered when drawn.
+* **Temporal**: Temporal cards cost 0 and have Exhaust and Ethereal.
 * **Shift**: Shift effects can only be triggered by discarding the cards.
 * **Vision**: Predict the enemy intent for the next turn. If correct, trigger the effect(s).
-* **Backlash X**: Apply 1 random Weak or Frail to you X times.
+* **Backlash**: Apply 1 Weak, Vulnerable and Frail to you.
 * **Protection**: Unblocked damage will consume Protection instead of your HP.
 * **Satellite**: Whenever you use an Attack, lose 1 Satellite and attack an extra time for 4 damage. Whenever you are attacked, lose 1 Satellite and deal 4 damage to the attacker.
 
@@ -63,7 +63,7 @@ The Wiki is still under construction. Thanks for your patience!
 * Gogo (https://github.com/gogo81745) - programming consultation.
 * HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
-* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk, 哓吉, sin-genjitsu xxx, 不悲不喜, and more!
+* Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk, 哓吉, sin-genjitsu xxx, 不悲不喜, Brood_Star and more!
 
 ## Special Thanks ##
 
@@ -434,5 +434,5 @@ Bug fixes:
 * Reworked [Unruled].
 * Fixed: When the player uses [Moon Phase] the game would break.
 * Fixed: The second [The World] would not work if played right after the first [The World].
-* Fixed many typos that makes some cards have overpowered effects ([Temporal Slicing], ect).
+* Fixed many typos that makes some cards have overpowered effects ([Temporal Slicing], etc).
 * [Reality Marble] is now actually innate, as described.
