@@ -105,6 +105,12 @@ Contributors of **FruityMod**
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
 
+0.9.0 HOTFIX
+
+Fixed: The description of [Flowering Night] does not describe its effects correctly.
+Fixed: The draw counter of [Flowering Night] does not reset at the end of turn.
+Fixed: [Special Formula] has incorrect effects.
+
 0.9.0
 
 Balance:

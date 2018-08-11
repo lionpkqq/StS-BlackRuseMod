@@ -21,7 +21,7 @@ public class SpecialFormula extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BUFF = 3;
+	private static final int BUFF = 1;
 	
 	public SpecialFormula() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SPECIAL_FORMULA), COST, DESCRIPTION,
