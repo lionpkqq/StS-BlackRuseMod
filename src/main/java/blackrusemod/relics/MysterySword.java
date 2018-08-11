@@ -41,7 +41,7 @@ public class MysterySword extends CustomRelic {
 			tmp.purgeOnUse = true;
 			AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m));
 			stopPulse();
-			AbstractDungeon.actionManager.addToBottom(new BacklashAction(3));
+			AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 		}
 	}
 	

@@ -27,7 +27,7 @@
   "MysterySword": {
     "NAME": "神秘之剑",
     "FLAVOR": "高塔深处找到的武器，会给使用者带来极大的负担。",
-    "DESCRIPTIONS": ["每回合打出的第一张 攻击牌 将会打出两次并具有 #y反冲 #b3 。"]
+    "DESCRIPTIONS": ["每回合打出的第一张 攻击牌 将会打出两次并具有 #y反冲 。"]
   },
   "PaperSwan": {
     "NAME": "纸天鹅",

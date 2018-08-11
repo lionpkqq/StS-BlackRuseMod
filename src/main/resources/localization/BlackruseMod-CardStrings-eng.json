@@ -74,7 +74,7 @@
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
-		"DESCRIPTION": "Throw 1 Knives at each enemy. NL Each deals !D! damage. NL Repeat X time(s)."
+		"DESCRIPTION": "Throw 1 Knife at each enemy X times. NL Each deals !D! damage."
 	},
 	"GearUp": {
 		"NAME": "Gear Up",
@@ -118,7 +118,8 @@
 	},
 	"Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash."
+		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Protection NL X+1 time(s). NL Backlash."
 	},
 	"Advance": {
 		"NAME": "Advance",
@@ -301,7 +302,8 @@
 	},
 	"TimeTheft": {
 		"NAME": "Time Theft",
-		"DESCRIPTION": "Vision: Gain [B] [B] [B] . Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "Vision: Gain [B] [B] . NL Draw !M! cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . NL Draw !M! cards. NL Exhaust."
 	},
 	"TemporalDefense": {
 		"NAME": "Temporal Defense",

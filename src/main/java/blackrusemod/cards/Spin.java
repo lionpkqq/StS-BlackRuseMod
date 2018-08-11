@@ -44,7 +44,7 @@ public class Spin extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, true));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters)
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(2));
+		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
 	}
 
 	public AbstractCard makeCopy() {

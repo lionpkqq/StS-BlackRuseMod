@@ -1,4 +1,4 @@
-# StS-BlackRuseMod 0.9.0
+# StS-BlackRuseMod 0.9.0c
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
@@ -105,11 +105,26 @@ Contributors of **FruityMod**
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
 
-0.9.0 HOTFIX
+0.9.0c HOTFIX
 
-Fixed: The description of [Flowering Night] does not describe its effects correctly.
-Fixed: The draw counter of [Flowering Night] does not reset at the end of turn.
-Fixed: [Special Formula] has incorrect effects.
+* Fixed: [Mystery Blade] has Backlash 3 instead of Backlash.
+* Fixed: [Multi-Shot] sometimes targets dead enemies.
+* Fixed: The Satellite attack animation is too fast.
+
+* [Sunlight] deal 16(24) damage -> deal 16(21) damage
+* [Time Theft] cost 1(0) -> cost 1
+* [Time Theft] gain 3 energy -> gain 2(3) energy
+* [Time Theft] draw 3 cards -> draw 2(3) cards
+* [Hightail] gain 6(8) Protection -> gain 8 Protection
+* [Hightail] X times -> X(X+1)times
+
+0.9.0b HOTFIX
+
+* Fixed: The description of [Flowering Night] does not describe its effects correctly.
+* Fixed: The draw counter of [Flowering Night] does not reset at the end of turn.
+* Fixed: [Special Formula] has incorrect effects.
+* Fixed: [Spin] triggers Backlash twice.
+* Fixed: [Fan of Knives] has a misleading description.
 
 0.9.0
 

@@ -32,7 +32,7 @@ public class MultiShot extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (int i = 0; i < this.magicNumber; i++)
-			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, AbstractDungeon.getMonsters().getRandomMonster(true), 
+			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, 
 					new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Draw"));
 	}
 

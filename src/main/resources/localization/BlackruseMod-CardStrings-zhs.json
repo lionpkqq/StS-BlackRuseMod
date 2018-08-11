@@ -74,7 +74,7 @@
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
-		"DESCRIPTION": "对每个敌人投掷1把 飞刀 。每把造成 !D! 点伤害。重复X次。"
+		"DESCRIPTION": "对每个敌人投掷1把 飞刀 X次。 NL 每把造成 !D! 点伤害。"
 	},
 	"GearUp": {
 		"NAME": "整装待发",
@@ -118,7 +118,8 @@
 	},
 	"Hightail": {
 		"NAME": "遁走",
-		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。",
+		"UPGRADE_DESCRIPTION": ""获得 !M! 点 护盾 X+1 次。 NL 反冲 。"
 	},
 	"Advance": {
 		"NAME": "预支",
@@ -301,7 +302,8 @@
 	},
 	"TimeTheft": {
 		"NAME": "盗窃时间",
-		"DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 抽 !M! 张牌。 消耗 。"
+		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。"
 	},
 	"TemporalDefense": {
 		"NAME": "幻时防护",

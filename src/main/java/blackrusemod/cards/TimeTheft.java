@@ -19,7 +19,7 @@ public class TimeTheft extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ENERGY = 3;
+	private static final int ENERGY = 2;
 
 	public TimeTheft() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_THEFT), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -40,7 +40,9 @@ public class TimeTheft extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(0);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			upgradeMagicNumber(1);
 		}
 	}
 }

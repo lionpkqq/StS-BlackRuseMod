@@ -38,6 +38,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 	{
 		if (this.source.hasPower("KnivesPower")) {
 			if (this.source.getPower("KnivesPower").amount > 0) {
+				if (this.debuff != null && (this.debuff == "Draw" || this.debuff == "Golden")) 
+					this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
 					this.target.damageFlash = true;
 					this.target.damageFlashFrames = 4;
