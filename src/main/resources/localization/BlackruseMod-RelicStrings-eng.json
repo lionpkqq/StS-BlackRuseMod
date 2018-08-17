@@ -1,7 +1,7 @@
 {
   "Uniform": {
     "NAME": "Uniform",
-    "FLAVOR": "It can be used not only to keep dirty stuff away, but also to carry weapons.",
+    "FLAVOR": "It helps in keeping dirty stuff away as well as in carrying weapons.",
     "DESCRIPTIONS": ["At the start of each combat, obtain #b6 #yKnives."]
   },
   "Broom": {
@@ -37,7 +37,7 @@
   "SplendidAttire": {
     "NAME": "Splendid Attire",
     "FLAVOR": "Danger hides in beauty.",
-    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength and #b2 #ySatellites."]
+    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength and #b3 #ySatellites."]
   },
   "OldScarf": {
     "NAME": "Old Scarf",

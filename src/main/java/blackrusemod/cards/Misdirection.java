@@ -22,13 +22,13 @@ public class Misdirection extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK_AMT = 5;
+	private static final int BLOCK_AMT = 6;
 	private static final int UPGRADE_PLUS_BLOCK = 3;
 	private static final int DEBUFF = 1;
 
 	public Misdirection() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MISDIRECTION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseBlock = BLOCK_AMT;
 		this.magicNumber = this.baseMagicNumber = DEBUFF;
 	}

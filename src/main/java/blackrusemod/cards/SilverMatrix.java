@@ -1,6 +1,5 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,9 +9,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.ApplyMatrixAction;
 import blackrusemod.actions.ConvertAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.SilverMatrixPower;
 
 public class SilverMatrix extends CustomCard {
 	public static final String ID = "SilverMatrix";
@@ -30,8 +29,8 @@ public class SilverMatrix extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SilverMatrixPower(p, this.magicNumber), this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ConvertAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyMatrixAction());
 	}
 
 	public AbstractCard makeCopy() {

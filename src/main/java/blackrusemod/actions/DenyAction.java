@@ -33,7 +33,8 @@ public class DenyAction extends com.megacrit.cardcrawl.actions.AbstractGameActio
 						(AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
 			}
 
-			AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, this.anyNumber, TEXT[0]);
+			if (!this.anyNumber) AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TEXT[0], false, false, this.anyNumber, false);
+			else AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, this.anyNumber, TEXT[0]);
 		}
 		else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 			for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {

@@ -44,6 +44,16 @@ public class Barrier extends CustomCard {
 		return new Barrier();
 	}
 	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
+	
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {

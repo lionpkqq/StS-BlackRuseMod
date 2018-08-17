@@ -20,9 +20,8 @@ public class Comet extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int ATTACK_DMG = 10;
-	private static final int UPGRADE_PLUS_DMG = 4;
+	private static final int COST = 0;
+	private static final int ATTACK_DMG = 3;
 	private static final int DRAW = 2;
 
 	public Comet() {
@@ -35,9 +34,9 @@ public class Comet extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-		if ((AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1) == 0)
-			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
+				AbstractGameAction.AttackEffect.SMASH));
+		if ((this.magicNumber-(AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1)) > 0)
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, (this.magicNumber-(AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1))));
 	}
 
 	public AbstractCard makeCopy() {
@@ -47,7 +46,7 @@ public class Comet extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
+			upgradeMagicNumber(1);
 		}
 	}
 }

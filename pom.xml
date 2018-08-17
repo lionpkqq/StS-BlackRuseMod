@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BlackRuseMods</groupId>
   <artifactId>StS-BlackRuse</artifactId>
-  <version>0.9.0</version>
+  <version>0.9.1</version>
 
   <name>StS-BlackRuse</name>
   
@@ -10,7 +10,7 @@
 		<dependency>
 			<groupId>com.megacrit.cardcrawl</groupId>
 			<artifactId>slaythespire</artifactId>
-			<version>037</version>
+			<version>038</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/../lib/desktop-1.0.jar</systemPath>
 		</dependency>

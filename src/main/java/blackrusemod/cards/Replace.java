@@ -24,7 +24,7 @@ public class Replace extends CustomCard {
 
 	public Replace() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REPLACE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

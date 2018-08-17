@@ -10,41 +10,37 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.MoondialAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.FloweringNightPower;
+import blackrusemod.powers.ManipulatePower;
 
-public class FloweringNight extends CustomCard {
-	public static final String ID = "FloweringNight";
+public class Moondial extends CustomCard {
+	public static final String ID = "Moondial";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
-	private static final int COST_UPGRADED = 1;
-	private static final int LIMIT = 6;
-	
-	public FloweringNight() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLOWERING_NIGHT), COST, DESCRIPTION,
-				AbstractCard.CardType.POWER, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = LIMIT;
+	private static final int TEMPORAL = 2;
+
+	public Moondial() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOONDIAL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = TEMPORAL;
 	}
-	
-	@Override
+
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FloweringNightPower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new MoondialAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ManipulatePower(p, this.magicNumber), this.magicNumber));
 	}
-	
-	@Override
+
 	public AbstractCard makeCopy() {
-		return new FloweringNight();
+		return new Moondial();
 	}
-	
-	@Override
+
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }

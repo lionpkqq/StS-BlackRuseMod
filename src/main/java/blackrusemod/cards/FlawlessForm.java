@@ -42,6 +42,15 @@ public class FlawlessForm extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new FlawlessForm();
 	}
+	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

@@ -47,9 +47,12 @@ public class KillingDoll extends CustomCard {
 	
 	public void applyPowers() {
 		this.baseDamage = ATTACK_DMG;
-		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
+		if (!this.canUpgrade()) this.baseDamage += UPGRADE_PLUS_DMG;
+		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
 			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
 		super.applyPowers();
+		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
+			this.isDamageModified = true;
 	}
 
 	public void upgrade() {

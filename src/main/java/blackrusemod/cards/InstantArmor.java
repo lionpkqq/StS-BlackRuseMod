@@ -38,6 +38,16 @@ public class InstantArmor extends CustomCard {
 		return new InstantArmor();
 	}
 	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = ARMOR_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(2);
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
+	
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

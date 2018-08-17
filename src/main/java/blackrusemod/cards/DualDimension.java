@@ -40,10 +40,20 @@ public class DualDimension extends CustomCard {
 	}
 	
 	public void triggerOnManualDiscard() {
+		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+	}
+	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION;
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
 	}
 
 	public AbstractCard makeCopy() {

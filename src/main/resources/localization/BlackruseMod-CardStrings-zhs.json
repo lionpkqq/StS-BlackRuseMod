@@ -37,15 +37,15 @@
 	},
 	"Comet": {	
 		"NAME": "彗星",
-		"DESCRIPTION": " 造成 !D! 点伤害。 NL 如果本回合没有打出任何牌，抽 !M! 张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。"
 	},
 	"CosmicInflation": {
 		"NAME": "宇宙膨胀",
 		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 将这张牌的复制品放在抽牌堆顶部。 消耗 。"
 	},
-	"DWeaponry": {
-		"NAME": "次元武库",
-		"DESCRIPTION": "每回合开始时获得 !M! 把 飞刀 。"
+	"Moondial": {
+		"NAME": "月晷",
+		"DESCRIPTION": "增加 !M! 张随机 幻时 牌到你的手牌和抽卡堆。"
 	},
 	"Deny": {
 		"NAME": "否决",
@@ -78,7 +78,7 @@
 	},
 	"GearUp": {
 		"NAME": "整装待发",
-		"DESCRIPTION": "获得 6 点 护盾 。获得 4 把 飞刀 。转化 !M! 把 飞刀 为 卫星 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 获得 4 把 飞刀 。 NL 转化 1 把 飞刀 为 卫星 。"
 	},
 	"FastForward": {
 		"NAME": "快进",
@@ -114,21 +114,21 @@
 	},
 	"FinishingTouch": {
 		"NAME": "画龙点睛",
-		"DESCRIPTION": "造成 !D! 点伤害。 反冲 。 消耗 。 虚无 。"
+		"DESCRIPTION": "造成 !D! 点伤害。 获得1点 风华 。 消耗 。 虚无 。"
 	},
 	"Hightail": {
 		"NAME": "遁走",
 		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。",
-		"UPGRADE_DESCRIPTION": ""获得 !M! 点 护盾 X+1 次。 NL 反冲 。"
+		"UPGRADE_DESCRIPTION": "获得 !M! 点 护盾 X+1 次。 NL 反冲 。"
 	},
 	"Advance": {
 		"NAME": "预支",
-		"DESCRIPTION": "丢弃所有手牌。将抽牌堆中X张0耗能的牌放入你的手牌。",
-		"UPGRADE_DESCRIPTION": "丢弃所有手牌。将抽牌堆中X+1张0耗能的牌放入你的手牌。"
+		"DESCRIPTION": "将抽牌堆中 !M! 张0耗能的牌放入你的手牌。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 将抽牌堆中 !M! 张0耗能的牌放入你的手牌。"
 	},
-	"GarbageDisposal": {
-		"NAME": "废物处理",
-		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 每消耗1张牌，获得1 敏捷 ，抽1张牌。 NL 消耗 。"
+	"Disposal": {
+		"NAME": "措置",
+		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 每消耗1张牌，获得1 风华 ，抽1张牌。 NL 消耗 。"
 	},
 	"Gouge": {
 		"NAME": "凿击",
@@ -139,13 +139,13 @@
 		"NAME": "适当练习",
 		"DESCRIPTION": "每回合开始时，你可以在本场战斗中 升级 手牌中的1张牌。"
 	},
-	"HouseCleaning": {
-		"NAME": "打扫",
-		"DESCRIPTION": "抽 !M! 张牌。 NL 丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。"
+	"Cleaning": {
+		"NAME": "扫除",
+		"DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。"
 	},
-	"Capture": {
-		"NAME": "捕获",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 选择一张已 消耗 的牌，将其放到抽牌堆的顶部。 NL 消耗 。"
+	"Luminosity": {
+		"NAME": "光辉",
+		"DESCRIPTION": "获得 1 点 力量 。 NL 获得 !M! 点 风华 。"
 	},
 	"KidneyShot": {
 		"NAME": "肾击",
@@ -166,7 +166,8 @@
 	},
 	"Manipulate": {
 		"NAME": "操控",
-		"DESCRIPTION": "将 !M! 张随机 幻时 牌加入抽牌堆。"
+		"DESCRIPTION": "将 X+1 张随机 幻时 牌加入抽牌堆。",
+		"UPGRADE_DESCRIPTION": "将 X+2 张随机 幻时 牌加入抽牌堆。"
 	},
 	"Misdirection": {
 		"NAME": "误导",
@@ -244,7 +245,7 @@
 	},
 	"ShiftingGears": {
 		"NAME": "换档",
-		"DESCRIPTION": "丢弃抽牌堆顶的 !M! 张牌。抽 !M! 张牌。 NL 变换 ：获得 1 点 敏捷 。"
+		"DESCRIPTION": "抽 !M! 张牌。 NL 变换 ：获得 1 点 风华 。"
 	},
 	"ShatteredReality": {
 		"NAME": "破碎现实",
@@ -252,11 +253,11 @@
 	},
 	"SilverMatrix": {
 		"NAME": "银色矩阵",
-		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 每当你失去1层 卫星 ，获得 !M! 点 护盾 。"
+		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 获得 卫星 数量的 矩阵 。"
 	},
 	"SilverBlades": {
 		"NAME": "银刃",
-		"DESCRIPTION": "增加 飞刀 的伤害 !M! 点。"
+		"DESCRIPTION": "增加 飞刀 的伤害 !M! 点。 NL 每回合开始时获得 !M! 把 飞刀 。"
 	},
 	"Snipe": {
 		"NAME": "狙击",
@@ -273,7 +274,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "特制配方",
-		"DESCRIPTION": "获得 !M! 点 力量 。 NL 获得 !M! 点 敏捷 。 NL 反冲 。 NL 消耗 。"
+		"DESCRIPTION": "获得 [B] 。 NL 回复 !M! 生命 。 NL 反冲 。 NL 消耗 。"
 	},
 	"Spin": {
 		"NAME": "回旋",
@@ -316,7 +317,7 @@
 	},
 	"TemporalMisd": {
 		"NAME": "幻时误导",
-		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 ， 易伤 和 虚弱 。"
+		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 和 虚弱 。"
 	},
 	"TemporalSlicing": {
 		"NAME": "幻时切割",
@@ -332,7 +333,7 @@
 	},
 	"TimeWarp": {
 		"NAME": "时间迁跃",
-		"DESCRIPTION": "造成 !D! 点伤害。丢弃1张牌。 NL 变换 ：抽 !M! 张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
 	},
 	"TrashToTreasure": {
 		"NAME": "变废为宝",

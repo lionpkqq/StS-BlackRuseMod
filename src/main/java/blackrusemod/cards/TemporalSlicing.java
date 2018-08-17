@@ -21,7 +21,7 @@ public class TemporalSlicing extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 5;
+	private static final int ATTACK_DMG = 4;
 	private static final int ATTACK_TIMES = 2;
 
 	public TemporalSlicing() {
@@ -31,6 +31,7 @@ public class TemporalSlicing extends CustomCard {
 		this.exhaust = true;
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = ATTACK_TIMES;
+		this.isMultiDamage = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

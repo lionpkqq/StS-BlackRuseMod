@@ -1,9 +1,9 @@
-# StS-BlackRuseMod 0.9.0c
+# StS-BlackRuseMod 0.9.1
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (08-09-2018)
+* Slay The Spire (08-16-2018)
 * ModTheSpire 2.9.1
 * BaseMod 2.19.0 (Week 37 Patch)
 
@@ -49,10 +49,11 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 ## Wiki ##
 The Wiki is still under construction. Thanks for your patience!
 
+* Reddit page: https://www.reddit.com/r/slaythespire/comments/939y1w/the_servant_character_mod_version_084_beta/
+
 ## List of known issues ##
 * Vision cards will crash the game if you are not playing as the Servant.
 * [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
-* Players may skip the discard phase of [Replace] by choosing nothing, due to a bug from the original game.
 * Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues).
 
 ## Credits / Acknowledgements ##
@@ -104,6 +105,59 @@ Contributors of **FruityMod**
 * Looking for an (presumably spine) animator.
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
+
+0.9.1
+* Added a new mechanic Elegance: Elegance improves Block and Protection gained from cards.
+* Added a new mechanic Matrix: Reduce Attack damage taken by 25%. Lose 1 Matrix whenever you are attacked.
+
+Balance:
+* [Canned Time] is now a Common card
+* [Finishing Touch] deal 36(54) damage -> deal 30(42) damage
+* [Finishing Touch] Backlash -> gain 1 Elegance
+* [Flowering Night] cost 3(2) -> cost 2(1)
+* [Follow Up] deal 8(12) damage -> deal 10(14) damage
+* [Follow Up 2] deal 12(18) damage -> deal 15(21) damage
+* [Garbage Disposal] exhaust 2(3) cards -> exhaust 1(2) cards
+* [Garbage Disposal] gain Dexterity -> gain Elegance
+* [Gear Up] gain 6 Protection -> gain 5(8) Protection
+* [Gear Up] convert 1(2) -> convert 1
+* [Gear Up] is now an Uncommon card
+* [House Cleaning] cost 1 -> cost 0
+* [House Cleaning] no longer draw cards
+* [Initiator] deal 4(6) damage -> deal 5(7) damage
+* [Misdirection] gain 5 Block -> gain 6 Block
+* [Misdirection] is now an Uncommon card
+* [Moon Phase] cost 1 -> cost 0
+* [Replace] is now a Common card
+* [Shifting Gears] Shift: gain 1 Dexterity -> Shift: gain 1 Elegance
+* [Shifting Gears] no longer discards cards
+* [Splendid Attire] gain 2 Satellites -> gain 3 Satellites
+* [Temporal Defense] gain 5(8) Block and Protection -> gain 4(6) Block and Protection
+* [Temporal Misd.] no longer applies Vulnerable
+* [Temporal Slicing] deal 5 damage -> deal 4 damage
+* [Time Warp] Shift: draw 1(2) card -> draw 1 card
+* [Time Warp] deal 6(8) damage -> deal 6(9) damage
+* [Time Warp] discard 1 card -> discard 1(2) card
+
+Changes and reworks:
+* New illustrations for [Surpressing Fire].
+* [Proper Practice] now has even lower priority.
+* Deleted [Capture] and added [Moondial].
+* Now [Silver Blades] has an additional effect which is exactly the same as [D. Weaponry].
+* Deleted [D. Weaponry] and added [Luminosity].
+* Reworked [Advance].
+* Reworked [Comet].
+* Reworked [Manipulate].
+* Reworked [Silver Matrix].
+* Reworked [Special Formula].
+* Renamed [Garbage Disposal] to [Disposal].
+* Renamed [House Cleaning] to [Cleaning].
+
+Bug fixes:
+* Fixed: When attacked by a multi-hit attack while having 1 satellite, you counter-attack multiple times.
+* Fixed: Players may skip the discard phase of [Replace] by choosing nothing.
+* Fixed: [Killing Doll+] deals 2 damage instead of 3.
+* Fixed: Cards affected by [Silver Blades] do not change the color of their damage numbers.
 
 0.9.0c HOTFIX
 

@@ -22,7 +22,7 @@ public class ProperPracticePower extends AbstractPower {
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
-		this.priority = 7;
+		this.priority = 21;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("proper_practice48");
 		this.region128 = powerAltas.findRegion("proper_practice128");

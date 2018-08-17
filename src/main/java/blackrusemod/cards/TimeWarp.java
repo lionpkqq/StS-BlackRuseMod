@@ -26,7 +26,7 @@ public class TimeWarp extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_PLUS_DMG = 2;
+	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int DISCARD_AND_DRAW = 1;
 
 	public TimeWarp() {
@@ -42,11 +42,11 @@ public class TimeWarp extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
 				AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, 1, false));
+		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, this.magicNumber, false));
 	}
 	
 	public void triggerOnManualDiscard() {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}

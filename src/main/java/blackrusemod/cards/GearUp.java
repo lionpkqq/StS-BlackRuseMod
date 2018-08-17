@@ -21,29 +21,41 @@ public class GearUp extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
+	private static final int PROTECTION_AMT = 5;
+	private static final int UPGRADE_PROTECTION_BLOCK = 3;
 	private static final int SATELLITE = 1;
 	
 	public GearUp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.GEAR_UP), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = SATELLITE;
+				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, 6), 6));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, 4), 4));
-		AbstractDungeon.actionManager.addToBottom(new ConvertAction(this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ConvertAction(SATELLITE));
 	}
 	
 	public AbstractCard makeCopy() {
 		return new GearUp();
 	}
 	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
+	
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
 		}
 	}
 }

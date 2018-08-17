@@ -37,15 +37,15 @@
 	},
 	"Comet": {	
 		"NAME": "Comet",
-		"DESCRIPTION": "Deal !D! damage. NL If you have not played any card this turn, draw !M! cards."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Draw 1 less card for each card you have played this turn."
 	},
 	"CosmicInflation": {
 		"NAME": "Cosmic Inflation",
 		"DESCRIPTION": "Gain !M! Protection. NL Place a copy of this card on top of your draw pile. NL Exhaust."
 	},
-	"DWeaponry": {
-		"NAME": "D. Weaponry",
-		"DESCRIPTION": "At the start NL of your turn, NL obtain !M! Knives. NL (D stands for Dimensional.)"
+	"Moondial": {
+		"NAME": "Moondial",
+		"DESCRIPTION": "Add !M! random Temporal cards to your hand and your draw pile. "
 	},
 	"Deny": {
 		"NAME": "Deny",
@@ -78,7 +78,7 @@
 	},
 	"GearUp": {
 		"NAME": "Gear Up",
-		"DESCRIPTION": "Gain 6 Protection. NL Obtain 4 Knives. NL Convert !M! Knives to Satellites."
+		"DESCRIPTION": "Gain !M! Protection. NL Obtain 4 Knives. NL Convert 1 Knife to Satellite."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
@@ -114,7 +114,7 @@
 	},
 	"FinishingTouch": {
 		"NAME": "Finishing Touch",
-		"DESCRIPTION": "Deal !D! damage. NL Backlash. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Deal !D! damage. NL Gain 1 Elegance. NL Exhaust. NL Ethereal."
 	},
 	"Hightail": {
 		"NAME": "Hightail",
@@ -123,12 +123,12 @@
 	},
 	"Advance": {
 		"NAME": "Advance",
-		"DESCRIPTION": "Discard your hand. NL Put X Cost 0 card(s) from your draw pile into your hand.",
-		"UPGRADE_DESCRIPTION": "Discard your hand. NL Put X+1 Cost 0 card(s) from your draw pile into your hand."
+		"DESCRIPTION": "Put !M! Cost 0 cards from your draw pile into your hand.",
+		"UPGRADE_DESCRIPTION": "Innate. NL Put !M! Cost 0 cards from your draw pile into your hand."
 	},
-	"GarbageDisposal": {
-		"NAME": "Garbage Disposal",
-		"DESCRIPTION": "Exhaust up to !M! cards. NL For each exhausted card, gain 1 Dexterity and draw 1 card. NL Exhaust."
+	"Disposal": {
+		"NAME": "Disposal",
+		"DESCRIPTION": "Exhaust up to !M! cards. NL For each exhausted card, gain 1 Elegance and draw 1 card. NL Exhaust."
 	},
 	"Gouge": {
 		"NAME": "Gouge",
@@ -139,13 +139,13 @@
 		"NAME": "Proper Practice",
 		"DESCRIPTION": "At the start of your turn, you may upgrade 1 card in your hand for the rest of combat."
 	},
-	"HouseCleaning": {
-		"NAME": "House Cleaning",
-		"DESCRIPTION": "Draw !M! cards. NL Discard !M! cards. NL Obtain !M! Knives."
+	"Cleaning": {
+		"NAME": "Cleaning",
+		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives."
 	},
-	"Capture": {
-		"NAME": "Capture",
-		"DESCRIPTION": "Deal !D! damage. NL Choose an exhausted card and put it on top of your draw pile. NL Exhaust."
+	"Luminosity": {
+		"NAME": "Luminosity",
+		"DESCRIPTION": "Gain 1 Strength. NL Gain !M! Elegance."
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
@@ -166,7 +166,8 @@
 	},
 	"Manipulate": {
 		"NAME": "Manipulate",
-		"DESCRIPTION": "Adds !M! random Temporal cards to your draw pile."
+		"DESCRIPTION": "Adds X+1 random Temporal cards to your draw pile.",
+		"UPGRADE_DESCRIPTION": "Adds X+2 random Temporal cards to your draw pile."
 	},
 	"Misdirection": {
 		"NAME": "Misdirection",
@@ -244,7 +245,7 @@
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Discard the top !M! cards of your draw pile. NL Draw !M! cards. NL Shift: Gain 1 Dexterity."
+		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain 1 Elegance."
 	},
 	"ShatteredReality": {
 		"NAME": "Shattered Reality",
@@ -252,11 +253,11 @@
 	},
 	"SilverMatrix": {
 		"NAME": "Silver Matrix",
-		"DESCRIPTION": "Convert !M! Knives to Satellites. NL Whenever you lose a Satellite, gain !M! Protection."
+		"DESCRIPTION": "Convert !M! Knives to Satellites. NL Gain 1 Matrix for each Satellite you have."
 	},
 	"SilverBlades": {
 		"NAME": "Silver Blades",
-		"DESCRIPTION": "Knives deal !M! additional damage."
+		"DESCRIPTION": "Knives deal !M! additional damage. NL At the start NL of your turn, NL obtain !M! Knives."
 	},
 	"Snipe": {
 		"NAME": "Snipe",
@@ -273,7 +274,7 @@
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Backlash. NL Exhaust."
+		"DESCRIPTION": "Gain [B] . NL Heal !M! HP. NL Backlash. NL Exhaust."
 	},
 	"Spin": {
 		"NAME": "Spin",
@@ -316,7 +317,7 @@
 	},
 	"TemporalMisd": {
 		"NAME": "Temporal Misd.",
-		"DESCRIPTION": "Temporal. NL Apply !M! Blight, Vulnerable and Weak to ALL enemies."
+		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Weak to ALL enemies."
 	},
 	"TemporalSlicing": {
 		"NAME": "Temporal Slicing",
@@ -332,7 +333,7 @@
 	},
 	"TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Deal !D! damage. NL Discard 1 card. NL Shift: Draw !M! card(s)."
+		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card(s). NL Shift: Draw 1 card."
 	},
 	"TrashToTreasure": {
 		"NAME": "Trash to Treasure",

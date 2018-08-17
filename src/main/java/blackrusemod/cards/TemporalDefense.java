@@ -20,10 +20,10 @@ public class TemporalDefense extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int BLOCK_AMT = 5;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
-	private static final int PROTECTION_AMT = 5;
-	private static final int UPGRADE_PROTECTION_BLOCK = 3;
+	private static final int BLOCK_AMT = 4;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
+	private static final int PROTECTION_AMT = 4;
+	private static final int UPGRADE_PROTECTION_BLOCK = 2;
 
 	public TemporalDefense() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_DEFENSE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
@@ -42,6 +42,16 @@ public class TemporalDefense extends CustomCard {
 	
 	public AbstractCard makeCopy() {
 		return new TemporalDefense();
+	}
+	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
 	}
 
 	public void upgrade() {

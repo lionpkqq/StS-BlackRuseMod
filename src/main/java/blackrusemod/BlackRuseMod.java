@@ -79,10 +79,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String BARRIER = "cards/barrier.png";
     public static final String PENDULUM = "cards/pendulum.png";
     public static final String ORBIT = "cards/orbit.png";
-    public static final String CAPTURE = "cards/capture.png";
+    public static final String LUMINOSITY = "cards/luminosity.png";
     public static final String COMET = "cards/comet.png";
     public static final String COSMIC_INFLATION = "cards/cosmic_inflation.png";
-    public static final String D_WEAPONRY = "cards/d_weaponry.png";
+    public static final String MOONDIAL = "cards/moondial.png";
     public static final String DEFEND_SILVER = "cards/defend_silver.png";
     public static final String DENY = "cards/deny.png";
     public static final String DOUBLE_EDGE = "cards/double_edge.png";
@@ -102,10 +102,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FINISHING_TOUCH = "cards/finishing_touch.png";
     public static final String HIGHTAIL = "cards/hightail.png";
     public static final String ADVANCE = "cards/advance.png";
-    public static final String GARBAGE_DISPOSAL = "cards/garbage_disposal.png";
+    public static final String DISPOSAL = "cards/disposal.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String PROPER_PRACTICE = "cards/proper_practice.png";
-    public static final String HOUSE_CLEANING = "cards/house_cleaning.png";
+    public static final String CLEANING = "cards/cleaning.png";
     public static final String KIDNEY_SHOT = "cards/kidney_shot.png";
     public static final String WASTE_NOT = "cards/waste_not.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
@@ -300,7 +300,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Orbit());
 		BaseMod.addCard(new Comet());
 		BaseMod.addCard(new CosmicInflation());
-		BaseMod.addCard(new DWeaponry());
+		BaseMod.addCard(new Moondial());
 		BaseMod.addCard(new Deny());
 		BaseMod.addCard(new DoubleEdge());
 		BaseMod.addCard(new DualDimension());
@@ -316,11 +316,11 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Initiator());
 		BaseMod.addCard(new Hightail());
 		BaseMod.addCard(new Advance());
-		BaseMod.addCard(new GarbageDisposal());
+		BaseMod.addCard(new Disposal());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new ProperPractice());
-		BaseMod.addCard(new HouseCleaning());
-		BaseMod.addCard(new Capture());
+		BaseMod.addCard(new Cleaning());
+		BaseMod.addCard(new Luminosity());
 		BaseMod.addCard(new KidneyShot());
 		BaseMod.addCard(new WasteNot());
 		BaseMod.addCard(new KillingDoll());
@@ -378,7 +378,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Orbit");
 		UnlockTracker.unlockCard("Comet");
 		UnlockTracker.unlockCard("CosmicInflation");
-		UnlockTracker.unlockCard("DWeaponry");
+		UnlockTracker.unlockCard("Luminosity");
 		UnlockTracker.unlockCard("Deny");
 		UnlockTracker.unlockCard("DoubleEdge");
 		UnlockTracker.unlockCard("DualDimension");
@@ -394,11 +394,11 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("FollowUp");
 		UnlockTracker.unlockCard("Hightail");
 		UnlockTracker.unlockCard("Advance");
-		UnlockTracker.unlockCard("GarbageDisposal");
+		UnlockTracker.unlockCard("Disposal");
 		UnlockTracker.unlockCard("Gouge");
-		UnlockTracker.unlockCard("LiveAndLearn");
-		UnlockTracker.unlockCard("HouseCleaning");
-		UnlockTracker.unlockCard("Capture");
+		UnlockTracker.unlockCard("ProperPractice");
+		UnlockTracker.unlockCard("Cleaning");
+		UnlockTracker.unlockCard("Moondial");
 		UnlockTracker.unlockCard("KidneyShot");
 		UnlockTracker.unlockCard("WasteNot");
 		UnlockTracker.unlockCard("KillingDoll");
@@ -522,6 +522,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
         BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
+        BaseMod.addKeyword(new String[] {"风华"}, "风华增加你从牌中获得的格挡值和护盾值。");
+        BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b25% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
         BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servent's most dedicated weapons. Can be threw or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
@@ -530,6 +532,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s).");
         BaseMod.addKeyword(new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable AND #yFrail to you.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Whenever you lose HP, lose #yProtection instead. Protection will not be removed at the start of your next turn.");
+        BaseMod.addKeyword(new String[] {"Elegance", "elegance"}, "Elegance improves Block and Protection gained from cards.");
+        BaseMod.addKeyword(new String[] {"Matrix", "matrix"}, "Reduce Attack damage taken by 25%. Lose #b1 Martix whenever you are attacked.");
         BaseMod.addKeyword(new String[] {"Satellite", "satellite", "Satellites", "satellites"}, "Whenever you use an Attack, lose #b1 Satellite and attack an extra time for #b4 damage. "
         		+ "Whenever you are attacked, lose #b1 Satellite and deal #b4 damage to the attacker. Satellites count as Knives.");
         logger.info("done setting up custom keywords");

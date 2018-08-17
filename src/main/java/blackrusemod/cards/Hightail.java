@@ -49,6 +49,15 @@ public class Hightail extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new Hightail();
 	}
+	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION;
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

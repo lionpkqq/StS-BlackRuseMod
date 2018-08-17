@@ -32,7 +32,7 @@ public class SplendidAttire extends CustomRelic {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 				new StrengthPower(AbstractDungeon.player, 1), 1));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new SatellitePower(AbstractDungeon.player, 2), 2));
+				new SatellitePower(AbstractDungeon.player, 3), 3));
 	}
 	
 	@Override

@@ -38,6 +38,16 @@ public class CosmicInflation extends CustomCard {
 	public AbstractCard makeCopy() {
 		return new CosmicInflation();
 	}
+	
+	public void applyPowers() {
+		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		if (AbstractDungeon.player.hasPower("ElegancePower")) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+			this.isMagicNumberModified = true;
+		}
+		super.applyPowers();
+	}
 
 	public void upgrade() {
 		if (!this.upgraded) {

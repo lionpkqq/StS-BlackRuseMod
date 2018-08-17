@@ -56,6 +56,8 @@ public class Ricochet extends CustomCard {
 		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
 			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
 		super.applyPowers();
+		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
+			this.isDamageModified = true;
 	}
 
 	public void upgrade() {

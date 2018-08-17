@@ -25,7 +25,7 @@ public class CannedTime extends CustomCard {
 	public CannedTime() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CANNED_TIME), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 		this.exhaust = true;
 	}

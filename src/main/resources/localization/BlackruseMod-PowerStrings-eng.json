@@ -1,8 +1,4 @@
 {
-  "DWeaponryPower": {
-    "NAME": "Dimensional Weaponry",
-    "DESCRIPTIONS": ["At the start of your turn, obtain #b", " #yKnives."]
-  },
   "KnivesPower": {
     "NAME": "Knives",
     "DESCRIPTIONS": ["You are currently holding #b", " #yKnives."]
@@ -107,8 +103,12 @@
     "NAME": "False Flawless Form",
     "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail for #b", " turn."]
   },
-  "SilverMatrixPower": {
-    "NAME": "Silver Matrix",
-    "DESCRIPTIONS": ["Whenever you lose a #ySatellite, gain #b", " #yProtection."]
+  "MatrixPower": {
+    "NAME": "Matrix",
+    "DESCRIPTIONS": ["Reduce the next #b", " #yAttack damage taken by #b25%."]
+  },
+  "ElegancePower": {
+    "NAME": "Elegance",
+    "DESCRIPTIONS": ["Increases #yBlock and #yProtection gained from cards by #b", " ."]
   }
 }

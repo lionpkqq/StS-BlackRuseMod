@@ -1,7 +1,7 @@
 {
   "Uniform": {
     "NAME": "制服",
-    "FLAVOR": "制服不仅可以用来抵挡秽物，还能用来携带兵器。",
+    "FLAVOR": "不仅可以用来抵挡秽物，还能用来携带兵器。",
     "DESCRIPTIONS": ["每场战斗开始时，获得 #b6 把 #y飞刀 。"]
   },
   "Broom": {
@@ -37,7 +37,7 @@
   "SplendidAttire": {
     "NAME": "华服",
     "FLAVOR": "多一分美丽，多一分危险。",
-    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量  和 #b2 层 #y卫星 。"]
+    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量  和 #b3 层 #y卫星 。"]
   },
   "OldScarf": {
     "NAME": "旧围巾",

@@ -1,7 +1,6 @@
 package blackrusemod.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,32 +10,36 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.GarbageDisposalAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.DWeaponryPower;
 
-public class DWeaponry extends CustomCard {
-	public static final String ID = "DWeaponry";
+public class Disposal extends CustomCard {
+	public static final String ID = "Disposal";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 1;
-	private static final int GAIN_KNIVES = 2;
-
-	public DWeaponry() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.D_WEAPONRY), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-
-		this.magicNumber = this.baseMagicNumber = GAIN_KNIVES;
+	private static final int COST = 0;
+	private static final int EXHAUST = 1;
+	
+	public Disposal() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DISPOSAL), COST, DESCRIPTION,
+				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
+				AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = EXHAUST;
 	}
-
+	
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DWeaponryPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new GarbageDisposalAction(p, this.magicNumber));
 	}
-
+	
+	@Override
 	public AbstractCard makeCopy() {
-		return new DWeaponry();
+		return new Disposal();
 	}
-
+	
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

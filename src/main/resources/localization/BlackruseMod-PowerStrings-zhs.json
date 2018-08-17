@@ -1,8 +1,4 @@
 {
-  "DWeaponryPower": {
-    "NAME": "次元武库",
-    "DESCRIPTIONS": ["你的回合开始时获得 #b", " 把 #y飞刀 。"]
-  },
   "KnivesPower": {
     "NAME": "飞刀",
     "DESCRIPTIONS": ["你持有 #b", " 把 #y飞刀 。"]
@@ -44,7 +40,7 @@
     "DESCRIPTIONS": ["你的回合开始时，所有敌人获得 #b", " 层 #y枯萎 。"]
   },
   "DeadlinePower": {
-    "NAME": "死亡期限",
+    "NAME": "死限",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。", "下回合，如果目标敌人意图 #y不是攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。"]
   },
   "RealityMarblePower": {
@@ -107,8 +103,12 @@
     "NAME": "伪·完美形态",
     "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响 #b", " 回合。"]
   },
-  "SilverMatrixPower": {
-    "NAME": "银色矩阵",
-    "DESCRIPTIONS": ["每当你失去1层 #y卫星 ，获得 #b", " 点 #y护盾 。"]
+  "MatrixPower": {
+    "NAME": "矩阵",
+    "DESCRIPTIONS": ["将下 #b", " 次所受到的 #y攻击 伤害降低 #b25% 。"]
+  },
+  "ElegancePower": {
+    "NAME": "风华",
+    "DESCRIPTIONS": ["从卡牌获得的 #y格挡 和 #y护盾 增加 #b", " 。"]
   }
 }
