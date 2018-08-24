@@ -19,16 +19,16 @@ public class Defy extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int BLOCK_AMT = 8;
-	private static final int UPGRADE_PLUS_BLOCK = 3;
+	private static final int UPGRADE_PLUS_BLOCK = 2;
 
 	public Defy() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DEFY), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
 				AbstractCard.CardTarget.SELF);
 		this.baseBlock = BLOCK_AMT;
-		this.retain = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,6 +37,7 @@ public class Defy extends CustomCard {
 	}
 	
 	public void triggerOnEndOfTurnForPlayingCard() {
+		if (!this.canUpgrade()) 
 			this.retain = true;
 	}
 
@@ -48,6 +49,9 @@ public class Defy extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeBlock(UPGRADE_PLUS_BLOCK);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			this.retain = true;
 		}
 	}
 }

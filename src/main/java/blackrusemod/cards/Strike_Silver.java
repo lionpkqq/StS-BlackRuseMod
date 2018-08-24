@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
@@ -27,6 +29,7 @@ public class Strike_Silver extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.BASIC,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
+		CardTags.addTags(this, BaseModTags.BASIC_STRIKE);
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {
@@ -43,9 +46,5 @@ public class Strike_Silver extends CustomCard {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
 		}
-	}
-	
-	public boolean isStrike() {
-		return true;
 	}
 }

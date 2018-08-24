@@ -74,9 +74,6 @@ public class ThrowKnivesAction extends AbstractGameAction {
 						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new VulnerablePower(this.target, 1, false), 1));
 					if (this.debuff != null && this.debuff == "Amplify Damage")  {
 						AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new AmplifyDamagePower(this.target, 1), 1));
-						if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-							if (AbstractDungeon.cardRandomRng.randomBoolean())
-								AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, AbstractDungeon.player, new AmplifyDamagePower(this.target, 1), 1));
 					}
 				}
 			}

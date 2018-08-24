@@ -1,16 +1,18 @@
-# StS-BlackRuseMod 0.9.1
+# StS-BlackRuseMod 0.9.2
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (08-16-2018)
-* ModTheSpire 2.9.1
-* BaseMod 2.19.0 (Week 37 Patch)
+* Slay The Spire (08-23-2018)
+* ModTheSpire 3.0.0
+* BaseMod 3.0.0 (Week 39 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
 
-**The Servant** is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games. She is able to control the flow of time and uses throwing-knives as her primary weapons. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways.
+**The Servant** is able to control the flow of time and uses throwing-knives as her primary weapons. The gameplay of this character rewards thinking and planning, and allows the player to defeat enemies in many different and interesting ways.
+
+She is based on Sakuya Izayoi (十六夜 咲夜), a female character appears in Touhou games.
 
 You can check the updates at the bottom of this page.
 
@@ -29,8 +31,8 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 
 ## Usage ##
 ### Required Downloads ###
-* ModTheSpire v2.9.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod 2.19.0+ (https://github.com/daviscook477/BaseMod/releases)
+* ModTheSpire v3.0.0+ (https://github.com/kiooeht/ModTheSpire/releases)
+* BaseMod v3.0.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -105,6 +107,49 @@ Contributors of **FruityMod**
 * Looking for an (presumably spine) animator.
 * Needs more play-testing.
 * Please let me know if you can rephrase any sentences to make them sound more natural.
+
+0.9.2
+Balance:
+* [Cleaning+] no longer discard 1 more card and obtain 1 more Knife
+* [Cleaning+] now has Retain
+* [Defy] no longer has Retain
+* [Defy+] now has Retain
+* [Defy+] get 11 Block -> get 10 Block
+* [Fan of Knives] deal 8(11) damage -> deal 7(10) damage
+* [Flawless Form+] gain 12 Protection -> gain 16 Protection
+* [Hightail+] gain 8 Protection X+1 time(s) -> gain 11 Protection X time(s)
+* [Murderous Aura] cost 2 -> cost 1
+* [Orbit] deal 4 damage per Satellite -> deal 3 damage per Satellite
+* [Pendulum of Eternity] deal 36(48) damage -> deal 33 damage
+* [Pendulum of Eternity] apply 3(5) Weak and Vulnerable -> apply 3 Weak and Vulnerable
+* [Pendulum of Eternity] cost 5 -> cost 5(4)
+* [Reset] cost 1 -> cost 0
+* [Reset] now has Exhaust
+* [Reset] gain 2 Protection per stack -> gain 1(2) Protection per stack
+* [Snipe] deal 12(18) damage -> deal 15(20) damage
+* [Snipe] is now an Uncommon card
+* [Soul Sculpture] deal 2(3) damage 6 times -> deal 3(4) damage 6 times
+* [Soul Sculpture] enemy loses 2(3) Strength -> enemy loses 3(4) Strength
+* [Splendid Attire] gain 1 Strength -> gain 1 Elegance
+
+Changes and reworks:
+* New illustrations for [Defend] and Vision indicators.
+* Deleted [Disposal] and added [Forged in Time].
+* Deleted the original [Starlight] and renamed [Multi-Shot] to [Starlight].
+* Added a new card [Shuttle].
+* Reworked [Cosmic Inflation].
+* Reworked [Instant Armor].
+* Reworked [Mystery Sword].
+* Renamed [Cleaning] to [Clean Up].
+* Renamed [Cosmic Inflation] to [Dilation].
+* Renamed [Proper Practice] to [Best Practice].
+* Renamed [StressReliever] to [Foresight].
+* Renamed [TimeEmbedded] to [Contraction].
+
+Bug fixes:
+* Fixed: Protection may prevent excessive damage against multi-hit attacks.
+* Fixed: [Hightail] and [Gouge] sometimes do not cost energy.
+* Fixed: [Gouge] does not interact with [Paper Swan].
 
 0.9.1
 * Added a new mechanic Elegance: Elegance improves Block and Protection gained from cards.

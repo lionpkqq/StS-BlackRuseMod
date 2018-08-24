@@ -17,7 +17,7 @@
 	},
 	"InstantArmor": {
 		"NAME": "Instant Armor",
-		"DESCRIPTION": "Innate. NL Gain !M! Protection."
+		"DESCRIPTION": "Innate. NL Gain !M! Protection. NL Convert 3 Knives to Satellites. NL Exhaust."
 	},
 	"Alleviate": {
 		"NAME": "Alleviate",
@@ -39,9 +39,9 @@
 		"NAME": "Comet",
 		"DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Draw 1 less card for each card you have played this turn."
 	},
-	"CosmicInflation": {
-		"NAME": "Cosmic Inflation",
-		"DESCRIPTION": "Gain !M! Protection. NL Place a copy of this card on top of your draw pile. NL Exhaust."
+	"Dilation": {
+		"NAME": "Dilation",
+		"DESCRIPTION": "Gain !M! Protection. NL This card's Protection is increased by 1 this combat."
 	},
 	"Moondial": {
 		"NAME": "Moondial",
@@ -70,7 +70,8 @@
 	},
 	"Defy": {
 		"NAME": "Defy",
-		"DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn. NL Retain."
+		"DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn. NL Retain."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
@@ -118,30 +119,30 @@
 	},
 	"Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Protection NL X+1 time(s). NL Backlash."
+		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash."
 	},
 	"Advance": {
 		"NAME": "Advance",
 		"DESCRIPTION": "Put !M! Cost 0 cards from your draw pile into your hand.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Put !M! Cost 0 cards from your draw pile into your hand."
 	},
-	"Disposal": {
-		"NAME": "Disposal",
-		"DESCRIPTION": "Exhaust up to !M! cards. NL For each exhausted card, gain 1 Elegance and draw 1 card. NL Exhaust."
+	"ForgedInTime": {
+		"NAME": "Forged in Time",
+		"DESCRIPTION": "Exhaust your hand. NL Gain !M! Protection and 2 Knives for each exhausted card. NL Exhaust."
 	},
 	"Gouge": {
 		"NAME": "Gouge",
 		"DESCRIPTION": "Deal !D! damage and apply 1 Blight X times. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 Blight X+1 times. NL Exhaust."
 	},
-	"ProperPractice": {
-		"NAME": "Proper Practice",
+	"BestPractice": {
+		"NAME": "Best Practice",
 		"DESCRIPTION": "At the start of your turn, you may upgrade 1 card in your hand for the rest of combat."
 	},
-	"Cleaning": {
-		"NAME": "Cleaning",
-		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives."
+	"CleanUp": {
+		"NAME": "Clean Up",
+		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives.",
+		"UPGRADE_DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives. NL Retain."
 	},
 	"Luminosity": {
 		"NAME": "Luminosity",
@@ -225,15 +226,15 @@
 	},
 	"Reset": {
 		"NAME": "Reset",
-		"DESCRIPTION": "Clear ALL Weak, Vulnerable and Frail. NL Each stack gives you 2 Protection."
+		"DESCRIPTION": "Clear ALL Weak, Vulnerable and Frail. NL Each stack gives you !M! Protection. NL Exhaust."
 	},
 	"ReturningBlade": {
 		"NAME": "Returning Blade",
 		"DESCRIPTION": "Vision: Deal !D! damage to ALL enemies, put this card in your hand. NL Can be upgraded any number of times."
 	},
-	"MultiShot": {
-		"NAME": "Multi-Shot",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy and draw 1 card."
+	"Shuttle": {
+		"NAME": "Shuttle",
+		"DESCRIPTION": "Activate card and relic effects that will activate at the start of your next turn. NL Exhaust."
 	},
 	"Rewind": {
 		"NAME": "Rewind",
@@ -287,10 +288,10 @@
 	},
 	"Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy and draw 1 card."
 	},
-	"StressReliever": {
-		"NAME": "Stress Reliever",
+	"Foresight": {
+		"NAME": "Foresight",
 		"DESCRIPTION": "At the start of your turn, look at the NL top !M! cards of NL your draw pile. NL You may discard NL any of them."
 	},
 	"Sunlight": {
@@ -327,8 +328,8 @@
 		"NAME": "The World",
 		"DESCRIPTION": "Draw !M! cards. NL The next card you play this turn costs 0. Exhaust."
 	},
-	"TimeEmbedded": {
-		"NAME": "Time Embedded",
+	"Contraction": {
+		"NAME": "Contraction",
 		"DESCRIPTION": "Gain !M! Protection. NL Convert all Block to Protection."
 	},
 	"TimeWarp": {

@@ -17,8 +17,8 @@ public class _DummyNotAttack extends CustomCard {
 	private static final int COST = -2;
 
 	public _DummyNotAttack() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod._DUMMYNOTATTACK), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.BASIC,
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod._DUMMYNOTATTACK), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.NONE);
 	}
 

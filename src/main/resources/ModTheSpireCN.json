@@ -1,10 +1,11 @@
 {
   "modid": "BlackRuseMod",
-  "name": "TS02-凛光侍从0.9.1",
+  "name": "TS02-凛光侍从0.9.2",
   "author_list": ["墨千, Kuzomari, 昏暗"],
-  "description": "基于东方角色十六夜咲夜的人物MOD，拥有75张卡的全新卡组，7种全新机制，11个专属遗物。",
+  "description": "基于东方角色十六夜咲夜的人物MOD，拥有75张卡的全新卡组，8种全新机制，11个专属遗物。",
   "dependencies": ["basemod"],
-  "version": "0.9.1",
-  "sts_version": "08-16-2018",
+  "version": "0.9.2",
+  "sts_version": "08-23-2018",
+  "mts_version": "3.0.0",
   "update_json": "https://api.github.com/repos/lionpkqq/StS-BlackRuseMod/releases/latest"
 }

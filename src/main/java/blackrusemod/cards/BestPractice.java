@@ -11,35 +11,33 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.StressRelieverPower;
+import blackrusemod.powers.ProperPracticePower;
 
-public class StressReliever extends CustomCard {
-	public static final String ID = "StressReliever";
+public class BestPractice extends CustomCard {
+	public static final String ID = "BestPractice";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int RELIEVE = 2;
-	
+	private static final int COST_UPGRADED = 0;
 
-	public StressReliever() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.STRESS_RELIEVER), COST, DESCRIPTION, AbstractCard.CardType.POWER,
+	public BestPractice() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.BEST_PRACTICE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = RELIEVE;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StressRelieverPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProperPracticePower(p, 1), 1));
 	}
 
 	public AbstractCard makeCopy() {
-		return new StressReliever();
+		return new BestPractice();
 	}
 
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			upgradeBaseCost(COST_UPGRADED);
 		}
 	}
 }

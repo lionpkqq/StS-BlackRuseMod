@@ -22,9 +22,6 @@ public class Pan extends CustomRelic {
 	public void atBattleStart() {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, BLIGHT), BLIGHT));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
 		}
 	}
 	

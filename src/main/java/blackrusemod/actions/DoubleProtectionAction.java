@@ -10,7 +10,7 @@ import blackrusemod.powers.ProtectionPower;
 public class DoubleProtectionAction extends AbstractGameAction {
 	public DoubleProtectionAction(AbstractCreature target)
 	{
-		this.duration = 0.5F;
+		this.duration = 0.3F;
 		this.actionType = AbstractGameAction.ActionType.SPECIAL;
 		this.target = target;
 		this.source = target;
@@ -18,7 +18,7 @@ public class DoubleProtectionAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if ((this.duration == 0.5F) && (this.target != null) && (this.target.hasPower("ProtectionPower"))) {
+		if ((this.duration == 0.3F) && (this.target != null) && (this.target.hasPower("ProtectionPower"))) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.source, new ProtectionPower(this.source, 
 					this.target.getPower("ProtectionPower").amount), this.target.getPower("ProtectionPower").amount));
 		}

@@ -27,9 +27,9 @@ public class PendulumOfEternity extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 5;
+	private static final int COST_UPGRADED = 4;
 	private static final int DEBUFFS = 3;
-	private static final int ATTACK_DMG = 36;
-	private static final int UPGRADE_PLUS_DMG = 12;
+	private static final int ATTACK_DMG = 33;
 	
 	public PendulumOfEternity() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.PENDULUM), COST, DESCRIPTION,
@@ -77,8 +77,7 @@ public class PendulumOfEternity extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-			upgradeMagicNumber(2);
+			upgradeBaseCost(COST_UPGRADED);
 		}
 	}
 }

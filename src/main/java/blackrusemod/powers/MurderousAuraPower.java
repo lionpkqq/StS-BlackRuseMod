@@ -43,9 +43,6 @@ public class MurderousAuraPower extends AbstractPower {
 		flash();
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, this.owner, new AmplifyDamagePower(mo, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, 1), 1));
 		}
 	}
 }

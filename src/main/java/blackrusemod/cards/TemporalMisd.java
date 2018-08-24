@@ -34,10 +34,6 @@ public class TemporalMisd extends CustomCard {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
 					new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
-							new AmplifyDamagePower(mo, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
 					new WeakPower(mo, this.magicNumber, false), this.magicNumber));
 		}

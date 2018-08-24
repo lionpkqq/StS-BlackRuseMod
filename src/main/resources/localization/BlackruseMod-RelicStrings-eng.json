@@ -27,7 +27,7 @@
   "MysterySword": {
     "NAME": "Mystery Sword",
     "FLAVOR": "Found in the depth. Users must sacrifice themselves to wield this sword.",
-    "DESCRIPTIONS": ["The first Attack you play each turn will be played twice and has #yBacklash."]
+    "DESCRIPTIONS": ["Gain [B] at the start of each turn. The first #ySkill you play each turn has #yBacklash."]
   },
   "PaperSwan": {
     "NAME": "Paper Swan",
@@ -37,7 +37,7 @@
   "SplendidAttire": {
     "NAME": "Splendid Attire",
     "FLAVOR": "Danger hides in beauty.",
-    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yStrength and #b3 #ySatellites."]
+    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yKnives, gain #b1 #yElegance and #b3 #ySatellites."]
   },
   "OldScarf": {
     "NAME": "Old Scarf",

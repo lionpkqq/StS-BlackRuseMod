@@ -55,7 +55,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.9.0\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.9.2\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -81,7 +81,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String ORBIT = "cards/orbit.png";
     public static final String LUMINOSITY = "cards/luminosity.png";
     public static final String COMET = "cards/comet.png";
-    public static final String COSMIC_INFLATION = "cards/cosmic_inflation.png";
+    public static final String DILATION = "cards/dilation.png";
     public static final String MOONDIAL = "cards/moondial.png";
     public static final String DEFEND_SILVER = "cards/defend_silver.png";
     public static final String DENY = "cards/deny.png";
@@ -102,10 +102,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FINISHING_TOUCH = "cards/finishing_touch.png";
     public static final String HIGHTAIL = "cards/hightail.png";
     public static final String ADVANCE = "cards/advance.png";
-    public static final String DISPOSAL = "cards/disposal.png";
+    public static final String FORGED_IN_TIME = "cards/forged_in_time.png";
     public static final String GOUGE = "cards/gouge.png";
-    public static final String PROPER_PRACTICE = "cards/proper_practice.png";
-    public static final String CLEANING = "cards/cleaning.png";
+    public static final String BEST_PRACTICE = "cards/best_practice.png";
+    public static final String CLEAN_UP = "cards/clean_up.png";
     public static final String KIDNEY_SHOT = "cards/kidney_shot.png";
     public static final String WASTE_NOT = "cards/waste_not.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
@@ -125,7 +125,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String REPLACE = "cards/replace.png";
     public static final String RESET = "cards/reset.png";
     public static final String RETURNING_BLADE = "cards/returning_blade.png";
-    public static final String MULTI_SHOT = "cards/multi_shot.png";
+    public static final String SHUTTLE = "cards/shuttle.png";
     public static final String REWIND = "cards/rewind.png";
     public static final String SABOTAGE = "cards/sabotage.png";
     public static final String SHIFTING_GEARS = "cards/shifting_gears.png";
@@ -139,7 +139,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String SPIN = "cards/spin.png";
     public static final String STAR_CHEF = "cards/star_chef.png";
     public static final String STARLIGHT = "cards/starlight.png";
-    public static final String STRESS_RELIEVER = "cards/stress_reliever.png";
+    public static final String FORESIGHT = "cards/foresight.png";
     public static final String STRIKE_SILVER = "cards/strike_silver.png";
     public static final String SUNLIGHT = "cards/sunlight.png";
     public static final String SURPRESSING_FIRE = "cards/surpressing_fire.png";
@@ -149,7 +149,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String TEMPORAL_MISD = "cards/temporal_misd.png";
     public static final String TEMPORAL_SLICING = "cards/temporal_slicing.png";
     public static final String THE_WORLD = "cards/the_world.png";
-    public static final String TIME_EMBEDDED = "cards/time_embedded.png";
+    public static final String CONTRACTION = "cards/contraction.png";
     public static final String TIME_WARP = "cards/time_warp.png";
     public static final String TRASH_TO_TREASURE = "cards/trash_to_treasure.png";
     public static final String TRUE_SIGHT = "cards/true_sight.png";
@@ -216,7 +216,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.subscribe(this);
 
         logger.info("creating the color " + AbstractCardEnum.SILVER.toString());
-        BaseMod.addColor(AbstractCardEnum.SILVER.toString(),
+        BaseMod.addColor(AbstractCardEnum.SILVER,
         		SILVER, SILVER, SILVER, SILVER, SILVER, SILVER, SILVER,
         		makePath(ATTACK_SILVER), makePath(SKILL_SILVER),
         		makePath(POWER_SILVER), makePath(ENERGY_ORB_SILVER),
@@ -253,15 +253,15 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		logger.info("add " + TheServantEnum.THE_SERVANT.toString());
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
 			BaseMod.addCharacter(TheServant.class, "凛光侍从", "Servant class string",
-					AbstractCardEnum.SILVER.toString(), "凛光侍从",
+					AbstractCardEnum.SILVER, "凛光侍从",
 					makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
-					TheServantEnum.THE_SERVANT.toString());
+					TheServantEnum.THE_SERVANT);
 		}
 		else {
 			BaseMod.addCharacter(TheServant.class, "The Servant", "Servant class string",
-				AbstractCardEnum.SILVER.toString(), "The Servant",
+				AbstractCardEnum.SILVER, "The Servant",
 				makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
-				TheServantEnum.THE_SERVANT.toString());
+				TheServantEnum.THE_SERVANT);
 		}
 		logger.info("done editting characters");
 	}
@@ -271,17 +271,17 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		logger.info("begin editting relics");
         
         // Add relics
-		BaseMod.addRelicToCustomPool(new Uniform(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new Broom(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new KneeBrace(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new PocketWatch(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new StoneMask(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new MysterySword(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new SplendidAttire(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new PaperSwan(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new OldScarf(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new Pan(), AbstractCardEnum.SILVER.toString());
-		BaseMod.addRelicToCustomPool(new RomanBracelet(), AbstractCardEnum.SILVER.toString());
+		BaseMod.addRelicToCustomPool(new Uniform(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new Broom(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new KneeBrace(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new PocketWatch(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new StoneMask(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new MysterySword(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new SplendidAttire(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new PaperSwan(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new OldScarf(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new Pan(), AbstractCardEnum.SILVER);
+		BaseMod.addRelicToCustomPool(new RomanBracelet(), AbstractCardEnum.SILVER);
         logger.info("done editting relics");
 	}
     
@@ -299,7 +299,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new PendulumOfEternity());
 		BaseMod.addCard(new Orbit());
 		BaseMod.addCard(new Comet());
-		BaseMod.addCard(new CosmicInflation());
+		BaseMod.addCard(new Dilation());
 		BaseMod.addCard(new Moondial());
 		BaseMod.addCard(new Deny());
 		BaseMod.addCard(new DoubleEdge());
@@ -316,10 +316,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Initiator());
 		BaseMod.addCard(new Hightail());
 		BaseMod.addCard(new Advance());
-		BaseMod.addCard(new Disposal());
+		BaseMod.addCard(new ForgedInTime());
 		BaseMod.addCard(new Gouge());
-		BaseMod.addCard(new ProperPractice());
-		BaseMod.addCard(new Cleaning());
+		BaseMod.addCard(new BestPractice());
+		BaseMod.addCard(new CleanUp());
 		BaseMod.addCard(new Luminosity());
 		BaseMod.addCard(new KidneyShot());
 		BaseMod.addCard(new WasteNot());
@@ -340,7 +340,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Replace());
 		BaseMod.addCard(new Reset());
 		BaseMod.addCard(new ReturningBlade());
-		BaseMod.addCard(new MultiShot());
+		BaseMod.addCard(new Shuttle());
 		BaseMod.addCard(new Rewind());
 		BaseMod.addCard(new Sabotage());
 		BaseMod.addCard(new ShiftingGears());
@@ -354,12 +354,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Spin());
 		BaseMod.addCard(new StarChef());
 		BaseMod.addCard(new Starlight());
-		BaseMod.addCard(new StressReliever());
+		BaseMod.addCard(new Foresight());
 		BaseMod.addCard(new Sunlight());
 		BaseMod.addCard(new SurpressingFire());
 		BaseMod.addCard(new TimeTheft());
 		BaseMod.addCard(new TheWorld());
-		BaseMod.addCard(new TimeEmbedded());
+		BaseMod.addCard(new Contraction());
 		BaseMod.addCard(new TimeWarp());
 		BaseMod.addCard(new TrashToTreasure());
 		BaseMod.addCard(new TrueSight());
@@ -377,7 +377,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("PendulumOfEternity");
 		UnlockTracker.unlockCard("Orbit");
 		UnlockTracker.unlockCard("Comet");
-		UnlockTracker.unlockCard("CosmicInflation");
+		UnlockTracker.unlockCard("Dilation");
 		UnlockTracker.unlockCard("Luminosity");
 		UnlockTracker.unlockCard("Deny");
 		UnlockTracker.unlockCard("DoubleEdge");
@@ -394,10 +394,10 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("FollowUp");
 		UnlockTracker.unlockCard("Hightail");
 		UnlockTracker.unlockCard("Advance");
-		UnlockTracker.unlockCard("Disposal");
+		UnlockTracker.unlockCard("ForgedInTime");
 		UnlockTracker.unlockCard("Gouge");
-		UnlockTracker.unlockCard("ProperPractice");
-		UnlockTracker.unlockCard("Cleaning");
+		UnlockTracker.unlockCard("BestPractice");
+		UnlockTracker.unlockCard("CleanUp");
 		UnlockTracker.unlockCard("Moondial");
 		UnlockTracker.unlockCard("KidneyShot");
 		UnlockTracker.unlockCard("WasteNot");
@@ -418,7 +418,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Replace");
 		UnlockTracker.unlockCard("Reset");
 		UnlockTracker.unlockCard("ReturningBlade");
-		UnlockTracker.unlockCard("MultiShot");
+		UnlockTracker.unlockCard("Shuttle");
 		UnlockTracker.unlockCard("Rewind");
 		UnlockTracker.unlockCard("Sabotage");
 		UnlockTracker.unlockCard("ShiftingGears");
@@ -432,12 +432,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		UnlockTracker.unlockCard("Spin");
 		UnlockTracker.unlockCard("StarChef");
 		UnlockTracker.unlockCard("Starlight");
-		UnlockTracker.unlockCard("StressReliever");
+		UnlockTracker.unlockCard("Foresight");
 		UnlockTracker.unlockCard("Sunlight");
 		UnlockTracker.unlockCard("SurpressingFire");
 		UnlockTracker.unlockCard("TimeTheft");
 		UnlockTracker.unlockCard("TheWorld");
-		UnlockTracker.unlockCard("TimeEmbedded");
+		UnlockTracker.unlockCard("Contraction");
 		UnlockTracker.unlockCard("TimeWarp");
 		UnlockTracker.unlockCard("TrashToTreasure");
 		UnlockTracker.unlockCard("TrueSight");
@@ -519,7 +519,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y费用为0且具有 #y虚无 和 #y消耗 。");
         BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
         BaseMod.addKeyword(new String[] {"变换"}, "变换 效果会在牌被手动丢弃后触发。");
-        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则触发效果。");
+        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则在你的下个回合开始时触发效果。");
         BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
         BaseMod.addKeyword(new String[] {"风华"}, "风华增加你从牌中获得的格挡值和护盾值。");
@@ -529,7 +529,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
-        BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s).");
+        BaseMod.addKeyword(new String[] {"Vision", "vision"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s) at the start of your next turn.");
         BaseMod.addKeyword(new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable AND #yFrail to you.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Whenever you lose HP, lose #yProtection instead. Protection will not be removed at the start of your next turn.");
         BaseMod.addKeyword(new String[] {"Elegance", "elegance"}, "Elegance improves Block and Protection gained from cards.");

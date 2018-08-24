@@ -1,7 +1,5 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,9 +10,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.BacklashAction;
+import blackrusemod.actions.HightailAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.ProtectionPower;
 
 public class Hightail extends CustomCard {
 	public static final String ID = "Hightail";
@@ -35,15 +32,7 @@ public class Hightail extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
-		if (!this.canUpgrade()) this.energyOnUse += 1;
-		for (int i = 0; i < this.energyOnUse; i++)
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
-		if (!this.canUpgrade()) this.energyOnUse -= 1;
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
+		AbstractDungeon.actionManager.addToBottom(new HightailAction(p, this.magicNumber, this.freeToPlayOnce, this.energyOnUse));
 	}
 
 	public AbstractCard makeCopy() {
@@ -52,6 +41,7 @@ public class Hightail extends CustomCard {
 	
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION;
+		if (!this.canUpgrade()) upgradeMagicNumber(3);
 		if (AbstractDungeon.player.hasPower("ElegancePower")) {
 			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
 			this.isMagicNumberModified = true;
@@ -62,8 +52,7 @@ public class Hightail extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			upgradeMagicNumber(3);
 		}
 	}
 }

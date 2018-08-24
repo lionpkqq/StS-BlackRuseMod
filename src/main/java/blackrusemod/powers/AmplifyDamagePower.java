@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -28,10 +29,25 @@ public class AmplifyDamagePower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("blight128");
 	}
 	
+	public void onInitialApplication() {
+		if (AbstractDungeon.player.hasRelic("PaperSwan")) {
+			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+				AbstractDungeon.player.getRelic("PaperSwan").flash();
+				this.amount += 1;
+			}
+		}
+	}
+	
 	public void stackPower(int stackAmount)
 	{
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+		if (AbstractDungeon.player.hasRelic("PaperSwan")) {
+			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+				AbstractDungeon.player.getRelic("PaperSwan").flash();
+				this.amount += 1;
+			}
+		}
 	}
 
 	public void updateDescription()

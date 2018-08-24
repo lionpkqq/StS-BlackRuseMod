@@ -3,11 +3,11 @@ package blackrusemod.relics;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SatellitePower;
 
@@ -30,7 +30,7 @@ public class SplendidAttire extends CustomRelic {
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new KnivesPower(AbstractDungeon.player, KNIVES)));
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-				new StrengthPower(AbstractDungeon.player, 1), 1));
+				new ElegancePower(AbstractDungeon.player, 1), 1));
 		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new SatellitePower(AbstractDungeon.player, 3), 3));
 	}

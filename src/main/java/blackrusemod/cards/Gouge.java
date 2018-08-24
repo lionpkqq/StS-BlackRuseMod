@@ -1,11 +1,6 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,8 +10,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.GougeAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.AmplifyDamagePower;
 
 public class Gouge extends CustomCard {
 	public static final String ID = "Gouge";
@@ -39,17 +34,7 @@ public class Gouge extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (!this.canUpgrade()) this.energyOnUse += 1;
-		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
-		for (int i = 0; i < this.energyOnUse; i++) {
-			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-					AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new AmplifyDamagePower(m, 1), 1));
-		}
-		if (!this.canUpgrade()) this.energyOnUse -= 1;
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
+		AbstractDungeon.actionManager.addToBottom(new GougeAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse, this.canUpgrade()));
 	}
 
 	public AbstractCard makeCopy() {

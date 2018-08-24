@@ -17,7 +17,7 @@
 	},
 	"InstantArmor": {
 		"NAME": "灵装",
-		"DESCRIPTION": " 固有 。获得 !M! 点 护盾 。"
+		"DESCRIPTION": " 固有 。 NL 获得 !M! 点 护盾 。 NL 转化3把 飞刀 为 卫星 。 NL 消耗 。"
 	},
 	"Alleviate": {
 		"NAME": "减负",
@@ -39,9 +39,9 @@
 		"NAME": "彗星",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。"
 	},
-	"CosmicInflation": {
-		"NAME": "宇宙膨胀",
-		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 将这张牌的复制品放在抽牌堆顶部。 消耗 。"
+	"Dilation": {
+		"NAME": "膨胀",
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 这张牌每被打出一次，它在本场战斗中的基础 护盾 上升1。"
 	},
 	"Moondial": {
 		"NAME": "月晷",
@@ -60,17 +60,18 @@
 		"DESCRIPTION": " 护盾 翻倍。 NL 消耗 。 NL 变换 ：获得 !M! 点 护盾 。"
 	},
 	"Duplication": {
-		"NAME": "复制体",
+		"NAME": "分身",
 		"DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。"
 	},
 	"Enbodiment": {
-		"NAME": "具现化",
+		"NAME": "幻时具现",
 		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 牌加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张升级过的 幻时 牌加入抽牌堆。"
 	},
 	"Defy": {
 		"NAME": "藐视",
-		"DESCRIPTION": "获得 !B! 点 格挡 。你不受 虚弱 、 脆弱 和 易伤 影响1回合。 NL 保留 。"
+		"DESCRIPTION": "获得 !B! 点 格挡 。你不受 虚弱 、 脆弱 和 易伤 影响1回合。",
+		"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。你不受 虚弱 、 脆弱 和 易伤 影响1回合。 NL 保留 。"
 	},
 	"FanOfKnives": {
 		"NAME": "刀阵",
@@ -118,30 +119,30 @@
 	},
 	"Hightail": {
 		"NAME": "遁走",
-		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。",
-		"UPGRADE_DESCRIPTION": "获得 !M! 点 护盾 X+1 次。 NL 反冲 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。"
 	},
 	"Advance": {
 		"NAME": "预支",
 		"DESCRIPTION": "将抽牌堆中 !M! 张0耗能的牌放入你的手牌。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 将抽牌堆中 !M! 张0耗能的牌放入你的手牌。"
 	},
-	"Disposal": {
-		"NAME": "措置",
-		"DESCRIPTION": " 消耗 最多 !M! 张手牌。 NL 每消耗1张牌，获得1 风华 ，抽1张牌。 NL 消耗 。"
+	"ForgedInTime": {
+		"NAME": "物换星移",
+		"DESCRIPTION": " 消耗 所有手牌。 NL 每 消耗 1张牌，获得 !M! 点 护盾 和2把 飞刀 。 NL 消耗 。"
 	},
 	"Gouge": {
 		"NAME": "凿击",
 		"DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X次。 消耗 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X+1次。 消耗 。"
 	},
-	"ProperPractice": {
-		"NAME": "适当练习",
+	"BestPractice": {
+		"NAME": "最佳实践",
 		"DESCRIPTION": "每回合开始时，你可以在本场战斗中 升级 手牌中的1张牌。"
 	},
-	"Cleaning": {
-		"NAME": "扫除",
-		"DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。"
+	"CleanUp": {
+		"NAME": "清理",
+		"DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。",
+		"UPGRADE_DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。 NL 保留 。"
 	},
 	"Luminosity": {
 		"NAME": "光辉",
@@ -165,7 +166,7 @@
 		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
 	"Manipulate": {
-		"NAME": "操控",
+		"NAME": "时轴操纵",
 		"DESCRIPTION": "将 X+1 张随机 幻时 牌加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "将 X+2 张随机 幻时 牌加入抽牌堆。"
 	},
@@ -196,7 +197,7 @@
 		"DESCRIPTION": " 视界 ：获得 !B! 点 护盾 并给予 !M! 层 虚弱 。"
 	},
 	"DancingSilver": {
-		"NAME": "舞银",
+		"NAME": "星罗棋布",
 		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。获得 卫星 数量乘以2的 格挡 。"
 	},
 	"Potential": {
@@ -220,27 +221,27 @@
 		"DESCRIPTION": "抽 !M! 张牌 。 NL 获得 5 把 飞刀 。"
 	},
 	"Replace": {
-		"NAME": "替代",
+		"NAME": "取代",
 		"DESCRIPTION": "从抽牌堆丢弃 1 张牌。 NL 将 1 张牌从弃牌堆放置到抽牌堆顶部。"
 	},
 	"Reset": {
 		"NAME": "清零",
-		"DESCRIPTION": "清除 虚弱 、 脆弱 和 易伤  。 NL 每层给予2 护盾 。"
+		"DESCRIPTION": "清除 虚弱 、 脆弱 和 易伤  。 NL 每层给予 !M! 护盾 。 NL 消耗 。"
 	},
 	"ReturningBlade": {
-		"NAME": "返刃",
+		"NAME": "吾刃回归",
 		"DESCRIPTION": " 视界 ：对所有敌人造成 !D! 点伤害，将这张牌放入手牌。 NL 能被多次升级。"
 	},
-	"MultiShot": {
-		"NAME": "多重射击",
-		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把对随机敌人造成 !D! 点伤害并抽1张牌。"
+	"Shuttle": {
+		"NAME": "穿梭",
+		"DESCRIPTION": "发动下回会开始时会发动的卡牌和遗物效果。 NL 消耗 。"
 	},
 	"Rewind": {
 		"NAME": "回溯",
 		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆底部的1张牌放入手牌。"
 	},
 	"Sabotage": {
-		"NAME": "破坏",
+		"NAME": "毁伤",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人损失等于伤害的 力量 1回合。 NL 消耗 。"
 	},
 	"ShiftingGears": {
@@ -287,10 +288,10 @@
 	},
 	"Starlight": {
 		"NAME": "星光",
-		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把对随机敌人造成 !D! 点伤害。"
+		"DESCRIPTION": "投掷 !M! 把 飞刀 。 NL 每把对随机敌人造成 !D! 点伤害并抽1张牌。"
 	},
-	"StressReliever": {
-		"NAME": "解愁人",
+	"Foresight": {
+		"NAME": "先见之明",
 		"DESCRIPTION": "你的回合开始时，检视牌堆顶部的 !M! 张牌，你可以选择丢弃其中的任意张。"
 	},
 	"Sunlight": {
@@ -302,7 +303,7 @@
 		"DESCRIPTION": "每当你投掷或转化1把 飞刀 ，获得 !M! 点 格挡 。"
 	},
 	"TimeTheft": {
-		"NAME": "盗窃时间",
+		"NAME": "以逸待劳",
 		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。"
 	},
@@ -327,12 +328,12 @@
 		"NAME": "世界",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 本回合下1张打出的牌消耗为 0 。 消耗 。"
 	},
-	"TimeEmbedded": {
-		"NAME": "嵌时护甲",
+	"Contraction": {
+		"NAME": "时御我身",
 		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 把所有的 格挡 转化为 护盾 。"
 	},
 	"TimeWarp": {
-		"NAME": "时间迁跃",
+		"NAME": "迁跃",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
 	},
 	"TrashToTreasure": {

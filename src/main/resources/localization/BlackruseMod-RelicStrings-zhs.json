@@ -27,7 +27,7 @@
   "MysterySword": {
     "NAME": "神秘之剑",
     "FLAVOR": "高塔深处找到的武器，会给使用者带来极大的负担。",
-    "DESCRIPTIONS": ["每回合打出的第一张 攻击牌 将会打出两次并具有 #y反冲 。"]
+    "DESCRIPTIONS": ["在每回合开始时获得 [B] 。每回合打出的第一张 #y技能牌 具有 #y反冲 。"]
   },
   "PaperSwan": {
     "NAME": "纸天鹅",
@@ -37,7 +37,7 @@
   "SplendidAttire": {
     "NAME": "华服",
     "FLAVOR": "多一分美丽，多一分危险。",
-    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y力量  和 #b3 层 #y卫星 。"]
+    "DESCRIPTIONS": ["替换 #r制服 。战斗开始时获得 #b12 把 #y飞刀 ，获得 #b1 点 #y风华  和 #b3 层 #y卫星 。"]
   },
   "OldScarf": {
     "NAME": "旧围巾",

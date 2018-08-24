@@ -40,9 +40,6 @@ public class Desolation extends CustomCard {
 		if (m.hasPower("AmplifyDamagePower")) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
 					m, p, new AmplifyDamagePower(m, m.getPower("AmplifyDamagePower").amount), m.getPower("AmplifyDamagePower").amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new AmplifyDamagePower(m, 1), 1));
 		}
 	}
 

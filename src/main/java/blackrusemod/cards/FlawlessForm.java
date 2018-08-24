@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.FlawlessFormPower;
@@ -27,6 +29,7 @@ public class FlawlessForm extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLAWLESS_FORM), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		CardTags.addTags(this, BaseModTags.FORM);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,6 +48,7 @@ public class FlawlessForm extends CustomCard {
 	
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
+		if (!this.canUpgrade()) upgradeMagicNumber(4);
 		if (AbstractDungeon.player.hasPower("ElegancePower")) {
 			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
 			this.isMagicNumberModified = true;
@@ -58,6 +62,7 @@ public class FlawlessForm extends CustomCard {
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
 			this.retain = true;
+			upgradeMagicNumber(4);
 		}
 	}
 }

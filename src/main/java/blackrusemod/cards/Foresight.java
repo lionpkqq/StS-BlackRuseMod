@@ -11,33 +11,35 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.ProperPracticePower;
+import blackrusemod.powers.StressRelieverPower;
 
-public class ProperPractice extends CustomCard {
-	public static final String ID = "ProperPractice";
+public class Foresight extends CustomCard {
+	public static final String ID = "Foresight";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int COST_UPGRADED = 0;
+	private static final int RELIEVE = 2;
+	
 
-	public ProperPractice() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.PROPER_PRACTICE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
+	public Foresight() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FORESIGHT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.magicNumber = this.baseMagicNumber = RELIEVE;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProperPracticePower(p, 1), 1));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StressRelieverPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new ProperPractice();
+		return new Foresight();
 	}
 
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			upgradeMagicNumber(1);
 		}
 	}
 }

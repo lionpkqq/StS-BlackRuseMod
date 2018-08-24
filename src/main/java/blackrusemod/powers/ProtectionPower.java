@@ -48,7 +48,7 @@ public class ProtectionPower extends AbstractPower {
 			actual_damage = 0;
 		}
 		else 
-			AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ProtectionPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "ProtectionPower"));
 		return actual_damage;
 	}
 }

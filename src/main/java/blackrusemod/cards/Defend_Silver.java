@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.BaseModTags;
+import basemod.helpers.CardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
@@ -24,8 +26,8 @@ public class Defend_Silver extends CustomCard {
 	public Defend_Silver() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DEFEND_SILVER), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
-
 		this.baseBlock = BLOCK_AMT;
+		CardTags.addTags(this, BaseModTags.BASIC_DEFEND);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -41,9 +43,5 @@ public class Defend_Silver extends CustomCard {
 			upgradeName();
 			upgradeBlock(UPGRADE_PLUS_BLOCK);
 		}
-	}
-	
-	public boolean isDefend() {
-		return true;
 	}
 }

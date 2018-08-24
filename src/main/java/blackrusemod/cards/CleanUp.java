@@ -14,16 +14,17 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.KnivesPower;
 
-public class Cleaning extends CustomCard {
-	public static final String ID = "Cleaning";
+public class CleanUp extends CustomCard {
+	public static final String ID = "CleanUp";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int DISCARD = 2;
 	
-	public Cleaning() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CLEANING), COST, DESCRIPTION,
+	public CleanUp() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CLEAN_UP), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.BASIC, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DISCARD;
@@ -35,16 +36,23 @@ public class Cleaning extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, this.magicNumber), this.magicNumber));
 	}
 	
+	public void triggerOnEndOfTurnForPlayingCard() {
+		if (!this.canUpgrade()) 
+			this.retain = true;
+	}
+	
 	@Override
 	public AbstractCard makeCopy() {
-		return new Cleaning();
+		return new CleanUp();
 	}
 	
 	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(1);
+			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.initializeDescription();
+			this.retain = true;
 		}
 	}
 }

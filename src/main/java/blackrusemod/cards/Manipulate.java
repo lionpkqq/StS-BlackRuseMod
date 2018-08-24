@@ -1,7 +1,5 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,8 +10,8 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.actions.ManipulateAction;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.ManipulatePower;
 
 public class Manipulate extends CustomCard {
 	public static final String ID = "Manipulate";
@@ -34,13 +32,7 @@ public class Manipulate extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (!this.canUpgrade()) this.energyOnUse += 1;
-		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ManipulatePower(p, this.energyOnUse+1), this.energyOnUse+1));
-		if (!this.canUpgrade()) this.energyOnUse -= 1;
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
+		AbstractDungeon.actionManager.addToBottom(new ManipulateAction(p, this.freeToPlayOnce, this.energyOnUse, this.canUpgrade()));
 	}
 	
 	@Override

@@ -14,8 +14,8 @@ import blackrusemod.actions.TimeEmbeddedAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ProtectionPower;
 
-public class TimeEmbedded extends CustomCard {
-	public static final String ID = "TimeEmbedded";
+public class Contraction extends CustomCard {
+	public static final String ID = "Contraction";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -23,8 +23,8 @@ public class TimeEmbedded extends CustomCard {
 	private static final int PROTECTION_AMT = 5;
 	private static final int UPGRADE_PROTECTION_BLOCK = 3;
 
-	public TimeEmbedded() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_EMBEDDED), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
+	public Contraction() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CONTRACTION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
@@ -35,7 +35,7 @@ public class TimeEmbedded extends CustomCard {
 	}
 
 	public AbstractCard makeCopy() {
-		return new TimeEmbedded();
+		return new Contraction();
 	}
 	
 	public void applyPowers() {

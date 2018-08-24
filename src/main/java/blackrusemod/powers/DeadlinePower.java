@@ -45,27 +45,18 @@ public class DeadlinePower extends AbstractPower {
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && !this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
 		}
 		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
-			if (AbstractDungeon.player.hasRelic("PaperSwan")) 
-				if (AbstractDungeon.cardRandomRng.randomBoolean())
-					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, 1), 1));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
 		}
 		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 999));

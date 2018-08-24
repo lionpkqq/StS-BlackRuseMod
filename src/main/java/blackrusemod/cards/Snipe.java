@@ -18,13 +18,13 @@ public class Snipe extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 12;
-	private static final int UPGRADE_PLUS_DMG = 6;
+	private static final int ATTACK_DMG = 15;
+	private static final int UPGRADE_PLUS_DMG = 5;
 	private static final int VUL = 1;
 
 	public Snipe() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SNIPE), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = VUL;
