@@ -49,7 +49,8 @@
 	},
 	"Deny": {
 		"NAME": "否决",
-		"DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张牌。"
+		"DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张牌。 NL 消耗 。",
+		"UPGRADE_DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张牌。"
 	},
 	"DoubleEdge": {
 		"NAME": "双刃剑",
@@ -79,7 +80,7 @@
 	},
 	"GearUp": {
 		"NAME": "整装待发",
-		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 获得 4 把 飞刀 。 NL 转化 1 把 飞刀 为 卫星 。"
+		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 获得 3 把 飞刀 。"
 	},
 	"FastForward": {
 		"NAME": "快进",
@@ -139,8 +140,8 @@
 		"NAME": "最佳实践",
 		"DESCRIPTION": "每回合开始时，你可以在本场战斗中 升级 手牌中的1张牌。"
 	},
-	"CleanUp": {
-		"NAME": "清理",
+	"Exchange": {
+		"NAME": "交换",
 		"DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。",
 		"UPGRADE_DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。 NL 保留 。"
 	},
@@ -182,8 +183,8 @@
 		"NAME": "月光",
 		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把造成 !D! 点伤害并给予 1 层 易伤 。"
 	},
-	"CannedTime": {
-		"NAME": "罐装时间",
+	"BottledTime": {
+		"NAME": "瓶装时间",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 抽 !M! 张牌。 NL 消耗 。"
 	},
@@ -336,8 +337,8 @@
 		"NAME": "迁跃",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
 	},
-	"TrashToTreasure": {
-		"NAME": "变废为宝",
+	"Revamp": {
+		"NAME": "改进",
 		"DESCRIPTION": "将弃牌堆里 !M! 张牌放入手中并 升级 。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "将弃牌堆里 !M! 张牌放入手中并 升级 。"
 	},

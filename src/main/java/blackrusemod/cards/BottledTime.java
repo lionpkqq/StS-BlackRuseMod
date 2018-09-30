@@ -13,8 +13,8 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class CannedTime extends CustomCard {
-	public static final String ID = "CannedTime";
+public class BottledTime extends CustomCard {
+	public static final String ID = "BottledTime";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -22,8 +22,8 @@ public class CannedTime extends CustomCard {
 	private static final int COST = 0;
 	private static final int DRAW = 2;
 	
-	public CannedTime() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.CANNED_TIME), COST, DESCRIPTION,
+	public BottledTime() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.BOTTLED_TIME), COST, DESCRIPTION,
 				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
 				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = DRAW;
@@ -37,7 +37,7 @@ public class CannedTime extends CustomCard {
 	
 	@Override
 	public AbstractCard makeCopy() {
-		return new CannedTime();
+		return new BottledTime();
 	}
 	
 	@Override

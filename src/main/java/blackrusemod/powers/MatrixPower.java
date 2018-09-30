@@ -34,7 +34,7 @@ public class MatrixPower extends AbstractPower {
     
     private float calculateDamageTakenAmount(final float damage, final DamageInfo.DamageType type) {
         if (type != DamageInfo.DamageType.HP_LOSS && type != DamageInfo.DamageType.THORNS) {
-            return damage * 0.75f;
+            return damage * 0.5f;
         }
         return damage;
     }

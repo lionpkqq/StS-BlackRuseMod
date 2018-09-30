@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-/*    */ public class TrashToTreasureAction extends AbstractGameAction
+/*    */ public class RevampAction extends AbstractGameAction
 /*    */ {
 /*    */   private AbstractPlayer p;
 /*    */   
-/*    */   public TrashToTreasureAction(int amount) {
+/*    */   public RevampAction(int amount) {
 /* 15 */     this.p = AbstractDungeon.player;
 /* 16 */     setValues(this.p, AbstractDungeon.player, amount);
 /* 17 */     this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;

@@ -42,7 +42,7 @@ public class Sunlight extends CustomCard {
 		if (p.hasPower("KnivesPower")) {
 			if (p.getPower("KnivesPower").amount >= 1) {
 				AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-				AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY), 0.1F));
+				AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1f));
 				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "KnivesPower", 1));
 				if (p.hasPower("SurpressingFirePower")) {

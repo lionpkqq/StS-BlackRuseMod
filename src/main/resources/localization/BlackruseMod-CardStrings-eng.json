@@ -49,7 +49,8 @@
 	},
 	"Deny": {
 		"NAME": "Deny",
-		"DESCRIPTION": "Look at your NL draw pile. NL You may discard NL up to !M! cards."
+		"DESCRIPTION": "Look at your NL draw pile. NL You may discard NL up to !M! cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Look at your NL draw pile. NL You may discard NL up to !M! cards."
 	},
 	"DoubleEdge": {
 		"NAME": "Double Edge",
@@ -79,7 +80,7 @@
 	},
 	"GearUp": {
 		"NAME": "Gear Up",
-		"DESCRIPTION": "Gain !M! Protection. NL Obtain 4 Knives. NL Convert 1 Knife to Satellite."
+		"DESCRIPTION": "Gain !M! Protection. NL Obtain 3 Knives."
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
@@ -127,7 +128,7 @@
 		"UPGRADE_DESCRIPTION": "Innate. NL Put !M! Cost 0 cards from your draw pile into your hand."
 	},
 	"ForgedInTime": {
-		"NAME": "Forged in Time",
+		"NAME": "Forge in Time",
 		"DESCRIPTION": "Exhaust your hand. NL Gain !M! Protection and 2 Knives for each exhausted card. NL Exhaust."
 	},
 	"Gouge": {
@@ -139,8 +140,8 @@
 		"NAME": "Best Practice",
 		"DESCRIPTION": "At the start of your turn, you may upgrade 1 card in your hand for the rest of combat."
 	},
-	"CleanUp": {
-		"NAME": "Clean Up",
+	"Exchange": {
+		"NAME": "Exchange",
 		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives.",
 		"UPGRADE_DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives. NL Retain."
 	},
@@ -171,7 +172,7 @@
 		"UPGRADE_DESCRIPTION": "Adds X+2 random Temporal cards to your draw pile."
 	},
 	"Misdirection": {
-		"NAME": "Misdirection",
+		"NAME": "Misdirect",
 		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Blight and Weak."
 	},
 	"MoonPhase": {
@@ -182,8 +183,8 @@
 		"NAME": "Moonlight",
 		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable."
 	},
-	"CannedTime": {
-		"NAME": "Canned Time",
+	"BottledTime": {
+		"NAME": "Bottled Time",
 		"DESCRIPTION": "Draw !M! cards. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Innate. NL Draw !M! cards. NL Exhaust."
 	},
@@ -308,20 +309,20 @@
 		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . NL Draw !M! cards. NL Exhaust."
 	},
 	"TemporalDefense": {
-		"NAME": "Temporal Defense",
+		"NAME": "T. Defend",
 		"DESCRIPTION": "Temporal. NL Gain !B! Block. NL Gain !M! Protection."
 	},
 	"TemporalEssence": {
-		"NAME": "Temporal Essence",
+		"NAME": "T. Essence",
 		"DESCRIPTION": "Temporal. NL Gain [B] . NL Draw !M! cards.",
 		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] . NL Draw !M! cards."
 	},
 	"TemporalMisd": {
-		"NAME": "Temporal Misd.",
+		"NAME": "T. Misdirect",
 		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Weak to ALL enemies."
 	},
 	"TemporalSlicing": {
-		"NAME": "Temporal Slicing",
+		"NAME": "T. Slice",
 		"DESCRIPTION": "Temporal. NL Deal !D! damage !M! times to ALL enemies."
 	},
 	"TheWorld": {
@@ -336,8 +337,8 @@
 		"NAME": "Time Warp",
 		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card(s). NL Shift: Draw 1 card."
 	},
-	"TrashToTreasure": {
-		"NAME": "Trash to Treasure",
+	"Revamp": {
+		"NAME": "Revamp",
 		"DESCRIPTION": "Return !M! card from your discard pile to your hand and NL upgrade it. NL Exhaust.",
 		"UPGRADE_DESCRIPTION": "Return !M! card from your discard pile to your hand and NL upgrade it."
 	},

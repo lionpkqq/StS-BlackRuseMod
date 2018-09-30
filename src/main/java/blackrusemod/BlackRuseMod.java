@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import basemod.BaseMod;
 import basemod.ModLabel;
 import basemod.ModPanel;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -55,7 +56,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	
 	private static final String MODNAME = "BlackRuseMod";
     private static final String AUTHOR = "BlackRuse";
-    private static final String DESCRIPTION = "v0.9.2\n Adds The Servant as a playable third character";
+    private static final String DESCRIPTION = "v0.9.2.1\n Adds The Servant as a playable third character";
     
     private static final Color SILVER = CardHelper.getColor(131.0f, 156.0f, 165.0f);
     private static final String BLACKRUSE_MOD_ASSETS_FOLDER = "img";
@@ -105,7 +106,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FORGED_IN_TIME = "cards/forged_in_time.png";
     public static final String GOUGE = "cards/gouge.png";
     public static final String BEST_PRACTICE = "cards/best_practice.png";
-    public static final String CLEAN_UP = "cards/clean_up.png";
+    public static final String EXCHANGE = "cards/exchange.png";
     public static final String KIDNEY_SHOT = "cards/kidney_shot.png";
     public static final String WASTE_NOT = "cards/waste_not.png";
     public static final String KILLING_DOLL = "cards/killing_doll.png";
@@ -114,7 +115,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String MISDIRECTION = "cards/misdirection.png";
     public static final String MOON_PHASE = "cards/moon_phase.png";
     public static final String MOONLIGHT = "cards/moonlight.png";
-    public static final String CANNED_TIME = "cards/canned_time.png";
+    public static final String BOTTLED_TIME = "cards/bottled_time.png";
     public static final String MURDEROUS_AURA = "cards/murderous_aura.png";
     public static final String DEADLINE = "cards/deadline.png";
     public static final String POTENTIAL = "cards/potential.png";
@@ -151,7 +152,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String THE_WORLD = "cards/the_world.png";
     public static final String CONTRACTION = "cards/contraction.png";
     public static final String TIME_WARP = "cards/time_warp.png";
-    public static final String TRASH_TO_TREASURE = "cards/trash_to_treasure.png";
+    public static final String REVAMP = "cards/revamp.png";
     public static final String TRUE_SIGHT = "cards/true_sight.png";
     public static final String DANCING_SILVER = "cards/dancing_silver.png";
     public static final String UNRULED = "cards/unruled.png";
@@ -319,7 +320,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new ForgedInTime());
 		BaseMod.addCard(new Gouge());
 		BaseMod.addCard(new BestPractice());
-		BaseMod.addCard(new CleanUp());
+		BaseMod.addCard(new Exchange());
 		BaseMod.addCard(new Luminosity());
 		BaseMod.addCard(new KidneyShot());
 		BaseMod.addCard(new WasteNot());
@@ -329,7 +330,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Misdirection());
 		BaseMod.addCard(new MoonPhase());
 		BaseMod.addCard(new Moonlight());
-		BaseMod.addCard(new CannedTime());
+		BaseMod.addCard(new BottledTime());
 		BaseMod.addCard(new MurderousAura());
 		BaseMod.addCard(new Deadline());
 		BaseMod.addCard(new Potential());
@@ -361,89 +362,11 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new TheWorld());
 		BaseMod.addCard(new Contraction());
 		BaseMod.addCard(new TimeWarp());
-		BaseMod.addCard(new TrashToTreasure());
+		BaseMod.addCard(new Revamp());
 		BaseMod.addCard(new TrueSight());
 		BaseMod.addCard(new DancingSilver());
 		BaseMod.addCard(new Unruled());
 		BaseMod.addCard(new LightFlow());
-		
-		// make sure everything is always unlocked		
-		UnlockTracker.unlockCard("Strike_S");
-		UnlockTracker.unlockCard("Defend_S");
-		
-		UnlockTracker.unlockCard("InstantArmor");
-		UnlockTracker.unlockCard("Alleviate");
-		UnlockTracker.unlockCard("Barrier");
-		UnlockTracker.unlockCard("PendulumOfEternity");
-		UnlockTracker.unlockCard("Orbit");
-		UnlockTracker.unlockCard("Comet");
-		UnlockTracker.unlockCard("Dilation");
-		UnlockTracker.unlockCard("Luminosity");
-		UnlockTracker.unlockCard("Deny");
-		UnlockTracker.unlockCard("DoubleEdge");
-		UnlockTracker.unlockCard("DualDimension");
-		UnlockTracker.unlockCard("Duplication");
-		UnlockTracker.unlockCard("Enbodiment");
-		UnlockTracker.unlockCard("Defy");
-		UnlockTracker.unlockCard("FanOfKnives");
-		UnlockTracker.unlockCard("GearUp");
-		UnlockTracker.unlockCard("FastForward");
-		UnlockTracker.unlockCard("Ricochet");
-		UnlockTracker.unlockCard("FlawlessForm");
-		UnlockTracker.unlockCard("FloweringNight");
-		UnlockTracker.unlockCard("FollowUp");
-		UnlockTracker.unlockCard("Hightail");
-		UnlockTracker.unlockCard("Advance");
-		UnlockTracker.unlockCard("ForgedInTime");
-		UnlockTracker.unlockCard("Gouge");
-		UnlockTracker.unlockCard("BestPractice");
-		UnlockTracker.unlockCard("CleanUp");
-		UnlockTracker.unlockCard("Moondial");
-		UnlockTracker.unlockCard("KidneyShot");
-		UnlockTracker.unlockCard("WasteNot");
-		UnlockTracker.unlockCard("KillingDoll");
-		UnlockTracker.unlockCard("Collapse");
-		UnlockTracker.unlockCard("Manipulate");
-		UnlockTracker.unlockCard("Misdirection");
-		UnlockTracker.unlockCard("MoonPhase");
-		UnlockTracker.unlockCard("Moonlight");
-		UnlockTracker.unlockCard("CannedTime");
-		UnlockTracker.unlockCard("MurderousAura");
-		UnlockTracker.unlockCard("Deadline");
-		UnlockTracker.unlockCard("Potential");
-		UnlockTracker.unlockCard("Desolation");
-		UnlockTracker.unlockCard("Read");
-		UnlockTracker.unlockCard("RealityMarble");
-		UnlockTracker.unlockCard("Rearm");
-		UnlockTracker.unlockCard("Replace");
-		UnlockTracker.unlockCard("Reset");
-		UnlockTracker.unlockCard("ReturningBlade");
-		UnlockTracker.unlockCard("Shuttle");
-		UnlockTracker.unlockCard("Rewind");
-		UnlockTracker.unlockCard("Sabotage");
-		UnlockTracker.unlockCard("ShiftingGears");
-		UnlockTracker.unlockCard("ShatteredReality");
-		UnlockTracker.unlockCard("SilverMatrix");
-		UnlockTracker.unlockCard("SilverBlades");
-		UnlockTracker.unlockCard("Snipe");
-		UnlockTracker.unlockCard("Solidify");
-		UnlockTracker.unlockCard("SoulSculpture");
-		UnlockTracker.unlockCard("SpecialFormula");
-		UnlockTracker.unlockCard("Spin");
-		UnlockTracker.unlockCard("StarChef");
-		UnlockTracker.unlockCard("Starlight");
-		UnlockTracker.unlockCard("Foresight");
-		UnlockTracker.unlockCard("Sunlight");
-		UnlockTracker.unlockCard("SurpressingFire");
-		UnlockTracker.unlockCard("TimeTheft");
-		UnlockTracker.unlockCard("TheWorld");
-		UnlockTracker.unlockCard("Contraction");
-		UnlockTracker.unlockCard("TimeWarp");
-		UnlockTracker.unlockCard("TrashToTreasure");
-		UnlockTracker.unlockCard("TrueSight");
-		UnlockTracker.unlockCard("DancingSilver");
-		UnlockTracker.unlockCard("Unruled");
-		UnlockTracker.unlockCard("LightFlow");
 		
 		logger.info("done editting cards");
 	}
@@ -456,8 +379,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
 			String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
 			BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
-		else {
-			String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
+		else {String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
         
         // CardStrings
@@ -474,41 +396,50 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         else {String powerStrings = Gdx.files.internal("localization/BlackruseMod-PowerStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
         	BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);}
         
-     // KeywordStrings
-//        if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-//        	String keywordStrings = Gdx.files.internal("localization/BlackruseMod-KeywordStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
-//        	BaseMod.loadCustomStrings(KeywordStrings.class, keywordStrings);}
-//        else {String keywordStrings = Gdx.files.internal("localization/BlackruseMod-KeywordStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
-//        	BaseMod.loadCustomStrings(KeywordStrings.class, keywordStrings);}
-        
 		logger.info("done editting strings");
 	}
 
 	@Override
 	public void receiveSetUnlocks() {
-//		// servant unlock 1
-//		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-//				"Flicker", "Transference", "ForceRipple"
-//				), TheServantEnum.THE_SERVANT, 1);
-//		UnlockTracker.addCard("Flicker");
-//		UnlockTracker.addCard("Transference");
-//		UnlockTracker.addCard("ForceRipple");
-//		
-//		// servant unlock 2
-//		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-//				"Channel", "Shimmer", "ThoughtRaze"
-//				), TheServantEnum.THE_SERVANT, 2);
-//		UnlockTracker.addCard("Channel");
-//		UnlockTracker.addCard("Shimmer");
-//		UnlockTracker.addCard("ThoughtRaze");
-//		
-//		// servant unlock 3
-//		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-//				"Convergence", "Hypothesis", "Nexus"
-//				), TheServantEnum.THE_SERVANT, 3);
-//		UnlockTracker.addCard("Convergence");
-//		UnlockTracker.addCard("Hypothesis");
-//		UnlockTracker.addCard("Nexus");
+		// servant unlock 1
+		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+				"Manipulate", "Moondial", "Enbodiment"
+				), TheServantEnum.THE_SERVANT, 1);
+		UnlockTracker.addCard("Manipulate");
+		UnlockTracker.addCard("Moondial");
+		UnlockTracker.addCard("Enbodiment");
+		
+		// servant unlock 2
+		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+				"Broom", "KneeBrace", "Pan"
+				), TheServantEnum.THE_SERVANT, 2);
+		UnlockTracker.addRelic("Broom");
+		UnlockTracker.addRelic("KneeBrace");
+		UnlockTracker.addRelic("Pan");
+		
+		// servant unlock 3
+		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+				"Deadline", "TimeTheft", "TrueSight"
+				), TheServantEnum.THE_SERVANT, 3);
+		UnlockTracker.addCard("Deadline");
+		UnlockTracker.addCard("TimeTheft");
+		UnlockTracker.addCard("TrueSight");
+		
+		// servant unlock 4
+		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+				"PaperSwan", "RomanBracelet", "OldScarf"
+				), TheServantEnum.THE_SERVANT, 4);
+		UnlockTracker.addRelic("PaperSwan");
+		UnlockTracker.addRelic("RomanBracelet");
+		UnlockTracker.addRelic("OldScarf");
+				
+		// servant unlock 5
+		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+				"Orbit", "DancingSilver", "SilverMatrix"
+				), TheServantEnum.THE_SERVANT, 5);
+		UnlockTracker.addCard("Orbit");
+		UnlockTracker.addCard("DancingSilver");
+		UnlockTracker.addCard("SilverMatrix");
 	}
 	
 
@@ -523,9 +454,9 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
         BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
         BaseMod.addKeyword(new String[] {"风华"}, "风华增加你从牌中获得的格挡值和护盾值。");
-        BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b25% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
+        BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b50% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
         BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
-        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servent's most dedicated weapons. Can be threw or converted.");
+        BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be thrown or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
         BaseMod.addKeyword(new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
@@ -533,7 +464,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable AND #yFrail to you.");
         BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Whenever you lose HP, lose #yProtection instead. Protection will not be removed at the start of your next turn.");
         BaseMod.addKeyword(new String[] {"Elegance", "elegance"}, "Elegance improves Block and Protection gained from cards.");
-        BaseMod.addKeyword(new String[] {"Matrix", "matrix"}, "Reduce Attack damage taken by 25%. Lose #b1 Martix whenever you are attacked.");
+        BaseMod.addKeyword(new String[] {"Matrix", "matrix"}, "Reduce Attack damage taken by #b50%. Lose #b1 Martix whenever you are attacked.");
         BaseMod.addKeyword(new String[] {"Satellite", "satellite", "Satellites", "satellites"}, "Whenever you use an Attack, lose #b1 Satellite and attack an extra time for #b4 damage. "
         		+ "Whenever you are attacked, lose #b1 Satellite and deal #b4 damage to the attacker. Satellites count as Knives.");
         logger.info("done setting up custom keywords");

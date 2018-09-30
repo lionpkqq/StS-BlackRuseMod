@@ -18,7 +18,7 @@ public class Reset extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int PROTECTION = 0;
+	private static final int PROTECTION = 1;
 	
 	public Reset() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.RESET), COST, DESCRIPTION,

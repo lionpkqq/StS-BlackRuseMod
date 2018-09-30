@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.9.2
+# StS-BlackRuseMod 0.9.2.1
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (08-23-2018)
-* ModTheSpire 3.0.0
-* BaseMod 3.0.0 (Week 39 Patch)
+* Slay The Spire (09-27-2018)
+* ModTheSpire 3.2.0
+* BaseMod 3.4.0 (Week 43 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -31,8 +31,8 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 
 ## Usage ##
 ### Required Downloads ###
-* ModTheSpire v3.0.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod v3.0.0+ (https://github.com/daviscook477/BaseMod/releases)
+* ModTheSpire v3.2.0+ (https://github.com/kiooeht/ModTheSpire/releases)
+* BaseMod v3.4.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -104,9 +104,26 @@ Contributors of **FruityMod**
 * LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
 
 ## Current State/Updates ##
-* Looking for an (presumably spine) animator.
-* Needs more play-testing.
-* Please let me know if you can rephrase any sentences to make them sound more natural.
+* Looking for an Spriter animator.
+
+0.9.2.1
+Balance:
+* [Deny] discard up to 2 cards -> 3 cards
+* [Deny] now has Exhaust
+* [Gear Up] gain 5(8) Protection -> gain 6(9) Protection
+* [Gear Up] no longer convert 1 Knife to Satellite
+* Matrix now reduces Attack damage taken by 50%
+* The Servant now has 5 less Max HP
+
+Changes and reworks:
+* Enabled the unlock system.
+* Renamed some cards.
+* New illustrations for [The World], [Bottled Time] and [Exchange].
+
+Bug fixes:
+* Fixed a bug which made the player get the Ironclad instead of the Servant after the Week 43 patch.
+* Fixed a bug which crashed the game when the player used [Sunlight].
+* Fixed a typo which caused [Reset] give 0 Protection instead of 1.
 
 0.9.2
 Balance:

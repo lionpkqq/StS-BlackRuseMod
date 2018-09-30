@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.ConvertAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.ProtectionPower;
@@ -21,9 +20,8 @@ public class GearUp extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int PROTECTION_AMT = 5;
+	private static final int PROTECTION_AMT = 6;
 	private static final int UPGRADE_PROTECTION_BLOCK = 3;
-	private static final int SATELLITE = 1;
 	
 	public GearUp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.GEAR_UP), COST, DESCRIPTION,
@@ -34,8 +32,7 @@ public class GearUp extends CustomCard {
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, 4), 4));
-		AbstractDungeon.actionManager.addToBottom(new ConvertAction(SATELLITE));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, 3), 3));
 	}
 	
 	public AbstractCard makeCopy() {
