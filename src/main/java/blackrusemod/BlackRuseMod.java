@@ -253,8 +253,8 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		
 		logger.info("add " + TheServantEnum.THE_SERVANT.toString());
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-			BaseMod.addCharacter(TheServant.class, "¡›π‚ Ã¥”", "Servant class string",
-					AbstractCardEnum.SILVER, "¡›π‚ Ã¥”",
+			BaseMod.addCharacter(TheServant.class, "ÂáõÂÖâ‰æç‰ªé", "Servant class string",
+					AbstractCardEnum.SILVER, "ÂáõÂÖâ‰æç‰ªé",
 					makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
 					TheServantEnum.THE_SERVANT);
 		}
@@ -446,6 +446,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
+<<<<<<< HEAD
         BaseMod.addKeyword(new String[] {"∑…µ∂"}, "∑…µ∂ «¡›π‚ Ã¥”µƒ◊® ÙŒ‰∆˜°£ø…“‘±ªÕ∂÷¿ªÚ◊™ªØ°£");
         BaseMod.addKeyword(new String[] {"ª√ ±"}, "ª√ ±≈∆ #y∑—”√Œ™0«“æﬂ”– #y–ÈŒﬁ ∫Õ #yœ˚∫ƒ °£");
         BaseMod.addKeyword(new String[] {"ø›ŒÆ"}, " ‹µΩπ•ª˜ ±ª·∂ÓÕ‚≥– ‹…À∫¶°£∂ÓÕ‚…À∫¶≤ª ‹ #y“◊…À ”∞œÏ°£");
@@ -456,6 +457,18 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"∑Áª™"}, "∑Áª™‘ˆº”ƒ„¥”≈∆÷–ªÒµ√µƒ∏Òµ≤÷µ∫Õª§∂‹÷µ°£");
         BaseMod.addKeyword(new String[] {"æÿ’Û"}, "Ω´À˘ ‹µΩµƒ #yπ•ª˜ …À∫¶ΩµµÕ #b50% °£√ø ‹µΩ #b1 ¥Œπ•ª˜À ß #b1 ≤„æÿ’Û°£");
         BaseMod.addKeyword(new String[] {"Œ¿–«"}, " π”√π•ª˜≈∆ ±£¨ ß»•1≤„Œ¿–«£¨∂ÓÕ‚π•ª˜“ª¥Œ£¨‘Ï≥…4µ„…À∫¶°£ƒ„√ø ‹µΩ“ª¥Œπ•ª˜£¨ ß»•1≤„Œ¿–«£¨∂‘π•ª˜’ﬂ‘Ï≥…4µ„…À∫¶°£Œ¿–« ”Œ™ #y∑…µ∂ °£");
+=======
+        BaseMod.addKeyword(new String[] {"È£ûÂàÄ"}, "È£ûÂàÄÊòØÂáõÂÖâ‰æç‰ªéÁöÑ‰∏ìÂ±ûÊ≠¶Âô®„ÄÇÂèØ‰ª•Ë¢´ÊäïÊé∑ÊàñËΩ¨Âåñ„ÄÇ");
+        BaseMod.addKeyword(new String[] {"ÂπªÊó∂"}, "ÂπªÊó∂Áâå #yË¥πÁî®‰∏∫0‰∏îÂÖ∑Êúâ #yËôöÊó† Âíå #yÊ∂àËÄó „ÄÇ");
+        BaseMod.addKeyword(new String[] {"ÊûØËêé"}, "ÂèóÂà∞ÊîªÂáªÊó∂‰ºöÈ¢ùÂ§ñÊâøÂèó‰º§ÂÆ≥„ÄÇÈ¢ùÂ§ñ‰º§ÂÆ≥‰∏çÂèó #yÊòì‰º§ ÂΩ±Âìç„ÄÇ");
+        BaseMod.addKeyword(new String[] {"ÂèòÊç¢"}, "ÂèòÊç¢ ÊïàÊûú‰ºöÂú®ÁâåË¢´ÊâãÂä®‰∏¢ÂºÉÂêéËß¶Âèë„ÄÇ");
+        BaseMod.addKeyword(new String[] {"ËßÜÁïå"}, "È¢ÑÊµãÊïå‰∫∫‰∏ãÂõûÂêàÁöÑÊÑèÂõæ„ÄÇÂ¶ÇÊûúÈ¢ÑÊµãÊ≠£Á°ÆÂàôÂú®‰Ω†ÁöÑ‰∏ã‰∏™ÂõûÂêàÂºÄÂßãÊó∂Ëß¶ÂèëÊïàÊûú„ÄÇ");
+        BaseMod.addKeyword(new String[] {"ÂèçÂÜ≤"}, "ÂØπ‰Ω†ÈôÑÂä† #b1 Â±Ç #yËôöÂº± „ÄÅ #yÊòì‰º§ Âíå #yËÑÜÂº± „ÄÇ");
+        BaseMod.addKeyword(new String[] {"Êä§Áõæ"}, "ÂΩì‰Ω†ÊçüÂ§±ÁîüÂëΩÊó∂ÔºåÊ∂àËÄó #yÊä§Áõæ ËÄå‰∏çÊòØ‰Ω†ÁöÑÁîüÂëΩ„ÄÇÊä§Áõæ‰Ω†ÁöÑ‰∏ã‰∏ÄÂõûÂêàÂºÄÂßãÊó∂‰∏ç‰ºöÊ∂àÂ§±„ÄÇ");
+        BaseMod.addKeyword(new String[] {"È£éÂçé"}, "È£éÂçéÂ¢ûÂä†‰Ω†‰ªéÁâå‰∏≠Ëé∑ÂæóÁöÑÊ†ºÊå°ÂÄºÂíåÊä§ÁõæÂÄº„ÄÇ");
+        BaseMod.addKeyword(new String[] {"Áü©Èòµ"}, "Â∞ÜÊâÄÂèóÂà∞ÁöÑ #yÊîªÂáª ‰º§ÂÆ≥Èôç‰Ωé #b25% „ÄÇÊØèÂèóÂà∞ #b1 Ê¨°ÊîªÂáªÊçüÂ§± #b1 Â±ÇÁü©Èòµ„ÄÇ");
+        BaseMod.addKeyword(new String[] {"Âç´Êòü"}, "‰ΩøÁî®ÊîªÂáªÁâåÊó∂ÔºåÂ§±Âéª1Â±ÇÂç´ÊòüÔºåÈ¢ùÂ§ñÊîªÂáª‰∏ÄÊ¨°ÔºåÈÄ†Êàê4ÁÇπ‰º§ÂÆ≥„ÄÇ‰Ω†ÊØèÂèóÂà∞‰∏ÄÊ¨°ÊîªÂáªÔºåÂ§±Âéª1Â±ÇÂç´ÊòüÔºåÂØπÊîªÂáªËÄÖÈÄ†Êàê4ÁÇπ‰º§ÂÆ≥„ÄÇÂç´ÊòüËßÜ‰∏∫ #yÈ£ûÂàÄ „ÄÇ");
+>>>>>>> 80856a74d1adfd7244883b0c82006538af5e5b6f
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be thrown or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");
