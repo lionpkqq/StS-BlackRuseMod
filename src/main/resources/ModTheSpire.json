@@ -1,11 +1,11 @@
 {
   "modid": "BlackRuseMod",
-  "name": "The Servant 0.9.2.1",
+  "name": "The Servant 0.9.2.2",
   "author_list": ["BlackRuse, Kuzomari, Dimlight"],
   "description": "Adds The Servant as a new playable character. She has a full set of 75 cards, 8 new mechanics and 11 exclusive relics.",
   "dependencies": ["basemod"],
-  "version": "0.9.2.1",
-  "sts_version": "09-27-2018",
+  "version": "0.9.2.2",
+  "sts_version": "10-04-2018",
   "mts_version": "3.2.0",
   "update_json": "https://api.github.com/repos/lionpkqq/StS-BlackRuseMod/releases/latest"
 }

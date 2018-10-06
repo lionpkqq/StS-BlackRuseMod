@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModTags;
-import basemod.helpers.CardTags;
+import basemod.helpers.BaseModCardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.FlawlessFormPower;
@@ -29,7 +28,7 @@ public class FlawlessForm extends CustomCard {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FLAWLESS_FORM), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
-		CardTags.addTags(this, BaseModTags.FORM);
+		this.tags.add(BaseModCardTags.FORM);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

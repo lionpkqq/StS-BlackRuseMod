@@ -28,6 +28,7 @@ public class SpecialFormula extends CustomCard {
 				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = HEAL;
 		this.exhaust = true;
+		this.tags.add(AbstractCard.CardTags.HEALING);
 	}
 	
 	@Override

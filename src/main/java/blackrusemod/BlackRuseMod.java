@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.BaseMod;
@@ -404,15 +405,15 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		// servant unlock 1
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 				"Manipulate", "Moondial", "Enbodiment"
-				), TheServantEnum.THE_SERVANT, 1);
+				), TheServantEnum.THE_SERVANT, 0);
 		UnlockTracker.addCard("Manipulate");
 		UnlockTracker.addCard("Moondial");
 		UnlockTracker.addCard("Enbodiment");
 		
 		// servant unlock 2
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"Broom", "KneeBrace", "Pan"
-				), TheServantEnum.THE_SERVANT, 2);
+				AbstractUnlock.UnlockType.RELIC, "Broom", "KneeBrace", "Pan"
+				), TheServantEnum.THE_SERVANT, 1);
 		UnlockTracker.addRelic("Broom");
 		UnlockTracker.addRelic("KneeBrace");
 		UnlockTracker.addRelic("Pan");
@@ -420,15 +421,15 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		// servant unlock 3
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 				"Deadline", "TimeTheft", "TrueSight"
-				), TheServantEnum.THE_SERVANT, 3);
+				), TheServantEnum.THE_SERVANT, 2);
 		UnlockTracker.addCard("Deadline");
 		UnlockTracker.addCard("TimeTheft");
 		UnlockTracker.addCard("TrueSight");
 		
 		// servant unlock 4
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"PaperSwan", "RomanBracelet", "OldScarf"
-				), TheServantEnum.THE_SERVANT, 4);
+				AbstractUnlock.UnlockType.RELIC, "PaperSwan", "RomanBracelet", "OldScarf"
+				), TheServantEnum.THE_SERVANT, 3);
 		UnlockTracker.addRelic("PaperSwan");
 		UnlockTracker.addRelic("RomanBracelet");
 		UnlockTracker.addRelic("OldScarf");
@@ -436,7 +437,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		// servant unlock 5
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
 				"Orbit", "DancingSilver", "SilverMatrix"
-				), TheServantEnum.THE_SERVANT, 5);
+				), TheServantEnum.THE_SERVANT, 4);
 		UnlockTracker.addCard("Orbit");
 		UnlockTracker.addCard("DancingSilver");
 		UnlockTracker.addCard("SilverMatrix");

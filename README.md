@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.9.2.1
+# StS-BlackRuseMod 0.9.2.2
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (09-27-2018)
+* Slay The Spire (10-04-2018)
 * ModTheSpire 3.2.0
-* BaseMod 3.4.0 (Week 43 Patch)
+* BaseMod 3.5.0 (Week 43 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -32,7 +32,7 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 ## Usage ##
 ### Required Downloads ###
 * ModTheSpire v3.2.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod v3.4.0+ (https://github.com/daviscook477/BaseMod/releases)
+* BaseMod v3.5.0+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -105,6 +105,10 @@ Contributors of **FruityMod**
 
 ## Current State/Updates ##
 * Looking for an Spriter animator.
+
+0.9.2.2
+* Support for BaseMod 3.5.0.
+* Fixed a bug which would crash the game after finishing a run.
 
 0.9.2.1
 Balance:
