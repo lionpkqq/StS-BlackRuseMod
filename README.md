@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.9.2.2
+# StS-BlackRuseMod 0.9.3
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (10-04-2018)
-* ModTheSpire 3.2.0
-* BaseMod 3.5.0 (Week 43 Patch)
+* Slay The Spire (11-17-2018)
+* ModTheSpire 3.6.0
+* BaseMod 5.3.1 (Week 50 Patch)
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -31,8 +31,8 @@ This Mod makes no changes to the base game other than adding **The Servant**. In
 
 ## Usage ##
 ### Required Downloads ###
-* ModTheSpire v3.2.0+ (https://github.com/kiooeht/ModTheSpire/releases)
-* BaseMod v3.5.0+ (https://github.com/daviscook477/BaseMod/releases)
+* ModTheSpire v3.6.0+ (https://github.com/kiooeht/ModTheSpire/releases)
+* BaseMod v5.3.1+ (https://github.com/daviscook477/BaseMod/releases)
 
 ### Install ModTheSpire ###
 1. Copy `ModTheSpire.jar` to your Slay the Spire install directory.
@@ -54,7 +54,6 @@ The Wiki is still under construction. Thanks for your patience!
 * Reddit page: https://www.reddit.com/r/slaythespire/comments/939y1w/the_servant_character_mod_version_084_beta/
 
 ## List of known issues ##
-* Vision cards will crash the game if you are not playing as the Servant.
 * [Stone Mask] only triggers once after killing all Darklings (you only get +1 Max HP) because they only die once. I think this is part of the original game logics so I don't think I will be able to fix it.
 * Even though the description of the relic [Splendid Attire] says "Replace Uniform", players may still get this relic after any boss fight without having the [Uniform]. I haven't found a way to solve this issue without modifying the code from the original game (which may cause some compatibility issues).
 
@@ -105,6 +104,13 @@ Contributors of **FruityMod**
 
 ## Current State/Updates ##
 * Looking for an Spriter animator.
+
+0.9.3
+* Support for BaseMod 5.3.1.
+* Fixed: Vision cards will crash the game if you are not playing as the Servant.
+
+0.9.2.3
+* Fixed a bug which prevent [Strike] from being transformed in events.
 
 0.9.2.2
 * Support for BaseMod 3.5.0.

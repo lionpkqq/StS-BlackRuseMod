@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ThrowKnivesAction;
 import blackrusemod.patches.AbstractCardEnum;
@@ -29,7 +28,6 @@ public class KidneyShot extends CustomCard {
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = THROW;
-		this.tags.add(BaseModCardTags.GREMLIN_MATCH);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {

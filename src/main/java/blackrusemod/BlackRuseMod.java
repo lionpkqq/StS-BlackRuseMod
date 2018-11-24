@@ -254,16 +254,14 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		
 		logger.info("add " + TheServantEnum.THE_SERVANT.toString());
 		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-			BaseMod.addCharacter(TheServant.class, "凛光侍从", "Servant class string",
-					AbstractCardEnum.SILVER, "凛光侍从",
+			BaseMod.addCharacter(new TheServant("The Servant", TheServantEnum.THE_SERVANT),
 					makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
 					TheServantEnum.THE_SERVANT);
 		}
 		else {
-			BaseMod.addCharacter(TheServant.class, "The Servant", "Servant class string",
-				AbstractCardEnum.SILVER, "The Servant",
-				makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
-				TheServantEnum.THE_SERVANT);
+			BaseMod.addCharacter(new TheServant("The Servant", TheServantEnum.THE_SERVANT),
+					makePath(SERVANT_BUTTON), makePath(SERVANT_PORTRAIT),
+					TheServantEnum.THE_SERVANT);
 		}
 		logger.info("done editting characters");
 	}
