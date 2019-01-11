@@ -375,22 +375,31 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		logger.info("begin editting strings");
 		
         // RelicStrings
-		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-			String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
-			BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
+		if (Settings.language == GameLanguage.ZHS) {
+	        String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
+		else if (Settings.language == GameLanguage.ZHT) {
+	        String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-zht.json").readString(String.valueOf(StandardCharsets.UTF_8));
+	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
 		else {String relicStrings = Gdx.files.internal("localization/BlackruseMod-RelicStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
 	        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);}
         
         // CardStrings
-        if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+        if (Settings.language == GameLanguage.ZHS) {
         	String cardStrings = Gdx.files.internal("localization/BlackruseMod-CardStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        	BaseMod.loadCustomStrings(CardStrings.class, cardStrings);}
+		else if (Settings.language == GameLanguage.ZHT) {
+        	String cardStrings = Gdx.files.internal("localization/BlackruseMod-CardStrings-zht.json").readString(String.valueOf(StandardCharsets.UTF_8));
         	BaseMod.loadCustomStrings(CardStrings.class, cardStrings);}
         else {String cardStrings = Gdx.files.internal("localization/BlackruseMod-CardStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
         	BaseMod.loadCustomStrings(CardStrings.class, cardStrings);}
         
 		// PowerStrings
-        if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+        if (Settings.language == GameLanguage.ZHS) {
         	String powerStrings = Gdx.files.internal("localization/BlackruseMod-PowerStrings-zhs.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        	BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);}
+        else if (Settings.language == GameLanguage.ZHT) {
+        	String powerStrings = Gdx.files.internal("localization/BlackruseMod-PowerStrings-zht.json").readString(String.valueOf(StandardCharsets.UTF_8));
         	BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);}
         else {String powerStrings = Gdx.files.internal("localization/BlackruseMod-PowerStrings-eng.json").readString(String.valueOf(StandardCharsets.UTF_8));
         	BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);}
@@ -445,16 +454,33 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	@Override
 	public void receiveEditKeywords() {
         logger.info("setting up custom keywords");
-        BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是凛光侍从的专属武器。可以被投掷或转化。");
-        BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y费用为0且具有 #y虚无 和 #y消耗 。");
-        BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
-        BaseMod.addKeyword(new String[] {"变换"}, "变换 效果会在牌被手动丢弃后触发。");
-        BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则在你的下个回合开始时触发效果。");
-        BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
-        BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
-        BaseMod.addKeyword(new String[] {"风华"}, "风华增加你从牌中获得的格挡值和护盾值。");
-        BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b50% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
-        BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
+		
+		//ZHT Translation
+        if (Settings.language == Settings.GameLanguage.ZHT) {
+                BaseMod.addKeyword(new String[] {"飛刀"}, "飛刀是凜光侍從的專屬武器。可以被投擲或轉化");
+                BaseMod.addKeyword(new String[] {"幻時"}, "幻時牌是 #y0 耗能且具有 #y虛無 和 #y消耗");
+                BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻擊時會額外承受傷害。額外傷害不受 #y易傷 影響");
+                BaseMod.addKeyword(new String[] {"變換"}, "變換 效果會在牌被手動丟棄後觸發");
+                BaseMod.addKeyword(new String[] {"視界"}, "預測敵人下回合的意圖。如果預測正確則在你的下個回合開始時觸發效果");
+                BaseMod.addKeyword(new String[] {"反衝"}, "給予自身 #b1 層 #y虛弱 、 #y易傷 和 #y脆弱");
+                BaseMod.addKeyword(new String[] {"護盾"}, "當你損失生命時， 消耗 #y護盾 而不是生命。下回合開始時不會失去護盾");
+                BaseMod.addKeyword(new String[] {"風華"}, "風華增加從牌中獲得的 格擋 和 護盾");
+                BaseMod.addKeyword(new String[] {"矩陣"}, "將所受到的 #y攻擊 傷害降低 #b50% 。每受到 #b1 次攻擊損失 #b1 層矩陣");
+                BaseMod.addKeyword(new String[] {"衛星"}, "使用攻擊牌時，失去1層衛星，額外造成1次4點傷害的攻擊。你每受到1次攻擊，失去1層衛星，對攻擊者造成4點傷害。衛星視為 #y飛刀");
+        }
+        //ZHS Translation
+        if (Settings.language == Settings.GameLanguage.ZHS) {
+                BaseMod.addKeyword(new String[] {"飞刀"}, "飞刀是凛光侍从的专属武器。可以被投掷或转化。");
+                BaseMod.addKeyword(new String[] {"幻时"}, "幻时牌 #y费用为0且具有 #y虚无 和 #y消耗 。");
+                BaseMod.addKeyword(new String[] {"枯萎"}, "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。");
+                BaseMod.addKeyword(new String[] {"变换"}, "变换 效果会在牌被手动丢弃后触发。");
+                BaseMod.addKeyword(new String[] {"视界"}, "预测敌人下回合的意图。如果预测正确则在你的下个回合开始时触发效果。");
+                BaseMod.addKeyword(new String[] {"反冲"}, "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。");
+                BaseMod.addKeyword(new String[] {"护盾"}, "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。");
+                BaseMod.addKeyword(new String[] {"风华"}, "风华增加你从牌中获得的格挡值和护盾值。");
+                BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b50% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
+                BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
+        }
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be thrown or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted enemies will take extra damage when attacked.");

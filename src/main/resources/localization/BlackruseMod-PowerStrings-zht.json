@@ -1,0 +1,114 @@
+﻿{
+  "KnivesPower": {
+    "NAME": "飛刀",
+    "DESCRIPTIONS": ["你持有 #b", " 把 #y飛刀"]
+  },
+  "EnbodimentPower": {
+    "NAME": "具現化",
+    "DESCRIPTIONS": ["你的回合結束時，增加 #b", " 張 #y幻時 牌到抽牌堆"]
+  },
+  "UpgradedEnbodimentPower": {
+    "NAME": "極·具現化",
+    "DESCRIPTIONS": ["你的回合結束時，增加 #b", " 張 已升級 #y幻時 牌到抽牌堆"]
+  },
+  "FlawlessFormPower": {
+    "NAME": "完美形態",
+    "DESCRIPTIONS": ["你不會受到 #y虛弱 、 #y易傷 和 #y脆弱 的影響"]
+  },
+  "FloweringNightPower": {
+    "NAME": "花開之夜",
+    "DESCRIPTIONS": ["本回合每打出1張牌，抽 #b", " 張牌。還可以抽 #b", " 張牌"]
+  },
+  "AmplifyDamagePower": {
+    "NAME": "枯萎",
+    "DESCRIPTIONS": ["受到攻擊時會額外承受 #b", " 點傷害"]
+  },
+  "ProperPracticePower": {
+    "NAME": "適當練習",
+    "DESCRIPTIONS": ["在你的回合開始時，可 升級 #b", " 張手牌"]
+  },
+  "WasteNotPower": {
+    "NAME": "物盡其用",
+    "DESCRIPTIONS": ["在你的回合結束時，消費所有 [B] 。每消費1點 [B] ，下回合多抽 #b", " 張牌"]
+  },
+  "MoonPhasePower": {
+    "NAME": "月相",
+    "DESCRIPTIONS": ["在你的回合結束時，獲得你身上的 虛弱 、 脆弱 和 易傷 總層數 #b", " 倍的 #y格擋"]
+  },
+  "MurderousAuraPower": {
+    "NAME": "殺氣",
+    "DESCRIPTIONS": ["在你的回合開始時，所有敵人獲得 #b", " 層 #y枯萎"]
+  },
+  "DeadlinePower": {
+    "NAME": "死限",
+    "DESCRIPTIONS": ["下回合，如果目標敵人意圖是 #y攻擊 ，給予 #b", " 層 #y枯萎 和 易傷", "下回合，如果目標敵人意圖 #y不是攻擊 ，給予 #b", " 層 #y枯萎 和 易傷"]
+  },
+  "RealityMarblePower": {
+    "NAME": "固有結界",
+    "DESCRIPTIONS": ["在你的回合結束時， #y保留 最多 #b", " 張牌。 保留的牌在本場戰鬥中失去 #y虛無 屬性"]
+  },
+  "SilverBladesPower": {
+    "NAME": "銀刃",
+    "DESCRIPTIONS": ["#y飛刀 造成額外 #b", " 點傷害"]
+  },
+  "StarChefPower": {
+    "NAME": "星級廚師",
+    "DESCRIPTIONS": ["在你的回合開始時，可消耗最多 #b", " 張牌並獲得相同數量的能量"]
+  },
+  "StressRelieverPower": {
+    "NAME": "解愁人",
+    "DESCRIPTIONS": ["在你的回合開始時，檢視抽牌堆頂上 #b", " 張牌，可選擇丟棄其中的任意張"]
+  },
+  "SurpressingFirePower": {
+    "NAME": "火力壓制",
+    "DESCRIPTIONS": ["每通過卡牌使用 #b1 把 #y飛刀 ，獲得 #b", " 點 #y格擋"]
+  },
+  "TheWorldPower": {
+    "NAME": "世界",
+    "DESCRIPTIONS": ["本回合打出的下一張牌不消耗能量"]
+  },
+  "TrueSightPower": {
+    "NAME": "真視",
+    "DESCRIPTIONS": ["#y視界 效果一定會觸發"]
+  },
+  "SatellitePower": {
+    "NAME": "衛星",
+    "DESCRIPTIONS": ["打出攻擊牌時，失去 #b1 層 #y衛星 並額外造成1次 #b", " 點傷害的攻擊。你每受到一次攻擊，失去 #b1 層 #y衛星 並對攻擊者造成 #b4 點傷害"]
+  },
+  "SnipePower": {
+    "NAME": "狙擊",
+    "DESCRIPTIONS": ["下回合，如果目標敵人意圖是 #y攻擊 ， #y投擲 1把 #y飛刀 ，造成 #b", " 點傷害", "下回合，如果目標敵人意圖 #y不是攻擊 ， #y投擲 1把 #y飛刀 ，造成 #b", " 點傷害"]
+  },
+  "TimeTheftPower": {
+    "NAME": "時間盜竊",
+    "DESCRIPTIONS": ["下回合，如果目標敵人意圖是 #y攻擊 ，獲得 #b", " 能量，抽 #b", " 張牌", "下回合，如果目標敵人意圖 #y不是攻擊 ，獲得 #b", " 能量，抽 #b ", " 張牌"]
+  },
+  "ReadPower": {
+    "NAME": "先讀",
+    "DESCRIPTIONS": ["下回合，如果目標敵人意圖是 #y攻擊 ， 獲得 #b", " 點 #y護盾 並給予 #b", " 層 #y虛弱", "下回合，如果目標敵人意圖 #y不是攻擊 ，獲得 #b", " 點 #y護盾 並給予 #b", " 層 #y虛弱"]
+  },
+  "ManipulatePower": {
+    "NAME": "操控",
+    "DESCRIPTIONS": ["增加2張隨機 #y幻時 牌到抽牌堆"]
+  },
+  "ReturningBladePower": {
+    "NAME": "返刃",
+    "DESCRIPTIONS": ["下回合，如果目標敵人意圖是 #y攻擊 ，造成 #b", " 點傷害，將這張牌加入手牌", "下回合，如果目標敵人意圖 #y不是攻擊 ，造成 #b", " 點傷害，將這張牌加入手牌"]
+  },
+  "ProtectionPower": {
+    "NAME": "護盾",
+    "DESCRIPTIONS": ["護盾可以承受 #b", " 點傷害"]
+  },
+  "FalseFlawlessFormPower": {
+    "NAME": "偽·完美形態",
+    "DESCRIPTIONS": ["你不會受到 #y虛弱 、 #y易傷 和 #y脆弱 的影響 #b", " 回合"]
+  },
+  "MatrixPower": {
+    "NAME": "矩陣",
+    "DESCRIPTIONS": ["將下 #b", " 次所受到的 #y攻擊 傷害降低 #b25%"]
+  },
+  "ElegancePower": {
+    "NAME": "風華",
+    "DESCRIPTIONS": ["從牌獲得的 #y格擋 和 #y護盾 增加 #b", ""]
+  }
+}

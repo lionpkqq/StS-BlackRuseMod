@@ -91,11 +91,13 @@ public class TheServant extends CustomPlayer {
 	}
 	
 	public CharSelectInfo getLoadout() {
-		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+		if (Settings.language == GameLanguage.ZHS) {
 			return new CharSelectInfo("凛光侍从", "恶魔们的侍从。擅长杀戮与家务。 NL 随身携带着一千零一把刀刃。",
 				65, 65, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
-		}
-		else {
+		} else if (Settings.language == GameLanguage.ZHT) {
+			return new CharSelectInfo("凜光侍從", "惡魔們的侍從。擅長殺戮與家務。 NL 隨身攜帶著一千零一把刀刃。",
+				65, 65, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
+		} else {
 			return new CharSelectInfo("The Servant", "A servant of demons. Perfected at killing and housekeeping. NL Holds a thousand and one blades.",
 				65, 65, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
 		}
@@ -131,7 +133,15 @@ public class TheServant extends CustomPlayer {
 	}
 
 	public String getLocalizedCharacterName() {
-		return "The Servant";
+		String char_name;
+		if (Settings.language == GameLanguage.ZHS) {
+			char_name = "女仆";
+		} else if (Settings.language == GameLanguage.ZHT) {
+			char_name = "女僕";
+		} else {
+			char_name = "The Servant";
+		}
+		return char_name;
 	}
 
 	public Color getSlashAttackColor() {
@@ -159,10 +169,11 @@ public class TheServant extends CustomPlayer {
 
 	public String getTitle(PlayerClass arg0) {
 		String title;
-		if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+		if (Settings.language == GameLanguage.ZHS) {
 			title = "凛光侍从";
-		}
-		else {
+		} else if (Settings.language == GameLanguage.ZHT) {
+			title = "凜光侍從";
+		} else {
 			title = "The Servant";
 		}
 		return title;
