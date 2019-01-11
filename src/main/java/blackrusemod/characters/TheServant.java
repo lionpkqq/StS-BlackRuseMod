@@ -92,10 +92,10 @@ public class TheServant extends CustomPlayer {
 	
 	public CharSelectInfo getLoadout() {
 		if (Settings.language == GameLanguage.ZHS) {
-			return new CharSelectInfo("Áİ¹âÊÌ´Ó", "¶ñÄ§ÃÇµÄÊÌ´Ó¡£ÉÃ³¤É±Â¾Óë¼ÒÎñ¡£ NL ËæÉíĞ¯´ø×ÅÒ»Ç§ÁãÒ»°Ñµ¶ÈĞ¡£",
+			return new CharSelectInfo("å‡›å…‰ä¾ä»", "æ¶é­”ä»¬çš„ä¾ä»ã€‚æ“…é•¿æ€æˆ®ä¸å®¶åŠ¡ã€‚ NL éšèº«æºå¸¦ç€ä¸€åƒé›¶ä¸€æŠŠåˆ€åˆƒã€‚",
 				65, 65, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
 		} else if (Settings.language == GameLanguage.ZHT) {
-			return new CharSelectInfo("„C¹âÊÌÄ", "ºÄ§‚ƒµÄÊÌÄ¡£ÉÃéLš¢Â¾Åc¼Ò„Õ¡£ NL ëSÉí”y§ÖøÒ»Ç§ÁãÒ»°Ñµ¶ÈĞ¡£",
+			return new CharSelectInfo("å‡œå…‰ä¾å¾", "æƒ¡é­”å€‘çš„ä¾å¾ã€‚æ“…é•·æ®ºæˆ®èˆ‡å®¶å‹™ã€‚ NL éš¨èº«æ”œå¸¶è‘—ä¸€åƒé›¶ä¸€æŠŠåˆ€åˆƒã€‚",
 				65, 65, 0, 99, 5, this, getStartingRelics(), getStartingDeck(), false);
 		} else {
 			return new CharSelectInfo("The Servant", "A servant of demons. Perfected at killing and housekeeping. NL Holds a thousand and one blades.",
@@ -135,9 +135,9 @@ public class TheServant extends CustomPlayer {
 	public String getLocalizedCharacterName() {
 		String char_name;
 		if (Settings.language == GameLanguage.ZHS) {
-			char_name = "Å®ÆÍ";
+			char_name = "å‡›å…‰ä¾ä»";
 		} else if (Settings.language == GameLanguage.ZHT) {
-			char_name = "Å®ƒW";
+			char_name = "å‡œå…‰ä¾å¾";
 		} else {
 			char_name = "The Servant";
 		}
@@ -170,9 +170,9 @@ public class TheServant extends CustomPlayer {
 	public String getTitle(PlayerClass arg0) {
 		String title;
 		if (Settings.language == GameLanguage.ZHS) {
-			title = "Áİ¹âÊÌ´Ó";
+			title = "å‡›å…‰ä¾ä»";
 		} else if (Settings.language == GameLanguage.ZHT) {
-			title = "„C¹âÊÌÄ";
+			title = "å‡œå…‰ä¾å¾";
 		} else {
 			title = "The Servant";
 		}
