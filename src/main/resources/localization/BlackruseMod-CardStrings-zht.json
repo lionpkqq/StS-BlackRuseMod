@@ -88,7 +88,7 @@
 	},
 	"Ricochet": {
 		"NAME": "跳彈",
-		"DESCRIPTION": "投擲1把 飛刀 。每把造成 !D! 點傷害並在敵人之間跳彈 !M! 次"
+		"DESCRIPTION": "投擲1把 飛刀 。 NL 造成 !D! 點傷害並在敵人之間跳彈 !M! 次"
 	},
 	"FlawlessForm": {
 		"NAME": "完美形態",
@@ -97,7 +97,7 @@
 	},
 	"FloweringNight": {
 		"NAME": "花開之夜",
-		"DESCRIPTION": "每打出1張牌，抽1張牌。 NL 一回合最多通過本能力抽 !M! 張牌"
+		"DESCRIPTION": "每打出1張牌，抽1張牌。 NL 一回合最多通過此能力抽 !M! 張牌"
 	},
 	"Initiator": {
 		"NAME": "起手式",
@@ -263,7 +263,7 @@
 	},
 	"Snipe": {
 		"NAME": "狙擊",
-		"DESCRIPTION": "視界 ：投擲1把 飛刀 。每把造成 !D! 點傷害並給予 !M! 層 易傷"
+		"DESCRIPTION": "視界 ：投擲1把 飛刀 。 NL 造成 !D! 點傷害並給予 !M! 層 易傷"
 	},
 	"Solidify": {
 		"NAME": "凝固",
@@ -293,11 +293,11 @@
 	},
 	"Foresight": {
 		"NAME": "先見之明",
-		"DESCRIPTION": "你的回合開始時，檢視牌堆頂部的 !M! 張牌，可選擇丟棄其中的任意張"
+		"DESCRIPTION": "你的回合開始時，檢視抽牌堆頂部的 !M! 張牌，可選擇丟棄其中的任意張"
 	},
 	"Sunlight": {
 		"NAME": "日光",
-		"DESCRIPTION": "投擲1把 飛刀 。對所有敵人造成 !D! 點傷害並給予 !M! 層 枯萎"
+		"DESCRIPTION": "投擲1把 飛刀 。 NL 對所有敵人造成 !D! 點傷害並給予 !M! 層 枯萎"
 	},
 	"SurpressingFire": {
 		"NAME": "火力壓制",
