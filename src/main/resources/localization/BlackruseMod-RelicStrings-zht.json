@@ -12,7 +12,7 @@
   "KneeBrace": {
     "NAME": "護膝",
     "FLAVOR": "能有效預防滑囊炎。",
-    "DESCRIPTIONS": ["每觸發 #y轉變 效果，獲得 #b3 點 #y格擋"]
+    "DESCRIPTIONS": ["觸發 #y變換 效果時，獲得 #b3 點 #y格擋"]
   },
   "PocketWatch": {
     "NAME": "懷錶",
