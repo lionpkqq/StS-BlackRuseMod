@@ -27,7 +27,7 @@ public class PendulumOfEternity extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 5;
-	private static final int COST_UPGRADED = 4;
+	private static final int COST_REDUCTION_WHEN_UPGRADED = 1;
 	private static final int DEBUFFS = 3;
 	private static final int ATTACK_DMG = 33;
 	
@@ -77,7 +77,10 @@ public class PendulumOfEternity extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UPGRADED);
+			int newCost = this.cost;
+			newCost -= COST_REDUCTION_WHEN_UPGRADED;
+			if (newCost < 0) newCost = 0;
+			upgradeBaseCost(newCost);		
 		}
 	}
 }
