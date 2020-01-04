@@ -11,29 +11,29 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.EnbodimentPower;
-import blackrusemod.powers.UpgradedEnbodimentPower;
+import blackrusemod.powers.EmbodimentPower;
+import blackrusemod.powers.UpgradedEmbodimentPower;
 
-public class Enbodiment extends CustomCard {
-	public static final String ID = "Enbodiment";
+public class Embodiment extends CustomCard {
+	public static final String ID = "Embodiment";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 2;
 
-	public Enbodiment() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.ENBODIMENT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
+	public Embodiment() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.EMBODIMENT), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (!this.upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnbodimentPower(p, 1), 1));
-		else AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UpgradedEnbodimentPower(p, 1), 1));
+		if (!this.upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EmbodimentPower(p, 1), 1));
+		else AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UpgradedEmbodimentPower(p, 1), 1));
 	}
 
 	public AbstractCard makeCopy() {
-		return new Enbodiment();
+		return new Embodiment();
 	}
 
 	public void upgrade() {

@@ -64,8 +64,8 @@
 		"NAME": "Duplication",
 		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
 	},
-	"Enbodiment": {
-		"NAME": "Enbodiment",
+	"Embodiment": {
+		"NAME": "Embodiment",
 		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
 		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
 	},

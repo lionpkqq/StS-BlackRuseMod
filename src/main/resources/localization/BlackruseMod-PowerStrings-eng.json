@@ -3,12 +3,12 @@
     "NAME": "Knives",
     "DESCRIPTIONS": ["You are currently holding #b", " #yKnives."]
   },
-  "EnbodimentPower": {
-    "NAME": "Enbodiment",
+  "EmbodimentPower": {
+    "NAME": "Embodiment",
     "DESCRIPTIONS": ["At the end of your turn, add #b", " #yTemporal card(s) to your draw pile."]
   },
-  "UpgradedEnbodimentPower": {
-    "NAME": "Upgraded Enbodiment",
+  "UpgradedEmbodimentPower": {
+    "NAME": "Upgraded Embodiment",
     "DESCRIPTIONS": ["At the end of your turn, add #b", " #yUpgraded #yTemporal card(s) to your draw pile."]
   },
   "FlawlessFormPower": {
