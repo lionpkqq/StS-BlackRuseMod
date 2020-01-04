@@ -101,6 +101,10 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 /*     */ 
 /* 103 */     sb.setBlendFunction(770, 771);
 /*     */   }
+
+            public void dispose()
+            {
+            }
 /*     */ }
 
 
