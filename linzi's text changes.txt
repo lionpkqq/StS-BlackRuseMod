@@ -1,0 +1,7 @@
+Enbodiment -> Embodiment
+Defy - 'Weak, Vulnerable AND Frail' -> 'Weak, Vulnerable OR Frail' 
+Flawless Form - 'Weak, Vulnerable AND Frail' -> 'Weak, Vulnerable OR Frail' 
+Potential - 'This card's damage increases by 5 and put it into your hand' - 'Increase this card's damage by 5 this combat and put this card into your hand'
+Revamp - 'Return !M! card from your discard pile to your hand' -> PUT !M! card from your discard pile into your hand'
+Starlight - 'Draw 1 Card' -> 'draws 1 card'
+Rewind - 'discard pile in your hand' -> 'into your hand'

@@ -13,7 +13,7 @@
   },
   "FlawlessFormPower": {
     "NAME": "Flawless Form",
-    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail."]
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable or #yFrail."]
   },
   "FloweringNightPower": {
     "NAME": "Flowering Night",
@@ -29,7 +29,7 @@
   },
   "WasteNotPower": {
     "NAME": "Waste Not",
-    "DESCRIPTIONS": ["At the end of your turn, spend all [B] . Draw #b", " more card next turn for each [B] you spend."]
+    "DESCRIPTIONS": ["At the end of your turn, spend all [B] . Draw #b", " more card next turn for each [B] spent."]
   },
   "MoonPhasePower": {
     "NAME": "Moon Phase",
@@ -37,7 +37,7 @@
   },
   "MurderousAuraPower": {
     "NAME": "Murderous Aura",
-    "DESCRIPTIONS": ["At the start of your turn£¬ apply #b", " #yBlight to ALL enemies."]
+    "DESCRIPTIONS": ["At the start of your turnï¿½ï¿½ apply #b", " #yBlight to ALL enemies."]
   },
   "DeadlinePower": {
     "NAME": "Deadline",
@@ -101,7 +101,7 @@
   },
   "FalseFlawlessFormPower": {
     "NAME": "False Flawless Form",
-    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable and #yFrail for #b", " turn."]
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable or #yFrail for #b", " turn."]
   },
   "MatrixPower": {
     "NAME": "Matrix",
