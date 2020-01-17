@@ -457,29 +457,29 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		
 		//ZHT Translation
         if (Settings.language == Settings.GameLanguage.ZHT) {
-                BaseMod.addKeyword(new String[] {"ïwµ¶"}, "ïwµ¶ÊÇ„C¹âÊÌÄµÄŒ£ŒÙÎäÆ÷¡£¿ÉÒÔ±»Í¶”S»òŞD»¯");
-                BaseMod.addKeyword(new String[] {"»Ã•r"}, "»Ã•rÅÆÊÇ #y0 ºÄÄÜÇÒ¾ßÓĞ #yÌ“Ÿo ºÍ #yÏûºÄ");
-                BaseMod.addKeyword(new String[] {"¿İÎ®"}, "ÊÜµ½¹¥“ô•r•şî~Íâ³ĞÊÜ‚ûº¦¡£î~Íâ‚ûº¦²»ÊÜ #yÒ×‚û Ó°í‘");
-                BaseMod.addKeyword(new String[] {"×ƒ“Q"}, "×ƒ“Q Ğ§¹û•şÔÚÅÆ±»ÊÖ„ÓG—‰ááÓ|°l");
-                BaseMod.addKeyword(new String[] {"Ò•½ç"}, "îAœy”³ÈËÏÂ»ØºÏµÄÒâˆD¡£Èç¹ûîAœyÕı´_„tÔÚÄãµÄÏÂ‚€»ØºÏé_Ê¼•rÓ|°lĞ§¹û");
-                BaseMod.addKeyword(new String[] {"·´Ğn"}, "½oÓè×ÔÉí #b1 ŒÓ #yÌ“Èõ ¡¢ #yÒ×‚û ºÍ #y´àÈõ");
-                BaseMod.addKeyword(new String[] {"×o¶Ü"}, "®”Äã“pÊ§ÉúÃü•r£¬ ÏûºÄ #y×o¶Ü ¶ø²»ÊÇÉúÃü¡£ÏÂ»ØºÏé_Ê¼•r²»•şÊ§È¥×o¶Ü");
-                BaseMod.addKeyword(new String[] {"ïLÈA"}, "ïLÈAÔö¼ÓÄÅÆÖĞ«@µÃµÄ ¸ñ“õ ºÍ ×o¶Ü");
-                BaseMod.addKeyword(new String[] {"¾Øê‡"}, "Œ¢ËùÊÜµ½µÄ #y¹¥“ô ‚ûº¦½µµÍ #b50% ¡£Ã¿ÊÜµ½ #b1 ´Î¹¥“ô“pÊ§ #b1 ŒÓ¾Øê‡");
-                BaseMod.addKeyword(new String[] {"ĞlĞÇ"}, "Ê¹ÓÃ¹¥“ôÅÆ•r£¬Ê§È¥1ŒÓĞlĞÇ£¬î~ÍâÔì³É1´Î4üc‚ûº¦µÄ¹¥“ô¡£ÄãÃ¿ÊÜµ½1´Î¹¥“ô£¬Ê§È¥1ŒÓĞlĞÇ£¬Œ¦¹¥“ôÕßÔì³É4üc‚ûº¦¡£ĞlĞÇÒ•é #yïwµ¶");
+                BaseMod.addKeyword(new String[] {"é£›åˆ€"}, "é£›åˆ€æ˜¯å‡œå…‰ä¾å¾çš„å°ˆå±¬æ­¦å™¨ã€‚å¯ä»¥è¢«æŠ•æ“²æˆ–è½‰åŒ–");
+                BaseMod.addKeyword(new String[] {"å¹»æ™‚"}, "å¹»æ™‚ç‰Œæ˜¯ #y0 è€—èƒ½ä¸”å…·æœ‰ #yè™›ç„¡ å’Œ #yæ¶ˆè€—");
+                BaseMod.addKeyword(new String[] {"æ¯è"}, "å—åˆ°æ”»æ“Šæ™‚æœƒé¡å¤–æ‰¿å—å‚·å®³ã€‚é¡å¤–å‚·å®³ä¸å— #yæ˜“å‚· å½±éŸ¿");
+                BaseMod.addKeyword(new String[] {"è®Šæ›"}, "è®Šæ› æ•ˆæœæœƒåœ¨ç‰Œè¢«æ‰‹å‹•ä¸Ÿæ£„å¾Œè§¸ç™¼");
+                BaseMod.addKeyword(new String[] {"è¦–ç•Œ"}, "é æ¸¬æ•µäººä¸‹å›åˆçš„æ„åœ–ã€‚å¦‚æœé æ¸¬æ­£ç¢ºå‰‡åœ¨ä½ çš„ä¸‹å€‹å›åˆé–‹å§‹æ™‚è§¸ç™¼æ•ˆæœ");
+                BaseMod.addKeyword(new String[] {"åè¡"}, "çµ¦äºˆè‡ªèº« #b1 å±¤ #yè™›å¼± ã€ #yæ˜“å‚· å’Œ #yè„†å¼±");
+                BaseMod.addKeyword(new String[] {"è­·ç›¾"}, "ç•¶ä½ æå¤±ç”Ÿå‘½æ™‚ï¼Œ æ¶ˆè€— #yè­·ç›¾ è€Œä¸æ˜¯ç”Ÿå‘½ã€‚ä¸‹å›åˆé–‹å§‹æ™‚ä¸æœƒå¤±å»è­·ç›¾");
+                BaseMod.addKeyword(new String[] {"é¢¨è¯"}, "é¢¨è¯å¢åŠ å¾ç‰Œä¸­ç²å¾—çš„ æ ¼æ“‹ å’Œ è­·ç›¾");
+                BaseMod.addKeyword(new String[] {"çŸ©é™£"}, "å°‡æ‰€å—åˆ°çš„ #yæ”»æ“Š å‚·å®³é™ä½ #b50% ã€‚æ¯å—åˆ° #b1 æ¬¡æ”»æ“Šæå¤± #b1 å±¤çŸ©é™£");
+                BaseMod.addKeyword(new String[] {"è¡›æ˜Ÿ"}, "ä½¿ç”¨æ”»æ“Šç‰Œæ™‚ï¼Œå¤±å»1å±¤è¡›æ˜Ÿï¼Œé¡å¤–é€ æˆ1æ¬¡4é»å‚·å®³çš„æ”»æ“Šã€‚ä½ æ¯å—åˆ°1æ¬¡æ”»æ“Šï¼Œå¤±å»1å±¤è¡›æ˜Ÿï¼Œå°æ”»æ“Šè€…é€ æˆ4é»å‚·å®³ã€‚è¡›æ˜Ÿè¦–ç‚º #yé£›åˆ€");
         }
         //ZHS Translation
         if (Settings.language == Settings.GameLanguage.ZHS) {
-                BaseMod.addKeyword(new String[] {"·Éµ¶"}, "·Éµ¶ÊÇÁİ¹âÊÌ´ÓµÄ×¨ÊôÎäÆ÷¡£¿ÉÒÔ±»Í¶ÖÀ»ò×ª»¯¡£");
-                BaseMod.addKeyword(new String[] {"»ÃÊ±"}, "»ÃÊ±ÅÆ #y·ÑÓÃÎª0ÇÒ¾ßÓĞ #yĞéÎŞ ºÍ #yÏûºÄ ¡£");
-                BaseMod.addKeyword(new String[] {"¿İÎ®"}, "ÊÜµ½¹¥»÷Ê±»á¶îÍâ³ĞÊÜÉËº¦¡£¶îÍâÉËº¦²»ÊÜ #yÒ×ÉË Ó°Ïì¡£");
-                BaseMod.addKeyword(new String[] {"±ä»»"}, "±ä»» Ğ§¹û»áÔÚÅÆ±»ÊÖ¶¯¶ªÆúºó´¥·¢¡£");
-                BaseMod.addKeyword(new String[] {"ÊÓ½ç"}, "Ô¤²âµĞÈËÏÂ»ØºÏµÄÒâÍ¼¡£Èç¹ûÔ¤²âÕıÈ·ÔòÔÚÄãµÄÏÂ¸ö»ØºÏ¿ªÊ¼Ê±´¥·¢Ğ§¹û¡£");
-                BaseMod.addKeyword(new String[] {"·´³å"}, "¶ÔÄã¸½¼Ó #b1 ²ã #yĞéÈõ ¡¢ #yÒ×ÉË ºÍ #y´àÈõ ¡£");
-                BaseMod.addKeyword(new String[] {"»¤¶Ü"}, "µ±ÄãËğÊ§ÉúÃüÊ±£¬ÏûºÄ #y»¤¶Ü ¶ø²»ÊÇÄãµÄÉúÃü¡£»¤¶ÜÄãµÄÏÂÒ»»ØºÏ¿ªÊ¼Ê±²»»áÏûÊ§¡£");
-                BaseMod.addKeyword(new String[] {"·ç»ª"}, "·ç»ªÔö¼ÓÄã´ÓÅÆÖĞ»ñµÃµÄ¸ñµ²ÖµºÍ»¤¶ÜÖµ¡£");
-                BaseMod.addKeyword(new String[] {"¾ØÕó"}, "½«ËùÊÜµ½µÄ #y¹¥»÷ ÉËº¦½µµÍ #b50% ¡£Ã¿ÊÜµ½ #b1 ´Î¹¥»÷ËğÊ§ #b1 ²ã¾ØÕó¡£");
-                BaseMod.addKeyword(new String[] {"ÎÀĞÇ"}, "Ê¹ÓÃ¹¥»÷ÅÆÊ±£¬Ê§È¥1²ãÎÀĞÇ£¬¶îÍâ¹¥»÷Ò»´Î£¬Ôì³É4µãÉËº¦¡£ÄãÃ¿ÊÜµ½Ò»´Î¹¥»÷£¬Ê§È¥1²ãÎÀĞÇ£¬¶Ô¹¥»÷ÕßÔì³É4µãÉËº¦¡£ÎÀĞÇÊÓÎª #y·Éµ¶ ¡£");
+                BaseMod.addKeyword(new String[] {"é£åˆ€"}, "é£åˆ€æ˜¯å‡›å…‰ä¾ä»çš„ä¸“å±æ­¦å™¨ã€‚å¯ä»¥è¢«æŠ•æ·æˆ–è½¬åŒ–ã€‚");
+                BaseMod.addKeyword(new String[] {"å¹»æ—¶"}, "å¹»æ—¶ç‰Œ #yè´¹ç”¨ä¸º0ä¸”å…·æœ‰ #yè™šæ—  å’Œ #yæ¶ˆè€— ã€‚");
+                BaseMod.addKeyword(new String[] {"æ¯è"}, "å—åˆ°æ”»å‡»æ—¶ä¼šé¢å¤–æ‰¿å—ä¼¤å®³ã€‚é¢å¤–ä¼¤å®³ä¸å— #yæ˜“ä¼¤ å½±å“ã€‚");
+                BaseMod.addKeyword(new String[] {"å˜æ¢"}, "å˜æ¢ æ•ˆæœä¼šåœ¨ç‰Œè¢«æ‰‹åŠ¨ä¸¢å¼ƒåè§¦å‘ã€‚");
+                BaseMod.addKeyword(new String[] {"è§†ç•Œ"}, "é¢„æµ‹æ•Œäººä¸‹å›åˆçš„æ„å›¾ã€‚å¦‚æœé¢„æµ‹æ­£ç¡®åˆ™åœ¨ä½ çš„ä¸‹ä¸ªå›åˆå¼€å§‹æ—¶è§¦å‘æ•ˆæœã€‚");
+                BaseMod.addKeyword(new String[] {"åå†²"}, "å¯¹ä½ é™„åŠ  #b1 å±‚ #yè™šå¼± ã€ #yæ˜“ä¼¤ å’Œ #yè„†å¼± ã€‚");
+                BaseMod.addKeyword(new String[] {"æŠ¤ç›¾"}, "å½“ä½ æŸå¤±ç”Ÿå‘½æ—¶ï¼Œæ¶ˆè€— #yæŠ¤ç›¾ è€Œä¸æ˜¯ä½ çš„ç”Ÿå‘½ã€‚æŠ¤ç›¾ä½ çš„ä¸‹ä¸€å›åˆå¼€å§‹æ—¶ä¸ä¼šæ¶ˆå¤±ã€‚");
+                BaseMod.addKeyword(new String[] {"é£å"}, "é£åå¢åŠ ä½ ä»ç‰Œä¸­è·å¾—çš„æ ¼æŒ¡å€¼å’ŒæŠ¤ç›¾å€¼ã€‚");
+                BaseMod.addKeyword(new String[] {"çŸ©é˜µ"}, "å°†æ‰€å—åˆ°çš„ #yæ”»å‡» ä¼¤å®³é™ä½ #b50% ã€‚æ¯å—åˆ° #b1 æ¬¡æ”»å‡»æŸå¤± #b1 å±‚çŸ©é˜µã€‚");
+                BaseMod.addKeyword(new String[] {"å«æ˜Ÿ"}, "ä½¿ç”¨æ”»å‡»ç‰Œæ—¶ï¼Œå¤±å»1å±‚å«æ˜Ÿï¼Œé¢å¤–æ”»å‡»ä¸€æ¬¡ï¼Œé€ æˆ4ç‚¹ä¼¤å®³ã€‚ä½ æ¯å—åˆ°ä¸€æ¬¡æ”»å‡»ï¼Œå¤±å»1å±‚å«æ˜Ÿï¼Œå¯¹æ”»å‡»è€…é€ æˆ4ç‚¹ä¼¤å®³ã€‚å«æ˜Ÿè§†ä¸º #yé£åˆ€ ã€‚");
         }
         BaseMod.addKeyword(new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be thrown or converted.");
         BaseMod.addKeyword(new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");

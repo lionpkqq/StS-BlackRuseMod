@@ -38,7 +38,7 @@ public class SolidifyAction extends AbstractGameAction {
 	{
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				BlackRuseMod.vs.open(this.list, null, "选择一张幻时卡");
+				BlackRuseMod.vs.open(this.list, null, "閫夋嫨涓�寮犲够鏃跺崱");
 			else BlackRuseMod.vs.open(this.list, null, "Choose a Temporal card");
 			tickDuration();
 			return;
