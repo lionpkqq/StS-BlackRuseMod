@@ -133,6 +133,10 @@
 
 /* 138 */     sb.setBlendFunction(770, 771);
 /*     */   }
+/*     */
+/* 141 */   public void dispose() {
+/* 142 */       // Stub required in 2.0 - if this is needed, put stuff here.
+/*     */   }
 /*     */ }
 
 
