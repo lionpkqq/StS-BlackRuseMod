@@ -41,8 +41,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 				if (this.debuff != null && (this.debuff == "Draw" || this.debuff == "Golden")) 
 					this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
-					this.target.damageFlash = true;
-					this.target.damageFlashFrames = 4;
+					// this.target.damageFlash = true;
+					// this.target.damageFlashFrames = 4;
 					if (this.debuff == null || this.debuff != "Golden") 
 						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
 								AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
