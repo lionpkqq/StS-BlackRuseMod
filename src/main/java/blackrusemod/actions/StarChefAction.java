@@ -30,7 +30,7 @@ public class StarChefAction extends AbstractGameAction {
 
 			numExhausted = this.amount;
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-				AbstractDungeon.handCardSelectScreen.open("åƒæ‰", this.amount, true, true);
+				AbstractDungeon.handCardSelectScreen.open("³Ôµô", this.amount, true, true);
 			}
 			else {
 				AbstractDungeon.handCardSelectScreen.open("eat", this.amount, true, true);

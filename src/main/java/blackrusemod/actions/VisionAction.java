@@ -48,7 +48,7 @@ public class VisionAction extends AbstractGameAction {
 	{
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				BlackRuseMod.vs.open(this.list, null, "æ•Œäººçš„æ„å›¾æ˜¯ï¼Ÿ");
+				BlackRuseMod.vs.open(this.list, null, "µĞÈËµÄÒâÍ¼ÊÇ£¿");
 			else BlackRuseMod.vs.open(this.list, null, "The enemy's intent will be?");
 			tickDuration();
 			return;
