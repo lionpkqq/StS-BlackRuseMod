@@ -34,7 +34,7 @@ public class DuplicationAction extends AbstractGameAction {
 
 			numExhausted = this.amount;
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				AbstractDungeon.handCardSelectScreen.open("∏¥÷∆", this.amount, true, true);
+				AbstractDungeon.handCardSelectScreen.open("Â§çÂà∂", this.amount, true, true);
 			else
 				AbstractDungeon.handCardSelectScreen.open("duplicate", this.amount, true, true);
 			tickDuration();
@@ -47,7 +47,7 @@ public class DuplicationAction extends AbstractGameAction {
 				AbstractCard d = c.makeStatEquivalentCopy();
 				if (d instanceof Duplication) {
 					if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-						AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "¥•∑¢¡À ±º‰„£¬€°≠°≠", 1.0F, 2.0F));
+						AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "Ëß¶Âèë‰∫ÜÊó∂Èó¥ÊÇñËÆ∫‚Ä¶‚Ä¶", 1.0F, 2.0F));
 					}
 					else {
 					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "The time paradox is triggered...", 1.0F, 2.0F));
