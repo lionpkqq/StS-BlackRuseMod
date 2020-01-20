@@ -90,7 +90,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String DOUBLE_EDGE = "cards/double_edge.png";
     public static final String DUAL_DIMENSION = "cards/dual_dimension.png";
     public static final String DUPLICATION = "cards/duplication.png";
-    public static final String ENBODIMENT = "cards/enbodiment.png";
+    public static final String EMBODIMENT = "cards/embodiment.png";
     public static final String DEFY = "cards/defy.png";
     public static final String FAN_OF_KNIVES = "cards/fan_of_knives.png";
     public static final String GEAR_UP = "cards/gear_up.png";
@@ -305,7 +305,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new DoubleEdge());
 		BaseMod.addCard(new DualDimension());
 		BaseMod.addCard(new Duplication());
-		BaseMod.addCard(new Enbodiment());
+		BaseMod.addCard(new Embodiment());
 		BaseMod.addCard(new Defy());
 		BaseMod.addCard(new FanOfKnives());		
 		BaseMod.addCard(new GearUp());
@@ -411,11 +411,11 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	public void receiveSetUnlocks() {
 		// servant unlock 1
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"Manipulate", "Moondial", "Enbodiment"
+				"Manipulate", "Moondial", "Embodiment"
 				), TheServantEnum.THE_SERVANT, 0);
 		UnlockTracker.addCard("Manipulate");
 		UnlockTracker.addCard("Moondial");
-		UnlockTracker.addCard("Enbodiment");
+		UnlockTracker.addCard("Embodiment");
 		
 		// servant unlock 2
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(

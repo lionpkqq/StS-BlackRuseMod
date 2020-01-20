@@ -29,8 +29,8 @@ public class ManipulatePower extends AbstractPower {
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region48 = powerAltas.findRegion("enbodiment48");
-		this.region128 = powerAltas.findRegion("enbodiment128");
+		this.region48 = powerAltas.findRegion("embodiment48");
+		this.region128 = powerAltas.findRegion("embodiment128");
 	}
 
 	public void onInitialApplication() {

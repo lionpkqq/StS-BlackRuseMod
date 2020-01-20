@@ -562,7 +562,7 @@ Bug fixes:
 * Minor balance updates.
 * Added new cards: [Manipulate], [Solidify], [Entangle] and [Alleviate].
 * Reworked [Flawless Form].
-* Reworked all the [Temporal] cards. Now they can only be acquired by using [Enbodiment], [Manipulate] and [Solidify].
+* Reworked all the [Temporal] cards. Now they can only be acquired by using [Embodiment], [Manipulate] and [Solidify].
 
 0.5.1
 * Fixed: If the player uses [Trash To Treasure+] when they have a full hand, the game would break.

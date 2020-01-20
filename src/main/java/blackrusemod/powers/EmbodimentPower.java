@@ -15,21 +15,21 @@ import blackrusemod.cards.TemporalEssence;
 import blackrusemod.cards.TemporalMisd;
 import blackrusemod.cards.TemporalSlicing;
 
-public class UpgradedEnbodimentPower extends AbstractPower {
-	public static final String POWER_ID = "UpgradedEnbodimentPower";
+public class EmbodimentPower extends AbstractPower {
+	public static final String POWER_ID = "EmbodimentPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 
-	public UpgradedEnbodimentPower(AbstractCreature owner, int amount) {
+	public EmbodimentPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region48 = powerAltas.findRegion("upgraded_enbodiment48");
-		this.region128 = powerAltas.findRegion("upgraded_enbodiment128");
+		this.region48 = powerAltas.findRegion("embodiment48");
+		this.region128 = powerAltas.findRegion("embodiment128");
 	}
 	
 	public void stackPower(int stackAmount)
@@ -54,7 +54,6 @@ public class UpgradedEnbodimentPower extends AbstractPower {
 			else if (randomNum == 7) c = new TemporalMisd().makeCopy();
 			else if (randomNum == 8) c = new TemporalDefense().makeCopy();
 			else c = new TemporalEssence().makeCopy();
-			c.upgrade();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}
 	}
