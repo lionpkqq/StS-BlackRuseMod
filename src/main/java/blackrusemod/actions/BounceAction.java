@@ -39,8 +39,8 @@ public class BounceAction extends AbstractGameAction {
 		
 		// Animation
 		if ((this.target != null) && (this.target.hb != null)) {
-			this.target.damageFlash = true;
-			this.target.damageFlashFrames = 4;
+			// this.target.damageFlash = true;
+			// this.target.damageFlashFrames = 4;
 			AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
 					AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 		}

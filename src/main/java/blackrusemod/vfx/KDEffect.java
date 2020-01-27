@@ -101,7 +101,11 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 /*     */ 
 /* 103 */     sb.setBlendFunction(770, 771);
 /*     */   }
-/*     */ }
+/*     */
+/* 106 */   public void dispose() {
+/* 107 */       // Stub required in 2.0 - if this is needed, put stuff here.
+/*     */   }
+/*     */}
 
 
 /* Location:              C:\Users\MoQian\Downloads\jd-gui-windows-1.4.0\jd-gui-windows-1.4.0\desktop-1.0.jar!\com\megacrit\cardcrawl\vfx\combat\ThrowShivEffect.class

@@ -159,6 +159,10 @@
 /* 158 */       MathUtils.random(20.0F, 28.0F));
 /* 159 */     sb.setBlendFunction(770, 771);
 /*     */   }
+/*     */
+/* 162 */   public void dispose() {
+/* 163 */       // Stub required in 2.0 - if this is needed, put stuff here.
+/*     */   }
 /*     */ }
 
 

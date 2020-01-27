@@ -64,7 +64,7 @@
 		"NAME": "分身",
 		"DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。"
 	},
-	"Enbodiment": {
+	"Embodiment": {
 		"NAME": "幻时具现",
 		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 牌加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张升级过的 幻时 牌加入抽牌堆。"

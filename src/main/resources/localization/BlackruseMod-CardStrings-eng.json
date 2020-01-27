@@ -21,7 +21,7 @@
 	},
 	"Alleviate": {
 		"NAME": "Alleviate",
-		"DESCRIPTION": "Discard up to 3 cards. NL Gain !B! Block for each card you discard."
+		"DESCRIPTION": "Discard up to 3 cards. NL Gain !B! Block for each discarded card."
 	},
 	"Barrier": {
 		"NAME": "Barrier",
@@ -64,15 +64,15 @@
 		"NAME": "Duplication",
 		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
 	},
-	"Enbodiment": {
-		"NAME": "Enbodiment",
+	"Embodiment": {
+		"NAME": "Embodiment",
 		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
 		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
 	},
 	"Defy": {
 		"NAME": "Defy",
-		"DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn.",
-		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable and Frail for 1 turn. NL Retain."
+		"DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable or Frail for 1 turn.",
+		"UPGRADE_DESCRIPTION": "Gain !B! Block. NL You are not affected by Weak, Vulnerable or Frail for 1 turn. NL Retain."
 	},
 	"FanOfKnives": {
 		"NAME": "Fan of Knives",
@@ -84,7 +84,7 @@
 	},
 	"FastForward": {
 		"NAME": "Fast Forward",
-		"DESCRIPTION": "Gain !B! Block. NL If there is no Attack in your hand, draw !M! cards."
+		"DESCRIPTION": "Gain !B! Block. NL If there are no Attack cards in your hand, draw !M! cards."
 	},
 	"Ricochet": {
 		"NAME": "Ricochet",
@@ -92,12 +92,12 @@
 	},
 	"FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable and Frail. NL Retain."
+		"DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable or Frail.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable or Frail. NL Retain."
 	},
 	"FloweringNight": {
 		"NAME": "Flowering Night",
-		"DESCRIPTION": "Whenever you play a card, draw a card. NL You may only draw !M! cards each turn by this power."
+		"DESCRIPTION": "Whenever you play a card, draw a card. NL You may only draw NL !M! cards each turn NL this way."
 	},
 	"Initiator": {
 		"NAME": "Initiator",
@@ -151,11 +151,11 @@
 	},
 	"KidneyShot": {
 		"NAME": "Kidney Shot",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Weak."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and applies 1 Weak."
 	},
 	"WasteNot": {
 		"NAME": "Waste Not",
-		"DESCRIPTION": "At the end of your turn, spend all [B] . NL Draw 1 more card next turn for each [B] you spend."
+		"DESCRIPTION": "At the end of your turn, spend all [B] . NL Draw 1 more card next turn for each [B] spent."
 	},
 	"KillingDoll": {
 		"NAME": "Killing Doll",
@@ -181,7 +181,7 @@
 	},
 	"Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and apply 1 Vulnerable."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and applies 1 Vulnerable."
 	},
 	"BottledTime": {
 		"NAME": "Bottled Time",
@@ -203,11 +203,11 @@
 	},
 	"Potential": {
 		"NAME": "Potential",
-		"DESCRIPTION": "Deal !D! damage. NL Shift: Deals !M! additional damage this combat and put this in your hand."
+		"DESCRIPTION": "Deal !D! damage. NL Shift: Increase this card's damage by !M! this combat and put this card into NL your hand."
 	},
 	"Desolation": {
 		"NAME": "Desolation",
-		"DESCRIPTION": "Deal !D! damage. NL Double the enemy's Blight. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Double the NL enemy's Blight. NL Exhaust."
 	},
 	"Deadline": {
 		"NAME": "Deadline",
@@ -231,7 +231,7 @@
 	},
 	"ReturningBlade": {
 		"NAME": "Returning Blade",
-		"DESCRIPTION": "Vision: Deal !D! damage to ALL enemies, put this card in your hand. NL Can be upgraded any number of times."
+		"DESCRIPTION": "Vision: Deal !D! damage to ALL enemies and put this card NL into your hand. NL Can be upgraded any number of times."
 	},
 	"Shuttle": {
 		"NAME": "Shuttle",
@@ -239,11 +239,11 @@
 	},
 	"Rewind": {
 		"NAME": "Rewind",
-		"DESCRIPTION": "Gain !B! Block. NL Put the card at the bottom of your discard pile in your hand."
+		"DESCRIPTION": "Gain !B! Block. NL Put the card at the bottom of your discard pile into NL your hand."
 	},
 	"Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Deal !D! damage. NL Enemy loses Strength equals to the damage for 1 turn. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Enemy loses Strength equals to damage for 1 turn. NL Exhaust."
 	},
 	"ShiftingGears": {
 		"NAME": "Shifting Gears",
@@ -263,7 +263,7 @@
 	},
 	"Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Vision: Throw 1 Knife. NL Each deals !D! damage and apply !M! Vulnerable."
+		"DESCRIPTION": "Vision: Throw 1 Knife. NL Each deals !D! damage and applies !M! Vulnerable."
 	},
 	"Solidify": {
 		"NAME": "Solidify",
@@ -272,7 +272,7 @@
 	},
 	"SoulSculpture": {
 		"NAME": "Soul Sculpture",
-		"DESCRIPTION": "Deal !D! damage NL six times. NL Enemy loses NL !M! Strength. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage NL 6 times. NL Enemy loses NL !M! Strength. NL Exhaust."
 	},
 	"SpecialFormula": {
 		"NAME": "Special Formula",
@@ -289,7 +289,7 @@
 	},
 	"Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy and draw 1 card."
+		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy and draws 1 card."
 	},
 	"Foresight": {
 		"NAME": "Foresight",
@@ -297,7 +297,7 @@
 	},
 	"Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and apply !M! Blight NL to ALL enemies."
+		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and applies !M! Blight NL to ALL enemies."
 	},
 	"SurpressingFire": {
 		"NAME": "Surpressing Fire",
@@ -339,8 +339,8 @@
 	},
 	"Revamp": {
 		"NAME": "Revamp",
-		"DESCRIPTION": "Return !M! card from your discard pile to your hand and NL upgrade it. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Return !M! card from your discard pile to your hand and NL upgrade it."
+		"DESCRIPTION": "Put !M! card from your discard pile into your hand and upgrade it. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Put !M! card from your discard pile into your hand and upgrade it."
 	},
 	"TrueSight": {
 		"NAME": "True Sight",

@@ -3,11 +3,11 @@
     "NAME": "飞刀",
     "DESCRIPTIONS": ["你持有 #b", " 把 #y飞刀 。"]
   },
-  "EnbodimentPower": {
+  "EmbodimentPower": {
     "NAME": "具现化",
     "DESCRIPTIONS": ["回合结束时将 #b", " 张 #y幻时 牌加入抽牌堆。"]
   },
-  "UpgradedEnbodimentPower": {
+  "UpgradedEmbodimentPower": {
     "NAME": "极·具现化",
     "DESCRIPTIONS": ["回合结束时将 #b", " 张升级过的 #y幻时 牌加入抽牌堆。"]
   },

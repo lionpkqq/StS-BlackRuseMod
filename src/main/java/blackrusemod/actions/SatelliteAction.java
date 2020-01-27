@@ -28,8 +28,8 @@ public class SatelliteAction extends AbstractGameAction {
 		if (this.source.hasPower("SatellitePower")) {
 			if (this.source.getPower("SatellitePower").amount > 0) {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
-					this.target.damageFlash = true;
-					this.target.damageFlashFrames = 4;
+					// this.target.damageFlash = true;
+					// this.target.damageFlashFrames = 4;
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
 							AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 					this.info.applyPowers(this.info.owner, this.target);

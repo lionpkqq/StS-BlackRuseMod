@@ -149,4 +149,8 @@
 /* 148 */       sb.setBlendFunction(770, 771);
 /*     */     }
 /*     */   }
+/*     */
+/* 152 */   public void dispose() {
+/* 153 */       // Stub required in 2.0 - if this is needed, put stuff here.
+/*     */   }
 /*     */ }

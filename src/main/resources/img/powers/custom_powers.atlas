@@ -32,14 +32,14 @@ elegance48
   orig: 48, 48
   offset: 8, 8
   index: -1
-enbodiment128
+embodiment128
   rotate: false
   xy: 83, 110
   size: 79, 97
   orig: 128, 128
   offset: 24, 14
   index: -1
-enbodiment48
+embodiment48
   rotate: false
   xy: 164, 146
   size: 30, 35
@@ -354,14 +354,14 @@ true_sight48
   orig: 48, 48
   offset: 7, 13
   index: -1
-upgraded_enbodiment128
+upgraded_embodiment128
   rotate: false
   xy: 2, 98
   size: 79, 97
   orig: 128, 128
   offset: 24, 14
   index: -1
-upgraded_enbodiment48
+upgraded_embodiment48
   rotate: false
   xy: 159, 291
   size: 30, 35
