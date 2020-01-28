@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>BlackRuseMods</groupId>
   <artifactId>StS-BlackRuse</artifactId>
-  <version>0.9.3</version>
+  <version>0.9.4</version>
 
   <name>StS-BlackRuse</name>
   
@@ -17,14 +17,14 @@
 		<dependency>
 			<groupId>basemod</groupId>
 			<artifactId>basemod</artifactId>
-			<version>5.3.1</version>
+			<version>5.18.0</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/../lib/BaseMod.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>modthespire</groupId>
 			<artifactId>modthespire</artifactId>
-			<version>3.6.0</version>
+			<version>3.15.0</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
 		</dependency>

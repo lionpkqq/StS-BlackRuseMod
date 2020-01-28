@@ -4,14 +4,12 @@
 /*     */ import com.badlogic.gdx.graphics.Color;
 /*     */ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 		  import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-/*     */ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 /*     */ import com.badlogic.gdx.math.Interpolation;
 /*     */ import com.badlogic.gdx.math.MathUtils;
 /*     */ import com.megacrit.cardcrawl.core.CardCrawlGame;
 /*     */ import com.megacrit.cardcrawl.core.Settings;
 /*     */ import com.megacrit.cardcrawl.helpers.ImageMaster;
 /*     */ import com.megacrit.cardcrawl.vfx.GenericSmokeEffect;
-/*     */ import java.util.ArrayList;
 /*     */ 
 /*     */ public class FinishingImpactEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 /*     */ {
@@ -26,7 +24,7 @@
 /*  25 */     this.x = (x - this.img.packedWidth / 2.0F);
 /*  26 */     this.y = (y - this.img.packedHeight * 0.01F);
 /*  27 */     this.startingDuration = 0.6F;
-/*  28 */     this.duration = 0.6F;
+/*  28 */     this.duration = DUR;
 /*  29 */     this.scale = Settings.scale;
 /*  30 */     this.rotation = MathUtils.random(40.0F, 50.0F);
 /*  31 */     this.color = new Color(0.0F, 1.0F, 1.0F, 1.0F);

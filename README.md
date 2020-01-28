@@ -1,11 +1,11 @@
-# StS-BlackRuseMod 0.9.3
+# StS-BlackRuseMod 0.9.4
 
 **BlackRuseMod** adds The Servant as a new playable character to **Slay The Spire**.
 
 Currently supported versions: 
-* Slay The Spire (11-17-2018)
-* ModTheSpire 3.6.0
-* BaseMod 5.3.1 (Week 50 Patch)
+* Slay The Spire (01-21-2020)
+* ModTheSpire 3.15.0
+* BaseMod 5.18.0
 
 ## Content/Gameplay ##
 **BlackRuseMod** for **Slay The Spire** adds an entirely new character class, **The Servant**, along with a new set of 75 cards and 11 exclusive relics.
@@ -65,6 +65,9 @@ The Wiki is still under construction. Thanks for your patience!
 * Gogo (https://github.com/gogo81745) - programming consultation.
 * HOYKJ (https://www.pixiv.net/member.php?id=9562609) - programming consultation.
 
+* rainfoxest (https://github.com/rainfoxest) - ZHT Translation 正體中文翻譯
+* Arek75 (https://github.com/Arek75) - Update for StS 2.0 and UTF-8 in .java files.
+
 * Thank you people for play-testing: 胡逆天, 久远寺天豪, 响厨act2, prttt26, PFPkeima, gygrazok, KurryOpossum, KongMD-Steam, maou, aerosmaster, notque, 5m1l35, Lunaraia, ETO灬XL, sin-genjitsu xxx, 辉夜姬, killerjwa, Athanasiosdk, 哓吉, sin-genjitsu xxx, 不悲不喜, Brood_Star and more!
 
 ## Special Thanks ##
@@ -103,7 +106,10 @@ Contributors of **FruityMod**
 * LikeAWass, Celerity, JohnDruitt, Zoochz, SirJesterful, and Jimquisitive for playtesting and feedback
 
 ## Current State/Updates ##
-* Looking for an Spriter animator.
+
+0.9.4
+* Support for Slay the Spire 2.0 Update.
+* [Moondial] now has Exhaust.
 
 0.9.3
 * Support for BaseMod 5.3.1.

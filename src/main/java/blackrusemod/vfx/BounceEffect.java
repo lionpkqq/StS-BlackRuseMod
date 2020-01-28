@@ -22,7 +22,7 @@
 /*     */   private float bounceHeight;
 /*     */   private static final float DUR = 0.3F;
 /*  22 */   private boolean playedSfx = false;
-/*  23 */   private ArrayList<com.badlogic.gdx.math.Vector2> previousPos = new ArrayList();
+/*  23 */   private ArrayList<com.badlogic.gdx.math.Vector2> previousPos = new ArrayList<com.badlogic.gdx.math.Vector2>();
 /*     */   
 /*     */   public BounceEffect(float srcX, float srcY, float destX, float destY) {
 /*  26 */     if (img == null) {

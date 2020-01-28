@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
@@ -29,7 +28,7 @@ public class Strike_Silver extends CustomCard {
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.tags.add(AbstractCard.CardTags.STRIKE);
-		this.tags.add(BaseModCardTags.BASIC_STRIKE);
+		this.tags.add(AbstractCard.CardTags.STARTER_STRIKE);
 	}
 
 	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {

@@ -25,6 +25,7 @@ public class Moondial extends CustomCard {
 	public Moondial() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MOONDIAL), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber = TEMPORAL;
 	}
 

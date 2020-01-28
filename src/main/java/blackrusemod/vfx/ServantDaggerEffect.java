@@ -3,10 +3,8 @@
 /*     */ import com.badlogic.gdx.graphics.Color;
 /*     */ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 		  import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-/*     */ import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 /*     */ import com.badlogic.gdx.math.Interpolation;
 /*     */ import com.badlogic.gdx.math.MathUtils;
-/*     */ import com.megacrit.cardcrawl.audio.SoundMaster;
 /*     */ import com.megacrit.cardcrawl.core.CardCrawlGame;
 /*     */ import com.megacrit.cardcrawl.core.Settings;
 /*     */ 
@@ -38,7 +36,7 @@
 /*  37 */     this.destY = y;
 /*  38 */     this.y = (this.destY + MathUtils.random(-25.0F, 25.0F) * Settings.scale - this.img.packedHeight / 2.0F);
 /*  39 */     this.startingDuration = 0.4F;
-/*  40 */     this.duration = 0.4F;
+/*  40 */     this.duration = DUR;
 /*  41 */     this.scale = Settings.scale;
 /*  42 */     this.rotation = fAngle;
 /*  43 */     this.color = new Color(0.0F, 1.0F, 1.0F, 1.0F);
