@@ -62,7 +62,8 @@
 	},
 	"BlackRuseMod:Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Duplicate !M! card(s). NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
+		"DESCRIPTION": "Duplicate !M! card. NL The duplicate NL costs 0 this turn. NL Backlash. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Duplicate !M! cards. NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
 	},
 	"BlackRuseMod:Embodiment": {
 		"NAME": "Embodiment",
@@ -88,7 +89,7 @@
 	},
 	"BlackRuseMod:Ricochet": {
 		"NAME": "Ricochet",
-		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage and bounces between enemies !M! times."
+		"DESCRIPTION": "Throw 1 Knife. NL It deals !D! damage and bounces between enemies !M! times."
 	},
 	"BlackRuseMod:FlawlessForm": {
 		"NAME": "Flawless Form",
@@ -120,7 +121,7 @@
 	},
 	"BlackRuseMod:Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Gain !M! Protection NL X time(s). NL Backlash."
+		"DESCRIPTION": "Gain !M! Protection NL X times. NL Backlash."
 	},
 	"BlackRuseMod:Advance": {
 		"NAME": "Advance",
@@ -215,7 +216,8 @@
 	},
 	"BlackRuseMod:RealityMarble": {
 		"NAME": "Reality Marble",
-		"DESCRIPTION": "Innate. NL At the end of your turn, Retain up to !M! card. NL The cards you retain lose Ethereal for this combat."
+		"DESCRIPTION": "Innate. NL At the end of your turn, Retain up to !M! card. NL The card you retained loses Ethereal this combat.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, Retain up to !M! cards. NL The cards you retain lose Ethereal this combat."
 	},
 	"BlackRuseMod:Rearm": {
 		"NAME": "Rearm",
@@ -263,7 +265,7 @@
 	},
 	"BlackRuseMod:Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Vision: Throw 1 Knife. NL Each deals !D! damage and applies !M! Vulnerable."
+		"DESCRIPTION": "Vision: Throw 1 Knife. NL It deals !D! damage and applies !M! Vulnerable."
 	},
 	"BlackRuseMod:Solidify": {
 		"NAME": "Solidify",
@@ -300,7 +302,7 @@
 		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and applies !M! Blight NL to ALL enemies."
 	},
 	"BlackRuseMod:SurpressingFire": {
-		"NAME": "Surpressing Fire",
+		"NAME": "Suppressing Fire",
 		"DESCRIPTION": "Whenever you throw or convert a Knife, gain !M! Block."
 	},
 	"BlackRuseMod:TimeTheft": {
@@ -335,7 +337,8 @@
 	},
 	"BlackRuseMod:TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card(s). NL Shift: Draw 1 card."
+		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card. NL Shift: Draw 1 card.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard !M! cards. NL Shift: Draw 1 card."
 	},
 	"BlackRuseMod:Revamp": {
 		"NAME": "Revamp",
