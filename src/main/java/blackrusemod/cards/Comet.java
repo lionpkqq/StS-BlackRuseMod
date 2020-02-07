@@ -35,8 +35,21 @@ public class Comet extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SMASH));
-		if ((this.magicNumber-(AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1)) > 0)
-			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, (this.magicNumber-(AbstractDungeon.actionManager.cardsPlayedThisTurn.size()-1))));
+		if (this.magicNumber > 0)
+			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, (this.magicNumber)));
+	}
+	
+	// Real-time feedback on how many cards Comet will draw	
+	public void triggerOnGlowCheck() {
+		this.magicNumber = this.baseMagicNumber - AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+		if(this.magicNumber < 0) this.magicNumber = 0;
+		this.isMagicNumberModified = this.upgraded || !(this.magicNumber == this.baseMagicNumber);
+		// Have Comet glow gold if it is able to draw the maximum number of cards
+		if(this.magicNumber == this.baseMagicNumber) {
+			this.glowColor = GOLD_BORDER_GLOW_COLOR;
+		} else {
+			this.glowColor = BLUE_BORDER_GLOW_COLOR;
+		}
 	}
 
 	public AbstractCard makeCopy() {

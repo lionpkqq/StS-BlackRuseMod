@@ -37,7 +37,7 @@
 	},
 	"BlackRuseMod:Comet": {	
 		"NAME": "Comet",
-		"DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Draw 1 less card for each card you have played this turn."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card(s). NL Draw 1 less card for each card you have played this turn."
 	},
 	"BlackRuseMod:Dilation": {
 		"NAME": "Dilation",
