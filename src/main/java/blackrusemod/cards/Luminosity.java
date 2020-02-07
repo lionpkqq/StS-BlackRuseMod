@@ -15,7 +15,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ElegancePower;
 
 public class Luminosity extends CustomCard {
-	public static final String ID = "Luminosity";
+	public static final String ID = "BlackRuseMod:Luminosity";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

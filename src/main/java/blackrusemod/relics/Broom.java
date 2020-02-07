@@ -10,8 +10,8 @@ import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 
 public class Broom extends CustomRelic {
-	private static final String ID = "Broom";
-	private static final int COUNT = 10;
+	public static final String ID = "BlackRuseMod:Broom";
+	public static final int COUNT = 10;
 	
 	public Broom() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.BROOM_RELIC), ImageMaster.loadImage(BlackRuseMod.BROOM_RELIC_OUTLINE), RelicTier.COMMON, LandingSound.FLAT);

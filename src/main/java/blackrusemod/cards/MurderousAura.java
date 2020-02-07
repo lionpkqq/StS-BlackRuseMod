@@ -14,7 +14,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.MurderousAuraPower;
 
 public class MurderousAura extends CustomCard {
-	public static final String ID = "MurderousAura";
+	public static final String ID = "BlackRuseMod:MurderousAura";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

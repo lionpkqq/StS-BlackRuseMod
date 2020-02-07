@@ -18,9 +18,9 @@ public class DoubleProtectionAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if ((this.duration == 0.3F) && (this.target != null) && (this.target.hasPower("ProtectionPower"))) {
+		if ((this.duration == 0.3F) && (this.target != null) && (this.target.hasPower(ProtectionPower.POWER_ID))) {
 			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.source, new ProtectionPower(this.source, 
-					this.target.getPower("ProtectionPower").amount), this.target.getPower("ProtectionPower").amount));
+					this.target.getPower(ProtectionPower.POWER_ID).amount), this.target.getPower(ProtectionPower.POWER_ID).amount));
 		}
 
 		tickDuration();

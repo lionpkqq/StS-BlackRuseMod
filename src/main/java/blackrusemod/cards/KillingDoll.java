@@ -12,9 +12,11 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ThrowKnivesAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.KnivesPower;
+import blackrusemod.powers.SilverBladesPower;
 
 public class KillingDoll extends CustomCard {
-	public static final String ID = "KillingDoll";
+	public static final String ID = "BlackRuseMod:KillingDoll";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -31,11 +33,11 @@ public class KillingDoll extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (p.hasPower("KnivesPower")) {
-			this.KNIVES = p.getPower("KnivesPower").amount;
+		if (p.hasPower(KnivesPower.POWER_ID)) {
+			this.KNIVES = p.getPower(KnivesPower.POWER_ID).amount;
 			for (int i = 0; i < KNIVES; i++)
 				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Golden"));
-			this.KNIVES = p.getPower("KnivesPower").amount;
+			this.KNIVES = p.getPower(KnivesPower.POWER_ID).amount;
 			for (int i = 0; i < KNIVES; i++)
 				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, m, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), "Golden"));
 		}
@@ -48,10 +50,10 @@ public class KillingDoll extends CustomCard {
 	public void applyPowers() {
 		this.baseDamage = ATTACK_DMG;
 		if (!this.canUpgrade()) this.baseDamage += UPGRADE_PLUS_DMG;
-		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
-			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID))
+			this.baseDamage += AbstractDungeon.player.getPower(SilverBladesPower.POWER_ID).amount;
 		super.applyPowers();
-		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID))
 			this.isDamageModified = true;
 	}
 

@@ -18,7 +18,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
 
 public class Desolation extends CustomCard {
-	public static final String ID = "Desolation";
+	public static final String ID = "BlackRuseMod:Desolation";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -37,9 +37,9 @@ public class Desolation extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SLASH_HEAVY));
-		if (m.hasPower("AmplifyDamagePower")) {
+		if (m.hasPower(AmplifyDamagePower.POWER_ID)) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-					m, p, new AmplifyDamagePower(m, m.getPower("AmplifyDamagePower").amount), m.getPower("AmplifyDamagePower").amount));
+					m, p, new AmplifyDamagePower(m, m.getPower(AmplifyDamagePower.POWER_ID).amount), m.getPower(AmplifyDamagePower.POWER_ID).amount));
 		}
 	}
 

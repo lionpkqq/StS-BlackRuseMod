@@ -16,7 +16,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Initiator extends CustomCard {
-	public static final String ID = "Initiator";
+	public static final String ID = "BlackRuseMod:Initiator";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

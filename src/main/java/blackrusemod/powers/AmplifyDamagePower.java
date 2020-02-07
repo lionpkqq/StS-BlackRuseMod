@@ -9,9 +9,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.relics.PaperSwan;
 
 public class AmplifyDamagePower extends AbstractPower {
-	public static final String POWER_ID = "AmplifyDamagePower";
+	public static final String POWER_ID = "BlackRuseMod:AmplifyDamagePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -30,9 +31,9 @@ public class AmplifyDamagePower extends AbstractPower {
 	}
 	
 	public void onInitialApplication() {
-		if (AbstractDungeon.player.hasRelic("PaperSwan")) {
+		if (AbstractDungeon.player.hasRelic(PaperSwan.ID)) {
 			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-				AbstractDungeon.player.getRelic("PaperSwan").flash();
+				AbstractDungeon.player.getRelic(PaperSwan.ID).flash();
 				this.amount += 1;
 			}
 		}
@@ -42,9 +43,9 @@ public class AmplifyDamagePower extends AbstractPower {
 	{
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
-		if (AbstractDungeon.player.hasRelic("PaperSwan")) {
+		if (AbstractDungeon.player.hasRelic(PaperSwan.ID)) {
 			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-				AbstractDungeon.player.getRelic("PaperSwan").flash();
+				AbstractDungeon.player.getRelic(PaperSwan.ID).flash();
 				this.amount += 1;
 			}
 		}

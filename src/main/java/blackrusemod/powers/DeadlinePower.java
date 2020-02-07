@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import blackrusemod.BlackRuseMod;
 
 public class DeadlinePower extends AbstractPower {
-	public static final String POWER_ID = "DeadlinePower";
+	public static final String POWER_ID = "BlackRuseMod:DeadlinePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -26,7 +26,7 @@ public class DeadlinePower extends AbstractPower {
 	
 	public DeadlinePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
-		this.ID = ("DeadlinePower" + idOffset);
+		this.ID = (POWER_ID + idOffset);
 		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
@@ -41,7 +41,7 @@ public class DeadlinePower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower("TrueSightPower")) 
+		if (this.owner.hasPower(TrueSightPower.POWER_ID)) 
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));

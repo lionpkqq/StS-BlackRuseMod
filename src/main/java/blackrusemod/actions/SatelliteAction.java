@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
+import blackrusemod.powers.SatellitePower;
 import blackrusemod.vfx.SatelliteDaggerEffect;
 
 public class SatelliteAction extends AbstractGameAction {
@@ -25,8 +26,8 @@ public class SatelliteAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if (this.source.hasPower("SatellitePower")) {
-			if (this.source.getPower("SatellitePower").amount > 0) {
+		if (this.source.hasPower(SatellitePower.POWER_ID)) {
+			if (this.source.getPower(SatellitePower.POWER_ID).amount > 0) {
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
 					// this.target.damageFlash = true;
 					// this.target.damageFlashFrames = 4;
@@ -38,12 +39,12 @@ public class SatelliteAction extends AbstractGameAction {
 					if ((this.target != null) && (this.target.hb != null)) {
 						AbstractDungeon.actionManager.addToTop(new VFXAction(new SatelliteDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
-					this.source.getPower("SatellitePower").reducePower(1);
-					this.source.getPower("SatellitePower").updateDescription();
+					this.source.getPower(SatellitePower.POWER_ID).reducePower(1);
+					this.source.getPower(SatellitePower.POWER_ID).updateDescription();
 				}
 			}
-			if (this.source.getPower("SatellitePower").amount == 0) 
-				AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.source, this.source, "SatellitePower"));
+			if (this.source.getPower(SatellitePower.POWER_ID).amount == 0) 
+				AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.source, this.source, SatellitePower.POWER_ID));
 		}
 		this.isDone = true;
 	}

@@ -13,7 +13,7 @@ import blackrusemod.actions.AdvanceAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Advance extends CustomCard {
-	public static final String ID = "Advance";
+	public static final String ID = "BlackRuseMod:Advance";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

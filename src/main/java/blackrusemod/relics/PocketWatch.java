@@ -11,7 +11,7 @@ import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 
 public class PocketWatch extends CustomRelic {
-	private static final String ID = "PocketWatch";
+	public static final String ID = "BlackRuseMod:PocketWatch";
 	
 	public PocketWatch() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC), ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);

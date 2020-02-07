@@ -13,7 +13,7 @@ import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Read extends CustomCard {
-	public static final String ID = "Read";
+	public static final String ID = "BlackRuseMod:Read";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

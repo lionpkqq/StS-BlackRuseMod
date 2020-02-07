@@ -11,8 +11,8 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.powers.AmplifyDamagePower;
 
 public class Pan extends CustomRelic {
-	private static final String ID = "Pan";
-	private static final int BLIGHT = 2;
+	public static final String ID = "BlackRuseMod:Pan";
+	public static final int BLIGHT = 2;
 	
 	public Pan() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.PAN_RELIC), ImageMaster.loadImage(BlackRuseMod.PAN_RELIC_OUTLINE), RelicTier.SHOP, LandingSound.SOLID);

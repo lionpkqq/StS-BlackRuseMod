@@ -17,7 +17,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
 
 public class Misdirection extends CustomCard {
-	public static final String ID = "Misdirection";
+	public static final String ID = "BlackRuseMod:Misdirection";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

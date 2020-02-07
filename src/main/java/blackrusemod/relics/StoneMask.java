@@ -10,9 +10,9 @@ import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 
 public class StoneMask extends CustomRelic {
-	private static final String ID = "StoneMask";
-	private static final int MAX_HP_AMT = 1;
-	private static final int HEAL_AMT = 2;
+	public static final String ID = "BlackRuseMod:StoneMask";
+	public static final int MAX_HP_AMT = 1;
+	public static final int HEAL_AMT = 2;
 	
 	public StoneMask() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.STONE_MASK_RELIC), ImageMaster.loadImage(BlackRuseMod.STONE_MASK_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.MAGICAL);

@@ -15,7 +15,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ThrowKnivesAction;
 
 public class SnipePower extends AbstractPower {
-	public static final String POWER_ID = "SnipePower";
+	public static final String POWER_ID = "BlackRuseMod:SnipePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,7 +27,7 @@ public class SnipePower extends AbstractPower {
 	
 	public SnipePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
-		this.ID = ("SnipePower" + idOffset);
+		this.ID = (POWER_ID + idOffset);
 		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
@@ -42,7 +42,7 @@ public class SnipePower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower("TrueSightPower")) 
+		if (this.owner.hasPower(TrueSightPower.POWER_ID)) 
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), "Vulnerable"));

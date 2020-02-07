@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import blackrusemod.powers.MatrixPower;
+import blackrusemod.powers.SatellitePower;
 
 public class ApplyMatrixAction extends AbstractGameAction {
 	public ApplyMatrixAction()
@@ -17,9 +18,9 @@ public class ApplyMatrixAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if ((this.target != null) && (this.target.hasPower("SatellitePower")))
+		if ((this.target != null) && (this.target.hasPower(SatellitePower.POWER_ID)))
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, 
-					new MatrixPower(this.target, this.target.getPower("SatellitePower").amount), this.target.getPower("SatellitePower").amount));
+					new MatrixPower(this.target, this.target.getPower(SatellitePower.POWER_ID).amount), this.target.getPower(SatellitePower.POWER_ID).amount));
 		this.isDone = true;
 	}
 }

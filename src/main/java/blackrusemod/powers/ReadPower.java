@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import blackrusemod.BlackRuseMod;
 
 public class ReadPower extends AbstractPower {
-	public static final String POWER_ID = "ReadPower";
+	public static final String POWER_ID = "BlackRuseMod:ReadPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,7 +27,7 @@ public class ReadPower extends AbstractPower {
 	
 	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount, int amount2, boolean prediction) {
 		this.name = NAME;
-		this.ID = ("ReadPower" + idOffset);
+		this.ID = (POWER_ID + idOffset);
 		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
@@ -43,7 +43,7 @@ public class ReadPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower("TrueSightPower"))  
+		if (this.owner.hasPower(TrueSightPower.POWER_ID))  
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));

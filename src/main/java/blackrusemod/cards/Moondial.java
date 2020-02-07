@@ -15,7 +15,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ManipulatePower;
 
 public class Moondial extends CustomCard {
-	public static final String ID = "Moondial";
+	public static final String ID = "BlackRuseMod:Moondial";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

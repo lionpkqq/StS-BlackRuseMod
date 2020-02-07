@@ -1,357 +1,357 @@
 {
-	"_DummyAttack": {
+	"BlackRuseMod:_DummyAttack": {
 		"NAME": "攻击",
 		"DESCRIPTION": "下回合，敌人的意图是攻击。"
 	},
-	"_DummyNotAttack": {
+	"BlackRuseMod:_DummyNotAttack": {
 		"NAME": "非攻击",
 		"DESCRIPTION": "下回合，敌人的意图不是攻击。"
 	},
-	"Strike_S": {
+	"BlackRuseMod:Strike_S": {
 		"NAME": "打击",
 		"DESCRIPTION": "造成 !D! 点伤害。"
 	},
-	"Defend_S": {
+	"BlackRuseMod:Defend_S": {
 		"NAME": "防御",
 		"DESCRIPTION": "获得 !B! 点 格挡 。"
 	},
-	"InstantArmor": {
+	"BlackRuseMod:InstantArmor": {
 		"NAME": "灵装",
 		"DESCRIPTION": " 固有 。 NL 获得 !M! 点 护盾 。 NL 转化3把 飞刀 为 卫星 。 NL 消耗 。"
 	},
-	"Alleviate": {
+	"BlackRuseMod:Alleviate": {
 		"NAME": "减负",
 		"DESCRIPTION": "丢弃最多3张手牌。每丢弃1张牌，获得 !B! 点 格挡 。"
 	},
-	"Barrier": {
+	"BlackRuseMod:Barrier": {
 		"NAME": "屏障",
 		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 点 护盾 。"
 	},
-	"PendulumOfEternity": {
+	"BlackRuseMod:PendulumOfEternity": {
 		"NAME": "永恒钟摆",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 给予 !M! 层 虚弱 。 NL 变换 ：耗能减少 [B] 。"
 	},
-	"Orbit": {
+	"BlackRuseMod:Orbit": {
 		"NAME": "入轨",
 		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 你每有1层 卫星 ，对所有敌人造成 !D! 点伤害。"
 	},
-	"Comet": {	
+	"BlackRuseMod:Comet": {	
 		"NAME": "彗星",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。"
 	},
-	"Dilation": {
+	"BlackRuseMod:Dilation": {
 		"NAME": "膨胀",
 		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 这张牌每被打出一次，它在本场战斗中的基础 护盾 上升1。"
 	},
-	"Moondial": {
+	"BlackRuseMod:Moondial": {
 		"NAME": "月晷",
 		"DESCRIPTION": "增加 !M! 张随机 幻时 牌到你的手牌和抽卡堆。 NL 消耗 。"
 	},
-	"Deny": {
+	"BlackRuseMod:Deny": {
 		"NAME": "否决",
 		"DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张牌。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "检视你的抽牌堆，选择丢弃最多 !M! 张牌。"
 	},
-	"DoubleEdge": {
+	"BlackRuseMod:DoubleEdge": {
 		"NAME": "双刃剑",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 反冲 。"
 	},
-	"DualDimension": {
+	"BlackRuseMod:DualDimension": {
 		"NAME": "二重次元",
 		"DESCRIPTION": " 护盾 翻倍。 NL 消耗 。 NL 变换 ：获得 !M! 点 护盾 。"
 	},
-	"Duplication": {
+	"BlackRuseMod:Duplication": {
 		"NAME": "分身",
 		"DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。"
 	},
-	"Embodiment": {
+	"BlackRuseMod:Embodiment": {
 		"NAME": "幻时具现",
 		"DESCRIPTION": "你的回合结束时，随机将 1 张 幻时 牌加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "你的回合结束时，随机将 1 张升级过的 幻时 牌加入抽牌堆。"
 	},
-	"Defy": {
+	"BlackRuseMod:Defy": {
 		"NAME": "藐视",
 		"DESCRIPTION": "获得 !B! 点 格挡 。你不受 虚弱 、 脆弱 和 易伤 影响1回合。",
 		"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。你不受 虚弱 、 脆弱 和 易伤 影响1回合。 NL 保留 。"
 	},
-	"FanOfKnives": {
+	"BlackRuseMod:FanOfKnives": {
 		"NAME": "刀阵",
 		"DESCRIPTION": "对每个敌人投掷1把 飞刀 X次。 NL 每把造成 !D! 点伤害。"
 	},
-	"GearUp": {
+	"BlackRuseMod:GearUp": {
 		"NAME": "整装待发",
 		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 获得 3 把 飞刀 。"
 	},
-	"FastForward": {
+	"BlackRuseMod:FastForward": {
 		"NAME": "快进",
 		"DESCRIPTION": "获得 !B! 点 格挡 。如果你手中没有攻击牌，抽 !M! 张牌。"
 	},
-	"Ricochet": {
+	"BlackRuseMod:Ricochet": {
 		"NAME": "弹跳",
 		"DESCRIPTION": "投掷1把 飞刀 。每把造成 !D! 点伤害并在敌人之间弹跳 !M! 次。"
 	},
-	"FlawlessForm": {
+	"BlackRuseMod:FlawlessForm": {
 		"NAME": "完美形态",
 		"DESCRIPTION": "获得 !M! 点 护盾 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。",
 		"UPGRADE_DESCRIPTION": "获得 !M! 点 护盾 。你不会受到 虚弱 、 易伤 和 脆弱 的影响。 保留 。"
 	},
-	"FloweringNight": {
+	"BlackRuseMod:FloweringNight": {
 		"NAME": "花开之夜",
 		"DESCRIPTION": "每当你打出1张牌，抽1张牌。 NL 一回合最多通过本能力抽 !M! 张牌。"
 	},
-	"Initiator": {
+	"BlackRuseMod:Initiator": {
 		"NAME": "起手式",
 		"DESCRIPTION": "造成 !D! 点伤害。将 追击 放入手中。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 追击+ 放入手中。"
 	},
-	"FollowUp": {
+	"BlackRuseMod:FollowUp": {
 		"NAME": "追击",
 		"DESCRIPTION": "造成 !D! 点伤害。将 追击2 放入手中。 消耗 。 虚无 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 追击2+ 放入手中。 消耗 。 虚无 。"
 	},
-	"FollowUp2": {
+	"BlackRuseMod:FollowUp2": {
 		"NAME": "追击2",
 		"DESCRIPTION": "造成 !D! 点伤害。将 画龙点睛 放入手中。 消耗 。 虚无 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将 画龙点睛+ 放入手中。 消耗 。 虚无 。"
 	},
-	"FinishingTouch": {
+	"BlackRuseMod:FinishingTouch": {
 		"NAME": "画龙点睛",
 		"DESCRIPTION": "造成 !D! 点伤害。 获得1点 风华 。 消耗 。 虚无 。"
 	},
-	"Hightail": {
+	"BlackRuseMod:Hightail": {
 		"NAME": "遁走",
 		"DESCRIPTION": "获得 !M! 点 护盾 X 次。 NL 反冲 。"
 	},
-	"Advance": {
+	"BlackRuseMod:Advance": {
 		"NAME": "预支",
 		"DESCRIPTION": "将抽牌堆中 !M! 张0耗能的牌放入你的手牌。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 将抽牌堆中 !M! 张0耗能的牌放入你的手牌。"
 	},
-	"ForgedInTime": {
+	"BlackRuseMod:ForgedInTime": {
 		"NAME": "物换星移",
 		"DESCRIPTION": " 消耗 所有手牌。 NL 每 消耗 1张牌，获得 !M! 点 护盾 和2把 飞刀 。 NL 消耗 。"
 	},
-	"Gouge": {
+	"BlackRuseMod:Gouge": {
 		"NAME": "凿击",
 		"DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X次。 消耗 。",
 		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害并给予1层 枯萎 X+1次。 消耗 。"
 	},
-	"BestPractice": {
+	"BlackRuseMod:BestPractice": {
 		"NAME": "最佳实践",
 		"DESCRIPTION": "每回合开始时，你可以在本场战斗中 升级 手牌中的1张牌。"
 	},
-	"Exchange": {
+	"BlackRuseMod:Exchange": {
 		"NAME": "交换",
 		"DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。",
 		"UPGRADE_DESCRIPTION": "丢弃 !M! 张手牌。 NL 获得 !M! 把 飞刀 。 NL 保留 。"
 	},
-	"Luminosity": {
+	"BlackRuseMod:Luminosity": {
 		"NAME": "光辉",
 		"DESCRIPTION": "获得 1 点 力量 。 NL 获得 !M! 点 风华 。"
 	},
-	"KidneyShot": {
+	"BlackRuseMod:KidneyShot": {
 		"NAME": "肾击",
 		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把造成 !D! 点伤害并给予 1 层 虚弱 。"
 	},
-	"WasteNot": {
+	"BlackRuseMod:WasteNot": {
 		"NAME": "物尽其用",
 		"DESCRIPTION": "你的回合结束时，消费所有 [B] 。每消费1点 [B] ，下回合多抽1张牌。"
 	},
-	"KillingDoll": {
+	"BlackRuseMod:KillingDoll": {
 		"NAME": "杀人玩偶",
 		"DESCRIPTION": "投掷所有 飞刀 。每把对随机敌人造成 !D! 点伤害。 NL 消耗 。"
 	},
-	"Collapse": {
+	"BlackRuseMod:Collapse": {
 		"NAME": "坍缩",
 		"DESCRIPTION": "对所有敌人造成等于你当前 护盾 层数的伤害。",
 		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 点伤害。）"]
 	},
-	"Manipulate": {
+	"BlackRuseMod:Manipulate": {
 		"NAME": "时轴操纵",
 		"DESCRIPTION": "将 X+1 张随机 幻时 牌加入抽牌堆。",
 		"UPGRADE_DESCRIPTION": "将 X+2 张随机 幻时 牌加入抽牌堆。"
 	},
-	"Misdirection": {
+	"BlackRuseMod:Misdirection": {
 		"NAME": "误导",
 		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予 !M! 层 枯萎 和 虚弱 。"
 	},
-	"MoonPhase": {
+	"BlackRuseMod:MoonPhase": {
 		"NAME": "月相",
 		"DESCRIPTION": "你的回合结束时，获得你身上 虚弱 、 脆弱 和 易伤 总层数乘以 !M! 的 格挡 。"
 	},
-	"Moonlight": {
+	"BlackRuseMod:Moonlight": {
 		"NAME": "月光",
 		"DESCRIPTION": "投掷 !M! 把 飞刀 。每把造成 !D! 点伤害并给予 1 层 易伤 。"
 	},
-	"BottledTime": {
+	"BlackRuseMod:BottledTime": {
 		"NAME": "瓶装时间",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 抽 !M! 张牌。 NL 消耗 。"
 	},
-	"MurderousAura": {
+	"BlackRuseMod:MurderousAura": {
 		"NAME": "杀气",
 		"DESCRIPTION": "你的回合开始时，所有敌人获得 1 层 枯萎 。",
 		"UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合开始时，所有敌人获得 1 层 枯萎 。"
 	},
-	"Read": {
+	"BlackRuseMod:Read": {
 		"NAME": "先读",
 		"DESCRIPTION": " 视界 ：获得 !B! 点 护盾 并给予 !M! 层 虚弱 。"
 	},
-	"DancingSilver": {
+	"BlackRuseMod:DancingSilver": {
 		"NAME": "星罗棋布",
 		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。获得 卫星 数量乘以2的 格挡 。"
 	},
-	"Potential": {
+	"BlackRuseMod:Potential": {
 		"NAME": "潜能",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 变换 ：本次战斗内伤害上升 !M! 并放入手牌。"
 	},
-	"Desolation": {
+	"BlackRuseMod:Desolation": {
 		"NAME": "黯灭",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人身上的 枯萎 翻倍 。 消耗 。"
 	},
-	"Deadline": {
+	"BlackRuseMod:Deadline": {
 		"NAME": "死限",
 		"DESCRIPTION": " 视界 ：给予 !M! 层 枯萎 和 易伤 。 NL 消耗 。"
 	},
-	"RealityMarble": {
+	"BlackRuseMod:RealityMarble": {
 		"NAME": "固有结界",
 		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌在本次战斗内失去 虚无 属性。"
 	},
-	"Rearm": {
+	"BlackRuseMod:Rearm": {
 		"NAME": "再装填",
 		"DESCRIPTION": "抽 !M! 张牌 。 NL 获得 5 把 飞刀 。"
 	},
-	"Replace": {
+	"BlackRuseMod:Replace": {
 		"NAME": "取代",
 		"DESCRIPTION": "从抽牌堆丢弃 1 张牌。 NL 将 1 张牌从弃牌堆放置到抽牌堆顶部。"
 	},
-	"Reset": {
+	"BlackRuseMod:Reset": {
 		"NAME": "清零",
 		"DESCRIPTION": "清除 虚弱 、 脆弱 和 易伤  。 NL 每层给予 !M! 护盾 。 NL 消耗 。"
 	},
-	"ReturningBlade": {
+	"BlackRuseMod:ReturningBlade": {
 		"NAME": "吾刃回归",
 		"DESCRIPTION": " 视界 ：对所有敌人造成 !D! 点伤害，将这张牌放入手牌。 NL 能被多次升级。"
 	},
-	"Shuttle": {
+	"BlackRuseMod:Shuttle": {
 		"NAME": "穿梭",
 		"DESCRIPTION": "发动下回会开始时会发动的卡牌和遗物效果。 NL 消耗 。"
 	},
-	"Rewind": {
+	"BlackRuseMod:Rewind": {
 		"NAME": "回溯",
 		"DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆底部的1张牌放入手牌。"
 	},
-	"Sabotage": {
+	"BlackRuseMod:Sabotage": {
 		"NAME": "毁伤",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 敌人损失等于伤害的 力量 1回合。 NL 消耗 。"
 	},
-	"ShiftingGears": {
+	"BlackRuseMod:ShiftingGears": {
 		"NAME": "换档",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 变换 ：获得 1 点 风华 。"
 	},
-	"ShatteredReality": {
+	"BlackRuseMod:ShatteredReality": {
 		"NAME": "破碎现实",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 变换 ：对所有敌人造成双倍伤害 。"
 	},
-	"SilverMatrix": {
+	"BlackRuseMod:SilverMatrix": {
 		"NAME": "银色矩阵",
 		"DESCRIPTION": "转化 !M! 把 飞刀 为 卫星 。 NL 获得 卫星 数量的 矩阵 。"
 	},
-	"SilverBlades": {
+	"BlackRuseMod:SilverBlades": {
 		"NAME": "银刃",
 		"DESCRIPTION": "增加 飞刀 的伤害 !M! 点。 NL 每回合开始时获得 !M! 把 飞刀 。"
 	},
-	"Snipe": {
+	"BlackRuseMod:Snipe": {
 		"NAME": "狙击",
 		"DESCRIPTION": " 视界 ：投掷1把 飞刀 。每把造成 !D! 点伤害并给予 !M! 层 易伤 。"
 	},
-	"Solidify": {
+	"BlackRuseMod:Solidify": {
 		"NAME": "凝固",
 		"DESCRIPTION": "选择1张 幻时 牌，把它放在抽牌堆顶部。 消耗 。",
 		"UPGRADE_DESCRIPTION": "选择1张 幻时 牌2次，把它们放在抽牌堆顶部。 消耗 。"
 	},
-	"SoulSculpture": {
+	"BlackRuseMod:SoulSculpture": {
 		"NAME": "灵魂雕塑",
 		"DESCRIPTION": "造成 !D! 点伤害 6 次。 NL 敌人损失 !M! 点 力量 。 NL 消耗 。"
 	},
-	"SpecialFormula": {
+	"BlackRuseMod:SpecialFormula": {
 		"NAME": "特制配方",
 		"DESCRIPTION": "获得 [B] 。 NL 回复 !M! 生命 。 NL 反冲 。 NL 消耗 。"
 	},
-	"Spin": {
+	"BlackRuseMod:Spin": {
 		"NAME": "回旋",
 		"DESCRIPTION": "对所有敌人造成 !D! 点伤害并给予 !M! 层 虚弱 。 NL 反冲 。"
 	},
-	"StarChef": {
+	"BlackRuseMod:StarChef": {
 		"NAME": "星级厨师",
 		"DESCRIPTION": "你的回合开始时可以 消耗 1张牌并获得 [B] 。 虚无 。",
 		"UPGRADE_DESCRIPTION": "你的回合开始时可以 消耗 1张牌并获得 [B] 。"
 	},
-	"Starlight": {
+	"BlackRuseMod:Starlight": {
 		"NAME": "星光",
 		"DESCRIPTION": "投掷 !M! 把 飞刀 。 NL 每把对随机敌人造成 !D! 点伤害并抽1张牌。"
 	},
-	"Foresight": {
+	"BlackRuseMod:Foresight": {
 		"NAME": "先见之明",
 		"DESCRIPTION": "你的回合开始时，检视牌堆顶部的 !M! 张牌，你可以选择丢弃其中的任意张。"
 	},
-	"Sunlight": {
+	"BlackRuseMod:Sunlight": {
 		"NAME": "日光",
 		"DESCRIPTION": "投掷1把 飞刀 。对所有敌人造成 !D! 点伤害并给予 !M! 层 枯萎 。"
 	},
-	"SurpressingFire": {
+	"BlackRuseMod:SurpressingFire": {
 		"NAME": "火力压制",
 		"DESCRIPTION": "每当你投掷或转化1把 飞刀 ，获得 !M! 点 格挡 。"
 	},
-	"TimeTheft": {
+	"BlackRuseMod:TimeTheft": {
 		"NAME": "以逸待劳",
 		"DESCRIPTION": " 视界 ：获得 [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": " 视界 ：获得 [B] [B] [B] 。 NL 抽 !M! 张牌。 NL 消耗 。"
 	},
-	"TemporalDefense": {
+	"BlackRuseMod:TemporalDefense": {
 		"NAME": "幻时防护",
 		"DESCRIPTION": " 幻时 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 点 护盾 。"
 	},
-	"TemporalEssence": {
+	"BlackRuseMod:TemporalEssence": {
 		"NAME": "幻时精华",
 		"DESCRIPTION": " 幻时 。 NL 获得 [B] 。 NL 抽 !M! 张牌。",
 		"UPGRADE_DESCRIPTION": " 幻时 。 NL 获得 [B] [B] 。 NL 抽 !M! 张牌。"
 	},
-	"TemporalMisd": {
+	"BlackRuseMod:TemporalMisd": {
 		"NAME": "幻时误导",
 		"DESCRIPTION": " 幻时 。 NL 给予所有敌人 !M! 层 枯萎 和 虚弱 。"
 	},
-	"TemporalSlicing": {
+	"BlackRuseMod:TemporalSlicing": {
 		"NAME": "幻时切割",
 		"DESCRIPTION": " 幻时 。 NL 对所有敌人造成 !D! 点伤害 !M! 次。"
 	},
-	"TheWorld": {
+	"BlackRuseMod:TheWorld": {
 		"NAME": "世界",
 		"DESCRIPTION": "抽 !M! 张牌。 NL 本回合下1张打出的牌消耗为 0 。 消耗 。"
 	},
-	"Contraction": {
+	"BlackRuseMod:Contraction": {
 		"NAME": "时御我身",
 		"DESCRIPTION": "获得 !M! 点 护盾 。 NL 把所有的 格挡 转化为 护盾 。"
 	},
-	"TimeWarp": {
+	"BlackRuseMod:TimeWarp": {
 		"NAME": "迁跃",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
 	},
-	"Revamp": {
+	"BlackRuseMod:Revamp": {
 		"NAME": "改进",
 		"DESCRIPTION": "将弃牌堆里 !M! 张牌放入手中并 升级 。 NL 消耗 。",
 		"UPGRADE_DESCRIPTION": "将弃牌堆里 !M! 张牌放入手中并 升级 。"
 	},
-	"TrueSight": {
+	"BlackRuseMod:TrueSight": {
 		"NAME": "真视",
 		"DESCRIPTION": " 视界 效果一定会触发。",
 		"UPGRADE_DESCRIPTION": "视界 效果一定会触发。 保留 。"
 	},
-	"Unruled": {
+	"BlackRuseMod:Unruled": {
 		"NAME": "不羁",
 		"DESCRIPTION": "造成 !D! 点伤害。 NL 你身上每有1层 虚弱 、 脆弱 和 易伤 ，伤害提升 !M! 。"
 	},
-	"LightFlow": {
+	"BlackRuseMod:LightFlow": {
 		"NAME": "流光",
 		"DESCRIPTION": "造成 !D! 点伤害 3 次。 NL 反冲 。"
 	}

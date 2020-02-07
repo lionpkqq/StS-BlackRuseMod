@@ -14,7 +14,7 @@ import blackrusemod.actions.ManipulateAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Manipulate extends CustomCard {
-	public static final String ID = "Manipulate";
+	public static final String ID = "BlackRuseMod:Manipulate";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -9,7 +9,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.OldScarfAction;
 
 public class OldScarf extends CustomRelic {
-	private static final String ID = "OldScarf";
+	public static final String ID = "BlackRuseMod:OldScarf";
 	
 	public OldScarf() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC), ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC_OUTLINE), RelicTier.RARE, LandingSound.FLAT);

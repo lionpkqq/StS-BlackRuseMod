@@ -7,7 +7,7 @@ import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 
 public class KneeBrace extends CustomRelic {
-	private static final String ID = "KneeBrace";
+	public static final String ID = "BlackRuseMod:KneeBrace";
 	
 	public KneeBrace() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC), ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC_OUTLINE), RelicTier.UNCOMMON, LandingSound.FLAT);

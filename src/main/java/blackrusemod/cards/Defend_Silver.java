@@ -13,7 +13,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Defend_Silver extends CustomCard {
-	public static final String ID = "Defend_S";
+	public static final String ID = "BlackRuseMod:Defend_S";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

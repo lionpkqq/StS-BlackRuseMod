@@ -1,6 +1,7 @@
 package blackrusemod;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import blackrusemod.cards.*;
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +15,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -22,6 +24,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.BaseMod;
 import basemod.ModLabel;
+import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.EditCardsSubscriber;
@@ -243,6 +246,12 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         settingsPanel.addUIElement(new ModLabel("BlackruseMod does not have any settings (yet)!", 400.0f, 700.0f, settingsPanel, (me)->{}));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
         
+        // If player hasn't seen the strike card (due to ID change), but already has unlocks
+        // then unlock progress needs to be reset (so player can unlock cards/relics again)
+        if(!UnlockTracker.isCardSeen(Strike_Silver.ID) && UnlockTracker.getUnlockLevel(TheServantEnum.THE_SERVANT) > 0) {
+        	UnlockTracker.resetUnlockProgress(TheServantEnum.THE_SERVANT);
+        }
+        
         Settings.isDailyRun = false;
         Settings.isTrial = false;
         Settings.isDemo = false;
@@ -411,45 +420,44 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 	public void receiveSetUnlocks() {
 		// servant unlock 1
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"Manipulate", "Moondial", "Embodiment"
+				Manipulate.ID, Moondial.ID, Embodiment.ID
 				), TheServantEnum.THE_SERVANT, 0);
-		UnlockTracker.addCard("Manipulate");
-		UnlockTracker.addCard("Moondial");
-		UnlockTracker.addCard("Embodiment");
+		UnlockTracker.addCard(Manipulate.ID);
+		UnlockTracker.addCard(Moondial.ID);
+		UnlockTracker.addCard(Embodiment.ID);
 		
 		// servant unlock 2
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				AbstractUnlock.UnlockType.RELIC, "Broom", "KneeBrace", "Pan"
+				AbstractUnlock.UnlockType.RELIC, Broom.ID, KneeBrace.ID, Pan.ID
 				), TheServantEnum.THE_SERVANT, 1);
-		UnlockTracker.addRelic("Broom");
-		UnlockTracker.addRelic("KneeBrace");
-		UnlockTracker.addRelic("Pan");
+		UnlockTracker.addRelic(Broom.ID);
+		UnlockTracker.addRelic(KneeBrace.ID);
+		UnlockTracker.addRelic(Pan.ID);
 		
 		// servant unlock 3
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"Deadline", "TimeTheft", "TrueSight"
+				Deadline.ID, TimeTheft.ID, TrueSight.ID
 				), TheServantEnum.THE_SERVANT, 2);
-		UnlockTracker.addCard("Deadline");
-		UnlockTracker.addCard("TimeTheft");
-		UnlockTracker.addCard("TrueSight");
+		UnlockTracker.addCard(Deadline.ID);
+		UnlockTracker.addCard(TimeTheft.ID);
+		UnlockTracker.addCard(TrueSight.ID);
 		
 		// servant unlock 4
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				AbstractUnlock.UnlockType.RELIC, "PaperSwan", "RomanBracelet", "OldScarf"
+				AbstractUnlock.UnlockType.RELIC, PaperSwan.ID, RomanBracelet.ID, OldScarf.ID
 				), TheServantEnum.THE_SERVANT, 3);
-		UnlockTracker.addRelic("PaperSwan");
-		UnlockTracker.addRelic("RomanBracelet");
-		UnlockTracker.addRelic("OldScarf");
+		UnlockTracker.addRelic(PaperSwan.ID);
+		UnlockTracker.addRelic(RomanBracelet.ID);
+		UnlockTracker.addRelic(OldScarf.ID);
 				
 		// servant unlock 5
 		BaseMod.addUnlockBundle(new CustomUnlockBundle(
-				"Orbit", "DancingSilver", "SilverMatrix"
+				Orbit.ID, DancingSilver.ID, SilverMatrix.ID
 				), TheServantEnum.THE_SERVANT, 4);
-		UnlockTracker.addCard("Orbit");
-		UnlockTracker.addCard("DancingSilver");
-		UnlockTracker.addCard("SilverMatrix");
+		UnlockTracker.addCard(Orbit.ID);
+		UnlockTracker.addCard(DancingSilver.ID);
+		UnlockTracker.addCard(SilverMatrix.ID);
 	}
-	
 
 	@Override
 	public void receiveEditKeywords() {

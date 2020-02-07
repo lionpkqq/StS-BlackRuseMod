@@ -18,9 +18,10 @@ import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.relics.KneeBrace;
 
 public class TimeWarp extends CustomCard {
-	public static final String ID = "TimeWarp";
+	public static final String ID = "BlackRuseMod:TimeWarp";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -47,7 +48,7 @@ public class TimeWarp extends CustomCard {
 	
 	public void triggerOnManualDiscard() {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
-		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
+		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 

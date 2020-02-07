@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import blackrusemod.BlackRuseMod;
 
 public class WasteNotPower extends AbstractPower {
-	public static final String POWER_ID = "WasteNotPower";
+	public static final String POWER_ID = "BlackRuseMod:WasteNotPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

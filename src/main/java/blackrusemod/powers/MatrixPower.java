@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class MatrixPower extends AbstractPower {
-	public static final String POWER_ID = "MatrixPower";
+	public static final String POWER_ID = "BlackRuseMod:MatrixPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -42,7 +42,7 @@ public class MatrixPower extends AbstractPower {
     public int onAttacked(final DamageInfo info, final int damageAmount) {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "MatrixPower", 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
         return damageAmount;
     }

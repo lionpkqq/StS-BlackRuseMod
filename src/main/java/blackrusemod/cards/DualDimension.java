@@ -16,10 +16,12 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.DoubleProtectionAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
+import blackrusemod.relics.KneeBrace;
 
 public class DualDimension extends CustomCard {
-	public static final String ID = "DualDimension";
+	public static final String ID = "BlackRuseMod:DualDimension";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -43,14 +45,14 @@ public class DualDimension extends CustomCard {
 		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-		if (AbstractDungeon.player.hasRelic("KneeBrace")) 
+		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 	
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION;
-		if (AbstractDungeon.player.hasPower("ElegancePower")) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();

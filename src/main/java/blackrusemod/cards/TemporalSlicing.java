@@ -16,7 +16,7 @@ import blackrusemod.actions.TemporalDamageAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class TemporalSlicing extends CustomCard {
-	public static final String ID = "TemporalSlicing";
+	public static final String ID = "BlackRuseMod:TemporalSlicing";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

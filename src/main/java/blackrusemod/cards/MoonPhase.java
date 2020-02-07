@@ -15,7 +15,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.MoonPhasePower;
 
 public class MoonPhase extends CustomCard {
-	public static final String ID = "MoonPhase";
+	public static final String ID = "BlackRuseMod:MoonPhase";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

@@ -54,8 +54,8 @@ public class VisionAction extends AbstractGameAction {
 			return;
 		}
 
-		if (BlackRuseMod.vs.prediction.cardID == "_DummyAttack") this.prediction = true;
-		else if (BlackRuseMod.vs.prediction.cardID == "_DummyNotAttack") this.prediction = false;
+		if (BlackRuseMod.vs.prediction.cardID == _DummyAttack.ID) this.prediction = true;
+		else if (BlackRuseMod.vs.prediction.cardID == _DummyNotAttack.ID) this.prediction = false;
 		
 		if (this.card instanceof Read) {
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.source, this.source, new ReadPower(this.source, this.target, this.amount, this.amount2, this.prediction), this.amount));

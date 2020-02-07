@@ -13,7 +13,7 @@ import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Deadline extends CustomCard {
-	public static final String ID = "Deadline";
+	public static final String ID = "BlackRuseMod:Deadline";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

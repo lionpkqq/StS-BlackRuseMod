@@ -16,7 +16,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class FollowUp2 extends CustomCard {
-	public static final String ID = "FollowUp2";
+	public static final String ID = "BlackRuseMod:FollowUp2";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

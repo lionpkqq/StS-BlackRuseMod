@@ -14,7 +14,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.TrueSightPower;
 
 public class TrueSight extends CustomCard {
-	public static final String ID = "TrueSight";
+	public static final String ID = "BlackRuseMod:TrueSight";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

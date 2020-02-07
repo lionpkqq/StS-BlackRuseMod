@@ -14,7 +14,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.StressRelieverPower;
 
 public class Foresight extends CustomCard {
-	public static final String ID = "Foresight";
+	public static final String ID = "BlackRuseMod:Foresight";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

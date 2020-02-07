@@ -12,10 +12,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
 
 public class Barrier extends CustomCard {
-	public static final String ID = "Barrier";
+	public static final String ID = "BlackRuseMod:Barrier";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -47,8 +48,8 @@ public class Barrier extends CustomCard {
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
-		if (AbstractDungeon.player.hasPower("ElegancePower")) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();

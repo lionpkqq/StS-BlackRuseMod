@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class FalseFlawlessFormPower extends AbstractPower {
-	public static final String POWER_ID = "FalseFlawlessFormPower";
+	public static final String POWER_ID = "BlackRuseMod:FalseFlawlessFormPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -34,7 +34,7 @@ public class FalseFlawlessFormPower extends AbstractPower {
 	
 	public float atDamageGive(float damage, DamageInfo.DamageType type)
 	{
-		if (this.owner.hasPower("FlawlessFormPower")) return damage;
+		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return damage;
 		if (type == DamageInfo.DamageType.NORMAL) {
 			if (this.owner.hasPower("Weakened")) return damage / 0.75F;
 		}
@@ -43,14 +43,14 @@ public class FalseFlawlessFormPower extends AbstractPower {
 	
 	public float modifyBlock(float blockAmount)
 	{
-		if (this.owner.hasPower("FlawlessFormPower")) return blockAmount;
+		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return blockAmount;
 		if (this.owner.hasPower("Frail")) return blockAmount / 0.75F;
 		return blockAmount;
 	}
 	
 	public float atDamageReceive(float damage, DamageInfo.DamageType type)
 	{
-		if (this.owner.hasPower("FlawlessFormPower")) return damage;
+		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return damage;
 		if (type == DamageInfo.DamageType.NORMAL)
 		{
 			if (this.owner.hasPower("Vulnerable")) {
@@ -66,9 +66,9 @@ public class FalseFlawlessFormPower extends AbstractPower {
 	public void atEndOfRound()
 	{
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, "FalseFlawlessFormPower"));
+			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 		} else {
-			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, "FalseFlawlessFormPower", 1));
+			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
 		}
 	}
 }

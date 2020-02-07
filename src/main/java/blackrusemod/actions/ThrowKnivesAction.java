@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.AmplifyDamagePower;
+import blackrusemod.powers.KnivesPower;
+import blackrusemod.powers.SurpressingFirePower;
 import blackrusemod.vfx.KDEffect;
 import blackrusemod.vfx.ServantDaggerEffect;
 
@@ -36,8 +38,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if (this.source.hasPower("KnivesPower")) {
-			if (this.source.getPower("KnivesPower").amount > 0) {
+		if (this.source.hasPower(KnivesPower.POWER_ID)) {
+			if (this.source.getPower(KnivesPower.POWER_ID).amount > 0) {
 				if (this.debuff != null && (this.debuff == "Draw" || this.debuff == "Golden")) 
 					this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
 				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
@@ -59,12 +61,12 @@ public class ThrowKnivesAction extends AbstractGameAction {
 							AbstractDungeon.actionManager.addToTop(new VFXAction(new ServantDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
 					
-					this.source.getPower("KnivesPower").reducePower(1);
-					this.source.getPower("KnivesPower").updateDescription();
+					this.source.getPower(KnivesPower.POWER_ID).reducePower(1);
+					this.source.getPower(KnivesPower.POWER_ID).updateDescription();
 					
-					if (this.source.hasPower("SurpressingFirePower")) {
+					if (this.source.hasPower(SurpressingFirePower.POWER_ID)) {
 						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-						this.source.addBlock(this.source.getPower("SurpressingFirePower").amount);
+						this.source.addBlock(this.source.getPower(SurpressingFirePower.POWER_ID).amount);
 					}
 					if (this.debuff != null && this.debuff == "Draw") 
 						AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.source, 1));
@@ -77,8 +79,8 @@ public class ThrowKnivesAction extends AbstractGameAction {
 					}
 				}
 			}
-			if (this.source.getPower("KnivesPower").amount == 0) 
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, "KnivesPower"));
+			if (this.source.getPower(KnivesPower.POWER_ID).amount == 0) 
+				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.source, this.source, KnivesPower.POWER_ID));
 		}
 		this.isDone = true;
 	}

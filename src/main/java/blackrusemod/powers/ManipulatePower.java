@@ -17,7 +17,7 @@ import blackrusemod.cards.TemporalMisd;
 import blackrusemod.cards.TemporalSlicing;
 
 public class ManipulatePower extends AbstractPower {
-	public static final String POWER_ID = "ManipulatePower";
+	public static final String POWER_ID = "BlackRuseMod:ManipulatePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -50,7 +50,7 @@ public class ManipulatePower extends AbstractPower {
 			else c = new TemporalEssence().makeCopy();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "ManipulatePower"));
+		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, ManipulatePower.POWER_ID));
 	}
 
 	public void updateDescription()

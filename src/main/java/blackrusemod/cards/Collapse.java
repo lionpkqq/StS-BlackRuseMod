@@ -12,9 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ProtectionPower;
 
 public class Collapse extends CustomCard {
-	public static final String ID = "Collapse";
+	public static final String ID = "BlackRuseMod:Collapse";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -32,8 +33,8 @@ public class Collapse extends CustomCard {
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (p.hasPower("ProtectionPower")) 
-			this.baseDamage = p.getPower("ProtectionPower").amount;
+		if (p.hasPower(ProtectionPower.POWER_ID)) 
+			this.baseDamage = p.getPower(ProtectionPower.POWER_ID).amount;
 		else this.baseDamage = 0;
 		calculateCardDamage(m);
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
@@ -43,8 +44,8 @@ public class Collapse extends CustomCard {
 	
 	public void applyPowers()
 	{
-		if (AbstractDungeon.player.hasPower("ProtectionPower"))
-			this.baseDamage = AbstractDungeon.player.getPower("ProtectionPower").amount;
+		if (AbstractDungeon.player.hasPower(ProtectionPower.POWER_ID))
+			this.baseDamage = AbstractDungeon.player.getPower(ProtectionPower.POWER_ID).amount;
 		else this.baseDamage = 0;
 		super.applyPowers();
 

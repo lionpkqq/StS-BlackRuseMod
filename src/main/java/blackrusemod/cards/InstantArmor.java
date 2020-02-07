@@ -12,10 +12,11 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ConvertAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
 
 public class InstantArmor extends CustomCard {
-	public static final String ID = "InstantArmor";
+	public static final String ID = "BlackRuseMod:InstantArmor";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -45,8 +46,8 @@ public class InstantArmor extends CustomCard {
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = ARMOR_AMT;
 		if (!this.canUpgrade()) upgradeMagicNumber(3);
-		if (AbstractDungeon.player.hasPower("ElegancePower")) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();

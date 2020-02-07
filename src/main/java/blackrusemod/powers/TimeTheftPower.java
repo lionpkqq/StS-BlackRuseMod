@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class TimeTheftPower extends AbstractPower {
-	public static final String POWER_ID = "TimeTheftPower";
+	public static final String POWER_ID = "BlackRuseMod:TimeTheftPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -26,7 +26,7 @@ public class TimeTheftPower extends AbstractPower {
 	
 	public TimeTheftPower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction) {
 		this.name = NAME;
-		this.ID = ("TimeTheftPower" + idOffset);
+		this.ID = (POWER_ID + idOffset);
 		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
@@ -41,7 +41,7 @@ public class TimeTheftPower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower("TrueSightPower")) 
+		if (this.owner.hasPower(TrueSightPower.POWER_ID)) 
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));

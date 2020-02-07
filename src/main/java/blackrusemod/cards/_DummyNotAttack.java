@@ -10,7 +10,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class _DummyNotAttack extends CustomCard {
-	public static final String ID = "_DummyNotAttack";
+	public static final String ID = "BlackRuseMod:_DummyNotAttack";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

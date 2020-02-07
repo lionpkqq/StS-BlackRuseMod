@@ -10,8 +10,8 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.powers.KnivesPower;
 
 public class Uniform extends CustomRelic {
-	private static final String ID = "Uniform";
-	private static final int KNIVES = 6;
+	public static final String ID = "BlackRuseMod:Uniform";
+	public static final int KNIVES = 6;
 	
 	public Uniform() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.UNIFORM_RELIC), ImageMaster.loadImage(BlackRuseMod.UNIFORM_RELIC_OUTLINE), RelicTier.STARTER, LandingSound.MAGICAL);

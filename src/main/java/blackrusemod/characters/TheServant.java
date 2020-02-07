@@ -21,10 +21,14 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.abstracts.CustomPlayer;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.cards.Defend_Silver;
+import blackrusemod.cards.Exchange;
 import blackrusemod.cards.KidneyShot;
+import blackrusemod.cards.Strike_Silver;
 import blackrusemod.screens.VisionScreen;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.patches.TheServantEnum;
+import blackrusemod.relics.Uniform;
 
 public class TheServant extends CustomPlayer {
 	public static final int ENERGY_PER_TURN = 3;
@@ -70,23 +74,23 @@ public class TheServant extends CustomPlayer {
 
 	public ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Strike_S");
-		retVal.add("Strike_S");
-		retVal.add("Strike_S");
-		retVal.add("Strike_S");
-		retVal.add("Defend_S");
-		retVal.add("Defend_S");
-		retVal.add("Defend_S");
-		retVal.add("Defend_S");
-		retVal.add("KidneyShot");
-		retVal.add("Exchange");
+		retVal.add(Strike_Silver.ID);
+		retVal.add(Strike_Silver.ID);
+		retVal.add(Strike_Silver.ID);
+		retVal.add(Strike_Silver.ID);
+		retVal.add(Defend_Silver.ID);
+		retVal.add(Defend_Silver.ID);
+		retVal.add(Defend_Silver.ID);
+		retVal.add(Defend_Silver.ID);
+		retVal.add(KidneyShot.ID);
+		retVal.add(Exchange.ID);
 		return retVal;
 	}
 	
 	public ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
-		retVal.add("Uniform");
-		UnlockTracker.markRelicAsSeen("Uniform");
+		retVal.add(Uniform.ID);
+		UnlockTracker.markRelicAsSeen(Uniform.ID);
 		return retVal;
 	}
 	

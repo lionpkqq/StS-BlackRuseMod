@@ -15,7 +15,7 @@ import blackrusemod.actions.DenyAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Replace extends CustomCard {
-	public static final String ID = "Replace";
+	public static final String ID = "BlackRuseMod:Replace";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

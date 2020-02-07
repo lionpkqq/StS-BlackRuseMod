@@ -28,8 +28,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/lionp/workspace/lib/BaseMod.jar"/>
-	<classpathentry kind="lib" path="C:/Users/lionp/workspace/lib/desktop-1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/lionp/workspace/lib/ModTheSpire.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

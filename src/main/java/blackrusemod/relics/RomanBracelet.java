@@ -11,7 +11,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.cards.TemporalEssence;
 
 public class RomanBracelet extends CustomRelic {
-	private static final String ID = "RomanBracelet";
+	public static final String ID = "BlackRuseMod:RomanBracelet";
 	
 	public RomanBracelet() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.ROMAN_BRACELET_RELIC), ImageMaster.loadImage(BlackRuseMod.ROMAN_BRACELET_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);

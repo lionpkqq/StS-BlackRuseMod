@@ -13,7 +13,7 @@ import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class ReturningBlade extends CustomCard {
-	public static final String ID = "ReturningBlade";
+	public static final String ID = "BlackRuseMod:ReturningBlade";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

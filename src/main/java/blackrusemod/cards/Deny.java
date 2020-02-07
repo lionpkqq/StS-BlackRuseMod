@@ -13,7 +13,7 @@ import blackrusemod.actions.DenyAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Deny extends CustomCard {
-	public static final String ID = "Deny";
+	public static final String ID = "BlackRuseMod:Deny";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

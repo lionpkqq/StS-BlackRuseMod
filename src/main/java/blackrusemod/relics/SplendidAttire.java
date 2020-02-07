@@ -12,8 +12,8 @@ import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SatellitePower;
 
 public class SplendidAttire extends CustomRelic {
-	private static final String ID = "SplendidAttire";
-	private static final int KNIVES = 12;
+	public static final String ID = "BlackRuseMod:SplendidAttire";
+	public static final int KNIVES = 12;
 	
 	public SplendidAttire() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.SPLENDID_ATTIRE_RELIC), ImageMaster.loadImage(BlackRuseMod.SPLENDID_ATTIRE_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.MAGICAL);
@@ -21,7 +21,7 @@ public class SplendidAttire extends CustomRelic {
 
 	@Override
 	public void obtain() {
-		if (AbstractDungeon.player.hasRelic("Uniform")) this.instantObtain(AbstractDungeon.player, 0, false);
+		if (AbstractDungeon.player.hasRelic(Uniform.ID)) this.instantObtain(AbstractDungeon.player, 0, false);
 		else super.obtain();
 	}
 	

@@ -15,7 +15,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
 
 public class TemporalMisd extends CustomCard {
-	public static final String ID = "TemporalMisd";
+	public static final String ID = "BlackRuseMod:TemporalMisd";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

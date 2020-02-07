@@ -11,9 +11,10 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.SilverBladesPower;
 
 public class Snipe extends CustomCard {
-	public static final String ID = "Snipe";
+	public static final String ID = "BlackRuseMod:Snipe";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -41,10 +42,10 @@ public class Snipe extends CustomCard {
 	public void applyPowers() {
 		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
 		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
-		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
-			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID)) 
+			this.baseDamage += AbstractDungeon.player.getPower(SilverBladesPower.POWER_ID).amount;
 		super.applyPowers();
-		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID))
 			this.isDamageModified = true;
 	}
 

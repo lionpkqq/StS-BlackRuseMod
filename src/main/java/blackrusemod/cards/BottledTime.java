@@ -14,7 +14,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class BottledTime extends CustomCard {
-	public static final String ID = "BottledTime";
+	public static final String ID = "BlackRuseMod:BottledTime";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

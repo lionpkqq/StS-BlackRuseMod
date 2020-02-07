@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class ProtectionPower extends AbstractPower {
-	public static final String POWER_ID = "ProtectionPower";
+	public static final String POWER_ID = "BlackRuseMod:ProtectionPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -48,7 +48,7 @@ public class ProtectionPower extends AbstractPower {
 			actual_damage = 0;
 		}
 		else 
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "ProtectionPower"));
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 		return actual_damage;
 	}
 }

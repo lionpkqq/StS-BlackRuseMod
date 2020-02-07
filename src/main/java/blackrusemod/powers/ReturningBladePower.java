@@ -14,7 +14,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ReturningBladeAction;
 
 public class ReturningBladePower extends AbstractPower {
-	public static final String POWER_ID = "ReturningBladePower";
+	public static final String POWER_ID = "BlackRuseMod:ReturningBladePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,7 +27,7 @@ public class ReturningBladePower extends AbstractPower {
 	
 	public ReturningBladePower(AbstractCreature owner, AbstractCreature source, int amount, boolean prediction, AbstractCard c) {
 		this.name = NAME;
-		this.ID = ("ReturningBladePower" + idOffset);
+		this.ID = (POWER_ID + idOffset);
 		idOffset += 1;
 		this.amount = amount;
 		this.owner = owner;
@@ -43,7 +43,7 @@ public class ReturningBladePower extends AbstractPower {
 	}
 	
 	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower("TrueSightPower"))  
+		if (this.owner.hasPower(TrueSightPower.POWER_ID))  
 		{
 			this.flash();
 			AbstractDungeon.actionManager.addToBottom(new ReturningBladeAction(this.target, this.amount, this.itself));

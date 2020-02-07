@@ -19,7 +19,7 @@ import blackrusemod.powers.ElegancePower;
 import blackrusemod.vfx.FinishingImpactEffect;
 
 public class FinishingTouch extends CustomCard {
-	public static final String ID = "FinishingTouch";
+	public static final String ID = "BlackRuseMod:FinishingTouch";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

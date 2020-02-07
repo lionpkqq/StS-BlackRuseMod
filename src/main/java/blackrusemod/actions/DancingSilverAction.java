@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import blackrusemod.powers.SatellitePower;
+
 public class DancingSilverAction extends AbstractGameAction {
 	public DancingSilverAction(int times)
 	{
@@ -16,9 +18,9 @@ public class DancingSilverAction extends AbstractGameAction {
 
 	public void update()
 	{
-		if ((this.target != null) && (this.target.hasPower("SatellitePower")))
+		if ((this.target != null) && (this.target.hasPower(SatellitePower.POWER_ID)))
 			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.target, this.target, 
-					this.amount*this.target.getPower("SatellitePower").amount));
+					this.amount*this.target.getPower(SatellitePower.POWER_ID).amount));
 		this.isDone = true;
 	}
 }

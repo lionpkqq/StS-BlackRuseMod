@@ -14,7 +14,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.WasteNotPower;
 
 public class WasteNot extends CustomCard {
-	public static final String ID = "WasteNot";
+	public static final String ID = "BlackRuseMod:WasteNot";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;

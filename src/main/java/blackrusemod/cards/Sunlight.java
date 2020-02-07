@@ -19,9 +19,12 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
+import blackrusemod.powers.KnivesPower;
+import blackrusemod.powers.SilverBladesPower;
+import blackrusemod.powers.SurpressingFirePower;
 
 public class Sunlight extends CustomCard {
-	public static final String ID = "Sunlight";
+	public static final String ID = "BlackRuseMod:Sunlight";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -39,15 +42,15 @@ public class Sunlight extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if (p.hasPower("KnivesPower")) {
-			if (p.getPower("KnivesPower").amount >= 1) {
+		if (p.hasPower(KnivesPower.POWER_ID)) {
+			if (p.getPower(KnivesPower.POWER_ID).amount >= 1) {
 				AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
 				AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1f));
 				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "KnivesPower", 1));
-				if (p.hasPower("SurpressingFirePower")) {
+				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, KnivesPower.POWER_ID, 1));
+				if (p.hasPower(SurpressingFirePower.POWER_ID)) {
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-					p.addBlock(p.getPower("SurpressingFirePower").amount);
+					p.addBlock(p.getPower(SurpressingFirePower.POWER_ID).amount);
 				}
 				for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
@@ -64,10 +67,10 @@ public class Sunlight extends CustomCard {
 	public void applyPowers() {
 		if (canUpgrade()) this.baseDamage = ATTACK_DMG;
 		else this.baseDamage = ATTACK_DMG + UPGRADE_PLUS_DMG;
-		if (AbstractDungeon.player.hasPower("SilverBladesPower")) 
-			this.baseDamage += AbstractDungeon.player.getPower("SilverBladesPower").amount;
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID)) 
+			this.baseDamage += AbstractDungeon.player.getPower(SilverBladesPower.POWER_ID).amount;
 		super.applyPowers();
-		if (AbstractDungeon.player.hasPower("SilverBladesPower"))
+		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID))
 			this.isDamageModified = true;
 	}
 

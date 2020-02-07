@@ -12,8 +12,8 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.BacklashAction;
 
 public class MysterySword extends CustomRelic {
-	private static final String ID = "MysterySword";
-	private boolean activated = true;
+	public static final String ID = "BlackRuseMod:MysterySword";
+	public boolean activated = true;
 	
 	public MysterySword() {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC), ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.CLINK);

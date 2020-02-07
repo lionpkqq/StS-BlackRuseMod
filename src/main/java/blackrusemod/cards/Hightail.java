@@ -12,9 +12,10 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.HightailAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ElegancePower;
 
 public class Hightail extends CustomCard {
-	public static final String ID = "Hightail";
+	public static final String ID = "BlackRuseMod:Hightail";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -42,8 +43,8 @@ public class Hightail extends CustomCard {
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION;
 		if (!this.canUpgrade()) upgradeMagicNumber(3);
-		if (AbstractDungeon.player.hasPower("ElegancePower")) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower("ElegancePower").amount);
+		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
+			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();

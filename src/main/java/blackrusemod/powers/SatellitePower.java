@@ -16,7 +16,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.SatelliteAction;
 
 public class SatellitePower extends AbstractPower {
-	public static final String POWER_ID = "SatellitePower";
+	public static final String POWER_ID = "BlackRuseMod:SatellitePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -46,7 +46,7 @@ public class SatellitePower extends AbstractPower {
 		if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner))
 		{
 			flash();
-			if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
+			if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
 			AbstractDungeon.actionManager.addToBottom(new SatelliteAction(AbstractDungeon.player, info.owner, 
 					new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
 		}
@@ -57,7 +57,7 @@ public class SatellitePower extends AbstractPower {
 		this.damage = this.ATTACK;
 		if (card.type == AbstractCard.CardType.ATTACK) {
 			flash();
-			if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
+			if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
 			if (card.target != AbstractCard.CardTarget.ALL_ENEMY) {
 				AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 				AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
@@ -77,7 +77,7 @@ public class SatellitePower extends AbstractPower {
 	public void updateDescription()
 	{
 		this.damage = this.ATTACK;
-		if (this.owner.hasPower("SilverBladesPower")) this.damage += this.owner.getPower("SilverBladesPower").amount;
+		if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
 		this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1];
 	}
 }
