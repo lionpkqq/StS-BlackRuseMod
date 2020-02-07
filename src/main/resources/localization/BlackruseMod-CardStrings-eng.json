@@ -245,7 +245,7 @@
 	},
 	"BlackRuseMod:Sabotage": {
 		"NAME": "Sabotage",
-		"DESCRIPTION": "Deal !D! damage. NL Enemy loses Strength equals to damage for 1 turn. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Enemy loses NL that much Strength for 1 turn. NL Exhaust."
 	},
 	"BlackRuseMod:ShiftingGears": {
 		"NAME": "Shifting Gears",
@@ -299,7 +299,7 @@
 	},
 	"BlackRuseMod:Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw 1 Knife. NL Each deals !D! damage NL and applies !M! Blight NL to ALL enemies."
+		"DESCRIPTION": "Throw 1 Knife. NL It deals !D! damage NL and applies !M! Blight NL to ALL enemies."
 	},
 	"BlackRuseMod:SurpressingFire": {
 		"NAME": "Suppressing Fire",

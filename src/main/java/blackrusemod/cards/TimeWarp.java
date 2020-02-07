@@ -25,6 +25,7 @@ public class TimeWarp extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 6;
 	private static final int UPGRADE_PLUS_DMG = 3;
@@ -60,6 +61,8 @@ public class TimeWarp extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			this.rawDescription = UPGRADE_DESCRIPTION;
+			this.initializeDescription();
 			upgradeMagicNumber(1);
 		}
 	}

@@ -30,6 +30,7 @@ public class Initiator extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
+		this.cardsToPreview = new FollowUp();
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -50,6 +51,7 @@ public class Initiator extends CustomCard {
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			this.cardsToPreview.upgrade();
 		}
 	}
 }

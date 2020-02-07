@@ -24,7 +24,7 @@ public class TemporalMisd extends CustomCard {
 
 	public TemporalMisd() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_MISD), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY);
 		this.isEthereal = true;
 		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber = MISD;

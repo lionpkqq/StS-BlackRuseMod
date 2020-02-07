@@ -26,7 +26,7 @@ public class TemporalSlicing extends CustomCard {
 
 	public TemporalSlicing() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_SLICING), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.ALL_ENEMY);
 		this.isEthereal = true;
 		this.exhaust = true;
 		this.baseDamage = ATTACK_DMG;

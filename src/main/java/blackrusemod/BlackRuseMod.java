@@ -376,6 +376,15 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Unruled());
 		BaseMod.addCard(new LightFlow());
 		
+		BaseMod.addCard(new Initiator());
+		BaseMod.addCard(new FollowUp());
+		BaseMod.addCard(new FollowUp2());
+		BaseMod.addCard(new FinishingTouch());
+		BaseMod.addCard(new TemporalDefense());
+		BaseMod.addCard(new TemporalEssence());
+		BaseMod.addCard(new TemporalMisd());
+		BaseMod.addCard(new TemporalSlicing());
+		
 		logger.info("done editting cards");
 	}
     

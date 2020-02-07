@@ -27,11 +27,12 @@ public class FollowUp2 extends CustomCard {
 
 	public FollowUp2() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FOLLOW_UP_2), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.exhaust = true;
 		this.isEthereal = true;
+		this.cardsToPreview = new FinishingTouch();
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -52,6 +53,7 @@ public class FollowUp2 extends CustomCard {
 			this.rawDescription = UPGRADED_DESCRIPTION;
 			this.initializeDescription();
 			upgradeDamage(UPGRADE_PLUS_DMG);
+			this.cardsToPreview.upgrade();
 		}
 	}
 }
