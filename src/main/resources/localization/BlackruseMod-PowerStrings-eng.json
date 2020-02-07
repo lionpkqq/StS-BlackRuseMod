@@ -100,7 +100,7 @@
     "DESCRIPTIONS": ["The protection can sustain #b", " damage."]
   },
   "BlackRuseMod:FalseFlawlessFormPower": {
-    "NAME": "False Flawless Form",
+    "NAME": "Defy",
     "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable or #yFrail for #b", " turn."]
   },
   "BlackRuseMod:MatrixPower": {
