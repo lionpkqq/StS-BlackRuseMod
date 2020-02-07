@@ -62,7 +62,8 @@
 	},
 	"BlackRuseMod:Duplication": {
 		"NAME": "分身",
-		"DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。"
+		"DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。",
+		"UPGRADE_DESCRIPTION": "复制 !M! 张手牌。 NL 复制品本回合消耗为0。 NL 反冲 。 消耗 。"
 	},
 	"BlackRuseMod:Embodiment": {
 		"NAME": "幻时具现",
@@ -215,7 +216,8 @@
 	},
 	"BlackRuseMod:RealityMarble": {
 		"NAME": "固有结界",
-		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌在本次战斗内失去 虚无 属性。"
+		"DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌在本次战斗内失去 虚无 属性。",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合结束时， 保留 最多 !M! 张牌。 NL 保留 的牌在本次战斗内失去 虚无 属性。"
 	},
 	"BlackRuseMod:Rearm": {
 		"NAME": "再装填",
@@ -335,7 +337,8 @@
 	},
 	"BlackRuseMod:TimeWarp": {
 		"NAME": "迁跃",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 丢弃 !M! 张牌。 NL 变换 ：抽1张牌。"
 	},
 	"BlackRuseMod:Revamp": {
 		"NAME": "改进",
