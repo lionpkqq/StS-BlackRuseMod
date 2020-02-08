@@ -298,14 +298,14 @@ stress_reliever48
   orig: 48, 48
   offset: 14, 8
   index: -1
-surpressing_fire128
+suppressing_fire128
   rotate: false
   xy: 484, 424
   size: 98, 86
   orig: 128, 128
   offset: 15, 24
   index: -1
-surpressing_fire48
+suppressing_fire48
   rotate: false
   xy: 197, 257
   size: 37, 32

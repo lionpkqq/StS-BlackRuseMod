@@ -59,8 +59,8 @@
     "NAME": "Stress Reliever",
     "DESCRIPTIONS": ["At the start of your turn, look at the top #b", " cards of your draw pile. You may discard any of them."]
   },
-  "BlackRuseMod:SurpressingFirePower": {
-    "NAME": "Surpressing Fire",
+  "BlackRuseMod:SuppressingFirePower": {
+    "NAME": "Suppressing Fire",
     "DESCRIPTIONS": ["Whenever you spend a #yKnife with a card, gain #b", " #yBlock."]
   },
   "BlackRuseMod:TheWorldPower": {

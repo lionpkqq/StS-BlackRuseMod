@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.AmplifyDamagePower;
 import blackrusemod.powers.KnivesPower;
-import blackrusemod.powers.SurpressingFirePower;
+import blackrusemod.powers.SuppressingFirePower;
 import blackrusemod.vfx.KDEffect;
 import blackrusemod.vfx.ServantDaggerEffect;
 
@@ -64,9 +64,9 @@ public class ThrowKnivesAction extends AbstractGameAction {
 					this.source.getPower(KnivesPower.POWER_ID).reducePower(1);
 					this.source.getPower(KnivesPower.POWER_ID).updateDescription();
 					
-					if (this.source.hasPower(SurpressingFirePower.POWER_ID)) {
+					if (this.source.hasPower(SuppressingFirePower.POWER_ID)) {
 						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-						this.source.addBlock(this.source.getPower(SurpressingFirePower.POWER_ID).amount);
+						this.source.addBlock(this.source.getPower(SuppressingFirePower.POWER_ID).amount);
 					}
 					if (this.debuff != null && this.debuff == "Draw") 
 						AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.source, 1));

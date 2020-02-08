@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.SurpressingFirePower;
+import blackrusemod.powers.SuppressingFirePower;
 
-public class SurpressingFire extends CustomCard {
-	public static final String ID = "BlackRuseMod:SurpressingFire";
+public class SuppressingFire extends CustomCard {
+	public static final String ID = "BlackRuseMod:SuppressingFire";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -22,18 +22,18 @@ public class SurpressingFire extends CustomCard {
 	private static final int BLOCK = 2;
 	
 
-	public SurpressingFire() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SURPRESSING_FIRE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
+	public SuppressingFire() {
+		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SUPPRESSING_FIRE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.magicNumber = this.baseMagicNumber = BLOCK;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SurpressingFirePower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SuppressingFirePower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {
-		return new SurpressingFire();
+		return new SuppressingFire();
 	}
 
 	public void upgrade() {

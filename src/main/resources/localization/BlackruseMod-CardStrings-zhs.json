@@ -37,7 +37,8 @@
 	},
 	"BlackRuseMod:Comet": {	
 		"NAME": "彗星",
-		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。"
+		"DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。",
+		"UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 本回合内你每打出过1张牌，少抽1张牌。"
 	},
 	"BlackRuseMod:Dilation": {
 		"NAME": "膨胀",
@@ -301,7 +302,7 @@
 		"NAME": "日光",
 		"DESCRIPTION": "投掷1把 飞刀 。对所有敌人造成 !D! 点伤害并给予 !M! 层 枯萎 。"
 	},
-	"BlackRuseMod:SurpressingFire": {
+	"BlackRuseMod:SuppressingFire": {
 		"NAME": "火力压制",
 		"DESCRIPTION": "每当你投掷或转化1把 飞刀 ，获得 !M! 点 格挡 。"
 	},

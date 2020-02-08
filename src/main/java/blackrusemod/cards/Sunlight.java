@@ -21,7 +21,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SilverBladesPower;
-import blackrusemod.powers.SurpressingFirePower;
+import blackrusemod.powers.SuppressingFirePower;
 
 public class Sunlight extends CustomCard {
 	public static final String ID = "BlackRuseMod:Sunlight";
@@ -48,9 +48,9 @@ public class Sunlight extends CustomCard {
 				AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1f));
 				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, KnivesPower.POWER_ID, 1));
-				if (p.hasPower(SurpressingFirePower.POWER_ID)) {
+				if (p.hasPower(SuppressingFirePower.POWER_ID)) {
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-					p.addBlock(p.getPower(SurpressingFirePower.POWER_ID).amount);
+					p.addBlock(p.getPower(SuppressingFirePower.POWER_ID).amount);
 				}
 				for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 

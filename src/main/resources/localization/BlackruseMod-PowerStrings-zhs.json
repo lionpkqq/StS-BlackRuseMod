@@ -59,7 +59,7 @@
     "NAME": "解愁人",
     "DESCRIPTIONS": ["你的回合开始时，检视抽牌堆顶上 #b", " 张牌，你可以选择丢弃其中的任意张。"]
   },
-  "BlackRuseMod:SurpressingFirePower": {
+  "BlackRuseMod:SuppressingFirePower": {
     "NAME": "火力压制",
     "DESCRIPTIONS": ["每当你通过卡牌使用 #b1 把 #y飞刀 ，获得 #b", " 点 #y格挡 。"]
   },

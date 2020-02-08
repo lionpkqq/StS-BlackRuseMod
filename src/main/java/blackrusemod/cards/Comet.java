@@ -20,6 +20,7 @@ public class Comet extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String SINGULAR_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 3;
 	private static final int DRAW = 2;
@@ -35,8 +36,9 @@ public class Comet extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 				AbstractGameAction.AttackEffect.SMASH));
-		if (this.magicNumber > 0)
-			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, (this.magicNumber)));
+		// Use base magic number instead of current to avoid edge-case scenarios, like chaos potion
+		int cardsToDraw = this.baseMagicNumber - (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1);
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, Math.max(cardsToDraw, 0)));
 	}
 	
 	// Real-time feedback on how many cards Comet will draw	
@@ -44,6 +46,12 @@ public class Comet extends CustomCard {
 		this.magicNumber = this.baseMagicNumber - AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
 		if(this.magicNumber < 0) this.magicNumber = 0;
 		this.isMagicNumberModified = this.upgraded || !(this.magicNumber == this.baseMagicNumber);
+		if(this.magicNumber == 1) {
+			this.rawDescription = SINGULAR_DESCRIPTION;
+		} else {
+			this.rawDescription = DESCRIPTION;
+		}
+		initializeDescription();
 		// Have Comet glow gold if it is able to draw the maximum number of cards
 		if(this.magicNumber == this.baseMagicNumber) {
 			this.glowColor = GOLD_BORDER_GLOW_COLOR;

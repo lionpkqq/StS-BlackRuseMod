@@ -8,21 +8,21 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
 
-public class SurpressingFirePower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:SurpressingFirePower";
+public class SuppressingFirePower extends AbstractPower {
+	public static final String POWER_ID = "BlackRuseMod:SuppressingFirePower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
-	public SurpressingFirePower(AbstractCreature owner, int amount) {
+	public SuppressingFirePower(AbstractCreature owner, int amount) {
 		this.name = NAME;
 		this.ID = POWER_ID;
 		this.owner = owner;
 		this.amount = amount;
 		updateDescription();
-		this.region48 = powerAltas.findRegion("surpressing_fire48");
-		this.region128 = powerAltas.findRegion("surpressing_fire128");
+		this.region48 = powerAltas.findRegion("suppressing_fire48");
+		this.region128 = powerAltas.findRegion("suppressing_fire128");
 	}
 	
 	public void stackPower(int stackAmount)

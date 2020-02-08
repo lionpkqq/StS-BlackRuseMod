@@ -17,7 +17,7 @@ import blackrusemod.actions.BounceAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SilverBladesPower;
-import blackrusemod.powers.SurpressingFirePower;
+import blackrusemod.powers.SuppressingFirePower;
 import blackrusemod.vfx.ServantDaggerEffect;
 
 public class Ricochet extends CustomCard {
@@ -42,9 +42,9 @@ public class Ricochet extends CustomCard {
 			if (p.getPower(KnivesPower.POWER_ID).amount > 0) {
 				AbstractDungeon.actionManager.addToBottom(new VFXAction(new ServantDaggerEffect(m.hb.cX, m.hb.cY)));
 				AbstractDungeon.actionManager.addToBottom(new BounceAction(p, m, this.baseDamage, this.magicNumber+1));
-				if (p.hasPower(SurpressingFirePower.POWER_ID)) {
+				if (p.hasPower(SuppressingFirePower.POWER_ID)) {
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(p.hb.cX, p.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-					p.addBlock(p.getPower(SurpressingFirePower.POWER_ID).amount);
+					p.addBlock(p.getPower(SuppressingFirePower.POWER_ID).amount);
 				}
 				AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, KnivesPower.POWER_ID, 1));
 			}

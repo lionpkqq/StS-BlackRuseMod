@@ -147,7 +147,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
     public static final String FORESIGHT = "cards/foresight.png";
     public static final String STRIKE_SILVER = "cards/strike_silver.png";
     public static final String SUNLIGHT = "cards/sunlight.png";
-    public static final String SURPRESSING_FIRE = "cards/surpressing_fire.png";
+    public static final String SUPPRESSING_FIRE = "cards/suppressing_fire.png";
     public static final String TIME_THEFT = "cards/time_theft.png";
     public static final String TEMPORAL_DEFENSE = "cards/temporal_defense.png";
     public static final String TEMPORAL_ESSENCE = "cards/temporal_essence.png";
@@ -365,7 +365,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new Starlight());
 		BaseMod.addCard(new Foresight());
 		BaseMod.addCard(new Sunlight());
-		BaseMod.addCard(new SurpressingFire());
+		BaseMod.addCard(new SuppressingFire());
 		BaseMod.addCard(new TimeTheft());
 		BaseMod.addCard(new TheWorld());
 		BaseMod.addCard(new Contraction());

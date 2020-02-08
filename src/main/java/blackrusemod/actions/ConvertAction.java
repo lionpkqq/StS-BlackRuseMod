@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SatellitePower;
-import blackrusemod.powers.SurpressingFirePower;
+import blackrusemod.powers.SuppressingFirePower;
 
 public class ConvertAction extends AbstractGameAction {
 	private int stack;
@@ -25,9 +25,9 @@ public class ConvertAction extends AbstractGameAction {
 				this.stack = Math.min(this.amount, this.target.getPower(KnivesPower.POWER_ID).amount);
 				AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.target, this.target, KnivesPower.POWER_ID, this.stack));
 				AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.target, new SatellitePower(this.target, this.stack), this.stack));
-				if (this.target.hasPower(SurpressingFirePower.POWER_ID)) {
+				if (this.target.hasPower(SuppressingFirePower.POWER_ID)) {
 					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-					this.target.addBlock(this.target.getPower(SurpressingFirePower.POWER_ID).amount*this.stack);
+					this.target.addBlock(this.target.getPower(SuppressingFirePower.POWER_ID).amount*this.stack);
 				}
 			}
 		}
