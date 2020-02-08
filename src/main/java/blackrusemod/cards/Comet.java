@@ -53,7 +53,7 @@ public class Comet extends CustomCard {
 		}
 		initializeDescription();
 		// Have Comet glow gold if it is able to draw the maximum number of cards
-		if(this.magicNumber == this.baseMagicNumber) {
+		if(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() == 0) {
 			this.glowColor = GOLD_BORDER_GLOW_COLOR;
 		} else {
 			this.glowColor = BLUE_BORDER_GLOW_COLOR;
