@@ -21,10 +21,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.abstracts.CustomPlayer;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.Defend_Silver;
-import blackrusemod.cards.Exchange;
-import blackrusemod.cards.KidneyShot;
-import blackrusemod.cards.Strike_Silver;
+import blackrusemod.cards.*;
 import blackrusemod.screens.VisionScreen;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.patches.TheServantEnum;
@@ -189,5 +186,25 @@ public class TheServant extends CustomPlayer {
 
 	public AbstractPlayer newInstance() {
 		return new TheServant(this.name, TheServantEnum.THE_SERVANT);
+	}
+	
+	// Remove temporary cards from the card pool
+	public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+		tmpPool = super.getCardPool(tmpPool);
+		tmpPool.removeIf((c) -> {
+			switch(c.cardID) {
+				case(FollowUp.ID):
+				case(FollowUp2.ID):
+				case(FinishingTouch.ID):
+				case(TemporalDefense.ID):
+				case(TemporalEssence.ID):
+				case(TemporalSlicing.ID):
+				case(TemporalMisd.ID):
+					return true;
+				default:
+			}
+			return false;
+		});
+		return tmpPool;
 	}
 }

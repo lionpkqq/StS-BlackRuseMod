@@ -27,7 +27,7 @@ public class FollowUp2 extends CustomCard {
 
 	public FollowUp2() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FOLLOW_UP_2), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL,
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE,
 				AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.exhaust = true;

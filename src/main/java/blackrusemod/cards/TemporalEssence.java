@@ -24,7 +24,7 @@ public class TemporalEssence extends CustomCard {
 
 	public TemporalEssence() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_ESSENCE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 		this.isEthereal = true;
 		this.exhaust = true;
 		this.magicNumber = this.baseMagicNumber = DRAW;

@@ -28,7 +28,7 @@ public class TemporalDefense extends CustomCard {
 
 	public TemporalDefense() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TEMPORAL_DEFENSE), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.SPECIAL, AbstractCard.CardTarget.SELF);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 		this.isEthereal = true;
 		this.exhaust = true;
 		this.baseBlock = BLOCK_AMT;
