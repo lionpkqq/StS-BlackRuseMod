@@ -23,9 +23,10 @@ public class ReturningBladeAction extends AbstractGameAction {
 
 	public void update()
 	{
-		AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
-		AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.damage));
+		AbstractDungeon.actionManager.addToTop(new TemporalDamageAction(this.damage));
+		AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
+		AbstractDungeon.actionManager.addToTop(new SFXAction("ATTACK_HEAVY"));
+		
 		for (AbstractCard c: AbstractDungeon.player.discardPile.group) if (c == this.itself) this.where = 0;
 		for (AbstractCard c: AbstractDungeon.player.drawPile.group) if (c == this.itself) this.where = 1;
 		for (AbstractCard c: AbstractDungeon.player.exhaustPile.group) if (c == this.itself) this.where = 2;

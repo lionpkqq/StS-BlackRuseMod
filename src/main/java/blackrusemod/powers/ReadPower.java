@@ -13,55 +13,24 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.BlackRuseMod;
 
-public class ReadPower extends AbstractPower {
+public class ReadPower extends AbstractVisionPower {
 	public static final String POWER_ID = "BlackRuseMod:ReadPower";
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
-	private AbstractCreature source;
-	private AbstractMonster target;
-	private boolean prediction;
 	private int w;
-	private static int idOffset;
 	
-	public ReadPower(AbstractCreature owner, AbstractCreature source, int amount, int amount2, boolean prediction) {
-		this.name = NAME;
-		this.ID = (POWER_ID + idOffset);
-		idOffset += 1;
-		this.amount = amount;
-		this.owner = owner;
-		this.source = source;
-		this.target = (AbstractMonster)this.source;
-		this.amount = amount;
+	public ReadPower(AbstractCreature owner, AbstractMonster target, int amount, int amount2, boolean prediction) {
+		super(NAME, POWER_ID, "read", owner, target, amount, prediction);
 		this.w = amount2;
-		this.prediction = prediction;
-		this.type = AbstractPower.PowerType.BUFF;
 		updateDescription();
-		this.region48 = powerAltas.findRegion("read48");
-		this.region128 = powerAltas.findRegion("read128");
 	}
 	
-	public void atStartOfTurnPostDraw() {
-		if (this.owner.hasPower(TrueSightPower.POWER_ID))  
-		{
-			this.flash();
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
+	public void onVision(boolean result) {
+		if (result)  {
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
 		}
-		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && !this.prediction && !(this.target.intent == AbstractMonster.Intent.ATTACK) && !(this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) && !(this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))
-		{
-			this.flash();
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
-		}
-		else if ((this.target != null) && (!this.target.isDeadOrEscaped()) && this.prediction && ((this.target.intent == AbstractMonster.Intent.ATTACK) || (this.target.intent == AbstractMonster.Intent.ATTACK_BUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) || (this.target.intent == AbstractMonster.Intent.ATTACK_DEFEND)))
-		{
-			this.flash();
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
-		}
-		AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 999));
 	}
 
 	public void updateDescription()
