@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
+import basemod.BaseMod;
+
 public class ReturningBladeAction extends AbstractGameAction {
 	private AbstractCard itself;
 	private int where;
@@ -32,7 +34,7 @@ public class ReturningBladeAction extends AbstractGameAction {
 		for (AbstractCard c: AbstractDungeon.player.exhaustPile.group) if (c == this.itself) this.where = 2;
 		for (AbstractCard c: AbstractDungeon.player.hand.group) if (c == this.itself) this.where = 3;
 		if (this.where == 0) {
-			if (AbstractDungeon.player.hand.size() == 10) {
+			if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
 				AbstractDungeon.player.createHandIsFullDialog();
 			} else {
 				AbstractDungeon.player.discardPile.removeCard(this.itself);
@@ -40,7 +42,7 @@ public class ReturningBladeAction extends AbstractGameAction {
 			}
 		}
 		else if (this.where == 1) {
-			if (AbstractDungeon.player.hand.size() == 10) {
+			if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
 				AbstractDungeon.player.drawPile.moveToDiscardPile(this.itself);
 				AbstractDungeon.player.createHandIsFullDialog();
 			} else {
@@ -49,7 +51,7 @@ public class ReturningBladeAction extends AbstractGameAction {
 			}
 		}
 		else if (this.where == 2) {
-			if (AbstractDungeon.player.hand.size() == 10) {
+			if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
 				AbstractDungeon.player.drawPile.moveToDiscardPile(this.itself);
 				AbstractDungeon.player.createHandIsFullDialog();
 			} else {
