@@ -1,7 +1,6 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -11,17 +10,15 @@ import blackrusemod.actions.VisionPowerAction;
 
 public abstract class AbstractVisionPower extends AbstractPower {
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
-	public AbstractMonster target;
 	public boolean prediction;
 	private static int idOffset;
 	
-	public AbstractVisionPower(String name, String id, String texture, AbstractCreature owner, AbstractMonster target, int amount, boolean prediction) {
+	public AbstractVisionPower(String name, String id, String texture, AbstractMonster target, int amount, boolean prediction) {
 		this.name = name;
 		this.ID = (id + idOffset);
 		idOffset += 1;
 		this.amount = amount;
-		this.owner = owner;
-		this.target = target;
+		this.owner = target;
 		this.amount = amount;
 		this.prediction = prediction;
 		this.type = AbstractPower.PowerType.BUFF;

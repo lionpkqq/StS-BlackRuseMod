@@ -20,16 +20,16 @@ public class ReadPower extends AbstractVisionPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private int w;
 	
-	public ReadPower(AbstractCreature owner, AbstractMonster target, int amount, int amount2, boolean prediction) {
-		super(NAME, POWER_ID, "read", owner, target, amount, prediction);
+	public ReadPower(AbstractMonster target, int amount, int amount2, boolean prediction) {
+		super(NAME, POWER_ID, "read", target, amount, prediction);
 		this.w = amount2;
 		updateDescription();
 	}
 	
 	public void onVision(boolean result) {
 		if (result)  {
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.owner, new WeakPower(this.target, this.w, false), this.w));
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, this.owner, new ProtectionPower(this.owner, this.amount), this.amount));
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, this.w, false), this.w));
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ProtectionPower(AbstractDungeon.player, this.amount), this.amount));
 		}
 	}
 

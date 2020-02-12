@@ -22,7 +22,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.relics.KneeBrace;
 
-public class Potential extends CustomCard {
+public class Potential extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:Potential";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -60,14 +60,12 @@ public class Potential extends CustomCard {
 		}
 	}
 	
-	public void triggerOnManualDiscard() {
+	public void triggerShift() {
 		this.baseDamage += this.magicNumber;
 		this.superFlash();
 		AbstractDungeon.actionManager.addToTop(new DiscardToHandAction(this));
 		AbstractDungeon.actionManager.addToTop(new WaitAction(0.3F));
 		AbstractDungeon.actionManager.addToBottom(new UpdateCardDescriptionAction(this));
-		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 
 	public AbstractCard makeCopy() {

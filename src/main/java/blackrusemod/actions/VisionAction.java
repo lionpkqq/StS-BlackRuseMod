@@ -59,23 +59,23 @@ public class VisionAction extends AbstractGameAction {
 		else if (BlackRuseMod.vs.prediction.cardID == _DummyNotAttack.ID) this.prediction = false;
 		
 		if (this.card instanceof Read) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReadPower(this.source, (AbstractMonster)this.target, this.amount, this.amount2, this.prediction), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReadPower((AbstractMonster)this.target, this.amount, this.amount2, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof Snipe) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new SnipePower(this.source, (AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new SnipePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof TimeTheft) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new TimeTheftPower(this.source, (AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new TimeTheftPower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof Deadline) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new DeadlinePower(this.source, (AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new DeadlinePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof ReturningBlade) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReturningBladePower(this.source, (AbstractMonster)this.target, this.amount, this.prediction, this.card), this.amount));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReturningBladePower((AbstractMonster)this.target, this.amount, this.prediction, this.card), this.amount));
 			this.isDone = true;
 		}
 

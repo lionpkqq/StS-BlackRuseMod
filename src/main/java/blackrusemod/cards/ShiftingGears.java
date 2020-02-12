@@ -16,7 +16,7 @@ import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ElegancePower;
 import blackrusemod.relics.KneeBrace;
 
-public class ShiftingGears extends CustomCard {
+public class ShiftingGears extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:ShiftingGears";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -35,11 +35,9 @@ public class ShiftingGears extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
 	}
 	
-	public void triggerOnManualDiscard() {
+	public void triggerShift() {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new ElegancePower(AbstractDungeon.player, 1), 1));
-		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 
 	public AbstractCard makeCopy() {

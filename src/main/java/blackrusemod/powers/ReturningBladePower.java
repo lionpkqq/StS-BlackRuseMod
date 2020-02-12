@@ -21,13 +21,13 @@ public class ReturningBladePower extends AbstractVisionPower {
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private AbstractCard itself;
 	
-	public ReturningBladePower(AbstractCreature owner, AbstractMonster target, int amount, boolean prediction, AbstractCard c) {
-		super(NAME, POWER_ID, "returning_blade", owner, target, amount, prediction);
+	public ReturningBladePower(AbstractMonster target, int amount, boolean prediction, AbstractCard c) {
+		super(NAME, POWER_ID, "returning_blade", target, amount, prediction);
 		this.itself = c;
 	}
 	
 	public void onVision(boolean result) {
-		if(result) AbstractDungeon.actionManager.addToTop(new ReturningBladeAction(this.target, this.amount, this.itself));
+		if(result) AbstractDungeon.actionManager.addToTop(new ReturningBladeAction(this.owner, this.amount, this.itself));
 	}
 
 	public void updateDescription()

@@ -19,13 +19,13 @@ public class TimeTheftPower extends AbstractVisionPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public TimeTheftPower(AbstractCreature owner, AbstractMonster target, int amount, boolean prediction) {
-		super(NAME, POWER_ID, "time_theft", owner, target, amount, prediction);
+	public TimeTheftPower(AbstractMonster target, int amount, boolean prediction) {
+		super(NAME, POWER_ID, "time_theft", target, amount, prediction);
 	}
 	
 	public void onVision(boolean result) {
 		if (result) {
-			AbstractDungeon.actionManager.addToTop(new DrawCardAction(this.owner, this.amount));
+			AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, this.amount));
 			AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.amount));
 		}
 	}

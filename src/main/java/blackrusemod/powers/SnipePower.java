@@ -20,13 +20,13 @@ public class SnipePower extends AbstractVisionPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public SnipePower(AbstractCreature owner, AbstractMonster target, int amount, boolean prediction) {
-		super(NAME, POWER_ID, "snipe", owner, target, amount, prediction);
+	public SnipePower(AbstractMonster target, int amount, boolean prediction) {
+		super(NAME, POWER_ID, "snipe", target, amount, prediction);
 	}
 	
 	public void onVision(boolean result) {
 		if (result) {
-			AbstractDungeon.actionManager.addToTop(new ThrowKnivesAction(AbstractDungeon.player, this.target, new DamageInfo(this.owner, this.amount, DamageType.NORMAL), "Vulnerable"));
+			AbstractDungeon.actionManager.addToTop(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
 		}
 	}
 

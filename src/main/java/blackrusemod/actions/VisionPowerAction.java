@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
 import blackrusemod.cards.Deadline;
@@ -39,8 +40,9 @@ public class VisionPowerAction extends AbstractGameAction {
 
 	public void update() {
 		boolean visionResult = false;
+		AbstractMonster m = (AbstractMonster)power.owner;
 		// Always fail if the monster is dead or just not here anymore
-		if((power.target != null) && (!power.target.isDeadOrEscaped())) {
+		if((m != null) && (!m.isDeadOrEscaped())) {
 			// Always succeed if we have True Sight, and flash True Sight
 			if (power.owner.hasPower(TrueSightPower.POWER_ID)) {
 				power.owner.getPower(TrueSightPower.POWER_ID).flash();
@@ -48,17 +50,17 @@ public class VisionPowerAction extends AbstractGameAction {
 			}
 			// Succeed if our prediction matches what the monster is about to do (attack or not)
 			else if (power.prediction 
-					== ((power.target.intent == AbstractMonster.Intent.ATTACK) 
-					|| (power.target.intent == AbstractMonster.Intent.ATTACK_BUFF) 
-					|| (power.target.intent == AbstractMonster.Intent.ATTACK_DEBUFF) 
-					|| (power.target.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {
+					== ((m.intent == AbstractMonster.Intent.ATTACK) 
+					|| (m.intent == AbstractMonster.Intent.ATTACK_BUFF) 
+					|| (m.intent == AbstractMonster.Intent.ATTACK_DEBUFF) 
+					|| (m.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {
 				visionResult = true;
 			}
+			// Actions are added to the top - and thus in reverse order - to apply immediately afterwards
+			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(m, power.owner, power));
+			power.flash();
+			power.onVision(visionResult);
 		}
-		// Actions are added to the top - and thus in reverse order - to apply immediately afterwards
-		AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(power.target, power.owner, power));
-		power.flash();
-		power.onVision(visionResult);
 		this.isDone = true;
 	}
 }

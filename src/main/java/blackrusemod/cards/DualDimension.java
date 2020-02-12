@@ -20,7 +20,7 @@ import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
 import blackrusemod.relics.KneeBrace;
 
-public class DualDimension extends CustomCard {
+public class DualDimension extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:DualDimension";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -41,12 +41,10 @@ public class DualDimension extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new DoubleProtectionAction(p));
 	}
 	
-	public void triggerOnManualDiscard() {
+	public void triggerShift() {
 		this.applyPowers();
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
 				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
-		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 	
 	public void applyPowers() {

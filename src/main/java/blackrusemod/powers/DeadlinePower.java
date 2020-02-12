@@ -19,14 +19,14 @@ public class DeadlinePower extends AbstractVisionPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public DeadlinePower(AbstractCreature owner, AbstractMonster target, int amount, boolean prediction) {
-		super(NAME, POWER_ID, "no_escape", owner, target, amount, prediction);
+	public DeadlinePower(AbstractMonster target, int amount, boolean prediction) {
+		super(NAME, POWER_ID, "no_escape", target, amount, prediction);
 	}
 	
 	public void onVision(boolean result) {
 		if(result) {
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.owner, new VulnerablePower(this.target, this.amount, false), this.amount));
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.owner, new AmplifyDamagePower(this.target, this.amount), this.amount));
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, this.amount, false), this.amount));
+			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new AmplifyDamagePower(this.owner, this.amount), this.amount));
 		}
 	}
 

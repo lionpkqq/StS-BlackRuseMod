@@ -21,7 +21,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.relics.KneeBrace;
 
-public class ShatteredReality extends CustomCard {
+public class ShatteredReality extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:ShatteredReality";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -42,7 +42,7 @@ public class ShatteredReality extends CustomCard {
 				AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 	}
 	
-	public void triggerOnManualDiscard() {
+	public void triggerShift() {
 		AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP", 0.05F));
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			if (!mo.isDeadOrEscaped()) {
@@ -52,9 +52,6 @@ public class ShatteredReality extends CustomCard {
 						AbstractGameAction.AttackEffect.NONE));
 			}
 		}
-		
-		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) 
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
 	}
 
 	public AbstractCard makeCopy() {

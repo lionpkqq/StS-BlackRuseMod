@@ -21,7 +21,7 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
-public class PendulumOfEternity extends CustomCard {
+public class PendulumOfEternity extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:PendulumOfEternity";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -64,7 +64,7 @@ public class PendulumOfEternity extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
 	}
 	
-	public void triggerOnManualDiscard() {
+	public void triggerShift() {
 		this.superFlash();
 		if (this.cost > 0) this.cost -= 1;
 		this.isCostModified = true;
