@@ -78,7 +78,7 @@
 	},
 	"BlackRuseMod:FanOfKnives": {
 		"NAME": "Fan of Knives",
-		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife at each enemy X times. NL Each deals !D! damage."
+		"DESCRIPTION": "Throw 1 blackrusemod:Knife at each enemy X times. NL Each deals !D! damage."
 	},
 	"BlackRuseMod:GearUp": {
 		"NAME": "Gear Up",
@@ -90,7 +90,7 @@
 	},
 	"BlackRuseMod:Ricochet": {
 		"NAME": "Ricochet",
-		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage and bounces between enemies !M! times."
+		"DESCRIPTION": "Throw 1 blackrusemod:Knife. NL It deals !D! damage and bounces between enemies !M! times."
 	},
 	"BlackRuseMod:FlawlessForm": {
 		"NAME": "Flawless Form",
@@ -153,7 +153,7 @@
 	},
 	"BlackRuseMod:KidneyShot": {
 		"NAME": "Kidney Shot",
-		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Weak."
+		"DESCRIPTION": "Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Weak."
 	},
 	"BlackRuseMod:WasteNot": {
 		"NAME": "Waste Not",
@@ -161,7 +161,7 @@
 	},
 	"BlackRuseMod:KillingDoll": {
 		"NAME": "Killing Doll",
-		"DESCRIPTION": "blackrusemod:Throw ALL blackrusemod:Knives. NL Each deals !D! damage to a random enemy. NL Exhaust. "
+		"DESCRIPTION": "Throw ALL blackrusemod:Knives. NL Each deals !D! damage to a random enemy. NL Exhaust. "
 	},
 	"BlackRuseMod:Collapse": {
 		"NAME": "Collapse",
@@ -183,7 +183,7 @@
 	},
 	"BlackRuseMod:Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Vulnerable."
+		"DESCRIPTION": "Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Vulnerable."
 	},
 	"BlackRuseMod:BottledTime": {
 		"NAME": "Bottled Time",
@@ -266,7 +266,7 @@
 	},
 	"BlackRuseMod:Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "blackrusemod:Vision: blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage and applies !M! Vulnerable."
+		"DESCRIPTION": "blackrusemod:Vision: Throw 1 blackrusemod:Knife. NL It deals !D! damage and applies !M! Vulnerable."
 	},
 	"BlackRuseMod:Solidify": {
 		"NAME": "Solidify",
@@ -292,7 +292,7 @@
 	},
 	"BlackRuseMod:Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage to a random enemy and draws 1 card."
+		"DESCRIPTION": "Throw !M! blackrusemod:Knives. NL Each deals !D! damage to a random enemy and draws 1 card."
 	},
 	"BlackRuseMod:Foresight": {
 		"NAME": "Foresight",
@@ -300,11 +300,11 @@
 	},
 	"BlackRuseMod:Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage NL and applies !M! blackrusemod:Blight NL to ALL enemies."
+		"DESCRIPTION": "Throw 1 blackrusemod:Knife. NL It deals !D! damage NL and applies !M! blackrusemod:Blight NL to ALL enemies."
 	},
 	"BlackRuseMod:SuppressingFire": {
 		"NAME": "Suppressing Fire",
-		"DESCRIPTION": "Whenever you blackrusemod:throw a blackrusemod:Knife, gain !M! Block."
+		"DESCRIPTION": "Whenever you throw a blackrusemod:Knife, gain !M! Block."
 	},
 	"BlackRuseMod:TimeTheft": {
 		"NAME": "Time Theft",

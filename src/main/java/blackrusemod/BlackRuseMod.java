@@ -499,7 +499,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
                 BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
         }
         BaseMod.addKeyword(modid, null, new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be #ythrown to make attacks.");
-        BaseMod.addKeyword(modid, null, new String[] {"Throw", "throw", "Thrown", "thrown"}, "Lose up to X #yKnives to make up to X attacks.");
         BaseMod.addKeyword(modid, "Reality Marble", new String[] {"Marbled"}, "This card is not #yEthereal.");
         BaseMod.addKeyword(modid, null, new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(modid, null, new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted creatures take extra damage when attacked.");
