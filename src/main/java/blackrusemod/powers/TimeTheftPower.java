@@ -25,8 +25,8 @@ public class TimeTheftPower extends AbstractVisionPower {
 	
 	public void onVision(boolean result) {
 		if (result) {
-			AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, this.amount));
-			AbstractDungeon.actionManager.addToTop(new GainEnergyAction(this.amount));
+			addToBot(new GainEnergyAction(this.amount));
+			addToBot(new DrawCardAction(AbstractDungeon.player, this.amount));
 		}
 	}
 

@@ -29,7 +29,7 @@ public class Foresight extends CustomCard {
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ForesightPower(p, this.magicNumber), this.magicNumber));
+		addToBot(new ApplyPowerAction(p, p, new ForesightPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	public AbstractCard makeCopy() {

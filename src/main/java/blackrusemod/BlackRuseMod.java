@@ -1,7 +1,6 @@
 package blackrusemod;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
 import blackrusemod.cards.*;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +14,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -24,7 +22,6 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import basemod.BaseMod;
 import basemod.ModLabel;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.EditCardsSubscriber;
@@ -498,17 +495,17 @@ public class BlackRuseMod implements PostInitializeSubscriber,
                 BaseMod.addKeyword(new String[] {"矩阵"}, "将所受到的 #y攻击 伤害降低 #b50% 。每受到 #b1 次攻击损失 #b1 层矩阵。");
                 BaseMod.addKeyword(new String[] {"卫星"}, "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。");
         }
-        BaseMod.addKeyword(modid, null, new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be #ythrown to make attacks.");
+        BaseMod.addKeyword(modid, null, new String[] {"Knives", "knives", "Knife", "knife"}, "Knives are the Servant's most dedicated weapons. Can be thrown or converted into #ySatellites.");
         BaseMod.addKeyword(modid, "Reality Marble", new String[] {"Marbled"}, "This card is not #yEthereal.");
         BaseMod.addKeyword(modid, null, new String[] {"Temporal", "temporal"}, "Temporal cards cost 0 and have #yEthereal and #yExhaust.");
         BaseMod.addKeyword(modid, null, new String[] {"Blight", "blight", "blighted", "Blighted"}, "Blighted creatures take extra damage when attacked.");
-        BaseMod.addKeyword(modid, null, new String[] {"Shift", "shift"}, "Triggered by manually discarding the card.");
-        BaseMod.addKeyword(modid, null, new String[] {"Vision", "vision", "Visions", "visions"}, "Triggered at the start of your next turn by correctly predicting the target's next intent.");
-        BaseMod.addKeyword(modid, null, new String[] {"Backlash", "backlash"}, "Gain #b1 #yWeak, #yVulnerable, AND #yFrail.");
+        BaseMod.addKeyword(modid, null, new String[] {"Shift", "shift"}, "Shift effects can only be triggered by manually discarding the card.");
+        BaseMod.addKeyword(modid, null, new String[] {"Vision", "vision", "Visions", "visions"}, "Predict the enemy intent for the next turn. If correct, trigger the effect(s) at the start of your next turn.");
+        BaseMod.addKeyword(modid, null, new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable, AND #yFrail to you.");
         BaseMod.addKeyword(modid, null, new String[] {"Protection", "protection"}, "Whenever you lose HP, lose Protection instead.");
         BaseMod.addKeyword(modid, null, new String[] {"Elegance", "elegance"}, "Elegance improves #yBlock and #yProtection gained from cards.");
         BaseMod.addKeyword(modid, null, new String[] {"Matrix", "matrix"}, "Reduces Attack damage taken by #b50% once.");
-        BaseMod.addKeyword(modid, null, new String[] {"Satellites", "satellites", "Satellite", "satellite"}, "Autonomous #yKnives. Automatically #ythrow #b1 Satellite for #b4 damage when you use an Attack or are attacked. Can still be #ythrown normally.");
+        BaseMod.addKeyword(modid, null, new String[] {"Satellites", "satellites", "Satellite", "satellite"}, "When you use an Attack or are attacked, throw #b1 Satellite for #b4 damage.");
         logger.info("done setting up custom keywords");
 	}
 }

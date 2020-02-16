@@ -3,7 +3,7 @@ package blackrusemod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import blackrusemod.powers.ManipulatePower;
@@ -29,13 +29,13 @@ public class ManipulateAction extends AbstractGameAction {
 		if (this.energyOnUse != -1) {
 			effect = this.energyOnUse + 1;
 		}
-		if (this.p.hasRelic("Chemical X")) {
+		if (this.p.hasRelic(ChemicalX.ID)) {
 			effect += 2;
-			this.p.getRelic("Chemical X").flash();
+			this.p.getRelic(ChemicalX.ID).flash();
 		}
 		if (!this.canUpgrade) effect += 1;
 		if (effect > 0) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ManipulatePower(p, effect), effect));
+			addToBot(new ApplyPowerAction(p, p, new ManipulatePower(p, effect), effect));
 			if (!this.freeToPlayOnce) {
 				this.p.energy.use(EnergyPanel.totalCount);
 			}

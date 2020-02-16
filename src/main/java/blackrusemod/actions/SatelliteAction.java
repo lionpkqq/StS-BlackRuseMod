@@ -42,11 +42,6 @@ public class SatelliteAction extends AbstractGameAction {
 					}
 					this.source.getPower(SatellitePower.POWER_ID).reducePower(1);
 					this.source.getPower(SatellitePower.POWER_ID).updateDescription();
-					
-					if (this.source.hasPower(SuppressingFirePower.POWER_ID)) {
-						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
-						this.source.addBlock(this.source.getPower(SuppressingFirePower.POWER_ID).amount);
-					}
 				}
 			}
 			if (this.source.getPower(SatellitePower.POWER_ID).amount == 0) 

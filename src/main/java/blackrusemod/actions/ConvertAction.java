@@ -26,6 +26,10 @@ public class ConvertAction extends AbstractGameAction {
 				AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.target, this.target, KnivesPower.POWER_ID, this.stack));
 				AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.target, new SatellitePower(this.target, this.stack), this.stack));
 			}
+			if (this.source.hasPower(SuppressingFirePower.POWER_ID)) {
+				AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+				this.source.addBlock(this.source.getPower(SuppressingFirePower.POWER_ID).amount);
+			}
 		}
 		this.isDone = true;
 	}

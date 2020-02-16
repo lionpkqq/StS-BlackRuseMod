@@ -40,6 +40,6 @@ public class ForesightPower extends AbstractPower {
 	
 	public void atStartOfTurn() {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new ScryAction(this.amount));
+		addToBot(new ScryAction(this.amount));
 	}
 }

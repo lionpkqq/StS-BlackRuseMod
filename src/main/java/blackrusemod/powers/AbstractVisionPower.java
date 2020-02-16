@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.VisionPowerAction;
+import blackrusemod.patches.VisionApplyPatch;
 
 public abstract class AbstractVisionPower extends AbstractPower {
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
@@ -28,7 +29,7 @@ public abstract class AbstractVisionPower extends AbstractPower {
 	}
 	
 	public void atEndOfTurn(boolean isPlayer) {
-		AbstractDungeon.actionManager.addToBottom(new VisionPowerAction(this));
+		VisionApplyPatch.visionActions.add(new VisionPowerAction(this));
 	}
 	
 	public void onVision(boolean result) {}

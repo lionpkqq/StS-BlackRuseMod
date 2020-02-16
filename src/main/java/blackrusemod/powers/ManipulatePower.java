@@ -44,9 +44,9 @@ public class ManipulatePower extends AbstractPower {
 			else if (randomNum >= 3 && randomNum <= 5) c = new TemporalMisd().makeCopy();
 			else if (randomNum >= 6 && randomNum <= 8) c = new TemporalDefense().makeCopy();
 			else c = new TemporalEssence().makeCopy();
-			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
+			addToBot(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+		addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 	}
 
 	public void updateDescription()

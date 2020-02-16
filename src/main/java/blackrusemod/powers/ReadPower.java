@@ -28,8 +28,8 @@ public class ReadPower extends AbstractVisionPower {
 	
 	public void onVision(boolean result) {
 		if (result)  {
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, this.w, false), this.w));
-			AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ProtectionPower(AbstractDungeon.player, this.amount), this.amount));
+			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ProtectionPower(AbstractDungeon.player, this.amount), this.amount));
+			addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, this.w, false), this.w));
 		}
 	}
 

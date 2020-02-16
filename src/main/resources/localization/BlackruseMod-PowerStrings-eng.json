@@ -9,7 +9,7 @@
   },
   "BlackRuseMod:UpgradedEmbodimentPower": {
     "NAME": "Upgraded Embodiment",
-    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yUpgraded #yTemporal card(s) into your draw pile."]
+    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yupgraded #yTemporal card(s) into your draw pile."]
   },
   "BlackRuseMod:FlawlessFormPower": {
     "NAME": "Flawless Form",
@@ -37,7 +37,7 @@
   },
   "BlackRuseMod:MurderousAuraPower": {
     "NAME": "Murderous Aura",
-    "DESCRIPTIONS": ["At the start of your turn�� apply #b", " #yBlight to ALL enemies."]
+    "DESCRIPTIONS": ["At the start of your turn, apply #b", " #yBlight to ALL enemies."]
   },
   "BlackRuseMod:DeadlinePower": {
     "NAME": "Deadline",
@@ -49,7 +49,7 @@
   },
   "BlackRuseMod:SilverBladesPower": {
     "NAME": "Silver Blades",
-    "DESCRIPTIONS": ["Each #yKnife deals #b", " additional damage. Gain #b", " #yKnives at the start of your turn."]
+    "DESCRIPTIONS": ["#yKnives and #ySatellites deal #b", " additional damage. Obtain #b", " #yKnives at the start of your turn."]
   },
   "BlackRuseMod:StarChefPower": {
     "NAME": "Star Chef",
@@ -61,7 +61,7 @@
   },
   "BlackRuseMod:SuppressingFirePower": {
     "NAME": "Suppressing Fire",
-    "DESCRIPTIONS": ["Whenever you throw a #yKnife, gain #b", " #yBlock."]
+    "DESCRIPTIONS": ["Whenever you throw or convert a #yKnife, gain #b", " #yBlock."]
   },
   "BlackRuseMod:TheWorldPower": {
     "NAME": "The World",
@@ -73,11 +73,11 @@
   },
   "BlackRuseMod:SatellitePower": {
     "NAME": "Satellite",
-    "DESCRIPTIONS": ["Autonomous #yKnives. Automatically throw #b1 Satellite for #b", " damage when you use an Attack or are attacked. Can still be thrown normally."]
+    "DESCRIPTIONS": ["Automatically throw #b1 Satellite for #b", " damage when you use an Attack or are attacked."]
   },
   "BlackRuseMod:SnipePower": {
     "NAME": "Snipe",
-    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, #yThrow a #yKnife. Deal #b", " damage.", "Next turn, if the target enemy does #yNOT intend to attack, #yThrow a #yKnife. Deal #b", " damage."]
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, throw #b1 #yKnife. It deals #b", " damage.", "Next turn, if the target enemy does #yNOT intend to attack, throw #b1 #yKnife. It deals #b", " damage."]
   },
   "BlackRuseMod:TimeTheftPower": {
     "NAME": "Time Theft",
@@ -89,7 +89,7 @@
   },
   "BlackRuseMod:ManipulatePower": {
     "NAME": "Manipulate",
-    "DESCRIPTIONS": ["Adds #b2 random #yTemporal cards to your draw pile."]
+    "DESCRIPTIONS": ["Shuffles #b2 random #yTemporal cards into your draw pile."]
   },
   "BlackRuseMod:ReturningBladePower": {
     "NAME": "Returning Blade",

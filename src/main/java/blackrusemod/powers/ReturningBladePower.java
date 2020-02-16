@@ -27,7 +27,7 @@ public class ReturningBladePower extends AbstractVisionPower {
 	}
 	
 	public void onVision(boolean result) {
-		if(result) AbstractDungeon.actionManager.addToTop(new ReturningBladeAction(this.owner, this.amount, this.itself));
+		if(result) addToBot(new ReturningBladeAction(this.owner, this.amount, this.itself));
 	}
 
 	public void updateDescription()

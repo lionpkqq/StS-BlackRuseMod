@@ -56,10 +56,9 @@ public class VisionPowerAction extends AbstractGameAction {
 					|| (m.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {
 				visionResult = true;
 			}
-			// Actions are added to the top - and thus in reverse order - to apply immediately afterwards
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(m, power.owner, power));
 			power.flash();
 			power.onVision(visionResult);
+			addToBot(new RemoveSpecificPowerAction(m, power.owner, power));
 		}
 		this.isDone = true;
 	}

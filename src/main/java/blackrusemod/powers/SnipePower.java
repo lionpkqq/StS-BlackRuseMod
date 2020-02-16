@@ -1,6 +1,7 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -25,9 +26,7 @@ public class SnipePower extends AbstractVisionPower {
 	}
 	
 	public void onVision(boolean result) {
-		if (result) {
-			AbstractDungeon.actionManager.addToTop(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
-		}
+		if (result) addToBot(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
 	}
 
 	public void updateDescription()

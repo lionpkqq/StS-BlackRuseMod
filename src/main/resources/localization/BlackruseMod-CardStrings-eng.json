@@ -262,7 +262,7 @@
 	},
 	"BlackRuseMod:SilverBlades": {
 		"NAME": "Silver Blades",
-		"DESCRIPTION": "blackrusemod:Knives deal !M! additional damage. NL At the start NL of your turn, NL obtain !M! blackrusemod:Knives."
+		"DESCRIPTION": "blackrusemod:Knives and blackrusemod:Satellites deal !M! additional damage. NL At the start NL of your turn, NL obtain !M! blackrusemod:Knives."
 	},
 	"BlackRuseMod:Snipe": {
 		"NAME": "Snipe",
@@ -304,7 +304,7 @@
 	},
 	"BlackRuseMod:SuppressingFire": {
 		"NAME": "Suppressing Fire",
-		"DESCRIPTION": "Whenever you throw a blackrusemod:Knife, gain !M! Block."
+		"DESCRIPTION": "Whenever you throw or convert a blackrusemod:Knife, gain !M! Block."
 	},
 	"BlackRuseMod:TimeTheft": {
 		"NAME": "Time Theft",
