@@ -5,11 +5,11 @@
   },
   "BlackRuseMod:EmbodimentPower": {
     "NAME": "Embodiment",
-    "DESCRIPTIONS": ["At the end of your turn, add #b", " #yTemporal card(s) to your draw pile."]
+    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yTemporal card(s) into your draw pile."]
   },
   "BlackRuseMod:UpgradedEmbodimentPower": {
     "NAME": "Upgraded Embodiment",
-    "DESCRIPTIONS": ["At the end of your turn, add #b", " #yUpgraded #yTemporal card(s) to your draw pile."]
+    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yUpgraded #yTemporal card(s) into your draw pile."]
   },
   "BlackRuseMod:FlawlessFormPower": {
     "NAME": "Flawless Form",
@@ -49,23 +49,23 @@
   },
   "BlackRuseMod:SilverBladesPower": {
     "NAME": "Silver Blades",
-    "DESCRIPTIONS": ["Each #yKnife deals #b", " additional damage."]
+    "DESCRIPTIONS": ["Each #yKnife deals #b", " additional damage. Gain #b", " #yKnives at the start of your turn."]
   },
   "BlackRuseMod:StarChefPower": {
     "NAME": "Star Chef",
     "DESCRIPTIONS": ["At the start of your turn, you may exhaust up to #b", " card(s) and gain the same amount of energy."]
   },
-  "BlackRuseMod:StressRelieverPower": {
-    "NAME": "Stress Reliever",
-    "DESCRIPTIONS": ["At the start of your turn, look at the top #b", " cards of your draw pile. You may discard any of them."]
+  "BlackRuseMod:ForesightPower": {
+    "NAME": "Foresight",
+    "DESCRIPTIONS": ["At the start of your turn, #yScry #b", ""]
   },
   "BlackRuseMod:SuppressingFirePower": {
     "NAME": "Suppressing Fire",
-    "DESCRIPTIONS": ["Whenever you spend a #yKnife with a card, gain #b", " #yBlock."]
+    "DESCRIPTIONS": ["Whenever you throw a #yKnife, gain #b", " #yBlock."]
   },
   "BlackRuseMod:TheWorldPower": {
     "NAME": "The World",
-    "DESCRIPTIONS": ["This turn, the next card you play cost #b0."]
+    "DESCRIPTIONS": ["This turn, the next card you play costs #b0."]
   },
   "BlackRuseMod:TrueSightPower": {
     "NAME": "True Sight",
@@ -73,7 +73,7 @@
   },
   "BlackRuseMod:SatellitePower": {
     "NAME": "Satellite",
-    "DESCRIPTIONS": ["Whenever you use an Attack, lose #b1 #ySatellite and attack an extra time for #b", " damage. Whenever you are attacked, lose #b1 #ySatellite and deal #b4 damage to the attacker."]
+    "DESCRIPTIONS": ["Autonomous #yKnives. Automatically throw #b1 Satellite for #b", " damage when you use an Attack or are attacked. Can still be thrown normally."]
   },
   "BlackRuseMod:SnipePower": {
     "NAME": "Snipe",
@@ -93,7 +93,7 @@
   },
   "BlackRuseMod:ReturningBladePower": {
     "NAME": "Returning Blade",
-    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and put a copy of this card in your hand.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and put a copy of this card in your hand."]
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and return Returning Blade to your hand.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and return Returning Blade to your hand."]
   },
   "BlackRuseMod:ProtectionPower": {
     "NAME": "Protection",
@@ -105,7 +105,7 @@
   },
   "BlackRuseMod:MatrixPower": {
     "NAME": "Matrix",
-    "DESCRIPTIONS": ["Reduce the next #b", " #yAttack damage taken by #b25%."]
+    "DESCRIPTIONS": ["Reduce damage taken from the next #b", " #yAttacks by #b50%."]
   },
   "BlackRuseMod:ElegancePower": {
     "NAME": "Elegance",

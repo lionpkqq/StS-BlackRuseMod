@@ -36,6 +36,9 @@ public class SilverBladesPower extends AbstractPower {
 	public void updateDescription()
 	{
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+		if(DESCRIPTIONS.length > 2) {
+			this.description = this.description + this.amount + DESCRIPTIONS[2];
+		}
 	}
 	
 	public void atStartOfTurn() {

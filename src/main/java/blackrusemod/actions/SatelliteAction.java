@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.SatellitePower;
+import blackrusemod.powers.SuppressingFirePower;
 import blackrusemod.vfx.SatelliteDaggerEffect;
 
 public class SatelliteAction extends AbstractGameAction {
@@ -41,6 +42,11 @@ public class SatelliteAction extends AbstractGameAction {
 					}
 					this.source.getPower(SatellitePower.POWER_ID).reducePower(1);
 					this.source.getPower(SatellitePower.POWER_ID).updateDescription();
+					
+					if (this.source.hasPower(SuppressingFirePower.POWER_ID)) {
+						AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.source.hb.cX, this.source.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+						this.source.addBlock(this.source.getPower(SuppressingFirePower.POWER_ID).amount);
+					}
 				}
 			}
 			if (this.source.getPower(SatellitePower.POWER_ID).amount == 0) 

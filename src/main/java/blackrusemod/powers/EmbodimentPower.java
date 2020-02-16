@@ -43,16 +43,12 @@ public class EmbodimentPower extends AbstractPower {
 		flash();
 		AbstractCard c;
 		for (int i = 0; i < this.amount; i++) {
+			// 30% Slicing, Misdirect, Defend
+			// 10% Essence
 			int randomNum = AbstractDungeon.miscRng.random(9);
-			if (randomNum == 0) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 1) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 2) c = new TemporalDefense().makeCopy();
-			else if (randomNum == 3) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 4) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 5) c = new TemporalDefense().makeCopy();
-			else if (randomNum == 6) c = new TemporalSlicing().makeCopy();
-			else if (randomNum == 7) c = new TemporalMisd().makeCopy();
-			else if (randomNum == 8) c = new TemporalDefense().makeCopy();
+			if (randomNum >= 0 && randomNum <= 2) c = new TemporalSlicing().makeCopy();
+			else if (randomNum >= 3 && randomNum <= 5) c = new TemporalMisd().makeCopy();
+			else if (randomNum >= 6 && randomNum <= 8) c = new TemporalDefense().makeCopy();
 			else c = new TemporalEssence().makeCopy();
 			AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 1, true, false));
 		}

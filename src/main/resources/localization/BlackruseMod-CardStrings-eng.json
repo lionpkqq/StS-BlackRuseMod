@@ -17,7 +17,7 @@
 	},
 	"BlackRuseMod:InstantArmor": {
 		"NAME": "Instant Armor",
-		"DESCRIPTION": "Innate. NL Gain !M! Protection. NL Convert 3 Knives to Satellites. NL Exhaust."
+		"DESCRIPTION": "Innate. NL Gain !M! blackrusemod:Protection. NL Convert 3 blackrusemod:Knives to blackrusemod:Satellites. NL Exhaust."
 	},
 	"BlackRuseMod:Alleviate": {
 		"NAME": "Alleviate",
@@ -25,28 +25,28 @@
 	},
 	"BlackRuseMod:Barrier": {
 		"NAME": "Barrier",
-		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Protection."
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! blackrusemod:Protection."
 	},
 	"BlackRuseMod:PendulumOfEternity": {
 		"NAME": "Pendulum of Eternity",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL Shift: Costs 1 less [B] ."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !M! Weak. NL blackrusemod:Shift: Costs 1 less [B] ."
 	},
 	"BlackRuseMod:Orbit": {
 		"NAME": "Orbit",
-		"DESCRIPTION": "Convert !M! Knives to Satellites. NL Deal !D! damage to ALL enemies for each Satellite you have."
+		"DESCRIPTION": "Convert !M! blackrusemod:Knives to Satellites. NL Deal !D! damage to ALL enemies for each blackrusemod:Satellite you have."
 	},
 	"BlackRuseMod:Comet": {	
 		"NAME": "Comet",
-		"DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Draw 1 less card for each card you have played this turn.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Draw 1 less card for each card you have played this turn."
+		"DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Draw 1 less card for each card you have played this turn.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Draw 1 less card for each card you have played this turn."
 	},
 	"BlackRuseMod:Dilation": {
 		"NAME": "Dilation",
-		"DESCRIPTION": "Gain !M! Protection. NL This card's Protection is increased by 1 this combat."
+		"DESCRIPTION": "Gain !M! blackrusemod:Protection. NL This card's blackrusemod:Protection is increased by 1 this combat."
 	},
 	"BlackRuseMod:Moondial": {
 		"NAME": "Moondial",
-		"DESCRIPTION": "Add !M! random Temporal cards to your hand and your draw pile. NL Exhaust."
+		"DESCRIPTION": "Add !M! random blackrusemod:Temporal cards to your hand and your draw pile. NL Exhaust."
 	},
 	"BlackRuseMod:Deny": {
 		"NAME": "Deny",
@@ -55,21 +55,21 @@
 	},
 	"BlackRuseMod:DoubleEdge": {
 		"NAME": "Double Edge",
-		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Backlash."
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL blackrusemod:Backlash."
 	},
 	"BlackRuseMod:DualDimension": {
 		"NAME": "Dual Dimension",
-		"DESCRIPTION": "Double your Protection. NL Exhaust. NL Shift: Gain !M! Protection."
+		"DESCRIPTION": "Double your blackrusemod:Protection. NL Exhaust. NL blackrusemod:Shift: Gain !M! blackrusemod:Protection."
 	},
 	"BlackRuseMod:Duplication": {
 		"NAME": "Duplication",
-		"DESCRIPTION": "Duplicate !M! card. NL The duplicate NL costs 0 this turn. NL Backlash. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Duplicate !M! cards. NL The duplicates NL cost 0 this turn. NL Backlash. NL Exhaust."
+		"DESCRIPTION": "Duplicate !M! card. NL The duplicate NL costs 0 this turn. NL blackrusemod:Backlash. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Duplicate !M! cards. NL The duplicates NL cost 0 this turn. NL blackrusemod:Backlash. NL Exhaust."
 	},
 	"BlackRuseMod:Embodiment": {
 		"NAME": "Embodiment",
-		"DESCRIPTION": "At the end your turn, add a random Temporal card to your draw pile.",
-		"UPGRADE_DESCRIPTION": "At the end your turn, add a random Upgraded Temporal card to your draw pile."
+		"DESCRIPTION": "At the end of your turn, shuffle a random blackrusemod:Temporal card into your draw pile.",
+		"UPGRADE_DESCRIPTION": "At the end your turn, shuffle a random upgraded blackrusemod:Temporal card into your draw pile."
 	},
 	"BlackRuseMod:Defy": {
 		"NAME": "Defy",
@@ -78,11 +78,11 @@
 	},
 	"BlackRuseMod:FanOfKnives": {
 		"NAME": "Fan of Knives",
-		"DESCRIPTION": "Throw 1 Knife at each enemy X times. NL Each deals !D! damage."
+		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife at each enemy X times. NL Each deals !D! damage."
 	},
 	"BlackRuseMod:GearUp": {
 		"NAME": "Gear Up",
-		"DESCRIPTION": "Gain !M! Protection. NL Obtain 3 Knives."
+		"DESCRIPTION": "Gain !M! blackrusemod:Protection. NL Obtain 3 blackrusemod:Knives."
 	},
 	"BlackRuseMod:FastForward": {
 		"NAME": "Fast Forward",
@@ -90,12 +90,12 @@
 	},
 	"BlackRuseMod:Ricochet": {
 		"NAME": "Ricochet",
-		"DESCRIPTION": "Throw 1 Knife. NL It deals !D! damage and bounces between enemies !M! times."
+		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage and bounces between enemies !M! times."
 	},
 	"BlackRuseMod:FlawlessForm": {
 		"NAME": "Flawless Form",
-		"DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable or Frail.",
-		"UPGRADE_DESCRIPTION": "Gain !M! Protection. NL You are not affected by Weak, Vulnerable or Frail. NL Retain."
+		"DESCRIPTION": "Gain !M! blackrusemod:Protection. NL You are not affected by Weak, Vulnerable, or Frail.",
+		"UPGRADE_DESCRIPTION": "Gain !M! blackrusemod:Protection. NL You are not affected by Weak, Vulnerable, or Frail. NL Retain."
 	},
 	"BlackRuseMod:FloweringNight": {
 		"NAME": "Flowering Night",
@@ -108,21 +108,21 @@
 	},
 	"BlackRuseMod:FollowUp": {
 		"NAME": "Follow Up",
-		"DESCRIPTION": "Deal !D! damage. NL Add Follow Up 2 NL to your hand. NL Exhaust. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add Follow Up 2+ NL to your hand. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add Follow Up 2 NL to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add Follow Up 2+ NL to your hand. NL Exhaust."
 	},
 	"BlackRuseMod:FollowUp2": {
 		"NAME": "Follow Up 2",
-		"DESCRIPTION": "Deal !D! damage. NL Add Finishing Touch NL to your hand. NL Exhaust. NL Ethereal.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add Finishing Touch+ NL to your hand. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add Finishing Touch NL to your hand. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Add Finishing Touch+ NL to your hand. NL Exhaust."
 	},
 	"BlackRuseMod:FinishingTouch": {
 		"NAME": "Finishing Touch",
-		"DESCRIPTION": "Deal !D! damage. NL Gain 1 Elegance. NL Exhaust. NL Ethereal."
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Gain 1 blackrusemod:Elegance. NL Exhaust."
 	},
 	"BlackRuseMod:Hightail": {
 		"NAME": "Hightail",
-		"DESCRIPTION": "Gain !M! Protection NL X times. NL Backlash."
+		"DESCRIPTION": "Gain !M! blackrusemod:Protection NL X times. NL blackrusemod:Backlash."
 	},
 	"BlackRuseMod:Advance": {
 		"NAME": "Advance",
@@ -131,12 +131,12 @@
 	},
 	"BlackRuseMod:ForgedInTime": {
 		"NAME": "Forge in Time",
-		"DESCRIPTION": "Exhaust your hand. NL Gain !M! Protection and 2 Knives for each exhausted card. NL Exhaust."
+		"DESCRIPTION": "Exhaust your hand. NL Gain !M! blackrusemod:Protection and 2 blackrusemod:Knives for each exhausted card. NL Exhaust."
 	},
 	"BlackRuseMod:Gouge": {
 		"NAME": "Gouge",
-		"DESCRIPTION": "Deal !D! damage and apply 1 Blight X times. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 Blight X+1 times. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage and apply 1 blackrusemod:Blight X times. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage and apply 1 blackrusemod:Blight X+1 times. NL Exhaust."
 	},
 	"BlackRuseMod:BestPractice": {
 		"NAME": "Best Practice",
@@ -144,16 +144,16 @@
 	},
 	"BlackRuseMod:Exchange": {
 		"NAME": "Exchange",
-		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives.",
-		"UPGRADE_DESCRIPTION": "Discard !M! cards. NL Obtain !M! Knives. NL Retain."
+		"DESCRIPTION": "Discard !M! cards. NL Obtain !M! blackrusemod:Knives.",
+		"UPGRADE_DESCRIPTION": "Discard !M! cards. NL Obtain !M! blackrusemod:Knives. NL Retain."
 	},
 	"BlackRuseMod:Luminosity": {
 		"NAME": "Luminosity",
-		"DESCRIPTION": "Gain 1 Strength. NL Gain !M! Elegance."
+		"DESCRIPTION": "Gain 1 Strength. NL Gain !M! blackrusemod:Elegance."
 	},
 	"BlackRuseMod:KidneyShot": {
 		"NAME": "Kidney Shot",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and applies 1 Weak."
+		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Weak."
 	},
 	"BlackRuseMod:WasteNot": {
 		"NAME": "Waste Not",
@@ -161,21 +161,21 @@
 	},
 	"BlackRuseMod:KillingDoll": {
 		"NAME": "Killing Doll",
-		"DESCRIPTION": "Throw ALL Knives. NL Each deals !D! damage to a random enemy. NL Exhaust. "
+		"DESCRIPTION": "blackrusemod:Throw ALL blackrusemod:Knives. NL Each deals !D! damage to a random enemy. NL Exhaust. "
 	},
 	"BlackRuseMod:Collapse": {
 		"NAME": "Collapse",
-		"DESCRIPTION": "Deal damage equal to your current Protection to ALL enemies.",
+		"DESCRIPTION": "Deal damage equal to your current blackrusemod:Protection to ALL enemies.",
 		"EXTENDED_DESCRIPTION": [" NL (Deal !D! damage.)"]
 	},
 	"BlackRuseMod:Manipulate": {
 		"NAME": "Manipulate",
-		"DESCRIPTION": "Adds X+1 random Temporal cards to your draw pile.",
-		"UPGRADE_DESCRIPTION": "Adds X+2 random Temporal cards to your draw pile."
+		"DESCRIPTION": "Shuffle X+1 random blackrusemod:Temporal cards into your draw pile.",
+		"UPGRADE_DESCRIPTION": "Shuffle X+2 random blackrusemod:Temporal cards into your draw pile."
 	},
 	"BlackRuseMod:Misdirection": {
 		"NAME": "Misdirect",
-		"DESCRIPTION": "Gain !B! Block. NL Apply !M! Blight and Weak."
+		"DESCRIPTION": "Gain !B! Block. NL Apply !M! blackrusemod:Blight and Weak."
 	},
 	"BlackRuseMod:MoonPhase": {
 		"NAME": "Moon Phase",
@@ -183,7 +183,7 @@
 	},
 	"BlackRuseMod:Moonlight": {
 		"NAME": "Moonlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage and applies 1 Vulnerable."
+		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage and applies 1 Vulnerable."
 	},
 	"BlackRuseMod:BottledTime": {
 		"NAME": "Bottled Time",
@@ -192,28 +192,28 @@
 	},
 	"BlackRuseMod:MurderousAura": {
 		"NAME": "Murderous Aura",
-		"DESCRIPTION": "At the start of your turn, apply 1 Blight to ALL enemies.",
-		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply 1 Blight to ALL enemies."
+		"DESCRIPTION": "At the start of your turn, apply 1 blackrusemod:Blight to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply 1 blackrusemod:Blight to ALL enemies."
 	},
 	"BlackRuseMod:Read": {
 		"NAME": "Read",
-		"DESCRIPTION": "Vision: Gain !B! Protection and apply !M! Weak."
+		"DESCRIPTION": "blackrusemod:Vision: Gain !B! blackrusemod:Protection and apply !M! Weak."
 	},
 	"BlackRuseMod:DancingSilver": {
 		"NAME": "Dancing Silver",
-		"DESCRIPTION": "Convert !M! Knives to Satellites. NL Gain 2 Block for each Satellite you have."
+		"DESCRIPTION": "Convert !M! blackrusemod:Knives to blackrusemod:Satellites. NL Gain 2 Block for each blackrusemod:Satellite you have."
 	},
 	"BlackRuseMod:Potential": {
 		"NAME": "Potential",
-		"DESCRIPTION": "Deal !D! damage. NL Shift: Increase this card's damage by !M! this combat and put this card into NL your hand."
+		"DESCRIPTION": "Deal !D! damage. NL blackrusemod:Shift: Increase this card's damage by !M! this combat and put this card into NL your hand."
 	},
 	"BlackRuseMod:Desolation": {
 		"NAME": "Desolation",
-		"DESCRIPTION": "Deal !D! damage. NL Double the NL enemy's Blight. NL Exhaust."
+		"DESCRIPTION": "Deal !D! damage. NL Double the NL enemy's blackrusemod:Blight. NL Exhaust."
 	},
 	"BlackRuseMod:Deadline": {
 		"NAME": "Deadline",
-		"DESCRIPTION": "Vision: Apply !M! Blight and Vulnerable. NL Exhaust."
+		"DESCRIPTION": "blackrusemod:Vision: Apply !M! blackrusemod:Blight and Vulnerable. NL Exhaust."
 	},
 	"BlackRuseMod:RealityMarble": {
 		"NAME": "Reality Marble",
@@ -222,7 +222,7 @@
 	},
 	"BlackRuseMod:Rearm": {
 		"NAME": "Rearm",
-		"DESCRIPTION": "Draw !M! cards. NL Obtain 5 Knives."
+		"DESCRIPTION": "Draw !M! cards. NL Obtain 5 blackrusemod:Knives."
 	},
 	"BlackRuseMod:Replace": {
 		"NAME": "Replace",
@@ -230,11 +230,11 @@
 	},
 	"BlackRuseMod:Reset": {
 		"NAME": "Reset",
-		"DESCRIPTION": "Clear ALL Weak, Vulnerable and Frail. NL Each stack gives you !M! Protection. NL Exhaust."
+		"DESCRIPTION": "Clear ALL Weak, Vulnerable and Frail. NL Each stack gives you !M! blackrusemod:Protection. NL Exhaust."
 	},
 	"BlackRuseMod:ReturningBlade": {
 		"NAME": "Returning Blade",
-		"DESCRIPTION": "Vision: Deal !D! damage to ALL enemies and put this card NL into your hand. NL Can be upgraded any number of times."
+		"DESCRIPTION": "blackrusemod:Vision: Deal !D! damage to ALL enemies and put this card NL into your hand. NL Can be upgraded any number of times."
 	},
 	"BlackRuseMod:Shuttle": {
 		"NAME": "Shuttle",
@@ -250,28 +250,28 @@
 	},
 	"BlackRuseMod:ShiftingGears": {
 		"NAME": "Shifting Gears",
-		"DESCRIPTION": "Draw !M! cards. NL Shift: Gain 1 Elegance."
+		"DESCRIPTION": "Draw !M! cards. NL blackrusemod:Shift: Gain 1 blackrusemod:Elegance."
 	},
 	"BlackRuseMod:ShatteredReality": {
 		"NAME": "Shattered Reality",
-		"DESCRIPTION": "Deal !D! damage. NL Shift: Deal DOUBLE damage to ALL enemies."
+		"DESCRIPTION": "Deal !D! damage. NL blackrusemod:Shift: Deal DOUBLE damage to ALL enemies."
 	},
 	"BlackRuseMod:SilverMatrix": {
 		"NAME": "Silver Matrix",
-		"DESCRIPTION": "Convert !M! Knives to Satellites. NL Gain 1 Matrix for each Satellite you have."
+		"DESCRIPTION": "Convert !M! blackrusemod:Knives to blackrusemod:Satellites. NL Gain 1 blackrusemod:Matrix for each blackrusemod:Satellite you have."
 	},
 	"BlackRuseMod:SilverBlades": {
 		"NAME": "Silver Blades",
-		"DESCRIPTION": "Knives deal !M! additional damage. NL At the start NL of your turn, NL obtain !M! Knives."
+		"DESCRIPTION": "blackrusemod:Knives deal !M! additional damage. NL At the start NL of your turn, NL obtain !M! blackrusemod:Knives."
 	},
 	"BlackRuseMod:Snipe": {
 		"NAME": "Snipe",
-		"DESCRIPTION": "Vision: Throw 1 Knife. NL It deals !D! damage and applies !M! Vulnerable."
+		"DESCRIPTION": "blackrusemod:Vision: blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage and applies !M! Vulnerable."
 	},
 	"BlackRuseMod:Solidify": {
 		"NAME": "Solidify",
-		"DESCRIPTION": "Choose 1 Temporal card and place it on top of your draw pile. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Choose 1 Temporal card twice and place it on top of your draw pile. NL Exhaust."
+		"DESCRIPTION": "Choose 1 blackrusemod:Temporal card and place it on top of your draw pile. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Choose 1 blackrusemod:Temporal card twice and place it on top of your draw pile. NL Exhaust."
 	},
 	"BlackRuseMod:SoulSculpture": {
 		"NAME": "Soul Sculpture",
@@ -279,54 +279,54 @@
 	},
 	"BlackRuseMod:SpecialFormula": {
 		"NAME": "Special Formula",
-		"DESCRIPTION": "Gain [B] . NL Heal !M! HP. NL Backlash. NL Exhaust."
+		"DESCRIPTION": "Gain [B] . NL Heal !M! HP. NL blackrusemod:Backlash. NL Exhaust."
 	},
 	"BlackRuseMod:Spin": {
 		"NAME": "Spin",
-		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL Backlash."
+		"DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies. NL blackrusemod:Backlash."
 	},
 	"BlackRuseMod:StarChef": {
 		"NAME": "Star Chef",
-		"DESCRIPTION": "At the start of your turn, you may exhaust 1 card and gain [B] . NL Ethereal.",
+		"DESCRIPTION": "Ethereal. NL At the start of your turn, you may exhaust 1 card and gain [B] .",
 		"UPGRADE_DESCRIPTION": "At the start of your turn, you may exhaust 1 card and gain [B] ."
 	},
 	"BlackRuseMod:Starlight": {
 		"NAME": "Starlight",
-		"DESCRIPTION": "Throw !M! Knives. NL Each deals !D! damage to a random enemy and draws 1 card."
+		"DESCRIPTION": "blackrusemod:Throw !M! blackrusemod:Knives. NL Each deals !D! damage to a random enemy and draws 1 card."
 	},
 	"BlackRuseMod:Foresight": {
 		"NAME": "Foresight",
-		"DESCRIPTION": "At the start of your turn, look at the NL top !M! cards of NL your draw pile. NL You may discard NL any of them."
+		"DESCRIPTION": "At the start of your turn, Scry !M!."
 	},
 	"BlackRuseMod:Sunlight": {
 		"NAME": "Sunlight",
-		"DESCRIPTION": "Throw 1 Knife. NL It deals !D! damage NL and applies !M! Blight NL to ALL enemies."
+		"DESCRIPTION": "blackrusemod:Throw 1 blackrusemod:Knife. NL It deals !D! damage NL and applies !M! blackrusemod:Blight NL to ALL enemies."
 	},
 	"BlackRuseMod:SuppressingFire": {
 		"NAME": "Suppressing Fire",
-		"DESCRIPTION": "Whenever you throw or convert a Knife, gain !M! Block."
+		"DESCRIPTION": "Whenever you blackrusemod:throw a blackrusemod:Knife, gain !M! Block."
 	},
 	"BlackRuseMod:TimeTheft": {
 		"NAME": "Time Theft",
-		"DESCRIPTION": "Vision: Gain [B] [B] . NL Draw !M! cards. NL Exhaust.",
-		"UPGRADE_DESCRIPTION": "Vision: Gain [B] [B] [B] . NL Draw !M! cards. NL Exhaust."
+		"DESCRIPTION": "blackrusemod:Vision: Gain [B] [B] . NL Draw !M! cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "blackrusemod:Vision: Gain [B] [B] [B] . NL Draw !M! cards. NL Exhaust."
 	},
 	"BlackRuseMod:TemporalDefense": {
 		"NAME": "T. Defend",
-		"DESCRIPTION": "Temporal. NL Gain !B! Block. NL Gain !M! Protection."
+		"DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Gain !M! blackrusemod:Protection. NL Exhaust."
 	},
 	"BlackRuseMod:TemporalEssence": {
 		"NAME": "T. Essence",
-		"DESCRIPTION": "Temporal. NL Gain [B] . NL Draw !M! cards.",
-		"UPGRADE_DESCRIPTION": "Temporal. NL Gain [B] [B] . NL Draw !M! cards."
+		"DESCRIPTION": "Ethereal. NL Gain [B] . NL Draw !M! cards. NL Exhaust.",
+		"UPGRADE_DESCRIPTION": "Ethereal. NL Gain [B] [B] . NL Draw !M! cards. NL Exhaust."
 	},
 	"BlackRuseMod:TemporalMisd": {
 		"NAME": "T. Misdirect",
-		"DESCRIPTION": "Temporal. NL Apply !M! Blight and Weak to ALL enemies."
+		"DESCRIPTION": "Ethereal. NL Apply !M! blackrusemod:Blight and Weak to ALL enemies. NL Exhaust."
 	},
 	"BlackRuseMod:TemporalSlicing": {
 		"NAME": "T. Slice",
-		"DESCRIPTION": "Temporal. NL Deal !D! damage !M! times to ALL enemies."
+		"DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times to ALL enemies. NL Exhaust."
 	},
 	"BlackRuseMod:TheWorld": {
 		"NAME": "The World",
@@ -334,12 +334,12 @@
 	},
 	"BlackRuseMod:Contraction": {
 		"NAME": "Contraction",
-		"DESCRIPTION": "Gain !M! Protection. NL Convert all Block to Protection."
+		"DESCRIPTION": "Gain !M! blackrusemod:Protection. NL Convert all Block to blackrusemod:Protection."
 	},
 	"BlackRuseMod:TimeWarp": {
 		"NAME": "Time Warp",
-		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card. NL Shift: Draw 1 card.",
-		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard !M! cards. NL Shift: Draw 1 card."
+		"DESCRIPTION": "Deal !D! damage. NL Discard !M! card. NL blackrusemod:Shift: Draw 1 card.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Discard !M! cards. NL blackrusemod:Shift: Draw 1 card."
 	},
 	"BlackRuseMod:Revamp": {
 		"NAME": "Revamp",
@@ -348,8 +348,8 @@
 	},
 	"BlackRuseMod:TrueSight": {
 		"NAME": "True Sight",
-		"DESCRIPTION": "Vision effects will always be triggered.",
-		"UPGRADE_DESCRIPTION": "Vision effects will always be triggered. NL Retain."
+		"DESCRIPTION": "blackrusemod:Vision effects will always be triggered.",
+		"UPGRADE_DESCRIPTION": "blackrusemod:Vision effects will always be triggered. NL Retain."
 	},
 	"BlackRuseMod:Unruled": {
 		"NAME": "Unruled",
@@ -357,6 +357,6 @@
 	},
 	"BlackRuseMod:LightFlow": {
 		"NAME": "Light Flow",
-		"DESCRIPTION": "Deal !D! damage NL 3 times. NL Backlash."
+		"DESCRIPTION": "Deal !D! damage NL 3 times. NL blackrusemod:Backlash."
 	}
 }

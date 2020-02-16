@@ -54,7 +54,7 @@ public class Potential extends AbstractShiftCard {
 			if (m != null) {
 				AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY, new Color(0.0F, 1.0F, 1.0F, 1.0F))));
 			}
-			AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+			for(int i=0;i<8;i++) AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 			AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
 					AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 		}
