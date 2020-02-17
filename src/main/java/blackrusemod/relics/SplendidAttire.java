@@ -27,12 +27,10 @@ public class SplendidAttire extends CustomRelic {
 	
 	@Override
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new KnivesPower(AbstractDungeon.player, KNIVES)));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-				new ElegancePower(AbstractDungeon.player, 1), 1));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new SatellitePower(AbstractDungeon.player, 3), 3));
+		flash();
+		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
+		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SatellitePower(AbstractDungeon.player, 3), 3));
+		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElegancePower(AbstractDungeon.player, 1), 1));
 	}
 	
 	@Override

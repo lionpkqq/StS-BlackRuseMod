@@ -18,8 +18,8 @@ public class Uniform extends CustomRelic {
 	}
 
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new KnivesPower(AbstractDungeon.player, KNIVES)));
+		flash();
+		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
 	}
 	
 	public String getUpdatedDescription() {
