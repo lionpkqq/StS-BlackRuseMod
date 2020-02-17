@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -47,7 +48,7 @@ public class AbstractShiftCard extends CustomCard {
 	public void update() {
 		super.update();
 		AbstractGameAction currAction = AbstractDungeon.actionManager.currentAction;
-		if(currAction != null && currAction.actionType == ActionType.DISCARD
+		if(currAction != null && (currAction.actionType == ActionType.DISCARD || currAction instanceof ScryAction)
 				&& ((AbstractDungeon.screen == CurrentScreen.HAND_SELECT && (AbstractDungeon.player.hand.contains(this) || AbstractDungeon.handCardSelectScreen.selectedCards.contains(this)))
 				|| AbstractDungeon.screen == CurrentScreen.GRID && AbstractDungeon.gridSelectScreen.targetGroup.contains(this) && !AbstractDungeon.gridSelectScreen.selectedCards.contains(this))) {
 			this.beginGlowing();
