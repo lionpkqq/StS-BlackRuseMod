@@ -42,7 +42,7 @@
   "BlackRuseMod:OldScarf": {
     "NAME": "Old Scarf",
     "FLAVOR": "It is said that this is a family heirloom.",
-    "DESCRIPTIONS": ["At the start of each combat, upgrade all #yblackrusemod:Vision cards in your deck for the rest of combat."]
+    "DESCRIPTIONS": ["At the start of each combat, #yupgrade all #yblackrusemod:Vision cards in your deck for the rest of combat."]
   },
   "BlackRuseMod:Pan": {
     "NAME": "Pan",
