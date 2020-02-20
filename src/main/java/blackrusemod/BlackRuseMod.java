@@ -505,7 +505,7 @@ public class BlackRuseMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(modid, null, new String[] {"Protection", "protection"}, "Whenever you lose HP, lose Protection instead.");
         BaseMod.addKeyword(modid, null, new String[] {"Elegance", "elegance"}, "Elegance improves #yBlock and #yProtection gained from cards.");
         BaseMod.addKeyword(modid, null, new String[] {"Matrix", "matrix"}, "Reduces Attack damage taken by #b50% once.");
-        BaseMod.addKeyword(modid, null, new String[] {"Satellites", "satellites", "Satellite", "satellite"}, "When you use an Attack or are attacked, throw #b1 Satellite for #b4 damage.");
+        BaseMod.addKeyword(modid, null, new String[] {"Satellites", "satellites", "Satellite", "satellite"}, "When you play an Attack or are attacked, throw #b1 Satellite at the target/attacker for #b4 damage.");
         logger.info("done setting up custom keywords");
 	}
 }

@@ -73,7 +73,7 @@
   },
   "BlackRuseMod:SatellitePower": {
     "NAME": "Satellite",
-    "DESCRIPTIONS": ["Automatically throw #b1 Satellite for #b", " damage when you use an Attack or are attacked."]
+    "DESCRIPTIONS": ["When you play an Attack or are attacked, throw #b1 Satellite at the target/attacker for #b", " damage."]
   },
   "BlackRuseMod:SnipePower": {
     "NAME": "Snipe",
@@ -97,7 +97,7 @@
   },
   "BlackRuseMod:ProtectionPower": {
     "NAME": "Protection",
-    "DESCRIPTIONS": ["The protection can sustain #b", " damage."]
+    "DESCRIPTIONS": ["Your Protection can sustain #b", " damage."]
   },
   "BlackRuseMod:FalseFlawlessFormPower": {
     "NAME": "Defy",
