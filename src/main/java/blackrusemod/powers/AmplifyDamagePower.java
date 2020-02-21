@@ -30,7 +30,7 @@ public class AmplifyDamagePower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("blight128");
 	}
 	
-	public void onInitialApplication() {
+	/*public void onInitialApplication() {
 		if (AbstractDungeon.player.hasRelic(PaperSwan.ID)) {
 			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
 				AbstractDungeon.player.getRelic(PaperSwan.ID).flash();
@@ -49,7 +49,7 @@ public class AmplifyDamagePower extends AbstractPower {
 				this.amount += 1;
 			}
 		}
-	}
+	}*/
 
 	public void updateDescription()
 	{

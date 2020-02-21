@@ -19,6 +19,7 @@ public class MysterySword extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC), ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.CLINK);
 	}
 	
+	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		if (card.type == AbstractCard.CardType.SKILL  && (this.activated)) {
 			this.activated = false;
@@ -29,32 +30,39 @@ public class MysterySword extends CustomRelic {
 		}
 	}
 	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
-	public void onEquip()
-	{
+	@Override
+	public void onEquip() {
 		AbstractDungeon.player.energy.energyMaster += 1;
 	}
 
-	public void onUnequip()
-	{
+	@Override
+	public void onUnequip() {
 		AbstractDungeon.player.energy.energyMaster -= 1;
 	}
 	
-	public void atTurnStart()
-	{
+	@Override
+	public void atTurnStart() {
 		beginPulse();
 		this.pulse = true;
 		this.activated = true;
 	}
 
-	public boolean checkTrigger()
-	{
+	@Override
+	public boolean checkTrigger() {
 		return this.activated;
 	}
 	
+	@Override
+	public void onVictory() {
+		stopPulse();
+	}
+	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new MysterySword();
 	}

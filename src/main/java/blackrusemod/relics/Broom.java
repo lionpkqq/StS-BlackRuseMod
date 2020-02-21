@@ -18,21 +18,23 @@ public class Broom extends CustomRelic {
 		this.counter = 0;
 	}
 	
-	public void onManualDiscard()
-	 {
+	@Override
+	public void onManualDiscard() {
 		this.counter += 1;
 		if (this.counter >= COUNT) {
 			flash();
 			AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-			this.counter -= COUNT;
+			this.counter = 0;
 			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
 		}
 	}
 	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new Broom();
 	}

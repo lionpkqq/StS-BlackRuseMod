@@ -17,17 +17,19 @@ public class PocketWatch extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC), ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);
 	}
 	
-	public void onExhaust(AbstractCard card)
-	{
+	@Override
+	public void onExhaust(AbstractCard card) {
 		flash();
-		AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		addToBot(new DrawCardAction(AbstractDungeon.player, 1));
 	}
 	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new PocketWatch();
 	}

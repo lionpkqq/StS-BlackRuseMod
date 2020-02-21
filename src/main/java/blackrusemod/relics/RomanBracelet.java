@@ -1,6 +1,7 @@
 package blackrusemod.relics;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -21,7 +22,14 @@ public class RomanBracelet extends CustomRelic {
 	public void atBattleStart() {
 		flash();
 		AbstractCard c = new TemporalEssence().makeCopy();
-		AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(c, 2, true, false));
+		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		addToBot(new MakeTempCardInDrawPileAction(c, 2, true, false));
+		this.grayscale = true;
+	}
+	
+	@Override
+	public void onVictory() {
+		this.grayscale = false;
 	}
 	
 	@Override

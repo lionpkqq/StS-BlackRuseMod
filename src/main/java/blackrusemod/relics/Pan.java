@@ -1,6 +1,7 @@
 package blackrusemod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,8 +23,15 @@ public class Pan extends CustomRelic {
 	public void atBattleStart() {
 		flash();
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+			addToBot(new RelicAboveCreatureAction(mo, this));
 			addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new AmplifyDamagePower(mo, BLIGHT), BLIGHT));
 		}
+		this.grayscale = true;
+	}
+	
+	@Override
+	public void onVictory() {
+		this.grayscale = false;
 	}
 	
 	@Override

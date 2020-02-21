@@ -28,6 +28,13 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
 		</dependency>
+		<dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>stslib</artifactId>
+            <version>1.9.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/STSLib.jar</systemPath>
+        </dependency>
 	</dependencies>
 	
 	<properties>
@@ -48,7 +55,7 @@
 						<phase>package</phase>
 						<configuration>
 							<target>
-								<copy file="target/BlackRuseMod.jar" tofile="../_ModTheSpire/mods/BlackRuseMod.jar" />
+								<copy file="target/BlackRuseMod.jar" tofile="../BlackRuseMod.jar" />
 							</target>
 						</configuration>
 						<goals>

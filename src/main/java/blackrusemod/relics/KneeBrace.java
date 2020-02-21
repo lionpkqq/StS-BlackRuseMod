@@ -14,10 +14,12 @@ public class KneeBrace extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC), ImageMaster.loadImage(BlackRuseMod.KNEE_BRACE_RELIC_OUTLINE), RelicTier.UNCOMMON, LandingSound.FLAT);
 	}
 	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new KneeBrace();
 	}

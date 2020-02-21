@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -18,19 +19,22 @@ public class StoneMask extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.STONE_MASK_RELIC), ImageMaster.loadImage(BlackRuseMod.STONE_MASK_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.MAGICAL);
 	}
 	
+	@Override
 	public void onMonsterDeath(AbstractMonster m) {
-		if ((!m.halfDead) && (!m.hasPower("Minion"))) {
+		if ((!m.halfDead) && (!m.hasPower(MinionPower.POWER_ID))) {
 			AbstractDungeon.player.heal(HEAL_AMT);
 			AbstractDungeon.player.increaseMaxHp(MAX_HP_AMT, false);
 			flash();
-			AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+			addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 		}
 	}
 	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new StoneMask();
 	}

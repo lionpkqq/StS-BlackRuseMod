@@ -1,6 +1,7 @@
 package blackrusemod.relics;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -28,9 +29,10 @@ public class SplendidAttire extends CustomRelic {
 	@Override
 	public void atBattleStart() {
 		flash();
-		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
-		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SatellitePower(AbstractDungeon.player, 3), 3));
-		addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElegancePower(AbstractDungeon.player, 1), 1));
+		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SatellitePower(AbstractDungeon.player, 3), 3));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElegancePower(AbstractDungeon.player, 1), 1));
 	}
 	
 	@Override

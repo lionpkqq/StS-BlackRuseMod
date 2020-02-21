@@ -1,5 +1,6 @@
 package blackrusemod.relics;
 
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -15,14 +16,25 @@ public class OldScarf extends CustomRelic {
 		super(ID, ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC), ImageMaster.loadImage(BlackRuseMod.OLD_SCARF_RELIC_OUTLINE), RelicTier.RARE, LandingSound.FLAT);
 	}
 	
+	@Override
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToTop(new OldScarfAction());
+		flash();
+		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		addToBot(new OldScarfAction());
+		this.grayscale = true;
 	}
 	
+	@Override
+	public void onVictory() {
+		this.grayscale = false;
+	}
+	
+	@Override
 	public String getUpdatedDescription() {
 		return this.DESCRIPTIONS[0];
 	}
 	
+	@Override
 	public AbstractRelic makeCopy() {
 		return new OldScarf();
 	}
