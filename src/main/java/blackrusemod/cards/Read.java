@@ -3,6 +3,7 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -10,6 +11,7 @@ import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.VisionAction;
 import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.powers.ElegancePower;
 
 public class Read extends CustomCard {
 	public static final String ID = "BlackRuseMod:Read";
@@ -27,6 +29,15 @@ public class Read extends CustomCard {
 				AbstractCard.CardTarget.ENEMY);
 		this.baseBlock = BLOCK;
 		this.magicNumber = this.baseMagicNumber = WEAK;
+	}
+
+	@Override
+	public void applyPowersToBlock() {
+		this.block = this.baseBlock;
+		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
+			this.block += AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount;
+			this.isBlockModified = true;
+		}
 	}
 
 	@Override
