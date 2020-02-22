@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 
-import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import blackrusemod.relics.KneeBrace;
 

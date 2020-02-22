@@ -1,8 +1,6 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,10 +8,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.TemporalDefense;
-import blackrusemod.cards.TemporalEssence;
-import blackrusemod.cards.TemporalMisd;
-import blackrusemod.cards.TemporalSlicing;
+import blackrusemod.actions.MakeRandomTemporalCardAction;
 
 public class EmbodimentPower extends AbstractPower {
 	public static final String POWER_ID = "BlackRuseMod:EmbodimentPower";
@@ -31,31 +26,15 @@ public class EmbodimentPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("embodiment48");
 		this.region128 = powerAltas.findRegion("embodiment128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void atEndOfTurn(boolean isPlayer)
-	{
+	@Override
+	public void atEndOfTurn(boolean isPlayer) {
 		flash();
-		AbstractCard c;
-		for (int i = 0; i < this.amount; i++) {
-			// 30% Slicing, Misdirect, Defend
-			// 10% Essence
-			int randomNum = AbstractDungeon.miscRng.random(9);
-			if (randomNum >= 0 && randomNum <= 2) c = new TemporalSlicing().makeCopy();
-			else if (randomNum >= 3 && randomNum <= 5) c = new TemporalMisd().makeCopy();
-			else if (randomNum >= 6 && randomNum <= 8) c = new TemporalDefense().makeCopy();
-			else c = new TemporalEssence().makeCopy();
-			addToBot(new MakeTempCardInDrawPileAction(c, 1, true, false));
-		}
+		addToBot(new MakeRandomTemporalCardAction(AbstractDungeon.player.drawPile, this.amount));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

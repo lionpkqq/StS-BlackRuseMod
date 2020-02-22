@@ -1,12 +1,9 @@
 package blackrusemod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
-import blackrusemod.powers.ManipulatePower;
 
 public class ManipulateAction extends AbstractGameAction {
 	private boolean freeToPlayOnce = false;
@@ -35,7 +32,7 @@ public class ManipulateAction extends AbstractGameAction {
 		}
 		if (!this.canUpgrade) effect += 1;
 		if (effect > 0) {
-			addToBot(new ApplyPowerAction(p, p, new ManipulatePower(p, effect), effect));
+			addToBot(new MakeRandomTemporalCardAction(this.p.drawPile, effect));
 			if (!this.freeToPlayOnce) {
 				this.p.energy.use(EnergyPanel.totalCount);
 			}

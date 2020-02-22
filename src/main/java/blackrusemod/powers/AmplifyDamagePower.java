@@ -4,12 +4,10 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.relics.PaperSwan;
 
 public class AmplifyDamagePower extends AbstractPower {
 	public static final String POWER_ID = "BlackRuseMod:AmplifyDamagePower";
@@ -29,34 +27,15 @@ public class AmplifyDamagePower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("blight48");
 		this.region128 = powerAltas.findRegion("blight128");
 	}
-	
-	/*public void onInitialApplication() {
-		if (AbstractDungeon.player.hasRelic(PaperSwan.ID)) {
-			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-				AbstractDungeon.player.getRelic(PaperSwan.ID).flash();
-				this.amount += 1;
-			}
-		}
-	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-		if (AbstractDungeon.player.hasRelic(PaperSwan.ID)) {
-			if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-				AbstractDungeon.player.getRelic(PaperSwan.ID).flash();
-				this.amount += 1;
-			}
-		}
-	}*/
 
+	@Override
 	public void updateDescription()
 	{
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		this.type = AbstractPower.PowerType.DEBUFF;
 	}
 	
+	@Override
 	public float atDamageReceive(float damage, DamageInfo.DamageType type)
 	{
 		if (type == DamageInfo.DamageType.NORMAL && (this.owner != null))

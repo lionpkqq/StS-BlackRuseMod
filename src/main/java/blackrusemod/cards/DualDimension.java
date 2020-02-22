@@ -3,7 +3,6 @@ package blackrusemod.cards;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,13 +11,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.DoubleProtectionAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
-import blackrusemod.relics.KneeBrace;
 
 public class DualDimension extends AbstractShiftCard {
 	public static final String ID = "BlackRuseMod:DualDimension";
@@ -36,17 +33,19 @@ public class DualDimension extends AbstractShiftCard {
 		this.exhaust = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VFXAction(new VerticalAuraEffect(new Color(0.0F, 1.0F, 1.0F, 0.0F), p.hb.cX, p.hb.cY)));
-		AbstractDungeon.actionManager.addToBottom(new DoubleProtectionAction(p));
+		addToBot(new VFXAction(new VerticalAuraEffect(new Color(0.0F, 1.0F, 1.0F, 0.0F), p.hb.cX, p.hb.cY)));
+		addToBot(new DoubleProtectionAction(p));
 	}
 	
+	@Override
 	public void triggerShift() {
 		this.applyPowers();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
 	}
 	
+	@Override
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION;
 		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
@@ -56,10 +55,12 @@ public class DualDimension extends AbstractShiftCard {
 		super.applyPowers();
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new DualDimension();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 import blackrusemod.powers.SatellitePower;
-import blackrusemod.powers.SuppressingFirePower;
 import blackrusemod.vfx.SatelliteDaggerEffect;
 
 public class SatelliteAction extends AbstractGameAction {

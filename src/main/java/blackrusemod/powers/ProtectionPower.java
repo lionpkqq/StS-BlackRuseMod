@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -27,18 +26,13 @@ public class ProtectionPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("protection48");
 		this.region128 = powerAltas.findRegion("protection128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
+	@Override
 	public int onLoseHp(int damageAmount) {
 		this.flash();
 		int actual_damage = damageAmount - this.amount;
@@ -48,7 +42,7 @@ public class ProtectionPower extends AbstractPower {
 			actual_damage = 0;
 		}
 		else 
-			AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+			addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 		return actual_damage;
 	}
 }

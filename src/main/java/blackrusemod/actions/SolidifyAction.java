@@ -23,15 +23,10 @@ public class SolidifyAction extends AbstractGameAction {
 		this.actionType = AbstractGameAction.ActionType.SPECIAL;
 		this.duration = Settings.ACTION_DUR_FAST;
 		this.source = p;
-		AbstractCard c;
-		c = new TemporalSlicing().makeCopy();
-		this.list.add(c);
-		c = new TemporalMisd().makeCopy();
-		this.list.add(c);
-		c = new TemporalDefense().makeCopy();
-		this.list.add(c);
-		c = new TemporalEssence().makeCopy();
-		this.list.add(c);
+		this.list.add(new TemporalSlicing());
+		this.list.add(new TemporalMisd());
+		this.list.add(new TemporalDefense());
+		this.list.add(new TemporalEssence());
 	}
 
 	public void update()

@@ -15,11 +15,9 @@ import blackrusemod.BlackRuseMod;
 
 import com.badlogic.gdx.graphics.g2d.*;
 import java.util.*;
-import org.apache.logging.log4j.*;
 
 public class VisionScreen extends CardRewardScreen
 {
-    private static final Logger logger;
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private static final float PAD_X;
@@ -264,7 +262,6 @@ public class VisionScreen extends CardRewardScreen
     }
     
     static {
-        logger = LogManager.getLogger(CardRewardScreen.class.getName());
         uiStrings = CardCrawlGame.languagePack.getUIString("CardRewardScreen");
         TEXT = VisionScreen.uiStrings.TEXT;
         PAD_X = 40.0f * Settings.scale;

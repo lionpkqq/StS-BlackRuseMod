@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -26,18 +25,13 @@ public class ForesightPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("stress_reliever48");
 		this.region128 = powerAltas.findRegion("stress_reliever128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
+	@Override
 	public void atStartOfTurn() {
 		flash();
 		addToBot(new ScryAction(this.amount));

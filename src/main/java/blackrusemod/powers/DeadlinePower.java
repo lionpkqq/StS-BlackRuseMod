@@ -1,17 +1,11 @@
 package blackrusemod.powers;
 
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-
-import blackrusemod.BlackRuseMod;
 
 public class DeadlinePower extends AbstractVisionPower {
 	public static final String POWER_ID = "BlackRuseMod:DeadlinePower";
@@ -23,6 +17,7 @@ public class DeadlinePower extends AbstractVisionPower {
 		super(NAME, POWER_ID, "no_escape", target, amount, prediction);
 	}
 	
+	@Override
 	public void onVision(boolean result) {
 		if(result) {
 			addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new AmplifyDamagePower(this.owner, this.amount), this.amount));
@@ -30,6 +25,7 @@ public class DeadlinePower extends AbstractVisionPower {
 		}
 	}
 
+	@Override
 	public void updateDescription()
 	{
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
