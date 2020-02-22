@@ -26,8 +26,7 @@ public class DeadlinePower extends AbstractVisionPower {
 	}
 
 	@Override
-	public void updateDescription()
-	{
+	public void updateDescription() {
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		else this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
 	}

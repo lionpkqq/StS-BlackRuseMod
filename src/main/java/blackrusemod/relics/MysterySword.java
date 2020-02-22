@@ -24,9 +24,9 @@ public class MysterySword extends CustomRelic {
 		if (card.type == AbstractCard.CardType.SKILL  && (this.activated)) {
 			this.activated = false;
 			flash();
-			AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 			stopPulse();
-			AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
+			addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+			addToBot(new BacklashAction(1));
 		}
 	}
 	

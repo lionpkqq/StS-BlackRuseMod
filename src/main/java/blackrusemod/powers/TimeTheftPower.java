@@ -17,6 +17,7 @@ public class TimeTheftPower extends AbstractVisionPower {
 		super(NAME, POWER_ID, "time_theft", target, amount, prediction);
 	}
 	
+	@Override
 	public void onVision(boolean result) {
 		if (result) {
 			addToBot(new GainEnergyAction(this.amount));
@@ -24,8 +25,8 @@ public class TimeTheftPower extends AbstractVisionPower {
 		}
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
 		else this.description = (DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4] + this.amount + DESCRIPTIONS[5]);
 	}

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -29,14 +28,17 @@ public class RealityMarble extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = RETAIN;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RealityMarblePower(p, this.magicNumber), this.magicNumber));
+		addToBot(new ApplyPowerAction(p, p, new RealityMarblePower(p, this.magicNumber), this.magicNumber));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new RealityMarble();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

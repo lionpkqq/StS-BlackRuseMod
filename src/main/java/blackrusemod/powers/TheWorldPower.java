@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.MummifiedHand;
 
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.MummifiedAction;
@@ -37,6 +38,7 @@ public class TheWorldPower extends AbstractPower {
 		this.doNothing = false;
 	}
 	
+	@Override
 	public void onInitialApplication() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c.costForTurn == 0) zero_cost.add(c);
@@ -44,22 +46,24 @@ public class TheWorldPower extends AbstractPower {
 		}
 	}
 	
+	@Override
 	public void onDrawOrDiscard() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			c.setCostForTurn(-9);
 		}
 	}
 	
+	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-		if (AbstractDungeon.player.hasRelic("Mummified Hand"))
-			AbstractDungeon.actionManager.addToBottom(new MummifiedAction(card, this));
+		addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+		if (AbstractDungeon.player.hasRelic(MummifiedHand.ID))
+			addToBot(new MummifiedAction(card, this));
 		if (card instanceof TheWorld) 
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-					new TheWorldPower(AbstractDungeon.player, -1), -1));
+			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new TheWorldPower(AbstractDungeon.player, -1), -1));
 	}
 	
+	@Override
 	public void onRemove() {
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			 for (AbstractCard c2 : zero_cost)
@@ -73,12 +77,13 @@ public class TheWorldPower extends AbstractPower {
 		}
 	}
 	
+	@Override
 	public void atEndOfTurn (boolean isPlayer) {
-		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+		addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = DESCRIPTIONS[0];
 	}
 }

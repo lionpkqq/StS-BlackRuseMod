@@ -29,17 +29,14 @@ public class AmplifyDamagePower extends AbstractPower {
 	}
 
 	@Override
-	public void updateDescription()
-	{
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		this.type = AbstractPower.PowerType.DEBUFF;
 	}
 	
 	@Override
-	public float atDamageReceive(float damage, DamageInfo.DamageType type)
-	{
-		if (type == DamageInfo.DamageType.NORMAL && (this.owner != null))
-		{
+	public float atDamageReceive(float damage, DamageInfo.DamageType type) {
+		if (type == DamageInfo.DamageType.NORMAL && (this.owner != null)) {
 			return damage + this.amount;
 		}
 		return damage;

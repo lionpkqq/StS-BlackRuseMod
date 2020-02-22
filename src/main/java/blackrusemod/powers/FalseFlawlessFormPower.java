@@ -1,12 +1,18 @@
 package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.relics.OddMushroom;
 
 import blackrusemod.BlackRuseMod;
 
@@ -18,43 +24,44 @@ public class FalseFlawlessFormPower extends AbstractPower {
 	public static TextureAtlas powerAltas = BlackRuseMod.getPowerTextureAtlas();
 	
 	public FalseFlawlessFormPower(AbstractCreature owner, int amount) {
-			this.name = NAME;
-			this.ID = POWER_ID;
-			this.owner = owner;
-			this.amount = amount;
-			this.isTurnBased = true;
-			updateDescription();
-			this.region48 = powerAltas.findRegion("false_flawless_form48");
-			this.region128 = powerAltas.findRegion("false_flawless_form128");
+		this.name = NAME;
+		this.ID = POWER_ID;
+		this.owner = owner;
+		this.amount = amount;
+		this.isTurnBased = true;
+		updateDescription();
+		this.region48 = powerAltas.findRegion("false_flawless_form48");
+		this.region128 = powerAltas.findRegion("false_flawless_form128");
 	}
 	
+	@Override
 	public void updateDescription() {
 		this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 	}
 	
-	public float atDamageGive(float damage, DamageInfo.DamageType type)
-	{
+	@Override
+	public float atDamageGive(float damage, DamageInfo.DamageType type) {
 		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return damage;
 		if (type == DamageInfo.DamageType.NORMAL) {
-			if (this.owner.hasPower("Weakened")) return damage / 0.75F;
+			if (this.owner.hasPower(WeakPower.POWER_ID)) return damage / 0.75F;
 		}
 		return damage;
 	}
 	
-	public float modifyBlock(float blockAmount)
-	{
+	@Override
+	public float modifyBlock(float blockAmount) {
 		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return blockAmount;
-		if (this.owner.hasPower("Frail")) return blockAmount / 0.75F;
+		if (this.owner.hasPower(FrailPower.POWER_ID)) return blockAmount / 0.75F;
 		return blockAmount;
 	}
 	
+	@Override
 	public float atDamageReceive(float damage, DamageInfo.DamageType type)
 	{
 		if (this.owner.hasPower(FlawlessFormPower.POWER_ID)) return damage;
-		if (type == DamageInfo.DamageType.NORMAL)
-		{
-			if (this.owner.hasPower("Vulnerable")) {
-				if (AbstractDungeon.player.hasRelic("Odd Mushroom")) {
+		if (type == DamageInfo.DamageType.NORMAL) {
+			if (this.owner.hasPower(VulnerablePower.POWER_ID)) {
+				if (AbstractDungeon.player.hasRelic(OddMushroom.ID)) {
 					return damage / 1.25F;
 				}
 				return damage / 1.5F;
@@ -63,12 +70,12 @@ public class FalseFlawlessFormPower extends AbstractPower {
 		return damage;
 	}
 	
-	public void atEndOfRound()
-	{
+	@Override
+	public void atEndOfRound() {
 		if (this.amount == 0) {
-			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+			addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
 		} else {
-			AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+			addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
 		}
 	}
 }

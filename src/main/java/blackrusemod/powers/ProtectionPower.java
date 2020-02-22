@@ -34,7 +34,7 @@ public class ProtectionPower extends AbstractPower {
 	
 	@Override
 	public int onLoseHp(int damageAmount) {
-		this.flash();
+		flash();
 		int actual_damage = damageAmount - this.amount;
 		if (actual_damage < 0) {
 			this.amount -= damageAmount;

@@ -25,18 +25,13 @@ public class ElegancePower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("elegance48");
 		this.region128 = powerAltas.findRegion("elegance128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
+	@Override
 	public float modifyBlock(float blockAmount) {
         return (blockAmount + this.amount);
     }

@@ -19,12 +19,13 @@ public class ReturningBladePower extends AbstractVisionPower {
 		this.itself = c;
 	}
 	
+	@Override
 	public void onVision(boolean result) {
 		if(result) addToBot(new ReturningBladeAction(this.owner, this.amount, this.itself));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		else this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
 	}

@@ -19,12 +19,13 @@ public class SnipePower extends AbstractVisionPower {
 		super(NAME, POWER_ID, "snipe", target, amount, prediction);
 	}
 	
+	@Override
 	public void onVision(boolean result) {
 		if (result) addToBot(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		else this.description = (DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
 	}

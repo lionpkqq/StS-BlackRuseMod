@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardTarget;
+import com.megacrit.cardcrawl.cards.AbstractCard.CardType;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,48 +36,40 @@ public class SatellitePower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("satellite128");
 	}
 	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-		updateDescription();
-	}
-	
+	@Override
 	public int onAttacked(DamageInfo info, int damageAmount) {
 		this.damage = this.ATTACK;
-		if ((info.type != DamageInfo.DamageType.THORNS) && (info.type != DamageInfo.DamageType.HP_LOSS) && (info.owner != null) && (info.owner != this.owner))
-		{
+		if (info.type != DamageType.THORNS && info.type != DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
 			flash();
 			if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
-			AbstractDungeon.actionManager.addToBottom(new SatelliteAction(AbstractDungeon.player, info.owner, 
-					new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
+			addToBot(new SatelliteAction(AbstractDungeon.player, info.owner, new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
 		}
 		return damageAmount;
 	}
 	
+	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
 		this.damage = this.ATTACK;
-		if (card.type == AbstractCard.CardType.ATTACK) {
+		if (card.type == CardType.ATTACK) {
 			flash();
 			if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
-			if (card.target != AbstractCard.CardTarget.ALL_ENEMY) {
-				AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-				AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-				AbstractDungeon.actionManager.addToBottom(new SatelliteAction(AbstractDungeon.player, action.target, 
-						new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
+			if (card.target != CardTarget.ALL_ENEMY) {
+				addToBot(new WaitAction(0.1F));
+				addToBot(new WaitAction(0.1F));
+				addToBot(new SatelliteAction(AbstractDungeon.player, action.target, new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
 			}
 			else 
-				AbstractDungeon.actionManager.addToBottom(new SatelliteAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true), 
-						new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
+				addToBot(new SatelliteAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true), new DamageInfo(this.owner, this.damage, DamageType.NORMAL)));
 		}
 	}
 	
+	@Override
 	public void onAfterUseCard(AbstractCard card, UseCardAction action) {
 		updateDescription();
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.damage = this.ATTACK;
 		if (this.owner.hasPower(SilverBladesPower.POWER_ID)) this.damage += this.owner.getPower(SilverBladesPower.POWER_ID).amount;
 		this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1];

@@ -20,6 +20,7 @@ public class ReadPower extends AbstractVisionPower {
 		updateDescription();
 	}
 	
+	@Override
 	public void onVision(boolean result) {
 		if (result)  {
 			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ProtectionPower(AbstractDungeon.player, this.amount), this.amount));
@@ -27,8 +28,8 @@ public class ReadPower extends AbstractVisionPower {
 		}
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		if (this.prediction) this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.w + DESCRIPTIONS[2]);
 		else this.description = (DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4] + this.w + DESCRIPTIONS[5]);
 	}

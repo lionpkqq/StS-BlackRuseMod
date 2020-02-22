@@ -29,6 +29,7 @@ public class SolidifyAction extends AbstractGameAction {
 		this.list.add(new TemporalEssence());
 	}
 
+	@Override
 	public void update()
 	{
 		if (this.duration == Settings.ACTION_DUR_FAST) {

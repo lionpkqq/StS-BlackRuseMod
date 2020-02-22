@@ -30,25 +30,19 @@ public class WasteNotPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("waste_not48");
 		this.region128 = powerAltas.findRegion("waste_not128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
+	@Override
 	public void atEndOfTurn(boolean isPlayer)
 	{
 		flash();
 		this.DRAW = this.amount * EnergyPanel.totalCount;
 		if (this.DRAW != 0)
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-					new DrawCardNextTurnPower(AbstractDungeon.player, this.DRAW), this.DRAW));
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(EnergyPanel.totalCount));
+			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, this.DRAW), this.DRAW));
+		addToBot(new LoseEnergyAction(EnergyPanel.totalCount));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

@@ -25,8 +25,8 @@ public class TrueSightPower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("true_sight128");
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = DESCRIPTIONS[0];
 	}
 }

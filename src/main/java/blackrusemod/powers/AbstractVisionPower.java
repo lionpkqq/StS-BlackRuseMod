@@ -26,6 +26,7 @@ public abstract class AbstractVisionPower extends AbstractPower implements NonSt
 		this.region128 = powerAltas.findRegion(texture + "128");
 	}
 	
+	@Override
 	public void atEndOfTurn(boolean isPlayer) {
 		VisionApplyPatch.visionActions.add(new VisionPowerAction(this));
 	}

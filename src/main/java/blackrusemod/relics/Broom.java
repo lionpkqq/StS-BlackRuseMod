@@ -23,9 +23,9 @@ public class Broom extends CustomRelic {
 		this.counter += 1;
 		if (this.counter >= COUNT) {
 			flash();
-			AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 			this.counter = 0;
-			AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+			addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+			addToBot(new GainEnergyAction(1));
 		}
 	}
 	

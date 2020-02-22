@@ -25,21 +25,16 @@ public class SilverBladesPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("silver_blades48");
 		this.region128 = powerAltas.findRegion("silver_blades128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 		if(DESCRIPTIONS.length > 2) {
 			this.description = this.description + this.amount + DESCRIPTIONS[2];
 		}
 	}
 	
+	@Override
 	public void atStartOfTurn() {
 		flash();
 		addToBot(new ApplyPowerAction(this.owner, this.owner, new KnivesPower(this.owner, this.amount), this.amount));
