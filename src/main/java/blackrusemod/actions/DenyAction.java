@@ -22,6 +22,7 @@ public class DenyAction extends AbstractGameAction {
 		this.anyNumber = anyNumber;
 	}
 
+	@Override
 	public void update() {
 		CardGroup tmpGroup;
 		if (this.duration == this.startingDuration) {

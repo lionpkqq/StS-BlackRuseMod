@@ -19,12 +19,13 @@ public class ConvertAction extends AbstractGameAction {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 	}
 	
+	@Override
 	public void update() {
 		if (this.target != null) {
 			if (this.target.hasPower(KnivesPower.POWER_ID)) {
 				this.stack = Math.min(this.amount, this.target.getPower(KnivesPower.POWER_ID).amount);
-				AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.target, this.target, KnivesPower.POWER_ID, this.stack));
-				AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.target, new SatellitePower(this.target, this.stack), this.stack));
+				addToTop(new ReducePowerAction(this.target, this.target, KnivesPower.POWER_ID, this.stack));
+				addToTop(new ApplyPowerAction(this.target, this.target, new SatellitePower(this.target, this.stack), this.stack));
 			}
 			if (this.target.hasPower(SuppressingFirePower.POWER_ID)) {
 				AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AbstractGameAction.AttackEffect.SHIELD));

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.TimeEmbeddedAction;
+import blackrusemod.actions.ContractionAction;
 import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.ProtectionPower;
@@ -30,15 +30,18 @@ public class Contraction extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new TimeEmbeddedAction(p));
+		addToBot(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
+		addToBot(new ContractionAction(p));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new Contraction();
 	}
 	
+	@Override
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
@@ -49,6 +52,7 @@ public class Contraction extends CustomCard {
 		super.applyPowers();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

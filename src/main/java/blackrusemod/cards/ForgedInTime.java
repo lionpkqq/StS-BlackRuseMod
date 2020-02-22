@@ -31,7 +31,7 @@ public class ForgedInTime extends CustomCard {
 	
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DisposalAction(p, this.magicNumber));
+		addToBot(new DisposalAction(p, this.magicNumber));
 	}
 	
 	@Override
@@ -39,6 +39,7 @@ public class ForgedInTime extends CustomCard {
 		return new ForgedInTime();
 	}
 	
+	@Override
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION;
 		if (!this.canUpgrade()) upgradeMagicNumber(2);

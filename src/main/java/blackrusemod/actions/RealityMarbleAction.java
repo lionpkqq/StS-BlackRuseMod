@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import blackrusemod.patches.RealityMarblePatch;
 
-public class RealityMarbleAction extends AbstractGameAction
-{
+public class RealityMarbleAction extends AbstractGameAction {
 	private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("RetainCardsAction");
 	public static final String[] TEXT = uiStrings.TEXT;
 	
@@ -20,9 +19,8 @@ public class RealityMarbleAction extends AbstractGameAction
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 	}
 	
-
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.duration == 0.5F) {
 			AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, true, false, false, true);
 			addToBot(new WaitAction(0.25F));
@@ -30,8 +28,7 @@ public class RealityMarbleAction extends AbstractGameAction
 			return;
 		}
 
-		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved)
-		{
+		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 				c.retain = true;
 				boolean wasEthereal = c.isEthereal;
