@@ -31,5 +31,7 @@ public abstract class AbstractVisionPower extends AbstractPower implements NonSt
 		VisionApplyPatch.visionActions.add(new VisionPowerAction(this));
 	}
 	
+	// NOTE: Actions added in here must be done through addToTop
+	// This is so that the actions are performed on time!
 	public void onVision(boolean result) {}
 }

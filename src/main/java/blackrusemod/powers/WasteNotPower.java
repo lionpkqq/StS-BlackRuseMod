@@ -32,8 +32,7 @@ public class WasteNotPower extends AbstractPower {
 	}
 
 	@Override
-	public void atEndOfTurn(boolean isPlayer)
-	{
+	public void atEndOfTurn(boolean isPlayer) {
 		flash();
 		this.DRAW = this.amount * EnergyPanel.totalCount;
 		if (this.DRAW != 0)

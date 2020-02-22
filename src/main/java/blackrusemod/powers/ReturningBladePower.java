@@ -21,7 +21,7 @@ public class ReturningBladePower extends AbstractVisionPower {
 	
 	@Override
 	public void onVision(boolean result) {
-		if(result) addToBot(new ReturningBladeAction(this.owner, this.amount, this.itself));
+		if(result) addToTop(new ReturningBladeAction(this.owner, this.amount, this.itself));
 	}
 
 	@Override

@@ -38,9 +38,10 @@ public class VisionPowerAction extends AbstractGameAction {
 				visionResult = true;
 			}
 			
+			// We use addToTop here so that everything happens on time
+			addToTop(new RemoveSpecificPowerAction(m, power.owner, power));
 			power.flash();
 			power.onVision(visionResult);
-			addToBot(new RemoveSpecificPowerAction(m, power.owner, power));
 		}
 		this.isDone = true;
 	}

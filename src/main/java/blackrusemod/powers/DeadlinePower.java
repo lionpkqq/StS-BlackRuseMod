@@ -20,8 +20,8 @@ public class DeadlinePower extends AbstractVisionPower {
 	@Override
 	public void onVision(boolean result) {
 		if(result) {
-			addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new AmplifyDamagePower(this.owner, this.amount), this.amount));
-			addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, this.amount, false), this.amount));
+			addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, this.amount, false), this.amount));
+			addToTop(new ApplyPowerAction(this.owner, AbstractDungeon.player, new AmplifyDamagePower(this.owner, this.amount), this.amount));
 		}
 	}
 

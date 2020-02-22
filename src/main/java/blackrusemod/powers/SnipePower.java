@@ -21,7 +21,7 @@ public class SnipePower extends AbstractVisionPower {
 	
 	@Override
 	public void onVision(boolean result) {
-		if (result) addToBot(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
+		if (result) addToTop(new ThrowKnivesAction(AbstractDungeon.player, this.owner, new DamageInfo(AbstractDungeon.player, this.amount, DamageType.NORMAL), "Vulnerable"));
 	}
 
 	@Override

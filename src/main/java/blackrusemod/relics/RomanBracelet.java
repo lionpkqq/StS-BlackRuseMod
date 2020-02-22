@@ -21,7 +21,7 @@ public class RomanBracelet extends CustomRelic {
 	@Override
 	public void atBattleStart() {
 		flash();
-		AbstractCard c = new TemporalEssence().makeCopy();
+		AbstractCard c = new TemporalEssence();
 		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 		addToBot(new MakeTempCardInDrawPileAction(c, 2, true, false));
 		this.grayscale = true;
