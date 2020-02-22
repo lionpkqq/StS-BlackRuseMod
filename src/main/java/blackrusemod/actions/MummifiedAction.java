@@ -14,22 +14,20 @@ import blackrusemod.powers.TheWorldPower;
 
 import org.apache.logging.log4j.Logger;
 
-public class MummifiedAction extends AbstractGameAction
-{
+public class MummifiedAction extends AbstractGameAction {
 	private static final Logger logger = org.apache.logging.log4j.LogManager.getLogger(MummifiedHand.class.getName());
 	private AbstractCard card;
 	private TheWorldPower source;
 	
-	public MummifiedAction(AbstractCard card, TheWorldPower source)
-	{
+	public MummifiedAction(AbstractCard card, TheWorldPower source) {
 		this.duration = Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 		this.card = card;
 		this.source = source;
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.duration == Settings.ACTION_DUR_XFAST) {
 			if (this.card.type == AbstractCard.CardType.POWER) {
 				ArrayList<AbstractCard> groupCopy = new ArrayList<AbstractCard>();

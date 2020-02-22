@@ -4,14 +4,13 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ShuttleAction extends AbstractGameAction {
-	public ShuttleAction()
-	{
+	public ShuttleAction() {
 		this.duration = 0.3F;
 		this.actionType = AbstractGameAction.ActionType.SPECIAL;
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.duration == 0.3F) {
 			AbstractDungeon.player.applyStartOfTurnPowers();
 			AbstractDungeon.player.applyStartOfTurnRelics();

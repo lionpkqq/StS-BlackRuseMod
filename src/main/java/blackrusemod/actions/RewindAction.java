@@ -5,8 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class RewindAction extends AbstractGameAction
-{
+public class RewindAction extends AbstractGameAction {
 	private AbstractPlayer p;
 
 	public RewindAction(int amount) {
@@ -15,8 +14,8 @@ public class RewindAction extends AbstractGameAction
 		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.p.hand.size() >= 10 || this.p.discardPile.size() == 0) {
 			this.isDone = true; return;
 		}

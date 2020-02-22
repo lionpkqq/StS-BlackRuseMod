@@ -21,6 +21,7 @@ public class StarChefAction extends AbstractGameAction {
 		this.duration = this.startingDuration;
 	}
 
+	@Override
 	public void update() {
 		if (this.duration == com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST) {
 			if (this.p.hand.size() == 0) {
@@ -42,7 +43,7 @@ public class StarChefAction extends AbstractGameAction {
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
 				this.p.hand.moveToExhaustPile(c);
-				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+				addToBot(new GainEnergyAction(1));
 			}
 			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
 		}

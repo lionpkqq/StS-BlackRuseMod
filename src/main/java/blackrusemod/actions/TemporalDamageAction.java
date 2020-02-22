@@ -8,15 +8,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class TemporalDamageAction extends AbstractGameAction {
 	private DamageInfo info;
-	public TemporalDamageAction(int damage)
-	{
+
+	public TemporalDamageAction(int damage) {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.info = new DamageInfo(AbstractDungeon.player, damage, DamageType.NORMAL);
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
 			if ((mo != null) && (!mo.isDeadOrEscaped())) {
 				this.info.applyPowers(this.info.owner, mo);

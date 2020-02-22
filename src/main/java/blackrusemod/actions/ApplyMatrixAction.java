@@ -8,19 +8,17 @@ import blackrusemod.powers.MatrixPower;
 import blackrusemod.powers.SatellitePower;
 
 public class ApplyMatrixAction extends AbstractGameAction {
-	public ApplyMatrixAction()
-	{
+	public ApplyMatrixAction() {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.BLOCK;
 		this.target = AbstractDungeon.player;
 		this.source = AbstractDungeon.player;
 	}
 
-	public void update()
-	{
-		if ((this.target != null) && (this.target.hasPower(SatellitePower.POWER_ID)))
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, 
-					new MatrixPower(this.target, this.target.getPower(SatellitePower.POWER_ID).amount), this.target.getPower(SatellitePower.POWER_ID).amount));
+	@Override
+	public void update() {
+		if (this.target != null && this.target.hasPower(SatellitePower.POWER_ID))
+			addToBot(new ApplyPowerAction(this.target, this.target, new MatrixPower(this.target, this.target.getPower(SatellitePower.POWER_ID).amount), this.target.getPower(SatellitePower.POWER_ID).amount));
 		this.isDone = true;
 	}
 }

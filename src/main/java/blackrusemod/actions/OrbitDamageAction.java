@@ -9,22 +9,21 @@ import blackrusemod.powers.SatellitePower;
 
 public class OrbitDamageAction extends AbstractGameAction {
 	public int[] damage;
-	public OrbitDamageAction(int[] damage)
-	{
+
+	public OrbitDamageAction(int[] damage) {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.attackEffect = AbstractGameAction.AttackEffect.SLASH_HORIZONTAL;
 		this.damage = damage;
 	}
 
-	public void update()
-	{
-		if (AbstractDungeon.player.hasPower(SatellitePower.POWER_ID))
+	@Override
+	public void update() {
+		if (AbstractDungeon.player.hasPower(SatellitePower.POWER_ID)) {
 			for (int i = 0; i < AbstractDungeon.player.getPower(SatellitePower.POWER_ID).amount; i++) {
-				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(AbstractDungeon.player, 
-						this.damage, DamageType.NORMAL, this.attackEffect, true));
+				addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.damage, DamageType.NORMAL, this.attackEffect, true));
 			}
-				
+		}
 		this.isDone = true;
 	}
 }

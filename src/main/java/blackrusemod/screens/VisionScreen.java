@@ -1,6 +1,7 @@
 package blackrusemod.screens;
 
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.relics.SingingBowl;
 import com.megacrit.cardcrawl.cards.*;
 import com.megacrit.cardcrawl.rewards.*;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
@@ -16,8 +17,7 @@ import blackrusemod.BlackRuseMod;
 import com.badlogic.gdx.graphics.g2d.*;
 import java.util.*;
 
-public class VisionScreen extends CardRewardScreen
-{
+public class VisionScreen extends CardRewardScreen {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private static final float PAD_X;
@@ -50,6 +50,7 @@ public class VisionScreen extends CardRewardScreen
         this.draftCount = 0;
     }
     
+    @Override
     public void update() {
         this.skipButton.update();
         this.bowlButton.update();
@@ -170,7 +171,7 @@ public class VisionScreen extends CardRewardScreen
             this.skipButton.show();
             this.bowlButton.hide();
         }
-        else if (AbstractDungeon.player.hasRelic("Singing Bowl")) {
+        else if (AbstractDungeon.player.hasRelic(SingingBowl.ID)) {
             this.skipButton.show(true);
             this.bowlButton.show(this.rItem);
         }

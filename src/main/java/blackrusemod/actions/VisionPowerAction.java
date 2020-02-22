@@ -18,6 +18,7 @@ public class VisionPowerAction extends AbstractGameAction {
 		this.power = p;
 	}
 
+	@Override
 	public void update() {
 		boolean visionResult = false;
 		AbstractMonster m = (AbstractMonster)power.owner;

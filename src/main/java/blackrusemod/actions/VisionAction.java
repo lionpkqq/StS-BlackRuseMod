@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import blackrusemod.BlackRuseMod;
@@ -45,8 +44,8 @@ public class VisionAction extends AbstractGameAction {
 		this.list.add(c);
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
 				BlackRuseMod.vs.open(this.list, null, "敌人的意图是？");
@@ -59,23 +58,23 @@ public class VisionAction extends AbstractGameAction {
 		else if (BlackRuseMod.vs.prediction.cardID == _DummyNotAttack.ID) this.prediction = false;
 		
 		if (this.card instanceof Read) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReadPower((AbstractMonster)this.target, this.amount, this.amount2, this.prediction), this.amount));
+			addToBot(new ApplyPowerAction(this.target, this.source, new ReadPower((AbstractMonster)this.target, this.amount, this.amount2, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof Snipe) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new SnipePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			addToBot(new ApplyPowerAction(this.target, this.source, new SnipePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof TimeTheft) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new TimeTheftPower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			addToBot(new ApplyPowerAction(this.target, this.source, new TimeTheftPower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof Deadline) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new DeadlinePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
+			addToBot(new ApplyPowerAction(this.target, this.source, new DeadlinePower((AbstractMonster)this.target, this.amount, this.prediction), this.amount));
 			this.isDone = true;
 		}
 		if (this.card instanceof ReturningBlade) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, new ReturningBladePower((AbstractMonster)this.target, this.amount, this.prediction, this.card), this.amount));
+			addToBot(new ApplyPowerAction(this.target, this.source, new ReturningBladePower((AbstractMonster)this.target, this.amount, this.prediction, this.card), this.amount));
 			this.isDone = true;
 		}
 

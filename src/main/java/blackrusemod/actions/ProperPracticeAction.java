@@ -22,6 +22,7 @@ public class ProperPracticeAction extends AbstractGameAction {
 		this.duration = this.startingDuration;
 	}
 
+	@Override
 	public void update() {
 		if (this.duration == Settings.ACTION_DUR_FAST) {
 			if (this.p.hand.size() == 0) {

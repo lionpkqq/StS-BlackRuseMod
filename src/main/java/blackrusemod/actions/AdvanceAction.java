@@ -42,7 +42,7 @@ public class AdvanceAction extends com.megacrit.cardcrawl.actions.AbstractGameAc
 		}
 		this.amount--;
 		if (this.amount != 0) 
-			AbstractDungeon.actionManager.addToTop(new AdvanceAction(this.amount));
+			addToTop(new AdvanceAction(this.amount));
 		this.isDone = true;
 	}
 }

@@ -374,7 +374,6 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new TemporalSlicing());
 		
 		BaseMod.addPower(AmplifyDamagePower.class, AmplifyDamagePower.POWER_ID);
-		BaseMod.addPower(DeadlinePower.class, DeadlinePower.POWER_ID);
 		BaseMod.addPower(ElegancePower.class, ElegancePower.POWER_ID);
 		BaseMod.addPower(EmbodimentPower.class, EmbodimentPower.POWER_ID);
 		BaseMod.addPower(FalseFlawlessFormPower.class, FalseFlawlessFormPower.POWER_ID);
@@ -382,22 +381,17 @@ public class BlackRuseMod implements PostInitializeSubscriber,
 		BaseMod.addPower(FloweringNightPower.class, FloweringNightPower.POWER_ID);
 		BaseMod.addPower(ForesightPower.class, ForesightPower.POWER_ID);
 		BaseMod.addPower(KnivesPower.class, KnivesPower.POWER_ID);
-		//BaseMod.addPower(ManipulatePower.class, ManipulatePower.POWER_ID);
 		BaseMod.addPower(MatrixPower.class, MatrixPower.POWER_ID);
 		BaseMod.addPower(MoonPhasePower.class, MoonPhasePower.POWER_ID);
 		BaseMod.addPower(MurderousAuraPower.class, MurderousAuraPower.POWER_ID);
 		BaseMod.addPower(ProperPracticePower.class, ProperPracticePower.POWER_ID);
 		BaseMod.addPower(ProtectionPower.class, ProtectionPower.POWER_ID);
-		BaseMod.addPower(ReadPower.class, ReadPower.POWER_ID);
 		BaseMod.addPower(RealityMarblePower.class, RealityMarblePower.POWER_ID);
-		BaseMod.addPower(ReturningBladePower.class, ReturningBladePower.POWER_ID);
 		BaseMod.addPower(SatellitePower.class, SatellitePower.POWER_ID);
 		BaseMod.addPower(SilverBladesPower.class, SilverBladesPower.POWER_ID);
-		BaseMod.addPower(SnipePower.class, SnipePower.POWER_ID);
 		BaseMod.addPower(StarChefPower.class, StarChefPower.POWER_ID);
 		BaseMod.addPower(SuppressingFirePower.class, SuppressingFirePower.POWER_ID);
 		BaseMod.addPower(TheWorldPower.class, TheWorldPower.POWER_ID);
-		BaseMod.addPower(TimeTheftPower.class, TimeTheftPower.POWER_ID);
 		BaseMod.addPower(TrueSightPower.class, TrueSightPower.POWER_ID);
 		BaseMod.addPower(UpgradedEmbodimentPower.class, UpgradedEmbodimentPower.POWER_ID);
 		BaseMod.addPower(WasteNotPower.class, WasteNotPower.POWER_ID);

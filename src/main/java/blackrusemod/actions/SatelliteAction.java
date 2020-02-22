@@ -15,8 +15,8 @@ import blackrusemod.vfx.SatelliteDaggerEffect;
 
 public class SatelliteAction extends AbstractGameAction {
 	private DamageInfo info;
-	public SatelliteAction(AbstractPlayer p, AbstractCreature target, DamageInfo info)
-	{
+	
+	public SatelliteAction(AbstractPlayer p, AbstractCreature target, DamageInfo info) {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.source = p;
@@ -24,27 +24,26 @@ public class SatelliteAction extends AbstractGameAction {
 		this.info = info;
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		if (this.source.hasPower(SatellitePower.POWER_ID)) {
 			if (this.source.getPower(SatellitePower.POWER_ID).amount > 0) {
-				if ((this.target != null) && !(this.target.isDying) && !(this.target.halfDead) && (this.target.currentHealth > 0)) {
+				if (this.target != null && !this.target.isDying && !this.target.halfDead && this.target.currentHealth > 0) {
 					// this.target.damageFlash = true;
 					// this.target.damageFlashFrames = 4;
-					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, 
-							AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+					AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
 					this.info.applyPowers(this.info.owner, this.target);
 					this.target.damage(this.info);
-					AbstractDungeon.actionManager.addToTop(new WaitAction(0.06F));
-					if ((this.target != null) && (this.target.hb != null)) {
-						AbstractDungeon.actionManager.addToTop(new VFXAction(new SatelliteDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
+					addToTop(new WaitAction(0.06F));
+					if (this.target != null && this.target.hb != null) {
+						addToTop(new VFXAction(new SatelliteDaggerEffect(this.target.hb.cX, this.target.hb.cY)));
 					}
 					this.source.getPower(SatellitePower.POWER_ID).reducePower(1);
 					this.source.getPower(SatellitePower.POWER_ID).updateDescription();
 				}
 			}
 			if (this.source.getPower(SatellitePower.POWER_ID).amount == 0) 
-				AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.source, this.source, SatellitePower.POWER_ID));
+				addToTop(new RemoveSpecificPowerAction(this.source, this.source, SatellitePower.POWER_ID));
 		}
 		this.isDone = true;
 	}

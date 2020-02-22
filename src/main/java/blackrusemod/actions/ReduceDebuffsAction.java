@@ -4,7 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.powers.ProtectionPower;
 
@@ -17,25 +20,28 @@ public class ReduceDebuffsAction extends com.megacrit.cardcrawl.actions.Abstract
 		this.duration = 0.3F;
 	}
 
+	@Override
 	public void update() {
-		if ((this.duration == 0.3F) && (this.target != null)) {
-			if (this.target.hasPower("Weakened")) {
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, 
-						new ProtectionPower(this.target, Math.min(999*this.amount, this.target.getPower("Weakened").amount*this.amount)), 
-						Math.min(999*this.amount, this.target.getPower("Weakened").amount*this.amount)));
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, "Weakened"));
+		if (this.duration == 0.3F && this.target != null) {
+			int prot = 0;
+			AbstractPower weak = this.target.getPower(WeakPower.POWER_ID);
+			AbstractPower vuln = this.target.getPower(VulnerablePower.POWER_ID);
+			AbstractPower frail = this.target.getPower(FrailPower.POWER_ID);
+			if (weak != null) {
+				prot += weak.amount;
+				addToBot(new RemoveSpecificPowerAction(this.target, this.target, weak));
 			}
-			if (this.target.hasPower("Vulnerable")) {
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, 
-						new ProtectionPower(this.target, Math.min(999*this.amount, this.target.getPower("Vulnerable").amount*this.amount)), 
-						Math.min(999*this.amount, this.target.getPower("Vulnerable").amount*this.amount)));
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, "Vulnerable"));
+			if (vuln != null) {
+				prot += vuln.amount;
+				addToBot(new RemoveSpecificPowerAction(this.target, this.target, vuln));
 			}
-			if (this.target.hasPower("Frail")) {
-				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.target, 
-						new ProtectionPower(this.target, Math.min(999*this.amount, this.target.getPower("Frail").amount*this.amount)), 
-						Math.min(999*this.amount, this.target.getPower("Frail").amount*this.amount)));
-				AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, "Frail"));
+			if (frail != null) {
+				prot += frail.amount;
+				addToBot(new RemoveSpecificPowerAction(this.target, this.target, frail));
+			}
+			if(prot > 0) {
+				prot = Math.min(999, prot);
+				addToBot(new ApplyPowerAction(this.target, this.target, new ProtectionPower(this.target, prot * this.amount), prot * this.amount));
 			}
 		}
 		tickDuration();

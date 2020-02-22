@@ -16,7 +16,7 @@ public class ContractionAction extends AbstractGameAction {
 
 	@Override
 	public void update() {
-		if ((this.duration == 0.25F) && (this.target != null) && (this.target.currentBlock > 0)) {
+		if (this.duration == 0.25F && this.target != null && this.target.currentBlock > 0) {
 			addToTop(new ApplyPowerAction(this.target, this.source, new ProtectionPower(this.source, this.target.currentBlock), this.target.currentBlock));
 			this.target.loseBlock();
 		}

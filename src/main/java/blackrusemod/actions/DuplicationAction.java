@@ -25,6 +25,7 @@ public class DuplicationAction extends AbstractGameAction {
 		this.duration = this.startingDuration;
 	}
 
+	@Override
 	public void update() {
 		if (this.duration == com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST) {
 			if (this.p.hand.size() == 0) {
@@ -43,18 +44,18 @@ public class DuplicationAction extends AbstractGameAction {
 		
 		if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
 			for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-				AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, false));
+				addToBot(new MakeTempCardInHandAction(c, false));
 				AbstractCard d = c.makeStatEquivalentCopy();
 				if (d instanceof Duplication) {
 					if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
-						AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "触发了时间悖论……", 1.0F, 2.0F));
+						addToBot(new TalkAction(true, "触发了时间悖论……", 1.0F, 2.0F));
 					}
 					else {
-					AbstractDungeon.actionManager.addToBottom(new TalkAction(true, "The time paradox is triggered...", 1.0F, 2.0F));
+						addToBot(new TalkAction(true, "The time paradox is triggered...", 1.0F, 2.0F));
 					}
-					d = new Madness().makeCopy();
+					d = new Madness();
 				}
-				AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(d, false));
+				addToBot(new MakeTempCardInHandAction(d, false));
 				d.setCostForTurn(-9);
 			}
 			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
