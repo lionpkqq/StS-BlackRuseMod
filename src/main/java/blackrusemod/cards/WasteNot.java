@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,14 +25,17 @@ public class WasteNot extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WasteNotPower(p, 1), 1));
+		addToBot(new ApplyPowerAction(p, p, new WasteNotPower(p, 1), 1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new WasteNot();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

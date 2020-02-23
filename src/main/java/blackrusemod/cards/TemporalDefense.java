@@ -49,7 +49,7 @@ public class TemporalDefense extends CustomCard {
 	@Override
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
-		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		if (!canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
 		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
 			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
 			this.isMagicNumberModified = true;

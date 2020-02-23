@@ -1,5 +1,6 @@
 package blackrusemod.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.AdvanceAction;
 import blackrusemod.patches.AbstractCardEnum;
 
 public class Advance extends CustomCard {
@@ -28,20 +28,22 @@ public class Advance extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = ZERO;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new AdvanceAction(this.magicNumber));
+		addToBot(new FetchAction(AbstractDungeon.player.drawPile, (c) -> {return c.costForTurn == 0;}, this.magicNumber));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new Advance();
 	}
 	
-
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			initializeDescription();
 			this.isInnate = true;
 		}
 	}

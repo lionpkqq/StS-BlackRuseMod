@@ -33,6 +33,7 @@ public class TemporalSlicing extends CustomCard {
 		this.isMultiDamage = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (int i = 0; i < this.magicNumber; i++) {
 			addToBot(new SFXAction("ATTACK_HEAVY"));
@@ -41,10 +42,12 @@ public class TemporalSlicing extends CustomCard {
 		}
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TemporalSlicing();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

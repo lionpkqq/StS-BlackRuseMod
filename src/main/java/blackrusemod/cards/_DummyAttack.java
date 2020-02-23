@@ -1,6 +1,7 @@
 package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,14 +25,14 @@ public class _DummyAttack extends CustomCard {
 				AbstractCard.CardTarget.NONE);
 	}
 
-	public void use(com.megacrit.cardcrawl.characters.AbstractPlayer p, AbstractMonster m) {}
+	@Override
+	public void use(AbstractPlayer p, AbstractMonster m) {}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new _DummyAttack();
 	}
 
-	public void upgrade() {
-		if (!this.upgraded) {
-		}
-	}
+	@Override
+	public void upgrade() {}
 }
