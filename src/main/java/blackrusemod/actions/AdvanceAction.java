@@ -13,7 +13,7 @@ public class AdvanceAction extends com.megacrit.cardcrawl.actions.AbstractGameAc
 	public AdvanceAction(int numCards) {
 		this.p = AbstractDungeon.player;
 		setValues(this.p, AbstractDungeon.player, numCards);
-		this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.CARD_MANIPULATION;
+		this.actionType = ActionType.CARD_MANIPULATION;
 	}
 
 	public void update() {
