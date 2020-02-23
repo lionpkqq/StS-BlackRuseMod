@@ -1,13 +1,20 @@
 package blackrusemod.patches;
 
+import java.util.ArrayList;
+
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+
+import javassist.CannotCompileException;
+import javassist.CtBehavior;
+
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DescriptionLine;
+import com.megacrit.cardcrawl.core.Settings;
 
-public class RealityMarblePatch
-{
+public class RealityMarblePatch {
 	// Field to know whether the card has had Ethereal removed by Reality Marble
 	@SpirePatch(clz=AbstractCard.class, method=SpirePatch.CLASS)
 	public static class marbledField {
@@ -17,7 +24,7 @@ public class RealityMarblePatch
 	// Description modification to add the "Marbled" keyword
 	@SpirePatch(clz=AbstractCard.class, method="initializeDescription")
 	public static class marbledText {
-		@SpireInsertPatch(rloc=118, localvars={"gl"})
+		@SpireInsertPatch(locator=Locator.class, localvars={"gl"})
 		public static void Insert(AbstractCard __instance, GlyphLayout gl) {
 			if(marbledField.blackrusemod_marbled.get(__instance)) {
 				gl.reset();
@@ -27,19 +34,28 @@ public class RealityMarblePatch
 					__instance.keywords.add("blackrusemod:Marbled");
 				}
 			}
-    	}
+		}
+		
+		private static class Locator extends SpireInsertLocator {
+			@Override
+			public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
+				Matcher finalMatcher = new Matcher.FieldAccessMatcher(Settings.class, "isDev");
+				return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<Matcher>(), finalMatcher);
+			}
+		}
 	}
 	
 	// Preserve Marbled status on stat equivalent copies
 	@SpirePatch(clz=AbstractCard.class, method="makeStatEquivalentCopy")
 	public static class marbledPreservation {
-		@SpireInsertPatch(rloc=24, localvars={"card"})
-		public static void Insert(AbstractCard __instance, AbstractCard card) {
+		@SpirePostfixPatch
+		public static AbstractCard Insert(AbstractCard __result, AbstractCard __instance) {
 			if(marbledField.blackrusemod_marbled.get(__instance)) {
-				marbledField.blackrusemod_marbled.set(card, true);
-				card.isEthereal = false;
-				card.initializeDescription();
+				marbledField.blackrusemod_marbled.set(__result, true);
+				__result.isEthereal = false;
+				__result.initializeDescription();
 			}
+			return __result;
 		}
 	}
 }

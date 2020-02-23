@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 import basemod.abstracts.CustomCard;
 import blackrusemod.relics.KneeBrace;
 
-public class AbstractShiftCard extends CustomCard {
+public abstract class AbstractShiftCard extends CustomCard {
 	private boolean inDiscardMenu = false;
 
 	public AbstractShiftCard(String id, String name, String texture, int cost, String desc, CardType type, CardColor color, CardRarity rarity, CardTarget target) {

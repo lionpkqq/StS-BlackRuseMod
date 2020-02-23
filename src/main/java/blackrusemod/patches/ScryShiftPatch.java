@@ -14,8 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 
 @SpirePatch(clz=ScryAction.class, method="update")
-public class ScryShiftPatch
-{
+public class ScryShiftPatch {
 	// Add in these actions right after powers
 	@SpireInsertPatch(locator=Locator.class, localvars={"c"})
 	public static void Insert(AbstractCard c) {

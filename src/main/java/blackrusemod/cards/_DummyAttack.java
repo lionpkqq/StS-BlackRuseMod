@@ -5,10 +5,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.patches.AbstractCardEnum;
 
+@AutoAdd.Ignore
 public class _DummyAttack extends CustomCard {
 	public static final String ID = "BlackRuseMod:_DummyAttack";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
