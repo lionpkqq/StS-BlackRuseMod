@@ -1,10 +1,12 @@
 package blackrusemod.actions;
- 
+
 import java.util.ArrayList;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import basemod.BaseMod;
 
 public class AdvanceAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
 	private AbstractPlayer p;
@@ -17,32 +19,24 @@ public class AdvanceAction extends com.megacrit.cardcrawl.actions.AbstractGameAc
 	}
 
 	public void update() {
-		if (this.amount <= 0) {
+		if(this.amount <= 0 || AbstractDungeon.player.drawPile.isEmpty()) {
 			this.isDone = true;
 			return;
 		}
-		if (AbstractDungeon.player.drawPile.isEmpty()) {
-			this.isDone = true;
-				return;
+		ArrayList<AbstractCard> cards = new ArrayList<AbstractCard>();
+		for(AbstractCard c : AbstractDungeon.player.drawPile.group) {
+			if(c.costForTurn == 0) {
+				cards.add(c);
+				if(cards.size() >= this.amount) break;
+			}
 		}
-		if (AbstractDungeon.player.hand.size() == 10) {
-			AbstractDungeon.player.createHandIsFullDialog();
-			this.isDone = true;
-			return;
+		for(AbstractCard c : cards) {
+			if (AbstractDungeon.player.hand.size() == BaseMod.MAX_HAND_SIZE) {
+				AbstractDungeon.player.createHandIsFullDialog();
+				break;
+			}
+			this.p.drawPile.moveToHand(c);
 		}
-		for (AbstractCard c: AbstractDungeon.player.drawPile.group)
-			if (c.costForTurn == 0)
-				zero_cost.add(c);
-		if (zero_cost.size() != 0) {
-			AbstractCard c = zero_cost.get(0);
-			this.p.hand.addToHand(c);
-			c.lighten(false);
-			this.p.drawPile.removeCard(c);
-			this.p.hand.refreshHandLayout();
-		}
-		this.amount--;
-		if (this.amount != 0) 
-			addToTop(new AdvanceAction(this.amount));
 		this.isDone = true;
 	}
 }
