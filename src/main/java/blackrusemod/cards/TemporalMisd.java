@@ -30,19 +30,20 @@ public class TemporalMisd extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = MISD;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
-					new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, 
-					new WeakPower(mo, this.magicNumber, false), this.magicNumber));
+			addToBot(new ApplyPowerAction(mo, p, new AmplifyDamagePower(mo, this.magicNumber), this.magicNumber));
+			addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber));
 		}
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TemporalMisd();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

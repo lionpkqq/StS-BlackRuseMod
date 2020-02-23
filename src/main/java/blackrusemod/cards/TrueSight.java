@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,19 +25,23 @@ public class TrueSight extends CustomCard {
 				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TrueSightPower(p, -1), -1));
+		addToBot(new ApplyPowerAction(p, p, new TrueSightPower(p, -1), -1));
 	}
 	
+	@Override
 	public void triggerOnEndOfTurnForPlayingCard() {
-		if (!this.canUpgrade()) 
+		if (!canUpgrade()) 
 			this.retain = true;
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TrueSight();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

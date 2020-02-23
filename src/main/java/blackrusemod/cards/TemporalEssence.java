@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -30,21 +29,24 @@ public class TemporalEssence extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
-		if (!this.canUpgrade()) AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+		addToBot(new GainEnergyAction(1));
+		addToBot(new DrawCardAction(p, this.magicNumber));
+		if (!canUpgrade()) addToBot(new GainEnergyAction(1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TemporalEssence();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			initializeDescription();
 			upgradeMagicNumber(1);
 		}
 	}

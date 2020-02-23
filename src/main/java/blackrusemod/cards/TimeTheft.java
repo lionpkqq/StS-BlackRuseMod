@@ -3,7 +3,6 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -29,19 +28,22 @@ public class TimeTheft extends CustomCard {
 		this.exhaust = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new VisionAction(p, m, this.magicNumber, 0, this));
+		addToBot(new VisionAction(p, m, this.magicNumber, 0, this));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TimeTheft();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
 			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			initializeDescription();
 			upgradeMagicNumber(1);
 		}
 	}

@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
@@ -36,9 +35,9 @@ public class TemporalSlicing extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (int i = 0; i < this.magicNumber; i++) {
-			AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
-			AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new CleaveEffect(), 0.3F));
-			AbstractDungeon.actionManager.addToBottom(new TemporalDamageAction(this.baseDamage));
+			addToBot(new SFXAction("ATTACK_HEAVY"));
+			addToBot(new VFXAction(p, new CleaveEffect(), 0.3F));
+			addToBot(new TemporalDamageAction(this.baseDamage));
 		}
 	}
 

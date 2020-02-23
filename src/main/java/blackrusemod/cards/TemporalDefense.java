@@ -35,16 +35,18 @@ public class TemporalDefense extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new ProtectionPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+		addToBot(new GainBlockAction(p, p, this.block));
+		addToBot(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
 	}
 	
+	@Override
 	public AbstractCard makeCopy() {
 		return new TemporalDefense();
 	}
 	
+	@Override
 	public void applyPowers() {
 		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
 		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
@@ -55,6 +57,7 @@ public class TemporalDefense extends CustomCard {
 		super.applyPowers();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

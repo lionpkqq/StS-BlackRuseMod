@@ -1,6 +1,6 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
@@ -30,34 +30,37 @@ public class TimeWarp extends AbstractShiftCard {
 
 	public TimeWarp() {
 		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_WARP), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = DISCARD_AND_DRAW;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if ((p != null) && (m != null)) 
-			AbstractDungeon.actionManager.addToBottom(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 
-				AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, this.magicNumber, false));
+		if (p != null && m != null) {
+			addToBot(new VFXAction(new IronWaveEffect(p.hb.cX, p.hb.cY, m.hb.cX), 0.5F));
+		}
+		addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.SLASH_VERTICAL));
+		addToBot(new DiscardAction(p, p, this.magicNumber, false));
 	}
 	
+	@Override
 	public void triggerShift() {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+		addToBot(new DrawCardAction(AbstractDungeon.player, 1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TimeWarp();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
 			this.rawDescription = UPGRADE_DESCRIPTION;
-			this.initializeDescription();
+			initializeDescription();
 			upgradeMagicNumber(1);
 		}
 	}

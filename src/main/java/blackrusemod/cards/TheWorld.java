@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -30,15 +29,18 @@ public class TheWorld extends CustomCard {
 		this.exhaust = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TheWorldPower(p, -1), -1));
+		addToBot(new DrawCardAction(p, this.magicNumber));
+		addToBot(new ApplyPowerAction(p, p, new TheWorldPower(p, -1), -1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new TheWorld();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
