@@ -32,24 +32,25 @@ public class GearUp extends CustomCard {
 	}
 	
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KnivesPower(p, 3), 3));
+		addToBot(new ApplyPowerAction(p, p, new ProtectionPower(p, this.magicNumber), this.magicNumber));
+		addToBot(new ApplyPowerAction(p, p, new KnivesPower(p, 3), 3));
 	}
 	
 	public AbstractCard makeCopy() {
 		return new GearUp();
 	}
 	
+	@Override
 	public void applyPowers() {
-		this.magicNumber = this.baseMagicNumber = PROTECTION_AMT;
-		if (!this.canUpgrade()) upgradeMagicNumber(UPGRADE_PROTECTION_BLOCK);
+		this.magicNumber = this.baseMagicNumber;
 		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
+			this.magicNumber += AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount;
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();
 	}
 	
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

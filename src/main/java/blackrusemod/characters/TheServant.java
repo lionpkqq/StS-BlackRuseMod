@@ -12,10 +12,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import com.megacrit.cardcrawl.events.beyond.SpireHeart;
+import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
@@ -61,14 +62,8 @@ public class TheServant extends CustomPlayer {
 		    BlackRuseMod.vs = new VisionScreen();
 		}
 	}
-	
-	@Override
-	public void applyEndOfTurnTriggers() {
-		for (AbstractPower p : this.powers) {
-			p.atEndOfTurn(true);
-		}
-	}
 
+	@Override
 	public ArrayList<String> getStartingDeck() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add(Strike_Silver.ID);
@@ -84,6 +79,7 @@ public class TheServant extends CustomPlayer {
 		return retVal;
 	}
 	
+	@Override
 	public ArrayList<String> getStartingRelics() {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add(Uniform.ID);
@@ -91,6 +87,7 @@ public class TheServant extends CustomPlayer {
 		return retVal;
 	}
 	
+	@Override
 	public CharSelectInfo getLoadout() {
 		if (Settings.language == GameLanguage.ZHS) {
 			return new CharSelectInfo("凛光侍从", "恶魔们的侍从。擅长杀戮与家务。 NL 随身携带着一千零一把刀刃。",
@@ -104,35 +101,43 @@ public class TheServant extends CustomPlayer {
 		}
 	}
 
+	@Override
 	public void doCharSelectScreenSelectEffect() {
 		CardCrawlGame.sound.playV("ATTACK_DAGGER_6", 1.75f);
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
 	}
 
+	@Override
 	public int getAscensionMaxHPLoss() {
 		return 5;
 	}
 
+	@Override
 	public CardColor getCardColor() {
 		return AbstractCardEnum.SILVER;
 	}
 
+	@Override
 	public Color getCardRenderColor() {
 		return CardHelper.getColor(131.0f, 156.0f, 165.0f);
 	}
 
+	@Override
 	public Color getCardTrailColor() {
 		return CardHelper.getColor(131.0f, 156.0f, 165.0f);
 	}
 
+	@Override
 	public String getCustomModeCharacterButtonSoundKey() {
 		return "ATTACK_DAGGER_6";
 	}
 
+	@Override
 	public BitmapFont getEnergyNumFont() {
 		return FontHelper.energyNumFontBlue;
 	}
 
+	@Override
 	public String getLocalizedCharacterName() {
 		String char_name;
 		if (Settings.language == GameLanguage.ZHS) {
@@ -145,10 +150,12 @@ public class TheServant extends CustomPlayer {
 		return char_name;
 	}
 
+	@Override
 	public Color getSlashAttackColor() {
 		return CardHelper.getColor(131.0f, 156.0f, 165.0f);
 	}
 
+	@Override
 	public AttackEffect[] getSpireHeartSlashEffect() {
 		return new AttackEffect[]{
 		        AttackEffect.SLASH_DIAGONAL,
@@ -160,14 +167,17 @@ public class TheServant extends CustomPlayer {
 		    };
 	}
 
+	@Override
 	public String getSpireHeartText() {
-		return com.megacrit.cardcrawl.events.beyond.SpireHeart.DESCRIPTIONS[10];
+		return SpireHeart.DESCRIPTIONS[10];
 	}
 
+	@Override
 	public AbstractCard getStartCardForEvent() {
 		return new KidneyShot();
 	}
 
+	@Override
 	public String getTitle(PlayerClass arg0) {
 		String title;
 		if (Settings.language == GameLanguage.ZHS) {
@@ -180,15 +190,18 @@ public class TheServant extends CustomPlayer {
 		return title;
 	}
 
+	@Override
 	public String getVampireText() {
-		return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[1];
+		return Vampires.DESCRIPTIONS[1];
 	}
 
+	@Override
 	public AbstractPlayer newInstance() {
 		return new TheServant(this.name, TheServantEnum.THE_SERVANT);
 	}
 	
 	// Remove temporary cards from the card pool
+	@Override
 	public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
 		tmpPool = super.getCardPool(tmpPool);
 		tmpPool.removeIf((c) -> {

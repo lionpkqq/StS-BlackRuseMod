@@ -8,15 +8,16 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ThrowKnivesAction;
+import blackrusemod.cards.Interfaces.KnivesCard;
 import blackrusemod.patches.AbstractCardEnum;
-import blackrusemod.powers.SilverBladesPower;
 
-public class FanOfKnives extends CustomCard {
+public class FanOfKnives extends CustomCard implements KnivesCard {
 	public static final String ID = "BlackRuseMod:FanOfKnives";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
@@ -34,33 +35,26 @@ public class FanOfKnives extends CustomCard {
 		this.isMultiDamage = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (p.hasRelic("Chemical X")) p.getRelic("Chemical X").flash();
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse += 2;
+		if (p.hasRelic(ChemicalX.ID)) p.getRelic(ChemicalX.ID).flash();
+		if (p.hasRelic(ChemicalX.ID)) this.energyOnUse += 2;
 		for (int i = 0; i < this.energyOnUse; i++)
 			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
-				AbstractDungeon.actionManager.addToBottom(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), null));
-		if (AbstractDungeon.player.hasRelic("Chemical X")) this.energyOnUse -= 2;
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.energyOnUse));
+				addToBot(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), null));
+		if (p.hasRelic(ChemicalX.ID)) this.energyOnUse -= 2;
+		addToBot(new LoseEnergyAction(this.energyOnUse));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new FanOfKnives();
 	}
-	
-	public void applyPowers() {
-		this.baseDamage = ATTACK_DMG;
-		if (!this.canUpgrade()) this.baseDamage += UPGRADE_PLUS_DMG;
-		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID)) 
-			this.baseDamage += AbstractDungeon.player.getPower(SilverBladesPower.POWER_ID).amount;
-		super.applyPowers();
-		if (AbstractDungeon.player.hasPower(SilverBladesPower.POWER_ID))
-			this.isDamageModified = true;
-	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

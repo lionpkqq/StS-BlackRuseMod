@@ -41,10 +41,9 @@ public class ForgedInTime extends CustomCard {
 	
 	@Override
 	public void applyPowers() {
-		this.magicNumber = this.baseMagicNumber = PROTECTION;
-		if (!this.canUpgrade()) upgradeMagicNumber(2);
+		this.magicNumber = this.baseMagicNumber;
 		if (AbstractDungeon.player.hasPower(ElegancePower.POWER_ID)) {
-			upgradeMagicNumber(AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount);
+			this.magicNumber += AbstractDungeon.player.getPower(ElegancePower.POWER_ID).amount;
 			this.isMagicNumberModified = true;
 		}
 		super.applyPowers();

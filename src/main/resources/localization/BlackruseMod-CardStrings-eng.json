@@ -33,7 +33,7 @@
 	},
 	"BlackRuseMod:Orbit": {
 		"NAME": "Orbit",
-		"DESCRIPTION": "Convert !M! blackrusemod:Knives to Satellites. NL Deal !D! damage to ALL enemies for each blackrusemod:Satellite you have."
+		"DESCRIPTION": "Convert !M! blackrusemod:Knives to blackrusemod:Satellites. NL Deal !D! damage to ALL enemies for each blackrusemod:Satellite you have."
 	},
 	"BlackRuseMod:Comet": {	
 		"NAME": "Comet",

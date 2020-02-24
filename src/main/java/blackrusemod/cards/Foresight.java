@@ -27,14 +27,17 @@ public class Foresight extends CustomCard {
 		this.magicNumber = this.baseMagicNumber = RELIEVE;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new ApplyPowerAction(p, p, new ForesightPower(p, this.magicNumber), this.magicNumber));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new Foresight();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

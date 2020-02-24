@@ -2,12 +2,15 @@ package blackrusemod.powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
+import blackrusemod.cards.Interfaces.KnivesCard;
 
 public class SilverBladesPower extends AbstractPower {
 	public static final String POWER_ID = "BlackRuseMod:SilverBladesPower";
@@ -32,6 +35,12 @@ public class SilverBladesPower extends AbstractPower {
 		if(DESCRIPTIONS.length > 2) {
 			this.description = this.description + this.amount + DESCRIPTIONS[2];
 		}
+	}
+
+	@Override
+	public float atDamageGive(float dmg, DamageInfo.DamageType type, AbstractCard c) {
+		if(c instanceof KnivesCard) dmg += this.amount;
+		return dmg;
 	}
 	
 	@Override
