@@ -1,48 +1,42 @@
 package blackrusemod.actions;
- 
+
 import java.util.ArrayList;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import basemod.BaseMod;
+
 public class AdvanceAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
 	private AbstractPlayer p;
-	ArrayList<AbstractCard> zero_cost = new ArrayList<AbstractCard>();
 
 	public AdvanceAction(int numCards) {
 		this.p = AbstractDungeon.player;
-		setValues(this.p, AbstractDungeon.player, numCards);
-		this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.CARD_MANIPULATION;
+		setValues(this.p, this.p, numCards);
+		this.actionType = ActionType.CARD_MANIPULATION;
 	}
 
+	@Override
 	public void update() {
-		if (this.amount <= 0) {
+		if(this.amount <= 0 || this.p.drawPile.isEmpty()) {
 			this.isDone = true;
 			return;
 		}
-		if (AbstractDungeon.player.drawPile.isEmpty()) {
-			this.isDone = true;
-				return;
+		ArrayList<AbstractCard> cards = new ArrayList<AbstractCard>();
+		for(AbstractCard c : this.p.drawPile.group) {
+			if(c.costForTurn == 0) {
+				cards.add(c);
+				if(cards.size() >= this.amount) break;
+			}
 		}
-		if (AbstractDungeon.player.hand.size() == 10) {
-			AbstractDungeon.player.createHandIsFullDialog();
-			this.isDone = true;
-			return;
+		for(AbstractCard c : cards) {
+			if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
+				this.p.createHandIsFullDialog();
+				break;
+			}
+			this.p.drawPile.moveToHand(c);
 		}
-		for (AbstractCard c: AbstractDungeon.player.drawPile.group)
-			if (c.costForTurn == 0)
-				zero_cost.add(c);
-		if (zero_cost.size() != 0) {
-			AbstractCard c = zero_cost.get(0);
-			this.p.hand.addToHand(c);
-			c.lighten(false);
-			this.p.drawPile.removeCard(c);
-			this.p.hand.refreshHandLayout();
-		}
-		this.amount--;
-		if (this.amount != 0) 
-			AbstractDungeon.actionManager.addToTop(new AdvanceAction(this.amount));
 		this.isDone = true;
 	}
 }

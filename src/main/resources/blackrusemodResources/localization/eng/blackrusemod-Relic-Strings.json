@@ -1,0 +1,57 @@
+{
+  "blackrusemod:Uniform": {
+    "NAME": "Uniform",
+    "FLAVOR": "It helps in keeping dirty stuff away as well as in carrying weapons.",
+    "DESCRIPTIONS": ["At the start of each combat, obtain #b6 #yblackrusemod:Knives."]
+  },
+  "blackrusemod:Broom": {
+    "NAME": "Broom",
+    "FLAVOR": "A must-have for every maid.",
+    "DESCRIPTIONS": ["Every #b10 cards you manually discard, gain [B] ."]
+  },
+  "blackrusemod:KneeBrace": {
+    "NAME": "Knee Brace",
+    "FLAVOR": "Quite useful for avoiding bursitis.",
+    "DESCRIPTIONS": ["Gain #b3 #yBlock for each #yblackrusemod:Shift effect you trigger."]
+  },
+  "blackrusemod:PocketWatch": {
+    "NAME": "Pocket Watch",
+    "FLAVOR": "Sixty years, an instant.",
+    "DESCRIPTIONS": ["Whenever you #yExhaust a card, draw a card."]
+  },
+  "blackrusemod:StoneMask": {
+    "NAME": "Stone Mask",
+    "FLAVOR": "You feel a sudden impulse to reject your humanity.",
+    "DESCRIPTIONS": ["Each time you kill a non-minion enemy, heal for #b2 HP and gain #b1 permanent Max HP."]
+  },
+  "blackrusemod:MysterySword": {
+    "NAME": "Mystery Sword",
+    "FLAVOR": "Found in the depths. Users must sacrifice themselves to wield this sword.",
+    "DESCRIPTIONS": ["Gain [B] at the start of each turn. The first #ySkill you play each turn has #yblackrusemod:Backlash."]
+  },
+  "blackrusemod:PaperSwan": {
+    "NAME": "Paper Swan",
+    "FLAVOR": "Perfect and Elegant.",
+    "DESCRIPTIONS": ["Whenever you apply #yblackrusemod:Blight, you have a #b50% chance to apply an additional #b1 #yblackrusemod:Blight."]
+  },
+  "blackrusemod:SplendidAttire": {
+    "NAME": "Splendid Attire",
+    "FLAVOR": "Danger hides in beauty.",
+    "DESCRIPTIONS": ["Replaces #rUniform. At the start of each combat, obtain #b12 #yblackrusemod:Knives, obtain #b3 #yblackrusemod:Satellites, and gain #b1 #yblackrusemod:Elegance."]
+  },
+  "blackrusemod:OldScarf": {
+    "NAME": "Old Scarf",
+    "FLAVOR": "It is said that this is a family heirloom.",
+    "DESCRIPTIONS": ["At the start of each combat, #yupgrade ALL #yblackrusemod:Vision cards in your deck for the rest of combat."]
+  },
+  "blackrusemod:Pan": {
+    "NAME": "Pan",
+    "FLAVOR": "Why are they selling this?",
+    "DESCRIPTIONS": ["At the start of each combat, apply #b2 #yblackrusemod:Blight to ALL enemies."]
+  },
+  "blackrusemod:RomanBracelet": {
+    "NAME": "Roman Bracelet",
+    "FLAVOR": "Only a few people may release its true potential.",
+    "DESCRIPTIONS": ["At the start of each combat, shuffle #b2 #yTemporal #yEssence into your draw pile."]
+  }
+}

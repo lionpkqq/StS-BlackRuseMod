@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import blackrusemod.BlackRuseMod;
 
 public class WasteNotPower extends AbstractPower {
-	public static final String POWER_ID = "WasteNotPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(WasteNotPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -30,25 +30,18 @@ public class WasteNotPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("waste_not48");
 		this.region128 = powerAltas.findRegion("waste_not128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void atEndOfTurn(boolean isPlayer)
-	{
+	@Override
+	public void atEndOfTurn(boolean isPlayer) {
 		flash();
 		this.DRAW = this.amount * EnergyPanel.totalCount;
 		if (this.DRAW != 0)
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-					new DrawCardNextTurnPower(AbstractDungeon.player, this.DRAW), this.DRAW));
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(EnergyPanel.totalCount));
+			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, this.DRAW), this.DRAW));
+		addToBot(new LoseEnergyAction(EnergyPanel.totalCount));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

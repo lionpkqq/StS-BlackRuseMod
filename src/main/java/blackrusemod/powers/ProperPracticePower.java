@@ -11,7 +11,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ProperPracticeAction;
 
 public class ProperPracticePower extends AbstractPower {
-	public static final String POWER_ID = "ProperPracticePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(ProperPracticePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,20 +27,15 @@ public class ProperPracticePower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("proper_practice48");
 		this.region128 = powerAltas.findRegion("proper_practice128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
+	@Override
 	public void atStartOfTurnPostDraw() {
 		flash();
-		AbstractDungeon.actionManager.addToBottom(new ProperPracticeAction(AbstractDungeon.player, this.amount));
+		addToBot(new ProperPracticeAction(AbstractDungeon.player, this.amount));
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

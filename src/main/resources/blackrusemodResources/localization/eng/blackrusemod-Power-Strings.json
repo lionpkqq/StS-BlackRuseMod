@@ -1,0 +1,114 @@
+{
+  "blackrusemod:KnivesPower": {
+    "NAME": "Knives",
+    "DESCRIPTIONS": ["You are currently holding #b", " #yKnives."]
+  },
+  "blackrusemod:EmbodimentPower": {
+    "NAME": "Embodiment",
+    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yTemporal card(s) into your draw pile."]
+  },
+  "blackrusemod:UpgradedEmbodimentPower": {
+    "NAME": "Upgraded Embodiment",
+    "DESCRIPTIONS": ["At the end of your turn, shuffle #b", " #yupgraded #yTemporal card(s) into your draw pile."]
+  },
+  "blackrusemod:FlawlessFormPower": {
+    "NAME": "Flawless Form",
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable or #yFrail."]
+  },
+  "blackrusemod:FloweringNightPower": {
+    "NAME": "Flowering Night",
+    "DESCRIPTIONS": ["Whenever you play a card, draw #b", " card(s). You may draw #b", " more card(s)."]
+  },
+  "blackrusemod:AmplifyDamagePower": {
+    "NAME": "Blighted",
+    "DESCRIPTIONS": ["This enemy will take #b", " extra damage when attacked."]
+  },
+  "blackrusemod:ProperPracticePower": {
+    "NAME": "Proper Practice",
+    "DESCRIPTIONS": ["At the start of your turn, you may choose #b", " card(s) to upgrade."]
+  },
+  "blackrusemod:WasteNotPower": {
+    "NAME": "Waste Not",
+    "DESCRIPTIONS": ["At the end of your turn, spend all [B] . Draw #b", " more card next turn for each [B] spent."]
+  },
+  "blackrusemod:MoonPhasePower": {
+    "NAME": "Moon Phase",
+    "DESCRIPTIONS": ["At the end of your turn, gain #b", " #yBlock for each stack of Weak, Vulnerable and Frail on you."]
+  },
+  "blackrusemod:MurderousAuraPower": {
+    "NAME": "Murderous Aura",
+    "DESCRIPTIONS": ["At the start of your turn, apply #b", " #yBlight to ALL enemies."]
+  },
+  "blackrusemod:DeadlinePower": {
+    "NAME": "Deadline",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, apply #b", " #yBlight and #yVulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, apply #b", " #yBlight and #yVulnerable."]
+  },
+  "blackrusemod:RealityMarblePower": {
+    "NAME": "Reality Marble",
+    "DESCRIPTIONS": ["At the end of your turn, #yRetain up to #b", " card. The cards you retain lose #yEthereal for this combat."]
+  },
+  "blackrusemod:SilverBladesPower": {
+    "NAME": "Silver Blades",
+    "DESCRIPTIONS": ["#yKnives and #ySatellites deal #b", " additional damage. Obtain #b", " #yKnives at the start of your turn."]
+  },
+  "blackrusemod:StarChefPower": {
+    "NAME": "Star Chef",
+    "DESCRIPTIONS": ["At the start of your turn, you may exhaust up to #b", " card(s) and gain the same amount of energy."]
+  },
+  "blackrusemod:ForesightPower": {
+    "NAME": "Foresight",
+    "DESCRIPTIONS": ["At the start of your turn, #yScry #b", ""]
+  },
+  "blackrusemod:SuppressingFirePower": {
+    "NAME": "Suppressing Fire",
+    "DESCRIPTIONS": ["Whenever you throw or convert a #yKnife, gain #b", " #yBlock."]
+  },
+  "blackrusemod:TheWorldPower": {
+    "NAME": "The World",
+    "DESCRIPTIONS": ["This turn, the next card you play costs #b0."]
+  },
+  "blackrusemod:TrueSightPower": {
+    "NAME": "True Sight",
+    "DESCRIPTIONS": ["#yVision effects will always be triggered."]
+  },
+  "blackrusemod:SatellitePower": {
+    "NAME": "Satellite",
+    "DESCRIPTIONS": ["When you play an Attack or are attacked, throw #b1 Satellite at the target/attacker for #b", " damage."]
+  },
+  "blackrusemod:SnipePower": {
+    "NAME": "Snipe",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, throw #b1 #yKnife. It deals #b", " damage and applies #b1 Vulnerable.", "Next turn, if the target enemy does #yNOT intend to attack, throw #b1 #yKnife. It deals #b", " damage and applies #1 Vulnerable."]
+  },
+  "blackrusemod:TimeTheftPower": {
+    "NAME": "Time Theft",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " energy. Draw #b", " card(s).", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " energy. Draw #b", " card(s)."]
+  },
+  "blackrusemod:ReadPower": {
+    "NAME": "Read",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, gain #b", " #yProtection and apply #b", " #yWeak.", "Next turn, if the target enemy does #yNOT intend to attack, gain #b", " #yProtection and apply #b", " #yWeak."]
+  },
+  "blackrusemod:ManipulatePower": {
+    "NAME": "Manipulate",
+    "DESCRIPTIONS": ["Shuffles #b2 random #yTemporal cards into your draw pile."]
+  },
+  "blackrusemod:ReturningBladePower": {
+    "NAME": "Returning Blade",
+    "DESCRIPTIONS": ["Next turn, if the target enemy intends to #yattack, deal #b", " damage and return Returning Blade to your hand.", "Next turn, if the target enemy does #yNOT intend to attack, deal #b", " damage and return Returning Blade to your hand."]
+  },
+  "blackrusemod:ProtectionPower": {
+    "NAME": "Protection",
+    "DESCRIPTIONS": ["Your Protection can sustain #b", " damage."]
+  },
+  "blackrusemod:FalseFlawlessFormPower": {
+    "NAME": "Defy",
+    "DESCRIPTIONS": ["You are not affected by #yWeak, #yVulnerable or #yFrail for #b", " turn."]
+  },
+  "blackrusemod:MatrixPower": {
+    "NAME": "Matrix",
+    "DESCRIPTIONS": ["Reduce damage taken from the next #b", " #yAttacks by #b50%."]
+  },
+  "blackrusemod:ElegancePower": {
+    "NAME": "Elegance",
+    "DESCRIPTIONS": ["Increases #yBlock and #yProtection gained from cards by #b", " ."]
+  }
+}

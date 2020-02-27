@@ -11,7 +11,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.StarChefAction;
 
 public class StarChefPower extends AbstractPower {
-	public static final String POWER_ID = "StarChefPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(StarChefPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,18 +27,13 @@ public class StarChefPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("star_chef48");
 		this.region128 = powerAltas.findRegion("star_chef128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
+	@Override
 	public void atStartOfTurnPostDraw() {
 		flash();
 		AbstractDungeon.actionManager.addToBottom(new StarChefAction(AbstractDungeon.player, this.amount));

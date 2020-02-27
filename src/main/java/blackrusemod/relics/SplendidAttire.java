@@ -1,8 +1,9 @@
 package blackrusemod.relics;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
@@ -10,29 +11,34 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.powers.ElegancePower;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SatellitePower;
+import blackrusemod.util.TextureLoader;
+
+import static blackrusemod.BlackRuseMod.makeRelicPath;
+import static blackrusemod.BlackRuseMod.makeRelicOutlinePath;
 
 public class SplendidAttire extends CustomRelic {
-	private static final String ID = "SplendidAttire";
-	private static final int KNIVES = 12;
+	public static final String ID = BlackRuseMod.makeID(SplendidAttire.class.getSimpleName());
+	private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("splendid_attire.png"));
+	private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("splendid_attire.png"));
+	public static final int KNIVES = 12;
 	
 	public SplendidAttire() {
-		super(ID, ImageMaster.loadImage(BlackRuseMod.SPLENDID_ATTIRE_RELIC), ImageMaster.loadImage(BlackRuseMod.SPLENDID_ATTIRE_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.MAGICAL);
+		super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
 	}
 
 	@Override
 	public void obtain() {
-		if (AbstractDungeon.player.hasRelic("Uniform")) this.instantObtain(AbstractDungeon.player, 0, false);
+		if (AbstractDungeon.player.hasRelic(Uniform.ID)) this.instantObtain(AbstractDungeon.player, 0, false);
 		else super.obtain();
 	}
 	
 	@Override
 	public void atBattleStart() {
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new KnivesPower(AbstractDungeon.player, KNIVES)));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-				new ElegancePower(AbstractDungeon.player, 1), 1));
-		AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new SatellitePower(AbstractDungeon.player, 3), 3));
+		flash();
+		addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new KnivesPower(AbstractDungeon.player, KNIVES)));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SatellitePower(AbstractDungeon.player, 3), 3));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElegancePower(AbstractDungeon.player, 1), 1));
 	}
 	
 	@Override

@@ -1,0 +1,362 @@
+﻿{
+	"blackrusemod:_DummyAttack": {
+		"NAME": "攻擊",
+		"DESCRIPTION": "下回合，敵人的意圖是攻擊"
+	},
+	"blackrusemod:_DummyNotAttack": {
+		"NAME": "非攻擊",
+		"DESCRIPTION": "下回合，敵人的意圖不是攻擊"
+	},
+	"blackrusemod:Strike_Silver": {
+		"NAME": "打擊",
+		"DESCRIPTION": "造成 !D! 點傷害"
+	},
+	"blackrusemod:Defend_Silver": {
+		"NAME": "防禦",
+		"DESCRIPTION": "獲得 !B! 點 格擋"
+	},
+	"blackrusemod:InstantArmor": {
+		"NAME": "靈裝",
+		"DESCRIPTION": "固有 。 NL 獲得 !BRM_P! 點 blackrusemod:護盾 。 NL 轉化3把 blackrusemod:飛刀 為 blackrusemod:衛星 。 NL 消耗"
+	},
+	"blackrusemod:Alleviate": {
+		"NAME": "減負",
+		"DESCRIPTION": "丟棄最多3張手牌。每丟棄1張牌，獲得 !B! 點 格擋"
+	},
+	"blackrusemod:Barrier": {
+		"NAME": "屏障",
+		"DESCRIPTION": "獲得 !B! 點 格擋 。 NL 獲得 !BRM_P! 點 blackrusemod:護盾"
+	},
+	"blackrusemod:PendulumOfEternity": {
+		"NAME": "永恆鐘擺",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !M! 層 易傷 。 NL 給予 !M! 層 虛弱 。 NL blackrusemod:變換 ：耗能減少 [B]"
+	},
+	"blackrusemod:Orbit": {
+		"NAME": "入軌",
+		"DESCRIPTION": "轉化 !M! 把 blackrusemod:飛刀 為 blackrusemod:衛星 。 NL 每有1層 blackrusemod:衛星 ，對所有敵人造成 !D! 點傷害"
+	},
+	"blackrusemod:Comet": {	
+		"NAME": "彗星",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL 本回合內每打出過1張牌，少抽1張牌",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL 本回合內每打出過1張牌，少抽1張牌"
+	},
+	"blackrusemod:Dilation": {
+		"NAME": "膨脹",
+		"DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 。 NL 這張牌每被打出1次，它在本場戰鬥中的基礎 blackrusemod:護盾 上升1"
+	},
+	"blackrusemod:Moondial": {
+		"NAME": "月晷",
+		"DESCRIPTION": "增加 !M! 張隨機 blackrusemod:幻時 牌到手牌和抽牌堆。 NL 消耗"
+	},
+	"blackrusemod:Deny": {
+		"NAME": "否決",
+		"DESCRIPTION": "檢視抽牌堆，選擇丟棄最多 !M! 張牌。 NL 消耗",
+		"UPGRADE_DESCRIPTION": "檢視抽牌堆，選擇丟棄最多 !M! 張牌"
+	},
+	"blackrusemod:DoubleEdge": {
+		"NAME": "雙刃劍",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 給予 !M! 層 易傷 。 blackrusemod:反衝"
+	},
+	"blackrusemod:DualDimension": {
+		"NAME": "二重次元",
+		"DESCRIPTION": "blackrusemod:護盾 變為2倍。 NL 消耗 。 NL blackrusemod:變換 ：獲得 !BRM_P! 點 blackrusemod:護盾"
+	},
+	"blackrusemod:Duplication": {
+		"NAME": "分身",
+		"DESCRIPTION": "複製 !M! 張手牌。 NL 複製品本回合耗能為0。 NL blackrusemod:反衝 。 消耗",
+		"UPGRADE_DESCRIPTION": "複製 !M! 張手牌。 NL 複製品本回合耗能為0。 NL blackrusemod:反衝 。 消耗"
+	},
+	"blackrusemod:Embodiment": {
+		"NAME": "幻時具現",
+		"DESCRIPTION": "在你的回合結束時，增加1張隨機 blackrusemod:幻時 牌到抽牌堆",
+		"UPGRADE_DESCRIPTION": "在你的回合結束時，增加1張隨機 已升級 blackrusemod:幻時 牌到抽牌堆"
+	},
+	"blackrusemod:Defy": {
+		"NAME": "藐視",
+		"DESCRIPTION": "獲得 !B! 點 格擋 。你不受 虛弱 、 脆弱 和 易傷 影響1回合",
+		"UPGRADE_DESCRIPTION": "獲得 !B! 點 格擋 。你不受 虛弱 、 脆弱 和 易傷 影響1回合。 NL 保留"
+	},
+	"blackrusemod:FanOfKnives": {
+		"NAME": "刀陣",
+		"DESCRIPTION": "對每個敵人投擲1把 blackrusemod:飛刀 X次。 NL 每把造成 !D! 點傷害"
+	},
+	"blackrusemod:GearUp": {
+		"NAME": "整裝待發",
+		"DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 。 NL 獲得 3 把 blackrusemod:飛刀"
+	},
+	"blackrusemod:FastForward": {
+		"NAME": "快進",
+		"DESCRIPTION": "獲得 !B! 點 格擋 。如果手中沒有攻擊牌，抽 !M! 張牌"
+	},
+	"blackrusemod:Ricochet": {
+		"NAME": "跳彈",
+		"DESCRIPTION": "投擲1把 blackrusemod:飛刀 。 NL 造成 !D! 點傷害並在敵人之間跳彈 !M! 次"
+	},
+	"blackrusemod:FlawlessForm": {
+		"NAME": "完美形態",
+		"DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 。你不會受到 虛弱 、 易傷 和 脆弱 的影響",
+		"UPGRADE_DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 。你不會受到 虛弱 、 易傷 和 脆弱 的影響。 保留"
+	},
+	"blackrusemod:FloweringNight": {
+		"NAME": "花開之夜",
+		"DESCRIPTION": "每打出1張牌，抽1張牌。 NL 一回合最多通過此能力抽 !M! 張牌"
+	},
+	"blackrusemod:Initiator": {
+		"NAME": "起手式",
+		"DESCRIPTION": "造成 !D! 點傷害。增加 追擊 到手牌",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害。增加 已升級 追擊 到手牌"
+	},
+	"blackrusemod:FollowUp": {
+		"NAME": "追擊",
+		"DESCRIPTION": "造成 !D! 點傷害。增加 追擊2 到手牌。 消耗 。 虛無",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害。增加 已升級 追擊2 到手牌。 消耗 。 虛無"
+	},
+	"blackrusemod:FollowUp2": {
+		"NAME": "追擊2",
+		"DESCRIPTION": "造成 !D! 點傷害。增加 畫龍點睛 到手牌。 消耗 。 虛無",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害。增加 已升級 畫龍點睛 到手牌。 消耗 。 虛無"
+	},
+	"blackrusemod:FinishingTouch": {
+		"NAME": "畫龍點睛",
+		"DESCRIPTION": "造成 !D! 點傷害。 獲得1點 blackrusemod:風華 。 消耗 。 虛無"
+	},
+	"blackrusemod:Hightail": {
+		"NAME": "遁走",
+		"DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 X 次。 NL blackrusemod:反衝"
+	},
+	"blackrusemod:Advance": {
+		"NAME": "預支",
+		"DESCRIPTION": "將抽牌堆中 !M! 張0耗能的牌放到手牌",
+		"UPGRADE_DESCRIPTION": " 固有 。 NL 將抽牌堆中 !M! 張0耗能的牌放到手牌"
+	},
+	"blackrusemod:ForgedInTime": {
+		"NAME": "物換星移",
+		"DESCRIPTION": "消耗 所有手牌。 NL 每 消耗 1張牌，獲得 !BRM_P! 點 blackrusemod:護盾 和2把 blackrusemod:飛刀 。 NL 消耗"
+	},
+	"blackrusemod:Gouge": {
+		"NAME": "鑿擊",
+		"DESCRIPTION": "造成 !D! 點傷害並給予1層 blackrusemod:枯萎 X次。 消耗",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害並給予1層 blackrusemod:枯萎 X+1次。 消耗"
+	},
+	"blackrusemod:BestPractice": {
+		"NAME": "最佳實踐",
+		"DESCRIPTION": "每回合開始時，在本場戰鬥中 升級 1張手牌"
+	},
+	"blackrusemod:Exchange": {
+		"NAME": "交換",
+		"DESCRIPTION": "丟棄 !M! 張手牌。 NL 獲得 !M! 把 blackrusemod:飛刀",
+		"UPGRADE_DESCRIPTION": "丟棄 !M! 張手牌。 NL 獲得 !M! 把 blackrusemod:飛刀 。 NL 保留"
+	},
+	"blackrusemod:Luminosity": {
+		"NAME": "光輝",
+		"DESCRIPTION": "獲得 1 點 力量 。 NL 獲得 !M! 點 blackrusemod:風華"
+	},
+	"blackrusemod:KidneyShot": {
+		"NAME": "腎擊",
+		"DESCRIPTION": "投擲 !M! 把 blackrusemod:飛刀 。每把造成 !D! 點傷害並給予 1 層 虛弱"
+	},
+	"blackrusemod:WasteNot": {
+		"NAME": "物盡其用",
+		"DESCRIPTION": "在你的回合結束時，消費所有 [B] 。每消費1點 [B] ，下回合多抽1張牌"
+	},
+	"blackrusemod:KillingDoll": {
+		"NAME": "殺人玩偶",
+		"DESCRIPTION": "投擲所有 blackrusemod:飛刀 。每把對隨機敵人造成 !D! 點傷害。 NL 消耗"
+	},
+	"blackrusemod:Collapse": {
+		"NAME": "坍縮",
+		"DESCRIPTION": "對所有敵人造成你當前 blackrusemod:護盾 值的傷害",
+		"EXTENDED_DESCRIPTION": [" NL （造成 !D! 點傷害）"]
+	},
+	"blackrusemod:Manipulate": {
+		"NAME": "時軸操縱",
+		"DESCRIPTION": "增加 X+1 張隨機 blackrusemod:幻時 牌到抽牌堆",
+		"UPGRADE_DESCRIPTION": "增加 X+2 張隨機 blackrusemod:幻時 牌到抽牌堆"
+	},
+	"blackrusemod:Misdirection": {
+		"NAME": "誤導",
+		"DESCRIPTION": "獲得 !B! 點 格擋 。 NL 給予 !M! 層 blackrusemod:枯萎 和 虛弱"
+	},
+	"blackrusemod:MoonPhase": {
+		"NAME": "月相",
+		"DESCRIPTION": "在你的回合結束時，獲得你身上 虛弱 、 脆弱 和 易傷 總層數 !M! 倍的 格擋"
+	},
+	"blackrusemod:Moonlight": {
+		"NAME": "月光",
+		"DESCRIPTION": "投擲 !M! 把 blackrusemod:飛刀 。每把造成 !D! 點傷害並給予 1 層 易傷"
+	},
+	"blackrusemod:BottledTime": {
+		"NAME": "瓶裝時間",
+		"DESCRIPTION": "抽 !M! 張牌。 NL 消耗",
+		"UPGRADE_DESCRIPTION": "固有 。 NL 抽 !M! 張牌。 NL 消耗"
+	},
+	"blackrusemod:MurderousAura": {
+		"NAME": "殺氣",
+		"DESCRIPTION": "在你的回合開始時，給予所有敵人 1 層 blackrusemod:枯萎",
+		"UPGRADE_DESCRIPTION": "固有 。 NL 你的回合開始時，給予所有敵人 1 層 blackrusemod:枯萎"
+	},
+	"blackrusemod:Read": {
+		"NAME": "先讀",
+		"DESCRIPTION": "blackrusemod:視界 ：獲得 !BRM_P! 點 blackrusemod:護盾 並給予 !M! 層 虛弱"
+	},
+	"blackrusemod:DancingSilver": {
+		"NAME": "星羅棋布",
+		"DESCRIPTION": "轉化 !M! 把 blackrusemod:飛刀 為 blackrusemod:衛星 。獲得 blackrusemod:衛星 量2倍的 格擋"
+	},
+	"blackrusemod:Potential": {
+		"NAME": "潛能",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL blackrusemod:變換 ：本次戰鬥內傷害上升 !M! 並放入手牌"
+	},
+	"blackrusemod:Desolation": {
+		"NAME": "黯滅",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 敵人身上的 blackrusemod:枯萎 翻倍 。 消耗"
+	},
+	"blackrusemod:Deadline": {
+		"NAME": "死限",
+		"DESCRIPTION": "blackrusemod:視界 ：給予 !M! 層 blackrusemod:枯萎 和 易傷 。 NL 消耗"
+	},
+	"blackrusemod:RealityMarble": {
+		"NAME": "固有結界",
+		"DESCRIPTION": "固有 。 NL 在你的回合結束時， 保留 最多 !M! 張牌。 NL 保留 的牌在本次戰鬥內失去 虛無 屬性",
+		"UPGRADE_DESCRIPTION": "固有 。 NL 在你的回合結束時， 保留 最多 !M! 張牌。 NL 保留 的牌在本次戰鬥內失去 虛無 屬性"
+	},
+	"blackrusemod:Rearm": {
+		"NAME": "再裝填",
+		"DESCRIPTION": "抽 !M! 張牌 。 NL 獲得 5 把 blackrusemod:飛刀"
+	},
+	"blackrusemod:Replace": {
+		"NAME": "取代",
+		"DESCRIPTION": "從抽牌堆丟棄 1 張牌。 NL 將 1 張牌從棄牌堆放置到抽牌堆頂部"
+	},
+	"blackrusemod:Reset": {
+		"NAME": "清零",
+		"DESCRIPTION": "清除 虛弱 、 脆弱 和 易傷 。 NL 每層給予 !BRM_P! blackrusemod:護盾 。 NL 消耗"
+	},
+	"blackrusemod:ReturningBlade": {
+		"NAME": "吾刃回歸",
+		"DESCRIPTION": "blackrusemod:視界 ：對所有敵人造成 !D! 點傷害，將這張牌放入手牌。 NL 能被多次升級"
+	},
+	"blackrusemod:Shuttle": {
+		"NAME": "穿梭",
+		"DESCRIPTION": "立即發動下回合開始時才會發動的卡牌和遺物效果。 NL 消耗"
+	},
+	"blackrusemod:Rewind": {
+		"NAME": "回溯",
+		"DESCRIPTION": "獲得 !B! 點 格擋 。 NL 將棄牌堆底部的1張牌放入手牌"
+	},
+	"blackrusemod:Sabotage": {
+		"NAME": "毀傷",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 敵人損失等於傷害值的 力量 1回合。 NL 消耗"
+	},
+	"blackrusemod:ShiftingGears": {
+		"NAME": "換檔",
+		"DESCRIPTION": "抽 !M! 張牌。 NL blackrusemod:變換 ：獲得 1 點 blackrusemod:風華"
+	},
+	"blackrusemod:ShatteredReality": {
+		"NAME": "破碎現實",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL blackrusemod:變換 ：對所有敵人造成雙倍傷害"
+	},
+	"blackrusemod:SilverMatrix": {
+		"NAME": "銀色矩陣",
+		"DESCRIPTION": "轉化 !M! 把 blackrusemod:飛刀 為 blackrusemod:衛星 。 NL 獲得 blackrusemod:衛星 數量的 blackrusemod:矩陣"
+	},
+	"blackrusemod:SilverBlades": {
+		"NAME": "銀刃",
+		"DESCRIPTION": "增加 blackrusemod:飛刀 的傷害 !M! 點。 NL 每回合開始時獲得 !M! 把 blackrusemod:飛刀"
+	},
+	"blackrusemod:Snipe": {
+		"NAME": "狙擊",
+		"DESCRIPTION": "blackrusemod:視界 ：投擲1把 blackrusemod:飛刀 。 NL 造成 !D! 點傷害並給予 !M! 層 易傷"
+	},
+	"blackrusemod:Solidify": {
+		"NAME": "凝固",
+		"DESCRIPTION": "選擇1張 blackrusemod:幻時 牌，把它放在抽牌堆頂部。 消耗",
+		"UPGRADE_DESCRIPTION": "選擇1張 blackrusemod:幻時 牌2次，把它們放在抽牌堆頂部。 消耗"
+	},
+	"blackrusemod:SoulSculpture": {
+		"NAME": "靈魂雕塑",
+		"DESCRIPTION": "造成 !D! 點傷害 6 次。 NL 敵人損失 !M! 點 力量 。 NL 消耗"
+	},
+	"blackrusemod:SpecialFormula": {
+		"NAME": "特製配方",
+		"DESCRIPTION": "獲得 [B] 。 NL 回復 !M! 生命 。 NL blackrusemod:反衝 。 NL 消耗"
+	},
+	"blackrusemod:Spin": {
+		"NAME": "迴旋",
+		"DESCRIPTION": "對所有敵人造成 !D! 點傷害並給予 !M! 層 虛弱 。 NL blackrusemod:反衝"
+	},
+	"blackrusemod:StarChef": {
+		"NAME": "星級廚師",
+		"DESCRIPTION": "你的回合開始時可以 消耗 1張牌並獲得 [B] 。 虛無",
+		"UPGRADE_DESCRIPTION": "你的回合開始時可以 消耗 1張牌並獲得 [B]"
+	},
+	"blackrusemod:Starlight": {
+		"NAME": "星光",
+		"DESCRIPTION": "投擲 !M! 把 blackrusemod:飛刀 。 NL 每把對隨機敵人造成 !D! 點傷害並抽1張牌"
+	},
+	"blackrusemod:Foresight": {
+		"NAME": "先見之明",
+		"DESCRIPTION": "你的回合開始時，檢視抽牌堆頂部的 !M! 張牌，可選擇丟棄其中的任意張"
+	},
+	"blackrusemod:Sunlight": {
+		"NAME": "日光",
+		"DESCRIPTION": "投擲1把 blackrusemod:飛刀 。 NL 對所有敵人造成 !D! 點傷害並給予 !M! 層 blackrusemod:枯萎"
+	},
+	"blackrusemod:SuppressingFire": {
+		"NAME": "火力壓制",
+		"DESCRIPTION": "每投擲或轉化1把 blackrusemod:飛刀 ，獲得 !M! 點 格擋"
+	},
+	"blackrusemod:TimeTheft": {
+		"NAME": "以逸待勞",
+		"DESCRIPTION": "blackrusemod:視界 ：獲得 [B] [B] 。 NL 抽 !M! 張牌。 NL 消耗",
+		"UPGRADE_DESCRIPTION": " blackrusemod:視界 ：獲得 [B] [B] [B] 。 NL 抽 !M! 張牌。 NL 消耗"
+	},
+	"blackrusemod:TemporalDefense": {
+		"NAME": "幻時防護",
+		"DESCRIPTION": "blackrusemod:幻時 。 NL 獲得 !B! 點 格擋 。 NL 獲得 !BRM_P! 點 blackrusemod:護盾"
+	},
+	"blackrusemod:TemporalEssence": {
+		"NAME": "幻時精華",
+		"DESCRIPTION": "blackrusemod:幻時 。 NL 獲得 [B] 。 NL 抽 !M! 張牌",
+		"UPGRADE_DESCRIPTION": "blackrusemod:幻時 。 NL 獲得 [B] [B] 。 NL 抽 !M! 張牌"
+	},
+	"blackrusemod:TemporalMisd": {
+		"NAME": "幻時誤導",
+		"DESCRIPTION": "blackrusemod:幻時 。 NL 給予所有敵人 !M! 層 blackrusemod:枯萎 和 虛弱"
+	},
+	"blackrusemod:TemporalSlicing": {
+		"NAME": "幻時切割",
+		"DESCRIPTION": "blackrusemod:幻時 。 NL 對所有敵人造成 !D! 點傷害 !M! 次"
+	},
+	"blackrusemod:TheWorld": {
+		"NAME": "世界",
+		"DESCRIPTION": "抽 !M! 張牌。 NL 本回合下1張打出的牌耗能為0。 消耗"
+	},
+	"blackrusemod:Contraction": {
+		"NAME": "時御我身",
+		"DESCRIPTION": "獲得 !BRM_P! 點 blackrusemod:護盾 。 NL 把所有的 格擋 轉化為 blackrusemod:護盾"
+	},
+	"blackrusemod:TimeWarp": {
+		"NAME": "遷躍",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 丟棄 !M! 張牌。 NL blackrusemod:變換 ：抽1張牌",
+		"UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 丟棄 !M! 張牌。 NL blackrusemod:變換 ：抽1張牌"
+	},
+	"blackrusemod:Revamp": {
+		"NAME": "改進",
+		"DESCRIPTION": "將棄牌堆中 !M! 張牌放入手中並 升級 。 NL 消耗",
+		"UPGRADE_DESCRIPTION": "將棄牌堆中 !M! 張牌放入手中並 升級"
+	},
+	"blackrusemod:TrueSight": {
+		"NAME": "真視",
+		"DESCRIPTION": "blackrusemod:視界 效果一定會觸發",
+		"UPGRADE_DESCRIPTION": "blackrusemod:視界 效果一定會觸發。 保留"
+	},
+	"blackrusemod:Unruled": {
+		"NAME": "不羈",
+		"DESCRIPTION": "造成 !D! 點傷害。 NL 你身上每有1層 虛弱 、 脆弱 和 易傷 ，傷害提升 !M!"
+	},
+	"blackrusemod:LightFlow": {
+		"NAME": "流光",
+		"DESCRIPTION": "造成 !D! 點傷害 3 次。 NL blackrusemod:反衝"
+	}
+}

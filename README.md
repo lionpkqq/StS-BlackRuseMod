@@ -218,7 +218,7 @@ Balance:
 * [Time Warp] discard 1 card -> discard 1(2) card
 
 Changes and reworks:
-* New illustrations for [Surpressing Fire].
+* New illustrations for [Suppressing Fire].
 * [Proper Practice] now has even lower priority.
 * Deleted [Capture] and added [Moondial].
 * Now [Silver Blades] has an additional effect which is exactly the same as [D. Weaponry].
@@ -457,7 +457,7 @@ Bug fixes:
 * Removed dialogues: Now the Servant will NOT remind the player when the Knives run out. 
 * Fixed: [Returning Blade] can only deal 1 damage to Nemesis.
 * Fixed: Using a power after using [The World] nullifies the effect of [Mummified Hand].
-* Fixed: [Surpressing Fire]'s visual effects appear on top of the enemy instead of the Servant.
+* Fixed: [Suppressing Fire]'s visual effects appear on top of the enemy instead of the Servant.
 * Fixed: Sometimes, [Temporal Slicing] only deals base damage.
 * Reworked [Returning Blade].
 * Renamed [No Escape] to [Deadline].

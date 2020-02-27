@@ -25,6 +25,7 @@ public class AlleviateAction extends AbstractGameAction {
 		this.block = block;
 	}
 
+	@Override
 	public void update() {
 		if (this.duration == com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST) {
 			if (this.p.hand.size() == 0) {
@@ -43,7 +44,7 @@ public class AlleviateAction extends AbstractGameAction {
 				this.p.hand.moveToDiscardPile(c);
 				c.triggerOnManualDiscard();
 				GameActionManager.incrementDiscard(false);
-				AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+				addToBot(new GainBlockAction(p, p, this.block));
 			}
 			AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
 		}

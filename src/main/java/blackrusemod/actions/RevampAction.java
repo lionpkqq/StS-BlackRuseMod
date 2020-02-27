@@ -6,60 +6,59 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-/*    */ public class RevampAction extends AbstractGameAction
-/*    */ {
-/*    */   private AbstractPlayer p;
-/*    */   
-/*    */   public RevampAction(int amount) {
-/* 15 */     this.p = AbstractDungeon.player;
-/* 16 */     setValues(this.p, AbstractDungeon.player, amount);
-/* 17 */     this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-/*    */   }
-/*    */   
-/*    */   public void update()
-/*    */   {
-/* 22 */     if (this.p.hand.size() >= 10) {
-/* 23 */       this.isDone = true; return;
-/*    */     }
-/*    */     AbstractCard card;
-/* 26 */     if (this.p.discardPile.size() == 1) {
-/* 27 */       card = (AbstractCard)this.p.discardPile.group.get(0);
-/* 28 */       this.p.hand.addToHand(card);
-/* 29 */       card.lighten(false);
-			   card.upgrade();
-/* 30 */       this.p.discardPile.removeCard(card);
-/* 31 */       this.p.hand.refreshHandLayout();
-/* 32 */       this.isDone = true;
-/* 33 */       return;
-/*    */     }
-/*    */     
-/* 36 */     if (this.duration == 0.5F) {
-/* 37 */       AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, "return and upgrade", false);
-/* 38 */       tickDuration();
-/* 39 */       return;
-/*    */     }
-/*    */     
-/*    */ 
-/*    */ 
-/* 44 */     if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
-/* 45 */       for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-/* 46 */         this.p.hand.addToHand(c);
-				 c.upgrade();
-/* 47 */         this.p.discardPile.removeCard(c);
-/* 48 */         c.lighten(false);
-/* 49 */         c.unhover();
-/*    */       }
-/* 51 */       AbstractDungeon.gridSelectScreen.selectedCards.clear();
-/* 52 */       this.p.hand.refreshHandLayout();
-/*    */       
-/* 54 */       for (AbstractCard c : this.p.discardPile.group) {
-/* 55 */         c.unhover();
-/* 56 */         c.target_x = CardGroup.DISCARD_PILE_X;
-/* 57 */         c.target_y = 0.0F;
-/*    */       }
-/* 59 */       this.isDone = true;
-/*    */     }
-/*    */     
-/* 62 */     tickDuration();
-/*    */   }
-/*    */ }
+import basemod.BaseMod;
+
+public class RevampAction extends AbstractGameAction {
+	private AbstractPlayer p;
+	
+	public RevampAction(int amount) {
+		this.p = AbstractDungeon.player;
+		setValues(this.p, AbstractDungeon.player, amount);
+		this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+	}
+	
+	@Override
+	public void update() {
+		if (this.p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
+			this.isDone = true; return;
+		}
+		AbstractCard card;
+		if (this.p.discardPile.size() == 1) {
+			card = this.p.discardPile.group.get(0);
+			this.p.hand.addToHand(card);
+			card.lighten(false);
+			card.upgrade();
+			this.p.discardPile.removeCard(card);
+			this.p.hand.refreshHandLayout();
+			this.isDone = true;
+			return;
+		}
+		
+		if (this.duration == 0.5F) {
+			AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, "return and upgrade", false);
+			tickDuration();
+			return;
+		}
+		
+		if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
+			for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+				this.p.hand.addToHand(c);
+				c.upgrade();
+				this.p.discardPile.removeCard(c);
+				c.lighten(false);
+				c.unhover();
+			}
+			AbstractDungeon.gridSelectScreen.selectedCards.clear();
+			this.p.hand.refreshHandLayout();
+			
+			for (AbstractCard c : this.p.discardPile.group) {
+				c.unhover();
+				c.target_x = CardGroup.DISCARD_PILE_X;
+				c.target_y = 0.0F;
+			}
+			this.isDone = true;
+		}
+		
+		tickDuration();
+	}
+}

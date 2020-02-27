@@ -18,8 +18,7 @@ public class BounceAction extends AbstractGameAction {
 	private int count;
 	private int baseDamage;
 	
-	public BounceAction(AbstractCreature source, AbstractCreature target, int baseDamage, int times)
-	{
+	public BounceAction(AbstractCreature source, AbstractCreature target, int baseDamage, int times) {
 		this.duration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.DAMAGE;
 		this.source = source;
@@ -29,8 +28,8 @@ public class BounceAction extends AbstractGameAction {
 		this.info = new DamageInfo(AbstractDungeon.player, baseDamage, DamageType.NORMAL);
 	}
 
-	public void update()
-	{
+	@Override
+	public void update() {
 		// Count the number of monsters in the room (only the ones that are alive)
 		this.count = 0;
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
@@ -58,10 +57,10 @@ public class BounceAction extends AbstractGameAction {
 				this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(new BounceEffect(this.source.hb.cX, 
 					this.source.hb.cY, this.target.hb.cX, this.target.hb.cY)));
-			AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-			AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-			AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-			AbstractDungeon.actionManager.addToBottom(new BounceAction(this.source, this.target, this.baseDamage, this.times));
+			addToBot(new WaitAction(0.1F));
+			addToBot(new WaitAction(0.1F));
+			addToBot(new WaitAction(0.1F));
+			addToBot(new BounceAction(this.source, this.target, this.baseDamage, this.times));
 		}
 		this.isDone = true;
 	}

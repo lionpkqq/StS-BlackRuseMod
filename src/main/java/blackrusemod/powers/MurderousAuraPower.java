@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class MurderousAuraPower extends AbstractPower {
-	public static final String POWER_ID = "MurderousAuraPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(MurderousAuraPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -27,22 +27,17 @@ public class MurderousAuraPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("murderous_aura48");
 		this.region128 = powerAltas.findRegion("murderous_aura128");
 	}
-	
-	public void stackPower(int stackAmount)
-	{
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 	
+	@Override
 	public void atStartOfTurn() {
 		flash();
 		for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, this.owner, new AmplifyDamagePower(mo, this.amount), this.amount));
+			addToBot(new ApplyPowerAction(mo, this.owner, new AmplifyDamagePower(mo, this.amount), this.amount));
 		}
 	}
 }

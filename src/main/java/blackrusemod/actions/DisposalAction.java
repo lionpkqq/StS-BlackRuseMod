@@ -22,15 +22,16 @@ public class DisposalAction extends AbstractGameAction {
 		this.duration = this.startingDuration;
 	}
 
+	@Override
 	public void update() {
 		if (this.duration == this.startingDuration) {
 			int count = AbstractDungeon.player.hand.size();
 			for (int i = 0; i < count; i++) {
-				AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ProtectionPower(p, this.amount), this.amount));
-				AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new KnivesPower(p, 2), 2));
+				addToTop(new ApplyPowerAction(p, p, new ProtectionPower(p, this.amount), this.amount));
+				addToTop(new ApplyPowerAction(p, p, new KnivesPower(p, 2), 2));
 			}
 			for (int i = 0; i < count; i++) {
-				AbstractDungeon.actionManager.addToTop(new ExhaustAction(p, p, 1, true, true));
+				addToTop(new ExhaustAction(p, p, 1, true, true));
 			}
 		}
 		tickDuration();

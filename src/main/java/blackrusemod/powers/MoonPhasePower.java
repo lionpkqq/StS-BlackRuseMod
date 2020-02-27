@@ -7,11 +7,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import blackrusemod.BlackRuseMod;
 
 public class MoonPhasePower extends AbstractPower {
-	public static final String POWER_ID = "MoonPhasePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(MoonPhasePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -28,23 +31,20 @@ public class MoonPhasePower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("moon_phase128");
 	}
 	
-	public void stackPower(int stackAmount)
-	{
-		flash();
-		this.fontScale = 8.0F;
-		this.amount += stackAmount;
-	}
-	
+	@Override
 	public void atEndOfTurn(boolean isPlayer) {
 		this.BLOCK = 0;
-		if (this.owner.hasPower("Weakened")) this.BLOCK += AbstractDungeon.player.getPower("Weakened").amount*this.amount;
-		if (this.owner.hasPower("Vulnerable")) this.BLOCK += AbstractDungeon.player.getPower("Vulnerable").amount*this.amount;
-		if (this.owner.hasPower("Frail")) this.BLOCK += AbstractDungeon.player.getPower("Frail").amount*this.amount;
-		if (!(this.BLOCK == 0)) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.BLOCK));
+		if (this.owner.hasPower(WeakPower.POWER_ID)) this.BLOCK += this.owner.getPower(WeakPower.POWER_ID).amount*this.amount;
+		if (this.owner.hasPower(VulnerablePower.POWER_ID)) this.BLOCK += this.owner.getPower(VulnerablePower.POWER_ID).amount*this.amount;
+		if (this.owner.hasPower(FrailPower.POWER_ID)) this.BLOCK += this.owner.getPower(FrailPower.POWER_ID).amount*this.amount;
+		if (!(this.BLOCK == 0)) {
+			this.flash();
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.BLOCK));
+		}
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

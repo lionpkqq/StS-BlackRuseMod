@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class TrueSightPower extends AbstractPower {
-	public static final String POWER_ID = "TrueSightPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(TrueSightPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,8 +25,8 @@ public class TrueSightPower extends AbstractPower {
 		this.region128 = powerAltas.findRegion("true_sight128");
 	}
 
-	public void updateDescription()
-	{
+	@Override
+	public void updateDescription() {
 		this.description = DESCRIPTIONS[0];
 	}
 }
