@@ -1,113 +1,113 @@
 {
-  "BlackRuseMod:KnivesPower": {
+  "blackrusemod:KnivesPower": {
     "NAME": "飞刀",
     "DESCRIPTIONS": ["你持有 #b", " 把 #y飞刀 。"]
   },
-  "BlackRuseMod:EmbodimentPower": {
+  "blackrusemod:EmbodimentPower": {
     "NAME": "具现化",
     "DESCRIPTIONS": ["回合结束时将 #b", " 张 #y幻时 牌加入抽牌堆。"]
   },
-  "BlackRuseMod:UpgradedEmbodimentPower": {
+  "blackrusemod:UpgradedEmbodimentPower": {
     "NAME": "极·具现化",
     "DESCRIPTIONS": ["回合结束时将 #b", " 张升级过的 #y幻时 牌加入抽牌堆。"]
   },
-  "BlackRuseMod:FlawlessFormPower": {
+  "blackrusemod:FlawlessFormPower": {
     "NAME": "完美形态",
     "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响。"]
   },
-  "BlackRuseMod:FloweringNightPower": {
+  "blackrusemod:FloweringNightPower": {
     "NAME": "花开之夜",
     "DESCRIPTIONS": ["本回合每打出一张牌，抽 #b", " 张牌。你还能抽 #b", " 张牌。"]
   },
-  "BlackRuseMod:AmplifyDamagePower": {
+  "blackrusemod:AmplifyDamagePower": {
     "NAME": "枯萎",
     "DESCRIPTIONS": ["受到攻击时会额外承受 #b", " 点伤害。"]
   },
-  "BlackRuseMod:ProperPracticePower": {
+  "blackrusemod:ProperPracticePower": {
     "NAME": "适当练习",
     "DESCRIPTIONS": ["每回合开始时，你可以选择 #b", " 张手牌升级。"]
   },
-  "BlackRuseMod:WasteNotPower": {
+  "blackrusemod:WasteNotPower": {
     "NAME": "物尽其用",
     "DESCRIPTIONS": ["你的回合结束时，消费所有 [B] 。每消费1点 [B] ，下回合多抽 #b", " 张卡。"]
   },
-  "BlackRuseMod:MoonPhasePower": {
+  "blackrusemod:MoonPhasePower": {
     "NAME": "月相",
     "DESCRIPTIONS": ["你的回合结束时，获得你身上的 虚弱 、 脆弱 和 易伤 总层数乘以 #b", " 的 #y格挡 。"]
   },
-  "BlackRuseMod:MurderousAuraPower": {
+  "blackrusemod:MurderousAuraPower": {
     "NAME": "杀气",
     "DESCRIPTIONS": ["你的回合开始时，所有敌人获得 #b", " 层 #y枯萎 。"]
   },
-  "BlackRuseMod:DeadlinePower": {
+  "blackrusemod:DeadlinePower": {
     "NAME": "死限",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。", "下回合，如果目标敌人意图 #y不是攻击 ，给予 #b", " 层 #y枯萎 和 易伤 。"]
   },
-  "BlackRuseMod:RealityMarblePower": {
+  "blackrusemod:RealityMarblePower": {
     "NAME": "固有结界",
     "DESCRIPTIONS": ["在你的回合结束时， #y保留 最多 #b", " 张牌。 保留的牌在本次战斗内失去 #y虚无 属性。"]
   },
-  "BlackRuseMod:SilverBladesPower": {
+  "blackrusemod:SilverBladesPower": {
     "NAME": "银刃",
     "DESCRIPTIONS": ["增加每把 #y飞刀 的伤害 #b", " 点。"]
   },
-  "BlackRuseMod:StarChefPower": {
+  "blackrusemod:StarChefPower": {
     "NAME": "星级厨师",
     "DESCRIPTIONS": ["你的回合开始时，你可以消耗最多 #b", " 张牌并获得相同数量的能量。"]
   },
-  "BlackRuseMod:StressRelieverPower": {
+  "blackrusemod:StressRelieverPower": {
     "NAME": "解愁人",
     "DESCRIPTIONS": ["你的回合开始时，检视抽牌堆顶上 #b", " 张牌，你可以选择丢弃其中的任意张。"]
   },
-  "BlackRuseMod:SuppressingFirePower": {
+  "blackrusemod:SuppressingFirePower": {
     "NAME": "火力压制",
     "DESCRIPTIONS": ["每当你通过卡牌使用 #b1 把 #y飞刀 ，获得 #b", " 点 #y格挡 。"]
   },
-  "BlackRuseMod:TheWorldPower": {
+  "blackrusemod:TheWorldPower": {
     "NAME": "世界",
     "DESCRIPTIONS": ["本回合你打出的下一张牌不消耗能量。"]
   },
-  "BlackRuseMod:TrueSightPower": {
+  "blackrusemod:TrueSightPower": {
     "NAME": "真视",
     "DESCRIPTIONS": [" #y视界 效果一定会触发。"]
   },
-  "BlackRuseMod:SatellitePower": {
+  "blackrusemod:SatellitePower": {
     "NAME": "卫星",
     "DESCRIPTIONS": ["使用攻击牌时，失去 #b1 层 #y卫星 并额外攻击一次，造成 #b", " 点伤害。你每受到一次攻击，失去 #b1 层 #y卫星 并对攻击者造成 #b4 点伤害。"]
   },
-  "BlackRuseMod:SnipePower": {
+  "blackrusemod:SnipePower": {
     "NAME": "狙击",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， #y投掷 1把 #y飞刀 ，造成 #b", " 点伤害。", "下回合，如果目标敌人意图 #y不是攻击 ， #y投掷 1把 #y飞刀 ，造成 #b", " 点伤害。"]
   },
-  "BlackRuseMod:TimeTheftPower": {
+  "blackrusemod:TimeTheftPower": {
     "NAME": "时间盗窃",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ，获得 #b", " 能量。抽 #b", " 张牌。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 能量。抽 #b ", " 张牌。"]
   },
-  "BlackRuseMod:ReadPower": {
+  "blackrusemod:ReadPower": {
     "NAME": "先读",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 获得 #b", " 点 #y护盾 并给予 #b", " 层 #y虚弱 。", "下回合，如果目标敌人意图 #y不是攻击 ，获得 #b", " 点 #y护盾 并给予 #b", " 层 #y虚弱 。"]
   },
-  "BlackRuseMod:ManipulatePower": {
+  "blackrusemod:ManipulatePower": {
     "NAME": "操控",
     "DESCRIPTIONS": ["随机将两张 #y幻时 牌加入抽牌堆。"]
   },
-  "BlackRuseMod:ReturningBladePower": {
+  "blackrusemod:ReturningBladePower": {
     "NAME": "返刃",
     "DESCRIPTIONS": ["下回合，如果目标敌人意图是 #y攻击 ， 造成 #b", " 点伤害，将这张牌加入手牌。", "下回合，如果目标敌人意图 #y不是攻击 ，造成 #b", " 点伤害，将这张牌加入手牌。"]
   },
-  "BlackRuseMod:ProtectionPower": {
+  "blackrusemod:ProtectionPower": {
     "NAME": "护盾",
     "DESCRIPTIONS": ["护盾可以承受 #b", " 点伤害。"]
   },
-  "BlackRuseMod:FalseFlawlessFormPower": {
+  "blackrusemod:FalseFlawlessFormPower": {
     "NAME": "伪·完美形态",
     "DESCRIPTIONS": ["你不会受到 #y虚弱 、 #y易伤 和 #y脆弱 的影响 #b", " 回合。"]
   },
-  "BlackRuseMod:MatrixPower": {
+  "blackrusemod:MatrixPower": {
     "NAME": "矩阵",
     "DESCRIPTIONS": ["将下 #b", " 次所受到的 #y攻击 伤害降低 #b25% 。"]
   },
-  "BlackRuseMod:ElegancePower": {
+  "blackrusemod:ElegancePower": {
     "NAME": "风华",
     "DESCRIPTIONS": ["从卡牌获得的 #y格挡 和 #y护盾 增加 #b", " 。"]
   }

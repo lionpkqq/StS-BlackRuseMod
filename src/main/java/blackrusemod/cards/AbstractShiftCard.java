@@ -7,25 +7,28 @@ import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.relics.KneeBrace;
 
-public abstract class AbstractShiftCard extends CustomCard {
+public abstract class AbstractShiftCard extends AbstractServantCard {
 	private boolean inDiscardMenu = false;
 
-	public AbstractShiftCard(String id, String name, String texture, int cost, String desc, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
-		super(id, name, texture, cost, desc, type, color, rarity, target);
+	public AbstractShiftCard(String id, String texture, int cost, CardType type, CardRarity rarity, CardTarget target) {
+		super(id, texture, cost, type, rarity, target);
 	}
-	
+
+	// There's a patch in place that allows this to trigger during Scry
+	// But only if it's a Shift card, of course
+	// (They'll also trigger during Deny and Replace)
 	@Override
 	public void triggerOnManualDiscard() {
 		triggerShift();
-		if (AbstractDungeon.player.hasRelic(KneeBrace.ID)) {
+		if(AbstractDungeon.player.hasRelic(KneeBrace.ID)) {
 			AbstractDungeon.player.getRelic(KneeBrace.ID).flash();
 			addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, KneeBrace.BLOCK_AMT));
 		}
 	}
-	
+
+	// Override this to have something happen when this card Shifts
 	public void triggerShift() {}
 	
 	// Glow gold during discard actions to indicate Shift

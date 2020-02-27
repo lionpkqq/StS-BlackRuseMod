@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.Interfaces.KnivesCard;
+import blackrusemod.cards.AbstractServantCard;
 
 public class SilverBladesPower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:SilverBladesPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(SilverBladesPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -39,7 +39,7 @@ public class SilverBladesPower extends AbstractPower {
 
 	@Override
 	public float atDamageGive(float dmg, DamageInfo.DamageType type, AbstractCard c) {
-		if(c instanceof KnivesCard) dmg += this.amount;
+		if(c.hasTag(AbstractServantCard.Enums.SILVER_BLADES)) dmg += this.amount;
 		return dmg;
 	}
 	

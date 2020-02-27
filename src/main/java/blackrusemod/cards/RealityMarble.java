@@ -3,27 +3,22 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.RealityMarblePower;
 
-public class RealityMarble extends CustomCard {
-	public static final String ID = "BlackRuseMod:RealityMarble";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class RealityMarble extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(RealityMarble.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("reality_marble.png");
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
 	private static final int COST = 1;
 	private static final int RETAIN = 1;
 
 	public RealityMarble() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REALITY_MARBLE), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.isInnate = true;
 		this.magicNumber = this.baseMagicNumber = RETAIN;
 	}
@@ -42,7 +37,7 @@ public class RealityMarble extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADE_DESCRIPTION;
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
 			this.initializeDescription();
 			upgradeMagicNumber(1);
 		}

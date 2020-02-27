@@ -3,6 +3,7 @@ package blackrusemod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
 
@@ -33,13 +34,13 @@ public class VisionPowerAction extends AbstractGameAction {
 				visionResult = true;
 			}
 			// Always succeed if we have True Sight, and flash True Sight
-			else if (power.owner.hasPower(TrueSightPower.POWER_ID)) {
-				power.owner.getPower(TrueSightPower.POWER_ID).flash();
+			else if (AbstractDungeon.player.hasPower(TrueSightPower.POWER_ID)) {
+				AbstractDungeon.player.getPower(TrueSightPower.POWER_ID).flash();
 				visionResult = true;
 			}
 			
 			// We use addToTop here so that everything happens on time
-			addToTop(new RemoveSpecificPowerAction(m, power.owner, power));
+			addToTop(new RemoveSpecificPowerAction(m, m, power));
 			power.flash();
 			power.onVision(visionResult);
 		}

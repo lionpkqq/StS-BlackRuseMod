@@ -11,7 +11,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.StarChefAction;
 
 public class StarChefPower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:StarChefPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(StarChefPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

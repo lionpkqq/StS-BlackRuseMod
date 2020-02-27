@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.core.Settings.GameLanguage;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import blackrusemod.BlackRuseMod;
 import blackrusemod.cards.TemporalDefense;
 import blackrusemod.cards.TemporalEssence;
 import blackrusemod.cards.TemporalMisd;
@@ -31,18 +31,19 @@ public class SolidifyAction extends AbstractGameAction {
 	@Override
 	public void update() {
 		if (this.duration == Settings.ACTION_DUR_FAST) {
-			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT)
-				BlackRuseMod.vs.open(this.list, null, "选择一张幻时卡");
-			else BlackRuseMod.vs.open(this.list, null, "Choose a Temporal card");
+			String temporalText;
+			if (Settings.language == GameLanguage.ZHS || Settings.language == GameLanguage.ZHT) {
+				temporalText = "选择一张幻时卡";
+			}
+			else {
+				temporalText = "Choose a Temporal card";
+			}
+			AbstractDungeon.cardRewardScreen.customCombatOpen(list, temporalText, false);
 			tickDuration();
 			return;
 		}
-
-		if (BlackRuseMod.vs.prediction != null) {
-			AbstractCard card = BlackRuseMod.vs.prediction.makeStatEquivalentCopy();
-			addToBot(new MakeTempCardInDrawPileAction(card, 1, false, false));
-			this.isDone = true;
-		}
-		tickDuration();
+		
+		addToBot(new MakeTempCardInDrawPileAction(AbstractDungeon.cardRewardScreen.discoveryCard, 1, false, false));
+		this.isDone = true;
 	}
 }

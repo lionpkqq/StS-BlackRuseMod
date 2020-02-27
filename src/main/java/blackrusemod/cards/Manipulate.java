@@ -2,29 +2,22 @@ package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ManipulateAction;
-import blackrusemod.patches.AbstractCardEnum;
 
-public class Manipulate extends CustomCard {
-	public static final String ID = "BlackRuseMod:Manipulate";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class Manipulate extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(Manipulate.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("manipulate.png");
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = -1;
 	
 	public Manipulate() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MANIPULATE), COST, DESCRIPTION,
-				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 	}
 	
 	@Override
@@ -32,7 +25,7 @@ public class Manipulate extends CustomCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		AbstractDungeon.actionManager.addToBottom(new ManipulateAction(p, this.freeToPlayOnce, this.energyOnUse, this.canUpgrade()));
+		addToBot(new ManipulateAction(p, this.freeToPlayOnce, this.energyOnUse, this.canUpgrade()));
 	}
 	
 	@Override
@@ -44,7 +37,7 @@ public class Manipulate extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
 			this.initializeDescription();
 		}
 	}

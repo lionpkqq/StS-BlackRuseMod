@@ -8,29 +8,25 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 
 public class ShatteredReality extends AbstractShiftCard {
-	public static final String ID = "BlackRuseMod:ShatteredReality";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String ID = BlackRuseMod.makeID(ShatteredReality.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("shattered_reality.png");
+	private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 5;
 	private static final int UPGRADE_PLUS_DMG = 3;
 
 	public ShatteredReality() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHATTERED_REALITY), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.baseDamage = ATTACK_DMG;
 	}
 

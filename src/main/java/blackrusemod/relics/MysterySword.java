@@ -1,28 +1,34 @@
 package blackrusemod.relics;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.BacklashAction;
+import blackrusemod.util.TextureLoader;
+
+import static blackrusemod.BlackRuseMod.makeRelicPath;
+import static blackrusemod.BlackRuseMod.makeRelicOutlinePath;
 
 public class MysterySword extends CustomRelic {
-	public static final String ID = "BlackRuseMod:MysterySword";
-	public boolean activated = true;
+	public static final String ID = BlackRuseMod.makeID(MysterySword.class.getSimpleName());
+	private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("mystery_sword.png"));
+	private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("mystery_sword.png"));
+	public boolean active = true;
 	
 	public MysterySword() {
-		super(ID, ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC), ImageMaster.loadImage(BlackRuseMod.MYSTERY_SWORD_RELIC_OUTLINE), RelicTier.BOSS, LandingSound.CLINK);
+		super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
 	}
 	
 	@Override
 	public void onUseCard(AbstractCard card, UseCardAction action) {
-		if (card.type == AbstractCard.CardType.SKILL  && (this.activated)) {
-			this.activated = false;
+		if (card.type == AbstractCard.CardType.SKILL  && this.active) {
+			this.active = false;
 			flash();
 			stopPulse();
 			addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -47,14 +53,13 @@ public class MysterySword extends CustomRelic {
 	
 	@Override
 	public void atTurnStart() {
-		beginPulse();
-		this.pulse = true;
-		this.activated = true;
+		beginLongPulse();
+		this.active = true;
 	}
 
 	@Override
 	public boolean checkTrigger() {
-		return this.activated;
+		return this.active;
 	}
 	
 	@Override

@@ -3,42 +3,39 @@ package blackrusemod.cards;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.MurderousAuraPower;
 
-public class MurderousAura extends CustomCard {
-	public static final String ID = "BlackRuseMod:MurderousAura";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class MurderousAura extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(MurderousAura.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("murderous_aura.png");
+	private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.POWER;
 	private static final int COST = 1;
 
 	public MurderousAura() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.MURDEROUS_AURA), COST, DESCRIPTION, AbstractCard.CardType.POWER,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MurderousAuraPower(p, 1), 1));
+		addToBot(new ApplyPowerAction(p, p, new MurderousAuraPower(p, 1), 1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new MurderousAura();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADED_DESCRIPTION;
-			this.initializeDescription();
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
+			initializeDescription();
 			this.isInnate = true;
 		}
 	}

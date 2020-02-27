@@ -1,0 +1,57 @@
+[
+    {
+        "PROPER_NAME" : "飛刀",
+        "NAMES" : [ "飛刀" ],
+        "DESCRIPTION" : "飛刀是凜光侍從的專屬武器。可以被投擲或轉化"
+    },
+    {
+        "PROPER_NAME" : "Reality Marble",
+        "NAMES" : [ "Marbled" ],
+        "DESCRIPTION" : "This card is not #yEthereal."
+    },
+    {
+        "PROPER_NAME" : "幻時",
+        "NAMES" : [ "幻時" ],
+        "DESCRIPTION" : "幻時牌是 #y0 耗能且具有 #y虛無 和 #y消耗"
+    },
+    {
+        "PROPER_NAME" : "枯萎",
+        "NAMES" : [ "枯萎" ],
+        "DESCRIPTION" : "受到攻擊時會額外承受傷害。額外傷害不受 #y易傷 影響"
+    },
+    {
+        "PROPER_NAME" : "變換",
+        "NAMES" : [ "變換" ],
+        "DESCRIPTION" : "變換 效果會在牌被手動丟棄後觸發"
+    },
+    {
+        "PROPER_NAME" : "視界",
+        "NAMES" : [ "視界" ],
+        "DESCRIPTION" : "預測敵人下回合的意圖。如果預測正確則在你的下個回合開始時觸發效果"
+    },
+    {
+        "PROPER_NAME" : "反衝",
+        "NAMES" : [ "反衝" ],
+        "DESCRIPTION" : "給予自身 #b1 層 #y虛弱 、 #y易傷 和 #y脆弱"
+    },
+    {
+        "PROPER_NAME" : "護盾",
+        "NAMES" : [ "護盾" ],
+        "DESCRIPTION" : "當你損失生命時， 消耗 #y護盾 而不是生命。下回合開始時不會失去護盾"
+    },
+    {
+        "PROPER_NAME" : "風華",
+        "NAMES" : [ "風華" ],
+        "DESCRIPTION" : "風華增加從牌中獲得的 格擋 和 護盾"
+    },
+    {
+        "PROPER_NAME" : "矩陣",
+        "NAMES" : [ "矩陣" ],
+        "DESCRIPTION" : "將所受到的 #y攻擊 傷害降低 #b50% 。每受到 #b1 次攻擊損失 #b1 層矩陣"
+    },
+    {
+        "PROPER_NAME" : "衛星",
+        "NAMES" : [ "衛星" ],
+        "DESCRIPTION" : "使用攻擊牌時，失去1層衛星，額外造成1次4點傷害的攻擊。你每受到1次攻擊，失去1層衛星，對攻擊者造成4點傷害。衛星視為 #y飛刀"
+    }
+]

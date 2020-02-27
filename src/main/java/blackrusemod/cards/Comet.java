@@ -1,55 +1,50 @@
 package blackrusemod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 
-public class Comet extends CustomCard {
-	public static final String ID = "BlackRuseMod:Comet";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String SINGULAR_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class Comet extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(Comet.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("comet.png");
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 3;
 	private static final int DRAW = 2;
 
 	public Comet() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.COMET), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.SMASH));
+		addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.SMASH));
 		// Use base magic number instead of current to avoid edge-case scenarios, like chaos potion
 		int cardsToDraw = this.baseMagicNumber - (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1);
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, Math.max(cardsToDraw, 0)));
+		addToBot(new DrawCardAction(p, Math.max(cardsToDraw, 0)));
 	}
 	
-	// Real-time feedback on how many cards Comet will draw	
+	// Real-time feedback on how many cards Comet will draw
+	@Override
 	public void triggerOnGlowCheck() {
 		this.magicNumber = this.baseMagicNumber - AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
 		if(this.magicNumber < 0) this.magicNumber = 0;
-		this.isMagicNumberModified = this.upgraded || !(this.magicNumber == this.baseMagicNumber);
+		this.isMagicNumberModified = this.upgradedMagicNumber || !(this.magicNumber == this.baseMagicNumber);
 		if(this.magicNumber == 1) {
-			this.rawDescription = SINGULAR_DESCRIPTION;
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
 		} else {
-			this.rawDescription = DESCRIPTION;
+			this.rawDescription = this.strings.DESCRIPTION;
 		}
 		initializeDescription();
 		// Have Comet glow gold if it is able to draw the maximum number of cards
@@ -60,10 +55,12 @@ public class Comet extends CustomCard {
 		}
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new Comet();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();

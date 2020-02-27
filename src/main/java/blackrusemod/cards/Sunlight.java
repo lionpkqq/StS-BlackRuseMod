@@ -8,37 +8,33 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.cards.Interfaces.KnivesCard;
-import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.AmplifyDamagePower;
 import blackrusemod.powers.KnivesPower;
 import blackrusemod.powers.SuppressingFirePower;
 
-public class Sunlight extends CustomCard implements KnivesCard{
-	public static final String ID = "BlackRuseMod:Sunlight";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+public class Sunlight extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(Sunlight.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("sunlight.png");
+	private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 2;
 	private static final int ATTACK_DMG = 16;
 	private static final int UPGRADE_PLUS_DMG = 5;
 	private static final int BLIGHT = 1;
 	
 	public Sunlight() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SUNLIGHT), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ALL_ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.isMultiDamage = true;
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = BLIGHT;
+		this.tags.add(Enums.SILVER_BLADES);
 	}
 
 	@Override

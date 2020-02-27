@@ -1,20 +1,26 @@
 package blackrusemod.relics;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import basemod.abstracts.CustomRelic;
 import blackrusemod.BlackRuseMod;
+import blackrusemod.util.TextureLoader;
+
+import static blackrusemod.BlackRuseMod.makeRelicPath;
+import static blackrusemod.BlackRuseMod.makeRelicOutlinePath;
 
 public class PocketWatch extends CustomRelic {
-	public static final String ID = "BlackRuseMod:PocketWatch";
+	public static final String ID = BlackRuseMod.makeID(PocketWatch.class.getSimpleName());
+	private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("pocket_watch.png"));
+	private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("pocket_watch.png"));
 	
 	public PocketWatch() {
-		super(ID, ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC), ImageMaster.loadImage(BlackRuseMod.POCKET_WATCH_RELIC_OUTLINE), RelicTier.RARE, LandingSound.MAGICAL);
+		super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
 	}
 	
 	@Override

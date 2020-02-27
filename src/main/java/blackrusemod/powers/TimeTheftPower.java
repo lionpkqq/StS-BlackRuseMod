@@ -7,14 +7,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import blackrusemod.BlackRuseMod;
+
 public class TimeTheftPower extends AbstractVisionPower {
-	public static final String POWER_ID = "BlackRuseMod:TimeTheftPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(TimeTheftPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public TimeTheftPower(AbstractMonster target, int amount, boolean prediction) {
-		super(NAME, POWER_ID, "time_theft", target, amount, prediction);
+	public TimeTheftPower(AbstractMonster target, int amount) {
+		super(NAME, POWER_ID, "time_theft", target, amount);
+		this.amount2 = amount;
+		this.isTurnBased = true;
 	}
 	
 	@Override

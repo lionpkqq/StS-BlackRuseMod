@@ -9,6 +9,7 @@ import blackrusemod.cards.AbstractShiftCard;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -21,6 +22,7 @@ public class ScryShiftPatch {
 		if(c instanceof AbstractShiftCard) {
 			c.triggerOnManualDiscard();
 		}
+		GameActionManager.incrementDiscard(false);
 	}
 
 	private static class Locator extends SpireInsertLocator {

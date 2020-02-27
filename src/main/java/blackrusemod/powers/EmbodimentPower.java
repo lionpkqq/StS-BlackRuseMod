@@ -11,7 +11,7 @@ import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.MakeRandomTemporalCardAction;
 
 public class EmbodimentPower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:EmbodimentPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(EmbodimentPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class AmplifyDamagePower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:AmplifyDamagePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(AmplifyDamagePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

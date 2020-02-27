@@ -7,14 +7,18 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import blackrusemod.BlackRuseMod;
+
 public class DeadlinePower extends AbstractVisionPower {
-	public static final String POWER_ID = "BlackRuseMod:DeadlinePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(DeadlinePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	
-	public DeadlinePower(AbstractMonster target, int amount, boolean prediction) {
-		super(NAME, POWER_ID, "no_escape", target, amount, prediction);
+	public DeadlinePower(AbstractMonster target, int amount) {
+		super(NAME, POWER_ID, "no_escape", target, amount);
+		this.amount2 = amount;
+		this.isTurnBased = true;
 	}
 	
 	@Override

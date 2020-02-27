@@ -4,35 +4,29 @@ import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.actions.ThrowKnivesAction;
-import blackrusemod.cards.Interfaces.KnivesCard;
-import blackrusemod.patches.AbstractCardEnum;
+import blackrusemod.actions.ThrowKnifeAction;
 
-public class FanOfKnives extends CustomCard implements KnivesCard {
-	public static final String ID = "BlackRuseMod:FanOfKnives";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class FanOfKnives extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(FanOfKnives.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("fan_of_knives.png");
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = -1;
 	private static final int ATTACK_DMG = 7;
 	private static final int UPGRADE_PLUS_DMG = 3;
 
 	public FanOfKnives() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.FAN_OF_KNIVES), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.ALL_ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.baseDamage = ATTACK_DMG;
 		this.isMultiDamage = true;
+		this.tags.add(Enums.SILVER_BLADES);
 	}
 
 	@Override
@@ -40,12 +34,16 @@ public class FanOfKnives extends CustomCard implements KnivesCard {
 		if (this.energyOnUse < EnergyPanel.totalCount) {
 			this.energyOnUse = EnergyPanel.totalCount;
 		}
-		if (p.hasRelic(ChemicalX.ID)) p.getRelic(ChemicalX.ID).flash();
-		if (p.hasRelic(ChemicalX.ID)) this.energyOnUse += 2;
-		for (int i = 0; i < this.energyOnUse; i++)
-			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) 
-				addToBot(new ThrowKnivesAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), null));
-		if (p.hasRelic(ChemicalX.ID)) this.energyOnUse -= 2;
+		int effect = this.energyOnUse;
+		if (p.hasRelic(ChemicalX.ID)) {
+			p.getRelic(ChemicalX.ID).flash();
+			effect += 2;
+		}
+		for (int i = 0; i < effect; i++) {
+			for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+				addToBot(new ThrowKnifeAction(p, mo, new DamageInfo(p, this.damage, this.damageTypeForTurn), null, false));
+			}
+		}
 		addToBot(new LoseEnergyAction(this.energyOnUse));
 	}
 

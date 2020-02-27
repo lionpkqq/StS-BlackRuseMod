@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import blackrusemod.BlackRuseMod;
 
 public class SuppressingFirePower extends AbstractPower {
-	public static final String POWER_ID = "BlackRuseMod:SuppressingFirePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(SuppressingFirePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

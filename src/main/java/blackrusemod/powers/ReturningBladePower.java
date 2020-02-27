@@ -5,18 +5,20 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.ReturningBladeAction;
 
 public class ReturningBladePower extends AbstractVisionPower {
-	public static final String POWER_ID = "BlackRuseMod:ReturningBladePower";
+	public static final String POWER_ID = BlackRuseMod.makeID(ReturningBladePower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	private AbstractCard itself;
 	
-	public ReturningBladePower(AbstractMonster target, int amount, boolean prediction, AbstractCard c) {
-		super(NAME, POWER_ID, "returning_blade", target, amount, prediction);
+	public ReturningBladePower(AbstractMonster target, int amount, AbstractCard c) {
+		super(NAME, POWER_ID, "returning_blade", target, amount);
 		this.itself = c;
+		this.isTurnBased = true;
 	}
 	
 	@Override

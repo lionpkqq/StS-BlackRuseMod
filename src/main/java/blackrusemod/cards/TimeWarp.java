@@ -8,29 +8,25 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 
 public class TimeWarp extends AbstractShiftCard {
-	public static final String ID = "BlackRuseMod:TimeWarp";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+	public static final String ID = BlackRuseMod.makeID(TimeWarp.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("time_warp.png");
+	private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 6;
 	private static final int UPGRADE_PLUS_DMG = 3;
 	private static final int DISCARD_AND_DRAW = 1;
 
 	public TimeWarp() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.TIME_WARP), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = DISCARD_AND_DRAW;
 	}
@@ -59,7 +55,7 @@ public class TimeWarp extends AbstractShiftCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_PLUS_DMG);
-			this.rawDescription = UPGRADE_DESCRIPTION;
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
 			initializeDescription();
 			upgradeMagicNumber(1);
 		}

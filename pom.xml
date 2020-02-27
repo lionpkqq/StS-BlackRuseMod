@@ -55,7 +55,7 @@
 						<phase>package</phase>
 						<configuration>
 							<target>
-								<copy file="target/BlackRuseMod.jar" tofile="../BlackRuseMod.jar" />
+								<copy file="target/blackrusemod.jar" tofile="../blackrusemod.jar" />
 							</target>
 						</configuration>
 						<goals>

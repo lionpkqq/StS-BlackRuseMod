@@ -4,29 +4,23 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.KnivesPower;
 
-public class Rearm extends CustomCard {
-	public static final String ID = "BlackRuseMod:Rearm";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class Rearm extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(Rearm.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("rearm.png");
+	private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = 1;
 	private static final int KNIVES = 5;
 	private static final int DRAW = 2;
 	
 	public Rearm() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.REARM), COST, DESCRIPTION,
-				AbstractCard.CardType.SKILL, AbstractCardEnum.SILVER,
-				AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 	

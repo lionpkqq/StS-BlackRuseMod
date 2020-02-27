@@ -10,28 +10,24 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 
 public class Potential extends AbstractShiftCard {
-	public static final String ID = "BlackRuseMod:Potential";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String ID = BlackRuseMod.makeID(Potential.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("potential.png");
+	private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
 	private static final int COST = 0;
 	private static final int ATTACK_DMG = 5;
 	private static final int UPGRADE_PLUS_DMG = 2;
 	private static final int ATTACK_DMG_GROW = 5;
 
 	public Potential() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.POTENTIAL), COST, DESCRIPTION, AbstractCard.CardType.ATTACK,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.COMMON,
-				AbstractCard.CardTarget.ENEMY);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.baseDamage = ATTACK_DMG;
 		this.magicNumber = this.baseMagicNumber = ATTACK_DMG_GROW;
 	}

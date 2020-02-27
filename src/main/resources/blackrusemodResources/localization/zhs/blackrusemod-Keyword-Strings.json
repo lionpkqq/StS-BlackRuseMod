@@ -1,0 +1,57 @@
+[
+    {
+        "PROPER_NAME" : "飞刀",
+        "NAMES" : [ "飞刀" ],
+        "DESCRIPTION" : "飞刀是凛光侍从的专属武器。可以被投掷或转化。"
+    },
+    {
+        "PROPER_NAME" : "Reality Marble",
+        "NAMES" : [ "Marbled" ],
+        "DESCRIPTION" : "This card is not #yEthereal."
+    },
+    {
+        "PROPER_NAME" : "幻时",
+        "NAMES" : [ "幻时" ],
+        "DESCRIPTION" : "幻时牌 #y费用为0且具有 #y虚无 和 #y消耗 。"
+    },
+    {
+        "PROPER_NAME" : "枯萎",
+        "NAMES" : [ "枯萎" ],
+        "DESCRIPTION" : "受到攻击时会额外承受伤害。额外伤害不受 #y易伤 影响。"
+    },
+    {
+        "PROPER_NAME" : "变换",
+        "NAMES" : [ "变换" ],
+        "DESCRIPTION" : "变换 效果会在牌被手动丢弃后触发。"
+    },
+    {
+        "PROPER_NAME" : "视界",
+        "NAMES" : [ "视界" ],
+        "DESCRIPTION" : "预测敌人下回合的意图。如果预测正确则在你的下个回合开始时触发效果。"
+    },
+    {
+        "PROPER_NAME" : "反冲",
+        "NAMES" : [ "反冲" ],
+        "DESCRIPTION" : "对你附加 #b1 层 #y虚弱 、 #y易伤 和 #y脆弱 。"
+    },
+    {
+        "PROPER_NAME" : "护盾",
+        "NAMES" : [ "护盾" ],
+        "DESCRIPTION" : "当你损失生命时，消耗 #y护盾 而不是你的生命。护盾你的下一回合开始时不会消失。"
+    },
+    {
+        "PROPER_NAME" : "风华",
+        "NAMES" : [ "风华" ],
+        "DESCRIPTION" : "风华增加你从牌中获得的格挡值和护盾值。"
+    },
+    {
+        "PROPER_NAME" : "矩阵",
+        "NAMES" : [ "矩阵" ],
+        "DESCRIPTION" : "将所受到的 #y攻击 伤害降低 #b50% 。每受到 #b1 次攻击损失 #b1 层矩阵。"
+    },
+    {
+        "PROPER_NAME" : "卫星",
+        "NAMES" : [ "卫星" ],
+        "DESCRIPTION" : "使用攻击牌时，失去1层卫星，额外攻击一次，造成4点伤害。你每受到一次攻击，失去1层卫星，对攻击者造成4点伤害。卫星视为 #y飞刀 。"
+    }
+]

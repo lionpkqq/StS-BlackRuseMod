@@ -2,47 +2,44 @@ package blackrusemod.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import basemod.abstracts.CustomCard;
 import blackrusemod.BlackRuseMod;
 import blackrusemod.actions.BacklashAction;
 import blackrusemod.actions.DuplicationAction;
-import blackrusemod.patches.AbstractCardEnum;
 
-public class Duplication extends CustomCard {
-	public static final String ID = "BlackRuseMod:Duplication";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+public class Duplication extends AbstractServantCard {
+	public static final String ID = BlackRuseMod.makeID(Duplication.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("duplication.png");
+	private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = 2;
 	private static final int DUP = 1;
 
 	public Duplication() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.DUPLICATION), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.magicNumber = this.baseMagicNumber = DUP;
 		this.exhaust = true;
 	}
 
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DuplicationAction(p, this.magicNumber));
-		AbstractDungeon.actionManager.addToBottom(new BacklashAction(1));
+		addToBot(new DuplicationAction(p, this.magicNumber));
+		addToBot(new BacklashAction(1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new Duplication();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			this.rawDescription = UPGRADE_DESCRIPTION;
-			this.initializeDescription();
+			this.rawDescription = this.strings.UPGRADE_DESCRIPTION;
+			initializeDescription();
 			upgradeMagicNumber(1);
 		}
 	}

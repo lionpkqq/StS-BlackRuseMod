@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import blackrusemod.BlackRuseMod;
 
 public class FloweringNightPower extends TwoAmountPower {
-	public static final String POWER_ID = "BlackRuseMod:FloweringNightPower";
+	public static final String POWER_ID = BlackRuseMod.makeID(FloweringNightPower.class.getSimpleName());
 	private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -41,13 +41,13 @@ public class FloweringNightPower extends TwoAmountPower {
 			if (this.amount2 <= 0) break;
 			addToBot(new DrawCardAction(this.owner, 1));
 			this.amount2--;
-			this.updateDescription();
+			updateDescription();
 		}
 	}
 	
 	@Override
 	public void atEndOfTurn(boolean isPlayer) {
 		this.amount2 = LIMIT;
-		this.updateDescription();
+		updateDescription();
 	}
 }

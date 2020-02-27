@@ -4,43 +4,41 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import blackrusemod.BlackRuseMod;
-import blackrusemod.patches.AbstractCardEnum;
 import blackrusemod.powers.ElegancePower;
 
 public class ShiftingGears extends AbstractShiftCard {
-	public static final String ID = "BlackRuseMod:ShiftingGears";
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-	public static final String NAME = cardStrings.NAME;
-	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String ID = BlackRuseMod.makeID(ShiftingGears.class.getSimpleName());
+	public static final String IMG = BlackRuseMod.makeCardPath("shifting_gears.png");
+	private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
 	private static final int COST = 1;
 	private static final int DRAW = 3;
 
 	public ShiftingGears() {
-		super(ID, NAME, BlackRuseMod.makePath(BlackRuseMod.SHIFTING_GEARS), COST, DESCRIPTION, AbstractCard.CardType.SKILL,
-				AbstractCardEnum.SILVER, AbstractCard.CardRarity.UNCOMMON,
-				AbstractCard.CardTarget.SELF);
+		super(ID, IMG, COST, TYPE, RARITY, TARGET);
 		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+		addToBot(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
 	}
 	
+	@Override
 	public void triggerShift() {
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, 
-				new ElegancePower(AbstractDungeon.player, 1), 1));
+		addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElegancePower(AbstractDungeon.player, 1), 1));
 	}
 
+	@Override
 	public AbstractCard makeCopy() {
 		return new ShiftingGears();
 	}
 
+	@Override
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
