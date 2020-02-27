@@ -56,6 +56,12 @@ public class Comet extends AbstractServantCard {
 	}
 
 	@Override
+	public void onMoveToDiscard() {
+		this.rawDescription = this.strings.DESCRIPTION;
+		initializeDescription();
+	}
+
+	@Override
 	public AbstractCard makeCopy() {
 		return new Comet();
 	}
